@@ -16,6 +16,7 @@ def run_test_from_file(filepath: str):
     prompt = input_data.get("prompt")
     input_type = input_data.get("type", "text")
     image_path = input_data.get("image_path", None)
+    file_path = input_data.get("file", None)
 
     if client_name not in CLIENTS:
         raise ValueError(f"Unbekannter Client: '{client_name}'")
@@ -23,7 +24,7 @@ def run_test_from_file(filepath: str):
     client = CLIENTS[client_name]
 
     start_time = time.perf_counter()
-    response = client.generate(input_type=input_type, prompt=prompt, model=model, image_path=image_path)
+    response = client.generate(input_type=input_type, prompt=prompt, model=model, image_path=image_path, file_path=file_path)
     end_time = time.perf_counter()
     runtime = round(end_time - start_time, 3)
 

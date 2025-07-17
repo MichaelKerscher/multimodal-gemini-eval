@@ -52,7 +52,7 @@ Prompt: Was ist auf diesem Bild zu sehen?
 **Eingabe:**
 ```text
 Audio-Datei: data/aufnahme_zaehlerproblem.wav  
-Prompt: (ohne zusätzlichen Text – das Audio allein soll analysiert werden)
+Prompt: Um was geht es in der Audio?
 ```
 
 ---
@@ -150,7 +150,7 @@ Prompt: Der gescannte Barcode lautet: ASSET-1234-XY. Was kann man daraus ableite
 
 ---
 
-## T09 – Video File
+## T09 – Video only
 
 **Modalität(en):** Video  
 

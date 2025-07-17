@@ -31,11 +31,13 @@ client = genai.Client(
 # Standardmodell
 DEFAULT_MODEL = "gemini-2.5-flash"
 
-def generate(input_type: str, prompt: str, model: str = DEFAULT_MODEL, image_path: str = None) -> str:
+def generate(input_type: str, prompt: str, model: str = DEFAULT_MODEL, image_path: str = None, file_path: str = None) -> str:
     if input_type == "text":
         return generate_text(prompt, model)
     elif input_type == "image":
         return generate_image_understanding(prompt, image_path, model)
+    elif input_type == "audio":
+        return generate_audio_understanding(prompt, file_path, model)
     else:
         raise NotImplementedError(f"Input-Typ '{input_type}' ist in Gemini-Client noch nicht implementiert.")
 
@@ -71,3 +73,21 @@ def generate_image_understanding(prompt: str, image_path: str, model: str = DEFA
     except Exception as e:
         return f"Fehler bei der Bildanalyse: {e}"
 
+def generate_audio_understanding(prompt: str, file_path: str, model: str = DEFAULT_MODEL) -> str:
+    try:
+        with open(file_path, "rb") as audio_file:
+            part = Part.from_bytes(
+                data=audio_file.read(),
+                mime_type="audio/wav"  # oder "audio/mpeg", falls MP3 etc.
+            )
+
+        response = client.models.generate_content(
+            model=model,
+            contents=[
+                prompt,
+                part
+            ]
+        )
+        return response.text
+    except Exception as e:
+        return f"Fehler bei der Audioanalyse: {e}"
