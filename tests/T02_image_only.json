@@ -1,0 +1,11 @@
+{
+  "test_id": "T02",
+  "description": "Bild Only – Verständnisprüfung",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "image",
+    "prompt": "Was ist auf diesem Bild zu sehen?",
+    "image_path": "data/transformator.jpg"
+  }
+}
