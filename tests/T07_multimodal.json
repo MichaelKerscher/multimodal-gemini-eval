@@ -1,0 +1,16 @@
+{
+  "test_id": "T07",
+  "description": "Bild + Text + Kontext (eingeschränkter Empfang)",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "image",
+    "prompt": "Ich bin gerade vor dem Netzwerkschrank an Standort Nord (47.8560, 12.1250), es ist 18:30 Uhr. Was könnte hier das Problem sein?",
+    "image_path": "data/netzwerkschrank.png",
+    "context": {
+      "location": { "lat": 47.8560, "lon": 12.1250 },
+      "timestamp": "2025-07-30T18:30:00",
+      "network": "3G"
+    }
+  }
+}
