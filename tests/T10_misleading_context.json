@@ -1,0 +1,19 @@
+{
+  "test_id": "T10",
+  "description": "Bild + Text mit absichtlich irreführendem Kontext",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "image",
+    "prompt": "Ich bin im Heizraum. Was ist auf diesem Bild zu sehen?",
+    "image_path": "data/trafostation.jpg",
+    "context": {
+      "location": {
+        "lat": 47.8580,
+        "lon": 12.1300
+      },
+      "device": "Pixel 7",
+      "timestamp": "2025-07-30T15:00:00"
+    }
+  }
+}
