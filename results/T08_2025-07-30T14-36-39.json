@@ -1,0 +1,18 @@
+{
+  "test_id": "T08",
+  "timestamp": "2025-07-30T14:36:39",
+  "model": "gemini-2.5-flash",
+  "client": "gemini",
+  "input": {
+    "type": "image",
+    "prompt": "Analysiere diesen QR-Code und erkläre, wohin er führt."
+  },
+  "response": {
+    "text": "Der QR-Code auf dem Bild ist gut lesbar.\n\nEr führt zu folgender URL:\n**`https://www.langes-wissen.de/langes-wissen/frauen-und-gärten.html`**\n\n**Wohin er führt:**\nDer QR-Code leitet Sie auf eine Webseite der Domain `langes-wissen.de`. Der spezifische Pfad `/frauen-und-gärten.html` weist darauf hin, dass es sich um eine Seite handelt, die Informationen zum Thema **\"Frauen und Gärten\"** bereitstellt.\n\nDies passt perfekt zum Kontext des Schildes, das neben dem Text \"Mehr Informationen\" auch das **weibliche Geschlechtssymbol (Venus-Symbol)** zeigt. Es ist anzunehmen, dass das Schild an einem Ort wie einem Park, Garten oder einer Ausstellung steht, die sich mit der Rolle oder den Beiträgen von Frauen im Bereich der Gartenkultur oder Natur auseinandersetzt.",
+    "tokens": 102
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 10.271
+  }
+}

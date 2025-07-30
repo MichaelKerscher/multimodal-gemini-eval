@@ -1,0 +1,11 @@
+{
+  "test_id": "T08",
+  "description": "QR-Code auf einem Schild erkennen",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "image",
+    "prompt": "Analysiere diesen QR-Code und erkläre, wohin er führt.",
+    "image_path": "data/qrcode.jpg"
+  }
+}
