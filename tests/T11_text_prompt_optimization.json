@@ -1,0 +1,13 @@
+{
+  "test_id": "T11",
+  "description": "Prompt-Optimierung – Vergleich zweier Prompts zur gleichen Frage",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "text",
+    "prompts": [
+      "Erkläre kurz, wie ein Trafo funktioniert.",
+      "Du bist ein Technikexperte. Erkläre mir bitte, wie ein Transformator funktioniert."
+    ]
+  }
+}
