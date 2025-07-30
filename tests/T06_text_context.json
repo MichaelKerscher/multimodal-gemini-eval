@@ -1,0 +1,14 @@
+{
+  "test_id": "T06",
+  "description": "Text + Kontext (Zeit & Gerät)",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "text",
+    "prompt": "Mein Gerät zeigt seit 13:45 Uhr einen schwarzen Bildschirm. Was könnte die Ursache sein?",
+    "context": {
+      "timestamp": "2025-07-13T14:00:00",
+      "device": "Pixel 7"
+    }
+  }
+}
