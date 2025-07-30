@@ -210,7 +210,7 @@ Prompt B: Du bist ein Technikexperte. Erkläre mir bitte, wie ein Transformator 
 
 **Kontextdaten:** Unvollständig
 
-**Beschreibung:** Test mit beschädigtem Bild und unklarem Kontext.
+**Beschreibung:** Test mit beschädigtem Bild. PS: Set-Content -Path data\corrupted_image.jpg -Value "ABC123"
 
 **Ziel:** Fehlerverhalten, Stabilität
 

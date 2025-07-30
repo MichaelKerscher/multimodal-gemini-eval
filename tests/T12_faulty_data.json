@@ -1,0 +1,11 @@
+{
+  "test_id": "T12",
+  "description": "Fehlerhafte Daten – beschädigtes Bild und unklarer Prompt",
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "image",
+    "prompt": "Dieses Gerät funktioniert nicht. Was könnte los sein?",
+    "image_path": "data/corrupted_image.jpg"
+  }
+}
