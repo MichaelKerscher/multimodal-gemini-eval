@@ -24,6 +24,7 @@ def run_test_from_file(filepath: str):
     input_type = input_data.get("type", "text")
     image_path = input_data.get("image_path", None)
     audio_path = input_data.get("audio_path", None)
+    video_path = input_data.get("video_path", None)
     context = input_data.get("context", None)
 
     # Client auswählen
@@ -33,7 +34,7 @@ def run_test_from_file(filepath: str):
 
     # Ausführung + Messung
     start_time = time.perf_counter()
-    response = client.generate(input_type=input_type, prompt=prompt, model=model, image_path=image_path, audio_path=audio_path, context=context)
+    response = client.generate(input_type=input_type, prompt=prompt, model=model, image_path=image_path, audio_path=audio_path, video_path=video_path, context=context)
     end_time = time.perf_counter()
     runtime = round(end_time - start_time, 3)
 

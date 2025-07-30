@@ -68,13 +68,15 @@ def append_context_to_prompt(prompt: str, context: dict | None) -> str:
 # --------------------------------
 # Hauptfunktion
 # --------------------------------
-def generate(input_type: str, prompt: str, model: str = DEFAULT_MODEL, image_path: str = None, audio_path: str = None, context: dict = None) -> str:
+def generate(input_type: str, prompt: str, model: str = DEFAULT_MODEL, image_path: str = None, audio_path: str = None, video_path: str = None, context: dict = None) -> str:
     if input_type == "text":
         return generate_text(prompt, model, context)
     elif input_type == "image":
         return generate_image_understanding(prompt, image_path, model, context)
     elif input_type == "audio":
         return generate_audio_understanding(prompt, audio_path, model, context)
+    elif input_type == "video":
+        return generate_video_understanding(prompt, video_path, model, context)
     else:
         raise NotImplementedError(f"Input-Typ '{input_type}' ist in Gemini-Client noch nicht implementiert.")
 
@@ -130,7 +132,7 @@ def generate_audio_understanding(prompt: str, audio_path: str, model: str = DEFA
         with open(audio_path, "rb") as audio_file:
             audio_part = Part.from_bytes(
                 data=audio_file.read(),
-                mime_type="audio/wav"  # oder "audio/mpeg", falls MP3 etc.
+                mime_type="audio/wav" 
             )
 
         prompt_with_context = append_context_to_prompt(prompt, context)
@@ -144,3 +146,30 @@ def generate_audio_understanding(prompt: str, audio_path: str, model: str = DEFA
         return response.text
     except Exception as e:
         return f"Fehler bei der Audioanalyse: {e}"
+
+# --------------------------------
+# Video
+# --------------------------------
+def generate_video_understanding(prompt: str, video_path: str, model: str = DEFAULT_MODEL, context: dict = None) -> str:
+    if not video_path or not os.path.isfile(video_path):
+        return f"Videodatei ungültig oder nicht gefunden: {video_path}"
+
+    try:
+        with open(video_path, "rb") as video_file:
+            video_part = Part.from_bytes(
+                data=video_file.read(),
+                mime_type="video/mp4"  
+            )
+
+        prompt_with_context = append_context_to_prompt(prompt, context)
+        response = client.models.generate_content(
+            model=model,
+            contents=[
+                prompt_with_context,
+                video_part
+            ]
+        )
+        return response.text
+    except Exception as e:
+        return f"Fehler bei der Videoanalyse: {e}"
+    
