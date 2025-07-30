@@ -63,14 +63,14 @@ Prompt: Um was geht es in der Audio?
 
 **Kontextdaten:** -
 
-**Beschreibung:** Textfrage kombiniert mit einem Bild.
+**Beschreibung:** Das Modell erhält einen Prompt + das Transformator-Bild.
 
-**Ziel:** Kombiniertes Text- und Bildverständnis
+**Ziel:** Multimodales Verständnis (Prompt + Bild kombiniert)
 
 **Eingabe:**
 ```text
 Bild: data/transformator.jpg
-Prompt: Ich habe dieses Foto gemacht. Was ist das? Ist das gefährlich?
+Prompt: Dieses Bild zeigt ein Bauteil aus einem Schaltschrank. Was genau ist das und wofür wird es typischerweise verwendet?
 ```
 
 ---

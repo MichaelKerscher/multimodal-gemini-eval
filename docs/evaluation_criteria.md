@@ -90,7 +90,7 @@ Quelle: Language Models are Few-Shot Learners
 > 0 = Antwort bricht ab / unbrauchbar  
 > 1 = Falsche Interpretation ohne Warnung  
 > 2 = Reaktion mit Einschränkung / Unsicherheit  
-> 3 = Fehler erkannt oder robust abgefangen#
+> 3 = Fehler erkannt oder robust abgefangen
 
 Quelle: Beyond Accuracy - Behavioral Testing of NLP Models with CheckList
 
