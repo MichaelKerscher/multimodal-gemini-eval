@@ -31,28 +31,73 @@ client = genai.Client(
 # Standardmodell
 DEFAULT_MODEL = "gemini-2.5-flash"
 
-def generate(input_type: str, prompt: str, model: str = DEFAULT_MODEL, image_path: str = None, file_path: str = None) -> str:
+# --------------------------------
+# Hilfsfunktion: Kontext anhängen
+# --------------------------------
+def append_context_to_prompt(prompt: str, context: dict | None) -> str:
+    """Ergänzt das Prompt um optionale Kontextinformationen."""
+    if not context:
+        return prompt
+
+    parts = []
+    # Standort
+    if "location" in context and "lat" in context["location"] and "lon" in context["location"]:
+        lat = context["location"]["lat"]
+        lon = context["location"]["lon"]
+        parts.append(f"Standort: ({lat}, {lon})")
+
+    # Zeit
+    if "timestamp" in context:
+        parts.append(f"Zeit: {context['timestamp']}")
+
+    # Gerät
+    if "device" in context:
+        parts.append(f"Gerät: {context['device']}")
+
+    # Netzwerk
+    if "network" in context:
+        parts.append(f"Netzwerkstatus: {context['network']}")
+
+    # Kontext anhängen
+    if parts:
+        prompt += "\n[Kontext: " + "; ".join(parts) + "]"
+
+    return prompt
+
+
+# --------------------------------
+# Hauptfunktion
+# --------------------------------
+def generate(input_type: str, prompt: str, model: str = DEFAULT_MODEL, image_path: str = None, audio_path: str = None, context: dict = None) -> str:
     if input_type == "text":
-        return generate_text(prompt, model)
+        return generate_text(prompt, model, context)
     elif input_type == "image":
-        return generate_image_understanding(prompt, image_path, model)
+        return generate_image_understanding(prompt, image_path, model, context)
     elif input_type == "audio":
-        return generate_audio_understanding(prompt, file_path, model)
+        return generate_audio_understanding(prompt, audio_path, model, context)
     else:
         raise NotImplementedError(f"Input-Typ '{input_type}' ist in Gemini-Client noch nicht implementiert.")
 
-def generate_text(prompt: str, model: str = DEFAULT_MODEL) -> str:
+
+# --------------------------------
+# Text
+# --------------------------------
+def generate_text(prompt: str, model: str = DEFAULT_MODEL, context: dict = None) -> str:
     """Textantwort mit Gemini über Vertex AI erzeugen"""
     try:
+        prompt_with_context = append_context_to_prompt(prompt, context)
         response = client.models.generate_content(
             model=model,
-            contents=prompt
+            contents=prompt_with_context
         )
         return response.text
     except Exception as e:
         return f"Fehler bei der Generierung: {e}"
 
-def generate_image_understanding(prompt: str, image_path: str, model: str = DEFAULT_MODEL) -> str:
+# --------------------------------
+# Bild
+# --------------------------------
+def generate_image_understanding(prompt: str, image_path: str, model: str = DEFAULT_MODEL, context: dict = None) -> str:
     if not image_path or not os.path.isfile(image_path):
         return f"Bildpfad ungültig oder nicht gefunden: {image_path}"
 
@@ -62,10 +107,11 @@ def generate_image_understanding(prompt: str, image_path: str, model: str = DEFA
             mime_type="image/jpeg"
         )
 
+        prompt_with_context = append_context_to_prompt(prompt, context)
         response = client.models.generate_content(
             model=model,
             contents=[
-                prompt,
+                prompt_with_context,
                 image_part
             ]
         )
@@ -73,19 +119,26 @@ def generate_image_understanding(prompt: str, image_path: str, model: str = DEFA
     except Exception as e:
         return f"Fehler bei der Bildanalyse: {e}"
 
-def generate_audio_understanding(prompt: str, file_path: str, model: str = DEFAULT_MODEL) -> str:
+# --------------------------------
+# Audio
+# --------------------------------
+def generate_audio_understanding(prompt: str, audio_path: str, model: str = DEFAULT_MODEL, context: dict = None) -> str:
+    if not audio_path or not os.path.isfile(audio_path):
+        return f"Audiodatei ungültig oder nicht gefunden: {audio_path}"
+    
     try:
-        with open(file_path, "rb") as audio_file:
-            part = Part.from_bytes(
+        with open(audio_path, "rb") as audio_file:
+            audio_part = Part.from_bytes(
                 data=audio_file.read(),
                 mime_type="audio/wav"  # oder "audio/mpeg", falls MP3 etc.
             )
 
+        prompt_with_context = append_context_to_prompt(prompt, context)
         response = client.models.generate_content(
             model=model,
             contents=[
-                prompt,
-                part
+                prompt_with_context,
+                audio_part
             ]
         )
         return response.text
