@@ -46,6 +46,7 @@ Dieses Projekt untersucht die technische Machbarkeit und Leistungsfähigkeit mul
 4. Flutter-App: Wird später zur realistischen UI-Einbindung entwickelt.
 
 ## Projektstruktur - technisch
+```
 multimodal-gemini-eval/
 |-- docs/               <-- Architektur, API-Infos, Tests
 |-- scripts/            <-- Testszenarien (Python)
@@ -56,4 +57,5 @@ multimodal-gemini-eval/
 |-- requirements.txt    <-- Python-Abhängigkeiten
 |-- Dockerfile          <-- Deployment (später)
 |-- README.md           <-- Einstieg & Übersicht
+```
 
