@@ -9,7 +9,7 @@ from lib.test_runner import run_test_from_file
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Starte einen Gemini-Test.")
+    parser = argparse.ArgumentParser(description="Starte einen LLM-Test.")
     parser.add_argument("testfile", help="Pfad zur Testdatei (JSON)")
     args = parser.parse_args()
 

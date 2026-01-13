@@ -1,0 +1,19 @@
+{
+  "test_id": "T13",
+  "description": "Bild + Video + Text",
+  "run_index": 1,
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "multimodal",
+    "prompt": "Ich dokumentiere gerade die Störung im Serverraum. Hier ist ein Foto und ein kurzes Video. Was könnte das Problem sein?",
+    "image_path": "data/netzwerkschrank.png",
+    "video_path": "data/strand.mp4",
+    "context": {
+      "location": { "lat": 47.8565, "lon": 12.126 },
+      "timestamp": "2025-07-30T19:45:00",
+      "device": "Pixel 7 Pro",
+      "network": "4G"
+    }
+  }
+}

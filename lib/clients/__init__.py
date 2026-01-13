@@ -1,7 +1,8 @@
 from lib.clients import gemini_client
-# from lib.clients import openai_client  # später z. B. aktivieren
+from lib.clients import companygpt_client
 
 CLIENTS = {
     "gemini": gemini_client,
-    # "openai": openai_client,
+    "506": companygpt_client,
+    "companygpt": companygpt_client
 }

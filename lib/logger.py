@@ -3,7 +3,7 @@ import json
 import ast
 from datetime import datetime
 
-def log_response(test_id, prompt, response_text, model, client, runtime_seconds=None, input_type="text", result_dir="results"):
+def log_response(test_id, prompt, response_text, model, client, runtime_seconds=None, input_type="text", result_dir="results", run_index: int | None = None):
     os.makedirs(result_dir, exist_ok=True)
 
     # Prüfen, ob es sich um Multi-Prompt-Antworten (Liste) handelt
@@ -58,7 +58,10 @@ def log_response(test_id, prompt, response_text, model, client, runtime_seconds=
         }
     }
 
-    filename = f"{test_id}_{datetime.now().strftime('%Y-%m-%dT%H-%M-%S')}.json"
+    if run_index is not None:
+        filename = f"{test_id}__run{run_index:02d}.json"
+    else:
+        filename = f"{test_id}.json"
     filepath = os.path.join(result_dir, filename)
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(log_data, f, ensure_ascii=False, indent=2)

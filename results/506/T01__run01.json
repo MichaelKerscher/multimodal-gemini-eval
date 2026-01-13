@@ -1,0 +1,18 @@
+{
+  "test_id": "T01",
+  "timestamp": "2026-01-13T14:03:35",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "text",
+    "prompt": "Was ist künstliche Intelligenz und wie funktioniert sie in einfachen Worten?"
+  },
+  "response": {
+    "text": "Künstliche Intelligenz (KI) ist im Grunde die Fähigkeit von Maschinen, Aufgaben zu erledigen, die normalerweise menschliche Intelligenz erfordern. Stell dir vor, ein Computer kann lernen, Probleme lösen, Entscheidungen treffen oder sogar Sprache verstehen und generieren – genau das ist KI.\n\nWie funktioniert das in einfachen Worten?\n\nIm Kern geht es darum, dass KI-Systeme aus Daten lernen. Man füttert sie mit riesigen Mengen an Informationen, zum Beispiel Bildern, Texten oder Zahlen. Die KI sucht dann nach Mustern und Zusammenhängen in diesen Daten.\n\nEin gutes Beispiel ist das Erkennen von Gesichtern: Man zeigt der KI Tausende von Bildern mit Gesichtern und sagt ihr, wo sich auf den Bildern Gesichter befinden. Die KI lernt dann, welche Merkmale ein Gesicht ausmachen (Augen, Nase, Mund in einer bestimmten Anordnung) und kann diese Muster später selbstständig erkennen, auch bei neuen, ihr unbekannten Bildern.\n\nEs gibt verschiedene Arten, wie KI \"lernt\":\n\n*   **Maschinelles Lernen (Machine Learning):** Hierbei werden Algorithmen verwendet, die es Systemen ermöglichen, aus Daten zu lernen, ohne explizit programmiert zu werden. Sie verbessern ihre Leistung mit der Zeit, je mehr Daten sie verarbeiten.\n*   **Neuronale Netze (Neural Networks):** Diese sind von der Struktur des menschlichen Gehirns inspiriert und bestehen aus vielen miteinander verbundenen \"Knoten\" oder \"Neuronen\". Sie sind besonders gut darin, komplexe Muster zu erkennen, wie zum Beispiel in Bildern oder Sprache.\n*   **Tiefes Lernen (Deep Learning):** Das ist eine spezielle Form des maschinellen Lernens, die sehr tiefe neuronale Netze verwendet. Sie kann noch komplexere Aufgaben bewältigen und hat in den letzten Jahren zu großen Durchbrüchen geführt, zum Beispiel bei der Spracherkennung oder selbstfahrenden Autos.\n\nZusammenfassend kann man sagen, dass KI Maschinen beibringt, wie man \"denkt\" und \"lernt\", indem sie Muster in Daten erkennt und darauf basierend Entscheidungen trifft oder Aufgaben ausführt.",
+    "tokens": 287
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.78
+  }
+}

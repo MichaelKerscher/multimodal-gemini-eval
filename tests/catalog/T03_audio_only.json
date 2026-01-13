@@ -1,0 +1,12 @@
+{
+  "test_id": "T03",
+  "description": "Audio Only – Sprachverständnisprüfung",
+  "run_index": 1,
+  "client": "gemini",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "audio",
+    "prompt": "Um was geht es in der Audio?",
+    "file": "data/unit_2.wav"
+  }
+}

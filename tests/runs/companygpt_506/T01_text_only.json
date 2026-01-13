@@ -1,0 +1,11 @@
+{
+  "test_id": "T01",
+  "description": "Text Only – Verständnisprüfung",
+  "run_index": 1,
+  "client": "506",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "text",
+    "prompt": "Was ist künstliche Intelligenz und wie funktioniert sie in einfachen Worten?"
+  }
+}
