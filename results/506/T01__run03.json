@@ -1,0 +1,18 @@
+{
+  "test_id": "T01",
+  "timestamp": "2026-01-13T15:29:46",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "text",
+    "prompt": "Was ist künstliche Intelligenz und wie funktioniert sie in einfachen Worten?"
+  },
+  "response": {
+    "text": "Künstliche Intelligenz (KI) ist im Grunde die Fähigkeit von Maschinen, menschenähnliche Intelligenz zu zeigen. Das bedeutet, dass Computer lernen, Probleme zu lösen, Entscheidungen zu treffen, Sprache zu verstehen oder sogar Bilder zu erkennen – Dinge, die normalerweise menschliches Denken erfordern.\n\nWie funktioniert das in einfachen Worten? Stell dir vor, du möchtest einem Kind beibringen, einen Hund von einer Katze zu unterscheiden. Du zeigst ihm viele Bilder von Hunden und Katzen und sagst immer dazu, was es ist. Nach einer Weile lernt das Kind, die Merkmale zu erkennen, die einen Hund ausmachen (z.B. spitze Ohren, bestimmte Schnauze) und die eine Katze (z.B. Schnurrhaare, andere Augenform).\n\nKI-Systeme funktionieren ähnlich, nur viel komplexer und schneller. Sie werden mit riesigen Mengen an Daten \"gefüttert\" – zum Beispiel Millionen von Bildern, Texten oder Zahlen. In diesen Daten suchen sie nach Mustern und Zusammenhängen. Ein Algorithmus ist dabei wie eine Art \"Rezept\" oder eine Reihe von Anweisungen, die dem Computer sagen, wie er diese Muster finden und nutzen soll.\n\nWenn die KI genug gelernt hat, kann sie neue, ihr unbekannte Daten verarbeiten und darauf basierend Vorhersagen treffen oder Aufgaben erledigen. Zum Beispiel kann sie ein neues Bild analysieren und sagen, ob darauf ein Hund oder eine Katze zu sehen ist, weil sie die gelernten Muster anwendet.\n\nEs gibt verschiedene Arten von KI, aber das Grundprinzip ist oft das \"Lernen aus Daten\", um dann selbstständig Aufgaben zu lösen oder Entscheidungen zu treffen.",
+    "tokens": 235
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.032
+  }
+}
