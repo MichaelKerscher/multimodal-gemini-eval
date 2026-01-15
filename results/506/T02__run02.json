@@ -1,0 +1,18 @@
+{
+  "test_id": "T02",
+  "timestamp": "2026-01-15T16:14:10",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "image",
+    "prompt": "Was ist auf diesem Bild zu sehen?"
+  },
+  "response": {
+    "text": "Das Bild zeigt einen detaillierten Freisteller eines elektrischen Transformators auf einem reinweißen Hintergrund.\n\nDas zentrale Element ist ein offener Netztransformator, der aus einem laminierten Eisenkern besteht, der die Spulenwicklungen umschließt. Dieser Kern und die Spulen sind in einem robusten, metallischen Rahmen montiert, der verschraubt ist. An der Oberseite und an einer Seite des Transformators sind orangefarbene Anschlussklemmen angebracht, die mehrere Schraubanschlüsse für elektrische Leitungen bieten. Die Spulen sind von gelblich-beigem Isolationsmaterial umgeben, das auch zwischen dem Metallrahmen und den Klemmen sichtbar ist. Am unteren Teil des Metallrahmens befinden sich zwei Befestigungslaschen mit Löchern zur Montage.\n\nEs sind keine menschlichen Handlungen oder dynamischen Aktivitäten dargestellt; der Transformator wird statisch als Produkt oder Bauteil präsentiert, bereit zur Installation oder Verwendung.\n\nDie Farbgebung des Transformators ist überwiegend metallisch-grau für den Rahmen und das Blechpaket, schwarz für die Spulenwicklungen und leuchtend orange für die Anschlussklemmen. Das Isolationsmaterial ist in einem hellen Beige- oder Gelbton gehalten. Der Hintergrund ist ein reines, neutrales Weiß, das das Objekt klar hervorhebt. Der Stil ist sachlich und technisch, typisch für eine Produktfotografie oder technische Dokumentation. Die Aufnahme ist scharf, gut ausgeleuchtet und zeigt das Objekt aus einer leicht schrägen Perspektive, die sowohl die Oberseite als auch eine Seitenansicht offenbart.\n\nIm unteren rechten Bereich des Bildes ist in grauer, serifenloser Schrift der Text \"AC ~\" zu sehen, wobei \"AC\" für \"Alternating Current\" (Wechselstrom) steht und die Tilde (~) das Symbol für Wechselstrom ist. Auf der Oberseite des Transformators ist ein kleines Typenschild oder eine Beschriftung erkennbar, deren Details jedoch aufgrund der geringen Größe und Auflösung nicht lesbar sind.\n\nDer Transformator ist auf einem reinweißen, neutralen Hintergrund freigestellt, ohne sichtbare Umgebung, die auf einen spezifischen Ort hinweisen würde. Dies deutet auf eine Studioaufnahme oder eine digitale Freistellung hin, um das Produkt isoliert darzustellen.\n\nDie allgemeine Stimmung ist sachlich, informativ und technisch. Der Zweck des Bildes ist die klare und detaillierte Präsentation des Transformators als elektronisches Bauteil. Es dient wahrscheinlich als Produktbild für Kataloge, Online-Shops, technische Handbücher, Lehrbücher oder zur Illustration von Themen rund um Elektrotechnik und Elektronik.",
+    "tokens": 336
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 22.079
+  }
+}
