@@ -4,6 +4,7 @@ import os
 import json
 import mimetypes
 import hashlib
+import time
 from pathlib import Path
 
 import requests
@@ -27,8 +28,8 @@ DATA_COLLECTION_ID = os.getenv("COMPANYGPT_DATA_COLLECTION_ID")
 # Hash prefix length for upload filename (e.g., 12)
 HASH_PREFIX_LEN = int(os.getenv("COMPANYGPT_HASH_PREFIX_LEN", "12"))
 
-UPLOAD_TIMEOUT = (30, 900)  # 30s connect, 15min upload/read
-CHAT_TIMEOUT = (30, 900)    # 30s connect, 15min processing/read
+UPLOAD_TIMEOUT = 900  # 30s connect, 15min upload/read
+CHAT_TIMEOUT = 900    # 30s connect, 15min processing/read
 
 if not BASE_URL or not ORG_ID or not API_KEY:
     raise EnvironmentError("CompanyGPT .env Variablen fehlen oder sind unvollständig.")
@@ -103,6 +104,35 @@ def _make_upload_filename(original_name: str, sha256_hex: str) -> str:
     safe_name = original_name.replace("\\", "_").replace("/", "_")
     return f"{prefix}_{safe_name}"
 
+def _wait_until_media_visible(model_id: str, unique_title: str, max_wait_seconds: int = 15) -> None:
+    """
+    Lightweight readiness check to avoid race conditions (e.g., upload accepted 202 but not indexed yet).
+    We do a tiny chat call and see if the model still claims no media is visible.
+    """
+    delays = [2, 4, 8]  # total 14s
+    start = time.time()
+
+    probe_prompt = "Antworte nur mit: OK"
+
+    for d in delays:
+        try:
+            out = _chat_no_stream(
+                model_id=model_id,
+                prompt=probe_prompt,
+                temperature=0.0,
+                selected_mode=DEFAULT_MODE,
+                selected_files=[unique_title],
+                selected_data_collections=[DATA_COLLECTION_ID]
+            )
+            # heuristic: if model can see media, it will usually not complain about missing media
+            if out and "keine" not in out.lower() and "sichtbar" not in out.lower():
+                return
+        except Exception:
+            pass
+
+        if time.time() - start + d > max_wait_seconds:
+            return
+        time.sleep(d)
 
 # -------------------------------------------------
 # Media Upload
@@ -148,7 +178,7 @@ def _upload_media(media_path: str, data_collection_id: str) -> str:
         files = {"media": (upload_filename, f, mime)}
         r = requests.post(url, headers=HEADERS_AUTH, params=params, files=files, timeout=UPLOAD_TIMEOUT)
 
-    # 409 => already exists: derive uniqueTitle deterministically
+    # If backend says "already exists"
     if r.status_code == 409:
         unique_title = f"{data_collection_id}_{upload_filename}"
         _UPLOAD_CACHE[abs_path] = unique_title
@@ -158,14 +188,14 @@ def _upload_media(media_path: str, data_collection_id: str) -> str:
         raise RuntimeError(f"uploadMedia failed: {r.status_code} {r.text}")
 
     data = r.json()
-    if isinstance(data, list) and data:
-        unique_title = data[0].get("uniqueTitle")
-    else:
-        unique_title = data.get("uniqueTitle")
 
-    # Fallback: even if API doesn't return it, we can derive it
-    if not unique_title:
-        unique_title = f"{data_collection_id}_{upload_filename}"
+    # The API usually returns a list with one object
+    file_obj = data[0] if isinstance(data, list) and data else (data if isinstance(data, dict) else {})
+    api_unique = file_obj.get("uniqueTitle")
+    file_status = file_obj.get("status")  # e.g., 201, 202, 409
+
+    # If uniqueTitle is missing (observed for audio with status=202), derive it deterministically
+    unique_title = api_unique or f"{data_collection_id}_{upload_filename}"
 
     _UPLOAD_CACHE[abs_path] = unique_title
     return unique_title
@@ -246,6 +276,7 @@ def generate(
                 return "[CompanyGPT] image_path fehlt."
 
             unique_title = _upload_media(image_path, DATA_COLLECTION_ID)
+            _wait_until_media_visible(model, unique_title)
 
             return _chat_no_stream(
                 model_id=model,
@@ -261,6 +292,7 @@ def generate(
                 return "[CompanyGPT] audio_path fehlt."
 
             unique_title = _upload_media(audio_path, DATA_COLLECTION_ID)
+            _wait_until_media_visible(model, unique_title)
 
             return _chat_no_stream(
                 model_id=model,
