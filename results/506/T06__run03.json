@@ -1,0 +1,18 @@
+{
+  "test_id": "T06",
+  "timestamp": "2026-01-16T10:59:58",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "text",
+    "prompt": "Mein Gerät zeigt seit 13:45 Uhr einen schwarzen Bildschirm. Was könnte die Ursache sein?\n[Kontext: Zeit: 2025-07-13T14:00:00; Gerät: Pixel 7]"
+  },
+  "response": {
+    "text": "Es tut mir leid zu hören, dass Ihr Pixel 7 seit 13:45 Uhr einen schwarzen Bildschirm anzeigt. Das ist natürlich ärgerlich.\n\nHier sind einige mögliche Ursachen, die zu einem schwarzen Bildschirm führen können:\n\n*   **Software-Absturz:** Manchmal kann ein Betriebssystem oder eine App abstürzen, was dazu führt, dass der Bildschirm nicht mehr reagiert.\n*   **Akku entladen:** Auch wenn es unwahrscheinlich ist, dass der Akku innerhalb von 15 Minuten komplett leer ist, könnte es sein, dass er bereits vor 13:45 Uhr sehr schwach war und sich dann vollständig entladen hat.\n*   **Hardware-Problem:** Es könnte ein Problem mit dem Display selbst oder einer internen Komponente vorliegen.\n*   **Überhitzung:** In seltenen Fällen kann eine starke Überhitzung dazu führen, dass das Gerät zum Schutz den Bildschirm abschaltet.\n\nUm das Problem einzugrenzen, könnten Sie folgende Schritte versuchen:\n\n1.  **Erzwungener Neustart:** Halten Sie die Ein-/Aus-Taste für etwa 20-30 Sekunden gedrückt. Dies sollte einen erzwungenen Neustart auslösen, selbst wenn der Bildschirm schwarz ist.\n2.  **Ladevorgang überprüfen:** Schließen Sie Ihr Pixel 7 an ein Ladegerät an und lassen Sie es einige Minuten laden. Manchmal reicht ein geringer Akkustand aus, um den Bildschirm nicht mehr anzuzeigen. Achten Sie darauf, ob eine Ladeanzeige erscheint oder das Gerät vibriert.\n3.  **Anschluss an einen Computer:** Versuchen Sie, Ihr Gerät an einen Computer anzuschließen. Wenn der Computer das Gerät erkennt, könnte dies auf ein reines Display-Problem hindeuten.\n\nIch hoffe, diese Vorschläge helfen Ihnen weiter!",
+    "tokens": 230
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.51
+  }
+}

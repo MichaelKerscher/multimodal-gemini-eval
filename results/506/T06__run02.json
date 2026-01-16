@@ -1,0 +1,18 @@
+{
+  "test_id": "T06",
+  "timestamp": "2026-01-16T10:59:54",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "text",
+    "prompt": "Mein Gerät zeigt seit 13:45 Uhr einen schwarzen Bildschirm. Was könnte die Ursache sein?\n[Kontext: Zeit: 2025-07-13T14:00:00; Gerät: Pixel 7]"
+  },
+  "response": {
+    "text": "Es tut mir leid zu hören, dass Ihr Pixel 7 seit 13:45 Uhr einen schwarzen Bildschirm anzeigt. Das ist natürlich ärgerlich! Hier sind einige mögliche Ursachen, die Sie in Betracht ziehen könnten:\n\n*   **Software-Absturz:** Manchmal kann ein Softwarefehler oder eine abgestürzte App dazu führen, dass der Bildschirm schwarz wird und das Gerät nicht mehr reagiert.\n*   **Akku entladen:** Auch wenn es offensichtlich klingt, könnte der Akku komplett leer sein. Versuchen Sie, das Gerät für eine Weile an ein Ladegerät anzuschließen.\n*   **Hardware-Problem:** Es könnte ein Problem mit dem Display selbst oder anderen internen Komponenten vorliegen. Dies ist oft der Fall, wenn das Gerät heruntergefallen ist oder einen Wasserschaden hatte.\n*   **Überhitzung:** In seltenen Fällen kann eine extreme Überhitzung des Geräts dazu führen, dass es sich zum Schutz abschaltet und der Bildschirm schwarz bleibt.\n\nUm das Problem möglicherweise zu beheben, könnten Sie versuchen, einen erzwungenen Neustart durchzuführen. Bei den meisten Android-Geräten, einschließlich des Pixel 7, halten Sie dazu die Ein-/Aus-Taste und die Leiser-Taste gleichzeitig für etwa 10-20 Sekunden gedrückt, bis das Google-Logo erscheint.\n\nSollte das Problem weiterhin bestehen, wäre es ratsam, den Google-Support zu kontaktieren oder einen qualifizierten Techniker aufzusuchen, um das Gerät überprüfen zu lassen.",
+    "tokens": 195
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.835
+  }
+}
