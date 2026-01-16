@@ -27,6 +27,9 @@ DATA_COLLECTION_ID = os.getenv("COMPANYGPT_DATA_COLLECTION_ID")
 # Hash prefix length for upload filename (e.g., 12)
 HASH_PREFIX_LEN = int(os.getenv("COMPANYGPT_HASH_PREFIX_LEN", "12"))
 
+UPLOAD_TIMEOUT = (30, 900)  # 30s connect, 15min upload/read
+CHAT_TIMEOUT = (30, 900)    # 30s connect, 15min processing/read
+
 if not BASE_URL or not ORG_ID or not API_KEY:
     raise EnvironmentError("CompanyGPT .env Variablen fehlen oder sind unvollständig.")
 if not DATA_COLLECTION_ID:
@@ -143,7 +146,7 @@ def _upload_media(media_path: str, data_collection_id: str) -> str:
     with p.open("rb") as f:
         # IMPORTANT: we override the filename sent to the API
         files = {"media": (upload_filename, f, mime)}
-        r = requests.post(url, headers=HEADERS_AUTH, params=params, files=files, timeout=120)
+        r = requests.post(url, headers=HEADERS_AUTH, params=params, files=files, timeout=UPLOAD_TIMEOUT)
 
     # 409 => already exists: derive uniqueTitle deterministically
     if r.status_code == 409:
@@ -206,7 +209,7 @@ def _chat_no_stream(
         headers=HEADERS_JSON,
         params=params,
         data=json.dumps(payload),
-        timeout=120
+        timeout=CHAT_TIMEOUT
     )
 
     response.raise_for_status()
@@ -226,11 +229,6 @@ def generate(
     video_path: str = None,
     context: dict = None
 ) -> str:
-    """
-    Supported in CSLI Step 06:
-      - text
-      - image (via uploadMedia + selectedFiles, hash-based naming)
-    """
     try:
         prompt_with_context = append_context_to_prompt(prompt, context)
 
@@ -248,6 +246,21 @@ def generate(
                 return "[CompanyGPT] image_path fehlt."
 
             unique_title = _upload_media(image_path, DATA_COLLECTION_ID)
+
+            return _chat_no_stream(
+                model_id=model,
+                prompt=prompt_with_context,
+                temperature=0.2,
+                selected_mode=DEFAULT_MODE,
+                selected_files=[unique_title],
+                selected_data_collections=[DATA_COLLECTION_ID]
+            )
+        
+        if input_type == "audio":
+            if not audio_path:
+                return "[CompanyGPT] audio_path fehlt."
+
+            unique_title = _upload_media(audio_path, DATA_COLLECTION_ID)
 
             return _chat_no_stream(
                 model_id=model,
