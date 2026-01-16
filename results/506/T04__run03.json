@@ -1,0 +1,18 @@
+{
+  "test_id": "T04",
+  "timestamp": "2026-01-16T10:48:17",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "image",
+    "prompt": "Dieses Bild zeigt ein Bauteil aus einem Schaltschrank. Was genau ist das und wofür wird es typischerweise verwendet?"
+  },
+  "response": {
+    "text": "Das Bild zeigt einen detaillierten Freisteller eines elektrischen Transformators.\n\nEin Transformator ist ein elektrisches Bauteil, das dazu dient, Wechselspannungen und -ströme zu wandeln. Er besteht aus einem laminierten Eisenkern, um den Spulenwicklungen angebracht sind. Die orangefarbenen Anschlussklemmen dienen zum Verbinden mit elektrischen Leitungen. Der Text \"AC ~\" im Bild weist darauf hin, dass es sich um ein Bauteil für Wechselstrom (Alternating Current) handelt.\n\nTypischerweise werden Transformatoren in Schaltschränken verwendet, um die Spannung für verschiedene Komponenten anzupassen, beispielsweise um eine höhere Netzspannung auf eine niedrigere, für die Steuerungselektronik benötigte Spannung zu reduzieren. Sie sind essenziell für die Stromversorgung und -verteilung in vielen elektrischen und elektronischen Systemen.",
+    "tokens": 105
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.43
+  }
+}

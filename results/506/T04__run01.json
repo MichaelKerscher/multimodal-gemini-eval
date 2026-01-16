@@ -1,0 +1,18 @@
+{
+  "test_id": "T04",
+  "timestamp": "2026-01-16T10:48:03",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "image",
+    "prompt": "Dieses Bild zeigt ein Bauteil aus einem Schaltschrank. Was genau ist das und wofür wird es typischerweise verwendet?"
+  },
+  "response": {
+    "text": "Das Bild zeigt einen detaillierten Freisteller eines elektrischen Transformators.\n\nEs handelt sich um einen offenen Netztransformator, der aus einem laminierten Eisenkern besteht, der die Spulenwicklungen umschließt. An der Oberseite und an einer der Seiten sind orangefarbene Anschlussklemmen mit Schraubanschlüssen für elektrische Leitungen angebracht. Die Spulen sind von gelblich-beigem Isolationsmaterial umgeben. Am unteren Teil des Metallrahmens befinden sich Befestigungslaschen mit Löchern, die zur Montage dienen. Der Text \"AC ~\" im Bild weist darauf hin, dass es für Wechselstrom (Alternating Current) verwendet wird.\n\nTypischerweise wird ein solcher Transformator verwendet, um elektrische Wechselspannung von einem Niveau auf ein anderes umzuwandeln, beispielsweise um die Netzspannung für elektronische Geräte anzupassen. Er dient der Stromversorgung und Isolation in Schaltkreisen und wird in Schaltschränken zur Integration in elektrische Anlagen verbaut.",
+    "tokens": 123
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 9.588
+  }
+}
