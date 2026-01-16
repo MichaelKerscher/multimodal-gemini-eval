@@ -48,7 +48,14 @@ def run_test_from_file(filepath: str):
     # Basisdaten
     # ---------------------------------------
     test_id = test_data["test_id"]
-    run_index = test_data.get("run_index")  # optional, z. B. 1, 2, 3
+
+    # IMPORTANT:
+    # We interpret run_index as "number of runs" (N runs).
+    # If missing, default to 1.
+    runs = int(test_data.get("run_index") or 1)
+    if runs < 1:
+        runs = 1
+
     client_name = _normalize_client_name(test_data.get("client", "506"))
     model = test_data.get("model", "gemini-2.5-flash")
 
@@ -76,72 +83,76 @@ def run_test_from_file(filepath: str):
     # FALL 1: Mehrere Prompts
     # ---------------------------------------
     if prompts and isinstance(prompts, list):
-        responses = []
-        total_runtime = 0.0
+        # Run the same multi-prompt test N times
+        for run_i in range(1, runs + 1):
+            responses = []
+            total_runtime = 0.0
 
-        for idx, single_prompt in enumerate(prompts, start=1):
-            print(f"[INFO] Starte Sub-Prompt {idx} für Test {test_id}...")
-            start_time = time.perf_counter()
+            for idx, single_prompt in enumerate(prompts, start=1):
+                print(f"[INFO] Test {test_id} — Run {run_i}/{runs} — Sub-Prompt {idx}...")
+                start_time = time.perf_counter()
 
-            response = client.generate(
-                input_type=input_type,
-                prompt=single_prompt,
+                response = client.generate(
+                    input_type=input_type,
+                    prompt=single_prompt,
+                    model=model,
+                    image_path=image_path,
+                    audio_path=audio_path,
+                    video_path=video_path,
+                    context=context
+                )
+
+                end_time = time.perf_counter()
+                runtime = round(end_time - start_time, 3)
+                total_runtime += runtime
+
+                responses.append({
+                    "prompt": _with_context(client, single_prompt, context),
+                    "response": response,
+                    "runtime_seconds": runtime
+                })
+
+            log_response(
+                test_id=test_id,
+                prompt=prompts,
+                response_text=responses,
                 model=model,
-                image_path=image_path,
-                audio_path=audio_path,
-                video_path=video_path,
-                context=context
+                client=client_name,
+                runtime_seconds=round(total_runtime, 3),
+                input_type=input_type,
+                result_dir=result_dir,
+                run_index=run_i
             )
-
-            end_time = time.perf_counter()
-            runtime = round(end_time - start_time, 3)
-            total_runtime += runtime
-
-            responses.append({
-                "prompt": _with_context(client, single_prompt, context),
-                "response": response,
-                "runtime_seconds": runtime
-            })
-
-        log_response(
-            test_id=test_id,
-            prompt=prompts,
-            response_text=responses,
-            model=model,
-            client=client_name,
-            runtime_seconds=round(total_runtime, 3),
-            input_type=input_type,
-            result_dir=result_dir,
-            run_index=run_index
-        )
         return
 
     # ---------------------------------------
     # FALL 2: Einzel-Prompt (Standard)
     # ---------------------------------------
-    start_time = time.perf_counter()
+    for run_i in range(1, runs + 1):
+        print(f"[INFO] Test {test_id} — Run {run_i}/{runs}...")
+        start_time = time.perf_counter()
 
-    response = client.generate(
-        input_type=input_type,
-        prompt=prompt,
-        model=model,
-        image_path=image_path,
-        audio_path=audio_path,
-        video_path=video_path,
-        context=context
-    )
+        response = client.generate(
+            input_type=input_type,
+            prompt=prompt,
+            model=model,
+            image_path=image_path,
+            audio_path=audio_path,
+            video_path=video_path,
+            context=context
+        )
 
-    end_time = time.perf_counter()
-    runtime = round(end_time - start_time, 3)
+        end_time = time.perf_counter()
+        runtime = round(end_time - start_time, 3)
 
-    log_response(
-        test_id=test_id,
-        prompt=_with_context(client, prompt, context),
-        response_text=response,
-        model=model,
-        client=client_name,
-        runtime_seconds=runtime,
-        input_type=input_type,
-        result_dir=result_dir,
-        run_index=run_index
-    )
+        log_response(
+            test_id=test_id,
+            prompt=_with_context(client, prompt, context),
+            response_text=response,
+            model=model,
+            client=client_name,
+            runtime_seconds=runtime,
+            input_type=input_type,
+            result_dir=result_dir,
+            run_index=run_i
+        )

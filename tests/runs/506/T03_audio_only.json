@@ -1,7 +1,7 @@
 {
   "test_id": "T03",
   "description": "Audio Only – Sprachverständnisprüfung",
-  "run_index": 1,
+  "run_index": 3,
   "client": "506",
   "model": "gemini-2.5-flash",
   "input": {
