@@ -1,0 +1,18 @@
+{
+  "test_id": "T05",
+  "timestamp": "2026-01-16T10:53:01",
+  "model": "gemini-2.5-flash",
+  "client": "506",
+  "input": {
+    "type": "image",
+    "prompt": "Was zeigt dieses Bild?\n[Kontext: Standort: (47.8571, 12.1285)]"
+  },
+  "response": {
+    "text": "Das Bild zeigt einen detaillierten Freisteller eines elektrischen Transformators auf einem reinweißen Hintergrund.\n\n**Hauptobjekte:**\nDas zentrale Objekt ist ein offener Netztransformator, der aus einem laminierten Eisenkern (Blechpaket) besteht, welcher die Spulenwicklungen umschließt. Der Kern und die Spulen sind in einem robusten, metallischen Rahmen montiert, der aus mehreren verschraubten Blechen besteht. An der Oberseite und an einer der Seiten des Transformators sind orangefarbene Anschlussklemmen (Klemmenblöcke) mit mehreren Schraubanschlüssen für elektrische Leitungen angebracht. Die Spulen sind von gelblich-beigem Isolationsmaterial umgeben, das auch zwischen den Metallrahmen und den Klemmen sichtbar ist. Am unteren Teil des Metallrahmens befinden sich zwei Befestigungslaschen mit Löchern zur Montage des Transformators.\n\n**Farben und Stil:**\nDie Farbgebung des Transformators ist überwiegend metallisch-grau für den Rahmen und das Blechpaket, schwarz für die Spulenwicklungen und leuchtend orange für die Anschlussklemmen. Das Isolationsmaterial ist in einem hellen Beige- oder Gelbton gehalten. Der Hintergrund ist ein reines, neutrales Weiß, das das Objekt klar hervorhebt. Der Stil ist sachlich und technisch, typisch für eine Produktfotografie oder technische Dokumentation. Die Aufnahme ist scharf, gut ausgeleuchtet und zeigt das Objekt aus einer leicht schrägen Perspektive, die sowohl die Oberseite als auch eine Seitenansicht offenbart.\n\n**Sichtbarer Text:**\nIm unteren rechten Bereich des Bildes ist in grauer, serifenloser Schrift der Text \"AC ~\" zu sehen, wobei \"AC\" für \"Alternating Current\" (Wechselstrom) steht und die Tilde (~) das Symbol für Wechselstrom ist. Ein kleines Typenschild oder eine Beschriftung auf der Oberseite des Transformators ist erkennbar, aber aufgrund der geringen Größe und Auflösung nicht lesbar.\n\n**Umgebung und Zweck:**\nDer Transformator ist auf einem reinweißen, neutralen Hintergrund freigestellt, ohne sichtbare Umgebung, die auf einen spezifischen Ort hinweisen würde. Dies deutet auf eine Studioaufnahme oder eine digitale Freistellung hin, um das Produkt isoliert darzustellen. Die allgemeine Stimmung ist sachlich, informativ und technisch. Der Zweck des Bildes ist die klare und detaillierte Präsentation des Transformators als elektronisches Bauteil, wahrscheinlich für Kataloge, Online-Shops, technische Handbücher, Lehrbücher oder zur Illustration von Themen rund um Elektrotechnik und Elektronik.",
+    "tokens": 322
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.597
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "test_id": "T05",
+  "description": "Bild mit Standortdaten",
+  "run_index": 3,
+  "client": "506",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "image",
+    "prompt": "Was zeigt dieses Bild?",
+    "image_path": "data/transformator.jpg",
+    "context": {
+      "location": {
+        "lat": 47.8571,
+        "lon": 12.1285
+      }
+    }
+  }
+}
