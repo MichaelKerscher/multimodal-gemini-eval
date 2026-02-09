@@ -1,0 +1,12 @@
+{
+  "test_id": "T09",
+  "description": "Videoanalyse – Störung im Kabelschacht",
+  "run_index": 1,
+  "client": "506",
+  "model": "gemini-2.5-flash",
+  "input": {
+    "type": "video",
+    "prompt": "Was passiert in diesem Video?",
+    "video_path": "data/strand.mp4"
+  }
+}
