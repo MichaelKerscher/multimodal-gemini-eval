@@ -1,0 +1,34 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-10T17:30:39",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "testcase",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Info zum Asset n5718630492. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Prüfen, ob die Lampe aktuell sicher ist (keine offenen Kabel, keine Gefahr für Verkehr oder Fußgänger).\n- Bei Gefahr: Bereich absperren oder melden.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Lampe und Umgebung: Gibt es sichtbare Schäden, Feuchtigkeit, lose Teile?\n- Prüfen, ob andere Lampen in der Nähe betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Notieren, wann und wie oft der Fehler auftritt (z. B. bei Nässe, zu bestimmten Uhrzeiten).\n- Prüfen, ob kürzlich Wartungsarbeiten oder Störungen im Stromnetz waren.\n\n**4. Dokumentation**\n- Fehlerbeschreibung, Asset-ID, Zeitpunkt und eigene Beobachtungen dokumentieren.\n- Fotos machen, falls sichtbar etwas auffällig ist.\n\n**5. Eskalation**\n- Meldung an die zuständige Fachabteilung oder den Wartungsdienst weiterleiten.\n- Hinweis auf sporadischen Fehler und bisherige Beobachtungen geben.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Meldungen an diesem Standort oder Hinweise auf Stromschwankungen?  \nFalls weitere Details (z. B. Wetterbedingungen, genaue Uhrzeit des Ausfalls) bekannt sind, bitte ergänzen.",
+    "tokens_estimate_words": 158
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.522
+  },
+  "error": {}
+}

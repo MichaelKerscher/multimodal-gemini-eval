@@ -261,42 +261,61 @@ def generate(
 
         mode = selected_mode or DEFAULT_MODE
 
+        # -------------------------
+        # TEXT
+        # -------------------------
         if input_type == "text":
             return _chat_no_stream(
                 model_id=model,
                 prompt=prompt_with_context,
-                temperature=0.2,
-                selected_mode=DEFAULT_MODE,
+                temperature=temperature,
+                selected_mode=mode,
                 selected_files=[],
-                assistant_id=GENERATOR_ASSISTANT_ID
+                selected_data_collections=[],
+                assistant_id=GENERATOR_ASSISTANT_ID,
+                internal_system_prompt_override=internal_system_prompt,
             )
 
+        # -------------------------
+        # IMAGE
+        # -------------------------
         if input_type == "image":
             if not image_path:
                 return "[CompanyGPT] image_path fehlt."
+
             unique_title = _upload_media(image_path, DATA_COLLECTION_ID)
             _wait_until_media_visible(model, unique_title)
+
             return _chat_no_stream(
                 model_id=model,
                 prompt=prompt_with_context,
-                temperature=0.2,
-                selected_mode=DEFAULT_MODE,
-                selected_files=[],
-                assistant_id=GENERATOR_ASSISTANT_ID
+                temperature=temperature,
+                selected_mode=mode,
+                selected_files=[unique_title],
+                selected_data_collections=[DATA_COLLECTION_ID],
+                assistant_id=GENERATOR_ASSISTANT_ID,
+                internal_system_prompt_override=internal_system_prompt,
             )
 
+        # -------------------------
+        # AUDIO
+        # -------------------------
         if input_type == "audio":
             if not audio_path:
                 return "[CompanyGPT] audio_path fehlt."
+
             unique_title = _upload_media(audio_path, DATA_COLLECTION_ID)
             _wait_until_media_visible(model, unique_title)
+
             return _chat_no_stream(
                 model_id=model,
                 prompt=prompt_with_context,
-                temperature=0.2,
-                selected_mode=DEFAULT_MODE,
-                selected_files=[],
-                assistant_id=GENERATOR_ASSISTANT_ID
+                temperature=temperature,
+                selected_mode=mode,
+                selected_files=[unique_title],
+                selected_data_collections=[DATA_COLLECTION_ID],
+                assistant_id=GENERATOR_ASSISTANT_ID,
+                internal_system_prompt_override=internal_system_prompt,
             )
 
         return f"[CompanyGPT] Input-Typ '{input_type}' in Step 06 nicht unterstützt."
@@ -304,3 +323,28 @@ def generate(
     except Exception as e:
         return f"[CompanyGPT ERROR] {e}"
 
+def judge(
+    prompt: str,
+    model: str,
+    temperature: float = 0.1,
+    selected_mode: str | None = None,
+    internal_system_prompt: bool | None = None,
+) -> str:
+    """
+    Sends a prompt to the configured Judge Assistant.
+    Returns raw text (should be JSON string).
+    """
+    try:
+        mode = selected_mode or DEFAULT_MODE
+        return _chat_no_stream(
+            model_id=model,
+            prompt=prompt,
+            temperature=temperature,
+            selected_mode=mode,
+            selected_files=[],
+            selected_data_collections=[],
+            assistant_id=JUDGE_ASSISTANT_ID,
+            internal_system_prompt_override=internal_system_prompt,
+        )
+    except Exception as e:
+        return f"[CompanyGPT JUDGE ERROR] {e}"
