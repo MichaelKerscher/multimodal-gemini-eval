@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC1",
-  "timestamp": "2026-02-10T17:30:39",
+  "timestamp": "2026-02-10T17:46:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -12,7 +12,8 @@
     }
   },
   "request_params": {
-    "run_mode": "testcase",
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
     "assistant_source_of_truth": true
   },
   "media": {
@@ -22,13 +23,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Danke für die Info zum Asset n5718630492. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Prüfen, ob die Lampe aktuell sicher ist (keine offenen Kabel, keine Gefahr für Verkehr oder Fußgänger).\n- Bei Gefahr: Bereich absperren oder melden.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Lampe und Umgebung: Gibt es sichtbare Schäden, Feuchtigkeit, lose Teile?\n- Prüfen, ob andere Lampen in der Nähe betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Notieren, wann und wie oft der Fehler auftritt (z. B. bei Nässe, zu bestimmten Uhrzeiten).\n- Prüfen, ob kürzlich Wartungsarbeiten oder Störungen im Stromnetz waren.\n\n**4. Dokumentation**\n- Fehlerbeschreibung, Asset-ID, Zeitpunkt und eigene Beobachtungen dokumentieren.\n- Fotos machen, falls sichtbar etwas auffällig ist.\n\n**5. Eskalation**\n- Meldung an die zuständige Fachabteilung oder den Wartungsdienst weiterleiten.\n- Hinweis auf sporadischen Fehler und bisherige Beobachtungen geben.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Meldungen an diesem Standort oder Hinweise auf Stromschwankungen?  \nFalls weitere Details (z. B. Wetterbedingungen, genaue Uhrzeit des Ausfalls) bekannt sind, bitte ergänzen.",
-    "tokens_estimate_words": 158
+    "text": "Checkliste für sporadischen Fehler – Straßenlampe (Asset-ID: n5718630492)\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung (z. B. Dunkelheit an gefährlicher Stelle): Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe, ob äußerliche Schäden an Mast, Leuchte oder Verkabelung sichtbar sind.\n   - Achte auf Feuchtigkeit, lose Teile oder Vandalismusschäden.\n\n3. **Diagnose/Beobachtung**\n   - Beobachte, ob die Lampe weiterhin zuverlässig funktioniert.\n   - Notiere, ob das Problem zu bestimmten Zeiten oder Wetterbedingungen auftritt.\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Halte den Fehler (sporadisches Ausfallen, Asset-ID, Zeitpunkt, Wetter, Beobachtungen) schriftlich fest.\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Melde den Fehler an die zuständige Fachabteilung/Technik, da sporadische Fehler auf Vorschaltgerät, Sensorik oder Netzschwankungen hindeuten können.\n   - Dringlichkeit: Mittel (sofern aktuell keine akute Gefährdung besteht).\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Störungen im Umfeld? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 154
   },
-  "judge": null,
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit klarer Priorisierung (Absicherung zuerst). Eskalation vorhanden, Dokumentation detailliert. Sicherheitsaspekte angemessen für sporadischen Fehler ohne akute Gefahr. Kontextnutzung minimal aber korrekt (Asset-ID verwendet). Keine Halluzinationen."
+  },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.522
+    "runtime_seconds": 5.673
   },
   "error": {}
 }

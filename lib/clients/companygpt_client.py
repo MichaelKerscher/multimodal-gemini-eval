@@ -323,6 +323,34 @@ def generate(
     except Exception as e:
         return f"[CompanyGPT ERROR] {e}"
 
+def _strip_code_fences(text: str) -> str:
+    """
+    Removes common markdown code fences like ```json ... ``` or ``` ... ```.
+    Keeps inner content.
+    """
+    if not isinstance(text, str):
+        return text
+
+    s = text.strip()
+
+    # quick exit
+    if not s.startswith("```"):
+        return s
+
+    # Remove leading ```lang? and trailing ```
+    # Example: ```json\n[...]\n```
+    lines = s.splitlines()
+    if len(lines) >= 2 and lines[0].startswith("```") and lines[-1].strip() == "```":
+        return "\n".join(lines[1:-1]).strip()
+
+    # fallback: try slicing by first newline after opening fence and last fence
+    first_nl = s.find("\n")
+    last_fence = s.rfind("```")
+    if first_nl != -1 and last_fence != -1 and last_fence > first_nl:
+        return s[first_nl:last_fence].strip()
+
+    return s
+
 def judge(
     prompt: str,
     model: str,
@@ -336,7 +364,7 @@ def judge(
     """
     try:
         mode = selected_mode or DEFAULT_MODE
-        return _chat_no_stream(
+        raw = _chat_no_stream(
             model_id=model,
             prompt=prompt,
             temperature=temperature,
@@ -346,5 +374,6 @@ def judge(
             assistant_id=JUDGE_ASSISTANT_ID,
             internal_system_prompt_override=internal_system_prompt,
         )
+        return _strip_code_fences(raw)
     except Exception as e:
         return f"[CompanyGPT JUDGE ERROR] {e}"

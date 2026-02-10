@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-10T17:44:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste bei sporadischem Ausfall einer Straßenlampe**\n\n1. **Absicherung**\n   - Stelle sicher, dass du dich und andere Verkehrsteilnehmer schützt (Warnweste, ggf. Absperrung bei Arbeiten am Mast).\n\n2. **Sichtprüfung**\n   - Prüfe, ob äußerliche Schäden am Mast, Leuchtenkopf oder Verkabelung sichtbar sind.\n   - Achte auf Feuchtigkeitsspuren, lose Teile oder Vandalismus.\n\n3. **Diagnose/Beobachtung**\n   - Beobachte, ob das Licht flackert oder erneut ausfällt.\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n   - Notiere, ob äußere Einflüsse (z. B. Regen, Wind) den Fehler ausgelöst haben könnten.\n\n4. **Dokumentation**\n   - Halte den Fehler (sporadischer Ausfall, jetzt wieder an) schriftlich fest.\n   - Notiere Datum, Uhrzeit, Lampennummer/Standort und eigene Beobachtungen.\n\n5. **Eskalation**\n   - Melde den Fehler an die zuständige Wartungsstelle mit allen gesammelten Informationen.\n   - Weisen auf die Dringlichkeit hin, falls die Lampe an einer sicherheitsrelevanten Stelle steht (z. B. Fußgängerüberweg, Kreuzung).\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Ausfälle in der Umgebung oder ist nur diese eine Lampe betroffen?",
+    "tokens_estimate_words": 156
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.208
+  },
+  "error": {}
+}
