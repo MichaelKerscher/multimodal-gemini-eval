@@ -1,63 +1,49 @@
 # lib/test_runner.py
-
 import time
 import json
-from lib.logger import log_response
+import os
+from lib.logger import log_response, write_manifest
 from lib.clients import CLIENTS
 
 
 def _normalize_client_name(name: str) -> str:
-    """
-    Maps client aliases to a canonical name used for CLIENTS lookup
-    and result folders.
-    """
     name = (name or "").strip().lower()
-
-    # Canonicalize 506 / CompanyGPT aliases
     if name in ("506", "506.ai", "companygpt", "company_gpt", "companygpt_506"):
         return "506"
-
-    # Extend here if needed (e.g. openai, azure, etc.)
     return name or "unknown"
 
 
-def _result_dir_for_client(client_name: str) -> str:
-    """Returns the output directory for a given canonical client name."""
-    return f"results/{client_name}"
+def _result_root() -> str:
+    return "results_v0.1"
+
+
+def _test_dir(client_name: str, test_id: str, condition_id: str | None) -> str:
+    cond = condition_id or "no_condition"
+    return os.path.join(_result_root(), client_name, test_id, cond)
 
 
 def _with_context(client, prompt: str, context: dict | None) -> str:
-    """
-    Client-agnostic context handling:
-    Uses client.append_context_to_prompt() if available.
-    """
     append_fn = getattr(client, "append_context_to_prompt", None)
     if callable(append_fn):
         return append_fn(prompt, context)
     return prompt
 
 
-def run_test_from_file(filepath: str):
-    # ---------------------------------------
-    # Testdatei laden
-    # ---------------------------------------
-    with open(filepath, "r", encoding="utf-8") as f:
-        test_data = json.load(f)
-
-    # ---------------------------------------
-    # Basisdaten
-    # ---------------------------------------
+def run_testcase(test_data: dict):
+    """
+    Runs a single canonical testcase dict (from JSON or CSV loader).
+    """
     test_id = test_data["test_id"]
-
-    # IMPORTANT:
-    # We interpret run_index as "number of runs" (N runs).
-    # If missing, default to 1.
     runs = int(test_data.get("run_index") or 1)
     if runs < 1:
         runs = 1
 
     client_name = _normalize_client_name(test_data.get("client", "506"))
-    model = test_data.get("model", "gemini-2.5-flash")
+    model = test_data.get("model", "gpt-4.1")
+
+    temperature = float(test_data.get("temperature", 0.2))
+    selected_mode = test_data.get("selected_mode", None)  # may be used by client later
+    internal_system_prompt = test_data.get("internal_system_prompt", None)
 
     input_data = test_data["input"]
     prompt = input_data.get("prompt")
@@ -68,22 +54,30 @@ def run_test_from_file(filepath: str):
     video_path = input_data.get("video_path")
     context = input_data.get("context")
 
-    # ---------------------------------------
-    # Client auswählen
-    # ---------------------------------------
     if client_name not in CLIENTS:
         raise ValueError(f"Unbekannter Client: '{client_name}'")
-
     client = CLIENTS[client_name]
 
-    # Ergebnisordner abhängig vom Client
-    result_dir = _result_dir_for_client(client_name)
+    condition_id = test_data.get("condition_id")
+    out_dir = _test_dir(client_name, test_id, condition_id)
+    os.makedirs(out_dir, exist_ok=True)
 
-    # ---------------------------------------
-    # FALL 1: Mehrere Prompts
-    # ---------------------------------------
+    write_manifest(
+        out_dir=out_dir,
+        test_data=test_data,
+        resolved={
+            "client": client_name,
+            "model": model,
+            "runs": runs,
+            "input_type": input_type,
+            "temperature": temperature,
+            "selected_mode": selected_mode,
+            "internal_system_prompt": internal_system_prompt,
+        }
+    )
+
+    # Multi-prompt
     if prompts and isinstance(prompts, list):
-        # Run the same multi-prompt test N times
         for run_i in range(1, runs + 1):
             responses = []
             total_runtime = 0.0
@@ -94,16 +88,18 @@ def run_test_from_file(filepath: str):
 
                 response = client.generate(
                     input_type=input_type,
-                    prompt=single_prompt,
+                    prompt=prompt,
                     model=model,
                     image_path=image_path,
                     audio_path=audio_path,
                     video_path=video_path,
-                    context=context
+                    context=context,
+                    temperature=temperature,
+                    selected_mode=selected_mode,
+                    internal_system_prompt=internal_system_prompt
                 )
 
-                end_time = time.perf_counter()
-                runtime = round(end_time - start_time, 3)
+                runtime = round(time.perf_counter() - start_time, 3)
                 total_runtime += runtime
 
                 responses.append({
@@ -113,6 +109,7 @@ def run_test_from_file(filepath: str):
                 })
 
             log_response(
+                out_dir=out_dir,
                 test_id=test_id,
                 prompt=prompts,
                 response_text=responses,
@@ -120,14 +117,17 @@ def run_test_from_file(filepath: str):
                 client=client_name,
                 runtime_seconds=round(total_runtime, 3),
                 input_type=input_type,
-                result_dir=result_dir,
-                run_index=run_i
+                run_index=run_i,
+                context=context,
+                request_params={
+                    "temperature": temperature,
+                    "selected_mode": selected_mode,
+                    "internal_system_prompt": internal_system_prompt,
+                }
             )
         return
 
-    # ---------------------------------------
-    # FALL 2: Einzel-Prompt (Standard)
-    # ---------------------------------------
+    # Single prompt
     for run_i in range(1, runs + 1):
         print(f"[INFO] Test {test_id} — Run {run_i}/{runs}...")
         start_time = time.perf_counter()
@@ -139,13 +139,16 @@ def run_test_from_file(filepath: str):
             image_path=image_path,
             audio_path=audio_path,
             video_path=video_path,
-            context=context
+            context=context,
+            temperature=temperature,
+            selected_mode=selected_mode,
+            internal_system_prompt=internal_system_prompt
         )
 
-        end_time = time.perf_counter()
-        runtime = round(end_time - start_time, 3)
+        runtime = round(time.perf_counter() - start_time, 3)
 
         log_response(
+            out_dir=out_dir,
             test_id=test_id,
             prompt=_with_context(client, prompt, context),
             response_text=response,
@@ -153,6 +156,25 @@ def run_test_from_file(filepath: str):
             client=client_name,
             runtime_seconds=runtime,
             input_type=input_type,
-            result_dir=result_dir,
-            run_index=run_i
+            run_index=run_i,
+            context=context,
+            request_params={
+                "temperature": temperature,
+                "selected_mode": selected_mode,
+                "internal_system_prompt": internal_system_prompt,
+            }
         )
+
+
+def run_test_from_file(filepath: str):
+    """
+    Backwards-compatible: loads a single JSON file (old behavior).
+    If you want, we can delete this later once everything uses load_testcases.
+    """
+    with open(filepath, "r", encoding="utf-8") as f:
+        test_data = json.load(f)
+    test_data["_source_file"] = filepath
+    # normalize legacy key if needed
+    if "test_id" in test_data and "testcase_id" not in test_data:
+        pass
+    run_testcase(test_data)

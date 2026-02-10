@@ -1,0 +1,30 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-09T16:36:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "temperature": 0.2,
+    "selected_mode": "BASIC",
+    "internal_system_prompt": true
+  },
+  "media": {},
+  "response": {
+    "multi": false,
+    "text": "Danke für die Info zum sporadischen Fehler bei der Lampe (Asset-ID: n5718630492).\n\n**Checkliste für das weitere Vorgehen:**\n\n1. **Absicherung:**  \n   - Ist die Lampe an einem verkehrsrelevanten Punkt? Falls ja: Bereich absichern, ggf. Warnhinweise anbringen.\n\n2. **Sichtprüfung:**  \n   - Gibt es sichtbare Schäden am Mast, Leuchtmittel oder der Verkabelung?  \n   - Sind Feuchtigkeit, Vandalismus oder lose Teile erkennbar?\n\n3. **Diagnose/Beobachtung:**  \n   - Tritt das Problem nur bei bestimmten Wetterlagen (z. B. Regen, Frost) auf?  \n   - Flackert die Lampe oder bleibt sie komplett aus?  \n   - Gibt es ähnliche Meldungen in der Umgebung?\n\n4. **Dokumentation:**  \n   - Fehlerbeschreibung, Zeitpunkt und Asset-ID notieren.  \n   - Fotos machen, falls Auffälligkeiten sichtbar sind.\n\n5. **Eskalation:**  \n   - Bei wiederholtem Ausfall oder sicherheitsrelevanter Lage: Störung an die Fachabteilung melden.  \n   - Bei Einzelfall: Beobachtung fortsetzen und ggf. Wartung einplanen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Wetterereignisse? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 139
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.798
+  },
+  "error": {}
+}

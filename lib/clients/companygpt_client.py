@@ -28,6 +28,9 @@ DATA_COLLECTION_ID = os.getenv("COMPANYGPT_DATA_COLLECTION_ID")
 # Hash prefix length for upload filename (e.g., 12)
 HASH_PREFIX_LEN = int(os.getenv("COMPANYGPT_HASH_PREFIX_LEN", "12"))
 
+GENERATOR_ASSISTANT_ID = os.getenv("COMPANYGPT_GENERATOR_ASSISTANT_ID")
+JUDGE_ASSISTANT_ID = os.getenv("COMPANYGPT_JUDGE_ASSISTANT_ID")
+
 UPLOAD_TIMEOUT = 900  # 30s connect, 15min upload/read
 CHAT_TIMEOUT = 900    # 30s connect, 15min processing/read
 
@@ -211,22 +214,19 @@ def _chat_no_stream(
     selected_mode: str = "BASIC",
     selected_files: list[str] | None = None,
     selected_data_collections: list[str] | None = None,
+    assistant_id: str | None = None,
+    internal_system_prompt_override: bool | None = None,
 ) -> str:
     url = f"{BASE_URL}/api/v1/public/chatNoStream"
+
+    use_internal = INTERNAL_SYSTEM_PROMPT if internal_system_prompt_override is None else internal_system_prompt_override
     params = {
-        "internalSystemPrompt": "true" if INTERNAL_SYSTEM_PROMPT else "false"
+        "internalSystemPrompt": "true" if use_internal else "false"
     }
 
     payload = {
         "model": {"id": model_id},
-        "messages": [
-            {
-                "role": "user",
-                "content": prompt,
-                "references": [],
-                "sources": []
-            }
-        ],
+        "messages": [{"role": "user", "content": prompt, "references": [], "sources": []}],
         "roleId": "",
         "temperature": temperature,
         "selectedMode": selected_mode,
@@ -234,18 +234,12 @@ def _chat_no_stream(
         "selectedDataCollections": selected_data_collections or []
     }
 
-    response = requests.post(
-        url,
-        headers=HEADERS_JSON,
-        params=params,
-        data=json.dumps(payload),
-        timeout=CHAT_TIMEOUT
-    )
+    if assistant_id:                               
+        payload["selectedAssistantId"] = assistant_id
 
+    response = requests.post(url, headers=HEADERS_JSON, params=params, data=json.dumps(payload), timeout=CHAT_TIMEOUT)
     response.raise_for_status()
-    result = response.json()
-    return result.get("content", "")
-
+    return response.json().get("content", "")
 
 # -------------------------------------------------
 # Public API – kompatibel mit test_runner
@@ -257,10 +251,15 @@ def generate(
     image_path: str = None,
     audio_path: str = None,
     video_path: str = None,
-    context: dict = None
+    context: dict = None,
+    temperature: float = 0.2,
+    selected_mode: str | None = None,
+    internal_system_prompt: bool | None = None,
 ) -> str:
     try:
         prompt_with_context = append_context_to_prompt(prompt, context)
+
+        mode = selected_mode or DEFAULT_MODE
 
         if input_type == "text":
             return _chat_no_stream(
@@ -268,42 +267,40 @@ def generate(
                 prompt=prompt_with_context,
                 temperature=0.2,
                 selected_mode=DEFAULT_MODE,
-                selected_files=[]
+                selected_files=[],
+                assistant_id=GENERATOR_ASSISTANT_ID
             )
 
         if input_type == "image":
             if not image_path:
                 return "[CompanyGPT] image_path fehlt."
-
             unique_title = _upload_media(image_path, DATA_COLLECTION_ID)
             _wait_until_media_visible(model, unique_title)
-
             return _chat_no_stream(
                 model_id=model,
                 prompt=prompt_with_context,
                 temperature=0.2,
                 selected_mode=DEFAULT_MODE,
-                selected_files=[unique_title],
-                selected_data_collections=[DATA_COLLECTION_ID]
+                selected_files=[],
+                assistant_id=GENERATOR_ASSISTANT_ID
             )
-        
+
         if input_type == "audio":
             if not audio_path:
                 return "[CompanyGPT] audio_path fehlt."
-
             unique_title = _upload_media(audio_path, DATA_COLLECTION_ID)
             _wait_until_media_visible(model, unique_title)
-
             return _chat_no_stream(
                 model_id=model,
                 prompt=prompt_with_context,
                 temperature=0.2,
                 selected_mode=DEFAULT_MODE,
-                selected_files=[unique_title],
-                selected_data_collections=[DATA_COLLECTION_ID]
+                selected_files=[],
+                assistant_id=GENERATOR_ASSISTANT_ID
             )
 
         return f"[CompanyGPT] Input-Typ '{input_type}' in Step 06 nicht unterstützt."
 
     except Exception as e:
         return f"[CompanyGPT ERROR] {e}"
+

@@ -1,0 +1,30 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-09T14:35:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "temperature": 0.2,
+    "selected_mode": "BASIC",
+    "internal_system_prompt": true
+  },
+  "media": {},
+  "response": {
+    "multi": false,
+    "text": "Danke für die Information! Es klingt nach einem sporadischen Fehler bei der Lampe mit der Asset-ID n5718630492. Um das Problem weiter einzugrenzen, wären ein paar zusätzliche Details hilfreich:\n\n- Ist die Lampe an ein Smart-System angeschlossen oder handelt es sich um eine herkömmliche Lampe?\n- Gab es in letzter Zeit Stromschwankungen oder Wartungsarbeiten?\n- Tritt das Problem häufiger auf oder war das jetzt das erste Mal?\n\n**Mögliche Ursachen könnten sein:**\n- Wackelkontakt im Schalter oder in der Fassung\n- Defektes Leuchtmittel\n- Probleme mit der Stromversorgung oder Verkabelung\n- Fehler im Steuerungssystem (bei Smart-Lampen)\n\n**Empfohlene Schritte:**\n1. Prüfe, ob das Leuchtmittel fest sitzt und keine sichtbaren Schäden hat.\n2. Teste die Lampe an einem anderen Stromkreis, falls möglich.\n3. Falls die Lampe Teil eines Smart-Systems ist, starte das System neu oder prüfe die Verbindung.\n4. Dokumentiere, wann und wie oft der Fehler auftritt.\n\nWenn du möchtest, kann ich dir eine Checkliste für die Fehlersuche erstellen oder einen Wartungsauftrag vorbereiten. Sag einfach Bescheid, wie ich weiterhelfen kann!",
+    "tokens_estimate_words": 166
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.593
+  },
+  "error": {}
+}

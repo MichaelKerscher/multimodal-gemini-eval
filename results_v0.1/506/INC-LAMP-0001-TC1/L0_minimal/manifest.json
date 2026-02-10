@@ -1,0 +1,41 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "source_testfile": "tests\\lamp_testcases_v01.csv",
+  "created_at": "2026-02-09T16:36:10",
+  "resolved": {
+    "client": "506",
+    "model": "gpt-4.1",
+    "runs": 1,
+    "input_type": "text",
+    "temperature": 0.2,
+    "selected_mode": "BASIC",
+    "internal_system_prompt": true
+  },
+  "test_definition": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "condition_id": "L0_minimal",
+    "_source_file": "tests\\lamp_testcases_v01.csv",
+    "client": "506",
+    "model": "gpt-4.1",
+    "run_index": 1,
+    "temperature": 0.2,
+    "selected_mode": "BASIC",
+    "internal_system_prompt": true,
+    "input": {
+      "type": "text",
+      "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+      "context": {
+        "asset_osm": "n5718630492"
+      },
+      "image_path": null,
+      "audio_path": null,
+      "video_path": null,
+      "meta": {
+        "incident_id": "INC-LAMP-0001",
+        "context_level": "L0_minimal",
+        "csv_row": 1
+      }
+    }
+  }
+}
