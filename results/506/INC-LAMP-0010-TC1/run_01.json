@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-11T12:16:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt in Rosenheim, Stadtmitte (Asset-ID: n4427955479).\n\n**Vorgehen – Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung:**  \n   - Bereich absichern (Warnbaken/Leitkegel aufstellen, ggf. Warnweste tragen).\n   - Verkehrsteilnehmer auf Gefahrenstelle hinweisen.\n\n2. **Sichtprüfung:**  \n   - Sichtkontrolle der Straßenlampen im betroffenen Abschnitt.\n   - Prüfen, ob einzelne oder mehrere Leuchten betroffen sind.\n   - Auf offensichtliche Schäden (z. B. zerbrochene Leuchten, lose Kabel) achten.\n\n3. **Diagnose/Beobachtung:**  \n   - Funktionstest: Schalten die Lampen bei Dämmerung ein?\n   - Prüfen, ob Stromversorgung vorhanden ist (z. B. Sicherungskasten, Schaltkasten).\n   - Mögliche Ursachen: Defekte Leuchtmittel, Stromausfall, Steuerungsfehler.\n\n4. **Dokumentation:**  \n   - Fotos vom Zustand und der Umgebung machen.\n   - Asset-ID, genaue Position und Beobachtungen notieren.\n\n5. **Eskalation:**  \n   - Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an Bereitschaftsdienst/Störungsstelle.\n   - Falls Eigenreparatur nicht möglich: Weiterleitung an Fachfirma oder Netzbetreiber.\n\n**Rückfrage:**  \nSind nur Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf akute Gefährdung (z. B. unbeleuchtete Kreuzungen, Schulwege)?\n\nBitte um kurze Rückmeldung, damit wir gezielt weiter vorgehen können.",
+    "tokens_estimate_words": 155
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.347
+  },
+  "error": {}
+}

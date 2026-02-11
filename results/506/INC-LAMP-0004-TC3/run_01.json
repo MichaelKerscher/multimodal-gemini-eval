@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC3",
+  "timestamp": "2026-02-11T12:15:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T11:25:07+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für den Außendienst – Dunkle Straßenlampe**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich ggf. mit Leitkegeln oder Warnleuchte absichern.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Vandalismus oder lose Teile prüfen.\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe einzeln betroffen ist oder mehrere Lampen ausfallen.\n   - Aufgrund „spotty“ Konnektivität: Kann die Lampe ggf. nicht aus der Ferne angesteuert werden?\n   - Gerätezustand laut System: „ok“ – daher vermutlich kein Hardwaredefekt, eher Stromversorgung oder Steuerung.\n\n4. **Dokumentation**\n   - Standort, Uhrzeit, Beobachtungen und erste Maßnahmen notieren (Foto machen, falls möglich).\n   - Besonderheit: Bereich wirkt unsicher – Hinweis für schnelle Bearbeitung.\n\n5. **Eskalation**\n   - Störung an die Leitstelle/Technik weiterleiten mit Vermerk „unsicherer Bereich“.\n   - Dringlichkeit betonen, ggf. Polizei oder Ordnungsamt informieren, falls akute Gefahr besteht.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese betroffen? Liegt eine akute Gefährdung (z. B. an einer Kreuzung, Schulweg) vor?",
+    "tokens_estimate_words": 163
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.853
+  },
+  "error": {}
+}

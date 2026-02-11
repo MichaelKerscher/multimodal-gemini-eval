@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC3",
-  "timestamp": "2026-02-11T11:30:30",
+  "timestamp": "2026-02-11T12:14:46",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -48,30 +48,13 @@
   },
   "response": {
     "multi": false,
-    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefahr (z. B. Dunkelheit, viel Verkehr) ggf. Absperrung oder Warnbaken aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Umfeld auf sichtbare Schäden (Gehäuse, Mast, Verkabelung).\n   - Achte auf ungewöhnliche Geräusche oder Gerüche.\n\n3. **Diagnose/Beobachtung**\n   - Hinweis: Gerät meldet „low_battery“ und „offline“.\n   - Vermutlich ist die Stromversorgung instabil oder der Akku schwach.\n   - Prüfe, ob die Lampe wiederholt aus- und angeht (Beobachtungszeit: mind. 10 Minuten).\n   - Kontrolliere, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt, Dauer des Ausfalls, aktuelle Beobachtungen, Statusmeldungen („low_battery“, „offline“).\n   - Fotos vom Gerät und Umfeld machen.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler und die Statusmeldungen an die zuständige Wartungsstelle.\n   - Empfehlung: Akku/Stromversorgung prüfen und ggf. zeitnah austauschen.\n\n**Rückfrage:**  \nIst bekannt, ob die Lampe über einen Akku oder eine alternative Stromquelle verfügt? Gibt es weitere Geräte mit ähnlichen Meldungen in der Umgebung?",
-    "tokens_estimate_words": 158
+    "text": "**Checkliste für sporadischen Fehler – Straßenlampe**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, Warnweste).\n   - Gefährdung für Verkehrsteilnehmer ausschließen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Gehäuse auf sichtbare Schäden (z. B. Risse, Feuchtigkeit, lose Kabel).\n   - Kontrolliere, ob Manipulationen oder äußere Einwirkungen erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Beachte: Gerät meldet „low_battery“ und „offline“. \n   - Vermutlich Batterieproblem oder Kommunikationsstörung.\n   - Prüfe, ob die Batterie getauscht werden muss.\n   - Teste, ob die Lampe nach erneutem Einschalten stabil läuft.\n   - Beobachte, ob der Fehler erneut auftritt.\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt, Fehlerbild (aus/jetzt an, sporadisch), Gerätestatus (low_battery, offline).\n   - Halte durchgeführte Maßnahmen fest (z. B. Sichtprüfung, Batterietest).\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Störung an die Fachabteilung melden.\n   - Batterieaustausch oder Reparatur beauftragen, falls nötig.\n\n**Rückfrage:**  \nSoll die Batterie direkt getauscht werden oder erst weitere Tests durchführen? Liegt eine aktuelle Wartungsanweisung für dieses Modell vor?",
+    "tokens_estimate_words": 155
   },
-  "judge": {
-    "test_id": "INC-LAMP-0001-TC3",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung. Device-Status (low_battery, offline) wird korrekt interpretiert und in Diagnose integriert. Severity=low und traffic_exposure=high werden implizit berücksichtigt (Absicherung bei viel Verkehr). Dokumentation inkl. Statusmeldungen, Eskalation mit konkreter Handlungsempfehlung (Akku prüfen). Rückfrage zielführend. Keine Halluzinationen, alle Kontextdaten sinnvoll verarbeitet."
-  },
+  "judge": null,
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.06
+    "runtime_seconds": 3.565
   },
   "error": {}
 }

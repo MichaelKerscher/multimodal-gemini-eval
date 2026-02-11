@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-11T12:19:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die betroffene Straßenlampe/Ampelanlage absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden an Mast, Leuchte, Verkabelung und Anschlusskasten.\n   - Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Flackern/Aussetzen reproduzierbar ist (z. B. durch leichtes Bewegen der Kabelverbindung, falls gefahrlos möglich).\n   - Kontaktstellen (Klemmen, Steckverbinder) auf festen Sitz und Verschmutzung kontrollieren.\n   - Falls möglich, Isolationsmessung und Spannungsprüfung durchführen.\n\n4. **Dokumentation**\n   - Beobachtungen, Maßnahmen und Asset-ID (n8486238431) dokumentieren.\n   - Fotos von auffälligen Stellen anfertigen.\n\n5. **Eskalation**\n   - Bei nicht behebbaren Kontaktproblemen oder Verdacht auf größere Schäden: Meldung an Fachabteilung/Elektrofachkraft zur weiteren Prüfung und Reparatur.\n   - Bei Gefahr im Verzug (z. B. blanke Kabel, starke Hitzeentwicklung): Anlage außer Betrieb nehmen und sofortige Reparatur veranlassen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf Feuchtigkeitseintritt oder Vandalismus?",
+    "tokens_estimate_words": 146
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.761
+  },
+  "error": {}
+}

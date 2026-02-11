@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC1",
+  "timestamp": "2026-02-11T12:20:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n4465173757)",
+    "context": {
+      "asset_osm": "n4465173757"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).\n- Passanten auf die Dunkelheit hinweisen, falls Sie vor Ort sind.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n- Gibt es sichtbare Schäden am Mast, Leuchte oder Kabel?\n\n**3. Diagnose/Beobachtung**\n- Gab es in letzter Zeit Stromausfälle oder Bauarbeiten in der Nähe?\n- Flackert die Lampe oder bleibt sie komplett dunkel?\n\n**4. Dokumentation**\n- Asset-ID (n4465173757) notieren.\n- Zeitpunkt und genaue Position festhalten.\n- Besonderheiten (z. B. erhöhte Unfallgefahr) dokumentieren.\n\n**5. Eskalation**\n- Störung umgehend an die zuständige Wartungsstelle melden.\n- Bei akuter Gefahr (z. B. Unfallgefahr) zusätzlich Polizei oder Ordnungsamt informieren.\n\n**Rückfrage:**  \nSind weitere Lampen betroffen oder nur diese eine? Gibt es Hinweise auf Vandalismus oder Unfallschäden?",
+    "tokens_estimate_words": 138
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.322
+  },
+  "error": {}
+}

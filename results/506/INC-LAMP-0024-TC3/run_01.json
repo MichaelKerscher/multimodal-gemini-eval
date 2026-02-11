@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC3",
+  "timestamp": "2026-02-11T12:20:16",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung: Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z. B. Wackeln, lose Kabel, Feuchtigkeit).\n   - Prüfe, ob die Lampe aktuell wieder ordnungsgemäß leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Hinweis: Das Gerät meldet „ok“, aber „offline“ (keine Verbindung). Möglicherweise liegt ein Kommunikationsproblem vor.\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind.\n   - Notiere, wann und wie oft der Fehler auftritt (z. B. bei Nässe, zu bestimmten Tageszeiten).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest: Zeitpunkt, Dauer des Ausfalls, aktuelle Funktion, Auffälligkeiten am Gerät.\n   - Dokumentiere auch die „offline“-Meldung.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler und die fehlende Konnektivität an die zuständige Fachabteilung/Technik.\n   - Hinweis: Da die Lampe aktuell funktioniert, ist eine kurzfristige Kontrolle ausreichend, aber eine tiefergehende Prüfung der Stromversorgung und der Kommunikationsanbindung wird empfohlen.\n\n**Rückfrage:**  \nGibt es weitere Auffälligkeiten im Umfeld (z. B. andere Lampen betroffen, Bauarbeiten, Feuchtigkeit)?  \nSoll eine sofortige Vor-Ort-Prüfung erfolgen oder reicht eine Beobachtung?",
+    "tokens_estimate_words": 178
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 7.868
+  },
+  "error": {}
+}

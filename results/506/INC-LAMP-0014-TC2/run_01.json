@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-11T12:17:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für defekte Straßenlampe**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, Pylone).\n   - Bei Bedarf Verkehr umleiten oder absichern.\n\n2. **Sichtprüfung**\n   - Standort und Lampennummer notieren.\n   - Sichtkontrolle auf äußere Schäden (Mast, Leuchte, Verkabelung).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Zeitschaltuhr oder Dämmerungsschalter korrekt arbeiten.\n   - Sichtkontrolle auf lose Kabel, Feuchtigkeit, Vandalismus.\n   - Falls möglich, Test mit Spannungsprüfer (nur durch Elektrofachkraft).\n\n4. **Dokumentation**\n   - Fotos vom Schaden und Umfeld machen.\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Meldung im System erfassen (Datum, Uhrzeit, genaue Position).\n\n5. **Eskalation**\n   - Bei Gefahr (z. B. freiliegende Kabel, Mast instabil): Sofort an Fachfirma/Notdienst weiterleiten.\n   - Sonst: Reparaturauftrag an zuständige Elektrofachkraft geben.\n\n**Rückfrage:**  \nIst bekannt, ob nur diese eine Lampe betroffen ist oder mehrere in der Umgebung? Gibt es Hinweise auf akute Gefährdung (z. B. herabhängende Kabel)?",
+    "tokens_estimate_words": 146
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.365
+  },
+  "error": {}
+}

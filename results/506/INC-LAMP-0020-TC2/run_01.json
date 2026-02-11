@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-11T12:19:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Überprüfung eines dunklen Straßenabschnitts**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten/Ampeln betroffen sind.\n   - Sichtbare Schäden an Masten, Leuchtenköpfen, Kabeln oder Schaltkästen feststellen.\n   - Umgebung auf weitere Gefahren (z. B. herabhängende Kabel) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Leuchten/Ampeln einzeln testen (sofern möglich).\n   - Prüfen, ob Zeitschaltuhr, Sicherung oder Stromversorgung betroffen sein könnten.\n   - Notieren, ob der Ausfall punktuell oder flächendeckend ist.\n\n4. **Dokumentation**\n   - Standort (Adresse, nächster Mast, GPS, markante Punkte) genau festhalten.\n   - Fotos vom Schaden und Umfeld machen.\n   - Beobachtungen und erste Einschätzung schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Unfallgefahr, herabhängende Kabel): Sofort Notdienst oder Polizei informieren.\n   - Störung an die zuständige Fachabteilung oder den Bereitschaftsdienst weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um Straßenbeleuchtung, Ampelanlagen oder beides? Gibt es besondere Gefahrenstellen (z. B. Kreuzung, Fußgängerüberweg) im betroffenen Abschnitt?",
+    "tokens_estimate_words": 166
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.912
+  },
+  "error": {}
+}

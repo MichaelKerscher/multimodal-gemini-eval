@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC2",
+  "timestamp": "2026-02-11T12:20:55",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032947",
+        "longitude": 12.1230655,
+        "latitude": 47.8555555,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste zur Störungsbearbeitung: Flackern bei Regen**\n\n1. **Absicherung**\n   - Warnblinkanlage einschalten, ggf. Warnschilder aufstellen.\n   - Arbeitsbereich gegen Verkehr sichern (z. B. mit Pylonen).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Leuchte/Ampel auf offensichtliche Schäden (z. B. Feuchtigkeitseintritt, Risse, offene Gehäuse).\n   - Prüfen, ob mehrere oder nur eine Anlage betroffen ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Dichtungen und Kabelverschraubungen intakt sind.\n   - Auf Feuchtigkeitsspuren im Gehäuse achten.\n   - Beobachten, ob das Flackern nur bei Regen oder auch bei hoher Luftfeuchtigkeit auftritt.\n   - Falls möglich: Isolationsmessung der elektrischen Leitungen durchführen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls möglich).\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei festgestelltem Feuchtigkeitseintritt oder Verdacht auf elektrische Gefährdung: Anlage außer Betrieb nehmen und Fachfirma/Elektrofachkraft informieren.\n   - Bei unklarer Ursache: Weiterleitung an zuständige Stelle zur detaillierten Überprüfung.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Sind mehrere Anlagen betroffen oder nur eine?",
+    "tokens_estimate_words": 151
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.681
+  },
+  "error": {}
+}

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0002-TC3",
-  "timestamp": "2026-02-11T11:31:27",
+  "timestamp": "2026-02-11T12:15:00",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -48,37 +48,13 @@
   },
   "response": {
     "multi": false,
-    "text": "Verstanden, danke für die Info.\n\n**Checkliste für Kontrolle bei zeitweisem Ausfall (aktuell normal):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Absicherung der Arbeitsstelle prüfen und ggf. aufbauen.\n\n2. **Sichtprüfung**\n   - Gerät äußerlich auf Beschädigungen, lose Kabel, Feuchtigkeit oder Verschmutzung prüfen.\n   - Umfeld auf mögliche Störquellen (z. B. Bauarbeiten, Fahrzeuge) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Statusanzeige und Kontrollleuchten am Gerät prüfen.\n   - Protokolle oder Fehlermeldungen im System abrufen.\n   - Bei Ampeln: Schaltzyklen beobachten, auf Unregelmäßigkeiten achten.\n   - Bei Straßenlampen: Funktion bei Dämmerung testen, ggf. Testschaltung auslösen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos bei sichtbaren Schäden machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Störung an Technik/Leitstelle melden und ggf. Reparatur beauftragen.\n\n**Rückfrage:**  \nGab es eine bestimmte Uhrzeit oder Situation, in der der Ausfall auftrat? Das hilft bei der Ursachenanalyse.",
-    "tokens_estimate_words": 135
+    "text": "Verstanden, danke für die Info.\n\n**Checkliste für die Kontrolle bei zeitweisem Ausfall (aktuell normal):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten sichern.\n   - Bei Bedarf Verkehrsregelung anfordern.\n\n2. **Sichtprüfung**\n   - Gehäuse und Mast auf Beschädigungen prüfen.\n   - Kabel, Stecker und Anschlüsse auf sichtbare Mängel kontrollieren.\n   - Umgebung auf Anzeichen von Vandalismus oder Fremdeinwirkung prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Gerät im Betrieb beobachten (mind. 10 Minuten, ggf. zu Stoßzeiten).\n   - Auf ungewöhnliche Geräusche, Flackern oder Aussetzer achten.\n   - Prüfen, ob alle Funktionen (z. B. Umschaltung, Helligkeit) ordnungsgemäß laufen.\n   - Falls möglich, Logdaten oder Fehlerprotokolle auslesen.\n\n4. **Dokumentation**\n   - Befund und durchgeführte Maßnahmen im Wartungsprotokoll festhalten.\n   - Fotos von auffälligen Stellen machen.\n   - Zeitpunkt und Dauer der Beobachtung notieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, unklarer Ursache oder sicherheitsrelevanten Mängeln: Störung an Technik/Leitstelle melden.\n   - Sofortmaßnahmen zur Verkehrssicherung einleiten, falls erforderlich.\n\n**Rückfrage:**  \nGab es eine bestimmte Tageszeit oder Situation, in der der Ausfall aufgetreten ist? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 161
   },
-  "judge": {
-    "test_id": "INC-LAMP-0002-TC3",
-    "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 2,
-      "D": 3,
-      "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
-    },
-    "missing_elements": [
-      "Severity=medium nicht berücksichtigt",
-      "Umgebung (Nebel, schlechte Sicht, Nacht) komplett ignoriert",
-      "photo_available=true nicht erwähnt",
-      "reporter=patrol nicht genutzt",
-      "Keine Anpassung an poor_visibility + medium traffic",
-      "Generische Checkliste trotz reichem L2-Kontext"
-    ],
-    "short_justification": "Trotz vollständigem L2-Kontext (Nebel, Nacht, schlechte Sicht, Foto verfügbar, severity=medium) wird eine generische Checkliste ausgegeben. Kritische Umgebungsfaktoren ignoriert – bei Nebel+Nacht+medium traffic wäre erhöhte Sicherheitspriorisierung nötig. Fragt nach Uhrzeit, obwohl reported_at vorliegt. K=2 wegen massiver Kontextignoranz, S=2 wegen fehlender Anpassung an Risikosituation. Hallucination_suspected=true, da Antwort impliziert, Infos fehlen, die tatsächlich vorliegen."
-  },
+  "judge": null,
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.378
+    "runtime_seconds": 4.227
   },
   "error": {}
 }

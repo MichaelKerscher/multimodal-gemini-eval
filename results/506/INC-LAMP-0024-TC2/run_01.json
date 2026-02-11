@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC2",
+  "timestamp": "2026-02-11T12:20:16",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für sporadischen Fehler an Straßenlampe**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, Pylonen aufstellen).\n\n2. **Sichtprüfung**\n   - Lampe und Umfeld auf sichtbare Schäden prüfen (z. B. Risse, Feuchtigkeit, lose Teile).\n   - Leuchtenkopf und Mast auf Vandalismus oder Korrosion kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob die Lampe flackert oder ungewöhnliche Geräusche macht.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Wetterbedingungen und Tageszeit notieren (Feuchtigkeit, Frost, Dämmerungsschalter?).\n\n4. **Dokumentation**\n   - Fehlerbeschreibung (sporadisch aus, jetzt an) notieren.\n   - Zeitpunkt und Dauer des Ausfalls festhalten.\n   - Fotos vom Zustand machen.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle weiterleiten.\n   - Bei wiederholtem Ausfall oder Gefahr (z. B. freiliegende Kabel) sofortige Reparatur anfordern.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 130
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.251
+  },
+  "error": {}
+}

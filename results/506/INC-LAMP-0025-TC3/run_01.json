@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC3",
+  "timestamp": "2026-02-11T12:20:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für den Außendienst-Einsatz: Dunkle Straßenlampe**\n\n1. **Absicherung**\n   - Bereich um die Lampe absichern (z. B. Warnbaken, Warnweste tragen).\n   - Auf ausreichend Sichtbarkeit für Verkehrsteilnehmer achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden oder Manipulation prüfen.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät meldet „low_battery“ – vermutlich Energiespeicher erschöpft.\n   - Verbindung ist „online“ – Fernzugriff möglich.\n   - Prüfen, ob sich die Lampe per Fernwartung reaktivieren lässt oder Batterietausch notwendig ist.\n\n4. **Dokumentation**\n   - Zeitpunkt, Standort und Zustand der Lampe notieren.\n   - Fotos vom Bereich und der Lampe machen.\n   - Meldung im System erfassen.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung (z. B. Unfallschwerpunkt, Schulweg): Sofortige Weiterleitung an Bereitschaftsdienst oder Polizei.\n   - Batterietausch oder Reparatur zeitnah beauftragen.\n\n**Rückfrage:**  \nHandelt es sich um eine einzelne Lampe oder sind mehrere im Bereich betroffen? Gibt es Hinweise auf Vandalismus oder andere Schäden?",
+    "tokens_estimate_words": 143
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.093
+  },
+  "error": {}
+}

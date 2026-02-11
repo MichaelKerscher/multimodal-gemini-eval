@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC2",
+  "timestamp": "2026-02-11T12:16:13",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste bei Aussetzern und Flackern (Kontaktprobleme vermutet):**\n\n1. **Absicherung**\n   - Bereich absperren (Warnbaken, ggf. Warnleuchten).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Leuchte(n) oder Ampelanlage.\n   - Prüfen auf lose Kabel, Korrosion, Feuchtigkeitseintritt, sichtbare Schäden an Klemmen oder Fassungen.\n\n3. **Diagnose/Beobachtung**\n   - Leuchte/Ampel vorsichtig bewegen: Reagiert sie auf Erschütterung?\n   - Kontaktstellen (Klemmen, Fassungen) auf festen Sitz prüfen.\n   - Falls möglich: Spannung messen, Wackelkontakt lokalisieren.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und Maßnahmen notieren (Fotos machen).\n   - Zeitpunkt und betroffene Anlagen dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr im Verzug (z.B. Funken, starke Erwärmung): Sofort Strom abschalten und Fachfirma/Elektriker informieren.\n   - Bei kleineren Mängeln: Reparatur beauftragen, ggf. Ersatzteile bestellen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Sind mehrere Anlagen betroffen oder nur ein einzelner Mast?",
+    "tokens_estimate_words": 127
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.228
+  },
+  "error": {}
+}

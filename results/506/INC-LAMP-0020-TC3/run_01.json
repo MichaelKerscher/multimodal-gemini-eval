@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC3",
+  "timestamp": "2026-02-11T12:19:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Prüfung eines dunklen Abschnitts (Straßenbeleuchtung):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Warnbake oder Pylonen absichern.\n   - Bei Bedarf Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Prüfen, wie viele und welche Leuchten betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. Mast, Leuchte, Verkabelung).\n   - Prüfen, ob Anwohner oder Verkehrsteilnehmer gefährdet sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist laut System im „low_power_mode“, aber online.\n   - Prüfen, ob die Leuchten auf Dämmerung reagieren oder komplett ausbleiben.\n   - Mögliche Ursachen: Energiesparmodus, Defekt am Vorschaltgerät, Steuerungssignal fehlt.\n\n4. **Dokumentation**\n   - Standort, Uhrzeit, betroffene Leuchten und Beobachtungen notieren.\n   - Fotos vom Bereich und ggf. vom Steuergerät machen.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung sofortige Weiterleitung an Bereitschaft oder Fachfirma.\n   - Andernfalls Störmeldung mit allen Details an die zuständige Stelle senden.\n\n**Rückfrage:**  \nSind weitere Informationen zum genauen Standort oder zur Anzahl der betroffenen Leuchten verfügbar? Gibt es Hinweise auf kürzliche Wartungsarbeiten oder Störungen im Bereich?",
+    "tokens_estimate_words": 162
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.024
+  },
+  "error": {}
+}

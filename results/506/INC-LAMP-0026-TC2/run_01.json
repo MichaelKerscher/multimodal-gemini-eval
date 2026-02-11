@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC2",
+  "timestamp": "2026-02-11T12:20:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4449540379",
+        "longitude": 12.1220096,
+        "latitude": 47.8772297,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Langenpfunzen, Römerstraße"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Störungsbearbeitung: Straßenlampe/Ampelanlage – Unregelmäßiges Verhalten (an/aus)**\n\n1. **Absicherung**\n   - Absperrung/Absicherung der Gefahrenstelle (z. B. Warnbaken, Warnleuchten).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Gibt es offensichtliche Schäden (z. B. Kabel, Gehäuse, Lampenkopf)?\n   - Sind Feuchtigkeitsspuren, Vandalismus oder lose Bauteile erkennbar?\n\n3. **Diagnose/Beobachtung**\n   - Beobachte das Schaltverhalten: Gibt es ein Muster beim Ein-/Ausschalten?\n   - Prüfe, ob mehrere Anlagen betroffen sind (Hinweis auf Netzproblem).\n   - Wurde kürzlich an der Anlage gearbeitet oder gab es Unwetter?\n   - Prüfe Sicherungen und Anschlüsse (sofern gefahrlos möglich).\n\n4. **Dokumentation**\n   - Notiere: Standort, genaue Beobachtung, Zeitpunkt, betroffene Komponenten.\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Störung an Fachfirma/Leitstelle melden.\n   - Bei akuter Gefährdung: Polizei/Feuerwehr informieren.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Sind mehrere Anlagen betroffen oder nur eine?",
+    "tokens_estimate_words": 138
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.124
+  },
+  "error": {}
+}

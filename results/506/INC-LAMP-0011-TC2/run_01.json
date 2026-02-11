@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC2",
+  "timestamp": "2026-02-11T12:17:09",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, ich unterstütze Sie bei der Kontrolle. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Kontrolle bei zeitweisem Ausfall (aktuell normal):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern.\n   - Bei Bedarf Verkehr umleiten oder Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage (Lampenkopf, Mast, Schaltkasten).\n   - Prüfen auf offensichtliche Schäden, lose Kabel, Feuchtigkeit oder Vandalismus.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob alle Funktionen aktuell gegeben sind (Leuchten/Ampeln schalten korrekt).\n   - Nachfragen bei Melder: Wann und wie oft trat der Ausfall auf? Gab es besondere Umstände (Wetter, Bauarbeiten)?\n   - Falls möglich, Protokolle oder Fehlermeldungen auslesen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Zustand, Besonderheiten).\n   - Fotos von relevanten Stellen machen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an Fachfirma/Techniker oder zuständige Stelle weiterleiten.\n   - Sofortige Eskalation bei Gefahr für Verkehrssicherheit.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten, Unwetter oder Bauarbeiten in der Nähe der Anlage? Das hilft bei der Ursachenfindung.",
+    "tokens_estimate_words": 161
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.666
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC3",
+  "timestamp": "2026-02-11T12:20:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293397459",
+        "longitude": 12.1320286,
+        "latitude": 47.8589872,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T08:16:43+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Dunkler Abschnitt\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen/Ampeln: Sind mehrere oder alle Leuchten aus?\n   - Prüfen, ob offensichtliche Schäden (z. B. Mast umgefahren, Kabel sichtbar) vorliegen.\n\n3. **Diagnose/Beobachtung**\n   - Gerät zeigt „ok“, aber „offline“: Möglicher Ausfall der Stromversorgung oder Kommunikationsstörung.\n   - Prüfen, ob in der Umgebung weitere Infrastruktur betroffen ist (z. B. andere Lampen, Gebäude).\n   - Falls möglich, Sicherungskasten auf offensichtliche Auslöser (z. B. ausgelöste Sicherung) prüfen.\n\n4. **Dokumentation**\n   - Fotos vom Zustand und der Absicherung machen.\n   - Genaue Position und Anzahl der betroffenen Leuchten notieren.\n   - Beobachtungen und erste Einschätzung festhalten.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer sofort Notdienst/Leitstelle informieren.\n   - Störung an zuständige Fachabteilung oder Elektriker weitergeben, falls Problem nicht vor Ort gelöst werden kann.\n\n**Rückfrage:**  \nSind weitere Details zum Abschnitt (z. B. Länge, Anzahl der betroffenen Leuchten) oder zur letzten Wartung bekannt?",
+    "tokens_estimate_words": 158
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.238
+  },
+  "error": {}
+}

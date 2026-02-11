@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC3",
+  "timestamp": "2026-02-11T12:21:20",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T12:53:33+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für den Außendienst – Dunkle Straßenlampe**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich ggf. mit Pylonen oder Warnleuchte sichern.\n\n2. **Sichtprüfung**\n   - Standort der Lampe prüfen: Steht sie an einer besonders gefährlichen Stelle (z. B. Fußgängerüberweg, Kreuzung)?\n   - Sichtbare Schäden an Mast, Leuchte oder Verkabelung feststellen.\n\n3. **Diagnose/Beobachtung**\n   - Gerät meldet „ok“, aber „offline“: Möglicher Ausfall der Netzverbindung oder Stromversorgung.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Anwohner oder Passanten befragen, ob sie Auffälligkeiten bemerkt haben.\n\n4. **Dokumentation**\n   - Standort, Uhrzeit und Situation (Bereich unsicher) notieren.\n   - Fotos von der Lampe und Umgebung machen.\n   - Statusmeldung im System erfassen („offline“, Lampe dunkel, Bereich unsicher).\n\n5. **Eskalation**\n   - Bei unsicherem Bereich und fehlender Verbindung: Störungsdienst oder Bereitschaft informieren.\n   - Falls Gefahr für Verkehr oder Fußgänger besteht: Polizei oder Ordnungsamt benachrichtigen.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder ist es nur diese eine? Gibt es Hinweise auf Vandalismus oder Unfallschäden?",
+    "tokens_estimate_words": 160
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.198
+  },
+  "error": {}
+}

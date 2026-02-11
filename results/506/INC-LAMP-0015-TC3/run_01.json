@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC3",
+  "timestamp": "2026-02-11T12:18:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Störungsbearbeitung – Straßenlampe dunkel**\n\n1. **Absicherung**\n   - Bereich um die Lampe auf akute Gefahren prüfen (z. B. Stolperstellen, schlechte Sicht).\n   - Bei erhöhter Unfallgefahr ggf. temporäre Warnbaken oder Absperrband anbringen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist das Gehäuse beschädigt? Sind Kabel sichtbar? Gibt es Anzeichen für Vandalismus?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Da das Gerät laut Statusmeldung „ok“ und „online“ ist, liegt vermutlich kein Systemausfall vor.\n   - Mögliche Ursachen: Defektes Leuchtmittel, kurzfristige Stromunterbrechung, Schaltzyklus.\n   - Beobachten, ob die Lampe nach einigen Minuten wieder einschaltet (manche Systeme haben automatische Neustarts).\n\n4. **Dokumentation**\n   - Zeitpunkt, genaue Position und Beobachtungen notieren.\n   - Fotos vom Bereich und der Lampe machen (falls möglich).\n\n5. **Eskalation**\n   - Störung an die zuständige Leitstelle oder den technischen Dienst melden, besonders wegen des unsicheren Bereichs.\n   - Dringlichkeit betonen: Dunkler Bereich, subjektives Unsicherheitsgefühl.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese eine betroffen? Liegt die Lampe an einer besonders gefährlichen Stelle (z. B. Zebrastreifen, Kreuzung)?",
+    "tokens_estimate_words": 172
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.149
+  },
+  "error": {}
+}

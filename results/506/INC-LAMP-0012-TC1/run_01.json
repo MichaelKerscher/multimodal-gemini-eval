@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC1",
+  "timestamp": "2026-02-11T12:17:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n12520338291)",
+    "context": {
+      "asset_osm": "n12520338291"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, Hinweisschilder), falls Material vorhanden und ohne Eigengefährdung möglich.\n- Bei akuter Gefahr: Polizei oder Ordnungsamt informieren.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen betroffen sind (Stromausfall oder Einzelstörung?).\n- Sichtkontrolle auf offensichtliche Schäden (z. B. Glasbruch, freiliegende Kabel, Unfallspuren).\n\n**3. Diagnose/Beobachtung**\n- Beobachten, ob die Lampe flackert oder komplett aus bleibt.\n- Gibt es Anzeichen für Manipulation oder Vandalismus?\n\n**4. Dokumentation**\n- Asset-ID (n12520338291), Standort, Uhrzeit und Beobachtungen notieren.\n- Fotos machen, falls möglich und sicher.\n\n**5. Eskalation**\n- Störung an die zuständige Wartungsstelle oder Leitstelle melden, inklusive aller gesammelten Infos.\n- Bei erhöhter Unsicherheit oder Gefährdung: Polizei/Ordnungsamt zusätzlich informieren.\n\n**Rückfrage:**  \nIst die Lampe an einer Hauptstraße, einem Fußweg oder in einem besonders sensiblen Bereich (z. B. Schulweg)? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 146
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.049
+  },
+  "error": {}
+}

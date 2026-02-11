@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC3",
+  "timestamp": "2026-02-11T12:19:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Aussetzern und Flackern\n\n1. **Absicherung**\n   - Bereich um die betroffene Straßenlampe/Ampelanlage absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei Ampelanlagen: Verkehr ggf. umleiten oder Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden an Kabeln, Anschlüssen, Lampenkopf oder Schaltkasten.\n   - Prüfen, ob Feuchtigkeit, Korrosion oder lose Verbindungen sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät einschalten und gezielt auf Flackern/Aussetzer achten.\n   - Leichte Bewegung an Kabeln/Steckverbindungen (ohne Gewalt), um Wackelkontakt zu identifizieren.\n   - Prüfen, ob das Problem bei bestimmten Wetterbedingungen häufiger auftritt.\n\n4. **Dokumentation**\n   - Auffälligkeiten, Zeitpunkt und Häufigkeit der Aussetzer notieren.\n   - Fotos von verdächtigen Stellen machen.\n   - Alle durchgeführten Schritte und Beobachtungen protokollieren.\n\n5. **Eskalation**\n   - Bei bestätigtem Kontaktproblem: Meldung an die Fachabteilung/Elektriker weiterleiten.\n   - Bei Gefahr im Verzug (z.B. Funkenflug, starke Aussetzer): Sofortige Abschaltung und Meldung an die Leitstelle.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Zugang zum Schaltschrank?",
+    "tokens_estimate_words": 147
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.735
+  },
+  "error": {}
+}

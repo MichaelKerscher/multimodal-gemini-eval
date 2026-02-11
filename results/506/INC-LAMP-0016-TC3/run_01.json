@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC3",
+  "timestamp": "2026-02-11T12:18:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, ggf. Warnweste tragen).\n   - Bei stark befahrener Straße: Absperrung oder Absicherung durch Kollegen prüfen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf sichtbare Schäden (z. B. lockere Teile, Feuchtigkeit, Vandalismus).\n   - Prüfe, ob das Gehäuse geschlossen und unbeschädigt ist.\n\n3. **Diagnose/Beobachtung**\n   - Beachte den gemeldeten Zustand: „low_battery“ und „spotty“ Konnektivität.\n   - Prüfe, ob die Stromversorgung stabil ist.\n   - Batterie prüfen (falls vorhanden) – ist ein Batteriewechsel vorgesehen?\n   - Prüfe, ob die Lampe auf externe Steuerung oder Sensoren reagiert.\n   - Beobachte, ob der Fehler erneut auftritt (ggf. Wartezeit einplanen).\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt, Fehlerbild (aus/kurz wieder an), Statusmeldungen („low_battery“, „spotty“).\n   - Fotografiere ggf. die Lampe und das Umfeld.\n   - Halte fest, welche Maßnahmen du durchgeführt hast.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder sicherheitsrelevanten Problemen: Störung an die Leitstelle/Technik melden.\n   - Batterie- oder Konnektivitätsproblem an zuständige Fachabteilung weitergeben.\n\n**Rückfrage:**  \nIst die Lampe solarbetrieben oder gibt es einen Batteriewechselplan?  \nSoll ich einen Techniker für Batterietausch und Netzprüfung einplanen?",
+    "tokens_estimate_words": 180
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.101
+  },
+  "error": {}
+}

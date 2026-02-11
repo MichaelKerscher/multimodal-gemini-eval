@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC2",
+  "timestamp": "2026-02-11T12:16:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12557351679",
+        "longitude": 12.0896193,
+        "latitude": 47.8457235,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Endorfer Au / Krones"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Information. Hier eine strukturierte Vorgehensweise:\n\n### 1. Absicherung\n- Warnblinkanlage einschalten (bei Arbeiten an der Straße)\n- Absperrmaterial aufstellen (Leitkegel, Warnschilder)\n- Persönliche Schutzausrüstung tragen\n\n### 2. Sichtprüfung\n- Sichtkontrolle der betroffenen Lampe/Ampel auf offensichtliche Schäden (z. B. Feuchtigkeitseintritt, Risse, lose Abdeckungen)\n- Überprüfung der Verkabelung auf sichtbare Mängel\n\n### 3. Diagnose/Beobachtung\n- Prüfen, ob das Flackern nur bei Regen auftritt oder auch bei hoher Luftfeuchtigkeit\n- Mögliche Ursache: Feuchtigkeitseintritt in Gehäuse oder Anschlusskasten\n- Falls möglich: Gehäuse öffnen und auf Feuchtigkeitsspuren kontrollieren\n\n### 4. Dokumentation\n- Festhalten: Zeitpunkt, Wetterbedingungen, betroffene Anlage, Beobachtungen\n- Fotos von Schäden oder Feuchtigkeit machen\n\n### 5. Eskalation\n- Bei bestätigtem Feuchtigkeitseintritt: Meldung an Elektrofachkraft oder Wartungsdienst\n- Sofortige Eskalation, falls Gefahr für Verkehrssicherheit besteht (z. B. Ausfall der Ampel)\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Sind mehrere Anlagen betroffen oder nur eine?",
+    "tokens_estimate_words": 145
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.177
+  },
+  "error": {}
+}

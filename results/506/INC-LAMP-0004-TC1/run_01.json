@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-11T12:15:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe absichern, falls möglich (z. B. Warnbaken, Hinweisschilder).\n- Passanten auf die Dunkelheit aufmerksam machen, besonders bei erhöhter Unfallgefahr.\n\n**2. Sichtprüfung**\n- Prüfen: Ist nur diese Lampe betroffen oder mehrere in der Nähe?\n- Gibt es sichtbare Schäden am Mast, Leuchtmittel oder Schaltkasten?\n- Liegt ein Stromausfall in der Umgebung vor?\n\n**3. Diagnose/Beobachtung**\n- Notieren: Seit wann ist die Lampe aus? (ca. 90 Minuten)\n- Beobachten: Flackert sie gelegentlich oder bleibt sie komplett dunkel?\n- Gibt es Anzeichen für Vandalismus oder Unfälle?\n\n**4. Dokumentation**\n- Asset-ID (n12551286240) und Standort notieren.\n- Zeitpunkt und Beobachtungen festhalten (z. B. Bereich wirkt unsicher).\n\n**5. Eskalation**\n- Störung umgehend an die zuständige Wartungsstelle oder Leitstelle melden.\n- Hinweis auf die erhöhte Unsicherheit im Bereich geben, damit ggf. priorisiert wird.\n\n**Rückfrage:**  \nIst der Bereich stark frequentiert (z. B. Schulweg, Bushaltestelle) oder gibt es besondere Gefahrenstellen? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 163
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.66
+  },
+  "error": {}
+}

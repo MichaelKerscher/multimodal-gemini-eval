@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0006-TC3",
+  "timestamp": "2026-02-11T12:15:59",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n7230270217",
+        "longitude": 12.0941951,
+        "latitude": 47.8493667,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Äußere Münchener Straße/Aicherpark"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-19T01:52:56+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0006",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, Hinweisschilder).\n   - Bei akuter Gefahr Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Gibt es sichtbare Schäden (z. B. Glasbruch, freiliegende Kabel)?\n   - Steht die Lampe stabil?\n\n3. **Diagnose/Beobachtung**\n   - Gerät meldet „low_battery“ und ist „offline“.\n   - Wahrscheinlich Batterie leer und keine Fernwartung möglich.\n   - Prüfen: Sind weitere Lampen betroffen? (Hinweis auf größeren Ausfall)\n\n4. **Dokumentation**\n   - Standort, Uhrzeit, Dauer des Ausfalls und Beobachtungen notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an zuständige Wartungsfirma oder städtischen Betrieb melden.\n   - Hinweis auf unsicheren Bereich und fehlende Konnektivität geben.\n   - Dringlichkeit betonen (Sicherheitsrisiko).\n\n**Rückfrage:**  \nGibt es in der Nähe weitere defekte Lampen oder ist nur diese betroffen?  \nSind Kinder, Schulen oder viel Fußgängerverkehr in der Nähe? (Für Priorisierung der Reparatur)",
+    "tokens_estimate_words": 138
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.498
+  },
+  "error": {}
+}

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0002-TC2",
-  "timestamp": "2026-02-11T11:31:27",
+  "timestamp": "2026-02-11T12:15:00",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -30,34 +30,13 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Kontrolle bei zeitweisem Ausfall (Straßenlampe/Ampel):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchte, Pylone).\n   - Bei Ampelanlagen: Verkehrsfluss beobachten, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Anlage äußerlich auf Schäden prüfen (Gehäuse, Kabel, Mast).\n   - Auf ungewöhnliche Geräusche, Gerüche oder Flackern achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Anlage mehrfach testen (mehrere Schaltzyklen abwarten).\n   - Prüfen, ob Feuchtigkeit, Vandalismus oder lose Kontakte erkennbar sind.\n   - Bei Ampeln: Steuergerät auf Fehlermeldungen kontrollieren (sofern Zugang).\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall, Sicherheitsrisiko oder unklarer Ursache: Fachfirma/Techniker informieren und Störung melden.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es eine genaue Standortangabe?",
-    "tokens_estimate_words": 121
+    "text": "Verstanden, danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Gefahrenbereich absichern (z. B. Warnbaken, ggf. Verkehrsregelung).\n\n**2. Sichtprüfung**\n- Anlage äußerlich auf Schäden, lose Teile oder Feuchtigkeit prüfen.\n- Kontrollieren, ob alle Leuchten/Signale aktuell funktionieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Auffälligkeiten (z. B. Flackern, Geräusche) auftreten.\n- Nach Hinweisen auf Witterungseinflüsse oder Vandalismus suchen.\n- Falls möglich, Protokolle oder Fehlermeldungen auslesen.\n\n**4. Dokumentation**\n- Festgestellte Auffälligkeiten, Zeitpunkt und Wetterbedingungen notieren.\n- Fotos anfertigen, falls relevant.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Sicherheitsrisiko: Störungsdienst informieren und ggf. Reparatur veranlassen.\n- Bei unklarer Ursache: Weiterleitung an Fachpersonal zur detaillierten Prüfung.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Angaben zum genauen Standort oder zur Häufigkeit des Ausfalls?",
+    "tokens_estimate_words": 126
   },
-  "judge": {
-    "test_id": "INC-LAMP-0002-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 3,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "GPS-Koordinaten nicht genutzt für Standortangabe",
-      "Name 'Rosenheim, Heilig Blut' ignoriert",
-      "lit=yes nicht interpretiert (deutet auf Straßenlampe)"
-    ],
-    "short_justification": "Solide Checkliste, aber verfügbarer Kontext (GPS, Name, lit-Attribut) wird nicht genutzt. Fragt nach Standortangabe, obwohl diese vorliegt. Dokumentation weniger detailliert als TC1. K-Score reduziert wegen mangelnder Kontextnutzung trotz L1-Daten."
-  },
+  "judge": null,
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.209
+    "runtime_seconds": 3.583
   },
   "error": {}
 }

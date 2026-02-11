@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC1",
+  "timestamp": "2026-02-11T12:15:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293404153)",
+    "context": {
+      "asset_osm": "n13293404153"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Prüfung – Dunkler Abschnitt (Asset-ID: n13293404153)**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen entlang des Abschnitts durchführen.\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Auf offensichtliche Schäden (z. B. zerbrochene Leuchten, lose Kabel, Vandalismus) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Stromversorgung vorhanden ist (z. B. Sicherungskasten, Schaltkasten inspizieren).\n   - Bei mehreren ausgefallenen Lampen: Möglicher Fehler in der Zuleitung oder im Steuergerät.\n   - Bei Einzelausfall: Leuchtmittel oder Vorschaltgerät prüfen.\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Anzahl und Position der betroffenen Lampen notieren.\n   - Festgestellte Schäden und erste Diagnose dokumentieren (Foto machen, falls möglich).\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer (z. B. unbeleuchtete Kreuzung): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei einfachem Ausfall: Reparaturauftrag an zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nSind nur Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf akute Gefährdung (z. B. in der Nähe einer Schule, Kreuzung, Bushaltestelle)?",
+    "tokens_estimate_words": 163
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.494
+  },
+  "error": {}
+}

@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC2",
+  "timestamp": "2026-02-11T12:21:20",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Störung einer Straßenlampe**\n\n1. **Absicherung**\n   - Prüfen Sie, ob der Bereich akut gefährlich ist (z. B. Unfallgefahr, Stolperstellen).\n   - Falls ja: Bereich möglichst meiden und andere warnen.\n\n2. **Sichtprüfung**\n   - Ist nur eine Lampe betroffen oder mehrere?\n   - Gibt es sichtbare Schäden (z. B. zerbrochenes Glas, freiliegende Kabel)?\n\n3. **Diagnose/Beobachtung**\n   - Seit wann ist die Lampe aus? (In Ihrem Fall: ca. 15 Minuten)\n   - Gab es ungewöhnliche Geräusche, Funken oder Geruch?\n\n4. **Dokumentation**\n   - Notieren Sie den genauen Standort (Straße, Hausnummer, ggf. Lampennummer).\n   - Machen Sie, wenn möglich, ein Foto.\n\n5. **Eskalation**\n   - Melden Sie die Störung umgehend an die zuständige Stadtverwaltung oder den Bereitschaftsdienst.\n   - Weisen Sie auf das Unsicherheitsgefühl hin, damit eine schnelle Bearbeitung erfolgt.\n\n**Rückfrage:**  \nKönnen Sie mir den genauen Standort (Straße, Hausnummer oder markante Punkte) nennen? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 147
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.857
+  },
+  "error": {}
+}

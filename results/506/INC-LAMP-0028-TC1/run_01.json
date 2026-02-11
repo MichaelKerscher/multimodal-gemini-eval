@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC1",
+  "timestamp": "2026-02-11T12:21:08",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n4470029720)",
+    "context": {
+      "asset_osm": "n4470029720"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für den Außendienst – Asset-ID: n4470029720**\n\n1. **Absicherung**\n   - Gefahrenbereich sofort absperren (z. B. mit Absperrband, Pylonen).\n   - Warnschilder „Achtung Stromschlaggefahr“ aufstellen.\n   - Passanten und Verkehrsteilnehmer fernhalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung? Liegen blanke Leitungen frei?\n   - Prüfen, ob Feuchtigkeit eingedrungen ist oder weitere Bauteile betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Einschätzen, ob akute Stromschlaggefahr besteht.\n   - Prüfen, ob die Anlage noch in Betrieb ist oder abgeschaltet werden muss.\n   - Falls möglich: Fotos der Schadstelle anfertigen.\n\n4. **Dokumentation**\n   - Schaden und getroffene Maßnahmen dokumentieren (inkl. Fotos, Uhrzeit, Name).\n   - Asset-ID und Standort notieren.\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft informieren und Einsatz anfordern.\n   - Bis zur Übernahme durch Fachpersonal vor Ort bleiben, um Absicherung zu gewährleisten.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf akuten Stromfluss oder Funkenbildung?",
+    "tokens_estimate_words": 138
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.821
+  },
+  "error": {}
+}

@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC2",
+  "timestamp": "2026-02-11T12:21:08",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029720",
+        "longitude": 12.1326497,
+        "latitude": 47.8433336,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für beschädigtes Gehäuse mit möglicher Berührungsgefahr**\n\n1. **Absicherung**\n   - Gefahrenbereich sofort absperren (z. B. mit Absperrband, Pylonen).\n   - Passanten und Verkehrsteilnehmer warnen, ggf. Umleitung einrichten.\n   - Stromzufuhr, falls möglich und sicher, abschalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung? Liegen blanke Leitungen frei?\n   - Prüfen, ob weitere Bauteile betroffen sind (z. B. Mast, Fundament).\n\n3. **Diagnose/Beobachtung**\n   - Einschätzen, ob akute Stromschlaggefahr besteht.\n   - Beobachten, ob sich der Schaden ausweitet (z. B. Funken, Rauch).\n\n4. **Dokumentation**\n   - Fotos vom Schaden und der Absicherung machen.\n   - Schadensbeschreibung und getroffene Maßnahmen notieren.\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft informieren und Einsatz anfordern.\n   - Bei akuter Gefahr Feuerwehr oder Polizei hinzuziehen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Wo genau befindet sich der Schaden (Adresse oder Standortbeschreibung)?",
+    "tokens_estimate_words": 129
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.842
+  },
+  "error": {}
+}

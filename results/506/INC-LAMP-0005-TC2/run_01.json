@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-11T12:15:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, Blitzleuchte).\n\n2. **Sichtprüfung**\n   - Ist der gesamte Abschnitt oder nur einzelne Lampen betroffen?\n   - Sind offensichtliche Schäden (z. B. umgefahrene Masten, lose Kabel) erkennbar?\n   - Gibt es Anzeichen für Vandalismus oder Unfälle?\n\n3. **Diagnose/Beobachtung**\n   - Funktioniert die Stromversorgung (Sicherungskasten prüfen, falls zugänglich)?\n   - Sind Zeitschaltuhren oder Dämmerungsschalter korrekt eingestellt?\n   - Gibt es Witterungseinflüsse (z. B. Sturm, Nässe)?\n\n4. **Dokumentation**\n   - Standort und betroffene Leuchten notieren.\n   - Fotos von Schäden oder Auffälligkeiten machen.\n   - Zeitpunkt und eigene Maßnahmen festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an Bereitschaft/Notdienst.\n   - Bei größerem Ausfall: Weiterleitung an Fachfirma oder Netzbetreiber.\n\n**Rückfrage:**  \nBetrifft der Ausfall nur Straßenlampen oder auch Ampelanlagen? Gibt es besondere Gefahrenstellen (z. B. Fußgängerüberwege, Kreuzungen) im betroffenen Abschnitt?",
+    "tokens_estimate_words": 146
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.498
+  },
+  "error": {}
+}

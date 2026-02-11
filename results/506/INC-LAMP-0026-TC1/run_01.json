@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-11T12:20:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Störung: Unregelmäßiges Verhalten (an/aus) – Asset-ID: n4449540379**\n\n1. **Absicherung**\n   - Gefahrenbereich absichern (Warnbaken, ggf. Absperrband).\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Gibt es sichtbare Schäden an Gehäuse, Verkabelung oder Leuchtmitteln?\n   - Sind Feuchtigkeit, Vandalismus oder Tierbefall erkennbar?\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Wann tritt das Ein-/Ausschalten auf (z. B. bei Nässe, Wind, bestimmten Tageszeiten)?\n   - Prüfen, ob andere Anlagen in der Nähe betroffen sind.\n   - Kontrollieren, ob Schaltzeiten, Dämmerungsschalter oder Zeitschaltuhren korrekt arbeiten.\n   - Falls möglich: Protokoll oder Fehlermeldungen der Steuerung auslesen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen, Zeiten und Maßnahmen notieren.\n   - Fotos von Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für Verkehrssicherheit: Störung an Fachfirma/Leitstelle melden.\n   - Dringlichkeit angeben (z. B. bei Ausfall einer Ampel oder Hauptverkehrsstraße).\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf äußere Einflüsse (z. B. Bauarbeiten, Wetterereignisse)?",
+    "tokens_estimate_words": 147
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.233
+  },
+  "error": {}
+}

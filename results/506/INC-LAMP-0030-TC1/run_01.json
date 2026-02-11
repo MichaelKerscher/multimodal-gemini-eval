@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-11T12:21:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Info zum Asset n11833818322. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für sporadische Fehler an Straßenlampen**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung: Absperrung oder Warnbaken aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und den Mast auf sichtbare Schäden (z. B. Wackelkontakt, Feuchtigkeit, lose Kabel).\n   - Gibt es Spuren von Vandalismus oder Korrosion?\n\n3. **Diagnose/Beobachtung**\n   - Beobachte die Lampe für einige Minuten: Flackert sie, geht sie erneut aus?\n   - Prüfe, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netz- oder Steuerungsfehler).\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt, Wetterbedingungen, beobachtetes Verhalten, Asset-ID.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Fachabteilung/Technik.\n   - Hinweis: Da der Fehler nicht dauerhaft ist, sollte eine zeitnahe Überprüfung durch einen Elektriker erfolgen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter in dem Bereich? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 153
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.177
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC3",
+  "timestamp": "2026-02-11T12:21:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung: Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Umfeld auf sichtbare Schäden (z. B. Wackelkontakt, Feuchtigkeit, lose Kabel).\n   - Achte auf ungewöhnliche Geräusche oder Gerüche.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt und die Konnektivität laut Gerät „spotty“ ist, könnte ein Verbindungsproblem vorliegen.\n   - Prüfe, ob ähnliche Fehler bei anderen Lampen im Umkreis auftreten.\n   - Notiere, wann und wie oft der Fehler auftritt.\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen und Maßnahmen schriftlich fest (Zeitpunkt, Fehlerbild, Umfeld, eigene Maßnahmen).\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Melde den Vorfall an die zuständige Fachabteilung oder den technischen Dienst, besonders wegen der instabilen Verbindung.\n   - Weise auf den sporadischen Charakter und die Netzprobleme hin.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Störungen im Strom- oder Datennetz in diesem Bereich?  \nFalls weitere Details (z. B. Lampentyp, Standort) bekannt sind, bitte ergänzen.",
+    "tokens_estimate_words": 166
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.146
+  },
+  "error": {}
+}

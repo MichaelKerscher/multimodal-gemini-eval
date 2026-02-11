@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC1",
+  "timestamp": "2026-02-11T12:18:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n13293431103)",
+    "context": {
+      "asset_osm": "n13293431103"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Sofortmaßnahmen – Dunkle Straßenlampe (Asset-ID: n13293431103)**\n\n1. **Absicherung**\n   - Bereich um die Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).\n   - Passanten auf die Dunkelheit hinweisen, falls Sie vor Ort sind.\n\n2. **Sichtprüfung**\n   - Ist die Lampe beschädigt (z. B. Glasbruch, sichtbare Kabel)?\n   - Gibt es weitere dunkle Lampen in der Nähe (Hinweis auf größeren Ausfall)?\n\n3. **Diagnose/Beobachtung**\n   - Gab es einen Stromausfall oder Unwetter in der Umgebung?\n   - Flackert die Lampe oder bleibt sie komplett aus?\n\n4. **Dokumentation**\n   - Zeitpunkt des Ausfalls notieren (ca. 10 Minuten dunkel).\n   - Asset-ID, Standort und besondere Beobachtungen festhalten.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsstelle oder Bereitschaftsdienst melden.\n   - Hinweis auf unsichere Situation und schnelle Bearbeitung erbitten.\n\n**Rückfrage:**  \nKönnen Sie den genauen Standort (Straße, Hausnummer oder markantes Objekt) angeben? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 133
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.461
+  },
+  "error": {}
+}

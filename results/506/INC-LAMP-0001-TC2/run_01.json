@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC2",
-  "timestamp": "2026-02-11T11:30:30",
+  "timestamp": "2026-02-11T12:14:46",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -30,30 +30,13 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für sporadischen Fehler an Straßenlampe**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchte sichern.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeit oder Vandalismus prüfen.\n   - Prüfen, ob alle Kabel und Anschlüsse fest sitzen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe beobachten: Flackert sie oder geht sie erneut aus?\n   - Prüfen, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netzproblem).\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, defektes Vorschaltgerät, Zeitschaltuhr-Fehler.\n\n4. **Dokumentation**\n   - Fehlerbild, Zeitpunkt und Wetterbedingungen notieren.\n   - Fotos machen, falls Auffälligkeiten sichtbar sind.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Störung an Fachfirma oder Netzbetreiber melden.\n   - Falls aktuell kein Fehler feststellbar: Beobachtung anordnen und regelmäßige Kontrolle einplanen.\n\n**Rückfrage:**  \nGab es in der Umgebung Bauarbeiten, Unwetter oder Stromausfälle? Sind weitere Lampen betroffen?",
-    "tokens_estimate_words": 129
+    "text": "**Checkliste bei sporadischem Ausfall einer Straßenlampe**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchte, Pylone).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Risse, lose Teile).\n   - Umfeld auf Störungen (z. B. Erdarbeiten, Feuchtigkeit) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Leuchtmittel und Fassung auf Wackelkontakt prüfen.\n   - Schaltzeiten und Dämmerungsschalter kontrollieren.\n   - Prüfen, ob weitere Lampen betroffen sind.\n   - Fehlerbild dokumentieren: Wann trat der Fehler auf? Wetterbedingungen? Wiederholt sich das Problem?\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, genaue Position).\n   - Fotos bei Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Verdacht auf elektrischen Defekt: Fachfirma oder Elektromeister informieren.\n   - Bei Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Meldung an Leitstelle.\n\n**Rückfrage:**  \nGab es besondere Wetterbedingungen (z. B. Regen, Frost) oder Bauarbeiten in der Nähe? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 139
   },
-  "judge": {
-    "test_id": "INC-LAMP-0001-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. GPS-Kontext (Bahnhof Rosenheim) wird nicht explizit genutzt, aber auch nicht erfunden. Antwort bleibt generisch-praktisch. Sicherheitsmaßnahmen (Warnweste, Pylonen) konkret benannt. Eskalationspfad klar. Dokumentation mit Fotos erwähnt. Keine Halluzinationen. Solide Antwort."
-  },
+  "judge": null,
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.807
+    "runtime_seconds": 3.374
   },
   "error": {}
 }

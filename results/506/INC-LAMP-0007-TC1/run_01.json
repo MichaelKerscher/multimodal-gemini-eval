@@ -1,0 +1,35 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC1",
+  "timestamp": "2026-02-11T12:16:13",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n4484173276)",
+    "context": {
+      "asset_osm": "n4484173276"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste bei Aussetzern/Flackern – Asset-ID: n4484173276**\n\n1. **Absicherung**\n   - Einsatzstelle absichern (Warnbaken, Warnleuchten, ggf. Absperrung).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchte/Ampel auf offensichtliche Schäden, lose Kabel, Feuchtigkeitseintritt.\n   - Prüfen, ob weitere Anlagen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Flackern/Aussetzer beobachten: Tritt das Problem dauerhaft oder sporadisch auf?\n   - Kontaktstellen (Klemmen, Steckverbindungen) vorsichtig prüfen, ohne Stromschlagrisiko.\n   - Falls möglich: Test mit Spannungsprüfer.\n\n4. **Dokumentation**\n   - Fehlerbild, Zeitpunkt, Wetterbedingungen und eigene Maßnahmen notieren.\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei Verdacht auf größere Kontaktprobleme oder Gefahr: Fachfirma/Elektrofachkraft informieren.\n   - Anlage ggf. außer Betrieb nehmen, wenn Gefahr für Verkehrssicherheit besteht.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Auffälligkeiten am Mast oder Schaltschrank (z. B. Feuchtigkeit, Korrosion)?",
+    "tokens_estimate_words": 124
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.493
+  },
+  "error": {}
+}

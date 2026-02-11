@@ -1,0 +1,42 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC2",
+  "timestamp": "2026-02-11T12:20:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293397459",
+        "longitude": 12.1320286,
+        "latitude": 47.8589872,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung! Hier eine strukturierte Vorgehensweise:\n\n### 1. Absicherung\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Leitkegel, Warnleuchten) aufstellen, um den Bereich zu sichern.\n- Eigene Sicherheit und die der Verkehrsteilnehmer gewährleisten.\n\n### 2. Sichtprüfung\n- Prüfen, ob mehrere oder einzelne Straßenlampen/Ampeln betroffen sind.\n- Auf offensichtliche Schäden, lose Kabel, defekte Leuchtmittel oder Vandalismus achten.\n\n### 3. Diagnose/Beobachtung\n- Funktioniert die Stromversorgung? (z. B. Sicherungskasten prüfen, falls zugänglich)\n- Gibt es Anzeichen für einen großflächigen Stromausfall?\n- Sind Steuergeräte oder Zeitschaltuhren betroffen?\n\n### 4. Dokumentation\n- Genaue Beschreibung des Abschnitts (Straßenname, Hausnummern, markante Punkte).\n- Anzahl und Typ der betroffenen Anlagen festhalten.\n- Fotos machen, falls möglich.\n\n### 5. Eskalation\n- Bei Gefahr für Verkehrsteilnehmer sofort an die Leitstelle/Störungsdienst melden.\n- Falls Eigenlösung nicht möglich, zuständige Fachabteilung oder externe Dienstleister informieren.\n\n**Rückfrage:**  \nKönnen Sie den genauen Standort (Straßenname, Abschnitt, ggf. Hausnummer) und die Anzahl der betroffenen Lampen/Ampeln angeben? Sind weitere Auffälligkeiten (z. B. Geräusche, Geruch, beschädigte Masten) erkennbar?",
+    "tokens_estimate_words": 160
+  },
+  "judge": null,
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.886
+  },
+  "error": {}
+}
