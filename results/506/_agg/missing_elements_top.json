@@ -1,0 +1,202 @@
+[
+  [
+    "Ticket-ID-Referenz",
+    3
+  ],
+  [
+    "Offline-Workflow nicht erwähnt",
+    3
+  ],
+  [
+    "Alle erwarteten Elemente fehlen - Server Error",
+    3
+  ],
+  [
+    "photo_available nicht genutzt",
+    2
+  ],
+  [
+    "GPS-Koordinaten nicht explizit in Dokumentation erwähnt",
+    2
+  ],
+  [
+    "GPS-Koordinaten nicht explizit genutzt",
+    2
+  ],
+  [
+    "Keine Nutzung der Asset-ID im Kontext erkennbar",
+    1
+  ],
+  [
+    "Unterscheidung Straßenlampe/Ampel wird erfragt statt aus Kontext abgeleitet",
+    1
+  ],
+  [
+    "GPS-Koordinaten und Standortname werden nicht erwähnt",
+    1
+  ],
+  [
+    "lit=yes wird nicht interpretiert (deutet auf Straßenlampe hin)",
+    1
+  ],
+  [
+    "Standortspezifische Hinweise fehlen trotz verfügbarer Daten",
+    1
+  ],
+  [
+    "Severity=medium und fault_type=intermittent werden nicht explizit adressiert",
+    1
+  ],
+  [
+    "Foto verfügbar (photo_available=true) wird nicht erwähnt",
+    1
+  ],
+  [
+    "Umgebungsbedingungen (Nebel, schlechte Sicht, Nacht) nicht in Sicherheitshinweise integriert",
+    1
+  ],
+  [
+    "severity=high nicht explizit adressiert",
+    1
+  ],
+  [
+    "fog/poor_visibility Sicherheitsaspekte unterbelichtet",
+    1
+  ],
+  [
+    "Ticket-Nummer/INC-ID fehlt in Dokumentation",
+    1
+  ],
+  [
+    "Keine Berücksichtigung von fog/poor_visibility für erhöhte Sicherheitsmaßnahmen",
+    1
+  ],
+  [
+    "device_state:low_battery wird erwähnt, aber keine konkrete Handlungsempfehlung",
+    1
+  ],
+  [
+    "Severity:low wird nicht reflektiert (Priorisierung fehlt)",
+    1
+  ],
+  [
+    "Keine Ticket-ID-Referenzierung trotz vollständigem Incident-Kontext",
+    1
+  ],
+  [
+    "Keine explizite Priorisierung wegen 90min Ausfall",
+    1
+  ],
+  [
+    "Keine Erwähnung von Offline-Dokumentation",
+    1
+  ],
+  [
+    "GPS-Daten werden nicht aktiv genutzt (nur generisch 'Standort notieren')",
+    1
+  ],
+  [
+    "Keine Erwähnung des konkreten Standorts Rosenheim/Aicherpark",
+    1
+  ],
+  [
+    "Fragt nach Adresse, obwohl diese im Context vorhanden ist",
+    1
+  ],
+  [
+    "KRITISCH: severity=high + storm + poor_visibility + high traffic → keine explizite Soforteskalation/Notfallprotokoll",
+    1
+  ],
+  [
+    "Device offline + low_battery → keine Erwähnung alternativer Dokumentationswege",
+    1
+  ],
+  [
+    "Foto verfügbar laut Context, wird nicht erwähnt",
+    1
+  ],
+  [
+    "Sturm-Kontext nicht in Sicherheitsmaßnahmen integriert",
+    1
+  ],
+  [
+    "Konkrete Ticket-Erstellung erwähnt",
+    1
+  ],
+  [
+    "Zeitliche Priorisierung bei severity=low",
+    1
+  ],
+  [
+    "Nutzung der GPS-Koordinaten für Einsatzplanung",
+    1
+  ],
+  [
+    "Erwähnung des Standortnamens (Rosenheim)",
+    1
+  ],
+  [
+    "Ticket-Dokumentation mit Asset-Daten",
+    1
+  ],
+  [
+    "Explizite Erwähnung severity=low für Priorisierung",
+    1
+  ],
+  [
+    "Strukturierte Ticket-Daten (Reporter, Zeitstempel)",
+    1
+  ],
+  [
+    "Konkrete Angabe zur Verkehrssicherungspflicht bei Straßenbeleuchtung",
+    1
+  ],
+  [
+    "Hinweis auf mögliche elektrische Gefahren bei Öffnung von Schaltschränken",
+    1
+  ],
+  [
+    "Nutzung der GPS-Koordinaten für Anfahrtsinformation",
+    1
+  ],
+  [
+    "Erwähnung des Standortnamens 'Rosenheim, Leitzachstraße' in der Antwort",
+    1
+  ],
+  [
+    "Bezug auf severity=medium und fault_type=intermittent aus Kontext",
+    1
+  ],
+  [
+    "Berücksichtigung von fog/poor_visibility für erhöhte Absicherungsmaßnahmen",
+    1
+  ],
+  [
+    "Nutzung von device_state=ok und connectivity=online für Ferndiagnose",
+    1
+  ],
+  [
+    "Hinweis auf Meldezeitpunkt (nachts 22:52 Uhr) vs. aktuelle Tageszeit (day)",
+    1
+  ],
+  [
+    "Asset-ID explizit in Dokumentation erwähnen",
+    1
+  ],
+  [
+    "Konkrete Ticket-ID-Nennung",
+    1
+  ],
+  [
+    "Zeitstempel für Dokumentation",
+    1
+  ],
+  [
+    "Nutzung der GPS-Koordinaten für Standortangabe",
+    1
+  ],
+  [
+    "Explizite Ticket-ID-Nennung",
+    1
+  ]
+]
