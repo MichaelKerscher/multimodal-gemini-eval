@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC3",
-  "timestamp": "2026-02-10T17:44:40",
+  "timestamp": "2026-02-11T11:28:29",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -48,13 +48,13 @@
   },
   "response": {
     "multi": false,
-    "text": "Danke für die Info. Hier eine strukturierte Vorgehensweise:\n\n**1. Absicherung**\n- Stelle sicher, dass die Lampe aktuell keine Gefahr für den Verkehr darstellt.\n- Bei Ausfall im Dunkeln: Bereich ggf. absichern oder melden.\n\n**2. Sichtprüfung**\n- Prüfe vor Ort: Gibt es sichtbare Schäden am Mast, Leuchte oder Anschlusskasten?\n- Sind Kabel lose oder beschädigt?\n\n**3. Diagnose/Beobachtung**\n- Gerät meldet „low_battery“ und „offline“:  \n  → Vermutlich Problem mit der Stromversorgung oder Batterie (bei solar-/akku-betriebenen Lampen).\n- Beobachte, ob der Fehler erneut auftritt oder die Lampe weiterhin stabil leuchtet.\n\n**4. Dokumentation**\n- Notiere: Zeitpunkt des Ausfalls, Dauer, aktuelle Beobachtung, Gerätestatus („low_battery“, „offline“).\n- Fotos machen, falls Schäden sichtbar sind.\n\n**5. Eskalation**\n- Bei wiederholtem Ausfall oder Sicherheitsrisiko:  \n  → Störung an die zuständige Fachabteilung oder Wartungsfirma melden.\n- Batterie/Akku prüfen und ggf. Austausch veranlassen.\n\n**Rückfrage:**  \nHandelt es sich um eine solarbetriebene Lampe mit Akku? Gibt es bereits Wartungsintervalle für die Batterie?",
-    "tokens_estimate_words": 147
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist. Bei Gefahr (z.B. Dunkelheit, viel Verkehr) ggf. Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Umfeld auf sichtbare Schäden (Gehäuse, Mast, Verkabelung).\n   - Achte auf ungewöhnliche Geräusche, Gerüche oder Flackern.\n\n3. **Diagnose/Beobachtung**\n   - Hinweis aus Gerätedaten: „low_battery“ und „offline“.  \n   - Vermutlich liegt ein Problem mit der Stromversorgung oder der internen Batterie vor.\n   - Prüfe, ob die Lampe nach kurzer Zeit wieder ausfällt oder weiterhin funktioniert.\n   - Beobachte, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt des Ausfalls, Zeitpunkt der Wiedereinschaltung, aktuelle Statusanzeige (low_battery, offline), eigene Beobachtungen.\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler mit allen gesammelten Informationen an die zuständige Fachabteilung/Technik.\n   - Weise auf die Hinweise „low_battery“ und „offline“ hin, damit gezielt geprüft werden kann (z.B. Batterietausch, Netzprüfung).\n\n**Rückfrage:**  \nIst die Lampe Teil eines größeren Systems (z.B. vernetzte Straßenbeleuchtung) oder handelt es sich um eine Einzelanlage?  \nSind ähnliche Fehler an anderen Lampen bekannt?",
+    "tokens_estimate_words": 173
   },
   "judge": null,
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.681
+    "runtime_seconds": 4.263
   },
   "error": {}
 }

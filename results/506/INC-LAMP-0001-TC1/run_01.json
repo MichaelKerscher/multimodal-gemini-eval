@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC1",
-  "timestamp": "2026-02-10T17:44:40",
+  "timestamp": "2026-02-11T11:28:29",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -23,13 +23,13 @@
   },
   "response": {
     "multi": false,
-    "text": "Verstanden, danke für die Info zum sporadischen Fehler an der Straßenlampe (Asset-ID: n5718630492). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung:**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann (z. B. Warnweste tragen, ggf. Absperrung aufstellen).\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Umfeld auf offensichtliche Schäden (z. B. lockere Teile, Feuchtigkeit, Vandalismus).\n   - Gibt es Anzeichen für Wackelkontakt, Korrosion oder lose Kabel?\n\n3. **Diagnose/Beobachtung**\n   - Beobachte die Lampe für einige Minuten: Flackert sie, geht sie erneut aus?\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n   - Notiere, ob der Fehler bei bestimmten Wetterbedingungen auftritt.\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Zeitpunkt, Wetter, Fehlerbild).\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Melde den Fehler an die zuständige Fachabteilung/den Elektriker, da sporadische Fehler oft auf elektrische Probleme (z. B. Vorschaltgerät, Feuchtigkeit, Wackelkontakt) hindeuten.\n   - Gib alle gesammelten Informationen weiter.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter in dem Bereich? Das könnte bei der Ursachenfindung helfen.",
-    "tokens_estimate_words": 173
+    "text": "Danke für die Info zum Asset n5718630492. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Prüfen, ob die Lampe aktuell sicher ist (keine offenen Kabel, keine Gefährdung für Verkehr oder Fußgänger).\n- Bei Gefahr: Bereich absperren oder zuständige Stelle informieren.\n\n**2. Sichtprüfung**\n- Lampe und Umgebung auf sichtbare Schäden, Feuchtigkeit, Vandalismus oder lose Teile kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Notieren, wann und wie oft der Fehler auftritt (z. B. bei Nässe, zu bestimmten Tageszeiten).\n- Prüfen, ob andere Lampen in der Nähe betroffen sind.\n- Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, defektes Vorschaltgerät.\n\n**4. Dokumentation**\n- Fehlerbeschreibung, Asset-ID, Zeitpunkt und eigene Beobachtungen schriftlich festhalten (z. B. im Wartungsprotokoll oder per App).\n\n**5. Eskalation**\n- Meldung an die zuständige Wartungsfirma oder interne Technik weiterleiten.\n- Hinweis: Da der Fehler sporadisch ist, gezielt auf intermittierende Störungen hinweisen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Wetterereignisse an diesem Standort? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 149
   },
   "judge": null,
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.358
+    "runtime_seconds": 5.142
   },
   "error": {}
 }
