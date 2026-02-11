@@ -1,0 +1,84 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC3",
+  "timestamp": "2026-02-11T11:31:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Info.\n\n**Checkliste für Kontrolle bei zeitweisem Ausfall (aktuell normal):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Absicherung der Arbeitsstelle prüfen und ggf. aufbauen.\n\n2. **Sichtprüfung**\n   - Gerät äußerlich auf Beschädigungen, lose Kabel, Feuchtigkeit oder Verschmutzung prüfen.\n   - Umfeld auf mögliche Störquellen (z. B. Bauarbeiten, Fahrzeuge) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Statusanzeige und Kontrollleuchten am Gerät prüfen.\n   - Protokolle oder Fehlermeldungen im System abrufen.\n   - Bei Ampeln: Schaltzyklen beobachten, auf Unregelmäßigkeiten achten.\n   - Bei Straßenlampen: Funktion bei Dämmerung testen, ggf. Testschaltung auslösen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos bei sichtbaren Schäden machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Störung an Technik/Leitstelle melden und ggf. Reparatur beauftragen.\n\n**Rückfrage:**  \nGab es eine bestimmte Uhrzeit oder Situation, in der der Ausfall auftrat? Das hilft bei der Ursachenanalyse.",
+    "tokens_estimate_words": 135
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Severity=medium nicht berücksichtigt",
+      "Umgebung (Nebel, schlechte Sicht, Nacht) komplett ignoriert",
+      "photo_available=true nicht erwähnt",
+      "reporter=patrol nicht genutzt",
+      "Keine Anpassung an poor_visibility + medium traffic",
+      "Generische Checkliste trotz reichem L2-Kontext"
+    ],
+    "short_justification": "Trotz vollständigem L2-Kontext (Nebel, Nacht, schlechte Sicht, Foto verfügbar, severity=medium) wird eine generische Checkliste ausgegeben. Kritische Umgebungsfaktoren ignoriert – bei Nebel+Nacht+medium traffic wäre erhöhte Sicherheitspriorisierung nötig. Fragt nach Uhrzeit, obwohl reported_at vorliegt. K=2 wegen massiver Kontextignoranz, S=2 wegen fehlender Anpassung an Risikosituation. Hallucination_suspected=true, da Antwort impliziert, Infos fehlen, die tatsächlich vorliegen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.378
+  },
+  "error": {}
+}

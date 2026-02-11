@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC3",
+  "timestamp": "2026-02-11T11:47:17",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für sporadischen Fehler – Straßenlampe**\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, Warnweste, ggf. Absperrung).\n   - Eigene Sicherheit und die der Verkehrsteilnehmer sicherstellen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Vandalismus, Feuchtigkeit, lose Kabel).\n   - Batteriefach und Anschluss prüfen (Hinweis: „low_battery“).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe aktuell stabil leuchtet.\n   - Batterie prüfen/wechseln (Fehlermeldung: „low_battery“).\n   - Verbindung zum Steuergerät kontrollieren („offline“ = keine Verbindung).\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n4. **Dokumentation**\n   - Fehlerbild, Zeitpunkt, Maßnahmen und aktuelle Zustände notieren.\n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. **Eskalation**\n   - Bei weiterhin sporadischem Ausfall oder Sicherheitsrisiko: Störung an Zentrale/Technik weiterleiten.\n   - Hinweis auf mögliche Ursachen (Batterie, Verbindung) geben.\n\n**Rückfrage:**  \nSoll die Batterie direkt vor Ort gewechselt werden oder ist ein Techniker mit Ersatzteilen einzuplanen? Liegt eine Fernüberwachung der Lampe vor?",
+    "tokens_estimate_words": 136
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung bei L2. Integriert device_state (low_battery) und connectivity (offline) präzise in Diagnose. Strukturierte Checkliste mit konkreten Handlungsschritten. Absicherung priorisiert. Dokumentation explizit. Eskalation mit Hinweis auf mögliche Ursachen. Rückfrage zielt auf Ressourcenplanung. Alle verfügbaren Kontextdaten sinnvoll verarbeitet ohne Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.135
+  },
+  "error": {}
+}

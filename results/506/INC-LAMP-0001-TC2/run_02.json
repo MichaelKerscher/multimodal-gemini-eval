@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-11T11:47:17",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste bei sporadischem Ausfall einer Straßenlampe**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann (z. B. Warnweste tragen, ggf. Absperrung aufstellen).\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und den Mast auf sichtbare Schäden (z. B. Risse, lose Teile, Feuchtigkeitseintritt).\n   - Achte auf ungewöhnliche Geräusche oder Gerüche.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, wann und wie oft der Fehler auftritt (z. B. nur bei Feuchtigkeit, nach Einbruch der Dunkelheit).\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind.\n   - Mögliche Ursachen: Wackelkontakt, defektes Vorschaltgerät, Feuchtigkeit im Gehäuse.\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetterbedingungen, Fehlerbild).\n   - Fertige Fotos an, falls möglich.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Fachabteilung oder den Wartungsdienst.\n   - Weisen Sie auf die Unregelmäßigkeit hin, damit gezielt nach der Ursache gesucht werden kann.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Unwetter oder andere besondere Ereignisse in der Nähe der Lampe? Das könnte bei der Fehlersuche helfen.",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Gleichwertig zu TC1, nutzt GPS-Daten aber nicht explizit (Standort wird nicht erwähnt). Struktur identisch und gut. Absicherung, Diagnose sporadischer Fehler, Dokumentation und Eskalation vorhanden. Rückfrage sinnvoll. Leichte Redundanz zu TC1, aber keine Fehler. K=4 statt 5, da verfügbare Standortdaten nicht genutzt wurden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.241
+  },
+  "error": {}
+}

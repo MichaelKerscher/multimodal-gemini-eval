@@ -1,0 +1,63 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-11T11:31:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Kontrolle bei zeitweisem Ausfall (Straßenlampe/Ampel):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchte, Pylone).\n   - Bei Ampelanlagen: Verkehrsfluss beobachten, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Anlage äußerlich auf Schäden prüfen (Gehäuse, Kabel, Mast).\n   - Auf ungewöhnliche Geräusche, Gerüche oder Flackern achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Anlage mehrfach testen (mehrere Schaltzyklen abwarten).\n   - Prüfen, ob Feuchtigkeit, Vandalismus oder lose Kontakte erkennbar sind.\n   - Bei Ampeln: Steuergerät auf Fehlermeldungen kontrollieren (sofern Zugang).\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall, Sicherheitsrisiko oder unklarer Ursache: Fachfirma/Techniker informieren und Störung melden.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es eine genaue Standortangabe?",
+    "tokens_estimate_words": 121
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht genutzt für Standortangabe",
+      "Name 'Rosenheim, Heilig Blut' ignoriert",
+      "lit=yes nicht interpretiert (deutet auf Straßenlampe)"
+    ],
+    "short_justification": "Solide Checkliste, aber verfügbarer Kontext (GPS, Name, lit-Attribut) wird nicht genutzt. Fragt nach Standortangabe, obwohl diese vorliegt. Dokumentation weniger detailliert als TC1. K-Score reduziert wegen mangelnder Kontextnutzung trotz L1-Daten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.209
+  },
+  "error": {}
+}

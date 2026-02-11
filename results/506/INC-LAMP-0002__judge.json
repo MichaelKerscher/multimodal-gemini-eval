@@ -1,0 +1,63 @@
+[
+  {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Erwähnung von Foto-Dokumentation trotz intermittierender Störung",
+      "Keine Hinweise auf Langzeitbeobachtung bei sporadischem Fehler"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer 5-Punkte-Checkliste. Absicherung wird priorisiert, Eskalationskriterien sind genannt. Dokumentation gut abgedeckt. Sinnvolle Rückfrage zur Ursachenforschung. Minimal: Keine explizite Erwähnung der Foto-Verfügbarkeit oder Langzeitbeobachtung bei intermittierenden Fehlern."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten werden nicht genutzt (z.B. für Anfahrt oder Umgebungsanalyse)",
+      "Name 'Rosenheim, Heilig Blut' wird nicht erwähnt zur Identifikation",
+      "Keine Erwähnung von 'lit=yes' zur Bestätigung der Beleuchtungsfunktion"
+    ],
+    "short_justification": "Strukturell identisch mit TC1, gute Checkliste. Jedoch wird der erweiterte Kontext (GPS, Name, lit-Attribut) nicht genutzt. Die Rückfrage nach Lampe vs. Ampel ist sinnvoll, aber Standortinformationen hätten die Antwort präziser machen können. Kontextnutzung suboptimal."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung. Berücksichtigt severity=medium, intermittent fault_type, Nebel/schlechte Sicht, Nachtzeit und photo_available. Absicherung priorisiert (Warnweste, Verkehrsumleitung bei medium traffic_exposure). Strukturierte 5-Punkte-Checkliste mit spezifischen Tests für intermittierende Fehler. Dokumentation inkl. Fotos. Eskalation klar definiert. Rückfrage zu Langzeitbeobachtung zeigt Verständnis für sporadische Störungen. Keine Halluzinationen, alle Fakten aus Kontext abgeleitet."
+  }
+]
