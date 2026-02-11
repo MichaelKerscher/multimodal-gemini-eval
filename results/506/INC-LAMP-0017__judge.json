@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Punkte-Checkliste mit klarer Absicherung, Diagnose und Eskalation. Dokumentation gut abgedeckt. Rückfrage sinnvoll. Keine Halluzinationen. Minimal-Kontext angemessen genutzt."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Identische Struktur wie TC1, GPS-Daten vorhanden aber nicht explizit genutzt (kein Navigationsvorteil erwähnt). Ansonsten vollständig: Absicherung, Diagnose, Dokumentation, Eskalation. Rückfrage passend."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 3,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: 'low_power_mode' wird diagnostisch interpretiert, severity=medium angemessen behandelt, Umweltbedingungen (Dämmerung/Regen) implizit berücksichtigt. Vollständige Dokumentation inkl. Gerätestatus. Klare Eskalationskriterien. Strukturiert und umsetzbar."
+  }
+]

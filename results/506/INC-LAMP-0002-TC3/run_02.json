@@ -1,0 +1,81 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC3",
+  "timestamp": "2026-02-11T12:26:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, ich unterstütze Sie bei der Kontrolle des gemeldeten zeitweisen Ausfalls.\n\n**Checkliste für die Kontrolle:**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern.\n   - Bei Bedarf Verkehr umleiten oder Polizei informieren.\n\n2. **Sichtprüfung**\n   - Gerät äußerlich auf Beschädigungen, lose Kabel oder Feuchtigkeit prüfen.\n   - Umgebung auf Anzeichen von Vandalismus oder Fremdeinwirkung kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktion des Geräts vor Ort beobachten (z. B. Lampen-/Ampelbetrieb über mehrere Schaltzyklen prüfen).\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Prüfen, ob alle Anzeigen und Steuerungen wie erwartet reagieren.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten, auch wenn aktuell alles normal erscheint, notieren.\n   - Zeitpunkt und Dauer der Beobachtung dokumentieren.\n   - Fotos von Gerät und Umgebung machen, falls Auffälligkeiten bestehen.\n\n5. **Eskalation**\n   - Bei erneuten Ausfällen oder Auffälligkeiten: Störungsdienst oder Fachfirma informieren.\n   - Bei sicherheitsrelevanten Mängeln: Sofortige Meldung an die zuständige Stelle.\n\n**Rückfrage:**  \nGab es zum Zeitpunkt des Ausfalls besondere Wetterbedingungen, Bauarbeiten oder andere Ereignisse in der Nähe? Das hilft, mögliche Ursachen einzugrenzen.",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity=medium und fault_type=intermittent werden nicht explizit adressiert",
+      "Foto verfügbar (photo_available=true) wird nicht erwähnt",
+      "Umgebungsbedingungen (Nebel, schlechte Sicht, Nacht) nicht in Sicherheitshinweise integriert"
+    ],
+    "short_justification": "Beste Antwort der Serie. Strukturiert, sicherheitsorientiert, mit klaren Eskalationskriterien. Dokumentation gut. Rückfrage berücksichtigt teilweise Kontext (Wetter, Bauarbeiten). Verbesserungspotenzial: Verfügbares Foto hätte erwähnt werden sollen, Nebel+Nacht+schlechte Sicht hätten Sicherheitshinweise verschärfen können. Severity medium rechtfertigt aber aktuelles Vorgehen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.045
+  },
+  "error": {}
+}

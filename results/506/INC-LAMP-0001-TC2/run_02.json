@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-11T12:25:41",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für sporadischen Fehler an Straßenlampe**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchte, Pylone).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Risse, lose Teile).\n   - Umgebung auf ungewöhnliche Einflüsse kontrollieren (z. B. Feuchtigkeit, Vandalismus).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Fehler reproduzierbar ist (mehrfaches Ein-/Ausschalten, Warten).\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Vorschaltgerät, Zeitschaltuhr.\n   - Gibt es weitere Lampen mit ähnlichem Verhalten in der Nähe?\n\n4. **Dokumentation**\n   - Fehlerbeschreibung (wann, wie oft, unter welchen Bedingungen?).\n   - Fotos vom Zustand und Standort machen.\n   - Alle Beobachtungen notieren.\n\n5. **Eskalation**\n   - Meldung an die zuständige Fachabteilung/Technik.\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Notdienst informieren.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten, Unwetter oder Bauarbeiten in der Nähe? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 132
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Struktur mit Absicherung, Diagnose und Eskalation. Standortinformationen (Bahnhof Rosenheim) werden implizit genutzt (hohe Verkehrsexposition). Dokumentation inkl. Fotos erwähnt. Sicherheitsaspekte bei akuter Gefahr klar benannt. Rückfrage kontextbezogen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.919
+  },
+  "error": {}
+}

@@ -1,0 +1,55 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-11T12:34:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Störung: Kurze Aussetzer & Flackern (Asset-ID: n8486238431)**\n\n1. **Absicherung**\n   - Gefahrenbereich absperren (z. B. Warnbaken, Warnleuchten).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchte/Ampel und Anschlussstellen.\n   - Prüfen auf offensichtliche Schäden (z. B. lockere Kabel, Korrosion, Feuchtigkeit).\n\n3. **Diagnose/Beobachtung**\n   - Leuchte/Ampel einschalten und Verhalten beobachten.\n   - Wackelkontakt durch leichtes Bewegen der Anschlussstellen prüfen.\n   - Prüfen, ob mehrere Anlagen betroffen sind (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und Maßnahmen notieren.\n   - Fotos von Schäden oder auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Fachfirma/Elektrofachkraft informieren.\n   - Asset-ID und Beobachtungen weitergeben.\n\n**Rückfrage:**  \nTritt das Flackern nur bei dieser einen Anlage auf oder sind weitere in der Umgebung betroffen?",
+    "tokens_estimate_words": 115
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Spannungsfreiheit explizit erwähnen",
+      "Ticket-ID-Referenz"
+    ],
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung und Eskalation. Sichtprüfung und Diagnose gut beschrieben. Dokumentation vorhanden, aber ohne Ticket-Referenz. Rückfrage sinnvoll. Minimal-Kontext angemessen genutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.253
+  },
+  "error": {}
+}

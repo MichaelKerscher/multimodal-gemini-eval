@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit klarer Struktur. Absicherung steht an erster Stelle, Diagnose ist systematisch, Eskalation bei Gefahr vorhanden. Dokumentation mit Fotos erwähnt. Rückfrage sinnvoll. Keine Halluzinationen trotz minimalem Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr ähnlich zu TC1, nutzt GPS-Daten nicht explizit (aber auch nicht nötig für diese Aufgabe). Absicherung priorisiert, Diagnose inkl. Isolationsmessung, Dokumentation mit Fotos/Zeitangaben, Eskalation bei Gefahr. Rückfrage zu Witterung passt gut. Keine Kontextfehler."
+  },
+  {
+    "test_id": "INC-LAMP-0007-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort. Nutzt Kontext optimal: severity=low erkannt, connectivity=offline explizit adressiert mit Hinweis auf mögliches Kommunikationsproblem. Absicherung zuerst, systematische Diagnose, Dokumentation detailliert, Eskalation mit Außerbetriebnahme-Option. Rückfrage zu Wartung/Unwetter passt zu storm-Kontext. Vollständig und kontextbewusst."
+  }
+]

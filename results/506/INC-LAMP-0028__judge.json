@@ -1,0 +1,38 @@
+[
+  {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {"R":1,"H":1,"S":1,"D":1,"K":1},
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": ["Alle erwarteten Elemente fehlen - Server Error"],
+    "short_justification": "500 Server Error - keine verwertbare Antwort. Alle Dimensionen müssen mit 1 bewertet werden, da keinerlei Handlungsanweisung, Sicherheitshinweis oder Dokumentation erfolgt ist."
+  },
+  {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {"R":1,"H":1,"S":1,"D":1,"K":1},
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": ["Alle erwarteten Elemente fehlen - Server Error"],
+    "short_justification": "500 Server Error - keine verwertbare Antwort. Trotz verfügbarer Asset- und GPS-Daten konnte keine Bewertung der Antwortqualität erfolgen, da keine Antwort generiert wurde."
+  },
+  {
+    "test_id": "INC-LAMP-0028-TC3",
+    "scores": {"R":1,"H":1,"S":1,"D":1,"K":1},
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": ["Alle erwarteten Elemente fehlen - Server Error"],
+    "short_justification": "500 Server Error - keine verwertbare Antwort. Besonders kritisch, da severity=high und open_housing vorliegen, aber keine Sicherheitsmaßnahmen kommuniziert werden konnten. Vollständiger Systemausfall."
+  }
+]

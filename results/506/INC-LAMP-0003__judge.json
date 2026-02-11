@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Basisantwort trotz minimalem Kontext. Beginnt korrekt mit Absicherung, strukturierte 5-Punkte-Checkliste (Absicherung→Sichtprüfung→Diagnose→Dokumentation→Eskalation). Eskalationskriterien klar benannt ('Gefahr im Verzug'). Dokumentation konkret. Sinnvolle Rückfrage. Keine Halluzinationen, arbeitet nur mit gegebenen Daten (Asset-ID). Severity=medium rechtfertigt pragmatische Eskalation ohne Überdramatisierung."
+  },
+  {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Gleichbleibend hohe Qualität mit GPS-Kontext. Nutzt Standortdaten (Westerndorf St. Peter, Schlößlstraße) sinnvoll für Dokumentation. Absicherung priorisiert, Eskalation differenziert ('Gefahr im Verzug' vs. Standardmeldung). Strukturierte Checkliste mit klaren Handlungsschritten. Rückfrage zielführend. Keine Überinterpretation der Geodaten, keine Halluzinationen. Dokumentationshinweise konkret (Straße, Hausnummer, Lampennummer)."
+  },
+  {
+    "test_id": "INC-LAMP-0003-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung. Integriert device_state='low_battery' und connectivity='spotty' intelligent in Diagnose. Leitet plausibel auf solarbetriebene/akkubetriebene Lampe ab (keine Halluzination, sondern logische Schlussfolgerung aus Gerätedaten). Berücksichtigt Umgebungsbedingungen (night, poor_visibility) in Absicherung ('Bereich zusätzlich ausleuchten'). Eskalation differenziert nach Fehlertyp (Akku vs. Konnektivität vs. Gefahr). Dokumentation umfasst alle relevanten Datenpunkte. Rückfrage technisch präzise. Severity=medium angemessen behandelt."
+  }
+]

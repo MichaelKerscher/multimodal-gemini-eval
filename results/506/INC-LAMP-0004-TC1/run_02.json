@@ -1,0 +1,52 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-11T12:27:03",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).\n- Passanten auf die Dunkelheit hinweisen, falls Sie vor Ort sind.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n- Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochene Leuchte, freiliegende Kabel).\n\n**3. Diagnose/Beobachtung**\n- Gab es in letzter Zeit Stromausfälle oder Bauarbeiten in der Nähe?\n- Flackert die Lampe gelegentlich oder bleibt sie komplett aus?\n\n**4. Dokumentation**\n- Asset-ID, Standort und Uhrzeit der Störung notieren.\n- Fotos machen, falls möglich.\n\n**5. Eskalation**\n- Störung umgehend an die zuständige Wartungsstelle melden (Asset-ID: n12551286240, Bereich wirkt unsicher).\n- Bei akuter Gefährdung zusätzlich Polizei oder Ordnungsamt informieren.\n\n**Rückfrage:**  \nKönnen Sie den genauen Standort (Straße, Kreuzung) angeben? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 135
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort trotz minimalem Kontext. Beginnt korrekt mit Absicherung, strukturiert in 5 klare Schritte, eskaliert angemessen ('umgehend an Wartungsstelle', 'bei akuter Gefährdung Polizei'). Dokumentation mit Asset-ID explizit genannt. Keine Halluzinationen. Rückfragen sinnvoll. Einzige Schwäche: Keine explizite Erwähnung von Ticket-Erstellung, aber Dokumentationsschritte sind vorhanden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.453
+  },
+  "error": {}
+}

@@ -1,0 +1,81 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC3",
+  "timestamp": "2026-02-11T12:31:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n**1. Absicherung**\n- Bereich um die dunkle Lampe möglichst meiden oder absichern (z. B. Warnbaken, wenn verfügbar).\n- Andere Personen auf die Dunkelheit hinweisen.\n\n**2. Sichtprüfung**\n- Ist die Lampe äußerlich beschädigt (z. B. Glasbruch, verbogene Masten)?\n- Sind weitere Lampen in der Nähe betroffen?\n\n**3. Diagnose/Beobachtung**\n- Gerät meldet „ok“ und „online“ – Stromversorgung und Steuerung scheinen in Ordnung.\n- Mögliche Ursache: Defektes Leuchtmittel oder kurzfristiger Ausfall.\n\n**4. Dokumentation**\n- Standort der Lampe notieren (Straße, Hausnummer, Mastnummer falls vorhanden).\n- Zeitpunkt und Dauer des Ausfalls festhalten.\n- Fotos machen, falls Beschädigungen sichtbar sind.\n\n**5. Eskalation**\n- Störung an die zuständige Wartungsstelle oder Kommune melden.\n- Dringlichkeit betonen, da Bereich unsicher wirkt.\n\n**Rückfrage:**  \nGibt es sichtbare Schäden an der Lampe oder im Umfeld? Sind weitere Lampen betroffen?  \nBitte Standortdetails angeben, damit die Meldung gezielt erfolgen kann.",
+    "tokens_estimate_words": 138
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Angemessene Reaktion auf severity=high",
+      "Berücksichtigung von night+poor_visibility+high_traffic",
+      "Foto-Verfügbarkeit nicht genutzt"
+    ],
+    "short_justification": "Gute Struktur, aber severity=high bei Nacht mit schlechter Sicht und hohem Verkehr erfordert dringlichere Sicherheitsmaßnahmen. Eskalation zu generisch ('Wartungsstelle'). Device-Status 'ok/online' wird interpretiert, aber Umweltfaktoren (night, poor_visibility, high_traffic) unzureichend gewichtet. Photo_available=true wird ignoriert. Dokumentation OK, aber nicht vollständig (Asset-ID fehlt im Text)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.656
+  },
+  "error": {}
+}

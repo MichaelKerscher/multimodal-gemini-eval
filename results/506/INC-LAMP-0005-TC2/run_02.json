@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-11T12:27:31",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Überprüfung eines dunklen Abschnitts (Straßenbeleuchtung):**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Prüfen, wie viele Leuchten betroffen sind (einzelne Lampe, mehrere, kompletter Abschnitt).\n   - Sichtbare Schäden an Masten, Leuchten oder Verkabelung feststellen.\n   - Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Masten) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Zeitschaltuhr oder Dämmerungsschalter korrekt arbeiten (sofern zugänglich).\n   - Auf auffällige Geräusche oder Gerüche achten (Hinweis auf elektrische Defekte).\n   - Falls möglich: Funktion der Sicherungen im Schaltschrank kontrollieren.\n\n4. **Dokumentation**\n   - Genaue Position und Länge des dunklen Abschnitts notieren.\n   - Betroffene Leuchtennummern und sichtbare Schäden dokumentieren.\n   - Fotos anfertigen (sofern möglich).\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel, umgestürzte Masten): Sofortige Meldung an Leitstelle/Notdienst.\n   - Sonst: Störungsbericht an zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nKönnen Sie mir bitte die genaue Adresse oder den Streckenabschnitt nennen? Sind nur Straßenlampen betroffen oder auch Ampelanlagen?",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu identische Qualität wie TC1. GPS-Koordinaten werden nicht explizit genutzt, aber die Antwort fordert Standortdokumentation. Absicherung priorisiert, Eskalation bei akuter Gefahr klar definiert. Dokumentation umfasst Position, Leuchtennummern, Fotos. Rückfrage nach genauer Adresse zeigt, dass GPS-Daten nicht vollständig verarbeitet wurden, aber das ist bei diesem Kontext-Level akzeptabel."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.584
+  },
+  "error": {}
+}

@@ -1,0 +1,82 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC3",
+  "timestamp": "2026-02-11T12:27:31",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-18T05:18:22+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Überprüfung eines dunklen Straßenabschnitts**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen/Ampeln durchführen.\n   - Auf offensichtliche Schäden, defekte Leuchtmittel oder lose Kabel achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob mehrere Lampen/Ampeln betroffen sind (Hinweis auf Stromausfall oder Steuerungsproblem).\n   - Gerätestatus beachten: Laut Kontext ist der Akkustand niedrig und die Verbindung instabil. Möglicherweise liegt ein Energie- oder Kommunikationsproblem vor.\n   - Falls möglich, Gerät neu starten oder Verbindung prüfen.\n\n4. **Dokumentation**\n   - Standort, Uhrzeit und Beobachtungen notieren.\n   - Fotos von der Situation und den Geräten machen.\n\n5. **Eskalation**\n   - Bei Gefahr für den Verkehr sofort die Leitstelle informieren.\n   - Bei technischen Problemen mit Energieversorgung oder Kommunikation den zuständigen Fachbereich benachrichtigen.\n\n**Rückfrage:**  \nSind nur Straßenlampen oder auch Ampeln betroffen? Gibt es Hinweise auf akute Gefährdung (z. B. Kreuzung, Schulweg)?",
+    "tokens_estimate_words": 152
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Keine Berücksichtigung von fog/poor_visibility für erhöhte Sicherheitsmaßnahmen",
+      "device_state:low_battery wird erwähnt, aber keine konkrete Handlungsempfehlung",
+      "Severity:low wird nicht reflektiert (Priorisierung fehlt)",
+      "Keine Ticket-ID-Referenzierung trotz vollständigem Incident-Kontext"
+    ],
+    "short_justification": "Gute Grundstruktur, aber deutliche Kontextschwächen bei L2. Kritisch: 'Gerätestatus beachten: Akkustand niedrig' – hier wird device_state fälschlicherweise auf die Straßenbeleuchtung bezogen (Halluzination), obwohl es sich um das Meldegerät handelt. Fog+poor_visibility werden nicht für erhöhte Absicherung genutzt. Severity:low wird ignoriert. Dokumentation ohne Ticket-Referenz. S=2 wegen fehlender Anpassung an schlechte Sichtverhältnisse."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.334
+  },
+  "error": {}
+}

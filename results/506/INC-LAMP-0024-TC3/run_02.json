@@ -1,0 +1,80 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC3",
+  "timestamp": "2026-02-11T12:35:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist. Bei Bedarf Warnbaken oder Absperrband aufstellen.\n\n2. **Sichtprüfung**\n   - Kontrolliere die Lampe und das Umfeld auf offensichtliche Schäden (z. B. Wackelkontakt, Feuchtigkeit, Vandalismus).\n   - Prüfe, ob die Lampe fest sitzt und keine Kabel lose sind.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt und das Gerät laut Status „offline“ ist, könnte ein Problem mit der Stromversorgung oder der Steuerung vorliegen.\n   - Beobachte, ob die Lampe erneut ausfällt oder flackert.\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Notiere Zeitpunkt, Dauer und Häufigkeit des Ausfalls.\n   - Halte fest, ob der Fehler reproduzierbar ist oder zufällig auftritt.\n   - Dokumentiere den aktuellen Status (Lampe jetzt an, Gerät offline).\n\n5. **Eskalation**\n   - Melde den Vorfall an die zuständige Fachabteilung oder den Netzbetreiber, da ein sporadischer Fehler und Offline-Status auf ein tieferliegendes Problem hindeuten.\n   - Gib alle gesammelten Informationen weiter.\n\n**Rückfrage:**  \nSind weitere Lampen oder Anlagen in der Nähe ebenfalls betroffen? Gibt es Auffälligkeiten am Schaltschrank oder an der Verkabelung?",
+    "tokens_estimate_words": 178
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 2,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Reaktion auf Sturm/schlechte Sicht/hohe Verkehrsbelastung",
+      "Severity=medium und storm-Bedingungen erfordern stärkere Sicherheitshinweise"
+    ],
+    "short_justification": "Strukturierte Checkliste mit allen 5 Schritten. Offline-Status wird erkannt und in Diagnose integriert. ABER: Umgebungsbedingungen (Sturm, schlechte Sicht, hohe Verkehrsbelastung, Bahnhof) werden nicht adressiert – bei diesen Bedingungen wären verstärkte Sicherheitsmaßnahmen/Warnung kritisch. S daher nur 2. Dokumentation gut. K=3 wegen unzureichender Kontextnutzung trotz reichhaltigem L2-Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.674
+  },
+  "error": {}
+}

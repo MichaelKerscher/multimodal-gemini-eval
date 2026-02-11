@@ -1,0 +1,67 @@
+[
+  {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Konkrete Angabe zur Verkehrssicherungspflicht bei Straßenbeleuchtung",
+      "Hinweis auf mögliche elektrische Gefahren bei Öffnung von Schaltschränken"
+    ],
+    "short_justification": "Sehr strukturierte 5-Punkte-Checkliste mit klarer Priorisierung (Absicherung zuerst). Eskalationskriterien sind definiert, Dokumentation wird gefordert. Rückfrage zeigt Kontextbewusstsein. Minimal-Kontext wird gut genutzt. Kleine Abzüge bei S, da bei 'Fehlerspeicher auslesen' keine Warnung vor Qualifikationsanforderungen erfolgt."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Nutzung der GPS-Koordinaten für Anfahrtsinformation",
+      "Erwähnung des Standortnamens 'Rosenheim, Leitzachstraße' in der Antwort"
+    ],
+    "short_justification": "Identische Struktur wie TC1, ebenfalls gut. GPS-Daten und Standortname aus L1-Kontext werden jedoch nicht explizit genutzt (z.B. für Anfahrt oder lokale Besonderheiten). Rückfrage zu Wetter/Bauarbeiten ist sinnvoll. Öffnung des Schaltkastens ohne Qualifikationshinweis bleibt sicherheitskritisch."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC3",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 2,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Bezug auf severity=medium und fault_type=intermittent aus Kontext",
+      "Berücksichtigung von fog/poor_visibility für erhöhte Absicherungsmaßnahmen",
+      "Nutzung von device_state=ok und connectivity=online für Ferndiagnose",
+      "Hinweis auf Meldezeitpunkt (nachts 22:52 Uhr) vs. aktuelle Tageszeit (day)"
+    ],
+    "short_justification": "Trotz umfangreichem L2-Kontext (Nebel, schlechte Sicht, Meldung nachts, aktuell Tag, Gerät online) wird dieser kaum genutzt. Keine Anpassung der Sicherheitsmaßnahmen an poor_visibility. Keine Erwähnung, dass Ferndiagnose möglich wäre (device online). Rückfrage ignoriert vorhandene Kontextdaten (Nebel bereits bekannt). K und S deutlich schwächer als bei weniger Kontext."
+  }
+]

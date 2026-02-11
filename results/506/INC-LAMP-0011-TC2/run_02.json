@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC2",
+  "timestamp": "2026-02-11T12:30:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Kontrolle bei zeitweisem Ausfall (aktuell normal):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Einsatzfahrzeug sicher abstellen (mit Warnblinkanlage).\n   - Gefahrenbereich ggf. mit Leitkegeln absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage (Lampenkopf, Mast, Schaltkasten).\n   - Auf offensichtliche Schäden, lose Kabel oder Feuchtigkeit achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Anlage aktuell wie vorgesehen funktioniert.\n   - Nach Hinweisen auf Wackelkontakte, Flackern oder ungewöhnliche Geräusche suchen.\n   - Falls möglich: Schaltkasten öffnen und auf lose Klemmen, Feuchtigkeit oder Verschmutzung prüfen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten (auch wenn aktuell kein Fehler besteht) notieren.\n   - Fotos von relevanten Stellen machen.\n   - Zeitpunkt und Dauer der Kontrolle dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Verdacht auf Fehler: Meldung an Fachabteilung/Elektriker weitergeben.\n   - Bei Gefahr im Verzug (z. B. freiliegende Kabel): Sofortige Sperrung und Meldung an Einsatzleitung.\n\n**Rückfrage:**  \nGab es in letzter Zeit besondere Wetterereignisse oder Bauarbeiten in der Nähe der Anlage? Das kann für die Fehlersuche wichtig sein.",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Nutzung der GPS-Koordinaten für Anfahrtsinformation",
+      "Erwähnung des Standortnamens 'Rosenheim, Leitzachstraße' in der Antwort"
+    ],
+    "short_justification": "Identische Struktur wie TC1, ebenfalls gut. GPS-Daten und Standortname aus L1-Kontext werden jedoch nicht explizit genutzt (z.B. für Anfahrt oder lokale Besonderheiten). Rückfrage zu Wetter/Bauarbeiten ist sinnvoll. Öffnung des Schaltkastens ohne Qualifikationshinweis bleibt sicherheitskritisch."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.776
+  },
+  "error": {}
+}

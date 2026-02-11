@@ -1,0 +1,65 @@
+[
+  {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung bei Verkehrsgefahr",
+      "Keine Erwähnung von Ticket-Erstellung"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer 5-Punkte-Checkliste. Absicherung steht an erster Stelle, Eskalationskriterien sind genannt. Dokumentation wird gefordert, aber Ticket-Erstellung fehlt. Rückfrage ist sinnvoll. Keine Halluzinationen erkennbar. Für L0-Kontext angemessen umfassend."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten werden nicht genutzt",
+      "Keine Ticket-Erstellung erwähnt",
+      "lit=yes wird nicht thematisiert"
+    ],
+    "short_justification": "Nahezu identisch zu TC1, obwohl GPS-Daten verfügbar sind. Struktur und Sicherheitsaspekte gut abgedeckt. Eskalation bei Verkehrsgefährdung genannt. Dokumentation gefordert, aber keine Ticket-Referenz. Kontextdaten (GPS, lit=yes) werden nicht aktiv genutzt – verpasste Chance für präzisere Lokalisierung."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Ticket-ID-Erstellung"
+    ],
+    "short_justification": "Exzellente Antwort für severity=high + night + rain. Nutzt Kontextdaten aktiv (low_power_mode, online-Status). Klare Priorisierung: Absicherung → Diagnose → Eskalation. Mehrere Eskalationspfade (Leitstelle, Elektriker, Polizei). Dokumentation detailliert. Einziges Manko: Ticket-Erstellung nicht explizit erwähnt. Ansonsten vorbildlich strukturiert und kontextsensitiv."
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC3",
+  "timestamp": "2026-02-11T12:32:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für sporadischen Fehler – Straßenlampe**\n\n1. **Absicherung**\n   - Stelle sicher, dass die Gefahrenstelle (Lampe/Ampel) gut sichtbar ist.\n   - Bei Bedarf Warnbaken oder Absperrungen aufstellen.\n\n2. **Sichtprüfung**\n   - Kontrolliere die Lampe auf sichtbare Schäden (Gehäuse, Leuchtmittel, Verkabelung).\n   - Prüfe, ob Feuchtigkeit, Vandalismus oder lose Teile erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Beachte den gemeldeten Zustand: „low_battery“ und „spotty“ Konnektivität.\n   - Vermutung: Energieversorgung (Akku) ist schwach, Verbindung zum Steuergerät instabil.\n   - Prüfe, ob der Fehler bei bestimmten Bedingungen (z. B. Wetter, Tageszeit) häufiger auftritt.\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt des Ausfalls, Wiederinbetriebnahme, aktuelle Statusanzeigen.\n   - Halte Fotos von der Lampe und Umgebung fest.\n\n5. **Eskalation**\n   - Melde den Fehler an die zuständige Wartungsstelle mit allen gesammelten Infos.\n   - Empfehle: Akku prüfen/tauschen und Konnektivität (z. B. Antenne, Router) kontrollieren.\n\n**Rückfrage:**  \nIst bekannt, wie alt der Akku ist oder ob in letzter Zeit Wartungsarbeiten durchgeführt wurden?",
+    "tokens_estimate_words": 142
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC3",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "severity=high nicht angemessen behandelt",
+      "Dämmerung+Regen+schlechte Sicht nicht explizit in Sicherheitsmaßnahmen berücksichtigt",
+      "photo_available nicht genutzt"
+    ],
+    "short_justification": "KRITISCH: severity=high bei Dämmerung+Regen+schlechte Sicht erfordert dringendere Sicherheitsmaßnahmen, die fehlen. Antwort interpretiert 'low_battery' und 'spotty connectivity' als Lampenzustand – dies sind aber DEVICE-Attribute (Meldergerät), nicht Asset-Zustand. Halluzination wahrscheinlich. Verfügbares Foto wird nicht erwähnt. S max 2 wegen fehlender angemessener Reaktion auf high severity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.374
+  },
+  "error": {}
+}

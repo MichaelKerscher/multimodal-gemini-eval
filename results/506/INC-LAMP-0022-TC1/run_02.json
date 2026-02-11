@@ -1,0 +1,52 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-11T12:34:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).\n- Passanten auf die dunkle Stelle aufmerksam machen.\n\n**2. Sichtprüfung**\n- Prüfen: Ist nur diese Lampe betroffen oder mehrere?\n- Gibt es sichtbare Schäden (z. B. zerbrochenes Glas, freiliegende Kabel)?\n\n**3. Diagnose/Beobachtung**\n- Gab es vor Kurzem Stromausfälle oder Bauarbeiten in der Nähe?\n- Flackert die Lampe gelegentlich oder bleibt sie komplett aus?\n\n**4. Dokumentation**\n- Asset-ID, Standort und Zeitpunkt notieren.\n- Fotos machen, falls möglich.\n\n**5. Eskalation**\n- Störung an die zuständige Wartungsstelle melden (inkl. Asset-ID: n1987093607).\n- Dringlichkeit betonen, da der Bereich unsicher wirkt.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder nur diese eine?",
+    "tokens_estimate_words": 123
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit klarer Struktur. Absicherung steht an erster Stelle, Eskalation wird korrekt adressiert. Dokumentation und Diagnose sind vorhanden. Kontext (nur Asset-ID) wird korrekt genutzt, keine Halluzinationen. Rückfrage ist sinnvoll."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.315
+  },
+  "error": {}
+}

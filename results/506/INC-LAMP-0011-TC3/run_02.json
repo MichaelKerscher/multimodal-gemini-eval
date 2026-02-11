@@ -1,0 +1,82 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC3",
+  "timestamp": "2026-02-11T12:30:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-15T22:52:18+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung.\n\n**Checkliste für die Kontrolle bei zeitweisem Ausfall (aktuell normal):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten sichern.\n   - Bei Bedarf Verkehrsfluss umleiten oder absichern.\n\n2. **Sichtprüfung**\n   - Gerät äußerlich auf Beschädigungen, lose Kabel oder Feuchtigkeit prüfen.\n   - Umfeld auf Anzeichen von Vandalismus oder Fremdeinwirkung kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktion des Geräts vor Ort beobachten (z. B. Lampen schalten, Ampelphasen durchlaufen lassen).\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Statusanzeige und Fehlermeldungen am Gerät auslesen (sofern vorhanden).\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos bei sichtbaren Schäden oder Auffälligkeiten machen.\n   - Zeitpunkt der Kontrolle dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an die Fachabteilung/Technik weiterleiten.\n   - Sofortige Maßnahmen bei akuter Gefahr (z. B. Absperrung, Notdienst).\n\n**Rückfrage:**  \nGab es eine bestimmte Tageszeit oder Wetterlage beim Ausfall? Sind in letzter Zeit ähnliche Störungen an anderen Geräten gemeldet worden? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC3",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 2,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Bezug auf severity=medium und fault_type=intermittent aus Kontext",
+      "Berücksichtigung von fog/poor_visibility für erhöhte Absicherungsmaßnahmen",
+      "Nutzung von device_state=ok und connectivity=online für Ferndiagnose",
+      "Hinweis auf Meldezeitpunkt (nachts 22:52 Uhr) vs. aktuelle Tageszeit (day)"
+    ],
+    "short_justification": "Trotz umfangreichem L2-Kontext (Nebel, schlechte Sicht, Meldung nachts, aktuell Tag, Gerät online) wird dieser kaum genutzt. Keine Anpassung der Sicherheitsmaßnahmen an poor_visibility. Keine Erwähnung, dass Ferndiagnose möglich wäre (device online). Rückfrage ignoriert vorhandene Kontextdaten (Nebel bereits bekannt). K und S deutlich schwächer als bei weniger Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.198
+  },
+  "error": {}
+}

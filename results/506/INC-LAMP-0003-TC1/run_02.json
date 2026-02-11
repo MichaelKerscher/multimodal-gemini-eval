@@ -1,0 +1,52 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-11T12:26:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Asset-ID n4427359783. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Gefahrenbereich absichern (z. B. Warnbaken, Warnleuchte).\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Standort aufsuchen.\n   - Prüfen: Ist die Lampe beschädigt (z. B. Mast, Leuchte, Abdeckung)?\n   - Umgebung auf weitere Gefahren (z. B. freiliegende Kabel) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob nur diese Lampe betroffen ist oder mehrere im Umkreis.\n   - Sichtkontrolle auf offensichtliche Defekte (Leuchtmittel, Sicherung, Vandalismus).\n   - Falls möglich: Funktionstest (z. B. Schaltkasten prüfen).\n\n4. **Dokumentation**\n   - Fotos vom Zustand machen.\n   - Festgestellte Mängel und Maßnahmen notieren.\n   - Zeitpunkt und eigene Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr im Verzug (z. B. Strom, Unfallgefahr): Sofort Fachfirma/Notdienst informieren.\n   - Sonst: Störung an zuständige Wartungsfirma weiterleiten.\n\n**Rückfrage:**  \nIst bekannt, ob weitere Lampen in der Nähe betroffen sind oder handelt es sich nur um diese eine Leuchte?",
+    "tokens_estimate_words": 144
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Basisantwort trotz minimalem Kontext. Beginnt korrekt mit Absicherung, strukturierte 5-Punkte-Checkliste (Absicherung→Sichtprüfung→Diagnose→Dokumentation→Eskalation). Eskalationskriterien klar benannt ('Gefahr im Verzug'). Dokumentation konkret. Sinnvolle Rückfrage. Keine Halluzinationen, arbeitet nur mit gegebenen Daten (Asset-ID). Severity=medium rechtfertigt pragmatische Eskalation ohne Überdramatisierung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.66
+  },
+  "error": {}
+}

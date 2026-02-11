@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0025-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort mit klarer Priorisierung auf Sicherheit (Absicherung zuerst). Strukturierte 5-Punkte-Checkliste deckt alle relevanten Aspekte ab: Absicherung, Sichtprüfung, Diagnose, Dokumentation und Eskalation. Dringlichkeit wird betont ('unsicherer Bereich'). Dokumentation konkret (Asset-ID, Fotos). Keine Halluzinationen, arbeitet nur mit gegebenen Daten. Rückfrage sinnvoll zur weiteren Diagnose."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit identischer Struktur wie TC1. Nutzt GPS-Daten (Rosenheim, Isarstraße) nicht explizit in der Handlungsanweisung, erwähnt aber 'Standort notieren'. Sicherheit priorisiert, Eskalation klar (inkl. Polizei bei akuter Gefahr). Dokumentation gut strukturiert. Rückfrage nach Standort wirkt leicht redundant, da GPS-Daten bereits vorliegen, aber nicht falsch. Minimal schwächer bei Kontextnutzung."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit optimaler Kontextnutzung. Integriert severity=high und device_state=low_battery direkt in Diagnose ('Batterie erschöpft, Stromversorgung gestört'). Sicherheit priorisiert mit konkretem Hinweis auf 'stark frequentierte Kreuzung, Schulweg'. Eskalation klar mit Hinweis auf low_battery-Status. Kompakte, umsetzbare Struktur. Nutzt alle relevanten Kontextdaten (Nacht, high traffic, poor visibility) implizit für Dringlichkeit. Rückfrage zielführend."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung bei severity=low erkennbar",
+      "Offline-Workflow nicht erwähnt (bei minimalem Kontext aber vertretbar)"
+    ],
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung, Diagnose und Eskalation. Rückfrage zur Asset-Typ-Klärung ist sinnvoll. Dokumentation gut abgedeckt. Keine Halluzinationen. Leichte Abzüge bei S, da keine explizite Verkehrsgefährdungs-Bewertung trotz unklarer Asset-Art."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Daten (Langenpfunzen, Römerstraße) nicht aktiv genutzt für Kontexthinweise",
+      "Offline-Workflow nicht erwähnt"
+    ],
+    "short_justification": "Sehr ähnlich zu TC1, strukturiert und handlungsorientiert. Standortdaten werden nicht explizit verwertet (z.B. für Umgebungsanalyse oder Zufahrt). Absicherung und Eskalation vorhanden. Dokumentation klar. Rückfrage sinnvoll. Keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: 'connectivity: offline' wird explizit adressiert, 'device_state: ok' wird hinterfragt, severity=low wird durch Dringlichkeitsbewertung reflektiert. Klare Struktur, Absicherung priorisiert, Dokumentation detailliert, Eskalation mit Dringlichkeitskriterien. Rückfrage zu Umgebungsereignissen nutzt environment-Daten implizit. Keine Halluzinationen, alle Kontextfelder sinnvoll verarbeitet."
+  }
+]

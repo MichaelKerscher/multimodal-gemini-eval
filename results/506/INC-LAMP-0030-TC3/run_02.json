@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC3",
+  "timestamp": "2026-02-11T12:37:35",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung: Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und den Mast auf sichtbare Schäden (z. B. Wackelkontakt, Feuchtigkeit, Korrosion).\n   - Kontrolliere, ob das Leuchtmittel locker sitzt.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt und die Konnektivität laut Gerät „spotty“ ist, liegt vermutlich ein Wackelkontakt oder Verbindungsproblem vor.\n   - Prüfe, ob die Lampe bei Erschütterung oder Bewegung flackert.\n   - Beobachte, ob der Fehler zu bestimmten Tageszeiten oder Wetterbedingungen auftritt.\n\n4. **Dokumentation**\n   - Notiere Zeitpunkt, Dauer und Häufigkeit des Ausfalls.\n   - Halte fest, ob und wann die Lampe wieder funktioniert hat.\n   - Dokumentiere Auffälligkeiten bei der Sichtprüfung.\n\n5. **Eskalation**\n   - Wenn der Fehler weiterhin sporadisch auftritt oder die Sicherheit beeinträchtigt ist: Störung an die Fachabteilung melden.\n   - Bei Verdacht auf elektrisches Problem: Elektrofachkraft hinzuziehen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Feuchtigkeitseintritt oder andere Störungen im Umfeld der Lampe? Das kann helfen, die Ursache einzugrenzen.",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung: Verknüpft 'spotty connectivity' aus device_state mit sporadischem Fehler und leitet daraus Wackelkontakt-Hypothese ab. Klare 5-Schritte-Struktur, Sicherheit priorisiert, explizite Eskalation an Elektrofachkraft bei elektrischem Problem. Dokumentation detailliert (Zeitpunkt, Dauer, Häufigkeit). Berücksichtigt Umgebungsdaten (dusk, medium traffic). S=4 statt 5, da bei medium severity und poor_visibility noch stärker auf sofortige Absicherung hätte hingewiesen werden können."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.618
+  },
+  "error": {}
+}

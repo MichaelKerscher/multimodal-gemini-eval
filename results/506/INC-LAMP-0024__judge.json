@@ -1,0 +1,59 @@
+[
+  {
+    "test_id": "INC-LAMP-0024-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit Absicherung, Sichtprüfung, Diagnose, Dokumentation und Eskalation. Relevante Hinweise zu möglichen Ursachen (Wackelkontakt, Feuchtigkeit). Sicherheit adressiert, aber bei minimalem Kontext keine spezifischen Gefahrenhinweise. Dokumentation umfassend. Keine Halluzinationen. Gute Rückfrage zu Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare 5-Schritte-Struktur mit Absicherung, Sichtprüfung, Diagnose, Dokumentation und Eskalation. Standortinformationen (Bahnhof) werden nicht explizit genutzt, aber Verkehrssicherheit wird betont. Gute Hinweise zu Netzproblemen und Beobachtung. Dokumentation vollständig. Keine Halluzinationen. Sinnvolle Rückfrage."
+  },
+  {
+    "test_id": "INC-LAMP-0024-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 2,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Reaktion auf Sturm/schlechte Sicht/hohe Verkehrsbelastung",
+      "Severity=medium und storm-Bedingungen erfordern stärkere Sicherheitshinweise"
+    ],
+    "short_justification": "Strukturierte Checkliste mit allen 5 Schritten. Offline-Status wird erkannt und in Diagnose integriert. ABER: Umgebungsbedingungen (Sturm, schlechte Sicht, hohe Verkehrsbelastung, Bahnhof) werden nicht adressiert – bei diesen Bedingungen wären verstärkte Sicherheitsmaßnahmen/Warnung kritisch. S daher nur 2. Dokumentation gut. K=3 wegen unzureichender Kontextnutzung trotz reichhaltigem L2-Kontext."
+  }
+]

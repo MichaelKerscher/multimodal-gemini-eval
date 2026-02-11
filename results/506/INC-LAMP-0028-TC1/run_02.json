@@ -1,0 +1,54 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC1",
+  "timestamp": "2026-02-11T12:36:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n4470029720)",
+    "context": {
+      "asset_osm": "n4470029720"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "[CompanyGPT ERROR] 500 Server Error:  for url: https://companygpt.506.ai:3003/api/v1/public/chatNoStream?internalSystemPrompt=true",
+    "tokens_estimate_words": 8
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Alle erwarteten Elemente fehlen - Server Error"
+    ],
+    "short_justification": "500 Server Error - keine verwertbare Antwort. Alle Dimensionen müssen mit 1 bewertet werden, da keinerlei Handlungsanweisung, Sicherheitshinweis oder Dokumentation erfolgt ist."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 0.466
+  },
+  "error": {}
+}

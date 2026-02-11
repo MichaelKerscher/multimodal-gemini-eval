@@ -1,0 +1,52 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-11T12:29:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt in Rosenheim, Stadtmitte (Asset-ID: n4427955479).\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Pylonen/Warndreieck absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen durchführen.\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Auf offensichtliche Schäden (z. B. defekte Leuchtmittel, lose Kabel, Vandalismus) achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Sicherungen und Schaltkästen kontrollieren (sofern zugänglich).\n   - Prüfen, ob ein Stromausfall im Bereich vorliegt.\n   - Nach Anzeichen für Feuchtigkeit oder Kurzschluss suchen.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Lampen anfertigen.\n   - Asset-ID, Standort und Uhrzeit notieren.\n   - Beobachtungen und erste Diagnose schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Fußgänger sofortige Meldung an die Leitstelle.\n   - Falls Eigenreparatur nicht möglich, Störungsdienst/Elektriker informieren.\n   - Bei großflächigem Ausfall Stadtwerke benachrichtigen.\n\n**Rückfrage:**  \nSind aktuell weitere Störungen oder besondere Gefahrenstellen (z. B. Kreuzungen, Schulwege) im betroffenen Abschnitt bekannt?",
+    "tokens_estimate_words": 152
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit klarer Absicherung, Diagnose und Eskalation. Dokumentation gut abgedeckt. Keine Halluzinationen. Leichte Schwäche: Bei 'dunklem Abschnitt' könnte Verkehrsgefahr expliziter priorisiert werden (S=3 statt 4). Insgesamt praxisnah und umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.031
+  },
+  "error": {}
+}

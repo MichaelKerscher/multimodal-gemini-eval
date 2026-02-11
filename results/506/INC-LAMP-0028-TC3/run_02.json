@@ -1,0 +1,79 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC3",
+  "timestamp": "2026-02-11T12:36:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029720",
+        "longitude": 12.1326497,
+        "latitude": 47.8433336,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-18T06:17:02+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "[CompanyGPT ERROR] 500 Server Error:  for url: https://companygpt.506.ai:3003/api/v1/public/chatNoStream?internalSystemPrompt=true",
+    "tokens_estimate_words": 8
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC3",
+    "scores": {
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Alle erwarteten Elemente fehlen - Server Error"
+    ],
+    "short_justification": "500 Server Error - keine verwertbare Antwort. Besonders kritisch, da severity=high und open_housing vorliegen, aber keine Sicherheitsmaßnahmen kommuniziert werden konnten. Vollständiger Systemausfall."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 1.444
+  },
+  "error": {}
+}

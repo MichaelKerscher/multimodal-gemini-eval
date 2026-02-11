@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0012-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort: Beginnt mit Absicherung, strukturierte 5-Schritte-Checkliste, klare Eskalation mit Betonung der Dringlichkeit. Dokumentation vollständig (Asset-ID, Zeit, Position, Fotos). Sinnvolle Rückfrage zur Priorisierung. Keine Halluzinationen, arbeitet korrekt mit minimalen Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0012-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Asset-ID explizit in Dokumentation erwähnen"
+    ],
+    "short_justification": "Gute strukturierte Antwort mit Sicherheitsfokus und Eskalation. GPS-Daten vorhanden, aber Asset-ID (n12520338291) wird nicht explizit zur Dokumentation genannt, obwohl verfügbar. Rückfrage nach Standort redundant, da GPS bereits vorliegt. Sonst solide Handlungsanleitung."
+  },
+  {
+    "test_id": "INC-LAMP-0012-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt alle Kontextdaten optimal (low_power_mode, spotty connectivity, severity=medium). Diagnostiziert plausibel Energiesparmodus/Stromversorgungsproblem. Strukturierte Checkliste mit Sicherheitsfokus, klare Eskalation. Dokumentation umfassend. Rückfrage zielführend (weitere Lampen, Fußgängerverkehr). Keine Halluzinationen, perfekte Kontextintegration."
+  }
+]

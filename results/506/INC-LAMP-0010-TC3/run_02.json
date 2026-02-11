@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC3",
+  "timestamp": "2026-02-11T12:29:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427955479",
+        "longitude": 12.1253894,
+        "latitude": 47.8562438,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Stadtmitte"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "reporter": "internal",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt in Rosenheim, Stadtmitte.\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung:**  \n   - Warnblinker am Fahrzeug einschalten, Warnweste anlegen.  \n   - Arbeitsbereich mit Pylonen oder Warnleuchten absichern, besonders bei Dunkelheit und hohem Verkehrsaufkommen.\n\n2. **Sichtprüfung:**  \n   - Sichtkontrolle aller Straßenlampen im betroffenen Abschnitt:  \n     - Sind mehrere Lampen aus oder nur einzelne?  \n     - Gibt es sichtbare Schäden (z. B. defekte Leuchtmittel, lose Kabel, Vandalismus)?\n\n3. **Diagnose/Beobachtung:**  \n   - Prüfen, ob die Lampen auf einen gemeinsamen Stromkreis geschaltet sind.  \n   - Aufgrund der „spotty“ (unzuverlässigen) Konnektivität:  \n     - Vor Ort testen, ob Steuergerät erreichbar ist.  \n     - Falls möglich, Lampen manuell schalten oder resetten.  \n   - Beobachten, ob nach kurzem Warten einzelne Lampen wieder funktionieren.\n\n4. **Dokumentation:**  \n   - Genaue Position und Anzahl der betroffenen Lampen notieren.  \n   - Auffälligkeiten (z. B. flackerndes Licht, Geräusche, Geruch) dokumentieren.  \n   - Fotos anfertigen, falls relevant.\n\n5. **Eskalation:**  \n   - Bei großflächigem Ausfall oder Gefahrensituation (z. B. Kreuzung unbeleuchtet):  \n     - Sofortige Meldung an die Leitstelle/Notdienst.  \n     - Falls Eigenreparatur nicht möglich, Fachfirma beauftragen.\n\n**Rückfrage:**  \n- Betrifft der Ausfall nur Straßenlampen oder auch Ampelanlagen?  \n- Gibt es besondere Gefahrenstellen (z. B. Fußgängerüberwege, Kreuzungen) im betroffenen Abschnitt?\n\nBitte um kurze Rückmeldung, damit ich gezielt weiterhelfen kann.",
+    "tokens_estimate_words": 188
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt severity=high, dusk+rain+poor_visibility+high_traffic optimal. Absicherung explizit auf Dunkelheit/Verkehr abgestimmt. Konnektivitätsproblem ('spotty') wird adressiert (manuelles Schalten/Reset). Eskalation bei großflächigem Ausfall klar formuliert. Dokumentation vollständig. Keine Halluzinationen. Alle Kontextdimensionen sinnvoll integriert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.676
+  },
+  "error": {}
+}

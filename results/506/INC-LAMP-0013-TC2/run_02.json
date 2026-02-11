@@ -1,0 +1,61 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-11T12:30:51",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für beschädigtes Gehäuse mit möglicher Berührungsgefahr**\n\n1. **Absicherung**\n   - Bereich sofort absperren (z. B. mit Absperrband, Pylonen).\n   - Warnhinweise gut sichtbar anbringen.\n   - Passanten und Verkehrsteilnehmer warnen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Schadens: Wo genau ist das Gehäuse beschädigt?\n   - Sind stromführende Teile sichtbar oder zugänglich?\n   - Gibt es Funken, Rauch oder andere Auffälligkeiten?\n\n3. **Diagnose/Beobachtung**\n   - Einschätzen, ob akute Gefahr besteht (z. B. freiliegende Kabel).\n   - Falls möglich: Abstand halten, keine Berührung!\n   - Fotos für die Dokumentation machen.\n\n4. **Dokumentation**\n   - Schaden und Absicherungsmaßnahmen schriftlich festhalten.\n   - Fotos und genaue Standortbeschreibung ergänzen.\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft sofort informieren.\n   - Bei akuter Gefahr (z. B. Stromschlagrisiko): Feuerwehr oder Polizei verständigen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf akute Stromgefahr (z. B. Funken, Geräusche, Geruch)?",
+    "tokens_estimate_words": 132
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht explizit in Dokumentation erwähnt"
+    ],
+    "short_justification": "Gute strukturierte Antwort mit klarer Sicherheitspriorisierung (Absperrung, Warnung). 5-Schritte-Struktur vorhanden. Eskalation zu Störungsdienst/Elektrofachkraft und bei akuter Gefahr zu Feuerwehr/Polizei genannt. Dokumentation mit Fotos und Standortbeschreibung gefordert, aber GPS-Koordinaten aus Kontext nicht explizit für Dokumentation genutzt. Rückfrage sinnvoll (Lampe vs. Ampel). Kontext (GPS) wurde nur implizit genutzt (Standortbeschreibung), nicht optimal ausgeschöpft."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.314
+  },
+  "error": {}
+}

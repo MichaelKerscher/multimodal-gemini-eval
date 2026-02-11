@@ -1,0 +1,66 @@
+[
+  {
+    "test_id": "INC-LAMP-0009-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Konkrete Ticket-Erstellung erwähnt",
+      "Zeitliche Priorisierung bei severity=low"
+    ],
+    "short_justification": "Sehr gute strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Rückfrage zur Asset-Art ist sinnvoll bei minimalem Kontext. Dokumentation gut beschrieben. Keine Halluzinationen. Leichte Abzüge bei S, da keine explizite Erwähnung der Severity-Einschätzung."
+  },
+  {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Nutzung der GPS-Koordinaten für Einsatzplanung",
+      "Erwähnung des Standortnamens (Rosenheim)",
+      "Ticket-Dokumentation mit Asset-Daten"
+    ],
+    "short_justification": "Solide Checkliste mit guter Struktur. GPS-Daten und Standortname werden nicht aktiv genutzt, obwohl verfügbar (K könnte besser sein). Dokumentation erwähnt, aber keine konkrete Ticket-Erstellung. Sicherheitsaspekte gut abgedeckt."
+  },
+  {
+    "test_id": "INC-LAMP-0009-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Erwähnung severity=low für Priorisierung",
+      "Strukturierte Ticket-Daten (Reporter, Zeitstempel)"
+    ],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung. Device-Status 'offline' wird korrekt interpretiert und in Diagnose einbezogen. Umweltbedingungen (Regen, Dämmerung) fließen implizit ein. Sicherheit, Eskalation und Dokumentation sehr gut. Rückfrage sinnvoll. Nur minimale Abzüge bei D, da Incident-Metadaten (Reporter, Zeitstempel) nicht explizit für Ticket erwähnt werden."
+  }
+]

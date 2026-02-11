@@ -1,0 +1,63 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-11T12:26:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Kontrolle einer Straßenlampe/Ampelanlage bei zeitweisem Ausfall**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Gefahrenbereich sichern (z. B. Warnbaken, ggf. Verkehrsregelung).\n\n2. **Sichtprüfung**\n   - Anlage äußerlich auf Schäden prüfen (Gehäuse, Kabel, Lampenkopf/Signalgeber).\n   - Auf lose Teile, Feuchtigkeitsspuren oder Vandalismus achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Anlage mehrfach beobachten (mehrere Schaltzyklen abwarten).\n   - Prüfen, ob Ausfall reproduzierbar ist (z. B. bei bestimmten Wetterlagen, Tageszeiten).\n   - Auf ungewöhnliche Geräusche oder Gerüche achten.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten notieren (Datum, Uhrzeit, Wetter, genaue Beobachtung).\n   - Fotos von Schäden oder Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei erneutem oder anhaltendem Ausfall: Störung an Fachfirma/Technik weiterleiten.\n   - Bei Gefahr im Verzug (z. B. blanke Kabel, Ausfall wichtiger Kreuzung): Sofortige Meldung an Leitstelle/Notdienst.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise, wann der Ausfall zuletzt aufgetreten ist (z. B. Uhrzeit, Wetter)?",
+    "tokens_estimate_words": 143
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten und Standortname werden nicht erwähnt",
+      "lit=yes wird nicht interpretiert (deutet auf Straßenlampe hin)",
+      "Standortspezifische Hinweise fehlen trotz verfügbarer Daten"
+    ],
+    "short_justification": "Strukturell identisch mit TC1, gute Checkliste mit Sicherheitsfokus und Eskalation. Dokumentation angemessen. Kritik: Trotz deutlich mehr Kontext (GPS, Name, lit=yes) wird dieser nicht genutzt. Standort 'Rosenheim, Heilig Blut' und lit-Attribut hätten Asset-Typ klären können. Rückfrage bleibt identisch zu L0."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.372
+  },
+  "error": {}
+}

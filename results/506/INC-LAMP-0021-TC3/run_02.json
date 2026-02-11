@@ -1,0 +1,83 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC3",
+  "timestamp": "2026-02-11T12:34:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, Warnleuchten, ggf. Absperrband).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anschlussstellen, Klemmen und Leitungen auf offensichtliche Schäden oder lose Verbindungen.\n   - Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Gerät während des Betriebs beobachten: Wann und wie oft treten Aussetzer/Flackern auf?\n   - Kontakte und Klemmen vorsichtig nachziehen (bei spannungsfreier Anlage!).\n   - Falls möglich, Messgerät verwenden, um Übergangswiderstände oder Spannungsschwankungen zu prüfen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei weiterhin unklarer Ursache oder sicherheitsrelevanten Mängeln: Meldung an Fachabteilung/Elektrofachkraft zur weiteren Prüfung und ggf. Reparatur.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es aktuelle Störungen im Umfeld (z. B. Bauarbeiten, Feuchtigkeitseintritt)?",
+    "tokens_estimate_words": 127
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 2,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity=medium nicht berücksichtigt",
+      "Foto verfügbar - nicht erwähnt",
+      "Regen/Nacht-Kontext nicht genutzt",
+      "Ticket-ID fehlt komplett",
+      "Reporter=patrol nicht erwähnt"
+    ],
+    "short_justification": "Solide Checkliste mit Absicherung und Eskalation. ABER: Reicher L2-Kontext (Regen, Nacht, Foto verfügbar, severity=medium, Reporter) wird kaum genutzt. Dokumentation ohne Ticket-Referenz. Rückfrage ignoriert vorhandene Kontextdaten (fault_type=flicker bereits bekannt). Kontextnutzung schwach."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.609
+  },
+  "error": {}
+}

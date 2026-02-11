@@ -1,0 +1,57 @@
+[
+  {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung, Diagnose und Eskalation. Dokumentation gut adressiert. Kontextnutzung minimal (nur Asset-ID), aber angemessen für L0. Keine Sicherheitslücken. Rückfrage sinnvoll."
+  },
+  {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Struktur mit Absicherung, Diagnose und Eskalation. Standortinformationen (Bahnhof Rosenheim) werden implizit genutzt (hohe Verkehrsexposition). Dokumentation inkl. Fotos erwähnt. Sicherheitsaspekte bei akuter Gefahr klar benannt. Rückfrage kontextbezogen."
+  },
+  {
+    "test_id": "INC-LAMP-0001-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 3,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Gerätestatus (low_battery, offline) wird direkt in Diagnose integriert, Vermutung solar-/akkubetrieben logisch abgeleitet. Dokumentation präzise mit Gerätestatus. Eskalation mit konkreter Handlungsempfehlung. Offline-Status implizit adressiert. Rückfrage zielführend. Severity=low rechtfertigt moderate Sicherheitsmaßnahmen."
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC2",
+  "timestamp": "2026-02-11T12:32:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Überprüfung – Dunkler Abschnitt Schönau**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen/Ampelanlagen: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen, ob offensichtliche Schäden (z. B. umgefahrene Masten, lose Kabel, zerbrochene Leuchten) erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktioniert die Stromversorgung? (z. B. Sicherungskasten prüfen, falls zugänglich)\n   - Gibt es Anzeichen für Vandalismus oder Bauarbeiten?\n   - Sind Anwohner oder Passanten vor Ort, die Hinweise geben können?\n\n4. **Dokumentation**\n   - Genaue Position und Anzahl der ausgefallenen Leuchten/Ampeln notieren.\n   - Fotos von Schäden oder Auffälligkeiten machen.\n   - Zeitpunkt und eigene Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Personen: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei größerem Ausfall (z. B. ganzer Straßenzug): Netzbetreiber informieren.\n   - Falls Reparatur nicht vor Ort möglich: Störung weiterleiten und Absicherung bis zur Behebung aufrechterhalten.\n\n**Rückfrage:**  \nHandelt es sich um Straßenbeleuchtung, Ampelanlagen oder beides? Sind genaue Hausnummern oder Kreuzungen bekannt?",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Identische Struktur wie TC1, GPS-Daten vorhanden aber nicht explizit genutzt (kein Navigationsvorteil erwähnt). Ansonsten vollständig: Absicherung, Diagnose, Dokumentation, Eskalation. Rückfrage passend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.117
+  },
+  "error": {}
+}

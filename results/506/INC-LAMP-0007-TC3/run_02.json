@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC3",
+  "timestamp": "2026-02-11T12:28:21",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-21T18:59:18+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Aussetzern/Flackern (Kontaktproblem möglich)\n\n1. **Absicherung**\n   - Bereich um die Anlage absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchte/Ampel auf offensichtliche Schäden, lose Kabel, Feuchtigkeitseintritt.\n   - Prüfen, ob Anschlusskasten zugänglich und unbeschädigt ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Flackern/Aussetzer reproduzierbar sind (z. B. durch leichtes Bewegen der Kabel).\n   - Kontaktstellen (Klemmen, Steckverbinder) auf festen Sitz und Korrosion prüfen.\n   - Da „connectivity: offline“: Liegt evtl. ein Kommunikationsproblem mit der Zentrale vor? Prüfen, ob andere Anlagen betroffen sind.\n\n4. **Dokumentation**\n   - Beobachtungen und durchgeführte Maßnahmen notieren (inkl. Fotos, falls möglich).\n   - Zeitpunkt und Dauer der Aussetzer festhalten.\n\n5. **Eskalation**\n   - Bei unklarer Ursache, sicherheitsrelevanten Mängeln oder anhaltenden Ausfällen: Störungsdienst/Elektrofachkraft informieren.\n   - Ggf. Anlage außer Betrieb nehmen, falls Gefahr besteht.\n\n**Rückfrage:**  \nIst das Flackern nur bei einer bestimmten Leuchte/Ampel oder betrifft es mehrere Geräte im Bereich? Sind kürzlich Wartungsarbeiten oder Unwetter aufgetreten?",
+    "tokens_estimate_words": 147
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort. Nutzt Kontext optimal: severity=low erkannt, connectivity=offline explizit adressiert mit Hinweis auf mögliches Kommunikationsproblem. Absicherung zuerst, systematische Diagnose, Dokumentation detailliert, Eskalation mit Außerbetriebnahme-Option. Rückfrage zu Wartung/Unwetter passt zu storm-Kontext. Vollständig und kontextbewusst."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.574
+  },
+  "error": {}
+}

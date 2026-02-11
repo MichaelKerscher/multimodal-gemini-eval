@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC3",
+  "timestamp": "2026-02-11T12:32:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) aufstellen, um den Gefahrenbereich abzusichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen entlang des Abschnitts Schönau.\n   - Prüfen, ob mehrere oder einzelne Lampen betroffen sind.\n   - Auf offensichtliche Schäden (z. B. defekte Leuchtmittel, beschädigte Masten, lose Kabel) achten.\n\n3. **Diagnose/Beobachtung**\n   - Gerät meldet „low_power_mode“, aber „online“: Möglicherweise Energiesparmodus oder Spannungsproblem.\n   - Prüfen, ob die Lampen zeitweise oder dauerhaft ausfallen.\n   - Kontrollieren, ob andere Infrastruktur (z. B. Ampeln) ebenfalls betroffen ist.\n\n4. **Dokumentation**\n   - Genaue Position und Anzahl der ausgefallenen Lampen notieren.\n   - Gerätestatus und Auffälligkeiten dokumentieren (z. B. „low_power_mode“ aktiv).\n   - Fotos von Schäden oder Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei unklarer Ursache oder größerem Ausfall: Fachfirma oder Netzbetreiber informieren.\n\n**Rückfrage:**  \nSind nur Straßenlampen betroffen oder auch andere Anlagen (z. B. Ampeln)? Gibt es Hinweise auf Bauarbeiten oder Stromausfälle in der Umgebung?",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 3,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: 'low_power_mode' wird diagnostisch interpretiert, severity=medium angemessen behandelt, Umweltbedingungen (Dämmerung/Regen) implizit berücksichtigt. Vollständige Dokumentation inkl. Gerätestatus. Klare Eskalationskriterien. Strukturiert und umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.742
+  },
+  "error": {}
+}

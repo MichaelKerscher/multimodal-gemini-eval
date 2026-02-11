@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC2",
+  "timestamp": "2026-02-11T12:32:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste bei sporadischem Ausfall einer Straßenlampe**\n\n1. **Absicherung:**  \n   - Standort sichern (Warnweste tragen, ggf. Absperrung aufstellen).\n   - Auf fließenden Verkehr achten.\n\n2. **Sichtprüfung:**  \n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Risse, lose Teile, Feuchtigkeit im Gehäuse).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung:**  \n   - Beobachten, ob die Lampe flackert oder ungewöhnliche Geräusche macht.\n   - Prüfen, ob der Fehler bei bestimmten Wetterlagen oder Uhrzeiten auftritt.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, defektes Vorschaltgerät.\n\n4. **Dokumentation:**  \n   - Zeitpunkt und Dauer des Ausfalls notieren.\n   - Genaue Position der Lampe festhalten (z. B. Mastnummer, Straßenzug).\n   - Beobachtungen und Verdachtsmomente dokumentieren.\n\n5. **Eskalation:**  \n   - Meldung an die zuständige Wartungsfirma oder den technischen Dienst weiterleiten.\n   - Bei Gefahr (z. B. herabhängende Teile, Stromschlaggefahr) sofortige Sperrung und Notdienst informieren.\n\n**Rückfrage:**  \nGab es in der Umgebung Bauarbeiten, Unwetter oder andere Auffälligkeiten? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 144
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr ähnliche Struktur wie TC1, ebenfalls 5-Punkte-Checkliste. GPS-Koordinaten werden nicht explizit genutzt, aber 'genaue Position festhalten' wird erwähnt. Sicherheit (Warnweste, Absperrung, Verkehr) gut adressiert. Eskalation bei Gefahr klar benannt. Dokumentation strukturiert. Keine erfundenen Fakten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.573
+  },
+  "error": {}
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Anleitung mit klarer Priorisierung (Absicherung zuerst). Eskalation bei akuter Gefahr erwähnt. Dokumentation gut abgedeckt. Kontext (Asset-ID) korrekt genutzt, keine Halluzinationen. Leichte Abzüge bei S, da severity=high nicht explizit im Context war, aber 'Bereich wirkt unsicher' wurde angemessen behandelt."
+  },
+  {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht explizit in Dokumentation erwähnt"
+    ],
+    "short_justification": "Gute Struktur, Sicherheit priorisiert, Eskalation vorhanden. GPS-Daten (12.0889764, 47.8238909) und Name 'Pang, Cafe Neu' wurden nicht aktiv genutzt, obwohl verfügbar – stattdessen wird nach Standort gefragt. D=3 wegen fehlender Nutzung vorhandener Standortdaten. K=4 statt 5 wegen ungenutztem Context."
+  },
+  {
+    "test_id": "INC-LAMP-0029-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort für severity=high + night + poor_visibility. Absicherung mit Warnblinkanlage/Warnbaken konkret. Device-Status 'ok' aber 'offline' korrekt interpretiert (Verbindungsproblem). Eskalation differenziert (akute Gefahr vs. normaler Ausfall). Dokumentation inkl. Foto erwähnt. Alle Kontextdaten sinnvoll genutzt, keine Halluzinationen. Perfekte Umsetzung."
+  }
+]

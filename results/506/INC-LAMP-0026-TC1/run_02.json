@@ -1,0 +1,55 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-11T12:35:57",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Störung: Unregelmäßiges An/Aus-Verhalten (Asset-ID: n4449540379)**\n\n1. **Absicherung**\n   - Gefahrenbereich absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Gibt es offensichtliche Schäden, lose Kabel, Feuchtigkeitseintritt oder Vandalismus?\n   - Prüfen, ob alle Abdeckungen und Gehäuse geschlossen sind.\n\n3. **Diagnose/Beobachtung**\n   - Wann tritt das Verhalten auf? (z. B. nur nachts, bei Regen, sporadisch)\n   - Sind weitere Lampen/Ampeln in der Nähe betroffen?\n   - Prüfen, ob der Fehler durch äußere Einflüsse (z. B. Erschütterung, Witterung) ausgelöst wird.\n   - Falls möglich: Funktionstest und Protokollierung der Schaltzyklen.\n\n4. **Dokumentation**\n   - Beobachtungen, Zeitpunkt und Häufigkeit des Fehlers notieren.\n   - Fotos von Anlage und eventuellen Schäden anfertigen.\n   - Alle durchgeführten Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für den Verkehr: Störung an Fachfirma/Leitstelle melden.\n   - Asset-ID und alle gesammelten Informationen weitergeben.\n\n**Rückfrage:**  \nTritt das Problem bei einer Straßenlampe oder einer Ampelanlage auf? Gibt es Auffälligkeiten bei der Stromversorgung (z. B. Sicherung ausgelöst, Flackern in der Umgebung)?",
+    "tokens_estimate_words": 158
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung bei severity=low erkennbar",
+      "Offline-Workflow nicht erwähnt (bei minimalem Kontext aber vertretbar)"
+    ],
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung, Diagnose und Eskalation. Rückfrage zur Asset-Typ-Klärung ist sinnvoll. Dokumentation gut abgedeckt. Keine Halluzinationen. Leichte Abzüge bei S, da keine explizite Verkehrsgefährdungs-Bewertung trotz unklarer Asset-Art."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.367
+  },
+  "error": {}
+}

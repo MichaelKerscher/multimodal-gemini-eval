@@ -1,0 +1,65 @@
+[
+  {
+    "test_id": "INC-LAMP-0015-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Konkrete Kontaktstelle für Eskalation"
+    ],
+    "short_justification": "Sehr gute strukturierte Antwort mit klarer 5-Schritte-Checkliste. Sicherheit wird priorisiert (Absicherung, Warnung). Eskalation vorhanden, aber ohne konkrete Kontaktstelle. Dokumentation gut abgedeckt. Keine Halluzinationen, arbeitet nur mit gegebenen Daten (Asset-ID). Rückfragen sinnvoll. Minimal-Kontext wird optimal genutzt."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Nutzung der GPS-Koordinaten",
+      "Konkrete Kontaktstelle"
+    ],
+    "short_justification": "Solide Checkliste mit Sicherheitsfokus. Eskalation an Stadtverwaltung/Störungsdienst erwähnt, bei Gefahr auch Polizei. GPS-Daten (12.13°, 47.86°) werden nicht genutzt, obwohl verfügbar - stattdessen wird nach Standort gefragt. Dokumentation etwas schwächer (keine Asset-ID erwähnt). Struktur gut, aber Kontextnutzung nicht optimal."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Angemessene Reaktion auf severity=high",
+      "Berücksichtigung von night+poor_visibility+high_traffic",
+      "Foto-Verfügbarkeit nicht genutzt"
+    ],
+    "short_justification": "Gute Struktur, aber severity=high bei Nacht mit schlechter Sicht und hohem Verkehr erfordert dringlichere Sicherheitsmaßnahmen. Eskalation zu generisch ('Wartungsstelle'). Device-Status 'ok/online' wird interpretiert, aber Umweltfaktoren (night, poor_visibility, high_traffic) unzureichend gewichtet. Photo_available=true wird ignoriert. Dokumentation OK, aber nicht vollständig (Asset-ID fehlt im Text)."
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC3",
+  "timestamp": "2026-02-11T12:33:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, Hinweisschilder), falls erhöhte Unfallgefahr besteht.\n   - Bei akuter Gefahr Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Prüfen, ob äußerliche Schäden an der Lampe, dem Mast oder der Verkabelung sichtbar sind (z. B. Glasbruch, lose Teile).\n   - Umgebung auf weitere dunkle Lampen oder Störungen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Laut Gerätedaten: Lampe ist online und meldet „ok“.\n   - Mögliche Ursachen: Leuchtmittel defekt, Zeitschaltuhr/Steuerung fehlerhaft, sporadischer Ausfall.\n   - Gibt es in der Nähe Bauarbeiten oder Stromausfälle?\n\n4. **Dokumentation**\n   - Zeitpunkt, genaue Position und Beobachtungen notieren.\n   - Fotos vom Bereich und der Lampe machen (falls möglich).\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder den städtischen Bereitschaftsdienst melden.\n   - Hinweis auf unsichere Situation und Dringlichkeit geben.\n\n**Rückfrage:**  \nGibt es weitere dunkle Lampen in der Nähe oder ist nur diese betroffen? Wurde bereits eine Meldung an die Stadt gemacht?",
+    "tokens_estimate_words": 150
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Gerätestatus 'online/ok' wird analysiert, Umweltbedingungen (Nebel, Nacht) implizit berücksichtigt, severity=medium korrekt eingeordnet. Klare 5-Schritte-Struktur, Absicherung zuerst. Diagnose nutzt device_state intelligent (Leuchtmittel vs. Steuerung). Eskalation vorhanden mit Dringlichkeitshinweis. S=3, da bei 'unsicher' + Nebel + Nacht keine explizite Notfallnummer/sofortige Eskalation. Dokumentation gut. Rückfrage sinnvoll."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.488
+  },
+  "error": {}
+}

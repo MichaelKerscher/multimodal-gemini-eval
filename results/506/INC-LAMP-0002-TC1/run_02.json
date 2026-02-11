@@ -1,0 +1,55 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-11T12:26:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung.\n\n**Checkliste für die Kontrolle (Asset-ID: n1987093602):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten sichern.\n   - Bei Bedarf Verkehrsregelung anfordern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf äußere Schäden, lose Teile, Feuchtigkeitsspuren oder Vandalismus.\n   - Prüfen, ob alle Leuchten/Signale aktuell wie vorgesehen funktionieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Kontrolle der Schaltzeiten und eventueller Fehlermeldungen am Steuergerät.\n   - Bei Straßenlampen: Dämmerungsschalter und Leuchtmittel prüfen.\n   - Bei Ampeln: Steuerung, Signalgeber und Verkabelung inspizieren.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos bei sichtbaren Schäden anfertigen.\n   - Zeitpunkt der Kontrolle dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Ausfall der gesamten Anlage, freiliegende Kabel): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei unklarer Ursache oder wiederholtem Ausfall: Weiterleitung an Fachabteilung zur tieferen Analyse.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gab es bestimmte Uhrzeiten oder Wetterbedingungen beim Ausfall?",
+    "tokens_estimate_words": 155
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Unterscheidung Straßenlampe/Ampel wird erfragt statt aus Kontext abgeleitet"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer 5-Punkte-Checkliste. Sicherheit wird priorisiert, Eskalationskriterien sind vorhanden. Dokumentation gut abgedeckt. Schwäche: Kontext (Asset-ID) wird nicht genutzt, obwohl vorhanden. Rückfrage nach Asset-Typ ist legitim bei minimalem Kontext, aber Asset-ID hätte erwähnt werden können."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.267
+  },
+  "error": {}
+}

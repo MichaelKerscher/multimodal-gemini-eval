@@ -1,0 +1,68 @@
+[
+  {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Spannungsfreiheit explizit erwähnen",
+      "Ticket-ID-Referenz"
+    ],
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung und Eskalation. Sichtprüfung und Diagnose gut beschrieben. Dokumentation vorhanden, aber ohne Ticket-Referenz. Rückfrage sinnvoll. Minimal-Kontext angemessen genutzt."
+  },
+  {
+    "test_id": "INC-LAMP-0021-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 5,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Ticket-ID-Referenz",
+      "GPS-Koordinaten nicht explizit genutzt"
+    ],
+    "short_justification": "Sehr gute Sicherheitshinweise inkl. Spannungsfreiheit und 'Gefahr im Verzug'-Eskalation. Strukturierte Diagnose mit Messgerät-Erwähnung. Standortname wird nicht explizit genutzt. Dokumentation ohne Ticket-Bezug. Rückfrage differenziert Lampe/Ampel."
+  },
+  {
+    "test_id": "INC-LAMP-0021-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 2,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity=medium nicht berücksichtigt",
+      "Foto verfügbar - nicht erwähnt",
+      "Regen/Nacht-Kontext nicht genutzt",
+      "Ticket-ID fehlt komplett",
+      "Reporter=patrol nicht erwähnt"
+    ],
+    "short_justification": "Solide Checkliste mit Absicherung und Eskalation. ABER: Reicher L2-Kontext (Regen, Nacht, Foto verfügbar, severity=medium, Reporter) wird kaum genutzt. Dokumentation ohne Ticket-Referenz. Rückfrage ignoriert vorhandene Kontextdaten (fault_type=flicker bereits bekannt). Kontextnutzung schwach."
+  }
+]

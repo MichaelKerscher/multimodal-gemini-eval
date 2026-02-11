@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC2",
+  "timestamp": "2026-02-11T12:27:03",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für den Außendienst – Dunkle Straßenlampe**\n\n1. **Absicherung**\n   - Bereich absichern: Warnblinkanlage am Fahrzeug einschalten, ggf. Warnbaken oder Pylonen aufstellen.\n   - Persönliche Schutzausrüstung tragen (Warnweste, ggf. Helm).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Glasbruch, lose Teile, Vandalismus).\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob nur eine oder mehrere Lampen betroffen sind.\n   - Mögliche Ursachen notieren (z. B. Leuchtmittel defekt, Stromausfall, Schaltuhr).\n   - Gibt es Anzeichen für akute Gefahren (herausragende Kabel, offener Mast)?\n\n4. **Dokumentation**\n   - Standort (Straßenname, Hausnummer oder GPS) und Uhrzeit notieren.\n   - Zustand der Lampe und getroffene Maßnahmen dokumentieren (Foto machen, falls möglich).\n\n5. **Eskalation**\n   - Bei akuter Gefahr: Sofort Polizei/Notdienst informieren.\n   - Bei einfachem Defekt: Störungsmeldung an die zuständige Wartungsfirma oder Leitstelle weitergeben.\n\n**Rückfrage:**  \nIst die Lampe einzeln betroffen oder sind mehrere Lampen in der Straße ausgefallen? Gibt es sichtbare Schäden am Mast oder an der Leuchte?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Professionelle Außendienst-Checkliste. Starker Fokus auf Sicherheit (PSA, Absicherung zuerst). Klare 5-Schritte-Struktur. Eskalation differenziert nach Schweregrad ('akute Gefahr: sofort Polizei', 'einfacher Defekt: Wartungsfirma'). GPS-Daten werden implizit genutzt (Standortdokumentation). Dokumentation gut abgedeckt. Keine erfundenen Details. Rückfragen zielführend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.974
+  },
+  "error": {}
+}

@@ -1,0 +1,77 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC3",
+  "timestamp": "2026-02-11T12:36:20",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032947",
+        "longitude": 12.1230655,
+        "latitude": 47.8555555,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-17T03:01:00+01:00",
+        "reporter": "internal",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "rain",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, Warnleuchte, ggf. Absperrung).\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe/Ampel auf Feuchtigkeitsspuren, offene Gehäuse, beschädigte Dichtungen.\n   - Prüfen, ob Wasser ins Gehäuse eingedrungen ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Flackern nur bei Regen auftritt (ggf. gezielt Bewässerung simulieren).\n   - Verbindungskabel und Steckverbindungen auf Korrosion oder Feuchtigkeit untersuchen.\n   - Bei „spotty“ Konnektivität: Prüfen, ob Feuchtigkeit Einfluss auf die Verbindung hat.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und Beobachtungen dokumentieren (Fotos, Notizen).\n   - Zeitpunkt und Wetterbedingungen festhalten.\n\n5. **Eskalation**\n   - Bei Wassereintritt oder Sicherheitsrisiko: Sofortige Meldung an Fachfirma/Elektriker.\n   - Bei unklarer Ursache oder wiederholtem Fehler: Weitergabe an zuständige Stelle.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es sichtbare Schäden am Gehäuse oder an den Dichtungen?",
+    "tokens_estimate_words": 128
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (L2). Severity=medium und fault_type=flicker werden implizit durch angemessene Dringlichkeit reflektiert. 'Spotty connectivity' wird explizit in Diagnose einbezogen ('Prüfen, ob Feuchtigkeit Einfluss auf Verbindung hat'). High traffic exposure rechtfertigt Absicherungshinweise. Strukturiert, umsetzbar, sicherheitsorientiert. Eskalation bei Wassereintritt/Sicherheitsrisiko klar. Dokumentation vollständig. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.325
+  },
+  "error": {}
+}

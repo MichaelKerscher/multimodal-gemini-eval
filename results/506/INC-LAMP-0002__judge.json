@@ -1,0 +1,67 @@
+[
+  {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Unterscheidung Straßenlampe/Ampel wird erfragt statt aus Kontext abgeleitet"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer 5-Punkte-Checkliste. Sicherheit wird priorisiert, Eskalationskriterien sind vorhanden. Dokumentation gut abgedeckt. Schwäche: Kontext (Asset-ID) wird nicht genutzt, obwohl vorhanden. Rückfrage nach Asset-Typ ist legitim bei minimalem Kontext, aber Asset-ID hätte erwähnt werden können."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten und Standortname werden nicht erwähnt",
+      "lit=yes wird nicht interpretiert (deutet auf Straßenlampe hin)",
+      "Standortspezifische Hinweise fehlen trotz verfügbarer Daten"
+    ],
+    "short_justification": "Strukturell identisch mit TC1, gute Checkliste mit Sicherheitsfokus und Eskalation. Dokumentation angemessen. Kritik: Trotz deutlich mehr Kontext (GPS, Name, lit=yes) wird dieser nicht genutzt. Standort 'Rosenheim, Heilig Blut' und lit-Attribut hätten Asset-Typ klären können. Rückfrage bleibt identisch zu L0."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity=medium und fault_type=intermittent werden nicht explizit adressiert",
+      "Foto verfügbar (photo_available=true) wird nicht erwähnt",
+      "Umgebungsbedingungen (Nebel, schlechte Sicht, Nacht) nicht in Sicherheitshinweise integriert"
+    ],
+    "short_justification": "Beste Antwort der Serie. Strukturiert, sicherheitsorientiert, mit klaren Eskalationskriterien. Dokumentation gut. Rückfrage berücksichtigt teilweise Kontext (Wetter, Bauarbeiten). Verbesserungspotenzial: Verfügbares Foto hätte erwähnt werden sollen, Nebel+Nacht+schlechte Sicht hätten Sicherheitshinweise verschärfen können. Severity medium rechtfertigt aber aktuelles Vorgehen."
+  }
+]

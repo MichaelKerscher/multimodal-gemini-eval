@@ -1,0 +1,63 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-11T12:33:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Überprüfung – Dunkler Abschnitt (Straßenbeleuchtung):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Einsatzfahrzeug mit Warnblinkanlage und ggf. Absperrmaterial sichern.\n   - Gefahrenbereich absichern (z. B. Pylonen, Warnleuchten).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Leuchten: Wie viele Lampen sind betroffen? Einzelne oder ganzer Abschnitt?\n   - Prüfen auf offensichtliche Schäden (z. B. umgefahrene Masten, lose Kabel, offene Schaltschränke).\n   - Gibt es Hinweise auf Vandalismus oder Unfälle?\n\n3. **Diagnose/Beobachtung**\n   - Funktioniert die Stromversorgung (Sicherung im Schaltschrank prüfen)?\n   - Sind Zeitschaltuhren oder Dämmerungsschalter korrekt eingestellt?\n   - Bei mehreren ausgefallenen Leuchten: Möglicher Leitungs- oder Netzfehler.\n\n4. **Dokumentation**\n   - Fund und Maßnahmen schriftlich festhalten (Foto, Uhrzeit, betroffene Leuchten).\n   - Besonderheiten notieren (z. B. Verkehrsgefährdung, Beschädigungen).\n\n5. **Eskalation**\n   - Bei akuter Verkehrsgefährdung: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei größerem Ausfall oder unklarer Ursache: Weitergabe an Fachabteilung/Elektriker.\n\n**Rückfrage:**  \nHandelt es sich um einen kompletten Straßenzug oder nur einzelne Lampen? Gibt es besondere Gefahrenstellen (z. B. Kreuzungen, Fußgängerüberwege) im betroffenen Abschnitt?",
+    "tokens_estimate_words": 153
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten werden nicht genutzt",
+      "Keine Ticket-Erstellung erwähnt",
+      "lit=yes wird nicht thematisiert"
+    ],
+    "short_justification": "Nahezu identisch zu TC1, obwohl GPS-Daten verfügbar sind. Struktur und Sicherheitsaspekte gut abgedeckt. Eskalation bei Verkehrsgefährdung genannt. Dokumentation gefordert, aber keine Ticket-Referenz. Kontextdaten (GPS, lit=yes) werden nicht aktiv genutzt – verpasste Chance für präzisere Lokalisierung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.083
+  },
+  "error": {}
+}

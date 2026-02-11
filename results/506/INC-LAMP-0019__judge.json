@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0019-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Anleitung mit klarer Priorisierung (Absicherung zuerst). Eskalation vorhanden, Dokumentation inkl. Asset-ID gefordert. Sicherheitsaspekt adressiert (Warnbaken, Unfallgefahr), aber keine explizite Notfallnummer bei akuter Gefahr. Kontextnutzung korrekt (Asset-ID). Rückfrage sinnvoll. Leichte Abzüge bei S, da bei 'unsicher' stärkere Eskalationsempfehlung fehlt."
+  },
+  {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht genutzt"
+    ],
+    "short_justification": "Gute Struktur mit 5-Schritt-Checkliste, Absicherung priorisiert, Eskalation vorhanden. Dokumentation fordert Standortangaben, aber GPS-Daten (12.122/47.855) aus Context werden nicht erwähnt/genutzt. Sicherheit adressiert (Polizei bei akuter Gefahr), aber keine konkrete Notfallnummer. K-Abzug wegen ungenutzter Geo-Daten. Rückfrage nach Standort redundant, da bereits vorhanden."
+  },
+  {
+    "test_id": "INC-LAMP-0019-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Gerätestatus 'online/ok' wird analysiert, Umweltbedingungen (Nebel, Nacht) implizit berücksichtigt, severity=medium korrekt eingeordnet. Klare 5-Schritte-Struktur, Absicherung zuerst. Diagnose nutzt device_state intelligent (Leuchtmittel vs. Steuerung). Eskalation vorhanden mit Dringlichkeitshinweis. S=3, da bei 'unsicher' + Nebel + Nacht keine explizite Notfallnummer/sofortige Eskalation. Dokumentation gut. Rückfrage sinnvoll."
+  }
+]

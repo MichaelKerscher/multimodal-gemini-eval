@@ -1,0 +1,52 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC1",
+  "timestamp": "2026-02-11T12:37:09",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher. (Asset-ID: n9223569763)",
+    "context": {
+      "asset_osm": "n9223569763"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Bereich möglichst absichern (z. B. Warnbaken, Hinweisschilder), um die Verkehrssicherheit zu gewährleisten.\n- Falls möglich, Passanten auf die Dunkelheit hinweisen.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen betroffen sind.\n- Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, freiliegende Kabel).\n\n**3. Diagnose/Beobachtung**\n- Gab es in letzter Zeit Stromausfälle oder Bauarbeiten in der Nähe?\n- Leuchtet die Lampe manchmal kurz auf oder bleibt sie komplett dunkel?\n\n**4. Dokumentation**\n- Asset-ID, Standort und Uhrzeit notieren.\n- Fotos vom betroffenen Bereich machen, falls möglich.\n\n**5. Eskalation**\n- Störung umgehend an die zuständige Wartungsstelle melden (Asset-ID angeben).\n- Bei akuter Gefahr (z. B. Unfallgefahr) zusätzlich Polizei oder Ordnungsamt informieren.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese eine betroffen?",
+    "tokens_estimate_words": 133
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Anleitung mit klarer Priorisierung (Absicherung zuerst). Eskalation bei akuter Gefahr erwähnt. Dokumentation gut abgedeckt. Kontext (Asset-ID) korrekt genutzt, keine Halluzinationen. Leichte Abzüge bei S, da severity=high nicht explizit im Context war, aber 'Bereich wirkt unsicher' wurde angemessen behandelt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.073
+  },
+  "error": {}
+}

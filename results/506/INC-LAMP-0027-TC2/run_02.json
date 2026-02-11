@@ -1,0 +1,59 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC2",
+  "timestamp": "2026-02-11T12:36:20",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032947",
+        "longitude": 12.1230655,
+        "latitude": 47.8555555,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Information. Hier eine strukturierte Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die betroffene Lampe/Ampel absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei starkem Verkehr ggf. Unterstützung anfordern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe/Ampel und der Zuleitungen.\n   - Besonderes Augenmerk auf Feuchtigkeitseintritt (z. B. undichte Gehäuse, offene Kabelverschraubungen).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Flackern nur bei Regen auftritt oder auch bei hoher Luftfeuchtigkeit.\n   - Sichtbare Korrosionsspuren oder Wasseransammlungen im Gehäuse?\n   - Prüfen, ob mehrere Lampen/Ampeln betroffen sind (Hinweis auf Leitungsproblem).\n\n4. **Dokumentation**\n   - Fotos von betroffenen Stellen und Auffälligkeiten machen.\n   - Zeitpunkt und Wetterbedingungen notieren.\n   - Alle Beobachtungen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei Verdacht auf Feuchtigkeitsschaden oder elektrische Gefahr: Anlage außer Betrieb nehmen und Fachfirma informieren.\n   - Bei unklarer Ursache: Weiterleitung an Elektrofachkraft zur detaillierten Prüfung.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Sind mehrere Anlagen betroffen oder nur eine?",
+    "tokens_estimate_words": 147
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Gleichwertig zu TC1: Strukturierte 5-Schritte-Checkliste, Sicherheit priorisiert, Feuchtigkeitsdiagnose adressiert. Eskalation bei elektrischer Gefahr oder Feuchtigkeitsschaden klar benannt. Dokumentation mit Fotos, Zeitpunkt und Wetterbedingungen. GPS-Daten (L1) werden nicht explizit genutzt, aber auch nicht benötigt. Rückfragen sinnvoll. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.363
+  },
+  "error": {}
+}

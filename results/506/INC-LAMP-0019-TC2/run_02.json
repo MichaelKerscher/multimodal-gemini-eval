@@ -1,0 +1,61 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-11T12:33:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung:**\n\n1. **Absicherung:**  \n   - Bereich um die defekte Lampe möglichst meiden oder absichern (z. B. Warnhinweise, falls vorhanden).\n   - Bei akuter Gefahr (z. B. Unfallgefahr, stark frequentierter Bereich) Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung:**  \n   - Ist nur eine Lampe betroffen oder mehrere?\n   - Gibt es sichtbare Schäden (z. B. zerbrochenes Glas, freiliegende Kabel)?\n   - Brennen andere Lampen in der Nähe?\n\n3. **Diagnose/Beobachtung:**  \n   - Seit wann ist die Lampe aus? (Hier: ca. 60 Minuten)\n   - Gab es vorher Flackern oder andere Auffälligkeiten?\n   - Wetterlage: Gab es Unwetter, Stromausfall o. Ä.?\n\n4. **Dokumentation:**  \n   - Standort möglichst genau notieren (Straße, Hausnummer, nächster Mast, ggf. Mastnummer).\n   - Zeitpunkt der Beobachtung festhalten.\n   - Fotos machen, falls möglich und sicher.\n\n5. **Eskalation:**  \n   - Störung an den zuständigen städtischen Betrieb oder die Notfallnummer für Straßenbeleuchtung melden.\n   - Bei erhöhter Gefährdung (z. B. Schulweg, Unfallgefahr) dies ausdrücklich bei der Meldung erwähnen.\n\n**Rückfrage:**  \nKönnen Sie den genauen Standort (Straße, Hausnummer, ggf. Mastnummer) angeben? Sind weitere Lampen betroffen? Liegt eine akute Gefahrensituation vor?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht genutzt"
+    ],
+    "short_justification": "Gute Struktur mit 5-Schritt-Checkliste, Absicherung priorisiert, Eskalation vorhanden. Dokumentation fordert Standortangaben, aber GPS-Daten (12.122/47.855) aus Context werden nicht erwähnt/genutzt. Sicherheit adressiert (Polizei bei akuter Gefahr), aber keine konkrete Notfallnummer. K-Abzug wegen ungenutzter Geo-Daten. Rückfrage nach Standort redundant, da bereits vorhanden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.938
+  },
+  "error": {}
+}

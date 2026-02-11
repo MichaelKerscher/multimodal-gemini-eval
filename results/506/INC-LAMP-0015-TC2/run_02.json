@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-11T12:31:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Störung einer Straßenlampe**\n\n1. **Absicherung**\n   - Prüfen Sie, ob der Bereich akut gefährlich ist (z. B. schlechte Sicht, Stolpergefahr, viel Verkehr).\n   - Falls ja: Warnen Sie andere Passanten, meiden Sie den Bereich möglichst.\n\n2. **Sichtprüfung**\n   - Ist nur eine Lampe betroffen oder mehrere?\n   - Gibt es sichtbare Schäden (z. B. zerbrochenes Glas, freiliegende Kabel)?\n\n3. **Diagnose/Beobachtung**\n   - Flackert die Lampe oder bleibt sie komplett aus?\n   - Gab es in letzter Zeit ähnliche Ausfälle in der Umgebung?\n\n4. **Dokumentation**\n   - Notieren Sie den genauen Standort (Straße, Hausnummer, ggf. Lampennummer am Mast).\n   - Halten Sie Uhrzeit und Beobachtungen fest.\n\n5. **Eskalation**\n   - Melden Sie den Ausfall umgehend an die zuständige Stadtverwaltung oder den Störungsdienst.\n   - Bei akuter Gefährdung (z. B. Unfallgefahr): Polizei oder Ordnungsamt informieren.\n\n**Rückfrage:**  \nKönnen Sie mir bitte den genauen Standort der Lampe nennen? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 151
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Nutzung der GPS-Koordinaten",
+      "Konkrete Kontaktstelle"
+    ],
+    "short_justification": "Solide Checkliste mit Sicherheitsfokus. Eskalation an Stadtverwaltung/Störungsdienst erwähnt, bei Gefahr auch Polizei. GPS-Daten (12.13°, 47.86°) werden nicht genutzt, obwohl verfügbar - stattdessen wird nach Standort gefragt. Dokumentation etwas schwächer (keine Asset-ID erwähnt). Struktur gut, aber Kontextnutzung nicht optimal."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.649
+  },
+  "error": {}
+}
