@@ -6,7 +6,7 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung, Diagnose und Eskalation. Dokumentation gut adressiert. Kontextnutzung minimal (nur Asset-ID), aber angemessen für L0. Keine Sicherheitslücken. Rückfrage sinnvoll."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung nötig (CONTEXT zeigt kein device.connectivity-Problem)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Minimal-Kontext korrekt genutzt, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -23,24 +25,27 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
-      "K": 4
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Struktur mit Absicherung, Diagnose und Eskalation. Standortinformationen (Bahnhof Rosenheim) werden implizit genutzt (hohe Verkehrsexposition). Dokumentation inkl. Fotos erwähnt. Sicherheitsaspekte bei akuter Gefahr klar benannt. Rückfrage kontextbezogen."
+    "missing_elements": [
+      "Offline-Workflow fehlt (device.connectivity=offline)",
+      "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät"
+    ],
+    "short_justification": "Gute Struktur und Safety-Fokus, aber Halluzination: device_state wird fälschlich als Lampenproblem gedeutet. Offline-Dokumentationsstrategie fehlt trotz connectivity=offline."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 3,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -48,10 +53,9 @@
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": true,
-      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Gerätestatus (low_battery, offline) wird direkt in Diagnose integriert, Vermutung solar-/akkubetrieben logisch abgeleitet. Dokumentation präzise mit Gerätestatus. Eskalation mit konkreter Handlungsempfehlung. Offline-Status implizit adressiert. Rückfrage zielführend. Severity=low rechtfertigt moderate Sicherheitsmaßnahmen."
+    "short_justification": "Exzellente Antwort: Korrekte Interpretation von device.* als Techniker-Gerät, explizite Offline-Dokumentationsstrategie, vollständige Safety- und Eskalationslogik. Kontext optimal genutzt."
   }
 ]

@@ -51,11 +51,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     run_mode = (args.mode or _run_mode_default()).lower()
-
     enable_judge = False if args.no_judge else _env_enable_judge_default()
 
-    print(f"[RUN] mode={run_mode} | enable_judge={enable_judge} "
-          f"(env TESTSUITE_ENABLE_JUDGE={os.getenv('TESTSUITE_ENABLE_JUDGE')}, --no-judge={args.no_judge})")
+    print(
+        f"[RUN] mode={run_mode} | enable_judge={enable_judge} "
+        f"(env TESTSUITE_ENABLE_JUDGE={os.getenv('TESTSUITE_ENABLE_JUDGE')}, --no-judge={args.no_judge})"
+    )
 
     testcases = load_testcases(args.testfile)
 
@@ -66,7 +67,7 @@ if __name__ == "__main__":
     if args.incident:
         testcases = [
             tc for tc in testcases
-            if (tc.get("input", {}).get("meta", {}).get("incident_id") == args.incident)
+            if (tc.get("input") or {}).get("meta", {}).get("incident_id") == args.incident
         ]
 
     if not testcases:

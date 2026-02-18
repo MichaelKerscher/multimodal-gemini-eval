@@ -61,28 +61,25 @@ _UPLOAD_CACHE: dict[str, str] = {}
 # Kontext (identisch zu Gemini)
 # -------------------------------------------------
 def append_context_to_prompt(prompt: str, context: dict | None) -> str:
+    """
+    Deterministic context injection:
+    - Works for S1 (L2_full) and S2 (L2B) because it serializes the actual dict.
+    - Keeps the prompt self-contained for the model.
+    """
     if not context:
         return prompt
 
-    parts = []
+    try:
+        ctx_str = json.dumps(context, ensure_ascii=False, sort_keys=True, indent=2)
+    except Exception:
+        ctx_str = str(context)
 
-    loc = context.get("location")
-    if isinstance(loc, dict) and "lat" in loc and "lon" in loc:
-        parts.append(f"Standort: ({loc['lat']}, {loc['lon']})")
-
-    if "timestamp" in context:
-        parts.append(f"Zeit: {context['timestamp']}")
-
-    if "device" in context:
-        parts.append(f"Gerät: {context['device']}")
-
-    if "network" in context:
-        parts.append(f"Netzwerkstatus: {context['network']}")
-
-    if parts:
-        prompt += "\n[Kontext: " + "; ".join(parts) + "]"
-
-    return prompt
+    return (
+        prompt
+        + "\n\n[CONTEXT_JSON]\n<<<\n"
+        + ctx_str
+        + "\n>>>\n"
+    )
 
 
 # -------------------------------------------------

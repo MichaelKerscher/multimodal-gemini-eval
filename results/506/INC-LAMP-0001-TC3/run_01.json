@@ -1,45 +1,142 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC3",
-  "timestamp": "2026-02-11T12:14:46",
+  "timestamp": "2026-02-18T13:36:29",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
     "type": "text",
     "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
     "context": {
-      "asset": {
-        "asset_osm": "n5718630492",
-        "longitude": 12.1186059,
-        "latitude": 47.8511562,
-        "crs": "EPSG:4326",
-        "lit": "yes",
-        "name": "Rosenheim, Bahnhof"
-      },
       "incident": {
         "fault_type": "intermittent",
-        "severity": "low",
         "reported_at": "2026-01-21T09:11:43+01:00",
-        "reporter": "citizen",
-        "photo_available": true
+        "severity": "low",
+        "photo_available": true,
+        "reporter": "citizen"
       },
-      "environment": {
-        "time_of_day": "day",
-        "weather": "clear",
-        "lighting_condition": "normal_visibility",
-        "traffic_exposure": "high",
-        "noise_level": "medium"
+      "asset": {
+        "asset_osm": "n5718630492",
+        "latitude": 47.8511562,
+        "longitude": 12.1186059,
+        "name": "Rosenheim, Bahnhof",
+        "lit": "yes"
       },
       "device": {
-        "device_state": "low_battery",
-        "connectivity": "offline"
+        "connectivity": "offline",
+        "device_state": "low_battery"
+      },
+      "environment": {
+        "lighting_condition": "normal_visibility",
+        "time_of_day": "day",
+        "traffic_exposure": "high",
+        "weather": "clear",
+        "noise_level": "medium"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App), NICHT das Asset.",
+          "low_battery/offline beeinflusst Vorgehen/Workflow (z.B. kurz, offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
+        ]
       }
     }
   },
   "request_params": {
     "run_mode": "incident",
     "incident_id": "INC-LAMP-0001",
-    "assistant_source_of_truth": true
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "s2_selector_version": "s2-det-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 539,
+    "s2_selected_fields": [
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.name",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "incident.photo_available",
+        "prio": "P1",
+        "reason": "workflow-cue"
+      },
+      {
+        "path": "asset.lit",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      }
+    ],
+    "s2_dropped_fields": []
   },
   "media": {
     "image_path": null,
@@ -48,13 +145,30 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für sporadischen Fehler – Straßenlampe**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, Warnweste).\n   - Gefährdung für Verkehrsteilnehmer ausschließen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Gehäuse auf sichtbare Schäden (z. B. Risse, Feuchtigkeit, lose Kabel).\n   - Kontrolliere, ob Manipulationen oder äußere Einwirkungen erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Beachte: Gerät meldet „low_battery“ und „offline“. \n   - Vermutlich Batterieproblem oder Kommunikationsstörung.\n   - Prüfe, ob die Batterie getauscht werden muss.\n   - Teste, ob die Lampe nach erneutem Einschalten stabil läuft.\n   - Beobachte, ob der Fehler erneut auftritt.\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt, Fehlerbild (aus/jetzt an, sporadisch), Gerätestatus (low_battery, offline).\n   - Halte durchgeführte Maßnahmen fest (z. B. Sichtprüfung, Batterietest).\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Störung an die Fachabteilung melden.\n   - Batterieaustausch oder Reparatur beauftragen, falls nötig.\n\n**Rückfrage:**  \nSoll die Batterie direkt getauscht werden oder erst weitere Tests durchführen? Liegt eine aktuelle Wartungsanweisung für dieses Modell vor?",
-    "tokens_estimate_words": 155
+    "text": "Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof\n\n1. **Absicherung**\n   - Standort: Hohe Verkehrsexposition, tagsüber, normale Sicht.\n   - Warnweste tragen, Absperrmaterial bereithalten.\n   - Arbeitsbereich mit Pylonen sichern, ggf. Warnschild aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe aktuell wieder an, sporadischer Fehler gemeldet.\n   - Gehäuse, Mast und Verkabelung auf sichtbare Schäden, Feuchtigkeit oder Korrosion prüfen.\n   - Umgebung auf Störungen (z.B. Vandalismus, lose Kontakte) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt an – intermittierend.\n   - Typische Ursachen: Wackelkontakt, Vorschaltgerät, Temperaturschwankungen, Alterung.\n   - Bei Tageslicht: Funktionstest (mehrfach Ein-/Ausschalten, ggf. mit Prüfgerät).\n   - Hinweis: Techniker-Gerät offline/low battery – Notizen analog oder offline erfassen.\n\n4. **Dokumentation**\n   - Foto vom aktuellen Zustand (Lampe an, Umgebung).\n   - Fehlerbeschreibung: „Sporadischer Ausfall, aktuell wieder funktionstüchtig.“\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (offlinefähig).\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Meldung an Fachbereich Elektrotechnik.\n   - Routinewartung empfehlen, ggf. Austausch von Komponenten (z.B. Lampensockel, Vorschaltgerät).\n   - Bürger informieren: Fehler aufgenommen, weitere Beobachtung/Prüfung folgt.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Meldungen an diesem Standort?  \nSind Wartungsintervalle oder Austauschzyklen bekannt?",
+    "tokens_estimate_words": 169
   },
-  "judge": null,
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Korrekte Interpretation von device.* als Techniker-Gerät, explizite Offline-Dokumentationsstrategie, vollständige Safety- und Eskalationslogik. Kontext optimal genutzt."
+  },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.565
+    "runtime_seconds": 6.156
   },
   "error": {}
 }
