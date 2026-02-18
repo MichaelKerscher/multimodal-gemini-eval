@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0015-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Bewusstsein (high) fehlt im Kontext, daher nicht erwartbar"
+    ],
+    "short_justification": "Solide Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde. Safety-Fokus vorhanden, aber ohne explizite Dringlichkeit (severity unbekannt)."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high korrekt erkannt, Safety-First-Ansatz (Polizei, Warnbaken), klare Eskalation, strukturierte Dokumentation. Alle Kontextdaten sinnvoll genutzt, keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: Severity=high, poor_visibility, traffic_exposure=high führen zu klarem Safety-Fokus (Polizei, Warnbaken, sofortige Eskalation). Strukturiert, dokumentiert OSM-ID und Koordinaten, nutzt photo_available korrekt als Workflow-Hinweis. Keine Halluzinationen."
+  }
+]

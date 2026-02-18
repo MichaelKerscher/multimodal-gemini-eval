@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC1",
-  "timestamp": "2026-02-18T16:50:53",
+  "timestamp": "2026-02-18T17:03:45",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Asset n4449540379 (Straßenlampe/Ampelanlage)\n\n1. Absicherung  \n- Stelle Absperrmaterial bereit (Warnbaken, Warnwesten, ggf. Verkehrsumleitung).\n- Sichere den Arbeitsbereich ab, um Gefährdungen für Verkehr und Personal zu vermeiden.\n\n2. Sichtprüfung  \n- Überprüfe das Asset auf offensichtliche Schäden (Gehäuse, Verkabelung, Feuchtigkeit, Vandalismus).\n- Prüfe, ob das Asset korrekt montiert und zugänglich ist.\n\n3. Diagnose/Beobachtung  \n- Beobachte das Verhalten: Wann und wie tritt das An/Aus auf? Gibt es Muster (z.B. zu bestimmten Tageszeiten, Wetterbedingungen)?\n- Prüfe, ob benachbarte Assets ähnliche Probleme zeigen.\n- Kontrolliere die Stromversorgung (Sicherung, Anschluss, ggf. Messgerät verwenden).\n- Falls möglich: Prüfe Steuerungseinheit und Sensoren auf Fehlfunktionen.\n\n4. Dokumentation  \n- Notiere alle Beobachtungen, Zeiten, Asset-Zustand und durchgeführte Maßnahmen.\n- Dokumentiere Fotos vom Asset und Umfeld.\n\n5. Eskalation  \n- Bei unklarer Ursache oder Gefahr für Verkehr/Sicherheit: Melde den Vorfall an die zuständige Fachstelle (Technik, Elektriker, ggf. Polizei).\n- Informiere die Leitstelle über den Status und ggf. notwendige Sofortmaßnahmen.\n\nRückfrage:  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf äußere Einflüsse (z.B. Bauarbeiten, Wetter, Vandalismus)?",
-    "tokens_estimate_words": 170
+    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n4449540379\n\n1. Absicherung  \n- Warnbaken und Absperrmaterial bereitstellen  \n- Arbeitsbereich deutlich kennzeichnen  \n- Persönliche Schutzausrüstung anlegen\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampe/Ampelanlage auf äußere Schäden (Gehäuse, Verkabelung, Mast)  \n- Prüfen, ob Feuchtigkeit, Vandalismus oder lose Teile sichtbar sind\n\n3. Diagnose/Beobachtung  \n- Verhalten dokumentieren: Wann tritt das An/Aus auf? Gibt es Muster (z.B. bei bestimmten Wetterlagen)?  \n- Prüfen, ob benachbarte Anlagen ähnliche Probleme zeigen  \n- Kontrolle der Stromversorgung und Sicherungen  \n- Falls möglich: Kurztest der Steuerung/Elektronik vor Ort\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen schriftlich festhalten  \n- Fotos von Anlage und Umgebung machen  \n- Asset-ID, Datum, Uhrzeit und Ansprechpartner notieren\n\n5. Eskalation  \n- Bei unklarer Ursache: Meldung an Fachabteilung (Elektriker/Technik)  \n- Dringlichkeit bewerten (z.B. Gefährdung für Verkehr)  \n- Rückmeldung an Leitstelle mit Status und Empfehlungen\n\nRückfrage:  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf äußere Einflüsse (z.B. Bauarbeiten, Wetter, Vandalismus)?",
+    "tokens_estimate_words": 150
   },
   "judge": {
     "test_id": "INC-LAMP-0026-TC1",
@@ -50,13 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)"
+      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und Antwort allgemein bleibt."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.817
+    "runtime_seconds": 3.44
   },
   "error": {}
 }

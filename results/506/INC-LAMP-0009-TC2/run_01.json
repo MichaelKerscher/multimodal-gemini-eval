@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC2",
-  "timestamp": "2026-02-18T16:50:10",
+  "timestamp": "2026-02-18T16:58:08",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Flackern bei Regen (Straßenlampe Rosenheim, Endorfer Au / Krones):\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (bei Bedarf, z. B. bei Arbeiten auf Fahrbahn).\n   - Umfeld prüfen: Verkehr gering, Sicht schlecht – erhöhte Vorsicht!\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf Wassereintritt, Beschädigungen, lose Teile kontrollieren.\n   - Kabelanschlüsse und Lampengehäuse auf Feuchtigkeit prüfen.\n   - Umgebung auf Pfützen, Erdreichabsenkung oder ungewöhnliche Wasseransammlungen achten.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es nur bei Regen auf? Intensität und Dauer notieren.\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Gerät ist offline – keine Fernanalyse möglich.\n\n4. **Dokumentation**\n   - Alle Feststellungen schriftlich festhalten (Fotos nachholen, falls möglich).\n   - Zeitpunkt, Wetter, Sichtverhältnisse, eigene Beobachtungen notieren.\n\n5. **Eskalation**\n   - Bei Verdacht auf Feuchtigkeit im Gehäuse oder Kabel: Elektriker verständigen.\n   - Bei akuter Gefahr (z. B. Stromschlagrisiko, lose Teile): Lampe außer Betrieb nehmen und Bereich absichern.\n   - Bei geringer Störung: Reparatur für trockene Wetterlage einplanen.\n\n**Rückfrage:**  \nIst das Lampengehäuse zugänglich, oder wird für die Öffnung Spezialwerkzeug benötigt?  \nSind weitere Lampen in der Straße betroffen, oder handelt es sich um einen Einzelfall?",
-    "tokens_estimate_words": 182
+    "text": "Checkliste für Außendienst-Einsatz – Flackern bei Regen  \nStandort: Rosenheim, Endorfer Au / Krones  \nFehlerbild: Flackern, vor allem bei Regen, Sicht schlecht, wenig Verkehr\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (z. B. Leitkegel).\n   - Bei Dämmerung und Regen besonders auf Sichtbarkeit achten.\n   - Umfeld auf Verkehr prüfen, ggf. Absicherung aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf Wassereintritt, Beschädigungen oder lose Teile kontrollieren.\n   - Anschlusskasten auf Feuchtigkeit prüfen.\n   - Prüfen, ob Flackern aktuell sichtbar ist (ggf. bei Regen gezielt beobachten).\n\n3. **Diagnose/Beobachtung**\n   - Typisches Flackern bei Regen deutet auf Feuchtigkeit im System hin (z. B. Dichtung defekt, Kabel beschädigt).\n   - Gerät ist offline – keine Ferndiagnose möglich.\n   - Prüfen, ob weitere Lampen betroffen sind (Streckenprüfung).\n   - Sichtkontrolle der Verkabelung und Kontakte.\n\n4. **Dokumentation**\n   - Fehlerbild und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Sicht).\n   - Fotos machen, falls möglich (auch bei schlechtem Wetter).\n   - Notieren, ob Flackern nur bei Regen auftritt oder auch bei Trockenheit.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Stromschlag: Sofortige Meldung an Fachfirma/Elektriker.\n   - Bei geringer Dringlichkeit: Reparaturauftrag an zuständige Stelle weiterleiten.\n   - Hinweis: Da Gerät offline, vor Ort Diagnose notwendig.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder nur diese eine?  \nWurde das Flackern auch bei Trockenheit beobachtet?  \nIst Zugang zum Anschlusskasten möglich?",
+    "tokens_estimate_words": 210
   },
   "judge": {
     "test_id": "INC-LAMP-0009-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow erkannt und umgesetzt, Umweltbedingungen (Regen, schlechte Sicht) berücksichtigt, klare Eskalationskriterien, präzise Dokumentationsanweisungen."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Umweltbedingungen (Dämmerung, Regen, schlechte Sicht) berücksichtigt, klare Eskalation und Dokumentation. Alle Kontextinformationen sinnvoll genutzt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.544
+    "runtime_seconds": 5.212
   },
   "error": {}
 }

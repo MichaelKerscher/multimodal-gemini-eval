@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC1",
+  "timestamp": "2026-02-18T16:59:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n13278610215)",
+    "context": {
+      "asset_osm": "n13278610215"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz: Gehäuse beschädigt, mögliche Berührungsgefahr (Asset-ID: n13278610215)\n\n1. Absicherung  \n- Bereich um die beschädigte Straßenlampe sofort mit Absperrband oder Warnbaken sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Unbefugten Zutritt verhindern.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?  \n- Prüfen, ob Kabel oder stromführende Teile sichtbar/frei liegen.\n\n3. Diagnose/Beobachtung  \n- Einschätzung: Ist die Lampe noch in Betrieb?  \n- Gibt es Funkenflug, Geruch nach verbranntem Material oder andere Hinweise auf akute Gefahr?\n\n4. Dokumentation  \n- Fotos der Beschädigung und Absicherung machen.  \n- Asset-ID, Standort und Uhrzeit notieren.  \n- Kurzbeschreibung des Schadens und der Maßnahmen erfassen.\n\n5. Eskalation  \n- Meldung an die zuständige Elektrofachkraft/Technik-Team mit allen Dokumentationen.  \n- Bei akuter Gefahr: Feuerwehr/Polizei informieren.\n\nBitte Rückmeldung, ob weitere Details zum Standort oder zur Schadensursache bekannt sind. Sind stromführende Teile sichtbar oder besteht akute Gefahr?",
+    "tokens_estimate_words": 136
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle relevanten Schritte (Absicherung, Diagnose, Dokumentation, Eskalation) sind präzise und umsetzbar beschrieben."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.099
+  },
+  "error": {}
+}

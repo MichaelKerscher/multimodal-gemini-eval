@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Umgebungsinformationen verfügbar, daher generisch gehalten"
+    ],
+    "short_justification": "Solide generische Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID bekannt. Sicherheit könnte spezifischer sein (z.B. Verkehrslage), aber bei L0 angemessen."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Kontextgerechte Sicherheitsmaßnahmen (Nebel, Nacht, mittlerer Verkehr), strukturierte Diagnose, klare Eskalation, sinnvolle Rückfragen. Alle Kontextinformationen korrekt genutzt."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Antwort: Kompakt, kontextbezogen (Nebel, Nacht, Verkehr), klare Schrittfolge, Foto-Workflow integriert, sinnvolle Eskalation und Rückfragen. Keine Halluzinationen, alle Kontextinformationen korrekt verarbeitet."
+  }
+]

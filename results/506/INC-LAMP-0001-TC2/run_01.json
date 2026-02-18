@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-18T16:55:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (bei hohem Verkehrsaufkommen).\n   - Arbeitsbereich mit Pylonen oder Warnschild sichern.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Vandalismus kontrollieren.\n   - Umgebung auf Störungen (z. B. Kabel, Anschlusskasten) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampe aktuell stabil leuchtet.\n   - Hinweis: Gerät ist offline und meldet niedrigen Batteriestand – Ursache könnte Stromversorgung oder Steuerung sein.\n   - Foto auswerten, falls verfügbar.\n   - Annahme: Kein akuter Sicherheitsmangel, da Lampe aktuell funktioniert und Sichtverhältnisse normal.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung (sporadisch, aktuell an) notieren.\n   - Zeitpunkt, Wetter, Verkehrsaufkommen und eigene Beobachtungen festhalten.\n   - Foto dem Bericht anhängen.\n\n5. **Eskalation**\n   - Meldung an Technik/Elektriker weiterleiten mit Hinweis auf intermittierenden Fehler und niedrigen Batteriestand.\n   - Empfehlung: Batterie/Steuerung zeitnah prüfen, ggf. Austausch planen.\n   - Bei erneuten Ausfällen oder Sicherheitsrisiko sofortige Eskalation.\n\n**Rückfrage:**  \nIst ein Zugang zum Lampenschaltkasten möglich oder gibt es Einschränkungen vor Ort?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt (Gerät offline, low_battery)"
+    ],
+    "short_justification": "Exzellente Struktur, Safety-Fokus bei high traffic_exposure, Kontextnutzung (Batteriestand, Foto). Offline-Workflow fehlt trotz connectivity=offline."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.735
+  },
+  "error": {}
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Spekulation erfolgt."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr) mit angepassten Sicherheitsmaßnahmen. Klare Struktur, vollständige Dokumentation und passende Eskalationskriterien."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Präzise Kontextintegration (Nebel, Verkehr, intermittent fault) mit klarer Handlungsanweisung. Dokumentation inkl. 'nicht reproduzierbar'-Szenario und Monitoring-Empfehlung zeigt hohe Praxisrelevanz."
+  }
+]

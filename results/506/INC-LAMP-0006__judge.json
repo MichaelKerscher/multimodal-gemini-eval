@@ -1,0 +1,59 @@
+[
+  {
+    "test_id": "INC-LAMP-0006-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
+  },
+  {
+    "test_id": "INC-LAMP-0006-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow (Gerät offline)",
+      "Batteriewechsel-Spekulation (device_state bezieht sich auf Techniker-Gerät, nicht Asset)"
+    ],
+    "short_justification": "Gute Safety- und Eskalationsmaßnahmen, aber Offline-Workflow fehlt trotz connectivity=offline. Halluzination: Batteriewechsel am Asset vorgeschlagen, obwohl low_battery das Techniker-Gerät betrifft."
+  },
+  {
+    "test_id": "INC-LAMP-0006-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, Safety priorisiert, Kontext präzise genutzt (Sturm, Verkehrsexposition, Gerät offline). Keine Halluzinationen, klare Dokumentation und Eskalation."
+  }
+]

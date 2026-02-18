@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-18T16:58:28",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n4427955479 (Straßenbeleuchtung, Rosenheim Stadtmitte)\n\n1. Absicherung  \n• Warnweste anlegen  \n• Absperrmaterial bereitstellen  \n• Gefahrenbereich (dunkler Abschnitt) absichern, ggf. Verkehr umleiten\n\n2. Sichtprüfung  \n• Ist die gesamte Beleuchtung ausgefallen oder nur einzelne Lampen?  \n• Gibt es sichtbare Schäden an Masten, Leuchten oder Verkabelung?  \n• Liegen Hindernisse, lose Teile oder andere Gefahren vor?\n\n3. Diagnose/Beobachtung  \n• Funktionstest: Schaltkasten prüfen, ggf. Sicherungen kontrollieren  \n• Prüfen, ob Stromversorgung vorhanden  \n• Gibt es Anzeichen für Vandalismus, Wasserschäden oder Kurzschluss?\n\n4. Dokumentation  \n• Fotos vom betroffenen Abschnitt und ggf. Schadstellen machen  \n• Befund und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Asset-ID)\n\n5. Eskalation  \n• Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an Leitstelle  \n• Bei komplexen Schäden: Fachfirma oder Elektriker hinzuziehen  \n• Rückmeldung an Auftraggeber mit Status und empfohlenen Maßnahmen\n\nBitte Rückmeldung:  \nSind weitere Details zum Ausfall bekannt (z.B. seit wann, wie viele Lampen betroffen)?  \nIst Zugang zum Schaltkasten möglich oder benötigt Ihr Unterstützung?",
+    "tokens_estimate_words": 153
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung der Verkehrssicherheit bei dunklem Abschnitt"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber bei minimalem Kontext nicht überbetont; keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.17
+  },
+  "error": {}
+}

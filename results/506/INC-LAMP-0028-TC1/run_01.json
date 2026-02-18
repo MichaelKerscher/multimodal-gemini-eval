@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC1",
+  "timestamp": "2026-02-18T17:04:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n4470029720)",
+    "context": {
+      "asset_osm": "n4470029720"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst – Gehäuse beschädigt, mögliche Berührungsgefahr (Asset-ID: n4470029720)\n\n1. Absicherung  \n- Bereich sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Gefahr durch Strom“ aufstellen.  \n- Unbefugte fernhalten.\n\n2. Sichtprüfung  \n- Sichtkontrolle: Wie groß ist der Schaden?  \n- Liegen Kabel frei oder sind metallische Teile berührbar?  \n- Ist Feuchtigkeit eingedrungen?\n\n3. Diagnose/Beobachtung  \n- Funktioniert die Anlage noch?  \n- Gibt es Funken, Geräusche oder Geruchsentwicklung?  \n- Ist die Stromversorgung abschaltbar (z.B. Sicherungskasten vor Ort)?\n\n4. Dokumentation  \n- Schaden fotografieren (Detail und Übersicht).  \n- Asset-ID, Standort, Uhrzeit, Maßnahmen notieren.  \n- Gefahrenlage dokumentieren.\n\n5. Eskalation  \n- Sofortige Meldung an Elektro-Fachkraft/Notdienst.  \n- Bei akuter Gefahr: Feuerwehr/Polizei verständigen.  \n- Weiterleitung an zuständige Stelle für Reparatur.\n\nBitte Rückmeldung:  \n- Ist die Stromversorgung zugänglich?  \n- Gibt es Hinweise auf weitere Schäden (z.B. an der Elektrik oder Umgebung)?",
+    "tokens_estimate_words": 131
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Klare 5-Schritte-Struktur mit sofortiger Absicherung, umfassender Sichtprüfung, Dokumentation und Eskalation. Sicherheitsfokus durchgängig erkennbar, keine Halluzinationen bei minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 2.861
+  },
+  "error": {}
+}

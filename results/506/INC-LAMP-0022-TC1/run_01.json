@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-18T17:02:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Sofortmaßnahmen – Asset-ID: n1987093607\n\n1. Absicherung  \n- Bereich um die Straßenlampe sichern, falls möglich (z.B. Warnbaken, Absperrband).\n- Bei akuter Gefährdung: Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe: Ist das Leuchtmittel beschädigt? Sind Kabel sichtbar oder lose?  \n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Notieren: Ist die Lampe komplett dunkel oder flackert sie?  \n- Prüfen, ob Stromausfall im Umfeld vorliegt.  \n- Beobachten, ob sich die Situation verändert (z.B. Lampe geht wieder an).\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Dauer der Dunkelheit, Sicherheitsrisiko dokumentieren.  \n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Meldung an zuständige Wartungsfirma oder städtischen Betrieb mit allen Infos.  \n- Bei erhöhter Gefährdung: Sofortige Eskalation an Notdienst.\n\nFehlende Infos:  \n- Ist der Bereich stark frequentiert (Fußgänger, Verkehr)?  \n- Gibt es weitere defekte Lampen in der Nähe?\n\nBitte ergänzen, falls möglich.",
+    "tokens_estimate_words": 143
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextinformationen zu Severity/Umgebung vorhanden, daher angemessen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, angemessen für minimalen Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.529
+  },
+  "error": {}
+}

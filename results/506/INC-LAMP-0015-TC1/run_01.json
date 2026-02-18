@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC1",
+  "timestamp": "2026-02-18T17:00:04",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n13293431103)",
+    "context": {
+      "asset_osm": "n13293431103"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Sofortmaßnahmen bei Ausfall einer Straßenlampe (Asset-ID: n13293431103):\n\n1. Absicherung  \n– Bereich möglichst absperren oder mit Warnhinweis kennzeichnen, falls akute Gefahr besteht (z.B. schlechte Sicht, Unfallrisiko).  \n– Bei stark frequentierten oder besonders unsicheren Bereichen ggf. Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n– Ist nur diese Lampe betroffen oder mehrere im Umfeld?  \n– Gibt es sichtbare Schäden am Mast, Leuchtkörper oder Kabel?  \n– Liegt ein Stromausfall in der Umgebung vor?\n\n3. Diagnose/Beobachtung  \n– Prüfen, ob die Lampe ggf. durch Zeitschaltuhr oder Sensor gesteuert wird (kurzfristige Dunkelheit kann vorkommen).  \n– Bei Einzel-Ausfall: Möglicher Defekt am Leuchtmittel, Sensor oder Steuerung.  \n– Bei mehreren Lampen: Möglicher Stromausfall oder Netzproblem.\n\n4. Dokumentation  \n– Asset-ID, Standort, Zeitpunkt des Ausfalls, Beobachtungen und ggf. Fotos notieren.  \n– Unsicherheitsfaktor (z.B. Schulweg, Hauptstraße) hervorheben.\n\n5. Eskalation  \n– Meldung an zuständige Wartungsfirma oder kommunale Leitstelle mit allen Infos.  \n– Bei erhöhter Gefährdung (z.B. Schulweg, Unfallstelle): Dringlichkeit betonen und ggf. Polizei/Ordnungsamt zusätzlich informieren.\n\nRückfrage:  \nHandelt es sich um einen besonders sensiblen Bereich (z.B. Schulweg, Hauptstraße, Bushaltestelle)? Sind weitere Lampen betroffen oder nur diese eine?",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC1",
+    "missing_elements": [
+      "judge_block_missing_fallback"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
+    "scores": {
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    }
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.967
+  },
+  "error": {}
+}

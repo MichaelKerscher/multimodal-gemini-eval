@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0025-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Konkrete Sicherheitsmaßnahmen bei 'Bereich wirkt unsicher' könnten expliziter sein"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Context korrekt genutzt wurde. Safety könnte bei 'wirkt unsicher' noch stärker betont werden."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high führen zu starkem Safety-Fokus (Warnbaken, Polizei). Low_battery wird korrekt als Geräte-Constraint interpretiert, keine Spekulation. Alle Context-Elemente sinnvoll genutzt."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: Berücksichtigt low_battery korrekt als Workflow-Constraint ('offline dokumentieren'), nutzt alle Context-Signale (high severity, traffic, night, poor_visibility) für Safety-Priorisierung. Klare Eskalationswege, keine Halluzinationen."
+  }
+]

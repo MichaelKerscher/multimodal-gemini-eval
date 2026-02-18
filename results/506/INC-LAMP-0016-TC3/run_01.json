@@ -1,0 +1,277 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC3",
+  "timestamp": "2026-02-18T17:00:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "photo_available": true,
+        "reporter": "dispatch"
+      },
+      "asset": {
+        "asset_osm": "n13293470414",
+        "latitude": 47.8570666,
+        "longitude": 12.1309433
+      },
+      "device": {
+        "connectivity": "spotty",
+        "device_state": "low_battery"
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache.",
+          "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen."
+        ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "high",
+          "fault_type": "intermittent",
+          "offline": false,
+          "spotty": true,
+          "connectivity": "spotty",
+          "device_state": "low_battery",
+          "low_battery": true,
+          "weather": "rain",
+          "poor_visibility": true,
+          "time_of_day": "dusk",
+          "photo_available": true
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 995
+        },
+        "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "incident.photo_available",
+            "prio": "P1",
+            "reason": "workflow-cue"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 995,
+    "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "incident.photo_available",
+        "prio": "P1",
+        "reason": "workflow-cue"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      }
+    ],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall (hohe Priorität, schlechte Sicht, Regen, Dämmerung):\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei schlechter Sicht und Regen: Bereich mit Pylonen/Kegel sichern, ggf. Warnleuchte aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf Schäden, Feuchtigkeit, lose Kabel, Vandalismus prüfen.\n   - Foto vom Zustand machen (offline speichern, falls Verbindung schlecht).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampe aktuell stabil leuchtet.\n   - Notieren, ob Fehler nur bei bestimmten Wetterbedingungen oder Zeiten auftritt.\n   - Typische Ursachen: Feuchtigkeitseintritt, Wackelkontakt, Elektronikfehler.\n\n4. **Dokumentation**\n   - Alle Beobachtungen, Fotos und Maßnahmen lokal erfassen (offlinefähig).\n   - Fehlerbeschreibung: „Lampe war aus, jetzt an – sporadischer Fehler, hohe Priorität wegen Sicht und Wetter.“\n\n5. **Eskalation**\n   - Bei hohem Risiko (schlechte Sicht, Dämmerung, Regen): Störmeldung mit Priorität „hoch“ an Fachbereich weiterleiten.\n   - Hinweis: Vor Ort keine Reparatur möglich? Schnelle Weitergabe für Fachtechniker-Einsatz.\n\n**Rückfrage:**  \nIst die Lampe Teil einer größeren Gruppe mit ähnlichen Problemen? Gibt es Hinweise auf Feuchtigkeit im Mast oder Schaltkasten?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, Safety-First bei poor_visibility/rain/dusk, Eskalation mit Priorität, klare Dokumentation. Vollständige Kontextnutzung ohne Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.017
+  },
+  "error": {}
+}

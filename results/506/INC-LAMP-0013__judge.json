@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle relevanten Schritte (Absicherung, Diagnose, Dokumentation, Eskalation) sind präzise und umsetzbar beschrieben."
+  },
+  {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Verkehrsexposition, Dämmerung). Sicherheitsmaßnahmen sind umfassend und situationsangepasst, Eskalation klar definiert, Dokumentation vollständig."
+  },
+  {
+    "test_id": "INC-LAMP-0013-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Präzise Antwort mit korrekter Interpretation der Kontexthinweise (photo_available als Workflow-Cue, device.* bezieht sich auf Techniker-Gerät). Sicherheit priorisiert, Eskalation klar, Dokumentation strukturiert."
+  }
+]

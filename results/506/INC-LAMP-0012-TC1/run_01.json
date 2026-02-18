@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC1",
+  "timestamp": "2026-02-18T16:59:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n12520338291)",
+    "context": {
+      "asset_osm": "n12520338291"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Störungsbearbeitung – Asset n12520338291\n\n1. Absicherung  \n– Bereich um die Straßenlampe absichern (z. B. Warnbaken, Absperrband), falls erhöhte Unfallgefahr besteht.  \n– Bei stark frequentierten oder schlecht einsehbaren Bereichen ggf. Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n– Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, Kabel sichtbar, Mast beschädigt)?  \n– Prüfen, ob weitere Lampen in unmittelbarer Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n– Notieren: Lampe seit ca. 20 Minuten dunkel, keine offensichtlichen Schäden gemeldet.  \n– Mögliche Ursachen: Stromausfall, Defekt Leuchtmittel, Steuerungsausfall.\n\n4. Dokumentation  \n– Asset-ID, Zeitpunkt, Dauer der Dunkelheit, Sicherheitsrisiko (unsicherer Bereich), Sichtprüfungsergebnis dokumentieren.\n\n5. Eskalation  \n– Meldung an zuständige Wartungsfirma/Techniker mit Hinweis auf Sicherheitsrisiko und schnelle Bearbeitung.  \n– Bei akuter Gefährdung: Sofortige Eskalation an Einsatzleitung/Notdienst.\n\nRückfrage:  \nIst der Bereich stark frequentiert (Fußgänger, Verkehr)? Gibt es weitere Lampen, die ebenfalls betroffen sind?  \nBitte ggf. Fotos oder genauere Standortbeschreibung bereitstellen.",
+    "tokens_estimate_words": 143
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt und keine Offline-Workflows erwartet werden können."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.314
+  },
+  "error": {}
+}

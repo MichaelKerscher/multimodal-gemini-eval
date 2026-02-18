@@ -1,0 +1,60 @@
+[
+  {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung der Verkehrssicherheit bei dunklem Abschnitt"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber bei minimalem Kontext nicht überbetont; keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
+    ],
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (high severity, traffic_exposure, poor_visibility), klarer Eskalation und Kontextnutzung. Offline-Workflow fehlt bei spotty connectivity."
+  },
+  {
+    "test_id": "INC-LAMP-0010-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Umsetzung: Safety-First bei high severity/traffic/poor visibility, expliziter Offline-Workflow bei spotty connectivity, klare Eskalation, vollständige Kontextnutzung ohne Halluzinationen."
+  }
+]

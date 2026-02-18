@@ -1,0 +1,61 @@
+[
+  {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da L0-Kontext minimal ist und keine Spekulation erfolgt."
+  },
+  {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (spotty connectivity)",
+      "Device-State-Hinweis könnte klarer sein (Techniker-Gerät vs. Asset)"
+    ],
+    "short_justification": "Gute Kontextnutzung (Wetter, Sicht, Batterie, Severity). Eskalation und Safety vorhanden. K=3, da Offline-Workflow bei spotty connectivity fehlt."
+  },
+  {
+    "test_id": "INC-LAMP-0016-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, Safety-First bei poor_visibility/rain/dusk, Eskalation mit Priorität, klare Dokumentation. Vollständige Kontextnutzung ohne Halluzinationen."
+  }
+]

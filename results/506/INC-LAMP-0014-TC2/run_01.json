@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-18T16:59:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe (Ausfall)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Standort sichern (Absperrung falls nötig, besonders bei Arbeiten am Mast).\n   - Umgebung prüfen: Verkehr gering, Sicht gut – keine akute Gefährdung.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich inspizieren: Schäden am Mast, Leuchtmittel, Kabel, Sockel?\n   - Prüfen, ob Fremdkörper, Vandalismus oder Feuchtigkeit sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Lampe bleibt aus, Gerät online und Zustand „ok“ – Stromversorgung prüfen.\n   - Sicherungen, Schaltkasten oder Verbindungskabel kontrollieren.\n   - Annahme: Kein Foto verfügbar, daher keine Detailanalyse möglich.\n\n4. **Dokumentation**\n   - Befund notieren: Lampe leuchtet nicht, keine sichtbaren Schäden, Gerät online.\n   - Zeitpunkt und Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Elektriker oder Fachfirma informieren, falls Stromversorgung oder Leuchtmittel defekt.\n   - Bei Verdacht auf Elektrikproblem: Gefahrenstelle kennzeichnen, Reparatur veranlassen.\n\n**Rückfrage:**  \nSoll vor Ort direkt ein Austausch des Leuchtmittels erfolgen oder ist eine tiefergehende Prüfung der Stromversorgung gewünscht?",
+    "tokens_estimate_words": 141
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Verkehr gering, Sicht gut, Tag). Klare Struktur, Sicherheit priorisiert, Dokumentation und Eskalation präzise. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.472
+  },
+  "error": {}
+}

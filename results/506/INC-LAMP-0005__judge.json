@@ -1,0 +1,61 @@
+[
+  {
+    "test_id": "INC-LAMP-0005-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Erwähnung von Umgebungsbedingungen (nicht im Context verfügbar)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden war und Antwort entsprechend generisch bleibt."
+  },
+  {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
+      "Batterie-Warnung erwähnt, aber keine Handlungsempfehlung dazu"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, mittlerer Verkehr, kein Foto). Absicherung und Dokumentation sehr gut. Offline-Workflow fehlt bei spotty connectivity – K=3."
+  },
+  {
+    "test_id": "INC-LAMP-0005-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt (lokal speichern, später synchronisieren), Batterie-Warnung mit Handlungsempfehlung, alle Umgebungsfaktoren berücksichtigt. Keine Halluzinationen."
+  }
+]

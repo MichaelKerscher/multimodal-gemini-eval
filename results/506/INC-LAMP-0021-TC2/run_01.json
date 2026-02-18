@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC2",
+  "timestamp": "2026-02-18T17:02:07",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst – Straßenlampe Rosenheim, Rechenauerstraße\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial aufstellen (bei Nacht und Regen besonders wichtig).\n   - Umfeld auf weitere Gefahren prüfen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeit oder lose Teile kontrollieren.\n   - Prüfen, ob Kabel oder Anschlüsse sichtbar beeinträchtigt sind.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Ist es dauerhaft oder sporadisch?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Kontaktstellen (sofern zugänglich) auf Korrosion oder Feuchtigkeit prüfen.\n\n4. **Dokumentation**\n   - Fotos vom Lampenkopf, Mast und Anschlussbereich machen.\n   - Beobachtungen und Zeitpunkt notieren.\n   - Bericht im System erfassen.\n\n5. **Eskalation**\n   - Bei Verdacht auf Kontaktproblem oder Feuchtigkeit: Elektriker verständigen.\n   - Bei Gefahr für Verkehrssicherheit (z.B. Totalausfall): Sofortige Meldung an Leitstelle.\n\n**Rückfrage:**  \nSind Zugang und Werkzeug für eine genauere Prüfung der Kontakte vor Ort möglich, oder muss ein Elektriker hinzugezogen werden?",
+    "tokens_estimate_words": 141
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
+    ],
+    "short_justification": "Exzellente Strukturierung mit Nacht/Regen-Anpassungen und klarer Eskalation. Connectivity=spotty wurde nicht berücksichtigt (kein Offline-Workflow), daher K=3."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.18
+  },
+  "error": {}
+}

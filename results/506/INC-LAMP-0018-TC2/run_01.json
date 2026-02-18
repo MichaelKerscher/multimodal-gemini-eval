@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-18T17:01:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Steuerungsproblem – Segment fällt zeitgleich aus**\n\n1. **Absicherung**\n   - Warnbaken und Absperrmaterial bereitstellen.\n   - Bereich um die Steuerungsbox und betroffene Lampen/Ampeln sichern.\n   - Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): Warnwesten tragen, zusätzliche Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Steuerungsbox und Verkabelung durchführen.\n   - Prüfen, ob äußere Schäden, Manipulation oder Feuchtigkeit sichtbar sind.\n   - Segment (betroffene Lampen/Ampeln) auf gleichzeitigen Ausfall prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Steuerungsbox öffnen (nur mit Berechtigung).\n   - Statusanzeigen und Sicherungen kontrollieren.\n   - Verbindung zu Online-System prüfen (laut Daten: Gerät online, Zustand ok).\n   - Annahme: Fehler liegt nicht am Endgerät, sondern an der Steuerung.\n   - Bei fehlender Sicht auf Ursache: Rückfrage, ob weitere Segmente betroffen sind oder ob vor Kurzem Wartungsarbeiten stattfanden.\n\n4. **Dokumentation**\n   - Vorfall und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Beteiligte).\n   - Fotos machen (wenn möglich).\n   - Fehlerbeschreibung und Sichtprüfung dokumentieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für Verkehrsteilnehmer: Meldung an Fachbereich Elektrotechnik/IT.\n   - Bei mittlerer Schwere: Priorisierte Weiterleitung an Wartungsteam.\n   - Bürger informieren (z.B. über lokale App oder Webseite).\n\n**Rückfrage:**  \nSind weitere Segmente betroffen oder gab es kürzlich Wartungsarbeiten am Steuerungssystem?  \nFehlt eine Information zur genauen Steuerungsbox (Typ/Hersteller)?",
+    "tokens_estimate_words": 189
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, mittlere Verkehrsexposition) mit angepassten Sicherheitsmaßnahmen. Klare Diagnose-Logik, vollständige Dokumentation und angemessene Eskalation bei medium severity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.287
+  },
+  "error": {}
+}

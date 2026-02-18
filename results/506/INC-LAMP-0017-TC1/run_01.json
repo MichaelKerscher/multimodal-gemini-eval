@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC1",
+  "timestamp": "2026-02-18T17:00:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen. (Asset-ID: n4446442023)",
+    "context": {
+      "asset_osm": "n4446442023"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt entlang Schönau (Asset-ID: n4446442023).\n\nHier ist die empfohlene Vorgehensweise:\n\n1. Absicherung  \nSicherstellen, dass der Bereich ausreichend abgesperrt oder markiert ist, um Verkehrsteilnehmer vor möglichen Gefahren durch die Dunkelheit zu schützen.\n\n2. Sichtprüfung  \nVor Ort prüfen, ob mehrere Straßenlampen betroffen sind oder nur einzelne. Sichtkontrolle auf offensichtliche Schäden (z.B. defekte Leuchtmittel, beschädigte Masten, Kabel).\n\n3. Diagnose/Beobachtung  \nFeststellen, ob die Lampen komplett ausfallen oder nur teilweise. Prüfen, ob ein Stromausfall, Zeitschaltfehler oder andere technische Probleme vorliegen. Notieren, ob weitere Infrastruktur (z.B. Ampeln) betroffen ist.\n\n4. Dokumentation  \nAlle Beobachtungen und Maßnahmen schriftlich festhalten. Asset-ID (n4446442023) und genaue Position dokumentieren.\n\n5. Eskalation  \nBei großflächigem Ausfall oder Gefahr für Verkehrsteilnehmer sofort an die zuständige Fachabteilung oder den Bereitschaftsdienst weiterleiten.\n\nFragen:  \n- Ist der Abschnitt besonders stark frequentiert oder gibt es Hinweise auf Unfälle?\n- Sind weitere Assets (z.B. Ampeln) betroffen oder nur die Straßenbeleuchtung?\n\nBitte um Rückmeldung, falls weitere Details bekannt sind.",
+    "tokens_estimate_words": 155
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen bei minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.248
+  },
+  "error": {}
+}

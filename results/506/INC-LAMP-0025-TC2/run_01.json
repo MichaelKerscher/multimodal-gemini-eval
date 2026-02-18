@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-18T17:03:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampen-Ausfall – Isarstraße/Gewerbegebiet, Rosenheim\n\n1. **Absicherung**\n   - Bereich sofort absichern, z.B. Warnbaken oder reflektierende Absperrungen aufstellen.\n   - Bei hoher Verkehrsexposition: Polizei oder Ordnungsamt informieren, falls Gefahr besteht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Manipulation oder Vandalismus prüfen.\n   - Umgebung auf weitere Ausfälle oder ungewöhnliche Situationen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, aber Batterie schwach: Vermutlich Stromversorgung/Batterieproblem.\n   - Prüfen, ob andere Lampen betroffen sind.\n   - Foto auswerten (falls verfügbar) für weitere Hinweise.\n\n4. **Dokumentation**\n   - Alle Beobachtungen, Maßnahmen und Fotos im System erfassen.\n   - Zeit, Ort, Beteiligte und Gefahrenlage dokumentieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort Techniker mit Ersatzbatterie/Material anfordern.\n   - Bei akuter Unsicherheit: Polizei/Ordnungsamt zur weiteren Absicherung hinzuziehen.\n\n**Rückfrage:**  \nIst die Lampe Teil einer größeren Ausfallserie oder handelt es sich um einen Einzelfall? Gibt es Hinweise auf Vandalismus oder Manipulation?",
+    "tokens_estimate_words": 137
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "missing_elements": [
+      "judge_block_missing_fallback"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
+    "scores": {
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    }
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.0
+  },
+  "error": {}
+}

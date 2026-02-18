@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC1",
+  "timestamp": "2026-02-18T16:57:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293341689)",
+    "context": {
+      "asset_osm": "n13293341689"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt (Asset-ID: n13293341689). Hier ist die empfohlene Vorgehensweise:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n– Stelle sicher, dass der Bereich ausreichend abgesichert ist (Warnbaken, Absperrungen, ggf. Warnleuchten), um Verkehrsteilnehmer zu schützen.\n\n2. Sichtprüfung  \n– Überprüfe vor Ort, ob die Straßenlampen tatsächlich ausgefallen sind oder ob andere Ursachen (z.B. Bäume, Baustellen) die Beleuchtung beeinträchtigen.\n\n3. Diagnose/Beobachtung  \n– Prüfe, ob einzelne Lampen oder der gesamte Abschnitt betroffen ist.  \n– Kontrolliere, ob offensichtliche Schäden, Vandalismus oder technische Defekte vorliegen (z.B. lose Kabel, defekte Leuchtmittel).\n\n4. Dokumentation  \n– Notiere den genauen Standort, Umfang des Ausfalls und ggf. Besonderheiten (z.B. Unfallgefahr, stark frequentierte Strecke).  \n– Fotografiere die Situation zur späteren Nachverfolgung.\n\n5. Eskalation  \n– Melde den Befund umgehend an die zuständige Wartungsfirma oder das kommunale Infrastrukturmanagement.  \n– Bei erhöhter Unfallgefahr: Sofortige Priorisierung und ggf. zusätzliche Absicherung.\n\nRückfrage:  \nSind weitere Details zum Abschnitt bekannt (z.B. Länge, Anzahl betroffener Lampen, besondere Gefahrenstellen)? Falls nicht, gehe ich von einem Standard-Straßenabschnitt aus.\n\nBitte gib Bescheid, wenn du zusätzliche Informationen hast oder Unterstützung vor Ort benötigst.",
+    "tokens_estimate_words": 170
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.616
+  },
+  "error": {}
+}

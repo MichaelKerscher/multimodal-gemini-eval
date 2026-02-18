@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC2",
+  "timestamp": "2026-02-18T16:58:28",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427955479",
+        "longitude": 12.1253894,
+        "latitude": 47.8562438,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Stadtmitte"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "reporter": "internal",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt Rosenheim, Stadtmitte\n\n1. **Absicherung**\n   - Warnwesten tragen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen.\n   - Verkehr ggf. umleiten oder sichern, da hohe Verkehrsbelastung und schlechte Sicht.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen: Sind Lampen beschädigt, defekt oder ausgeschaltet?\n   - Prüfen, ob Stromversorgung sichtbar gestört (z.B. lose Kabel, Wassereintritt durch Regen).\n   - Umgebung auf weitere Gefahren (z.B. rutschige Fahrbahn, Hindernisse) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Lampen einzeln schalten, falls möglich.\n   - Prüfen, ob Ausfall auf einzelne Lampen oder gesamten Abschnitt begrenzt ist.\n   - Gerät vor Ort: Verbindung ist instabil, daher ggf. manuelle Prüfung bevorzugen.\n   - Foto auswerten (falls verfügbar): Gibt es Hinweise auf Ursache (z.B. Vandalismus, Wasserschaden)?\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, betroffene Lampen, ggf. Fotos).\n   - Fehlerbild und vermutete Ursache notieren.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall und hoher Verkehrssicherheit: Sofortige Meldung an zentrale Leitstelle/Störungsdienst.\n   - Dringende Reparatur anfordern, ggf. Notbeleuchtung installieren.\n   - Rückmeldung an Melder (intern).\n\n**Rückfrage:**  \nSind bereits Notmaßnahmen (z.B. temporäre Beleuchtung) installiert oder wird dies gewünscht?  \nLiegt ein aktuelles Foto zur Auswertung vor?",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
+    ],
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (high severity, traffic_exposure, poor_visibility), klarer Eskalation und Kontextnutzung. Offline-Workflow fehlt bei spotty connectivity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.464
+  },
+  "error": {}
+}

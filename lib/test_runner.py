@@ -2,6 +2,7 @@
 import os
 import time
 import json
+import re
 from dotenv import load_dotenv
 
 from lib.logger import log_response
@@ -39,6 +40,7 @@ def _sanitize_judge_jsonish(text: str) -> str:
     - fixes mojibake smart quotes (â€ž â€œ â€ etc.)
     - normalizes unicode quotes
     - removes BOM
+    - removes common trailing commas before } or ]
     """
     if not isinstance(text, str):
         return text
@@ -56,6 +58,9 @@ def _sanitize_judge_jsonish(text: str) -> str:
     for a, b in replacements.items():
         s = s.replace(a, b)
 
+    # common trailing commas: { ... ,} or [ ... ,]
+    s = re.sub(r",(\s*[}\]])", r"\1", s)
+
     return s
 
 
@@ -68,6 +73,72 @@ def _extract_first_json_array(text: str) -> str | None:
     if l != -1 and r != -1 and r > l:
         return s[l : r + 1]
     return None
+
+
+def _repair_unescaped_quotes_in_json_strings(s: str) -> str:
+    """
+    Heuristic repair for invalid JSON produced by LLMs:
+    replaces unescaped " inside JSON string literals with apostrophes ',
+    so that json.loads() succeeds.
+
+    It keeps:
+      - string delimiters "
+      - escaped quotes \" unchanged
+    It only repairs a quote " when we are inside a string and it does NOT
+    look like the end of that string.
+
+    This specifically fixes cases like:
+      "short_justification": "Text mit ("Zitat") kaputt"
+    """
+    if not isinstance(s, str) or '"' not in s:
+        return s
+
+    out: list[str] = []
+    in_str = False
+    esc = False
+    i = 0
+    n = len(s)
+
+    def looks_like_string_end(idx: int) -> bool:
+        # idx points to a '"' while in_str=True and not escaped.
+        j = idx + 1
+        while j < n and s[j] in " \t\r\n":
+            j += 1
+        if j >= n:
+            return True
+        return s[j] in [",", "}", "]"]
+
+    while i < n:
+        ch = s[i]
+
+        if in_str:
+            if esc:
+                out.append(ch)
+                esc = False
+            else:
+                if ch == "\\":
+                    out.append(ch)
+                    esc = True
+                elif ch == '"':
+                    # Either closes string or is broken inner quote
+                    if looks_like_string_end(i):
+                        out.append(ch)
+                        in_str = False
+                    else:
+                        out.append("'")
+                else:
+                    out.append(ch)
+        else:
+            if ch == '"':
+                out.append(ch)
+                in_str = True
+                esc = False
+            else:
+                out.append(ch)
+
+        i += 1
+
+    return "".join(out)
 
 
 def _try_parse_judge_array(judge_out: str) -> list[dict] | None:
@@ -92,13 +163,28 @@ def _try_parse_judge_array(judge_out: str) -> list[dict] | None:
     # 2) fallback: extract first array
     candidate = _extract_first_json_array(s)
     if candidate:
+        candidate = _sanitize_judge_jsonish(candidate)
         try:
             obj = json.loads(candidate)
             return obj if isinstance(obj, list) else None
         except Exception:
-            return None
+            # 3) repair unescaped quotes inside strings
+            repaired = _repair_unescaped_quotes_in_json_strings(candidate)
+            repaired = _sanitize_judge_jsonish(repaired)
+            try:
+                obj = json.loads(repaired)
+                return obj if isinstance(obj, list) else None
+            except Exception:
+                return None
 
-    return None
+    # 3b) last resort: repair whole text
+    repaired = _repair_unescaped_quotes_in_json_strings(s)
+    repaired = _sanitize_judge_jsonish(repaired)
+    try:
+        obj = json.loads(repaired)
+        return obj if isinstance(obj, list) else None
+    except Exception:
+        return None
 
 
 def _score_block_to_expected_schema(block: dict) -> dict:
@@ -172,6 +258,8 @@ EXPECTED ELEMENTS (Fault-Type: {fault_type}, Domain: {asset_type}):
 >>>
 
 Bitte gib nur JSON im definierten Schema zurück.
+WICHTIG: Gib gültiges JSON aus. In String-Feldern (z.B. short_justification) benutze keine doppelten Anführungszeichen ".
+Wenn nötig, ersetze sie durch einfache Anführungszeichen ' oder escape als \\\".
 """
 
 
@@ -226,6 +314,9 @@ EXPECTED ELEMENTS:
 <<<
 {expected_elements}
 >>>
+
+WICHTIG: Gib gültiges JSON aus. In String-Feldern (z.B. short_justification) benutze keine doppelten Anführungszeichen ".
+Wenn nötig, ersetze sie durch einfache Anführungszeichen ' oder escape als \\\".
 
 BLOCKS:
 {''.join(blocks)}
@@ -477,6 +568,10 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
         print(f"[LOG] Judge-Artifact gespeichert unter: {artifact_path}")
 
         judge_array = _try_parse_judge_array(judge_raw_clean)
+
+        # Optional health check (helpful for debugging)
+        if judge_raw_clean and not judge_array:
+            print("[WARN] Judge-Artifact gespeichert, aber JSON-Array konnte nicht geparsed werden (nach Repair).")
 
     # Build mapping
     judge_by_test_id: dict[str, dict] = {}

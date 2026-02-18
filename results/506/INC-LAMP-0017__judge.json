@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen bei minimalem Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Low-Power-Mode-Hinweis könnte präziser sein (Gerät vs. Asset)"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, Foto, Low-Power). Sicherheit priorisiert, Eskalation klar, Dokumentation vollständig. Kleine Unschärfe bei Low-Power-Interpretation."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Kontextnutzung inkl. Guardrails (Low-Battery → offline dokumentieren). Sicherheit, Eskalation, Dokumentation vollständig. Keine Halluzinationen, präzise Unterscheidung Gerät/Asset."
+  }
+]

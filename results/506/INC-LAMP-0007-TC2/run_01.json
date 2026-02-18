@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC2",
+  "timestamp": "2026-02-18T16:57:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-21T18:59:18+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst – Straßenlampe „Rosenheim, BRK-Heim“\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Pylonen, Warnleuchte).\n   - Bereich um die Lampe sichern, besonders bei mittlerem Verkehr und Sturm.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Mastfußes auf offensichtliche Schäden, lose Kabel oder Feuchtigkeitseintritt.\n   - Prüfen, ob Flackern auch bei anderen Lampen auftritt.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Dauer, Häufigkeit, Zusammenhang mit Wetter (Sturm).\n   - Kontaktstellen (Klemmleiste, Anschlusskasten) auf Korrosion oder lose Verbindungen prüfen.\n   - Gerät ist offline – Annahme: Fernwartung nicht möglich, vor Ort prüfen.\n\n4. **Dokumentation**\n   - Fotos vom Lampenkopf, Anschlusskasten und Umgebung machen.\n   - Beobachtungen und Maßnahmen schriftlich festhalten (z.B. Checkliste, Tablet).\n\n5. **Eskalation**\n   - Bei festgestellten Kontaktproblemen: Reparaturbedarf an die Elektrotechnik melden.\n   - Bei Gefahr durch Sturm oder beschädigte Teile: Sofortige Sperrung und Meldung an Einsatzleitung.\n\n**Rückfrage:**  \nSind Ersatzteile oder Werkzeug für Kontaktprüfung vor Ort verfügbar?  \nSoll eine sofortige Reparatur erfolgen oder nur eine Erstdiagnose?",
+    "tokens_estimate_words": 150
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur angedeutet, nicht explizit als Constraint formuliert"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, mittlerer Verkehr, Offline-Gerät erwähnt). Offline-Workflow wird implizit adressiert ('Gerät ist offline – vor Ort prüfen'), könnte aber expliziter sein (z.B. 'lokal dokumentieren, später synchronisieren')."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.531
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC1",
+  "timestamp": "2026-02-18T16:57:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n4484173276)",
+    "context": {
+      "asset_osm": "n4484173276"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampen-Aussetzer (Asset-ID: n4484173276)\n\n1. Absicherung  \n- Bereich absperren (Warnbaken, ggf. Warnwesten tragen)  \n- Stromzufuhr prüfen, ggf. abschalten  \n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Anschlussstellen  \n- Prüfen auf lose Kabel, Korrosion, Feuchtigkeit  \n\n3. Diagnose/Beobachtung  \n- Lampe einschalten und Verhalten beobachten  \n- Flackern und Aussetzer dokumentieren (Zeitpunkt, Dauer, Häufigkeit)  \n- Kontaktstellen vorsichtig bewegen, prüfen ob Flackern beeinflusst wird  \n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen notieren  \n- Fotos von auffälligen Stellen machen  \n- Asset-ID und Standort vermerken  \n\n5. Eskalation  \n- Bei Verdacht auf defekte Kontakte: Elektrofachkraft informieren  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Reparatur veranlassen  \n- Meldung an zuständige Stelle weiterleiten  \n\nFehlende Infos:  \n- Ist die Lampe Teil einer Kette oder Einzelstandort?  \n- Gibt es bereits bekannte Probleme an diesem Standort?  \n\nBitte Rückmeldung zu diesen Punkten geben, damit ich gezielt weiter unterstützen kann.",
+    "tokens_estimate_words": 134
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht und bleibt bei generischen, sinnvollen Schritten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 2.922
+  },
+  "error": {}
+}

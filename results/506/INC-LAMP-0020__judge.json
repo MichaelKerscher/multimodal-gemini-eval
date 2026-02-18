@@ -1,0 +1,59 @@
+[
+  {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Priorisierung bei minimaler Kontextlage",
+      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung und Eskalation. Bei L0-Kontext angemessen generisch, keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility, severity=high). Klare Safety-Priorisierung, Eskalation bei Gefährdung, präzise Diagnose-Hinweise (low_power_mode, Feuchtigkeit). Vollständig nachvollziehbar."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Kontextintegration inkl. Guardrails (device_state korrekt als Techniker-Gerät interpretiert, offlinefähige Dokumentation erwähnt). Safety-First bei Nacht/Regen/poor_visibility, klare Eskalation, keine Spekulation."
+  }
+]

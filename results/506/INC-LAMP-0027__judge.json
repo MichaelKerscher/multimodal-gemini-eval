@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt und keine unbegründeten Annahmen getroffen werden."
+  },
+  {
+    "test_id": "INC-LAMP-0027-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht ausreichend konkret beschrieben"
+    ],
+    "short_justification": "Gute Struktur und Kontextnutzung (traffic_exposure, spotty connectivity erwähnt). Offline-Workflow wird angedeutet ('spotty Konnektivität prüfen'), aber nicht explizit als Handlungsanweisung formuliert (lokal dokumentieren/später sync)."
+  },
+  {
+    "test_id": "INC-LAMP-0027-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Vollständige Kontextnutzung (spotty connectivity → expliziter Offline-Workflow), klare Safety-Priorisierung bei hohem Verkehr, strukturierte Dokumentation und Eskalation. Keine Halluzinationen, alle Aussagen durch Context gedeckt."
+  }
+]

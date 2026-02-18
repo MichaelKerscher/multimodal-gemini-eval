@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-18T17:01:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Einsatz – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. Absicherung\n- Warnbaken und Absperrmaterial bereitstellen.\n- Warnwesten tragen, Einsatzfahrzeug mit Blinklicht positionieren.\n- Bei Regen und schlechter Sicht besonders auf Verkehrssicherung achten.\n\n2. Sichtprüfung\n- Standort gemäß Koordinaten (47.856655, 12.129258) aufsuchen.\n- Sichtkontrolle aller Lampen im Abschnitt: Sind mehrere oder alle Leuchten betroffen?\n- Prüfen, ob Schäden an Masten, Leuchten oder Verkabelung sichtbar sind.\n\n3. Diagnose/Beobachtung\n- Gerät ist online, aber im „low power mode“ – mögliche Ursache: Stromversorgung oder Steuerung.\n- Wetter: Regen – Feuchtigkeit kann Kurzschlüsse oder Ausfälle verursachen.\n- Prüfen, ob Sicherungen ausgelöst sind oder Feuchtigkeitsschäden vorliegen.\n- Foto auswerten (falls verfügbar): Gibt es Hinweise auf Defekte oder Fremdeinwirkung?\n\n4. Dokumentation\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos).\n- Zeitpunkt, Standort, betroffene Leuchten, vermutete Ursache dokumentieren.\n\n5. Eskalation\n- Bei hoher Ausfall-Schwere und schlechter Sicht: Sofortige Meldung an Bereitschaft/Technik.\n- Falls Gefahr für Verkehrsteilnehmer besteht: Polizei/Ordnungsamt informieren.\n- Reparaturteam oder Elektriker anfordern, falls Fehler nicht vor Ort behebbar.\n\nRückfrage: Sind weitere Abschnitte betroffen oder nur dieser Standort? Gibt es Hinweise auf Stromausfall im Umfeld?",
+    "tokens_estimate_words": 179
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility, severity=high). Klare Safety-Priorisierung, Eskalation bei Gefährdung, präzise Diagnose-Hinweise (low_power_mode, Feuchtigkeit). Vollständig nachvollziehbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.007
+  },
+  "error": {}
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine spezifischen Umgebungsdaten liefert."
+  },
+  {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sturm/Verkehr/Offline erkannt, Safety priorisiert, Offline-Workflow erwähnt, klare Eskalation bei severity=high. Vollständig kontextgerecht."
+  },
+  {
+    "test_id": "INC-LAMP-0023-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit (lokal dokumentieren/synchronisieren), Sturm/Verkehr/Sicht berücksichtigt, klare Eskalation, keine Halluzinationen. Vollständig rubrik-konform."
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC2",
+  "timestamp": "2026-02-18T17:02:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093607",
+        "longitude": 12.116472,
+        "latitude": 47.837186,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampenausfall – Rosenheim, Heilig Blut\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls der Bereich stark frequentiert wird.\n   - Bürger informieren, falls unmittelbare Gefahr besteht (z. B. bei Schneeglätte und schlechter Sicht).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, Kabel sichtbar)?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät meldet „low_battery“ – vermutlich Batterieproblem.\n   - Lampe ist online, daher keine Netzstörung.\n   - Wetter: Schnee, Sicht schlecht, Bereich unsicher → schnelle Reparatur erforderlich.\n\n4. **Dokumentation**\n   - Foto vom Ausfall und Umgebung aufnehmen (Foto liegt bereits vor).\n   - Alle Beobachtungen notieren: Zeitpunkt, Wetter, Sicht, betroffene Lampe (OSM-ID: n1987093607).\n\n5. **Eskalation**\n   - Meldung mit hoher Priorität an Wartungsteam weiterleiten (Batteriewechsel dringend).\n   - Hinweis auf Sicherheitsrisiko wegen schlechter Sicht und Schnee.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nGibt es Hinweise auf Vandalismus oder mechanische Schäden?",
+    "tokens_estimate_words": 155
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Warnung wegen poor_visibility + snow könnte stärker betont werden"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (low_battery, Schnee, dusk, severity=high). Klare Priorisierung, Safety-Fokus erkennbar, Eskalation mit Begründung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.537
+  },
+  "error": {}
+}

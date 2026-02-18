@@ -15,29 +15,29 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)"
+      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und Antwort allgemein bleibt."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nur implizit erwähnt ('Gerät offline'), nicht explizit als Handlungsanweisung (lokal dokumentieren/später synchronisieren)"
+      "Offline-Workflow fehlt (connectivity=offline im CONTEXT, aber keine lokale Dokumentation/Synchronisation erwähnt)"
     ],
-    "short_justification": "Gute Kontextnutzung (Nebel, Verkehr, Offline-Status). Offline-Workflow wird angedeutet, aber nicht klar als Arbeitsanweisung formuliert (K=3)."
+    "short_justification": "Sehr gute Struktur, kontextgerechte Sicherheitsmaßnahmen (Nebel, Verkehr). Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). K=3 wegen fehlender Offline-Handlungsanweisung."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -55,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, Kontextnutzung präzise (Nebel, Verkehr, Geräuschkulisse), klare Struktur, Dokumentation und Eskalation vollständig."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit umgesetzt (lokal dokumentieren, später synchronisieren), kontextgerechte Sicherheitsmaßnahmen, klare Struktur. Alle erwartbaren Elemente aus CONTEXT berücksichtigt."
   }
 ]

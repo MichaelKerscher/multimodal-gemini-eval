@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC2",
+  "timestamp": "2026-02-18T16:57:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293341689",
+        "longitude": 12.1302583,
+        "latitude": 47.8571756,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-20T08:57:46+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Arbeiten im Straßenraum nötig.\n   - Warnweste tragen, besonders bei Nacht und schlechter Sicht (Nebel).\n   - Verkehrslage beobachten, auch bei geringer Verkehrsbelastung.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen am Standort (OSM: n13293341689, 47.8571756/12.1302583).\n   - Prüfen, ob Lampen beschädigt, verdreht oder verschmutzt sind.\n   - Sicht auf Verkabelung und Mastzustand werfen.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Lampen einzeln prüfen, falls möglich.\n   - Bei „low_power_mode“ des Geräts: Hinweis auf Stromversorgung oder Steuerung prüfen.\n   - Connectivity ist „spotty“ – Fernwartung ggf. eingeschränkt.\n   - Wetter (Nebel) kann Sicht und Diagnose erschweren.\n   - Foto vom Vorfall vorhanden – zur Dokumentation und Analyse nutzen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Foto zum Bericht hinzufügen.\n   - Zeitpunkt und Standort exakt dokumentieren.\n\n5. **Eskalation**\n   - Bei festgestelltem Ausfall: Meldung an zuständige Wartungsfirma/Techniker.\n   - Bei Sicherheitsrisiko (z. B. stark frequentierte Kreuzung): Sofortige Eskalation.\n   - In diesem Fall: „low“ Severity, aber Sicht und Wetter verschlechtern Situation – ggf. Priorität erhöhen.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder Bauarbeiten?  \nBitte ggf. weitere Details oder Fotos bereitstellen.",
+    "tokens_estimate_words": 188
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nebel, Nacht, low_power_mode erwähnt). Offline-Workflow fehlt trotz spotty connectivity – K=3. Sicherheit und Struktur gut."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.213
+  },
+  "error": {}
+}

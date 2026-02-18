@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC2",
+  "timestamp": "2026-02-18T16:58:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-15T22:52:18+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Kontrolle – Leitzachstraße, Rosenheim (Straßenlampe)\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Kegel, Warnleuchte).\n   - Bei mittlerem Verkehrsaufkommen und schlechter Sicht: Arbeitsbereich deutlich kennzeichnen.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich inspizieren: Schäden, Verschmutzung, Feuchtigkeit.\n   - Umfeld prüfen: Kabel, Mast, Fundament.\n   - Bei Nebel besonders auf Sichtbarkeit achten.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein-/ausschalten (falls möglich).\n   - Prüfen, ob Ausfall reproduzierbar ist.\n   - Auf ungewöhnliche Geräusche oder Flackern achten.\n   - Anschluss und Steuerung kontrollieren (sofern zugänglich).\n\n4. **Dokumentation**\n   - Zustand notieren: Funktion aktuell normal, aber zeitweiser Ausfall gemeldet.\n   - Fotos machen (falls möglich).\n   - Datum, Uhrzeit, Wetter, Sichtverhältnisse dokumentieren.\n\n5. **Eskalation**\n   - Bei Verdacht auf Elektrik-/Steuerungsproblem: Fachfirma informieren.\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Sofortige Meldung an zuständige Stelle.\n\n**Rückfrage:**  \nIst Zugang zum Schaltschrank möglich oder gibt es Hinweise auf externe Steuerung?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 140
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr) mit angepassten Sicherheitsmaßnahmen. Klare Struktur, vollständige Dokumentation und passende Eskalationskriterien."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.867
+  },
+  "error": {}
+}

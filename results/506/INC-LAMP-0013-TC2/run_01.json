@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-18T16:59:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Sofortmaßnahmen – Gehäuse beschädigt, Berührungsgefahr\n\n1. **Absicherung**\n   - Warnbaken und Absperrband um das betroffene Gerät aufstellen.\n   - Bei mittlerer Verkehrsexposition: Abstand zur Fahrbahn beachten, ggf. Verkehrsleitung organisieren.\n   - Warnschilder „Stromgefahr“ und „Vorsicht – beschädigtes Gerät“ gut sichtbar platzieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Ist das Gerät offen, liegen Kabel frei, sind scharfe Kanten vorhanden?\n   - Prüfen, ob weitere Bauteile betroffen sind (z.B. Mast, Fundament).\n\n3. **Diagnose/Beobachtung**\n   - Keine Berührung! Sichtprüfung aus sicherer Entfernung.\n   - Ist das Gerät weiterhin funktionsfähig (z.B. leuchtet die Lampe, reagiert die Ampel)?\n   - Gibt es Anzeichen für weitere Gefahren (z.B. Funkenflug, Feuchtigkeit im Gehäuse)?\n\n4. **Dokumentation**\n   - Fotos vom Schaden und der Absicherung machen.\n   - Standort (Koordinaten: 47.8494009, 12.1203879) und Uhrzeit notieren.\n   - Kurzbeschreibung des Vorfalls und der Sicherungsmaßnahmen erfassen.\n\n5. **Eskalation**\n   - Sofortige Meldung an die zuständige Elektrofachkraft/Notdienst.\n   - Bei hoher Gefährdung: Polizei oder Feuerwehr zur weiteren Absicherung hinzuziehen.\n   - Weiterleitung der Dokumentation an die Leitstelle und zuständige Stelle.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Kontaktaufnahme übernehmen?  \nSind weitere Geräte in der Nähe betroffen?",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Verkehrsexposition, Dämmerung). Sicherheitsmaßnahmen sind umfassend und situationsangepasst, Eskalation klar definiert, Dokumentation vollständig."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.41
+  },
+  "error": {}
+}

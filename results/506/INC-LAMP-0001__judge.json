@@ -1,0 +1,60 @@
+[
+  {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine zusätzlichen Fakten liefert."
+  },
+  {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt (Gerät offline, low_battery)"
+    ],
+    "short_justification": "Exzellente Struktur, Safety-Fokus bei high traffic_exposure, Kontextnutzung (Batteriestand, Foto). Offline-Workflow fehlt trotz connectivity=offline."
+  },
+  {
+    "test_id": "INC-LAMP-0001-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige Antwort mit explizitem Offline-Workflow (lokal dokumentieren, später synchronisieren), Safety-Fokus, klare Eskalation. Kontext optimal genutzt, keine Halluzinationen."
+  }
+]

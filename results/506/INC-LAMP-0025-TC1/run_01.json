@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC1",
+  "timestamp": "2026-02-18T17:03:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n4465173757)",
+    "context": {
+      "asset_osm": "n4465173757"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n4465173757)\n\n1. Absicherung  \n- Bereich absperren oder warnen, falls akute Gefahr besteht (z.B. schlechte Sicht, erhöhte Unfallgefahr).\n- Warnleuchten oder Absperrmaterial bereitstellen.\n\n2. Sichtprüfung  \n- Lampe auf sichtbare Schäden prüfen (z.B. Glasbruch, lose Teile, Vandalismus).\n- Umgebung auf weitere dunkle Lampen oder Störungen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Stromversorgung vorhanden (andere Lampen in der Nähe leuchten?).\n- Einschaltzeiten und Steuerung beachten (evtl. Zeitschaltung oder Sensorfehler).\n- Bei Bedarf Lampe kurzzeitig einschalten/ausschalten, falls möglich.\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen und Maßnahmen notieren.\n- Fotos von der Lampe und Umgebung machen.\n\n5. Eskalation  \n- Bei akuter Gefährdung sofort an Leitstelle oder zuständige Stelle melden.\n- Reparaturauftrag auslösen, falls Fehler nicht vor Ort behoben werden kann.\n\nFehlende Informationen:  \n- Gibt es weitere dunkle Lampen im Bereich?  \n- Ist die Lampe Teil einer Gruppe oder Einzelanlage?  \n- Gibt es Hinweise auf Vandalismus oder Stromausfall?\n\nBitte Rückmeldung zu den offenen Punkten geben, damit ich gezielt weiter unterstützen kann.",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC1",
+    "missing_elements": [
+      "judge_block_missing_fallback"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
+    "scores": {
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    }
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.259
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC1",
+  "timestamp": "2026-02-18T17:04:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n4939032947)",
+    "context": {
+      "asset_osm": "n4939032947"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz (Asset-ID: n4939032947 – Straßenlampe)\n\n1. Absicherung  \n- Warnweste anziehen  \n- Absperrmaterial aufstellen (z. B. Leitkegel)  \n- Bereich um die Lampe sichern, besonders bei Regen und schlechter Sicht\n\n2. Sichtprüfung  \n- Lampe auf offensichtliche Schäden prüfen (Gehäuse, Mast, Verkabelung)  \n- Prüfen, ob Wasser eindringt (z. B. undichte Stellen, Feuchtigkeit im Lampenkopf)  \n- Umgebung auf Pfützen oder Überschwemmungen kontrollieren\n\n3. Diagnose/Beobachtung  \n- Flackern beobachten: Tritt es nur bei Regen auf?  \n- Prüfen, ob andere Lampen in der Nähe ähnliche Probleme zeigen  \n- Elektrische Kontakte und Dichtungen kontrollieren (sofern gefahrlos möglich)  \n- Notieren, ob das Flackern dauerhaft oder nur zeitweise auftritt\n\n4. Dokumentation  \n- Fotos vom Zustand der Lampe und Umgebung machen  \n- Beobachtungen und Verdacht auf Wassereintritt schriftlich festhalten  \n- Asset-ID, Standort, Datum/Uhrzeit dokumentieren\n\n5. Eskalation  \n- Bei Verdacht auf Wassereintritt oder Gefahr: Meldung an Elektrotechnik-Fachkraft  \n- Bei akuter Gefährdung (z. B. Stromschlagrisiko): Lampe außer Betrieb nehmen und sofort melden  \n- Weiterleitung an Instandhaltung mit allen Dokumentationen\n\nRückfrage:  \nIst das Flackern nur bei dieser Lampe oder auch bei anderen Lampen in der Nähe zu beobachten? Gibt es Hinweise auf Wassereintritt (z. B. Tropfen im Gehäuse)?",
+    "tokens_estimate_words": 186
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt und keine unbegründeten Annahmen getroffen werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.287
+  },
+  "error": {}
+}

@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Offline-Workflow nicht erwähnt (CONTEXT enthält keine connectivity-Info, daher kein Fehler)."
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (CONTEXT zeigt connectivity=offline, aber nicht in L0 sichtbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Offline-Workflow fehlt, aber bei L0_minimal ist das vertretbar, da CONTEXT minimal ist."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow erkannt und umgesetzt, Umweltbedingungen (Regen, schlechte Sicht) berücksichtigt, klare Eskalationskriterien, präzise Dokumentationsanweisungen."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Umweltbedingungen (Dämmerung, Regen, schlechte Sicht) berücksichtigt, klare Eskalation und Dokumentation. Alle Kontextinformationen sinnvoll genutzt."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Umsetzung: Offline-Workflow explizit genannt (lokal speichern, später synchronisieren), Umweltbedingungen integriert, klare Eskalation, keine Halluzinationen trotz umfangreichem CONTEXT."
+    "short_justification": "Hervorragende Antwort: Offline-Workflow klar beschrieben (lokal dokumentieren, später synchronisieren), Umweltbedingungen präzise einbezogen, Eskalation differenziert nach Gefahrenlage. Vollständige Kontextnutzung ohne Spekulation."
   }
 ]

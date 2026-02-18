@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-18T17:00:04",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe (n13293431103) dunkel, Bereich unsicher:\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, um den Gefahrenbereich zu kennzeichnen.\n   - Bei hohem Verkehrsaufkommen: Warnweste tragen, ggf. Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Bruch, Vandalismus, lose Kabel).\n   - Umgebung auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden ist (z.B. durch Testgerät).\n   - Kontrollieren, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n   - Gerät laut System online und Zustand „ok“ – Fehler wahrscheinlich am Leuchtmittel oder Schaltgerät.\n\n4. **Dokumentation**\n   - Foto vom defekten Bereich und der Lampe machen (falls noch nicht geschehen).\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Standort, Gefahrenlage).\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofortige Meldung an die Leitstelle/Technik.\n   - Reparaturauftrag mit Priorität „hoch“ auslösen.\n   - Bürger über voraussichtliche Reparatur informieren (falls möglich).\n\n**Rückfrage:**  \nIst bereits eine Absicherung erfolgt oder wird Unterstützung vor Ort benötigt?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 164
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "missing_elements": [
+      "judge_block_missing_fallback"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
+    "scores": {
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    }
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.139
+  },
+  "error": {}
+}

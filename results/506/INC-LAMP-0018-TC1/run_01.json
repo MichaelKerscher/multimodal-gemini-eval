@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-18T17:01:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Steuerungsproblem Segmentausfall  \nAsset-ID: n12520351647\n\n1. Absicherung  \n- Absperrmaterial bereitstellen (Warnbaken, Leitkegel)  \n- Gefahrenbereich absichern, ggf. Verkehrsleitung einrichten  \n- Persönliche Schutzausrüstung tragen\n\n2. Sichtprüfung  \n- Sichtkontrolle des betroffenen Segments (Straßenlampen/Ampeln)  \n- Prüfen: Sind alle betroffenen Anlagen zeitgleich dunkel?  \n- Auffälligkeiten (z. B. Kabelschäden, Vandalismus, Feuchtigkeit) notieren\n\n3. Diagnose/Beobachtung  \n- Steuerungseinheit prüfen: Ist sie zugänglich?  \n- Kontrollieren, ob Sicherungen ausgelöst wurden  \n- Gibt es Hinweise auf Netzprobleme oder Kommunikationsstörungen?  \n- Falls möglich: Steuerung zurücksetzen und beobachten, ob Segment wieder funktioniert\n\n4. Dokumentation  \n- Ausfallzeit und betroffene Anlagen notieren  \n- Fotos von Auffälligkeiten machen  \n- Maßnahmen und Beobachtungen schriftlich festhalten\n\n5. Eskalation  \n- Bei komplexen Steuerungsproblemen: Techniker/IT-Fachkraft informieren  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Meldung an Leitstelle  \n- Asset-ID und genaue Lage weitergeben\n\nRückfrage:  \nHandelt es sich um Straßenlampen oder Ampelanlagen? Gibt es Hinweise auf vorherige Wartungsarbeiten oder Störungen im Bereich?",
+    "tokens_estimate_words": 142
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Berücksichtigung von Umgebungsbedingungen (nicht im Context)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden; angemessene Rückfrage zur Klärung des Asset-Typs."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.522
+  },
+  "error": {}
+}

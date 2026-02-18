@@ -1,0 +1,146 @@
+[
+  [
+    "judge_block_missing_fallback",
+    6
+  ],
+  [
+    "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
+    3
+  ],
+  [
+    "Offline-Workflow bei spotty connectivity",
+    3
+  ],
+  [
+    "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)",
+    2
+  ],
+  [
+    "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)",
+    2
+  ],
+  [
+    "Offline-Workflow nicht explizit erwähnt (Gerät offline, low_battery)",
+    1
+  ],
+  [
+    "Keine Umgebungsinformationen verfügbar, daher generisch gehalten",
+    1
+  ],
+  [
+    "Offline-Workflow bei spotty connectivity nicht erwähnt",
+    1
+  ],
+  [
+    "Keine Erwähnung von Wetter/Sicht (nicht im Context)",
+    1
+  ],
+  [
+    "Keine Priorisierung bei 'unsicher' (User erwähnt)",
+    1
+  ],
+  [
+    "Offline-Workflow fehlt (connectivity=spotty)",
+    1
+  ],
+  [
+    "Severity=high nicht explizit priorisiert",
+    1
+  ],
+  [
+    "Keine Erwähnung von Umgebungsbedingungen (nicht im Context verfügbar)",
+    1
+  ],
+  [
+    "Batterie-Warnung erwähnt, aber keine Handlungsempfehlung dazu",
+    1
+  ],
+  [
+    "Offline-Workflow (Gerät offline)",
+    1
+  ],
+  [
+    "Batteriewechsel-Spekulation (device_state bezieht sich auf Techniker-Gerät, nicht Asset)",
+    1
+  ],
+  [
+    "Offline-Workflow nur angedeutet, nicht explizit als Constraint formuliert",
+    1
+  ],
+  [
+    "Offline-Workflow nicht erwähnt (CONTEXT zeigt connectivity=offline, aber nicht in L0 sichtbar)",
+    1
+  ],
+  [
+    "Keine explizite Priorisierung der Verkehrssicherheit bei dunklem Abschnitt",
+    1
+  ],
+  [
+    "Konkrete Absicherungsmaßnahmen bei Dunkelheit/Verkehrsgefahr unklar",
+    1
+  ],
+  [
+    "Missverständnis: 'Asset offline' erwähnt, obwohl device.connectivity=online (bezieht sich auf Techniker-Gerät)",
+    1
+  ],
+  [
+    "Offline-Workflow nicht erwähnt (spotty connectivity)",
+    1
+  ],
+  [
+    "Device-State-Hinweis könnte klarer sein (Techniker-Gerät vs. Asset)",
+    1
+  ],
+  [
+    "Low-Power-Mode-Hinweis könnte präziser sein (Gerät vs. Asset)",
+    1
+  ],
+  [
+    "Keine Berücksichtigung von Umgebungsbedingungen (nicht im Context)",
+    1
+  ],
+  [
+    "Keine Priorisierung bei minimaler Kontextlage",
+    1
+  ],
+  [
+    "Keine Kontextinformationen zu Umgebung/Wetter verfügbar, daher keine spezifischen Sicherheitshinweise",
+    1
+  ],
+  [
+    "Keine Kontextinformationen zu Severity/Umgebung vorhanden, daher angemessen generisch",
+    1
+  ],
+  [
+    "Explizite Warnung wegen poor_visibility + snow könnte stärker betont werden",
+    1
+  ],
+  [
+    "Offline-Workflow nicht explizit ausformuliert (lokal speichern/später sync)",
+    1
+  ],
+  [
+    "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten",
+    1
+  ],
+  [
+    "Offline-Workflow fehlt (connectivity=offline im CONTEXT, aber keine lokale Dokumentation/Synchronisation erwähnt)",
+    1
+  ],
+  [
+    "Offline-Workflow nicht ausreichend konkret beschrieben",
+    1
+  ],
+  [
+    "Severity-Bewusstsein könnte expliziter sein",
+    1
+  ],
+  [
+    "Offline-Workflow nicht erwähnt trotz connectivity=offline",
+    1
+  ],
+  [
+    "Temporäre Beleuchtung ist sinnvoll, aber nicht zwingend aus CONTEXT ableitbar",
+    1
+  ]
+]

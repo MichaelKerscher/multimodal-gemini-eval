@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-18T17:00:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Fehler bei Straßenlampe (Asset-ID: n13293470414):\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann (z. B. Warnweste, ggf. Absperrung bei starkem Verkehr).\n\n2. Sichtprüfung  \n- Prüfe Lampe und Mast auf sichtbare Schäden (z. B. lose Teile, Feuchtigkeit, Vandalismus).\n- Kontrolliere, ob Kabel oder Anschlüsse sichtbar beeinträchtigt sind.\n\n3. Diagnose/Beobachtung  \n- Notiere, ob der Fehler weiterhin auftritt oder nur sporadisch war.\n- Prüfe, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netzstörung).\n- Falls möglich: Schaltzeiten und Steuerung überprüfen (z. B. Dämmerungsschalter, Zeitschaltuhr).\n\n4. Dokumentation  \n- Erstelle einen kurzen Bericht: Zeitpunkt, Fehlerbild, Asset-ID, eigene Beobachtungen.\n- Fotografiere auffällige Stellen.\n\n5. Eskalation  \n- Melde den sporadischen Fehler an die zuständige Fachabteilung (Elektro/Netz).\n- Hinweis: Da der Fehler sporadisch ist, sollte eine zeitnahe technische Überprüfung erfolgen (z. B. Messung, Kontrolle der Steuerung).\n\nFehlende Infos:  \n- Wann genau trat der Fehler auf?  \n- Gibt es weitere betroffene Lampen?  \n- Wurde vor Ort bereits eine Kontrolle durchgeführt?\n\nBitte ergänze diese Angaben, falls möglich.",
+    "tokens_estimate_words": 170
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da L0-Kontext minimal ist und keine Spekulation erfolgt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.979
+  },
+  "error": {}
+}

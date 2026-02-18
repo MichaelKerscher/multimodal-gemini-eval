@@ -1,0 +1,60 @@
+[
+  {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextinformationen zu Severity/Umgebung vorhanden, daher angemessen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, angemessen für minimalen Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Warnung wegen poor_visibility + snow könnte stärker betont werden"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (low_battery, Schnee, dusk, severity=high). Klare Priorisierung, Safety-Fokus erkennbar, Eskalation mit Begründung."
+  },
+  {
+    "test_id": "INC-LAMP-0022-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: Nutzt alle relevanten Kontextfelder (low_battery, poor_visibility, snow, severity=high), erwähnt Offline-Dokumentation, klare Safety-Priorisierung und Eskalation. Keine Halluzinationen."
+  }
+]
