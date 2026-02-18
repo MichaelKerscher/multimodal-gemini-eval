@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Asset-Typ nicht eindeutig identifizierbar aus minimalem Context."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal-CONTEXT vorliegt und keine unbegründeten Annahmen getroffen werden."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontextgerechte Absicherung (Nebel, mittlerer Verkehr), strukturierte Diagnose mit Feuchtigkeitsverdacht, klare Eskalationskriterien. Alle relevanten Umweltfaktoren berücksichtigt."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, mittlere Verkehrsexposition, intermittierender Fehler). Alle relevanten Umgebungsfaktoren berücksichtigt, klare Handlungsschritte, gute Dokumentationshinweise und passende Eskalation."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise, kontextbewusste Antwort mit klarer Struktur. Sicherheitsaspekte (Nebel, Verkehr) adressiert, Diagnose systematisch, Eskalationspfade definiert. Keine Halluzinationen trotz umfangreichem Context."
+    "short_justification": "Vollständige, kontextsensitive Antwort mit korrekter Interpretation aller Umgebungsfaktoren (Nebel, Verkehr, intermittierender Fehler). Strukturiert, umsetzbar, keine Halluzinationen trotz umfangreichem CONTEXT."
   }
 ]

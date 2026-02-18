@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0010-TC1",
-  "timestamp": "2026-02-18T14:48:04",
+  "timestamp": "2026-02-18T15:53:18",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt entlang Rosenheim, Stadtmitte (Asset-ID: n4427955479).\n\nCheckliste für die Prüfung:\n\n1. Absicherung\n   - Warnbaken oder Absperrungen aufstellen, falls Gefährdung für Verkehrsteilnehmer besteht.\n   - Warnwesten tragen, ggf. Beleuchtung für eigene Sicherheit nutzen.\n\n2. Sichtprüfung\n   - Vor Ort prüfen: Sind mehrere Straßenlampen betroffen oder nur einzelne?\n   - Sichtbare Schäden an Lampen, Kabeln oder Masten feststellen.\n\n3. Diagnose/Beobachtung\n   - Funktionstest: Schaltet die Beleuchtung bei Dämmerung ein?\n   - Prüfen, ob Stromversorgung vorhanden (evtl. Sicherungskasten kontrollieren).\n   - Wetterbedingungen oder Bauarbeiten als mögliche Ursache berücksichtigen.\n\n4. Dokumentation\n   - Fotos vom betroffenen Abschnitt und den Lampen machen.\n   - Notizen zu Anzahl der ausgefallenen Lampen, Standort und Uhrzeit festhalten.\n\n5. Eskalation\n   - Bei großflächigem Ausfall oder Gefahr: Sofortige Meldung an die Leitstelle/Störungsdienst.\n   - Kleinere Defekte: Reparaturauftrag an zuständige Fachfirma weiterleiten.\n\nRückfrage: \nSind nur Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf Bauarbeiten oder Vandalismus im Bereich?\n\nBitte um kurze Rückmeldung, damit ich die nächsten Schritte optimal planen kann.",
-    "tokens_estimate_words": 158
+    "text": "Checkliste für Außendienstprüfung – Asset-ID: n4427955479 (Straßenlampen, Rosenheim Stadtmitte)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen (Leitkegel, Warnleuchten)  \n- Gefahrenbereich absichern, insbesondere bei Dunkelheit und hohem Verkehrsaufkommen\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampen im Abschnitt  \n- Prüfen: Sind mehrere Lampen betroffen oder nur einzelne?  \n- Sichtbare Schäden an Lampen, Masten, Verkabelung oder Schaltkästen?\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Lampen einzeln prüfen (Schalter, Sensoren, ggf. manuelle Aktivierung)  \n- Prüfen, ob Stromversorgung vorhanden (Schaltkasten, Sicherungen)  \n- Gibt es Hinweise auf Vandalismus, Wasser-/Sturmschäden oder Bauarbeiten?\n\n4. Dokumentation  \n- Fotos vom betroffenen Abschnitt und den Lampen  \n- Notieren: Anzahl der ausgefallenen Lampen, genaue Position, Uhrzeit, Sichtbefund  \n- Asset-ID (n4427955479) im Bericht vermerken\n\n5. Eskalation  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Meldung an Leitstelle/Notdienst  \n- Bei größerem Ausfall: Weiterleitung an Fachfirma für Reparatur  \n- Dokumentation an zuständige Stelle übermitteln\n\nRückfrage:  \nSind nur Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf Stromausfall im gesamten Bereich?",
+    "tokens_estimate_words": 150
   },
   "judge": {
     "test_id": "INC-LAMP-0010-TC1",
@@ -49,12 +49,14 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Safety-Maßnahmen erwartbar – Antwort angemessen generisch."
+    "missing_elements": [
+      "Keine explizite Priorisierung der Verkehrssicherheit bei hohem Risiko"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Sicherheitsfokus vorhanden, aber nicht explizit priorisiert bei potentiell gefährlicher Situation (dunkler Abschnitt, Stadtmitte)."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.292
+    "runtime_seconds": 4.55
   },
   "error": {}
 }

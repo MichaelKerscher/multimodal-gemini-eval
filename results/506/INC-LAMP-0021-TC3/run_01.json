@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0021-TC3",
-  "timestamp": "2026-02-18T14:51:50",
+  "timestamp": "2026-02-18T15:56:59",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "flicker",
-        "reported_at": "2026-01-19T01:30:45+01:00",
         "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
         "photo_available": true,
         "reporter": "patrol"
       },
@@ -27,17 +27,18 @@
         "device_state": "ok"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "night",
-        "traffic_exposure": "low",
         "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
         "noise_level": "low"
       },
       "extras": {
         "context_notes": [
           "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
           "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
-          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache."
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache.",
+          "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen."
         ]
       },
       "_selection_meta": {
@@ -59,9 +60,24 @@
         "budget_policy": {
           "metric": "chars",
           "max": 3500,
-          "used": 859
+          "used": 1038
         },
         "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
           {
             "path": "asset.asset_osm",
             "prio": "P0",
@@ -83,21 +99,6 @@
             "reason": "identity"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -108,22 +109,22 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.traffic_exposure",
+            "path": "environment.weather",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.weather",
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -143,14 +144,14 @@
             "reason": "nice-to-have"
           },
           {
-            "path": "extras.context_notes",
-            "prio": "P2",
-            "reason": "semantic-guardrail"
-          },
-          {
             "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
           }
         ],
         "dropped_fields": [],
@@ -166,8 +167,23 @@
     "s2_selector_version": "s2-det-v1",
     "s2_guardrails_version": "s2-guard-v1",
     "s2_budget_chars": 3500,
-    "s2_used_chars": 859,
+    "s2_used_chars": 1038,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -189,21 +205,6 @@
         "reason": "identity"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -214,22 +215,22 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.traffic_exposure",
+        "path": "environment.weather",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.weather",
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -249,14 +250,14 @@
         "reason": "nice-to-have"
       },
       {
-        "path": "extras.context_notes",
-        "prio": "P2",
-        "reason": "semantic-guardrail"
-      },
-      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
       }
     ],
     "s2_dropped_fields": [],
@@ -269,8 +270,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe Rosenheim, Rechenauerstraße (Flackern/Kontaktproblem):\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei Nacht und Regen: Bereich mit Pylonen/Kegel sichern, ggf. Warnleuchte aufstellen.\n   - Verkehrsexposition ist gering, dennoch auf Fußgänger achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und Mast: Feuchtigkeit, Korrosion, lose Kabel oder Schrauben?\n   - Prüfen, ob Lampe vollständig ausfällt oder nur flackert.\n   - Foto machen (Foto ist bereits verfügbar, ggf. ergänzen).\n\n3. **Diagnose/Beobachtung**\n   - Flackern deutet oft auf Kontaktproblem (Fassung, Kabel, Anschluss).\n   - Bei Regen: Feuchtigkeitseintritt möglich, Dichtung prüfen.\n   - Lampe ggf. kurz ausschalten und wieder einschalten, um Verhalten zu beobachten.\n   - Keine offensichtlichen Schäden? Elektrische Verbindung kontrollieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen offlinefähig in der App/Checkliste notieren (spotty connectivity).\n   - Foto anhängen, Uhrzeit und Wetter vermerken.\n   - Fehlerart: Flackern, vermutete Ursache: Kontaktproblem/Feuchtigkeit.\n\n5. **Eskalation**\n   - Bei mittlerer Schwere: Reparaturauftrag an Fachfirma, ggf. Ersatzteilbedarf melden.\n   - Bei Gefahr für Verkehrssicherheit (z.B. Totalausfall, lose Teile): Sofortige Eskalation an Bereitschaft.\n   - Rückmeldung an Melder (Patrol) und Dokumentation im System.\n\n**Rückfrage:**  \nIst Zugang zum Lampenkopf möglich (Hubsteiger erforderlich)? Gibt es Hinweise auf Vandalismus oder mechanische Beschädigung?\n\n**Annahme:**  \nKontaktproblem durch Feuchtigkeit oder lockere Verbindung, keine akute Gefährdung – Reparatur zeitnah empfohlen.",
-    "tokens_estimate_words": 193
+    "text": "**Checkliste für Außendienst-Einsatz – Straßenlampe Rosenheim, Rechenauerstraße (Flackern, Kontaktproblem vermutet)**\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei Nacht und Regen: Umfeld mit Warnleuchten sichern, ggf. Verkehrsleitkegel aufstellen.\n   - Prüfen, ob ausreichend Sichtbarkeit für sich und Verkehrsteilnehmer besteht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt, lose Kabel oder Korrosion kontrollieren.\n   - Prüfen, ob Flackern dauerhaft oder sporadisch auftritt (ggf. Video/Foto aufnehmen).\n   - Umgebung auf weitere betroffene Lampen prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe stromlos schalten (falls möglich).\n   - Kontakte, Anschlussklemmen und Leuchtmittel auf festen Sitz und Verschmutzung prüfen.\n   - Bei Regen: Feuchtigkeit im Gehäuse oder an Kontakten dokumentieren.\n   - Lampe wieder einschalten, Funktion testen.\n   - Bei weiterhin flackernder Lampe: Kontaktproblem, Vorschaltgerät oder Leuchtmittel als Ursache vermuten.\n\n4. **Dokumentation**\n   - Offline dokumentieren (Gerät hat spotty connectivity): Fotos lokal speichern, Notizen zur Sichtprüfung und Diagnose erfassen.\n   - Alle Schritte und Beobachtungen festhalten (Datum, Uhrzeit, Wetter, Sichtverhältnisse).\n   - Asset-ID (n8486238431), Standort und Reporter (Patrol) notieren.\n\n5. **Eskalation**\n   - Bei nicht behebbaren Kontaktproblemen oder Sicherheitsrisiko: Meldung an Fachbereich Elektro, ggf. Austausch oder Reparatur beauftragen.\n   - Bei mehreren betroffenen Lampen: Störung als Sammelfall weitergeben.\n   - Synchronisation der Dokumentation/Fotos nach Wiederherstellung der Verbindung.\n\n**Rückfrage:**  \nWurde das Leuchtmittel bereits gewechselt oder ist dies noch offen? Sind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 208
   },
   "judge": {
     "test_id": "INC-LAMP-0021-TC3",
@@ -288,11 +289,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Workflow bei spotty connectivity. Absicherung priorisiert, Eskalation klar, Dokumentation nachvollziehbar. Guardrails korrekt beachtet."
+    "short_justification": "Vollständige, kontextsensitive Antwort mit explizitem Offline-Workflow (lokale Speicherung, spätere Synchronisation). Alle Umgebungsfaktoren (Nacht, Regen, spotty connectivity) korrekt berücksichtigt, keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.572
+    "runtime_seconds": 5.003
   },
   "error": {}
 }

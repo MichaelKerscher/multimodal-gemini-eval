@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0017-TC3",
-  "timestamp": "2026-02-18T14:50:22",
+  "timestamp": "2026-02-18T15:55:38",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "outage",
-        "reported_at": "2026-01-15T10:17:54+01:00",
         "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
         "photo_available": true,
         "reporter": "citizen"
       },
@@ -27,10 +27,10 @@
         "device_state": "low_power_mode"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "dusk",
-        "traffic_exposure": "low",
         "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
         "noise_level": "medium"
       },
       "extras": {
@@ -63,6 +63,21 @@
         },
         "selected_fields": [
           {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
             "path": "asset.asset_osm",
             "prio": "P0",
             "reason": "identity"
@@ -83,21 +98,6 @@
             "reason": "identity"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -108,22 +108,22 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.traffic_exposure",
+            "path": "environment.weather",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.weather",
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -143,14 +143,14 @@
             "reason": "nice-to-have"
           },
           {
-            "path": "extras.context_notes",
-            "prio": "P2",
-            "reason": "semantic-guardrail"
-          },
-          {
             "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
           }
         ],
         "dropped_fields": [],
@@ -168,6 +168,21 @@
     "s2_budget_chars": 3500,
     "s2_used_chars": 853,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -189,21 +204,6 @@
         "reason": "identity"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -214,22 +214,22 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.traffic_exposure",
+        "path": "environment.weather",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.weather",
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -249,14 +249,14 @@
         "reason": "nice-to-have"
       },
       {
-        "path": "extras.context_notes",
-        "prio": "P2",
-        "reason": "semantic-guardrail"
-      },
-      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
       }
     ],
     "s2_dropped_fields": [],
@@ -269,8 +269,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Dunkler Abschnitt Schönau\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Bei Regen und schlechter Sicht besonders auf eigene Sicherheit achten.\n   - Bereich vor Ort absichern, falls Gefährdung für Verkehrsteilnehmer besteht.\n\n2. **Sichtprüfung**\n   - Prüfen, ob alle Straßenlampen im Abschnitt Schönau betroffen sind oder nur einzelne.\n   - Sichtkontrolle auf offensichtliche Schäden (z.B. Kabel, Mast, Leuchtmittel).\n   - Foto vom betroffenen Bereich machen (Foto ist laut Workflow verfügbar).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (z.B. Sicherungskasten, Schaltstelle).\n   - Bei Regen: Feuchtigkeitsschäden oder Kurzschluss möglich – Sicht auf Wasser im Gehäuse.\n   - Hinweis: Gerät ist im „low_power_mode“, aber Asset ist laut Kontext „lit: yes“ (normalerweise beleuchtet).\n   - Prüfen, ob andere Anlagen in der Nähe ebenfalls betroffen sind.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (offlinefähig, falls Gerät schwacher Akku).\n   - Foto zur Dokumentation verwenden.\n   - Zeit und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei nicht behebbarer Störung oder Gefahr: Meldung an zentrale Leitstelle/Technik.\n   - Dringlichkeit: Mittel (laut Kontext), aber bei schlechter Sicht und Regen erhöhte Unfallgefahr – ggf. Priorität erhöhen.\n   - Rückmeldung an Bürger, falls Kontakt möglich.\n\n**Rückfrage:**  \nSind nur die Straßenlampen betroffen oder auch Ampelanlagen?  \nGibt es Hinweise auf Bauarbeiten oder Vandalismus im Abschnitt?  \nSoll eine temporäre Beleuchtung eingerichtet werden?\n\nBitte kurze Rückmeldung, falls weitere Details bekannt sind.",
-    "tokens_estimate_words": 215
+    "text": "Checkliste für den Außendienst – Abschnitt Schönau (Straßenbeleuchtung, Ausfall gemeldet):\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (bei Bedarf).\n   - Bei schlechter Sicht und Regen: Bereich mit Warnleuchten sichern, ggf. Warnschilder aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Sicht auf mögliche Schäden (z.B. Kabel, Mast, Leuchte) werfen.\n   - Foto vom betroffenen Abschnitt machen (Foto laut Workflow vorhanden, ggf. ergänzen).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (z.B. Kontrollleuchte am Schaltschrank).\n   - Bei Regen: Auf Wassereintritt achten.\n   - Notieren, ob Ausfall zusammenhängend oder vereinzelt ist.\n   - Hinweis: Gerät ist online, aber im Low-Power-Modus – dies betrifft nur die Dokumentation, nicht die Lampen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen in der App erfassen (offlinefähig, falls nötig).\n   - Foto hochladen.\n   - Zeit und Wetterbedingungen vermerken.\n\n5. **Eskalation**\n   - Bei größerem Ausfall oder Gefahr (z.B. Unfallrisiko): Meldung an Leitstelle/Technik.\n   - Bei einzelnen Lampen: Reparaturauftrag an zuständige Stelle weiterleiten.\n   - Bei Verdacht auf Stromausfall: Netzbetreiber informieren.\n\n**Rückfrage:**  \nSind nur die Straßenlampen betroffen oder auch andere Anlagen (z.B. Ampeln)?  \nIst der Ausfall auf einen bestimmten Abschnitt begrenzt oder betrifft er die gesamte Schönau?  \nGibt es Hinweise auf Vandalismus oder Bauarbeiten?\n\nBitte um kurze Rückmeldung, damit die Maßnahmen gezielt erfolgen können.",
+    "tokens_estimate_words": 203
   },
   "judge": {
     "test_id": "INC-LAMP-0017-TC3",
@@ -288,11 +288,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige Nutzung des L2-Contexts inkl. Guardrails (device_state ≠ Asset-Fehler). Offline-Dokumentation erwähnt (low_power_mode). Safety bei Regen/poor_visibility betont, Eskalation mit Prioritätsanpassung. Keine Halluzinationen."
+    "short_justification": "Perfekte Kontextnutzung inkl. Guardrails (Low-Power-Modus korrekt als Geräte-Zustand erkannt, nicht Asset-Fehler). Offline-Workflow erwähnt, Safety bei schlechter Sicht adressiert, klare Eskalation. Keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.701
+    "runtime_seconds": 5.052
   },
   "error": {}
 }

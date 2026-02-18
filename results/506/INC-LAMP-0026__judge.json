@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt kein connectivity-Problem)"
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und Antwort allgemein bleibt."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine weiteren Erwartungen rechtfertigt."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
@@ -26,7 +26,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Zustand erkannt, Nebel/Verkehr berücksichtigt, Dokumentation offlinefähig. Alle Dimensionen stark erfüllt."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, offline, medium traffic). Offline-Workflow erkannt („Annahme: Keine Fernwartung möglich"), Safety und Eskalation klar adressiert."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit erwähnt, Nebel/Verkehr/Geräuschkulisse berücksichtigt, klare Eskalationspfade. Nutzt extras.context_notes korrekt."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit („lokal dokumentieren", „später synchronisieren"), alle Kontextfaktoren (Nebel, traffic, connectivity) berücksichtigt, klare Struktur und Eskalation."
   }
 ]

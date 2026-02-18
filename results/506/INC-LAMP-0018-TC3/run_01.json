@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0018-TC3",
-  "timestamp": "2026-02-18T14:50:44",
+  "timestamp": "2026-02-18T15:55:59",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "control_box_issue",
-        "reported_at": "2026-01-20T18:31:50+01:00",
         "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
         "reporter": "citizen"
       },
       "asset": {
@@ -24,10 +24,10 @@
         "device_state": "ok"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "night",
-        "traffic_exposure": "medium",
         "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
         "noise_level": "low"
       },
       "extras": {
@@ -59,6 +59,21 @@
         },
         "selected_fields": [
           {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
             "path": "asset.asset_osm",
             "prio": "P0",
             "reason": "identity"
@@ -74,21 +89,6 @@
             "reason": "location"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -99,17 +99,7 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
-            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -119,7 +109,22 @@
             "reason": "risk-context"
           },
           {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
             "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
           },
@@ -127,11 +132,6 @@
             "path": "extras.context_notes",
             "prio": "P2",
             "reason": "semantic-guardrail"
-          },
-          {
-            "path": "incident.reporter",
-            "prio": "P2",
-            "reason": "nice-to-have"
           }
         ],
         "dropped_fields": [],
@@ -150,6 +150,21 @@
     "s2_used_chars": 677,
     "s2_selected_fields": [
       {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
         "path": "asset.asset_osm",
         "prio": "P0",
         "reason": "identity"
@@ -165,21 +180,6 @@
         "reason": "location"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -190,17 +190,7 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
-        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -210,7 +200,22 @@
         "reason": "risk-context"
       },
       {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
         "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
       },
@@ -218,11 +223,6 @@
         "path": "extras.context_notes",
         "prio": "P2",
         "reason": "semantic-guardrail"
-      },
-      {
-        "path": "incident.reporter",
-        "prio": "P2",
-        "reason": "nice-to-have"
       }
     ],
     "s2_dropped_fields": [],
@@ -235,30 +235,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Steuerungsproblem (Segment fällt zeitgleich aus)\n\n**1. Absicherung**\n- Warnbaken und Absperrmaterial bereitstellen.\n- Bereich um die Steuerbox und betroffene Lampen/Ampeln sichern (besonders bei Nacht und Nebel).\n- Warnwesten tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Steuerbox auf äußere Schäden, Manipulation oder Feuchtigkeit.\n- Prüfen, ob weitere Segmente betroffen sind.\n- Sichtprüfung der Verkabelung und Anschlüsse.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Steuerbox online ist (laut Kontext: Gerät ok, Connectivity online).\n- Kontrollieren, ob alle betroffenen Lampen/Ampeln zeitgleich ausfallen oder sporadisch.\n- Notieren, ob Fehler nach Reset/Neustart der Steuerbox weiterhin besteht.\n- Prüfen, ob Sicherungen ausgelöst wurden oder Fehleranzeigen sichtbar sind.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen in der App/Checkliste erfassen (offlinefähig, falls nötig).\n- Fotos machen, falls möglich (im Kontext nicht verfügbar).\n- Zeit, Wetter, Sichtverhältnisse und Verkehrssituation dokumentieren.\n\n**5. Eskalation**\n- Bei Verdacht auf Steuerbox-Defekt oder Sicherheitsrisiko: Meldung an Fachbereich/Leitstelle.\n- Bei erhöhtem Verkehrsrisiko (Nacht, Nebel, mittleres Verkehrsaufkommen): Sofortige Eskalation zur schnellen Reparatur.\n- Falls Ursache unklar: Rückfrage an Leitstelle, ob weitere Diagnosedaten verfügbar sind.\n\n**Rückfrage:**  \nSind vor Ort bereits Maßnahmen zur Absicherung getroffen worden oder muss dies vom Außendienst übernommen werden?  \nSind weitere Segmente/Steuerboxen betroffen oder nur das gemeldete Segment?",
-    "tokens_estimate_words": 199
+    "text": "Checkliste für Außendienst-Einsatz – Steuerungsproblem (Segment fällt zeitgleich aus)\n\n**1. Absicherung**\n- Warnbaken und Absperrmaterial bereitstellen.\n- Bereich um die Steuerungsbox und betroffene Lampen/Ampeln absichern.\n- Sichtbarkeit erhöhen (Warnweste, ggf. zusätzliche Beleuchtung).\n- Bei mittlerer Verkehrsexposition: Verkehrsfluss beobachten, ggf. Polizei informieren.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Steuerungsbox: Gehäuse, Kabel, Sicherungen, Feuchtigkeit.\n- Prüfen, ob weitere Segmente betroffen sind.\n- Sichtprüfung der betroffenen Lampen/Ampeln auf Schäden oder Manipulation.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Steuerungsbox Strom erhält (Spannung messen).\n- Sicht auf Steuerungsmodul: LEDs, Anzeigen, Fehlermeldungen.\n- Funktionstest: Manuelle Schaltung, Reaktion der Lampen/Ampeln.\n- Wetter beachten: Nebel kann Feuchtigkeitsschäden begünstigen.\n- Prüfen, ob Fernzugriff möglich und ob Steuerungsbox online ist.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen in der App/Checkliste erfassen.\n- Fotos von Steuerungsbox, Umgebung und betroffenen Segmenten machen (sofern möglich).\n- Notieren: Zeitpunkt, Wetter, Sichtverhältnisse, Verkehrsaufkommen.\n\n**5. Eskalation**\n- Bei Verdacht auf Steuerungsbox-Defekt: Meldung an Fachbereich/Technik.\n- Bei Gefahr für Verkehrssicherheit: Sofortige Eskalation an Leitstelle/Polizei.\n- Falls Ursache unklar: Rückmeldung mit Annahme „Steuerungsproblem, weitere Analyse nötig“.\n\n**Rückfrage:**  \nSind bereits weitere Segmente betroffen oder gibt es Hinweise auf Feuchtigkeit im Steuerungsbereich?  \nFalls nicht bekannt: Bitte vor Ort prüfen und ggf. Rückmeldung geben.",
+    "tokens_estimate_words": 191
   },
   "judge": {
     "test_id": "INC-LAMP-0018-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Nutzt Kontext präzise (Nacht, Nebel, medium traffic), erwähnt offlinefähige Dokumentation (obwohl online), klare Eskalationskriterien. Keine Halluzinationen, alle Fakten aus Context ableitbar."
+    "short_justification": "Vollständige, kontextsensitive Antwort. Sicherheit bei schlechter Sicht priorisiert, Eskalationswege klar, Dokumentation detailliert. Korrekte Interpretation aller Kontextfelder ohne Spekulation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.159
+    "runtime_seconds": 4.549
   },
   "error": {}
 }

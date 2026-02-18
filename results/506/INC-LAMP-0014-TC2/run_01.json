@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0014-TC2",
-  "timestamp": "2026-02-18T14:49:21",
+  "timestamp": "2026-02-18T15:54:36",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Ausfall, Routinekontrolle):\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (bei Bedarf).\n   - Standort prüfen: Geringe Verkehrsbelastung, Tageslicht, klare Sicht → Absicherung minimal, aber auf Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich auf Schäden, Vandalismus oder lose Teile kontrollieren.\n   - Mast, Leuchtenkopf und Verkabelung begutachten.\n   - Keine Fotos verfügbar – bei Unklarheiten vor Ort dokumentieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden (Gerät online, Zustand ok).\n   - Leuchtmittel defekt? Sichtbare Hinweise (z.B. dunkle Glühbirne, LED-Ausfall)?\n   - Elektronik/Steuerung prüfen: Keine offensichtlichen Fehler am Gerät laut Systemstatus.\n\n4. **Dokumentation**\n   - Ausfall und Sichtprüfung schriftlich festhalten (Datum, Uhrzeit, Zustand).\n   - Besonderheiten notieren (z.B. keine äußeren Schäden, Gerät online).\n\n5. **Eskalation**\n   - Leuchtmittelwechsel oder Elektronikprüfung veranlassen.\n   - Bei Unsicherheit oder wiederholtem Ausfall: Fachfirma oder Elektriker informieren.\n   - Rückmeldung an Zentrale mit Status und ggf. weiteren Maßnahmen.\n\n**Rückfrage:**  \nIst ein Ersatzleuchtmittel vor Ort verfügbar oder muss eine Bestellung ausgelöst werden?  \nSind in der Umgebung weitere Lampen betroffen?",
-    "tokens_estimate_words": 160
+    "text": "Checkliste für den Außendienst – Straßenlampe (Ausfall)\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (bei Bedarf, z. B. bei Arbeiten auf Fahrbahn).\n   - Standort prüfen: Geringe Verkehrsexposition, Tageslicht, klare Sicht – keine akute Gefahr, aber trotzdem aufmerksam bleiben.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich auf Schäden kontrollieren (Gehäuse, Mast, Verkabelung).\n   - Prüfen, ob Manipulation oder Vandalismus vorliegt.\n   - Umgebung auf weitere Ausfälle oder Besonderheiten prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe bleibt komplett dunkel – kein Flackern, keine Restfunktion.\n   - Gerät laut System online, Zustand „ok“ – Stromversorgung oder Leuchtmittel wahrscheinlich betroffen.\n   - Keine Fotos verfügbar – vor Ort ggf. ergänzen.\n\n4. **Dokumentation**\n   - Befund und Maßnahmen notieren (z. B. Sichtprüfung, Diagnose).\n   - Zeitpunkt, Standort (Koordinaten), Reporter (Patrol) erfassen.\n   - Falls möglich, Fotos machen und im System hinterlegen.\n\n5. **Eskalation**\n   - Bei mittlerer Priorität: Reparaturauftrag an Elektroteam weiterleiten.\n   - Hinweis: Da Gerät online, Fehler vermutlich am Leuchtmittel oder interner Verkabelung – Ersatz vorbereiten.\n   - Rückmeldung an Meldenden und ggf. an Leitstelle.\n\n**Rückfrage:**  \nIst ein Ersatzleuchtmittel vor Ort verfügbar oder muss dieses separat beschafft werden?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 179
   },
   "judge": {
     "test_id": "INC-LAMP-0014-TC2",
@@ -65,7 +65,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Tageslicht, geringe Verkehrsbelastung, Gerät online). Präzise Handlungsanweisungen, angemessene Sicherheitsmaßnahmen, klare Dokumentation und Eskalation."
+    "short_justification": "Exzellente Kontextnutzung: Tageslicht, geringe Verkehrsexposition, online-Status werden korrekt verarbeitet. Klare Handlungsschritte, präzise Diagnose (Leuchtmittel/Verkabelung), vollständige Dokumentation und angemessene Eskalation bei mittlerer Priorität."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.434
+    "runtime_seconds": 4.225
   },
   "error": {}
 }

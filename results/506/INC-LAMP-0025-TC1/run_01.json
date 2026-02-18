@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0025-TC1",
-  "timestamp": "2026-02-18T14:53:10",
+  "timestamp": "2026-02-18T15:58:13",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n4465173757)\n\n1. Absicherung  \n– Bereich absperren oder kennzeichnen, falls möglich (z.B. Warnbaken, Absperrband).  \n– Passanten auf die Dunkelheit hinweisen, besonders bei erhöhter Unfallgefahr.\n\n2. Sichtprüfung  \n– Lampe auf sichtbare Schäden prüfen: Gehäuse, Mast, Verkabelung.  \n– Umgebung auf weitere dunkle Lampen oder ungewöhnliche Situationen kontrollieren.\n\n3. Diagnose/Beobachtung  \n– Prüfen, ob Stromausfall vorliegt (andere Lampen betroffen?).  \n– Einschätzung: Einzeldefekt oder größerer Ausfall?  \n– Notieren: Zeitpunkt, Wetterbedingungen, besondere Umstände.\n\n4. Dokumentation  \n– Asset-ID, Standort, Uhrzeit, Beobachtungen und Maßnahmen festhalten.  \n– Fotos machen, falls möglich.\n\n5. Eskalation  \n– Meldung an zuständige Wartungsstelle/Techniker mit allen Informationen.  \n– Bei akuter Gefährdung: Polizei oder Ordnungsamt informieren.\n\nFehlende Infos:  \n– Gibt es weitere dunkle Lampen in der Nähe?  \n– Ist der Bereich stark frequentiert (z.B. Schulweg, Bushaltestelle)?  \nBitte ergänzen, falls bekannt.",
-    "tokens_estimate_words": 130
+    "text": "Checkliste für den Außendienst – Asset-ID: n4465173757\n\n1. Absicherung  \n– Bereich absperren oder mit Warnbaken sichern, falls Fußgänger oder Verkehr gefährdet sind.  \n– Warnhinweis an zuständige Stelle oder Polizei geben, falls akute Unsicherheit besteht.\n\n2. Sichtprüfung  \n– Lampe auf offensichtliche Schäden (Glasbruch, Kabel, Mast) kontrollieren.  \n– Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n– Funktionstest: Schalter/Steuerung prüfen, falls zugänglich.  \n– Notieren, ob Lampe komplett aus oder flackert.  \n– Wetterbedingungen und mögliche Fremdeinwirkung (z. B. Unfall) erfassen.\n\n4. Dokumentation  \n– Asset-ID, Standort, Uhrzeit, Beobachtungen und Maßnahmen schriftlich festhalten.  \n– Fotos machen, falls möglich.\n\n5. Eskalation  \n– Meldung an technische Wartung oder Bereitschaftsdienst weiterleiten.  \n– Bei akuter Gefährdung sofortige Reparatur oder Ersatzbeleuchtung anfordern.\n\nFragen:  \n– Gibt es weitere dunkle Lampen im Bereich?  \n– Ist die Lampe Teil einer Kette oder Einzelpunkt?  \n– Gibt es Hinweise auf Vandalismus oder Stromausfall?",
+    "tokens_estimate_words": 141
   },
   "judge": {
     "test_id": "INC-LAMP-0025-TC1",
@@ -50,13 +50,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (nur aus User message 'unsicher' ableitbar)"
+      "Severity-Einschätzung fehlt (nur minimal context)",
+      "Zeitliche Priorisierung unklar"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety-Aspekte erkennbar, aber ohne explizite Priorisierung bei hoher Gefährdung."
+    "short_justification": "Solide Struktur mit Absicherung, Diagnose und Eskalation. Bei minimalem Context angemessen generisch, keine Halluzinationen. Safety könnte expliziter priorisiert sein."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.216
+    "runtime_seconds": 2.868
   },
   "error": {}
 }

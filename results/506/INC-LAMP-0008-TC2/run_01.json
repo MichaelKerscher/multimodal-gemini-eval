@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0008-TC2",
-  "timestamp": "2026-02-18T14:47:24",
+  "timestamp": "2026-02-18T15:52:36",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,17 +56,17 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Bereich vor Ort absichern, besonders bei schlechter Sicht und Nebel.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen entlang des Abschnitts (Standort: 47.8571756, 12.1302583).\n   - Prüfen, ob Lampen beschädigt, verdreht oder verschmutzt sind.\n   - Foto vom betroffenen Bereich machen (Foto liegt laut Meldung vor).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (Hinweis: Gerät im Low-Power-Modus, Verbindung instabil).\n   - Sichtprüfung auf Verkabelung, Schaltkasten, Sicherungen.\n   - Bei Nebel: Sichtweite beachten, ggf. weitere Lampen im Abschnitt kontrollieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (defekte Lampen, Zustand, Sichtverhältnisse).\n   - Foto zur Dokumentation sichern.\n   - Zeitpunkt und Standort festhalten.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer sofort an Leitstelle melden.\n   - Bei geringer Gefährdung: Reparaturauftrag an zuständige Stelle weiterleiten.\n   - Connectivity-Probleme und Low-Power-Modus im Bericht erwähnen.\n\n**Rückfrage:**  \nSind weitere Lampen im Abschnitt betroffen oder nur ein einzelner Standort?  \nIst Zugang zum Schaltkasten möglich?  \nLiegt bereits eine Reparaturmeldung vor?",
-    "tokens_estimate_words": 159
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Bereich vor Ort absichern, besonders bei schlechter Sicht und Nebel.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen entlang des Abschnitts (Standort: 47.8571756, 12.1302583).\n   - Prüfen, ob Lampen defekt, beschädigt oder ausgeschaltet sind.\n   - Wetter und Sichtverhältnisse beachten (Nebel, Nacht).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (Hinweis: Gerät im Low-Power-Modus, Verbindung instabil).\n   - Sichtprüfung auf offensichtliche Schäden an Lampen oder Verkabelung.\n   - Foto zur Dokumentation nutzen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Anzahl defekter Lampen, Zustand, Sichtverhältnisse).\n   - Foto dem Bericht anhängen.\n   - Zeitpunkt und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei mehreren defekten Lampen oder Gefahr für Verkehrsteilnehmer: Meldung an Fachbereich Elektro/Notdienst.\n   - Bei einzelnen Lampen mit geringer Verkehrsexposition: Standardreparatur einleiten.\n   - Hinweis: Connectivity ist spotty – ggf. vor Ort alternative Kommunikationswege nutzen.\n\n**Rückfrage:**  \nSind weitere Lampen im Abschnitt betroffen oder nur einzelne? Gibt es Hinweise auf Vandalismus oder Baumaßnahmen?",
+    "tokens_estimate_words": 157
   },
   "judge": {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht/poor_visibility adressiert, spotty connectivity erkannt, Low-Power-Modus erwähnt, Offline-Dokumentation impliziert. Alle Dimensionen stark erfüllt."
+    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht → Absicherung, spotty connectivity → alternative Kommunikation erwähnt, Foto-Workflow integriert. Alle Dimensionen stark erfüllt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.616
+    "runtime_seconds": 3.385
   },
   "error": {}
 }

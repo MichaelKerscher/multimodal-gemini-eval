@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0009-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Offline-Workflow-Erwähnung nötig, da CONTEXT keine connectivity-Info enthält."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Workflow erkannt, Dämmerung/Regen/schlechte Sicht berücksichtigt, klare Eskalationskriterien. Vollständig nachvollziehbar dokumentiert."
+    "short_justification": "Exzellente Antwort: Offline-Workflow erkannt („keine Fernanalyse möglich"), Sicherheit bei schlechter Sicht adressiert, strukturierte Schritte, klare Eskalation."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Dokumentation explizit erwähnt, Umweltbedingungen (Dämmerung, Regen, schlechte Sicht) korrekt einbezogen, klare Eskalation bei Gefahr. Keine Spekulationen."
+    "short_justification": "Hervorragend: Offline-Workflow explizit genannt („Offline dokumentieren, Fotos lokal speichern"), Sicherheit bei schlechter Sicht, klare Eskalation, strukturierte Dokumentation."
   }
 ]

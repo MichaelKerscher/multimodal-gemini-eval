@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0020-TC2",
-  "timestamp": "2026-02-18T14:51:29",
+  "timestamp": "2026-02-18T15:56:38",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen.\n   - Warnweste tragen.\n   - Bereich vor Betreten auf Verkehr prüfen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen entlang des Abschnitts (n4483691318).\n   - Prüfen: Sind Lampen beschädigt, lose oder sichtbar defekt?\n   - Wetter beachten: Regen, schlechte Sicht.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (Gerät online, aber im Low-Power-Modus).\n   - Foto auswerten (falls verfügbar): Welche Lampen betroffen?\n   - Mögliche Ursachen: Stromausfall, Feuchtigkeit, Defekt am Steuergerät.\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Ort, Zeit, betroffene Lampen, Zustand).\n   - Foto anhängen.\n   - Meldung im System aktualisieren.\n\n5. **Eskalation**\n   - Bei hoher Schwere sofort Techniker verständigen.\n   - Hinweis auf Verkehrssicherheit: Dunkler Abschnitt, schlechte Sicht, Regen.\n   - Falls Gefahr für Verkehrsteilnehmer besteht, Polizei oder Straßenmeisterei informieren.\n\n**Rückfrage:**  \nSind weitere Lampen im Umfeld betroffen oder nur der Abschnitt n4483691318? Gibt es Hinweise auf Stromausfall im gesamten Gebiet?",
-    "tokens_estimate_words": 144
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnbaken und Absperrmaterial bereitstellen.\n   - Warnweste tragen.\n   - Bereich vor Ort absichern, besonders bei Nacht und Regen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen entlang des Abschnitts (OSM n4483691318).\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Sicht auf Kabel, Mast, Leuchtenkopf – Schäden, Feuchtigkeit, Vandalismus?\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (Gerät online, aber im Low-Power-Modus).\n   - Gerät aus Low-Power-Modus holen, falls möglich.\n   - Sichtprüfung auf Kurzschluss, Feuchtigkeitseintritt, defekte Leuchtmittel.\n   - Foto auswerten (liegt vor) – Details zum Ausfall erkennen.\n\n4. **Dokumentation**\n   - Alle Feststellungen protokollieren (Datum, Uhrzeit, Standort, betroffene Lampen).\n   - Fotos sichern und dem Bericht anhängen.\n   - Notieren, ob Gefahr für Verkehrsteilnehmer besteht.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort an Bereitschaftsdienst/Störungsstelle melden.\n   - Reparaturauftrag auslösen.\n   - Falls Gefahr akut: Polizei/Ordnungsamt informieren.\n\n**Rückfrage:**  \nSind nur die Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf Stromausfall im gesamten Bereich?  \nBitte ggf. weitere Details zum betroffenen Abschnitt oder zur Anzahl der ausgefallenen Lampen angeben.",
+    "tokens_estimate_words": 169
   },
   "judge": {
     "test_id": "INC-LAMP-0020-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Nacht, Regen, poor_visibility, severity=high) korrekt verarbeitet, Safety-First-Ansatz, klare Eskalation, präzise Dokumentation. Keine Halluzinationen, vollständig kontextgerecht."
+    "short_justification": "Exzellente Kontextnutzung: Severity=high, Nacht+Regen+poor_visibility erkannt, Safety-Fokus klar, Low-Power-Modus erwähnt, Foto-Workflow integriert. Eskalation bei hoher Gefährdung explizit, Dokumentation nachvollziehbar. Keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.805
+    "runtime_seconds": 3.789
   },
   "error": {}
 }

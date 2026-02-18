@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0017-TC1",
-  "timestamp": "2026-02-18T14:50:22",
+  "timestamp": "2026-02-18T15:55:38",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n4446442023 (Schönau, dunkler Abschnitt)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen  \n- Gefahrenbereich (dunkler Abschnitt) vor Ort absichern, ggf. mit Warnbaken oder Licht  \n- Verkehrsteilnehmer informieren (z. B. Hinweis auf eingeschränkte Sicht)\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampen entlang des Abschnitts  \n- Prüfen: Sind einzelne Lampen oder der gesamte Abschnitt betroffen?  \n- Sicht auf Beschädigungen, Vandalismus, lose Kabel, Feuchtigkeit oder andere Auffälligkeiten\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Lampen einzeln schalten, falls möglich  \n- Prüfen, ob Stromversorgung vorhanden (z. B. Sicherungen, Verteilerkasten)  \n- Notieren: Welche Lampen sind betroffen? Gibt es Muster (z. B. nur eine Seite, nur bestimmte Typen)?  \n- Ggf. auf ungewöhnliche Geräusche, Gerüche oder Hitze achten\n\n4. Dokumentation  \n- Fotos vom Abschnitt und den betroffenen Lampen machen  \n- Asset-ID, Standort, Datum/Uhrzeit, Beobachtungen notieren  \n- Mängelbericht ausfüllen (digital oder Papier)\n\n5. Eskalation  \n- Bei akuter Gefahr (z. B. Stromausfall, Unfallrisiko): Sofortige Meldung an Leitstelle/Technik  \n- Bei mehreren Lampen oder großflächigem Ausfall: Weiterleitung an Fachabteilung für Netzprüfung  \n- Dokumentation an zuständige Stelle übermitteln\n\nRückfrage:  \nSind bereits weitere Meldungen zu diesem Abschnitt eingegangen oder gibt es Hinweise auf Bauarbeiten/Störungen im Stromnetz?  \nFalls nicht, gehe ich von einem lokalen Ausfall der Straßenbeleuchtung aus. Bitte bestätigen oder ergänzen.",
-    "tokens_estimate_words": 199
+    "text": "Checkliste für Außendienst – Dunkler Abschnitt Schönau (Asset-ID: n4446442023)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen (Leitkegel, Warnleuchten)  \n- Gefahrenbereich absichern, besonders bei Dunkelheit und Verkehr\n\n2. Sichtprüfung  \n- Ist der gesamte Abschnitt dunkel oder nur einzelne Lampen?  \n- Sind Lampen beschädigt, lose oder verschmutzt?  \n- Gibt es Hinweise auf Vandalismus oder Stromausfall?\n\n3. Diagnose/Beobachtung  \n- Funktioniert die Stromversorgung (Kontrolle am Schaltschrank, falls zugänglich)?  \n- Sind Sicherungen ausgelöst?  \n- Gibt es auffällige Geräusche oder Gerüche (z. B. verschmorte Kabel)?\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Befund (z. B. „Alle Lampen dunkel, keine sichtbaren Schäden“)  \n- Fotos vom Abschnitt und ggf. von defekten Komponenten  \n- Notizen zu Verkehrs- und Sicherheitslage\n\n5. Eskalation  \n- Bei Gefahr: Sofortige Meldung an Leitstelle/Notdienst  \n- Bei Defekt: Weiterleitung an Elektrotechnik-Team  \n- Dokumentation im System abschließen\n\nRückfrage:  \nSind weitere Details zum Abschnitt bekannt (z. B. Länge, Lampentyp, letzte Wartung)?  \nIst aktuell eine erhöhte Verkehrslage oder Baustelle vor Ort?",
+    "tokens_estimate_words": 152
   },
   "judge": {
     "test_id": "INC-LAMP-0017-TC1",
@@ -50,13 +50,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Umwelt-/Zeitkontext vorhanden, daher Safety-Maßnahmen generisch"
+      "Keine Erwähnung von Dämmerung/schlechter Sicht (nicht im Context)",
+      "Keine spezifische Verkehrssicherheitsmaßnahme bei Dunkelheit"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety-Fokus erkennbar, aber ohne spezifische Risikobewertung (da L0-Context)."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden. Safety-Fokus erkennbar, aber könnte bei Dunkelheit expliziter sein."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.234
+    "runtime_seconds": 3.267
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0022-TC2",
-  "timestamp": "2026-02-18T14:52:11",
+  "timestamp": "2026-02-18T15:57:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Straßenlampen-Ausfall – Rosenheim, Heilig Blut**\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls Fußgänger oder Fahrzeuge gefährdet sind.\n   - Bei Schneefall und schlechter Sicht besonders auf Stolperstellen achten.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf Beschädigungen, lose Teile oder Fremdkörper kontrollieren.\n   - Prüfen, ob Schnee die Lampe verdeckt oder den Zugang erschwert.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, aber meldet niedrigen Batteriestand – vermutlich Stromversorgung oder Batterieproblem.\n   - Ausfall seit 10 Minuten, keine weiteren Lampen betroffen (Annahme, bitte bestätigen).\n   - Foto liegt vor – Sichtprüfung anhand des Fotos möglich, falls vor Ort nicht erreichbar.\n\n4. **Dokumentation**\n   - Vorfall mit Zeit, Ort, Wetter, Sichtverhältnissen und Foto im System erfassen.\n   - Notieren: Hohe Sicherheitsrelevanz wegen schlechter Sicht und Schneefall.\n\n5. **Eskalation**\n   - Sofortige Meldung an den Bereitschaftsdienst für schnelle Reparatur.\n   - Bei hoher Gefährdung: Polizei oder Ordnungsamt informieren, ggf. temporäre Beleuchtung organisieren.\n\n**Rückfrage:** Sind weitere Lampen in der Umgebung betroffen oder nur diese eine? Gibt es Hinweise auf Vandalismus oder technische Störungen im Stromnetz?",
-    "tokens_estimate_words": 164
+    "text": "**Checkliste für den Außendienst – Straßenlampe „Rosenheim, Heilig Blut“**\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Bereich besonders unsicher oder rutschig (Schnee, Dämmerung).\n   - Warnweste tragen, auf Verkehr achten (auch bei niedriger Verkehrsbelastung).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Vereisung oder lose Teile kontrollieren.\n   - Prüfen, ob das Umfeld (Gehweg/Fahrbahn) durch den Ausfall gefährdet ist.\n\n3. **Diagnose/Beobachtung**\n   - Gerät zeigt „low_battery“ – Akku prüfen, ggf. Austausch vorbereiten.\n   - Verbindung ist „online“ – Fernwartung möglich, aber vor Ort Kontrolle empfohlen.\n   - Foto vom Zustand machen (falls noch nicht erfolgt).\n   - Prüfen, ob weitere Lampen betroffen sind (Stromausfall oder Einzeldefekt?).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Zustand, Foto).\n   - Meldung im System aktualisieren (Störung, Sicherheitslage, ggf. Sofortmaßnahmen).\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort an Leitstelle/Notdienst melden.\n   - Falls Akku nicht vor Ort gewechselt werden kann: Reparaturteam mit passendem Ersatzteil anfordern.\n\n**Rückfrage:**  \nIst ein Akkuwechsel direkt vor Ort möglich oder muss ein Spezialteam kommen? Gibt es Zugang zum Lampenschaltkasten?  \nBitte kurze Info, damit ich die nächsten Schritte optimal planen kann.",
+    "tokens_estimate_words": 177
   },
   "judge": {
     "test_id": "INC-LAMP-0022-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (severity=high, Schnee, poor_visibility, low_battery). Sicherheit priorisiert, sofortige Eskalation bei hoher Gefährdung, Foto-Workflow integriert. Alle relevanten Umweltfaktoren berücksichtigt."
+    "short_justification": "Exzellente Kontextnutzung (low_battery, Schnee, Dämmerung, severity=high). Klare Safety-Priorisierung, strukturierte Schritte, präzise Dokumentation und Eskalation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.347
+    "runtime_seconds": 3.701
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0021-TC1",
-  "timestamp": "2026-02-18T14:51:50",
+  "timestamp": "2026-02-18T15:56:59",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Aussetzer/Flackern – Asset-ID: n8486238431\n\n1. Absicherung  \n- Bereich um die Straßenlampe/Anlage absperren (Warnbaken, ggf. Warnleuchten).  \n- Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Verkabelung, Anschlussstellen und Lampengehäuse.  \n- Prüfen auf lose Kontakte, Korrosion, Feuchtigkeitseintritt.\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Lampe/Ampel mehrfach ein- und ausschalten.  \n- Prüfen, ob Flackern/Aussetzer reproduzierbar sind.  \n- Falls möglich, Spannung und Strom messen.\n\n4. Dokumentation  \n- Beobachtungen, Zeitpunkt, Wetterbedingungen und Asset-ID notieren.  \n- Fotos von auffälligen Stellen machen.\n\n5. Eskalation  \n- Bei Verdacht auf Kontaktprobleme: Elektrofachkraft hinzuziehen.  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Meldung an Leitstelle, ggf. Abschaltung.\n\nFehlende Informationen:  \n- Handelt es sich um eine Straßenlampe oder Ampelanlage?  \n- Gibt es bereits Meldungen von Bürgern oder Polizei?  \n- Ist das Flackern dauerhaft oder nur sporadisch?\n\nBitte ergänzen, falls weitere Details vorliegen.",
-    "tokens_estimate_words": 128
+    "text": "Checkliste für Kontaktprobleme (Asset-ID: n8486238431)\n\n1. Absicherung  \n- Bereich um die Straßenlampe absperren (Warnbaken, Absperrband).  \n- Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Anschlussstellen auf offensichtliche Schäden, lose Kabel oder Korrosion.  \n- Prüfen, ob Feuchtigkeit oder Schmutz im Gehäuse sichtbar ist.\n\n3. Diagnose/Beobachtung  \n- Lampe einschalten und gezielt beobachten: Flackern, Aussetzer, Geräusche?  \n- Kontaktstellen vorsichtig bewegen, um Reaktion zu prüfen.  \n- Messgerät verwenden (Spannung/Strom prüfen).\n\n4. Dokumentation  \n- Beobachtungen, Zeitpunkt und Dauer der Aussetzer notieren.  \n- Fotos von auffälligen Stellen machen.  \n- Asset-ID und Standort dokumentieren.\n\n5. Eskalation  \n- Bei bestätigtem Kontaktproblem: Meldung an Elektrofachkraft/Servicepartner.  \n- Dringlichkeit angeben (Verkehrssicherheit, Dunkelheit).  \n- Reparaturbedarf und mögliche Ersatzteile benennen.\n\nFehlen weitere Angaben (z.B. Typ der Lampe, genaue Position)? Bitte ergänzen, falls bekannt.",
+    "tokens_estimate_words": 122
   },
   "judge": {
     "test_id": "INC-LAMP-0021-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety-Aspekte vorhanden, aber nicht priorisiert (S=3)."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht und bleibt bei plausiblen Standardschritten."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.734
+    "runtime_seconds": 3.741
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0008-TC1",
-  "timestamp": "2026-02-18T14:47:24",
+  "timestamp": "2026-02-18T15:52:36",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Danke für die Meldung zum dunklen Abschnitt (Asset-ID: n13293341689). Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnbaken oder Absperrungen aufstellen, falls der Bereich stark befahren oder fußläufig genutzt wird.\n   - Warnwesten tragen, um Sichtbarkeit zu erhöhen.\n\n2. **Sichtprüfung**\n   - Vor Ort kontrollieren: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen, ob Lampen beschädigt, verdreht oder verschmutzt sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schaltet die Beleuchtung zu den üblichen Zeiten ein/aus?\n   - Sichtbare Schäden an Kabeln, Masten oder Steuerungseinheiten?\n   - Gibt es Hinweise auf Vandalismus oder Stromausfall?\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Abschnitt und den Lampen machen.\n   - Notizen zu Anzahl und Position der ausgefallenen Lampen.\n   - Zeitpunkt und Wetterbedingungen festhalten.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an die Leitstelle/Technik.\n   - Bei mehreren Lampen oder Verdacht auf Netzproblem: Elektriker oder Netzbetreiber informieren.\n   - Einzelne defekte Lampen: Reparaturauftrag an Wartungsdienst.\n\n**Rückfrage:**  \nSind weitere Details zum Abschnitt bekannt (z.B. Länge, Anzahl der Lampen, besondere Gefahrenstellen)?  \nFalls nicht, gehe ich von einem Standard-Straßenabschnitt aus. Bitte bestätigen oder ergänzen.",
-    "tokens_estimate_words": 173
+    "text": "Danke für die Meldung zum dunklen Abschnitt (Asset-ID: n13293341689). Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Prüfung:**\n\n1. **Absicherung**\n   - Bereich vor Ort absperren oder kennzeichnen, um Verkehrsteilnehmer zu schützen.\n   - Warnhinweise aufstellen, falls nötig.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts.\n   - Prüfen, ob Lampen beschädigt, ausgefallen oder verdeckt sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Sind einzelne Lampen oder der gesamte Abschnitt betroffen?\n   - Prüfen, ob Stromversorgung vorhanden ist (z. B. Sicherungen, Kabel, Schaltkasten).\n   - Wetter- oder Bauarbeiten als mögliche Ursache ausschließen.\n\n4. **Dokumentation**\n   - Befund und Maßnahmen schriftlich festhalten (Fotos, Notizen).\n   - Asset-ID und Standort eindeutig dokumentieren.\n\n5. **Eskalation**\n   - Bei größerem Ausfall oder Gefahr: Sofortige Meldung an zuständige Fachstelle (Elektriker, Netzbetreiber).\n   - Kleinere Defekte: Reparaturauftrag auslösen.\n\n**Rückfrage:**  \nSind konkrete Gefahrenstellen (z. B. Kreuzungen, Fußgängerüberwege) betroffen oder handelt es sich um einen reinen Straßenabschnitt?  \nBitte ggf. weitere Details zum Abschnitt oder zur Ausdehnung des Ausfalls angeben.",
+    "tokens_estimate_words": 150
   },
   "judge": {
     "test_id": "INC-LAMP-0008-TC1",
@@ -49,12 +49,14 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht."
+    "missing_elements": [
+      "Keine Erwähnung von Warnweste (bei L0 aber nicht zwingend erwartbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflows erwartbar – Modell spekuliert nicht."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.052
+    "runtime_seconds": 3.193
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC2",
-  "timestamp": "2026-02-18T14:53:29",
+  "timestamp": "2026-02-18T15:58:34",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,30 +56,31 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe Römerstraße, Langenpfunzen (OSM: n4449540379)\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Warnleuchten, Pylonen).\n   - Bereich bei mittlerer Verkehrsbelastung und Nebel besonders sichern.\n\n2. **Sichtprüfung**\n   - Lampe auf sichtbare Schäden prüfen (Gehäuse, Mast, Verkabelung).\n   - Umfeld auf Manipulation oder Vandalismus kontrollieren.\n   - Prüfen, ob Lampe aktuell an oder aus ist.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Schaltet die Lampe während des Aufenthalts unregelmäßig?\n   - Prüfen, ob Feuchtigkeit/Fog Einfluss auf Elektrik nehmen könnte.\n   - Da Gerät offline: Keine Fernwartung möglich, vor Ort prüfen.\n   - Annahme: Steuerung/Schaltuhr oder Verkabelung könnte fehlerhaft sein.\n\n4. **Dokumentation**\n   - Zustand und Verhalten notieren (Datum, Uhrzeit, Wetter, Sicht).\n   - Fotos machen, falls möglich (auch wenn aktuell nicht verfügbar).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei weiterhin unklarer Ursache: Meldung an Elektrotechnik/Service.\n   - Hinweis auf intermittierenden Fehler und Offline-Zustand geben.\n   - Dringlichkeit niedrig, aber regelmäßige Kontrolle empfehlen.\n\n**Rückfrage:**  \nSind vor Ort Geräusche (z.B. Relais-Klicken) oder Gerüche (Schmorgeruch) wahrnehmbar?  \nWurde die Lampe in letzter Zeit gewartet oder verändert?",
-    "tokens_estimate_words": 167
+    "text": "Checkliste für Außendienst – Straßenlampe Römerstraße, Langenpfunzen\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrung/Warndreieck aufstellen (bei mittlerer Verkehrsexposition und Nebel besonders wichtig).\n   - Sichtbarkeit prüfen, ggf. zusätzliche Warnleuchten nutzen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden kontrollieren (Kabel, Gehäuse, Feuchtigkeit).\n   - Prüfen, ob Lampe während Anwesenheit an/aus schaltet.\n   - Umgebung auf Störquellen (z. B. Vibrationen, Feuchtigkeit durch Nebel) untersuchen.\n\n3. **Diagnose/Beobachtung**\n   - Stromversorgung prüfen (Hinweis: Gerät ist offline, aber Zustand „ok“).\n   - Verbindungskabel und Sicherungen inspizieren.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeitseintritt, Steuerungsausfall.\n   - Annahme: Keine Fernwartung möglich (offline).\n\n4. **Dokumentation**\n   - Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Verhalten).\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Fehlerbeschreibung und Verdachtsmomente festhalten.\n\n5. **Eskalation**\n   - Bei unklarer Ursache: Meldung an Fachbereich Elektrotechnik/Service.\n   - Dringlichkeit: Niedrig, aber regelmäßige Kontrolle empfohlen.\n   - Hinweis auf erhöhte Verkehrssicherung bei Nebel und Lärm.\n\n**Rückfrage:**  \nSind vor Ort bereits Reparaturversuche erfolgt oder gibt es Hinweise auf wiederkehrende Störungen in der Umgebung?",
+    "tokens_estimate_words": 156
   },
   "judge": {
-    "test_id": "INC-LAMP-0026-TC2",
+    "missing_elements": [
+      "judge_missing_for_test_id"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
     },
     "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Zustand erkannt, Nebel/Verkehr berücksichtigt, Dokumentation offlinefähig. Alle Dimensionen stark erfüllt."
+    }
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.128
+    "runtime_seconds": 4.564
   },
   "error": {}
 }

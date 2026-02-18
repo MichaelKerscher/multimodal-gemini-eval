@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC1",
-  "timestamp": "2026-02-18T14:45:00",
+  "timestamp": "2026-02-18T15:50:08",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Fehler – Straßenlampe (Asset-ID: n5718630492)\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann.  \n- Warnweste tragen, ggf. Absperrung aufstellen.\n\n2. Sichtprüfung  \n- Prüfe Lampe auf sichtbare Schäden (Gehäuse, Mast, Verkabelung).  \n- Kontrolliere, ob Feuchtigkeit, Vandalismus oder lose Teile erkennbar sind.\n\n3. Diagnose/Beobachtung  \n- Notiere, ob die Lampe aktuell funktioniert.  \n- Frage: Gibt es Muster beim Ausfall (z.B. nur bei Regen, bestimmten Uhrzeiten)?  \n- Prüfe, ob andere Lampen in der Nähe ähnliche Fehler zeigen.\n\n4. Dokumentation  \n- Halte den Fehler (sporadisch aus, jetzt wieder an) schriftlich fest.  \n- Asset-ID, Zeitpunkt, Wetterbedingungen, Beobachtungen notieren.\n\n5. Eskalation  \n- Melde den Fehler an die zuständige Wartungsstelle.  \n- Hinweis: Sporadische Fehler können auf Wackelkontakt, Feuchtigkeit oder Steuerungsprobleme hindeuten.  \n- Falls Gefahr für Verkehrssicherheit besteht (z.B. Dunkelheit an Kreuzung), Priorität erhöhen.\n\nBitte ergänze:  \n- Standortbeschreibung (z.B. Kreuzung, Gehweg)  \n- Gibt es Hinweise auf äußere Einflüsse (Baustelle, Unwetter)?  \n- Wie lange war die Lampe aus?",
-    "tokens_estimate_words": 158
+    "text": "Checkliste für sporadischen Fehler bei Straßenlampe (Asset-ID: n5718630492)\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann (Verkehr, Stolperstellen).\n- Warnweste tragen, ggf. Absperrmaterial bereitstellen.\n\n2. Sichtprüfung  \n- Prüfe Lampe auf sichtbare Schäden (Gehäuse, Kabel, Mast).\n- Kontrolliere, ob Feuchtigkeit, Verschmutzung oder Vandalismus erkennbar ist.\n\n3. Diagnose/Beobachtung  \n- Notiere, ob die Lampe aktuell funktioniert.\n- Frage: Gibt es Hinweise auf äußere Einflüsse (z. B. Wetter, Bauarbeiten)?\n- Prüfe, ob andere Lampen in der Nähe ähnliche Probleme zeigen.\n- Annahme: Fehler könnte an Elektrik, Steuerung oder Witterung liegen.\n\n4. Dokumentation  \n- Erstelle einen kurzen Bericht: Zeitpunkt des Ausfalls, Zeitpunkt der Wiederinbetriebnahme, Beobachtungen vor Ort.\n- Asset-ID und Standort notieren.\n\n5. Eskalation  \n- Melde den sporadischen Fehler an die zuständige Wartungsstelle.\n- Empfehlung: Lampe zeitnah technisch prüfen lassen (z. B. Kontakte, Steuerung, Feuchtigkeit).\n\nBitte Rückmeldung, falls weitere Details zum Umfeld oder zu ähnlichen Vorfällen vorliegen.",
+    "tokens_estimate_words": 149
   },
   "judge": {
     "test_id": "INC-LAMP-0001-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen, da minimaler Kontext keine Offline-Erwartung rechtfertigt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.604
+    "runtime_seconds": 3.025
   },
   "error": {}
 }

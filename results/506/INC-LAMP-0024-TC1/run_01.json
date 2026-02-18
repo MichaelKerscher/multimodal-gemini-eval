@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0024-TC1",
-  "timestamp": "2026-02-18T14:52:49",
+  "timestamp": "2026-02-18T15:57:53",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Fehler – Straßenlampe (Asset-ID: n5718630490)\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe keine unmittelbare Gefahr für Verkehr oder Fußgänger darstellt.  \n- Warnhinweise aufstellen, falls nötig.\n\n2. Sichtprüfung  \n- Prüfe, ob äußerliche Schäden, lose Kabel oder Feuchtigkeit sichtbar sind.  \n- Kontrolliere, ob die Lampe stabil steht und keine Gefahrenquelle darstellt.\n\n3. Diagnose/Beobachtung  \n- Notiere, wann der Fehler auftrat und wie lange die Lampe aus war.  \n- Prüfe, ob andere Lampen in der Nähe ähnliche Probleme zeigen.  \n- Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, defektes Vorschaltgerät, Netzschwankungen.\n\n4. Dokumentation  \n- Halte den Fehler (sporadisches Aus- und Einschalten), Zeitpunkt, Asset-ID und Beobachtungen schriftlich fest.  \n- Füge Fotos hinzu, falls relevant.\n\n5. Eskalation  \n- Melde den Fehler an die zuständige Wartungsstelle mit allen Dokumentationen.  \n- Hinweis: Da der Fehler sporadisch ist, bitte um gezielte Überprüfung der elektrischen Anschlüsse und ggf. Langzeitüberwachung.\n\nFehlen Informationen zu Standort, Lampentyp oder Wartungsintervallen? Bitte ergänzen, falls bekannt.",
-    "tokens_estimate_words": 153
+    "text": "Checkliste für sporadischen Fehler bei Straßenlampe (Asset-ID: n5718630490)\n\n1. Absicherung  \nStelle sicher, dass der Bereich um die Lampe sicher ist. Bei starkem Verkehr ggf. Warnbaken oder Absperrung aufstellen.\n\n2. Sichtprüfung  \nÜberprüfe die Lampe auf sichtbare Schäden (Gehäuse, Kabel, Mast). Prüfe, ob Feuchtigkeit, Vandalismus oder lose Teile erkennbar sind.\n\n3. Diagnose/Beobachtung  \nNotiere, wann und wie oft der Fehler auftritt (Lampe aus, dann wieder an). Prüfe, ob andere Lampen in der Nähe betroffen sind.  \nMögliche Ursachen:  \n- Wackelkontakt  \n- Feuchtigkeit im Gehäuse  \n- Defektes Vorschaltgerät  \n- Netzschwankungen\n\n4. Dokumentation  \nErfasse alle Beobachtungen (Zeitpunkt, Dauer, Umgebung, Asset-ID). Dokumentiere den Fehler im System.\n\n5. Eskalation  \nWenn der Fehler weiterhin sporadisch auftritt oder Sicherheitsrisiko besteht:  \n- Melde den Vorfall an die zuständige Wartungsfirma/Technik  \n- Priorisiere die Reparatur, falls die Lampe an einer Gefahrenstelle steht\n\nRückfrage:  \nGab es kürzlich Wartungsarbeiten oder Wetterereignisse (z. B. Starkregen) in der Umgebung? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 146
   },
   "judge": {
     "test_id": "INC-LAMP-0024-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden war. Sicherheitsaspekte angemessen adressiert."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge und Eskalation. Keine Halluzinationen, da minimaler Kontext keine zusätzlichen Anforderungen stellt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.307
+    "runtime_seconds": 3.314
   },
   "error": {}
 }

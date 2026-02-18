@@ -1,94 +1,146 @@
 [
   [
-    "Offline-Workflow bei spotty connectivity nicht erwähnt",
-    2
+    "judge_missing_for_test_id",
+    6
   ],
   [
-    "Keine Spekulation über Asset-Typ (Lampe/Ampel) bei minimalem Context",
+    "Offline-Workflow bei spotty connectivity",
+    4
+  ],
+  [
+    "Offline-Workflow (Gerät ist offline)",
     1
   ],
   [
-    "Keine Offline-Workflow-Erwähnung (aber auch nicht nötig bei L0-Kontext)",
+    "Klarstellung: device_state betrifft Techniker-Gerät, nicht Asset",
     1
   ],
   [
-    "Keine Kontextnutzung erkennbar (nur Asset-ID vorhanden)",
+    "Keine Berücksichtigung der Umgebungsbedingungen (nicht im Context)",
     1
   ],
   [
-    "Offline-Workflow nicht erwähnt trotz spotty connectivity",
+    "Keine Kontextanpassung an Umgebungsbedingungen (minimal context)",
     1
   ],
   [
-    "Severity=high nicht ausreichend betont in Eskalation",
+    "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
     1
   ],
   [
-    "Keine Kontextinformationen zu Umgebung/Risiko vorhanden, daher Safety-Maßnahmen generisch",
+    "Keine explizite Priorisierung wegen 'unsicherer Bereich'",
     1
   ],
   [
-    "Offline-Workflow nicht erwähnt trotz spotty connectivity + low_battery",
+    "Keine Erwähnung von Verkehrssicherung bei hoher Gefährdung",
     1
   ],
   [
-    "Hinweis auf device_state bezieht sich auf Gerät, nicht Asset – könnte klarer sein",
+    "Offline-Workflow nicht erwähnt trotz connectivity=offline",
     1
   ],
   [
-    "Keine explizite Priorisierung trotz 'Bereich wirkt unsicher'",
+    "Keine Anleitung für lokale Dokumentation/Synchronisation",
     1
   ],
   [
-    "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten",
+    "Offline-Workflow unvollständig (nur 'Gerät offline' erwähnt, aber keine explizite lokale Speicherung/Synchronisation)",
     1
   ],
   [
-    "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung",
+    "Keine Erwähnung von Warnweste (bei L0 aber nicht zwingend erwartbar)",
     1
   ],
   [
-    "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
+    "Keine explizite Priorisierung der Verkehrssicherheit bei hohem Risiko",
+    1
+  ],
+  [
+    "Konkrete Sicherheitsmaßnahmen bei hoher Verkehrsexposition fehlen",
+    1
+  ],
+  [
+    "Severity-Einschätzung fehlt (L0 gibt keine severity vor)",
+    1
+  ],
+  [
+    "Offline-Workflow nicht erwähnt (connectivity=spotty, device_state=low_battery)",
+    1
+  ],
+  [
+    "Hinweis auf lokale Speicherung/Synchronisation fehlt",
+    1
+  ],
+  [
+    "Keine Erwähnung von Dämmerung/schlechter Sicht (nicht im Context)",
+    1
+  ],
+  [
+    "Keine spezifische Verkehrssicherheitsmaßnahme bei Dunkelheit",
+    1
+  ],
+  [
+    "Low-Power-Modus wird als mögliche Asset-Fehlerursache interpretiert (betrifft aber Techniker-Gerät)",
+    1
+  ],
+  [
+    "Keine Umgebungsinformationen verfügbar, daher keine spezifischen Safety-Maßnahmen ableitbar",
+    1
+  ],
+  [
+    "Keine Umwelt-/Zeitkontextnutzung (da L0)",
+    1
+  ],
+  [
+    "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)",
+    1
+  ],
+  [
+    "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)",
+    1
+  ],
+  [
+    "Offline-Workflow fehlt (connectivity=offline im CONTEXT)",
+    1
+  ],
+  [
+    "Offline-Workflow (Gerät offline, lokale Dokumentation)",
+    1
+  ],
+  [
+    "Severity-Einschätzung fehlt (nur minimal context)",
+    1
+  ],
+  [
+    "Zeitliche Priorisierung unklar",
+    1
+  ],
+  [
+    "Hinweis auf low_battery des Techniker-Geräts könnte klarer sein",
+    1
+  ],
+  [
+    "Asset-Typ (Lampe/Ampel) unklar, aber Antwort adressiert beide Möglichkeiten",
+    1
+  ],
+  [
+    "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
+    1
+  ],
+  [
+    "Foto-Hinweis erwähnt photo_available=false, aber keine Offline-Speicherung",
+    1
+  ],
+  [
+    "Konkrete Absicherungsmaßnahmen (Warnbaken, temporäre Beleuchtung)",
+    1
+  ],
+  [
+    "Keine Connectivity-Info im Context, daher Offline-Workflow nicht erwartbar",
     1
   ],
   [
     "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
-    1
-  ],
-  [
-    "Keine Umwelt-/Zeitkontext vorhanden, daher Safety-Maßnahmen generisch",
-    1
-  ],
-  [
-    "Keine explizite Priorisierung bei Verkehrsgefahr",
-    1
-  ],
-  [
-    "Keine Priorisierung erkennbar bei minimalem Kontext",
-    1
-  ],
-  [
-    "Rückfrage zu Asset-Typ unnötig spekulativ",
-    1
-  ],
-  [
-    "Severity-Einschätzung fehlt (nur aus User message 'unsicher' ableitbar)",
-    1
-  ],
-  [
-    "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt kein connectivity-Problem)",
-    1
-  ],
-  [
-    "Keine Erwähnung von Verkehrssicherung trotz Straßenlampe",
-    1
-  ],
-  [
-    "Severity-Einschätzung fehlt (high nicht erkennbar)",
-    1
-  ],
-  [
-    "Offline-Workflow nicht explizit erwähnt (connectivity=offline)",
     1
   ]
 ]

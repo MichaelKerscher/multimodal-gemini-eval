@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0018-TC2",
-  "timestamp": "2026-02-18T14:50:44",
+  "timestamp": "2026-02-18T15:55:59",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,15 +56,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Steuerungsproblem – Segment fällt zeitgleich aus\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen, um den Bereich zu sichern.\n   - Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): zusätzliche Warnleuchten verwenden.\n   - Verkehrsteilnehmer informieren, ggf. Polizei verständigen.\n\n2. **Sichtprüfung**\n   - Kontrollieren, ob alle betroffenen Lampen/Ampeln im Segment ausgefallen sind.\n   - Sichtkontrolle des Steuerkastens auf äußere Schäden, Manipulation oder Feuchtigkeit.\n   - Prüfen, ob weitere Infrastruktur betroffen ist.\n\n3. **Diagnose/Beobachtung**\n   - Steuerkasten öffnen, Sichtprüfung der Sicherungen und Verkabelung.\n   - Statusanzeige und Kontrollleuchten prüfen.\n   - Da Gerät online und Zustand „ok“ gemeldet: Software-Status und Fernsteuerung testen.\n   - Annahme: Kein Foto verfügbar – vor Ort dokumentieren.\n\n4. **Dokumentation**\n   - Ausfall und Sichtbefund schriftlich festhalten (inkl. Uhrzeit, Wetter, Sichtverhältnisse).\n   - Fotos vor Ort aufnehmen (falls möglich).\n   - Alle Maßnahmen und Beobachtungen protokollieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Techniker mit Spezialkenntnissen für Steuerung verständigen.\n   - Bei Ausfall ganzer Segmente: Meldung an Leitstelle und ggf. Hersteller/Servicepartner.\n   - Bürger über voraussichtliche Dauer und Maßnahmen informieren.\n\n**Rückfrage:**  \nSind weitere Segmente oder Anlagen betroffen, oder beschränkt sich der Ausfall auf das gemeldete Segment? Gibt es Hinweise auf Manipulation oder Vandalismus?",
-    "tokens_estimate_words": 184
+    "text": "Checkliste für Steuerungsproblem (Segment fällt zeitgleich aus):\n\n1. **Absicherung**\n   - Warnbaken und Absperrmaterial bereitstellen.\n   - Bereich um die Steuerbox und betroffene Lampen/Ampeln sichern.\n   - Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): Warnwesten tragen, ggf. zusätzliche Beleuchtung aufstellen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Steuerbox auf äußere Schäden, Manipulation oder Feuchtigkeit.\n   - Prüfen, ob mehrere Lampen/Ampeln betroffen sind (Segment-Ausfall).\n   - Umgebung auf weitere Gefahren (z.B. rutschige Fahrbahn durch Nebel) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Steuerbox öffnen und auf lose Kabel, Sicherungen, Feuchtigkeit oder Überhitzung kontrollieren.\n   - Statusanzeigen und Fehlercodes ablesen.\n   - Prüfen, ob das Gerät online ist (laut Meldung: Verbindung ok, Zustand ok).\n   - Annahme: Fehler liegt vermutlich in der Steuerung, nicht an einzelnen Lampen/Ampeln.\n\n4. **Dokumentation**\n   - Vor Ort alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Fotos machen (falls möglich, aktuell nicht verfügbar).\n   - Zeit, Ort, Wetterbedingungen und Sichtverhältnisse dokumentieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für Verkehrsteilnehmer: Meldung an Fachtechniker oder Bereitschaftsdienst.\n   - Bei mittlerer Schwere: Priorität setzen, schnelle Reparatur veranlassen.\n   - Bürger über voraussichtliche Dauer und Maßnahmen informieren (falls Kontakt möglich).\n\n**Rückfrage:**  \nSind weitere Segmente oder Anlagen betroffen? Gibt es Hinweise auf Manipulation oder Vandalismus? Liegt ein aktueller Wartungsplan vor?",
+    "tokens_estimate_words": 193
   },
   "judge": {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, medium traffic → zusätzliche Warnleuchten). Klare Struktur, Safety-First-Ansatz erkennbar, Dokumentation nachvollziehbar. Gerät online, daher kein Offline-Workflow nötig."
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, poor_visibility, medium traffic_exposure). Sicherheitsmaßnahmen priorisiert, Eskalation klar, Dokumentation vollständig. Alle relevanten Umgebungsfaktoren berücksichtigt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.506
+    "runtime_seconds": 3.924
   },
   "error": {}
 }

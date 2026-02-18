@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0007-TC1",
-  "timestamp": "2026-02-18T14:47:06",
+  "timestamp": "2026-02-18T15:52:15",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Vielen Dank für die Meldung zum Asset n4484173276 (Straßenlampe/Ampelanlage). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Kontaktprobleme (Aussetzer/Flackern):**\n\n1. **Absicherung**\n   - Bereich absperren, ggf. Warnbaken aufstellen.\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf lose Kabel, Korrosion, Feuchtigkeit im Gehäuse.\n   - Prüfen, ob Lampenfassung oder Stecker wackelt.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Lampe/Ampel mehrfach ein-/ausschalten.\n   - Prüfen, ob Flackern reproduzierbar ist.\n   - Mögliche Fehlerquellen: Wackelkontakt, defektes Leuchtmittel, fehlerhafte Verdrahtung.\n\n4. **Dokumentation**\n   - Beobachtungen und Maßnahmen notieren (Datum, Asset-ID, Fehlerbild).\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei Verdacht auf elektrische Gefährdung: Sofort an Fachbetrieb/Elektriker weiterleiten.\n   - Sonst: Reparaturauftrag an zuständige Stelle geben.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gab es kürzlich Wartungsarbeiten oder Unwetter?  \n\nBitte um kurze Rückmeldung, damit die Diagnose gezielt erfolgen kann.",
-    "tokens_estimate_words": 129
+    "text": "Checkliste für Kontaktprobleme (Asset-ID: n4484173276)\n\n1. Absicherung  \n- Bereich um die Straßenlampe absperren (Warnbaken, ggf. Warnleuchte).\n- Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Lampenkopfes und Sockels auf lose Kabel, Korrosion oder Feuchtigkeit.\n- Prüfen, ob Lampengehäuse fest verschlossen ist.\n\n3. Diagnose/Beobachtung  \n- Lampe einschalten und gezielt beobachten: Flackern, Aussetzer, Geräusche?\n- Kontakte im Sockel vorsichtig bewegen – verändert sich das Verhalten?\n- Messgerät verwenden: Spannung und Strom prüfen.\n\n4. Dokumentation  \n- Beobachtungen, Messwerte und Fotos im Wartungsprotokoll festhalten.\n- Asset-ID und Standort notieren.\n\n5. Eskalation  \n- Bei bestätigten Kontaktproblemen: Meldung an Elektrotechnik-Fachkraft.\n- Bei Gefahr (z.B. Funkenflug): Sofortige Abschaltung und Meldung an Leitstelle.\n\nFehlen Angaben zur Bauart oder zum Zugang? Bitte Rückmeldung, falls weitere Details benötigt werden.",
+    "tokens_estimate_words": 119
   },
   "judge": {
     "test_id": "INC-LAMP-0007-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da Kontext minimal ist. Offline-Workflow nicht erwartbar (kein connectivity-Feld)."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Offline-Erwartung besteht."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.481
+    "runtime_seconds": 4.159
   },
   "error": {}
 }

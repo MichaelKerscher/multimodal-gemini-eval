@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da Kontext minimal ist. Offline-Workflow nicht erwartbar (kein connectivity-Feld)."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Offline-Erwartung besteht."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -32,8 +32,10 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Sturm, Offline-Zustand, mittlere Verkehrsexposition berücksichtigt. Klare Struktur, Safety-Fokus, offlinefähige Dokumentation erwähnt."
+    "missing_elements": [
+      "Offline-Workflow unvollständig (nur 'Gerät offline' erwähnt, aber keine explizite lokale Speicherung/Synchronisation)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, Verkehr, Foto, Offline). Offline-Workflow angedeutet, aber nicht vollständig ausformuliert (K=3). Sicherheit und Dokumentation stark."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Alle relevanten Kontextfaktoren (Sturm, Offline, Foto, Verkehr) integriert. Offlinefähige Dokumentation explizit genannt, klare Eskalationswege, strukturiert umsetzbar."
+    "short_justification": "Exzellente Antwort: vollständiger Offline-Workflow (lokal speichern, später synchronisieren), klare Sicherheitsmaßnahmen, präzise Kontextnutzung (Sturm, Verkehr, Foto). Keine Halluzinationen."
   }
 ]

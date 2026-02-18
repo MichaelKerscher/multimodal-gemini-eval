@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0023-TC2",
-  "timestamp": "2026-02-18T14:52:31",
+  "timestamp": "2026-02-18T15:57:33",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnwesten anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, besonders bei hohem Verkehrsaufkommen und schlechter Sicht.\n   - Bei Sturm: Abstand zu Bäumen und losen Teilen halten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts (Standort: 47.8589872, 12.1320286).\n   - Prüfen, ob Lampen beschädigt, lose oder umgestürzt sind.\n   - Wetterlage beachten: Sturmschäden möglich.\n\n3. **Diagnose/Beobachtung**\n   - Da Gerät offline: Keine Fernwartung möglich.\n   - Sichtprüfung auf offensichtliche Defekte (Leuchtmittel, Mast, Verkabelung).\n   - Bei mehreren Lampen: Ausfallmuster erkennen (Einzel- oder Gruppenstörung).\n   - Foto zur Dokumentation nutzen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen (Defekte, Gefahrenstellen, Absicherungsmaßnahmen) schriftlich und fotografisch festhalten.\n   - Zeitpunkt und Standort notieren.\n\n5. **Eskalation**\n   - Bei hoher Verkehrsexposition und schlechter Sicht: Sofortige Meldung an Leitstelle und ggf. Polizei.\n   - Bei Gefahr für Verkehrsteilnehmer: Schnelle Reparatur oder zusätzliche Absicherung veranlassen.\n   - Falls Ursache nicht vor Ort behebbar: Weiterleitung an Fachfirma/Elektriker.\n\n**Rückfrage:**  \nSind weitere Lampen im Abschnitt betroffen oder nur einzelne? Gibt es Hinweise auf Sturmschäden (z.B. umgestürzte Masten, abgerissene Leitungen)?",
-    "tokens_estimate_words": 165
+    "text": "Checkliste für den Außendienst – Dunkler Abschnitt (Straßenbeleuchtung):\n\n1. Absicherung  \n   - Warnweste anlegen, Absperrmaterial bereitstellen.  \n   - Bereich mit hoher Verkehrsexposition und schlechter Sicht absichern (z. B. Warnbaken, Blitzleuchten).  \n   - Bei Sturm besondere Vorsicht: Abstand zu Bäumen und losen Teilen halten.\n\n2. Sichtprüfung  \n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts (Standort: 47.8589872, 12.1320286).  \n   - Prüfen, ob Lampen beschädigt, lose oder umgestürzt sind.  \n   - Umgebung auf weitere Gefahren (z. B. herabfallende Äste) prüfen.\n\n3. Diagnose/Beobachtung  \n   - Stromausfall bestätigen: Sind alle Lampen betroffen oder nur einzelne?  \n   - Gerät ist offline, Zustand laut System „ok“ – vor Ort prüfen, ob Stromversorgung unterbrochen ist.  \n   - Wetterlage (Sturm) als mögliche Ursache berücksichtigen.\n\n4. Dokumentation  \n   - Fotos vom betroffenen Abschnitt und den Lampen machen (Foto verfügbar).  \n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.  \n   - Zeitpunkt, Standort und besondere Umstände (Sturm, hohe Verkehrslast) notieren.\n\n5. Eskalation  \n   - Bei bestätigtem Ausfall und hoher Gefährdung sofort an Fachbereich Stromversorgung und Verkehrslenkung melden.  \n   - Bei Gefahr für Personen oder Verkehr: Polizei/Feuerwehr informieren.  \n   - Reparaturteam mit Dringlichkeit beauftragen.\n\nRückfrage:  \nSind weitere Abschnitte betroffen oder nur dieser Standort? Gibt es Zugang zu Stromverteilern vor Ort?",
+    "tokens_estimate_words": 182
   },
   "judge": {
     "test_id": "INC-LAMP-0023-TC2",
@@ -65,21 +65,23 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
-      "K": 5
+      "D": 5,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Workflow erkannt, Sturm/Verkehr/Sicht adressiert, severity=high führt zu sofortiger Eskalation. Alle relevanten Risikofaktoren berücksichtigt, keine Halluzinationen."
+    "missing_elements": [
+      "Offline-Workflow fehlt (connectivity=offline im CONTEXT)"
+    ],
+    "short_justification": "Exzellente Safety-Fokussierung (Sturm, hohe Verkehrsexposition, schlechte Sicht) und Eskalation. K=3 wegen fehlendem Offline-Workflow trotz connectivity=offline im CONTEXT."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.102
+    "runtime_seconds": 4.107
   },
   "error": {}
 }

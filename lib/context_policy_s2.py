@@ -212,8 +212,10 @@ def deterministic_selection_plan(ctx: Dict[str, Any], triggers: Dict[str, Any]) 
         if _deep_get(ctx, path) is not None:
             fields.append(FieldSpec(path=path, prio="P2", reason=reason))
 
+    # Keep insertion order within each priority bucket (deterministic),
+    # but ensure P0 -> P1 -> P2 ordering.
     order = {"P0": 0, "P1": 1, "P2": 2}
-    fields = sorted(fields, key=lambda f: (order.get(f.prio, 9), f.path))
+    fields = sorted(fields, key=lambda f: order.get(f.prio, 9))
     return fields
 
 
@@ -323,6 +325,13 @@ def apply_semantic_guardrails(ctx_norm: Dict[str, Any], triggers: Dict[str, Any]
             "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache.",
         )
 
+    # Guardrail 3: offline/spotty => offline workflow mention
+    if triggers.get("offline") or triggers.get("spotty"):
+        _append_note_dedup(
+            ctx_norm,
+            "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen.",
+        )
+
     # Stamp version for audit (very small)
     ctx_norm.setdefault("extras", {})
     ctx_norm["extras"].setdefault("guardrails_version", guardrails_version)
@@ -347,6 +356,10 @@ def build_l2b(
     apply_semantic_guardrails(normalized, triggers, guardrails_version=guardrails_version)
 
     plan = deterministic_selection_plan(normalized, triggers)
+
+    if not plan:
+        _append_note_dedup(normalized, "WARN: selection_plan_empty -> check schema paths / input JSON validity")
+
     packed, packing_meta = pack_under_budget(normalized, plan, budget)
     packed = stable_serialize_context(packed)
 

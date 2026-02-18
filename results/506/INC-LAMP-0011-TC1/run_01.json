@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0011-TC1",
-  "timestamp": "2026-02-18T14:48:22",
+  "timestamp": "2026-02-18T15:53:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Kontrolle – Asset n4470029718 (Straßenlampe/Ampel)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen (Leitkegel, Warnleuchten)  \n- Gefahrenbereich absichern, besonders bei Verkehrslage\n\n2. Sichtprüfung  \n- Sichtkontrolle vor Ort: Ist das Asset aktuell in Betrieb?  \n- Prüfen auf sichtbare Schäden (Gehäuse, Verkabelung, Mast)  \n- Umfeld auf Störungen (z.B. Baustellen, Fremdeinwirkung) untersuchen\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Asset mehrfach schalten/beobachten  \n- Prüfen, ob Ausfall reproduzierbar ist (z.B. bei bestimmten Bedingungen)  \n- Notieren: Zeitpunkt, Wetter, besondere Umstände\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen schriftlich festhalten  \n- Fotos von Asset und Umgebung machen  \n- Asset-ID, Datum, Uhrzeit, Name des Prüfers dokumentieren\n\n5. Eskalation  \n- Bei erneutem oder reproduzierbarem Ausfall: Meldung an Technik/Entstörung  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Eskalation an Leitstelle  \n- Sonst: Routinekontrolle abschließen, Bericht an zuständige Stelle senden\n\nRückfrage:  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf bestimmte Ausfallzeiten oder Wetterbedingungen?",
-    "tokens_estimate_words": 145
+    "text": "Checkliste für Kontrolle (Asset-ID: n4470029718)\n\n1. Absicherung  \n- Warnweste tragen  \n- Gefahrenbereich absichern (z. B. Warnschilder, ggf. Absperrung)\n\n2. Sichtprüfung  \n- Zustand der Straßenlampe/Ampelanlage prüfen  \n- Gibt es sichtbare Schäden, lose Teile oder Feuchtigkeitsspuren?\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Gerät mehrfach ein- und ausschalten  \n- Prüfen, ob Ausfall reproduzierbar ist  \n- Umgebung beobachten: Gibt es Störungen durch andere Anlagen oder Baustellen?\n\n4. Dokumentation  \n- Ergebnisse und Beobachtungen notieren  \n- Zeitpunkt und Dauer des Ausfalls festhalten  \n- Fotos bei Auffälligkeiten machen\n\n5. Eskalation  \n- Bei wiederholtem oder nicht nachvollziehbarem Ausfall: Meldung an Fachbereich Technik  \n- Bei akuter Gefahr: Sofortige Sperrung und Benachrichtigung der Leitstelle\n\nFehlen weitere Angaben (z. B. Lampentyp, letzter Wartungsstatus)? Bitte ergänzen, falls bekannt.",
+    "tokens_estimate_words": 114
   },
   "judge": {
     "test_id": "INC-LAMP-0011-TC1",
@@ -49,14 +49,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Asset-Typ nicht eindeutig identifizierbar aus minimalem Context."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal-CONTEXT vorliegt und keine unbegründeten Annahmen getroffen werden."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.778
+    "runtime_seconds": 2.744
   },
   "error": {}
 }

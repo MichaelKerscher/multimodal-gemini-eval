@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden war. Sicherheitsmaßnahmen erkennbar, aber könnten bei 'unsicherem Bereich' noch expliziter priorisiert werden."
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, arbeitet sauber mit minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (severity=high, Schnee, poor_visibility, low_battery). Sicherheit priorisiert, sofortige Eskalation bei hoher Gefährdung, Foto-Workflow integriert. Alle relevanten Umweltfaktoren berücksichtigt."
+    "short_justification": "Exzellente Kontextnutzung (low_battery, Schnee, Dämmerung, severity=high). Klare Safety-Priorisierung, strukturierte Schritte, präzise Dokumentation und Eskalation."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -47,10 +49,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Nutzt alle Context-Elemente korrekt (device_state=low_battery → offline-Vorbereitung), severity=high → sofortige Eskalation, Umweltfaktoren (Schnee, poor_visibility) in Sicherheitsmaßnahmen integriert. Korrekte Interpretation der context_notes (device.* = Techniker-Gerät)."
+    "short_justification": "Kompakte, präzise Checkliste mit vollständiger Kontextnutzung (Schnee, Dämmerung, severity=high, photo_available). Safety-First-Ansatz, klare Eskalation, keine Halluzinationen."
   }
 ]

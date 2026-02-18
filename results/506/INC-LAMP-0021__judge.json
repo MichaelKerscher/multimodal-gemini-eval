@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety-Aspekte vorhanden, aber nicht priorisiert (S=3)."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht und bleibt bei plausiblen Standardschritten."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -33,9 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility, photo_available). Absicherung priorisiert, Eskalation klar. Spotty connectivity sollte Offline-Dokumentation triggern (K=4)."
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility), klare Safety-Maßnahmen und Eskalation. Spotty connectivity wird nicht explizit adressiert (lokale Dokumentation/Sync), daher K=4 statt 5."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Workflow bei spotty connectivity. Absicherung priorisiert, Eskalation klar, Dokumentation nachvollziehbar. Guardrails korrekt beachtet."
+    "short_justification": "Vollständige, kontextsensitive Antwort mit explizitem Offline-Workflow (lokale Speicherung, spätere Synchronisation). Alle Umgebungsfaktoren (Nacht, Regen, spotty connectivity) korrekt berücksichtigt, keine Halluzinationen."
   }
 ]

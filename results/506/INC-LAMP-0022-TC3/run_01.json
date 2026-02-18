@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0022-TC3",
-  "timestamp": "2026-02-18T14:52:11",
+  "timestamp": "2026-02-18T15:57:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "outage",
-        "reported_at": "2026-01-21T18:35:50+01:00",
         "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
         "photo_available": true,
         "reporter": "citizen"
       },
@@ -27,10 +27,10 @@
         "device_state": "low_battery"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "dusk",
-        "traffic_exposure": "low",
         "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
         "noise_level": "low"
       },
       "extras": {
@@ -63,6 +63,21 @@
         },
         "selected_fields": [
           {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
             "path": "asset.asset_osm",
             "prio": "P0",
             "reason": "identity"
@@ -83,21 +98,6 @@
             "reason": "identity"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -108,22 +108,22 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.traffic_exposure",
+            "path": "environment.weather",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.weather",
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -143,14 +143,14 @@
             "reason": "nice-to-have"
           },
           {
-            "path": "extras.context_notes",
-            "prio": "P2",
-            "reason": "semantic-guardrail"
-          },
-          {
             "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
           }
         ],
         "dropped_fields": [],
@@ -168,6 +168,21 @@
     "s2_budget_chars": 3500,
     "s2_used_chars": 858,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -189,21 +204,6 @@
         "reason": "identity"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -214,22 +214,22 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.traffic_exposure",
+        "path": "environment.weather",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.weather",
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -249,14 +249,14 @@
         "reason": "nice-to-have"
       },
       {
-        "path": "extras.context_notes",
-        "prio": "P2",
-        "reason": "semantic-guardrail"
-      },
-      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
       }
     ],
     "s2_dropped_fields": [],
@@ -269,8 +269,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für den Außendienst – Straßenlampe „Rosenheim, Heilig Blut“**\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Bereich mit Warnbaken oder Absperrband sichern, falls Fußgänger gefährdet sind (schlechte Sicht, Schnee).\n   - Bei Bedarf Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, lose Teile oder Vandalismus kontrollieren.\n   - Umgebung auf Stolperstellen oder weitere Gefahren prüfen.\n   - Foto vom Zustand machen (Foto ist laut Workflow verfügbar).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Sichtkontrolle des Leuchtmittels (defekt, Wasser im Gehäuse, Schneeablagerung).\n   - Prüfen, ob Sicherung oder Schaltkasten zugänglich und unbeschädigt.\n   - Hinweis: Techniker-Gerät ist online, aber mit niedriger Batterie – ggf. offlinefähige Dokumentation vorbereiten.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos).\n   - Zeitpunkt, Wetterbedingungen und Sichtverhältnisse notieren.\n   - Dokumentation auch offline sichern, falls Gerät ausfällt.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, schlechte Sicht, Schnee): Störung sofort an Leitstelle/Notdienst weitergeben.\n   - Dringende Reparatur anfordern.\n   - Falls keine schnelle Lösung möglich: Bürger informieren (z.B. Hinweis auf Gefahrenstelle).\n\n**Rückfrage:**  \nIst Zugang zum Schaltkasten möglich oder gibt es Hinweise auf Stromausfall im gesamten Bereich?  \nSind weitere Lampen betroffen oder nur diese einzelne?",
-    "tokens_estimate_words": 191
+    "text": "Checkliste für den Außendienst – Straßenlampe „Rosenheim, Heilig Blut“ (OSM: n1987093607)\n\n**1. Absicherung**\n- Bereich mit Warnbaken/Kegel absichern, falls Fußgänger gefährdet sind (schlechte Sicht, Schnee, Dämmerung).\n- Warnweste tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n**2. Sichtprüfung**\n- Lampe auf äußere Schäden prüfen (Glas, Mast, Kabel).\n- Umgebung auf weitere dunkle Lampen oder Unfallgefahr kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Lampe komplett aus oder flackert.\n- Nach Hinweisen auf Stromausfall, Vandalismus oder Witterungseinfluss suchen.\n- Foto vom Zustand machen (Foto verfügbar laut Workflow).\n\n**4. Dokumentation**\n- Alle Beobachtungen (Zustand, Umgebung, Gefahren) in der App/Checkliste festhalten.\n- Foto anhängen.\n- Zeit und Standort notieren.\n\n**5. Eskalation**\n- Bei hoher Gefährdung sofort an Leitstelle/Meldestelle weitergeben (hohe Priorität wegen schlechter Sicht und Schnee).\n- Reparaturauftrag auslösen, ggf. Notbeleuchtung anfordern.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder nur diese eine? Gibt es Hinweise auf Stromausfall im gesamten Bereich?",
+    "tokens_estimate_words": 145
   },
   "judge": {
     "test_id": "INC-LAMP-0022-TC3",
@@ -284,15 +284,15 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Nutzt alle Context-Elemente korrekt (device_state=low_battery → offline-Vorbereitung), severity=high → sofortige Eskalation, Umweltfaktoren (Schnee, poor_visibility) in Sicherheitsmaßnahmen integriert. Korrekte Interpretation der context_notes (device.* = Techniker-Gerät)."
+    "short_justification": "Kompakte, präzise Checkliste mit vollständiger Kontextnutzung (Schnee, Dämmerung, severity=high, photo_available). Safety-First-Ansatz, klare Eskalation, keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.857
+    "runtime_seconds": 3.164
   },
   "error": {}
 }

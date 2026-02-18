@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0029-TC1",
-  "timestamp": "2026-02-18T14:54:31",
+  "timestamp": "2026-02-18T15:59:32",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n9223569763)\n\n1. Absicherung  \n- Bereich absperren oder warnen, falls akute Gefahr besteht (z. B. schlechte Sicht, erhöhte Unfallgefahr).\n- Warnschilder aufstellen, falls verfügbar.\n\n2. Sichtprüfung  \n- Prüfen, ob Lampe beschädigt ist (z. B. Glasbruch, Mast verbogen).\n- Kontrollieren, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Einschätzen, ob Stromausfall vorliegt oder nur einzelne Lampe betroffen ist.\n- Prüfen, ob Lampe blinkt/flackert oder komplett aus ist.\n- Gibt es Hinweise auf Vandalismus oder technische Defekte?\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen notieren.\n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Meldung an zuständige Fachabteilung (Elektro/Technik).\n- Bei akuter Gefährdung: Sofortige Weitergabe an Bereitschaftsdienst.\n\nFragen:  \n- Gibt es weitere dunkle Lampen im Umfeld?  \n- Ist der Bereich stark frequentiert (z. B. Schulweg, Hauptstraße)?  \n- Wurde bereits eine Meldung an die Leitstelle gemacht?\n\nBitte Rückmeldung zu den offenen Punkten geben, damit ich die nächsten Schritte optimal unterstützen kann.",
-    "tokens_estimate_words": 156
+    "text": "Checkliste für die Meldung einer ausgefallenen Straßenlampe (Asset-ID: n9223569763):\n\n1. Absicherung  \n- Bereich möglichst meiden oder auf alternative, beleuchtete Wege ausweichen.  \n- Andere Personen warnen, falls der Bereich stark frequentiert ist.\n\n2. Sichtprüfung  \n- Ist nur diese Lampe betroffen oder mehrere im Umfeld?  \n- Gibt es sichtbare Schäden am Mast, Lampenkopf oder Kabel?  \n- Liegt ein Stromausfall in der Umgebung vor?\n\n3. Diagnose/Beobachtung  \n- Lampe seit ca. 15 Minuten dunkel: Einzelstörung wahrscheinlich.  \n- Keine offensichtlichen Schäden? Ursache könnte Leuchtmittel oder Steuerung sein.\n\n4. Dokumentation  \n- Asset-ID: n9223569763  \n- Zeitpunkt der Störung: 18.02.2026, ca. 15 Minuten  \n- Unsicherer Bereich, erhöhte Verkehrssicherheitsgefahr\n\n5. Eskalation  \n- Meldung an zuständige Wartungsstelle/Kommunale Leitstelle mit allen Informationen.  \n- Hinweis auf Unsicherheitsfaktor für schnelle Priorisierung.\n\nRückfrage:  \n- Ist die Lampe an einer Straße, einem Gehweg oder einem Platz?  \n- Gibt es Hinweise auf Vandalismus oder Unfall?  \nBitte ergänzen, damit die Meldung vollständig ist.",
+    "tokens_estimate_words": 146
   },
   "judge": {
     "test_id": "INC-LAMP-0029-TC1",
@@ -50,13 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (high nicht erkennbar)"
+      "Konkrete Absicherungsmaßnahmen (Warnbaken, temporäre Beleuchtung)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung und Eskalation. Keine Halluzinationen, aber Offline-Workflow nicht erwähnt (da CONTEXT minimal, kein Abzug bei K)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation und Sicherheitsfokus. Absicherung könnte konkreter sein (nur 'meiden' statt aktive Maßnahmen). Keine Halluzinationen, angemessen für L0-Kontext."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.319
+    "runtime_seconds": 3.062
   },
   "error": {}
 }

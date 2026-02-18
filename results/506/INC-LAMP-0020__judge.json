@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Priorisierung erkennbar bei minimalem Kontext",
-      "Rückfrage zu Asset-Typ unnötig spekulativ"
+      "Keine Umwelt-/Zeitkontextnutzung (da L0)"
     ],
-    "short_justification": "Solide strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber bei L0-Kontext etwas zu detailliert und spekulativ (Ampeln/Vandalismus ohne Anhaltspunkte)."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, da nur Asset-ID vorhanden. Safety und Eskalation erkennbar, aber ohne Kontext zu Severity/Umwelt weniger dringlich formuliert."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Nacht, Regen, poor_visibility, severity=high) korrekt verarbeitet, Safety-First-Ansatz, klare Eskalation, präzise Dokumentation. Keine Halluzinationen, vollständig kontextgerecht."
+    "short_justification": "Exzellente Kontextnutzung: Severity=high, Nacht+Regen+poor_visibility erkannt, Safety-Fokus klar, Low-Power-Modus erwähnt, Foto-Workflow integriert. Eskalation bei hoher Gefährdung explizit, Dokumentation nachvollziehbar. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -50,10 +49,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit vollständiger Kontextnutzung (Nacht, Regen, severity=high, photo_available). Korrekte Interpretation von device_state als Techniker-Gerät (nicht Asset), Safety-First, klare Eskalation, präzise Dokumentation. Keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Severity=high, Nacht+Regen+poor_visibility berücksichtigt, Safety-First erkennbar, Low-Power-Modus mit Offline-Hinweis zur Dokumentation, Foto-Workflow integriert, Eskalation klar formuliert. Keine Halluzinationen, vollständige Kontextnutzung."
   }
 ]

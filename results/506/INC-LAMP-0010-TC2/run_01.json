@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0010-TC2",
-  "timestamp": "2026-02-18T14:48:04",
+  "timestamp": "2026-02-18T15:53:18",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Dunkler Abschnitt Rosenheim, Stadtmitte\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, besonders wegen hoher Verkehrsexposition und schlechter Sicht.\n   - Bei Regen: Rutschgefahr beachten, ggf. zusätzliche Warnhinweise.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen auf dem betroffenen Abschnitt.\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Sicht auf mögliche Schäden (Kabel, Mast, Leuchtenkopf, Wasser im Gehäuse).\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Lampen einzeln prüfen, falls möglich.\n   - Prüfen, ob Stromversorgung vorhanden (ggf. mit Prüfgerät).\n   - Bei spotty Connectivity: Offline-Diagnose, ggf. vor Ort protokollieren.\n   - Wetterbedingungen (Regen) können Kurzschlüsse verursachen – darauf achten.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Abschnitt und einzelnen Lampen machen (Foto verfügbar).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Zeitpunkt, Wetter, Sichtverhältnisse, Verkehrssituation dokumentieren.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall und hoher Verkehrssicherheit: Sofortige Meldung an die Leitstelle/Stadtwerke.\n   - Dringlichkeit betonen (hohe Severity, Stadtmitte, viel Verkehr).\n   - Ggf. Notdienst oder Elektrofachkraft anfordern.\n\n**Rückfrage:**  \nSind bereits temporäre Absicherungen durch Polizei oder Stadt vorhanden?  \nSoll eine sofortige Reparatur oder nur eine Erstabsicherung erfolgen?",
-    "tokens_estimate_words": 173
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt Rosenheim, Stadtmitte\n\n1. **Absicherung**\n   - Warnwesten anlegen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Gefahrenbereich absichern, besonders wegen hohem Verkehrsaufkommen und schlechter Sicht (Dämmerung, Regen).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen im Abschnitt: Sind einzelne Lampen oder der gesamte Bereich betroffen?\n   - Prüfen auf offensichtliche Schäden (z.B. Kabel, Mast, Lampenkopf).\n   - Umgebung auf weitere Gefahren (z.B. rutschige Fahrbahn, Hindernisse) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Lampen einzeln prüfen, falls möglich.\n   - Prüfen, ob Stromversorgung vorhanden (ggf. Messgerät nutzen).\n   - Bei spotty Connectivity: Vor Ort auf alternative Kommunikationswege achten.\n   - Wetterbedingungen berücksichtigen (Regen kann Kurzschlüsse verursachen).\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Abschnitt und einzelnen Lampen aufnehmen.\n   - Notieren: Anzahl der ausgefallenen Lampen, genaue Position, Zeitpunkt, Wetter, Verkehrsaufkommen.\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (hohes Verkehrsaufkommen, schlechte Sicht): Sofortige Meldung an Leitstelle/Stadtwerke.\n   - Dringende Reparatur anfordern.\n   - Falls Eigenreparatur nicht möglich: Fachfirma beauftragen und Absicherung bis zur Behebung aufrechterhalten.\n\n**Rückfrage:**  \nSind bereits Notmaßnahmen (z.B. mobile Beleuchtung, Polizeiabsicherung) eingeleitet, oder soll dies kurzfristig organisiert werden?",
+    "tokens_estimate_words": 174
   },
   "judge": {
     "test_id": "INC-LAMP-0010-TC2",
@@ -66,7 +66,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, hoher Verkehr, spotty connectivity explizit adressiert. Offline-Diagnose erwähnt, Sicherheit priorisiert, Eskalation klar definiert."
+    "short_justification": "Exzellente Antwort mit starkem Sicherheitsfokus (severity=high, traffic_exposure=high, poor_visibility erkannt). Offline-Workflow erwähnt, Eskalation klar, Dokumentation vollständig. K=4 wegen minimaler Kontextlücke (spotty connectivity könnte stärker betont werden)."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.252
+    "runtime_seconds": 3.887
   },
   "error": {}
 }

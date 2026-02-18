@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Safety-Maßnahmen erwartbar – Antwort angemessen generisch."
+    "missing_elements": [
+      "Keine explizite Priorisierung der Verkehrssicherheit bei hohem Risiko"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Sicherheitsfokus vorhanden, aber nicht explizit priorisiert bei potentiell gefährlicher Situation (dunkler Abschnitt, Stadtmitte)."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -24,7 +26,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, hoher Verkehr, spotty connectivity explizit adressiert. Offline-Diagnose erwähnt, Sicherheit priorisiert, Eskalation klar definiert."
+    "short_justification": "Exzellente Antwort mit starkem Sicherheitsfokus (severity=high, traffic_exposure=high, poor_visibility erkannt). Offline-Workflow erwähnt, Eskalation klar, Dokumentation vollständig. K=4 wegen minimaler Kontextlücke (spotty connectivity könnte stärker betont werden)."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise, kontextbewusste Antwort: Regen, schlechte Sicht, hoher Verkehr, spotty connectivity korrekt verarbeitet. Offline-Dokumentation explizit genannt, Sicherheit und Eskalation klar strukturiert."
+    "short_justification": "Perfekte Umsetzung: Sicherheit priorisiert (Absicherung zuerst, Polizei erwähnt), Offline-Workflow explizit (lokal speichern, später synchronisieren), vollständige Dokumentation, klare Eskalation. Alle Kontextfaktoren korrekt verarbeitet."
   }
 ]

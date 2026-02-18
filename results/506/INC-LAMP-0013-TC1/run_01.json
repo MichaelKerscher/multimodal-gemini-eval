@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0013-TC1",
-  "timestamp": "2026-02-18T14:49:02",
+  "timestamp": "2026-02-18T15:54:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n13278610215\n\n1. Absicherung  \n- Bereich um die beschädigte Straßenlampe sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Abstand zu möglichen Berührungspunkten halten.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?  \n- Liegen Kabel oder metallische Teile frei?  \n- Ist Feuchtigkeit oder Funkenbildung erkennbar?\n\n3. Diagnose/Beobachtung  \n- Einschätzung: Ist akute Gefahr für Passanten oder Fahrzeuge gegeben?  \n- Prüfen, ob die Lampe noch in Betrieb ist – ggf. Strom abschalten (sofern möglich und berechtigt).\n\n4. Dokumentation  \n- Fotos der Schadstelle und Absicherung machen.  \n- Kurze Beschreibung der Situation notieren (Ort, Uhrzeit, Umfang der Beschädigung).\n\n5. Eskalation  \n- Meldung an die zuständige Elektrofachkraft oder den Bereitschaftsdienst.  \n- Bei akuter Gefahr: Feuerwehr oder Polizei informieren.\n\nRückfrage:  \nKannst du präzisieren, ob Stromleitungen sichtbar/frei liegen oder ob die Lampe noch eingeschaltet ist? Das hilft bei der weiteren Einschätzung.",
-    "tokens_estimate_words": 144
+    "text": "Absicherung und Vorgehen bei beschädigtem Gehäuse (Asset-ID: n13278610215)\n\n1. Absicherung  \n- Bereich um die Straßenlampe sofort mit Absperrband oder Warnbaken sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Unbefugte fernhalten.\n\n2. Sichtprüfung  \n- Sichtkontrolle: Ist das Gehäuse offen, liegen Kabel frei, sind Funken sichtbar?  \n- Prüfen, ob weitere Bauteile betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Einschätzung: Ist akute Berührungsgefahr vorhanden?  \n- Notieren, ob Stromversorgung abgeschaltet werden muss.\n\n4. Dokumentation  \n- Fotos vom Schaden machen.  \n- Asset-ID, Standort und Uhrzeit notieren.  \n- Kurzbeschreibung des Schadens und der Absicherungsmaßnahmen festhalten.\n\n5. Eskalation  \n- Sofortige Meldung an die zuständige Elektrofachkraft/Notdienst.  \n- Bei Gefahr im Verzug: Polizei/Feuerwehr informieren.\n\nBitte Rückmeldung, ob Strom bereits abgeschaltet wurde oder ob weitere Gefahren (z.B. Regen, viele Passanten) bestehen.",
+    "tokens_estimate_words": 118
   },
   "judge": {
     "test_id": "INC-LAMP-0013-TC1",
@@ -40,7 +40,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absicherung, Warnschilder, Eskalation). Alle Schritte nachvollziehbar, keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle Schritte nachvollziehbar, keine Halluzinationen, angemessen für minimalen Kontext."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 2.475
+    "runtime_seconds": 3.583
   },
   "error": {}
 }

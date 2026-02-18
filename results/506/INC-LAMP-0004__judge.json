@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Kontextnutzung erkennbar (nur Asset-ID vorhanden)"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber minimaler Kontext erlaubt keine tiefere Bewertung der Kontextnutzung."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste und Eskalation. Sicherheit adressiert, aber ohne expliziten Hinweis auf severity=high (nicht im Context). Keine Halluzinationen, Context minimal genutzt."
   },
   {
     "test_id": "INC-LAMP-0004-TC2",
@@ -35,10 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz spotty connectivity",
-      "Severity=high nicht ausreichend betont in Eskalation"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Gute Kontextnutzung (Nebel, Nacht, poor_visibility), Safety-Fokus erkennbar. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow empfohlen (K-Abzug)."
+    "short_justification": "Gute Nutzung von Context (Nebel, Nacht, severity=high, Foto). Sicherheit und Eskalation klar. Spotty connectivity erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync)."
   },
   {
     "test_id": "INC-LAMP-0004-TC3",
@@ -56,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Vollständige Kontextnutzung (Nebel, Nacht, spotty connectivity mit Offline-Hinweis), klare Safety-Priorisierung bei severity=high, strukturierte Eskalation, nachvollziehbare Dokumentation. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Alle Context-Elemente genutzt (spotty connectivity → Offline-Workflow, Nebel, Nacht, severity=high). Sicherheit priorisiert, Eskalation klar, Dokumentation nachvollziehbar, keine Halluzinationen."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0008-TC3",
-  "timestamp": "2026-02-18T14:47:24",
+  "timestamp": "2026-02-18T15:52:36",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "outage",
-        "reported_at": "2026-01-20T08:57:46+01:00",
         "severity": "low",
+        "reported_at": "2026-01-20T08:57:46+01:00",
         "photo_available": true,
         "reporter": "citizen"
       },
@@ -25,17 +25,18 @@
         "device_state": "low_power_mode"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "night",
-        "traffic_exposure": "low",
         "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
         "noise_level": "low"
       },
       "extras": {
         "context_notes": [
           "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
           "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
-          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache."
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache.",
+          "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen."
         ]
       },
       "_selection_meta": {
@@ -57,9 +58,24 @@
         "budget_policy": {
           "metric": "chars",
           "max": 3500,
-          "used": 811
+          "used": 990
         },
         "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
           {
             "path": "asset.asset_osm",
             "prio": "P0",
@@ -76,21 +92,6 @@
             "reason": "location"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -101,22 +102,22 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.traffic_exposure",
+            "path": "environment.weather",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.weather",
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -131,14 +132,14 @@
             "reason": "nice-to-have"
           },
           {
-            "path": "extras.context_notes",
-            "prio": "P2",
-            "reason": "semantic-guardrail"
-          },
-          {
             "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
           }
         ],
         "dropped_fields": [],
@@ -154,8 +155,23 @@
     "s2_selector_version": "s2-det-v1",
     "s2_guardrails_version": "s2-guard-v1",
     "s2_budget_chars": 3500,
-    "s2_used_chars": 811,
+    "s2_used_chars": 990,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -172,21 +188,6 @@
         "reason": "location"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -197,22 +198,22 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.traffic_exposure",
+        "path": "environment.weather",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.weather",
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -227,14 +228,14 @@
         "reason": "nice-to-have"
       },
       {
-        "path": "extras.context_notes",
-        "prio": "P2",
-        "reason": "semantic-guardrail"
-      },
-      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
       }
     ],
     "s2_dropped_fields": [],
@@ -247,15 +248,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für dunklen Abschnitt (Straßenbeleuchtung, Standort n13293341689):\n\n1. Absicherung  \n- Warnweste tragen, Bereich mit Warnbaken/Kegel sichern (besonders bei Nacht und Nebel).\n- Bei geringer Verkehrsexposition reicht Sichtbarkeit, trotzdem auf mögliche Gefahren achten.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampen: Sind mehrere oder alle Leuchten betroffen?\n- Prüfen auf offensichtliche Schäden (Kabel, Mast, Leuchtmittel).\n- Foto aufnehmen (Foto liegt laut Meldung bereits vor).\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob einzelne Lampen oder ganzer Abschnitt ausgefallen.\n- Bei Nebel: Sichtweite beachten, ggf. zusätzliche Beleuchtung nutzen.\n- Keine Hinweise auf akute Gefahr, aber schlechte Sichtverhältnisse.\n\n4. Dokumentation  \n- Alle Beobachtungen (betroffene Lampen, Zustand, Sichtverhältnisse) notieren.\n- Foto zur Dokumentation verwenden.\n- Offlinefähig dokumentieren, da Geräteverbindung spotty/low power.\n\n5. Eskalation  \n- Bei größerem Ausfall oder Sicherheitsrisiko: Meldung an zentrale Leitstelle/Technik.\n- Bei geringer Verkehrsexposition und niedriger Dringlichkeit: Termin für Reparatur einplanen.\n- Hinweis: Gerät ist nicht Ursache, Asset prüfen (z.B. Sicherung, Steuerung).\n\nRückfrage:  \nSind weitere Abschnitte betroffen oder nur dieser Standort? Gibt es Hinweise auf Stromausfall im Umfeld?",
-    "tokens_estimate_words": 162
+    "text": "Checkliste für dunklen Abschnitt (Straßenbeleuchtung, Standort n13293341689):\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Bereich mit Warnleuchten/Kegel sichern, besonders bei Nacht und Nebel.\n   - Verkehrslage beobachten, ggf. zusätzliche Absicherung bei Sichtbehinderung.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen auf offensichtliche Schäden (Kabel, Mast, Leuchtmittel).\n   - Foto vom betroffenen Abschnitt machen (offline speichern).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (z.B. andere Lampen in der Nähe).\n   - Auf Hinweise zu Ausfallursachen achten (z.B. Feuchtigkeit, Vandalismus).\n   - Gerät im Low-Power-Modus: Notizen und Fotos lokal sichern, keine Online-Abfragen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen offline dokumentieren (App/Notiz).\n   - Foto(s) lokal speichern, später synchronisieren.\n   - Standort und Zeit festhalten.\n\n5. **Eskalation**\n   - Bei mehreren Lampen oder Sicherheitsrisiko: Störung an Leitstelle melden.\n   - Bei Einzel-Ausfall: Reparaturauftrag vorbereiten, ggf. Ersatzteilbedarf notieren.\n   - Hinweis: Connectivity ist spotty – Synchronisation erst später durchführen.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder Feuchtigkeit? Bitte ggf. weitere Details oder Fotos bereitstellen.",
+    "tokens_estimate_words": 165
   },
   "judge": {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -266,11 +267,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Explizite Offline-Dokumentation wegen spotty/low_power, klare Trennung Gerät vs. Asset (extras.context_notes beachtet), Nebel/Nacht/poor_visibility adressiert, strukturiert und präzise."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit (lokal speichern, später synchronisieren), Low-Power-Modus berücksichtigt, Safety-First bei Nebel/Nacht, klare Eskalation. Guardrails korrekt interpretiert."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.271
+    "runtime_seconds": 4.827
   },
   "error": {}
 }

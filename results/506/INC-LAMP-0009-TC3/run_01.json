@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC3",
-  "timestamp": "2026-02-18T14:47:43",
+  "timestamp": "2026-02-18T15:52:55",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "flicker",
-        "reported_at": "2026-01-19T09:04:59+01:00",
         "severity": "low",
+        "reported_at": "2026-01-19T09:04:59+01:00",
         "reporter": "citizen"
       },
       "asset": {
@@ -26,16 +26,17 @@
         "device_state": "ok"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "dusk",
-        "traffic_exposure": "low",
         "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
         "noise_level": "low"
       },
       "extras": {
         "context_notes": [
           "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
-          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen."
         ]
       },
       "_selection_meta": {
@@ -57,9 +58,24 @@
         "budget_policy": {
           "metric": "chars",
           "max": 3500,
-          "used": 723
+          "used": 902
         },
         "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
           {
             "path": "asset.asset_osm",
             "prio": "P0",
@@ -81,21 +97,6 @@
             "reason": "identity"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -106,22 +107,22 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.traffic_exposure",
+            "path": "environment.weather",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.weather",
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -136,14 +137,14 @@
             "reason": "nice-to-have"
           },
           {
-            "path": "extras.context_notes",
-            "prio": "P2",
-            "reason": "semantic-guardrail"
-          },
-          {
             "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
           }
         ],
         "dropped_fields": [],
@@ -159,8 +160,23 @@
     "s2_selector_version": "s2-det-v1",
     "s2_guardrails_version": "s2-guard-v1",
     "s2_budget_chars": 3500,
-    "s2_used_chars": 723,
+    "s2_used_chars": 902,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -182,21 +198,6 @@
         "reason": "identity"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -207,22 +208,22 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.traffic_exposure",
+        "path": "environment.weather",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.weather",
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -237,14 +238,14 @@
         "reason": "nice-to-have"
       },
       {
-        "path": "extras.context_notes",
-        "prio": "P2",
-        "reason": "semantic-guardrail"
-      },
-      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
       }
     ],
     "s2_dropped_fields": [],
@@ -257,30 +258,31 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Flackern bei Regen (Straßenlampe, Rosenheim, Endorfer Au / Krones)\n\n1. Absicherung\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei schlechter Sicht (Dämmerung, Regen): Bereich mit Pylonen oder Warnleuchten sichern.\n- Verkehrsexposition ist laut Kontext gering, trotzdem auf Fußgänger achten.\n\n2. Sichtprüfung\n- Lampe und Mast auf Wassereintritt, Beschädigungen oder lose Teile kontrollieren.\n- Prüfen, ob Wasser an Kabel, Gehäuse oder Anschlussstellen sichtbar ist.\n- Umgebung auf Pfützen oder ungewöhnliche Feuchtigkeit am Fundament prüfen.\n\n3. Diagnose/Beobachtung\n- Flackern tritt nur bei Regen auf: Vermutung auf Feuchtigkeitseintritt, ggf. defekte Dichtung oder Kabelisolierung.\n- Lampe bei laufendem Regen beobachten: Flackermuster dokumentieren (Dauer, Intensität).\n- Elektrische Komponenten (sofern zugänglich) auf Korrosion oder Feuchtigkeit prüfen.\n\n4. Dokumentation\n- Offlinefähig: Fotos machen (sofern möglich), Notizen zu Sichtprüfung und Flackerverhalten.\n- Alle Beobachtungen und Annahmen schriftlich festhalten (z.B. Regen, Sichtverhältnisse, Zustand der Lampe).\n\n5. Eskalation\n- Bei akuter Gefahr (z.B. blanke Kabel, starker Wassereintritt): Sofortige Sperrung und Meldung an Fachbetrieb.\n- Bei geringer Gefahr (wie hier): Reparaturbedarf an zuständige Stelle melden, ggf. kurzfristige Kontrolle bei Trockenheit empfehlen.\n\nRückfrage: Ist die Lampe direkt am Mastfuß oder an einem Ausleger montiert? Gibt es Hinweise auf frühere Reparaturen oder bekannte Probleme an dieser Stelle?",
-    "tokens_estimate_words": 197
+    "text": "Checkliste für Außendienst-Einsatz – Flackern bei Regen  \nStandort: Rosenheim, Endorfer Au / Krones  \nFehler: Flackern (bei Regen), Sicht schlecht, Dämmerung, geringe Verkehrsbelastung\n\n**1. Absicherung**\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei schlechter Sicht: Warnleuchte aufstellen.\n- Umgebung auf Verkehr prüfen, ggf. Absperrung vornehmen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf Wassereintritt, Beschädigungen, lose Kabel prüfen.\n- Lampengehäuse, Dichtungen und Anschlussstellen kontrollieren.\n- Prüfen, ob Flackern aktuell sichtbar ist (ggf. bei Regen simulieren).\n\n**3. Diagnose/Beobachtung**\n- Flackern tritt nur bei Regen auf: Vermutung auf Feuchtigkeitseintritt, defekte Dichtung oder Kontaktproblem.\n- Elektrische Anschlüsse auf Korrosion oder Feuchtigkeit prüfen.\n- Dokumentieren, ob Flackern dauerhaft oder nur zeitweise auftritt.\n\n**4. Dokumentation**\n- Offline dokumentieren (Gerät ist offline): Fotos lokal speichern, Notizen zur Sichtprüfung und Diagnose erfassen.\n- Zeitpunkt, Wetter, Sichtverhältnisse und eigene Beobachtungen festhalten.\n\n**5. Eskalation**\n- Bei akuter Gefährdung (z.B. Kurzschluss, starker Funkenflug): Sofortige Sperrung und Meldung an Leitstelle.\n- Bei geringer Gefährdung: Reparaturbedarf an zuständige Stelle melden, ggf. Termin für Austausch/Dichtung setzen.\n\n**Rückfrage:**  \nWurde das Lampengehäuse bereits geöffnet und auf Feuchtigkeit geprüft? Sind Ersatzteile/Dichtungen vor Ort verfügbar?",
+    "tokens_estimate_words": 175
   },
   "judge": {
-    "test_id": "INC-LAMP-0009-TC3",
+    "missing_elements": [
+      "judge_missing_for_test_id"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
     },
     "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Dokumentation explizit erwähnt, Umweltbedingungen (Dämmerung, Regen, schlechte Sicht) korrekt einbezogen, klare Eskalation bei Gefahr. Keine Spekulationen."
+    }
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.993
+    "runtime_seconds": 5.451
   },
   "error": {}
 }

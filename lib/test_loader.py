@@ -73,8 +73,12 @@ def load_testcases_from_csv(path: str) -> List[Dict[str, Any]]:
                 raise ValueError(f"CSV Zeile {row_i} ({testcase_id}): user_message fehlt.")
 
             context_json = _safe_json_loads(row.get("context_json", "")) or {}
-            if not isinstance(context_json, dict):
-                context_json = {"_value": context_json}
+
+            if isinstance(context_json, dict) and context_json.get("_error") == "invalid_json":
+                raise ValueError(
+                    f"CSV Zeile {row_i} ({testcase_id}): context_json ist ungültiges JSON.\n"
+                    f"Raw: {context_json.get('_raw','')[:200]}..."
+                )
 
             incident_id = (row.get("incident_id") or "").strip()
             context_level = (row.get("context_level") or "").strip()

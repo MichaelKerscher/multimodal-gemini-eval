@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen bei minimalem Kontext."
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Eskalation. Absicherung und Dokumentation gut abgedeckt. Keine Kontextinformationen verfügbar, daher keine Halluzinationen möglich – Antwort bleibt generisch und angemessen."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Tageslicht, geringe Verkehrsbelastung, Gerät online). Präzise Handlungsanweisungen, angemessene Sicherheitsmaßnahmen, klare Dokumentation und Eskalation."
+    "short_justification": "Exzellente Kontextnutzung: Tageslicht, geringe Verkehrsexposition, online-Status werden korrekt verarbeitet. Klare Handlungsschritte, präzise Diagnose (Leuchtmittel/Verkabelung), vollständige Dokumentation und angemessene Eskalation bei mittlerer Priorität."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -41,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit klarer Struktur und vollständiger Handlungsfolge. Kontext korrekt interpretiert (device.* = Techniker-Gerät), keine Halluzinationen, angemessene Sicherheits- und Eskalationshinweise."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextverarbeitung. Umgebungsbedingungen (Tag, klar, low traffic) korrekt interpretiert, device_state richtig als Techniker-Gerät verstanden. Kompakte, umsetzbare Schritte mit passender Eskalation und hilfreichen Rückfragen."
   }
 ]

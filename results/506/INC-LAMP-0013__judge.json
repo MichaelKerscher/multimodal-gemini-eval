@@ -5,7 +5,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absicherung, Warnschilder, Eskalation). Alle Schritte nachvollziehbar, keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle Schritte nachvollziehbar, keine Halluzinationen, angemessen für minimalen Kontext."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, severity=high). Alle Sicherheitsmaßnahmen adressiert, Dokumentation klar, Eskalation vorhanden."
+    "short_justification": "Exzellente Kontextnutzung (severity=high, poor_visibility, photo_available). Sicherheit priorisiert, Eskalation klar, Dokumentation strukturiert, relevante Rückfragen gestellt."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Nutzt Kontext (Dämmerung, poor_visibility) für zusätzliche Warnleuchten, versteht photo_available als Workflow-Hinweis, klare Eskalation bei hoher Gefährdung."
+    "short_justification": "Hervorragende Antwort mit vollständiger Checkliste. Kontextinformationen (dusk, poor_visibility, severity=high) optimal genutzt, Sicherheit und Eskalation klar priorisiert, keine Halluzinationen."
   }
 ]

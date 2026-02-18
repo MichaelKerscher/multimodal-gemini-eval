@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0028-TC2",
-  "timestamp": "2026-02-18T14:54:11",
+  "timestamp": "2026-02-18T15:59:13",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Absicherung  \n- Bereich um die Straßenlampe Rosenheim, Leitzachstraße sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Stromschlaggefahr“ aufstellen.  \n- Abstand mindestens 2 Meter zum Gehäuse einhalten.\n\nSichtprüfung  \n- Sichtkontrolle: Ist das Gehäuse großflächig geöffnet oder nur teilweise beschädigt?  \n- Gibt es sichtbare Kabel oder blanke Kontakte?\n\nDiagnose/Beobachtung  \n- Prüfen, ob Stromversorgung abgeschaltet werden kann (Gerät ist online, Zustand ok).  \n- Beobachten, ob Passanten gefährdet sind oder sich nähern.\n\nDokumentation  \n- Fotos vom Schaden und der Absicherung machen (Foto liegt vor).  \n- Schaden und Maßnahmen im System dokumentieren.\n\nEskalation  \n- Sofortige Meldung an Elektrofachkraft/Techniker für Reparatur und Stromabschaltung.  \n- Bei akuter Gefahr: Feuerwehr oder Polizei verständigen.\n\nRückfrage:  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Kontaktaufnahme übernehmen?",
-    "tokens_estimate_words": 117
+    "text": "Absicherung  \n- Bereich um die Straßenlampe „Rosenheim, Leitzachstraße“ sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Stromschlaggefahr“ aufstellen.  \n- Abstand zur Gefahrenstelle mindestens 2 Meter.\n\nSichtprüfung  \n- Sichtkontrolle des Gehäuses: Wie groß ist die Öffnung? Sind Kabel sichtbar oder zugänglich?  \n- Prüfen, ob weitere Schäden (z. B. lose Teile, Feuchtigkeit) vorliegen.\n\nDiagnose/Beobachtung  \n- Keine Berührung!  \n- Prüfen, ob Lampe weiterhin funktioniert (leuchtet sie?).  \n- Foto vom Schaden anfertigen (falls nicht bereits vorhanden).\n\nDokumentation  \n- Schaden, Absicherungsmaßnahmen und Sichtbefund schriftlich festhalten.  \n- Foto dem Bericht anhängen.\n\nEskalation  \n- Sofortige Meldung an Elektrofachkraft/Servicepartner mit Hinweis auf akute Berührungsgefahr.  \n- Dringende Reparatur anfordern.\n\nRückfrage:  \nSind Kabel sichtbar oder zugänglich? Gibt es Hinweise auf Feuchtigkeit im Gehäuse?",
+    "tokens_estimate_words": 113
   },
   "judge": {
     "test_id": "INC-LAMP-0028-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Standortname, severity=high, photo_available). Sicherheitsmaßnahmen priorisiert, Eskalation klar, proaktive Rückfrage zur Koordination."
+    "short_justification": "Exzellente Kontextnutzung (Standortname, severity=high), klare Safety-First-Haltung mit konkreten Abstandsangaben, sofortige Eskalation an Elektrofachkraft. Präzise und umsetzbar."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.103
+    "runtime_seconds": 2.912
   },
   "error": {}
 }

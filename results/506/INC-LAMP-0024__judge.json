@@ -15,10 +15,30 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden war. Sicherheitsaspekte angemessen adressiert."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge und Eskalation. Keine Halluzinationen, da minimaler Kontext keine zusätzlichen Anforderungen stellt."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (Gerät offline, lokale Dokumentation)"
+    ],
+    "short_justification": "Exzellente Safety-Priorisierung bei Sturm/Nacht/hoher Verkehrsexposition. Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow (lokale Speicherung/Synchronisation)."
+  },
+  {
+    "test_id": "INC-LAMP-0024-TC3",
     "scores": {
       "R": 5,
       "H": 5,
@@ -33,24 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Status, Sturm, hohe Verkehrsexposition und Nacht/schlechte Sicht werden korrekt verarbeitet. Sicherheit priorisiert, Eskalation klar, Dokumentation vollständig."
-  },
-  {
-    "test_id": "INC-LAMP-0024-TC3",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Solide generische Checkliste ohne Halluzinationen. Context war minimal (_selection_meta only), daher korrekt keine spezifischen Details erfunden. Struktur und Eskalation vorhanden."
+    "short_justification": "Vollständige, kontextgerechte Antwort mit explizitem Offline-Workflow, Safety-First-Ansatz bei Sturm/Nacht, strukturierter Dokumentation und angemessener Eskalation. Keine Halluzinationen."
   }
 ]

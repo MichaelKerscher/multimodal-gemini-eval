@@ -14,17 +14,19 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht."
+    "missing_elements": [
+      "Keine Erwähnung von Warnweste (bei L0 aber nicht zwingend erwartbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflows erwartbar – Modell spekuliert nicht."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,14 +35,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht/poor_visibility adressiert, spotty connectivity erkannt, Low-Power-Modus erwähnt, Offline-Dokumentation impliziert. Alle Dimensionen stark erfüllt."
+    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht → Absicherung, spotty connectivity → alternative Kommunikation erwähnt, Foto-Workflow integriert. Alle Dimensionen stark erfüllt."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Explizite Offline-Dokumentation wegen spotty/low_power, klare Trennung Gerät vs. Asset (extras.context_notes beachtet), Nebel/Nacht/poor_visibility adressiert, strukturiert und präzise."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit (lokal speichern, später synchronisieren), Low-Power-Modus berücksichtigt, Safety-First bei Nebel/Nacht, klare Eskalation. Guardrails korrekt interpretiert."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0012-TC1",
-  "timestamp": "2026-02-18T14:48:42",
+  "timestamp": "2026-02-18T15:53:58",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Asset-ID: n12520338291\n\n1. Absicherung  \n- Bereich absperren oder markieren, falls möglich (z.B. Warnbaken, Absperrband).\n- Warnhinweis für Fußgänger und Verkehrsteilnehmer aufstellen.\n\n2. Sichtprüfung  \n- Ist die Lampe äußerlich beschädigt (Glas, Mast, Kabel)?\n- Liegt ein Stromausfall im Umfeld vor (andere Lampen betroffen)?\n\n3. Diagnose/Beobachtung  \n- Prüfen: Leuchtmittel defekt oder Stromversorgung unterbrochen?\n- Gibt es auffällige Geräusche, Geruch oder sichtbare Schäden?\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen und Maßnahmen notieren.\n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Bei Gefahr: Sofortige Meldung an Leitstelle/Technik (Notfallnummer).\n- Bei einfachem Defekt: Reparaturauftrag an zuständige Fachabteilung weiterleiten.\n\nRückfrage:  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder nur diese einzelne? Gibt es Hinweise auf Vandalismus oder Unwetter?",
-    "tokens_estimate_words": 119
+    "text": "Checkliste für den Außendienst – Asset-ID: n12520338291\n\n1. Absicherung  \n- Bereich absperren oder absichern, falls möglich (Warnbaken, Warnleuchten).  \n- Passanten auf die Dunkelheit hinweisen, besonders bei erhöhtem Verkehrsaufkommen.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe: Ist sie äußerlich beschädigt?  \n- Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind (Hinweis auf Stromausfall).\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob ein Ausfall der Stromversorgung vorliegt (z. B. durch Nachbarlampen).  \n- Falls nur diese Lampe betroffen: Leuchtmittel, Vorschaltgerät oder Steuerung defekt?  \n- Bei mehreren dunklen Lampen: Möglicher Netzfehler oder Sicherungsausfall.\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit des Ausfalls, Beobachtungen und Maßnahmen notieren.  \n- Fotos machen, falls Schäden sichtbar.\n\n5. Eskalation  \n- Bei Sicherheitsrisiko sofort an Leitstelle/Notdienst melden.  \n- Bei Einzeldefekt: Reparaturauftrag an zuständige Fachabteilung weitergeben.\n\nRückfrage:  \nSind weitere Lampen in der Umgebung betroffen oder nur diese? Gibt es sichtbare Schäden (z. B. Glasbruch, Kabel offen)?",
+    "tokens_estimate_words": 141
   },
   "judge": {
     "test_id": "INC-LAMP-0012-TC1",
@@ -49,14 +49,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung"
-    ],
+    "missing_elements": [],
     "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.809
+    "runtime_seconds": 3.912
   },
   "error": {}
 }

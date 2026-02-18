@@ -15,9 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Priorisierung trotz 'Bereich wirkt unsicher'"
+      "Keine explizite Priorisierung wegen 'unsicherer Bereich'",
+      "Keine Erwähnung von Verkehrssicherung bei hoher Gefährdung"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekt erkannt, aber bei minimalem Kontext keine Überinterpretation – angemessen zurückhaltend."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber bei 'unsicherem Bereich' könnte Dringlichkeit stärker betont werden."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
@@ -26,16 +27,19 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high + storm + traffic_exposure=high führen zu klarer Priorisierung, Polizei-Einbindung, Offline-Hinweis (Gerät offline/low_battery). Alle Kontextdimensionen genutzt, keine Halluzinationen."
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=offline",
+      "Keine Anleitung für lokale Dokumentation/Synchronisation"
+    ],
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Polizei, Verkehrsexposition, Sturm). Offline-Kontext (device.connectivity=offline) wird jedoch nicht adressiert, obwohl im CONTEXT vorhanden."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -53,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt, Sicherheit priorisiert (Polizei, Warnbaken), Eskalation mit Dringlichkeit, Foto-Workflow integriert. Kontext vollständig und korrekt genutzt, keine Spekulationen."
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit adressiert, Safety-First-Prinzip konsequent umgesetzt, Eskalation klar, Dokumentation nachvollziehbar. Alle Kontextinformationen korrekt verarbeitet."
   }
 ]

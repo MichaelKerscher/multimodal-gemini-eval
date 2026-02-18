@@ -4,7 +4,7 @@
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle Schritte nachvollziehbar dokumentiert, keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Absicherung und Eskalation. Angemessene Nachfragen bei minimalem Kontext, keine Spekulation über nicht vorhandene Informationen."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Standortname, severity=high, photo_available). Sicherheitsmaßnahmen priorisiert, Eskalation klar, proaktive Rückfrage zur Koordination."
+    "short_justification": "Exzellente Kontextnutzung (Standortname, severity=high), klare Safety-First-Haltung mit konkreten Abstandsangaben, sofortige Eskalation an Elektrofachkraft. Präzise und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Professionelle Checklisten-Struktur mit vollständiger Kontextintegration. Sicherheit und Eskalation klar priorisiert, Dokumentation präzise, gezielte Rückfragen zur Gefahrenbeurteilung."
+    "short_justification": "Hervorragende Strukturierung mit Checklisten-Format, vollständige Kontextnutzung (Standort, photo_available, severity), klare Priorisierung von Sicherheit und Eskalation. Keine Halluzinationen trotz umfangreicher Metadaten."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0013-TC2",
-  "timestamp": "2026-02-18T14:49:02",
+  "timestamp": "2026-02-18T15:54:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Absicherung – Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnbaken und Absperrband um das betroffene Gehäuse aufstellen.\n   - Bei mittlerer Verkehrsexposition: Verkehrsleitkegel und ggf. Warnleuchte verwenden.\n   - Warnhinweis für Fußgänger und Verkehrsteilnehmer sichtbar anbringen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Ist das Gehäuse offen, liegen stromführende Teile frei?\n   - Prüfen, ob weitere Schäden oder Gefahrenstellen vorhanden sind.\n\n3. **Diagnose/Beobachtung**\n   - Einschätzung: Berührungsgefahr besteht, da Gehäuse offen und hohe Schadensschwere gemeldet.\n   - Gerät laut System online und funktionsfähig, aber Gehäuse muss dringend instandgesetzt werden.\n\n4. **Dokumentation**\n   - Vor Ort Fotos machen (falls nicht bereits vorhanden).\n   - Schaden und Absicherungsmaßnahmen im digitalen Wartungsprotokoll dokumentieren.\n\n5. **Eskalation**\n   - Sofortige Meldung an Elektrofachkraft/Notdienst zur schnellen Reparatur.\n   - Bei Gefahr im Verzug: Polizei oder Feuerwehr informieren.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Kontaktaufnahme übernehmen?  \nSind weitere Anlagen in unmittelbarer Nähe betroffen?",
-    "tokens_estimate_words": 137
+    "text": "Absicherung  \n- Warnbaken und Absperrband um das beschädigte Gehäuse aufstellen (mind. 2 Meter Abstand).  \n- Warnleuchte bei schlechter Sicht anbringen.  \n- Gefahrenhinweis für Fußgänger und Verkehrsteilnehmer aufstellen.\n\nSichtprüfung  \n- Sichtkontrolle: Ist das Gehäuse offen, liegen stromführende Teile frei?  \n- Prüfen, ob weitere Schäden oder lose Teile vorhanden sind.\n\nDiagnose/Beobachtung  \n- Einschätzung: Berührungsgefahr besteht, da Gehäuse offen und hohe Schadensschwere.  \n- Prüfen, ob das Gerät weiterhin online ist (laut Status: ok).  \n- Foto zur Dokumentation nutzen.\n\nDokumentation  \n- Schaden mit Foto und Standort (Koordinaten) im System erfassen.  \n- Zeitpunkt und Absicherungsmaßnahmen notieren.\n\nEskalation  \n- Sofortige Meldung an Elektrofachkraft/Techniker zur schnellen Reparatur.  \n- Bei akuter Gefahr: Polizei oder Feuerwehr informieren.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Meldung weiterleiten?  \nSind weitere Verkehrsteilnehmer gefährdet (z. B. Kinder, Radfahrer)?",
+    "tokens_estimate_words": 128
   },
   "judge": {
     "test_id": "INC-LAMP-0013-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, severity=high). Alle Sicherheitsmaßnahmen adressiert, Dokumentation klar, Eskalation vorhanden."
+    "short_justification": "Exzellente Kontextnutzung (severity=high, poor_visibility, photo_available). Sicherheit priorisiert, Eskalation klar, Dokumentation strukturiert, relevante Rückfragen gestellt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 6.186
+    "runtime_seconds": 3.147
   },
   "error": {}
 }

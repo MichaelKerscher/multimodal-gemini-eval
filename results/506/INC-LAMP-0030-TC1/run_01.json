@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0030-TC1",
-  "timestamp": "2026-02-18T14:54:49",
+  "timestamp": "2026-02-18T15:59:52",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Fehler – Straßenlampe (Asset-ID: n11833818322)\n\n1. Absicherung  \nStelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann. Warnweste tragen, ggf. Absperrung aufstellen.\n\n2. Sichtprüfung  \n- Ist die Lampe äußerlich beschädigt?  \n- Gibt es sichtbare Kabelprobleme, Feuchtigkeit oder lose Teile?\n\n3. Diagnose/Beobachtung  \n- Prüfe, ob die Lampe aktuell stabil leuchtet.  \n- Frage ggf. Anwohner, ob das Problem häufiger auftritt.  \n- Notiere, ob andere Lampen in der Nähe betroffen sind.\n\n4. Dokumentation  \n- Fehlerbeschreibung: Lampe war aus, jetzt wieder an – sporadischer Fehler.  \n- Asset-ID: n11833818322  \n- Zeitpunkt und Dauer des Ausfalls (falls bekannt) notieren.\n\n5. Eskalation  \n- Melde den Fehler an die zuständige Wartungsstelle mit Vermerk „sporadisch, aktuell wieder in Betrieb“.  \n- Empfehlung: Elektriker zur Prüfung der Elektrik und ggf. Austausch des Leuchtmittels oder der Steuerung.\n\nFehlen weitere Details (z.B. genaue Ausfallzeiten, Wetterbedingungen, andere betroffene Lampen)? Bitte ergänzen, um die Diagnose zu verbessern.",
-    "tokens_estimate_words": 147
+    "text": "Checkliste für sporadischen Fehler bei Straßenlampe (Asset-ID: n11833818322):\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe keine Gefahr für Verkehrsteilnehmer darstellt.  \n- Falls nötig, Warnbaken oder Absperrungen aufstellen.\n\n2. Sichtprüfung  \n- Überprüfe die Lampe auf sichtbare Schäden (Gehäuse, Mast, Verkabelung).  \n- Prüfe, ob Feuchtigkeit, Vandalismus oder lose Teile erkennbar sind.\n\n3. Diagnose/Beobachtung  \n- Notiere, ob das Problem nur zu bestimmten Zeiten auftritt (z.B. bei Wetterwechsel).  \n- Prüfe, ob andere Lampen in der Nähe ähnliche Fehler zeigen.  \n- Annahme: Stromversorgung und Steuerung könnten betroffen sein (z.B. Wackelkontakt, Feuchtigkeit im Schaltschrank).\n\n4. Dokumentation  \n- Halte den Fehler (sporadisch aus, jetzt wieder an) schriftlich fest.  \n- Asset-ID, Standort, Zeitpunkt und Beobachtungen dokumentieren.\n\n5. Eskalation  \n- Melde den Fehler an die zuständige Wartungsfirma oder das technische Team.  \n- Hinweis: Da der Fehler sporadisch ist, bitte um gezielte Überprüfung der elektrischen Anschlüsse und Steuerung.\n\nFehlen weitere Informationen (z.B. genaue Standortdaten, Wetterbedingungen, Häufigkeit des Fehlers)? Bitte ergänzen, damit die Diagnose präziser erfolgen kann.",
+    "tokens_estimate_words": 160
   },
   "judge": {
     "test_id": "INC-LAMP-0030-TC1",
@@ -49,12 +49,14 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit adressiert, Eskalation vorhanden, Dokumentation nachvollziehbar. Keine Kontextübernutzung bei minimalem Input."
+    "missing_elements": [
+      "Keine Connectivity-Info im Context, daher Offline-Workflow nicht erwartbar"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur plausible Annahmen (Wackelkontakt, Feuchtigkeit) bei minimalem Context gemacht werden."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.541
+    "runtime_seconds": 3.653
   },
   "error": {}
 }

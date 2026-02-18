@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0028-TC1",
-  "timestamp": "2026-02-18T14:54:11",
+  "timestamp": "2026-02-18T15:59:13",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,15 +31,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Absicherung und Erstmaßnahmen – Asset-ID: n4470029720\n\n1. Absicherung  \n- Bereich um die beschädigte Straßenlampe sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Zugang für Unbefugte verhindern.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Ist die Beschädigung großflächig oder nur oberflächlich?  \n- Liegen stromführende Teile frei oder sind sie erreichbar?\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe weiterhin in Betrieb ist oder bereits ausgefallen.  \n- Gibt es Funkenflug, ungewöhnliche Geräusche oder Geruchsentwicklung?\n\n4. Dokumentation  \n- Fotos der Beschädigung und Absicherung machen.  \n- Kurze Beschreibung der Situation (Art der Beschädigung, Gefahrenlage, getroffene Maßnahmen).  \n- Asset-ID und Standort notieren.\n\n5. Eskalation  \n- Sofortige Meldung an die zuständige Elektrofachkraft/Technik-Team.  \n- Bei akuter Gefahr: Feuerwehr oder Polizei verständigen.  \n- Bis zur Reparatur: Bereich gesichert halten und regelmäßig kontrollieren.\n\nBitte Rückmeldung, falls weitere Details zum Schaden oder Standort benötigt werden.",
-    "tokens_estimate_words": 137
+    "text": "Absicherung  \n1. Bereich um die beschädigte Straßenlampe sofort mit Absperrband oder Warnbaken sichern.  \n2. Warnschilder „Achtung Stromgefahr“ aufstellen.\n\nSichtprüfung  \n3. Sichtkontrolle: Ist das Gehäuse offen, liegen Kabel frei, sind Funken oder Feuchtigkeit sichtbar?  \n4. Prüfen, ob die Lampe weiterhin in Betrieb ist.\n\nDiagnose/Beobachtung  \n5. Einschätzung: Ist eine akute Berührungsgefahr vorhanden?  \n6. Notieren: Art und Umfang des Schadens (z.B. Riss, Loch, abstehende Teile).\n\nDokumentation  \n7. Fotos vom Schaden und der Absicherung machen.  \n8. Asset-ID (n4470029720), Standort und Uhrzeit notieren.\n\nEskalation  \n9. Störungsdienst bzw. Elektrofachkraft informieren – schnelle Reparatur erforderlich.  \n10. Bis zur Reparatur Absicherung regelmäßig kontrollieren.\n\nFehlende Infos:  \n- Standort der Lampe (bitte angeben, falls nicht bekannt).  \n- Ist die Lampe stromlos schaltbar?  \n- Gibt es Hinweise auf Vandalismus oder Unfall?  \n\nBitte Rückmeldung, falls weitere Details bekannt sind.",
+    "tokens_estimate_words": 127
   },
   "judge": {
     "test_id": "INC-LAMP-0028-TC1",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle Schritte nachvollziehbar dokumentiert, keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Absicherung und Eskalation. Angemessene Nachfragen bei minimalem Kontext, keine Spekulation über nicht vorhandene Informationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.012
+    "runtime_seconds": 3.81
   },
   "error": {}
 }

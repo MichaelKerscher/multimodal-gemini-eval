@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Spekulation über Asset-Typ (Lampe/Ampel) bei minimalem Context"
+      "Keine Berücksichtigung der Umgebungsbedingungen (nicht im Context)"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Rückfrage nach Asset-Typ ist sinnvoll bei minimalem Context, keine Halluzinationen."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID verfügbar war und keine Spekulation über fehlende Kontextdaten erfolgte."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlere Verkehrsexposition, Foto vorhanden). Klare Safety-Priorisierung, strukturierte Schritte, gezielte Rückfrage zu intermittierendem Fehler."
+    "short_justification": "Exzellente Kontextnutzung: Nacht, Nebel, schlechte Sicht und mittlere Verkehrsexposition werden in Absicherung integriert. Klare Struktur, Foto-Workflow erwähnt, Eskalation bei Gefahr präsent."
   },
   {
     "test_id": "INC-LAMP-0002-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextsensitive Antwort mit korrekter Interpretation aller Umgebungsfaktoren (Nebel, Nacht, mittlere Verkehrsexposition). Klare Absicherung, Diagnose, Dokumentation und Eskalationskriterien."
+    "short_justification": "Perfekte Antwort: Umgebungsbedingungen (Nebel, Nacht, schlechte Sicht) explizit in Absicherung eingebunden, Feuchtigkeitsverdacht plausibel abgeleitet, klare Eskalationskriterien, vollständige Dokumentation. Keine Halluzinationen."
   }
 ]

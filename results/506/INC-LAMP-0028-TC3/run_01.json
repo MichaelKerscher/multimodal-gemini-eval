@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0028-TC3",
-  "timestamp": "2026-02-18T14:54:11",
+  "timestamp": "2026-02-18T15:59:13",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "open_housing",
-        "reported_at": "2026-01-18T06:17:02+01:00",
         "severity": "high",
+        "reported_at": "2026-01-18T06:17:02+01:00",
         "photo_available": true,
         "reporter": "dispatch"
       },
@@ -27,10 +27,10 @@
         "device_state": "ok"
       },
       "environment": {
-        "lighting_condition": "normal_visibility",
         "time_of_day": "day",
-        "traffic_exposure": "low",
         "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
         "noise_level": "medium"
       },
       "extras": {
@@ -63,6 +63,21 @@
         },
         "selected_fields": [
           {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
             "path": "asset.asset_osm",
             "prio": "P0",
             "reason": "identity"
@@ -83,21 +98,6 @@
             "reason": "identity"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -108,22 +108,22 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.traffic_exposure",
+            "path": "environment.weather",
             "prio": "P1",
             "reason": "risk-context"
           },
           {
-            "path": "environment.weather",
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -143,14 +143,14 @@
             "reason": "nice-to-have"
           },
           {
-            "path": "extras.context_notes",
-            "prio": "P2",
-            "reason": "semantic-guardrail"
-          },
-          {
             "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
           }
         ],
         "dropped_fields": [],
@@ -168,6 +168,21 @@
     "s2_budget_chars": 3500,
     "s2_used_chars": 866,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -189,21 +204,6 @@
         "reason": "identity"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -214,22 +214,22 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.traffic_exposure",
+        "path": "environment.weather",
         "prio": "P1",
         "reason": "risk-context"
       },
       {
-        "path": "environment.weather",
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -249,14 +249,14 @@
         "reason": "nice-to-have"
       },
       {
-        "path": "extras.context_notes",
-        "prio": "P2",
-        "reason": "semantic-guardrail"
-      },
-      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
       }
     ],
     "s2_dropped_fields": [],
@@ -269,8 +269,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Außendienst – Gehäuse beschädigt, Berührungsgefahr (Rosenheim, Leitzachstraße)**\n\n1. **Absicherung**\n   - Absperrmaterial (Warnbaken, Absperrband) um das betroffene Gerät aufstellen.\n   - Warnschilder „Elektrische Gefahr“ sichtbar platzieren.\n   - Bei Bedarf: Bereich zusätzlich gegen unbefugten Zugang sichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wie groß ist die Öffnung? Sind stromführende Teile sichtbar oder erreichbar?\n   - Prüfen, ob weitere Schäden (z.B. lose Teile, Feuchtigkeitseintritt) vorliegen.\n\n3. **Diagnose/Beobachtung**\n   - Dokumentieren, ob Berührungsgefahr tatsächlich besteht (z.B. blanke Kabel, zugängliche Kontakte).\n   - Prüfen, ob das Gerät weiterhin funktioniert oder Ausfall vorliegt.\n   - Foto vom Schaden anfertigen (Foto ist laut Workflow verfügbar).\n\n4. **Dokumentation**\n   - Schaden und Absicherungsmaßnahmen in der App/Checkliste festhalten.\n   - Fotos und Beschreibung hochladen.\n   - Zeit und Ort der Absicherung notieren.\n\n5. **Eskalation**\n   - Meldung mit „hoher Priorität“ an die Fachabteilung/Elektriker weiterleiten.\n   - Hinweis: Reparatur nur durch Elektrofachkraft, da Berührungsgefahr besteht.\n   - Bei akuter Gefahr: ggf. Polizei/Feuerwehr informieren.\n\n**Rückfrage:**  \nSind stromführende Teile sichtbar oder erreichbar? Falls nicht, bitte kurz beschreiben, wie das Gehäuse geöffnet ist.  \nFalls weitere Absicherung (z.B. Stromabschaltung) nötig erscheint, bitte bestätigen.",
-    "tokens_estimate_words": 170
+    "text": "Absicherung bei Gehäuseschaden (Berührungsgefahr) – Rosenheim, Leitzachstraße\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Bereich sofort mit Warnbaken, Absperrband oder Pylonen sichern.\n   - Warnschilder „Stromschlaggefahr“ aufstellen.\n   - Unbefugte fernhalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo ist die Öffnung? Sind Kabel sichtbar oder zugänglich?\n   - Prüfen, ob weitere Teile lose oder beschädigt sind.\n\n3. **Diagnose/Beobachtung**\n   - Einschätzen, ob akute Gefahr besteht (z.B. freiliegende Leitungen).\n   - Foto machen (lt. Workflow-Hinweis vorhanden).\n   - Prüfen, ob die Lampe noch in Betrieb ist (leuchtet sie?).\n\n4. **Dokumentation**\n   - Schaden und Absicherungsmaßnahmen in der App dokumentieren.\n   - Foto hochladen.\n   - Standort: Rosenheim, Leitzachstraße (OSM: n4470029720).\n\n5. **Eskalation**\n   - Meldung mit „hoher Priorität“ an Elektrofachkraft/Service weiterleiten.\n   - Hinweis auf mögliche Berührungsgefahr und Absicherung geben.\n\n**Rückfrage:**  \nSind freiliegende Kabel sichtbar oder ist nur das Gehäuse geöffnet?  \nFalls Unsicherheiten bestehen: Bis zum Eintreffen der Fachkraft niemanden in den Gefahrenbereich lassen.",
+    "tokens_estimate_words": 139
   },
   "judge": {
     "test_id": "INC-LAMP-0028-TC3",
@@ -288,11 +288,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Professionelle Checklisten-Struktur mit vollständiger Kontextintegration. Sicherheit und Eskalation klar priorisiert, Dokumentation präzise, gezielte Rückfragen zur Gefahrenbeurteilung."
+    "short_justification": "Hervorragende Strukturierung mit Checklisten-Format, vollständige Kontextnutzung (Standort, photo_available, severity), klare Priorisierung von Sicherheit und Eskalation. Keine Halluzinationen trotz umfangreicher Metadaten."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.137
+    "runtime_seconds": 3.96
   },
   "error": {}
 }

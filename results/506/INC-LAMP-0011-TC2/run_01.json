@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0011-TC2",
-  "timestamp": "2026-02-18T14:48:22",
+  "timestamp": "2026-02-18T15:53:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Kontrollauftrag: Straßenlampe Rosenheim, Leitzachstraße  \nGemeldeter Fehler: Zeitweiser Ausfall, aktuell normal. Sichtverhältnisse: Nebel, mittlerer Verkehr.\n\n**Checkliste für Außendienstkontrolle**\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen.\n   - Standort absichern (besonders bei mittlerem Verkehr und schlechter Sicht).\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden, Verschmutzung oder Feuchtigkeit prüfen.\n   - Umgebung auf Störungen (z.B. Baumaßnahmen, Kabel, Vandalismus) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein-/ausschalten, um Ausfall zu provozieren.\n   - Prüfen, ob andere Lampen in der Nähe ähnliche Probleme zeigen.\n   - Bei Nebel: Feuchtigkeitseintritt besonders beachten.\n\n4. **Dokumentation**\n   - Zustand und Beobachtungen notieren (Datum, Uhrzeit, Wetter).\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Fehlerbild und Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Verdacht auf Feuchtigkeit/Kabelproblem: Meldung an Fachbetrieb/Elektriker.\n   - Bei stabiler Funktion: Überwachung empfehlen, ggf. Rückmeldung an Bürger.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder bauliche Veränderungen an der Leitzachstraße?  \nFalls nicht, vermute ich Feuchtigkeitseintritt als Ursache für den zeitweisen Ausfall. Bitte bestätigen oder ergänzen.",
-    "tokens_estimate_words": 156
+    "text": "Checkliste für Kontrolle – Leitzachstraße, Rosenheim (Straßenlampe)\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Pylonen, Warnleuchte).\n   - Bei mittlerer Verkehrsexposition und Nebel: Bereich gut sichtbar absichern.\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden prüfen (Gehäuse, Mast, Verkabelung).\n   - Kontrollieren, ob Lampe aktuell leuchtet.\n   - Umfeld auf ungewöhnliche Einflüsse (z.B. Feuchtigkeit, Vandalismus) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein-/ausschalten (sofern möglich).\n   - Prüfen, ob das Problem reproduzierbar ist.\n   - Bei intermittierendem Fehler: auf lose Kontakte, Feuchtigkeit im Gehäuse, schwankende Spannung achten.\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Lampe aktuell funktionsfähig, keine sichtbaren Schäden, Wetter: Nebel).\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Zeitpunkt und Dauer der Kontrolle dokumentieren.\n\n5. **Eskalation**\n   - Falls Fehler nicht nachvollziehbar, aber wiederholt gemeldet: Meldung an Fachbereich für Elektrotechnik.\n   - Hinweis auf intermittierenden Fehler und schlechte Sichtbedingungen geben.\n   - Wartungsauftrag für detaillierte Prüfung (z.B. Messung, Austausch Komponenten) anstoßen.\n\n**Rückfrage:**  \nSind vor Ort bereits ähnliche Ausfälle bekannt oder gibt es Hinweise auf Netzschwankungen?  \nSoll eine Langzeitüberwachung eingerichtet werden?",
+    "tokens_estimate_words": 163
   },
   "judge": {
     "test_id": "INC-LAMP-0011-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontextgerechte Absicherung (Nebel, mittlerer Verkehr), strukturierte Diagnose mit Feuchtigkeitsverdacht, klare Eskalationskriterien. Alle relevanten Umweltfaktoren berücksichtigt."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, mittlere Verkehrsexposition, intermittierender Fehler). Alle relevanten Umgebungsfaktoren berücksichtigt, klare Handlungsschritte, gute Dokumentationshinweise und passende Eskalation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.372
+    "runtime_seconds": 4.245
   },
   "error": {}
 }

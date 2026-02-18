@@ -15,25 +15,28 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen, da minimaler Kontext keine Offline-Erwartung rechtfertigt."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
-      "K": 5
+      "D": 4,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Status erkannt, Batterie/Konnektivität adressiert, Foto-Workflow erwähnt, hohe Verkehrsexposition berücksichtigt. Klare Struktur, vollständige Dokumentation."
+    "missing_elements": [
+      "Offline-Workflow (Gerät ist offline)",
+      "Klarstellung: device_state betrifft Techniker-Gerät, nicht Asset"
+    ],
+    "short_justification": "Gute Struktur und Safety-Fokus, aber kritischer Fehler: Offline-Kontext (connectivity=offline) wird ignoriert, stattdessen wird Batterie als Asset-Ursache fehlinterpretiert. Halluzination: Lampen haben typischerweise keine Batterie."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit genannt ('analog durchführen', 'offlinefähig'), Foto-Workflow integriert, hohe Verkehrsexposition adressiert. Keine Halluzinationen trotz umfangreichem CONTEXT."
+    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, Kontext präzise genutzt, keine Fehlinterpretation von device_state. Strukturiert, sicher, nachvollziehbar dokumentiert, angemessene Eskalation bei low severity."
   }
 ]

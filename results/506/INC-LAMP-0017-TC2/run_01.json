@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0017-TC2",
-  "timestamp": "2026-02-18T14:50:22",
+  "timestamp": "2026-02-18T15:55:38",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Prüfung – Dunkler Abschnitt Schönau\n\n1. **Absicherung**\n   - Warnleuchten und Absperrmaterial bereitstellen.\n   - Bei Regen und schlechter Sicht: Warnweste tragen, Bereich absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts.\n   - Prüfen, ob Lampen beschädigt oder ausgeschaltet sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, aber im Low-Power-Modus – mögliche Ursache: Stromversorgung oder Steuerung.\n   - Prüfen, ob mehrere Lampen betroffen sind (Ausfall einzelner oder gesamter Abschnitt).\n   - Wetter (Regen) kann Einfluss auf Elektrik haben.\n\n4. **Dokumentation**\n   - Foto vom betroffenen Abschnitt aufnehmen (Foto liegt bereits vor).\n   - Notieren: Zeitpunkt, Sichtverhältnisse, betroffene Lampen, Gerätezustand.\n\n5. **Eskalation**\n   - Bei mittlerer Schwere und schlechter Sicht: Meldung an Fachbereich für schnelle Reparatur.\n   - Hinweis: Falls Stromversorgung defekt, Elektriker hinzuziehen.\n\n**Rückfrage:**  \nSind nur einzelne Lampen betroffen oder der gesamte Abschnitt? Gibt es Hinweise auf Vandalismus oder technische Störungen (z.B. Flackern, Geräusche)?",
-    "tokens_estimate_words": 138
+    "text": "Checkliste für Schönau – Dunkler Abschnitt\n\n1. Absicherung  \n- Warnbaken und Absperrband bereitstellen.  \n- Bei Regen und schlechter Sicht: Warnwesten tragen, ggf. zusätzliche Beleuchtung nutzen.  \n- Verkehr auf Schönau ist aktuell gering, trotzdem auf Fußgänger achten.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampen entlang des Abschnitts (Position: 47.8227101, 12.1125581).  \n- Prüfen, ob Lampen komplett ausgefallen oder nur einzelne Leuchten betroffen sind.  \n- Foto vom betroffenen Bereich vorhanden – zur Dokumentation nutzen.\n\n3. Diagnose/Beobachtung  \n- Gerät ist online, aber im Low-Power-Modus: Möglicherweise Energiesparfunktion oder Defekt.  \n- Prüfen, ob Stromversorgung/Steuerung gestört ist (z.B. Sicherung, Schaltkasten, Feuchtigkeitseintritt).  \n- Wetter: Regen – Feuchtigkeit als Fehlerursache möglich.\n\n4. Dokumentation  \n- Alle Schritte und Beobachtungen im Wartungsprotokoll festhalten.  \n- Foto zur Fehlerbeschreibung anhängen.  \n- Zeitpunkt und Reporter notieren.\n\n5. Eskalation  \n- Bei mittlerer Störung: Meldung an Technik-Team für kurzfristige Reparatur.  \n- Hinweis auf schlechte Sicht und Verkehrssicherheit geben.  \n- Bei Gefahr für Verkehrsteilnehmer: Sofortige Eskalation an Bereitschaftsdienst.\n\nRückfrage:  \nSind weitere Abschnitte betroffen oder nur der Bereich Schönau? Gibt es Hinweise auf wiederkehrende Ausfälle?",
+    "tokens_estimate_words": 166
   },
   "judge": {
     "test_id": "INC-LAMP-0017-TC2",
@@ -65,8 +65,8 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
-      "K": 5
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -74,12 +74,14 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Low-Power-Modus werden korrekt einbezogen. Safety-Maßnahmen angemessen, Eskalation bei mittlerer Schwere und poor_visibility erkennbar. Kompakt und handlungsorientiert."
+    "missing_elements": [
+      "Low-Power-Modus wird als mögliche Asset-Fehlerursache interpretiert (betrifft aber Techniker-Gerät)"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, poor_visibility, Koordinaten, Foto). Klare Safety- und Eskalationslogik. Kleine Unschärfe: Low-Power-Modus betrifft Techniker-Gerät, nicht Asset – aber vertretbare Interpretation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.47
+    "runtime_seconds": 5.327
   },
   "error": {}
 }

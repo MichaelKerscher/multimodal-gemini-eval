@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0015-TC1",
-  "timestamp": "2026-02-18T14:49:40",
+  "timestamp": "2026-02-18T15:54:56",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n13293431103)\n\n1. Absicherung  \n- Bereich absperren oder kennzeichnen, falls akute Gefahr besteht (z. B. Dunkelheit, Stolperstellen).\n- Warnschilder aufstellen, falls verfügbar.\n\n2. Sichtprüfung  \n- Lampe auf offensichtliche Schäden prüfen (Glasbruch, Kabel, Mast).\n- Umgebung auf weitere Ausfälle oder ungewöhnliche Situationen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind (Hinweis auf Netzproblem).\n- Einschätzen, ob ein Defekt am Leuchtmittel, Vorschaltgerät oder Stromversorgung vorliegt.\n- Notieren, ob die Lampe kurz vor dem Ausfall geflackert hat oder andere Auffälligkeiten zeigte.\n\n4. Dokumentation  \n- Asset-ID, Standort, Zeitpunkt des Ausfalls und Beobachtungen notieren.\n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Meldung an die zuständige Wartungsstelle/Technik weiterleiten.\n- Bei akuter Gefährdung (z. B. Schulweg, Unfallgefahr): Priorisierte Reparatur anfordern.\n\nFehlende Informationen:  \n- Gibt es Hinweise auf Stromausfall im gesamten Bereich oder nur an dieser Lampe?\n- Ist die Lampe Teil einer Kette (z. B. mehrere Lampen gleichzeitig dunkel)?\n\nBitte Rückmeldung geben, falls weitere Details bekannt sind oder Sofortmaßnahmen gewünscht werden.",
-    "tokens_estimate_words": 167
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Störung einer Straßenlampe**\n\n1. **Absicherung**\n   - Bereich um die Lampe beobachten: Gibt es akute Gefahren (z.B. schlechte Sicht, laufender Verkehr, Fußgänger)?\n   - Falls möglich: Warnhinweis auf Unsicherheit anbringen oder zuständige Stelle informieren.\n\n2. **Sichtprüfung**\n   - Ist die Lampe äußerlich beschädigt (z.B. Glasbruch, Kabel sichtbar)?\n   - Sind weitere Lampen in der Nähe betroffen?\n\n3. **Diagnose/Beobachtung**\n   - Seit wann ist die Lampe dunkel? (Von Ihnen: ca. 10 Minuten)\n   - Gab es auffällige Geräusche, Blitze oder Gerüche?\n   - Wetterbedingungen: Regen, Sturm oder andere Einflüsse?\n\n4. **Dokumentation**\n   - Asset-ID: n13293431103\n   - Zeitpunkt der Störung: 18.02.2026, ca. 10 Minuten dunkel\n   - Unsicherer Bereich gemeldet\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle/Leitstelle weitergeben.\n   - Hinweis auf erhöhte Unsicherheit im Bereich, schnelle Reparatur anfordern.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder handelt es sich nur um diese eine? Gibt es besondere Gefahrenstellen (z.B. Zebrastreifen, Kreuzung) im Umfeld?\n\nBitte geben Sie diese Informationen an, damit die Priorisierung erfolgen kann.",
+    "tokens_estimate_words": 168
   },
   "judge": {
     "test_id": "INC-LAMP-0015-TC1",
@@ -50,13 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)"
+      "Konkrete Sicherheitsmaßnahmen bei hoher Verkehrsexposition fehlen"
     ],
-    "short_justification": "Solide Checkliste mit Absicherung, Diagnose und Eskalation. Kontextnutzung korrekt (keine Spekulation), aber Sicherheitsaspekt könnte bei 'unsicher' stärker betont werden."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekt erkannt, aber bei minimalem Kontext keine spezifischen Maßnahmen für Verkehrsgefährdung – angemessen für L0."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.43
+    "runtime_seconds": 3.463
   },
   "error": {}
 }

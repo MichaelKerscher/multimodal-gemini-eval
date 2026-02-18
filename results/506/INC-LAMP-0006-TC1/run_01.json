@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0006-TC1",
-  "timestamp": "2026-02-18T14:46:44",
+  "timestamp": "2026-02-18T15:51:55",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Störung einer Straßenlampe (Asset-ID: n7230270217)**\n\n1. **Absicherung**\n   - Bereich um die Lampe prüfen: Ist die Dunkelheit ein Sicherheitsrisiko für Fußgänger oder Verkehr?\n   - Falls ja: Warnschilder oder Absperrungen aufstellen, falls verfügbar.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf offensichtliche Schäden kontrollieren (z.B. Glasbruch, Kabel sichtbar, Mast beschädigt).\n   - Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Ist nur diese Lampe betroffen oder mehrere?\n   - Gab es kürzlich Unwetter, Bauarbeiten oder andere Ereignisse?\n   - Lampe blinkt oder bleibt komplett dunkel?\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Zeitpunkt der Störung, Beobachtungen notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle weiterleiten mit allen gesammelten Informationen.\n   - Bei akuter Gefährdung: Sofortige Priorisierung und ggf. Polizei oder Ordnungsamt informieren.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur die Lampe mit Asset-ID n7230270217? Gab es besondere Ereignisse (z.B. Unwetter, Bauarbeiten) im Bereich?",
-    "tokens_estimate_words": 164
+    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n7230270217)\n\n1. Absicherung  \n- Bereich absperren oder kennzeichnen, falls möglich (z. B. Warnbaken, Absperrband).\n- Warnwesten tragen, auf eigene Sicherheit achten.\n\n2. Sichtprüfung  \n- Lampe auf sichtbare Schäden prüfen (Glasbruch, Kabel, Mast).\n- Umgebung auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Lampe komplett aus oder flackert.\n- Nach Hinweisen auf Stromausfall oder Vandalismus suchen.\n- Nachfragen: Gibt es weitere dunkle Lampen in der Nähe? Ist die Lampe Teil einer Gruppe?\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen notieren.\n- Fotos machen (wenn möglich).\n\n5. Eskalation  \n- Meldung an die zuständige Leitstelle/Technik weiterleiten.\n- Dringlichkeit betonen: Unsicherer Bereich, schnelle Reparatur erforderlich.\n\nRückfrage:  \nSind weitere Lampen betroffen oder nur diese einzelne? Gibt es Hinweise auf Stromausfall im Umfeld?",
+    "tokens_estimate_words": 127
   },
   "judge": {
     "test_id": "INC-LAMP-0006-TC1",
@@ -50,13 +50,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Priorisierung trotz 'Bereich wirkt unsicher'"
+      "Keine explizite Priorisierung wegen 'unsicherer Bereich'",
+      "Keine Erwähnung von Verkehrssicherung bei hoher Gefährdung"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekt erkannt, aber bei minimalem Kontext keine Überinterpretation – angemessen zurückhaltend."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber bei 'unsicherem Bereich' könnte Dringlichkeit stärker betont werden."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.013
+    "runtime_seconds": 3.112
   },
   "error": {}
 }

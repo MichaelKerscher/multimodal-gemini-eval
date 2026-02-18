@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC2",
-  "timestamp": "2026-02-18T14:47:43",
+  "timestamp": "2026-02-18T15:52:55",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,30 +56,31 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für das Vorgehen bei Flackern einer Straßenlampe bei Regen  \nStandort: Rosenheim, Endorfer Au / Krones  \nFehlerbild: Flackern, vor allem bei Regen, geringe Verkehrsexposition, schlechte Sicht, Gerät offline\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Arbeiten im Straßenbereich nötig sind.\n   - Warnweste tragen, besonders bei schlechter Sicht und Dämmerung.\n   - Bei geringer Verkehrsexposition reicht meist eine einfache Absicherung.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Feuchtigkeitseintritt, Risse, lose Teile).\n   - Kontrollieren, ob Wasser in den Lampenkopf oder Anschlusskasten eingedrungen ist.\n   - Prüfen, ob Kabel oder Dichtungen beschädigt oder porös wirken.\n\n3. **Diagnose/Beobachtung**\n   - Flackern tritt nur bei Regen auf: Vermutlich Feuchtigkeitseintritt oder Kontaktproblem.\n   - Gerät ist offline: Keine Fernwartung möglich, Diagnose vor Ort erforderlich.\n   - Annahme: Elektrischer Fehler durch Feuchtigkeit, z.B. defekte Dichtung, Korrosion oder lose Kontakte.\n\n4. **Dokumentation**\n   - Fehlerbild und Wetterbedingungen notieren.\n   - Fotos machen, sobald möglich (derzeit nicht verfügbar).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei geringer Schwere: Reparatur im nächsten Wartungszyklus einplanen.\n   - Falls Gefahr für Verkehrssicherheit besteht (z.B. komplette Ausfälle, Funkenbildung): Sofortige Meldung an Elektrotechnik-Fachkraft.\n   - Hinweis: Bei wiederholtem Flackern im Regen sollte die Lampe zeitnah überprüft und ggf. instandgesetzt werden.\n\n**Rückfrage:**  \nSind bereits frühere ähnliche Vorfälle an diesem Standort bekannt?  \nSoll eine sofortige Vor-Ort-Prüfung erfolgen oder reicht eine Einplanung für die nächste Wartung?",
-    "tokens_estimate_words": 218
+    "text": "Checkliste für das Vorgehen bei Flackern der Straßenlampe (Rosenheim, Endorfer Au / Krones):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls Arbeiten am Mast nötig werden.\n   - Bei schlechter Sicht und Regen: Warnweste tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Lampe bei Regen beobachten: Flackert sie nur bei Feuchtigkeit?\n   - Mast, Leuchte und Anschlusskasten auf sichtbare Schäden, Feuchtigkeitseintritt oder Korrosion prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Wasser in den Lampenkopf oder Anschlusskasten gelangt (Dichtung, Kabeldurchführung).\n   - Kontaktstellen und Verkabelung auf lose oder beschädigte Teile kontrollieren.\n   - Annahme: Da Gerät „offline“, keine Fernanalyse möglich – vor Ort prüfen.\n\n4. **Dokumentation**\n   - Flacker-Verhalten und Wetterbedingungen notieren.\n   - Fotos machen, falls möglich (auch ohne Bürger-Foto).\n   - Alle Beobachtungen und Maßnahmen im System erfassen.\n\n5. **Eskalation**\n   - Bei Verdacht auf Feuchtigkeitsschaden: Elektriker oder Fachfirma zur Reparatur beauftragen.\n   - Bei akuter Gefährdung (z.B. Stromschlagrisiko): Lampe sofort außer Betrieb nehmen und absichern.\n\n**Rückfrage:**  \nIst das Flackern nur bei Regen oder auch bei anderen Wetterlagen zu beobachten? Gibt es Hinweise auf Wassereintritt (z.B. Tropfen im Lampenkopf, feuchte Kabel)?",
+    "tokens_estimate_words": 172
   },
   "judge": {
-    "test_id": "INC-LAMP-0009-TC2",
+    "missing_elements": [
+      "judge_missing_for_test_id"
+    ],
+    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
+      "R": 1,
+      "H": 1,
+      "S": 1,
+      "D": 1,
+      "K": 1
     },
     "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "safety_first": false,
+      "escalation_present": false,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Workflow erkannt, Dämmerung/Regen/schlechte Sicht berücksichtigt, klare Eskalationskriterien. Vollständig nachvollziehbar dokumentiert."
+    }
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.09
+    "runtime_seconds": 4.035
   },
   "error": {}
 }

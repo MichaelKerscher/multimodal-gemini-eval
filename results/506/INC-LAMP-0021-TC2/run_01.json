@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0021-TC2",
-  "timestamp": "2026-02-18T14:51:50",
+  "timestamp": "2026-02-18T15:56:59",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Aussetzer/Flackern – Rechenauerstraße, Rosenheim\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen (bei Nacht und Regen besonders wichtig).\n   - Warnwesten tragen.\n   - Bereich um die Straßenlampe sichern, um Gefahren für Verkehrsteilnehmer zu vermeiden.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Kabel prüfen.\n   - Kontrollieren, ob der Lampenkopf fest sitzt.\n   - Prüfen, ob Wasser in den Anschlusskasten eingedrungen ist (bei Regen relevant).\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Ist es dauerhaft oder nur sporadisch?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n   - Foto auswerten (falls verfügbar): Gibt es Hinweise auf Korrosion oder Kontaktprobleme?\n   - Annahme: Kontaktproblem wahrscheinlich, da Gerät sonst „ok“ gemeldet.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Sichtprüfungsergebnisse).\n   - Foto zur Dokumentation sichern.\n   - Standort und Asset-ID vermerken.\n\n5. **Eskalation**\n   - Bei mittlerer Störung: Elektriker für zeitnahe Prüfung und ggf. Reparatur anfordern.\n   - Hinweis auf Kontaktproblem und Feuchtigkeit weitergeben.\n   - Bei Verschlechterung (Totalausfall/Sicherheitsrisiko): Sofortige Eskalation an Bereitschaft.\n\n**Rückfrage:**  \nSind weitere Lampen in der Straße betroffen oder nur diese einzelne? Gibt es Zugang zum Anschlusskasten für eine genauere Prüfung?",
-    "tokens_estimate_words": 184
+    "text": "Checkliste für Aussetzer/Flackern – Rechenauerstraße, Rosenheim\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen, da Nacht und Regen (schlechte Sicht).\n   - Warnwesten tragen, Umfeld auf Verkehr achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lockere Kabel prüfen.\n   - Kontrollieren, ob Lampenkopf fest sitzt und keine offensichtlichen Defekte vorliegen.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Ist es dauerhaft oder nur bei bestimmten Bedingungen (z.B. Regen)?\n   - Kontaktstellen (Klemmen, Anschlüsse) auf Korrosion oder Feuchtigkeit prüfen.\n   - Bei Möglichkeit: Spannung und Stromfluss messen.\n\n4. **Dokumentation**\n   - Fotos vom Lampenkopf, Mast und Anschlussbereich machen (Foto liegt bereits vor).\n   - Beobachtungen und Messwerte notieren.\n   - Zeitpunkt und Wetterbedingungen festhalten.\n\n5. **Eskalation**\n   - Bei Verdacht auf Kontaktprobleme oder Feuchtigkeit: Elektriker informieren.\n   - Bei Gefahr für Verkehrssicherheit (z.B. Totalausfall): Sofortige Reparatur veranlassen.\n   - Meldung im System aktualisieren, ggf. Sperrung beantragen.\n\n**Rückfrage:**  \nSind vor Ort Werkzeuge und Zugang zum Anschlusskasten vorhanden, oder muss ein Elektriker angefordert werden?",
+    "tokens_estimate_words": 151
   },
   "judge": {
     "test_id": "INC-LAMP-0021-TC2",
@@ -75,13 +75,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility, photo_available). Absicherung priorisiert, Eskalation klar. Spotty connectivity sollte Offline-Dokumentation triggern (K=4)."
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility), klare Safety-Maßnahmen und Eskalation. Spotty connectivity wird nicht explizit adressiert (lokale Dokumentation/Sync), daher K=4 statt 5."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.402
+    "runtime_seconds": 3.424
   },
   "error": {}
 }

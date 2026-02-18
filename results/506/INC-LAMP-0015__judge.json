@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)"
+      "Konkrete Sicherheitsmaßnahmen bei hoher Verkehrsexposition fehlen"
     ],
-    "short_justification": "Solide Checkliste mit Absicherung, Diagnose und Eskalation. Kontextnutzung korrekt (keine Spekulation), aber Sicherheitsaspekt könnte bei 'unsicher' stärker betont werden."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekt erkannt, aber bei minimalem Kontext keine spezifischen Maßnahmen für Verkehrsgefährdung – angemessen für L0."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Warnbaken, Verkehrsteilnehmer warnen), severity=high korrekt eskaliert, Foto-Workflow integriert, alle Kontextdaten sinnvoll genutzt."
+    "short_justification": "Exzellente Antwort: Warnbaken/Polizei bei hohem Verkehr, Foto-Workflow integriert, severity=high führt zu Priorisierung, alle Kontextfaktoren (Nacht, poor_visibility, traffic_exposure) adressiert. Vollständig und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Warnwesten, Polizei-Option, Foto-Workflow, severity=high mit Soforteskalation, alle Risikofaktoren (Nacht, traffic_exposure, poor_visibility) adressiert. Keine Halluzinationen."
+    "short_justification": "Identisch starke Antwort wie TC2: Sicherheit priorisiert (Warnbaken, Polizei), Foto-Workflow, Eskalation bei Gefährdung, alle Umgebungsfaktoren berücksichtigt. Kontext vollständig genutzt, keine Halluzinationen."
   }
 ]

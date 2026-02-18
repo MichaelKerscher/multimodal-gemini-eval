@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0014-TC3",
-  "timestamp": "2026-02-18T14:49:21",
+  "timestamp": "2026-02-18T15:54:36",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "outage",
-        "reported_at": "2026-01-21T11:45:31+01:00",
         "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
         "reporter": "patrol"
       },
       "asset": {
@@ -24,10 +24,10 @@
         "device_state": "ok"
       },
       "environment": {
-        "lighting_condition": "normal_visibility",
         "time_of_day": "day",
-        "traffic_exposure": "low",
         "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
         "noise_level": "low"
       },
       "extras": {
@@ -59,6 +59,21 @@
         },
         "selected_fields": [
           {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
             "path": "asset.asset_osm",
             "prio": "P0",
             "reason": "identity"
@@ -74,21 +89,6 @@
             "reason": "location"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -99,17 +99,7 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
-            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -119,7 +109,22 @@
             "reason": "risk-context"
           },
           {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
             "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
           },
@@ -127,11 +132,6 @@
             "path": "extras.context_notes",
             "prio": "P2",
             "reason": "semantic-guardrail"
-          },
-          {
-            "path": "incident.reporter",
-            "prio": "P2",
-            "reason": "nice-to-have"
           }
         ],
         "dropped_fields": [],
@@ -150,6 +150,21 @@
     "s2_used_chars": 663,
     "s2_selected_fields": [
       {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
         "path": "asset.asset_osm",
         "prio": "P0",
         "reason": "identity"
@@ -165,21 +180,6 @@
         "reason": "location"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -190,17 +190,7 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
-        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -210,7 +200,22 @@
         "reason": "risk-context"
       },
       {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
         "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
       },
@@ -218,11 +223,6 @@
         "path": "extras.context_notes",
         "prio": "P2",
         "reason": "semantic-guardrail"
-      },
-      {
-        "path": "incident.reporter",
-        "prio": "P2",
-        "reason": "nice-to-have"
       }
     ],
     "s2_dropped_fields": [],
@@ -235,8 +235,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Außendienst – Straßenlampe (Ausfall, gemeldet durch Routinekontrolle)**\n\n1. **Absicherung**\n   - Absperrung falls nötig (bei Arbeiten im Straßenraum).\n   - Warnwesten tragen.\n   - Umfeld auf Verkehr und Gefahren prüfen.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich auf Schäden, Vandalismus oder lose Teile kontrollieren.\n   - Mast, Sockel und Verkabelung auf sichtbare Defekte prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden ist (Spannungsprüfer).\n   - Leuchtmittel und Sicherung kontrollieren.\n   - Falls vorhanden: Steuerungseinheit oder Dämmerungsschalter testen.\n\n4. **Dokumentation**\n   - Befund und Maßnahmen in der App/Checkliste festhalten (Foto falls möglich).\n   - Zeitpunkt, Zustand und ggf. weitere Auffälligkeiten notieren.\n\n5. **Eskalation**\n   - Bei defekter Stromversorgung oder schwerwiegenden Schäden: Meldung an Fachbetrieb/Elektriker.\n   - Bei einfachen Defekten (Leuchtmittel/Sicherung): Austausch vor Ort, Abschluss dokumentieren.\n\n**Rückfrage:**  \nIst ein Ersatzleuchtmittel/Sicherung vor Ort verfügbar oder muss Material bestellt werden?  \nSind weitere Lampen in unmittelbarer Nähe betroffen?",
-    "tokens_estimate_words": 135
+    "text": "Checkliste für Außendienst – Straßenlampe (Ausfall, Routinekontrolle)\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (bei Bedarf).\n   - Standort prüfen: Geringe Verkehrsbelastung, Tageslicht, klare Sicht → keine zusätzliche Absicherung nötig.\n\n2. **Sichtprüfung**\n   - Lampe: Gehäuse, Mast, Verkabelung auf sichtbare Schäden kontrollieren.\n   - Umfeld: Keine Gefahr durch lose Teile, keine Hindernisse im Gehweg/Bereich.\n\n3. **Diagnose/Beobachtung**\n   - Lampe bleibt aus, keine offensichtlichen Schäden.\n   - Prüfen: Ist der Stromanschluss sichtbar zugänglich? (Falls ja: Sichtprüfung Sicherung/Kabel.)\n   - Annahme: Elektrischer Fehler oder Leuchtmittel defekt, da Gerätedaten ok (keine Connectivity-Probleme).\n\n4. **Dokumentation**\n   - Foto machen (falls möglich).\n   - Fehlerbeschreibung notieren: „Lampe komplett ausgefallen, keine sichtbaren Schäden, Umgebung sicher.“\n   - Standort (OSM-ID, Koordinaten) und Zeit dokumentieren.\n\n5. **Eskalation**\n   - Meldung an Fachteam für Elektroprüfung/Leuchtmitteltausch weiterleiten.\n   - Dringlichkeit: Mittel (keine akute Gefährdung, aber Ausfall).\n\n**Rückfrage:**  \nIst ein Zugang zum Lampenkopf/Sicherungskasten vor Ort möglich oder muss ein Hubsteiger eingeplant werden?  \nSind Ersatzteile (Leuchtmittel/Sicherung) verfügbar?",
+    "tokens_estimate_words": 145
   },
   "judge": {
     "test_id": "INC-LAMP-0014-TC3",
@@ -244,7 +244,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -254,11 +254,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit klarer Struktur und vollständiger Handlungsfolge. Kontext korrekt interpretiert (device.* = Techniker-Gerät), keine Halluzinationen, angemessene Sicherheits- und Eskalationshinweise."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextverarbeitung. Umgebungsbedingungen (Tag, klar, low traffic) korrekt interpretiert, device_state richtig als Techniker-Gerät verstanden. Kompakte, umsetzbare Schritte mit passender Eskalation und hilfreichen Rückfragen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.736
+    "runtime_seconds": 4.2
   },
   "error": {}
 }

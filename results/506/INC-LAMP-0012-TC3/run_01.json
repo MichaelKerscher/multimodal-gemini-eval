@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0012-TC3",
-  "timestamp": "2026-02-18T14:48:42",
+  "timestamp": "2026-02-18T15:53:58",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -10,8 +10,8 @@
     "context": {
       "incident": {
         "fault_type": "outage",
-        "reported_at": "2026-01-21T15:41:46+01:00",
         "severity": "medium",
+        "reported_at": "2026-01-21T15:41:46+01:00",
         "reporter": "patrol"
       },
       "asset": {
@@ -24,16 +24,17 @@
         "device_state": "low_power_mode"
       },
       "environment": {
-        "lighting_condition": "poor_visibility",
         "time_of_day": "night",
-        "traffic_exposure": "medium",
         "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
         "noise_level": "low"
       },
       "extras": {
         "context_notes": [
           "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
-          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen."
         ]
       },
       "_selection_meta": {
@@ -55,9 +56,24 @@
         "budget_policy": {
           "metric": "chars",
           "max": 3500,
-          "used": 679
+          "used": 858
         },
         "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
           {
             "path": "asset.asset_osm",
             "prio": "P0",
@@ -74,21 +90,6 @@
             "reason": "location"
           },
           {
-            "path": "incident.fault_type",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
-            "path": "incident.reported_at",
-            "prio": "P0",
-            "reason": "time-anchor"
-          },
-          {
-            "path": "incident.severity",
-            "prio": "P0",
-            "reason": "must-have"
-          },
-          {
             "path": "device.connectivity",
             "prio": "P1",
             "reason": "action-constraints"
@@ -99,17 +100,7 @@
             "reason": "action-constraints"
           },
           {
-            "path": "environment.lighting_condition",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
             "path": "environment.time_of_day",
-            "prio": "P1",
-            "reason": "risk-context"
-          },
-          {
-            "path": "environment.traffic_exposure",
             "prio": "P1",
             "reason": "risk-context"
           },
@@ -119,7 +110,22 @@
             "reason": "risk-context"
           },
           {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
             "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
             "prio": "P2",
             "reason": "nice-to-have"
           },
@@ -127,11 +133,6 @@
             "path": "extras.context_notes",
             "prio": "P2",
             "reason": "semantic-guardrail"
-          },
-          {
-            "path": "incident.reporter",
-            "prio": "P2",
-            "reason": "nice-to-have"
           }
         ],
         "dropped_fields": [],
@@ -147,8 +148,23 @@
     "s2_selector_version": "s2-det-v1",
     "s2_guardrails_version": "s2-guard-v1",
     "s2_budget_chars": 3500,
-    "s2_used_chars": 679,
+    "s2_used_chars": 858,
     "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
       {
         "path": "asset.asset_osm",
         "prio": "P0",
@@ -165,21 +181,6 @@
         "reason": "location"
       },
       {
-        "path": "incident.fault_type",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
-        "path": "incident.reported_at",
-        "prio": "P0",
-        "reason": "time-anchor"
-      },
-      {
-        "path": "incident.severity",
-        "prio": "P0",
-        "reason": "must-have"
-      },
-      {
         "path": "device.connectivity",
         "prio": "P1",
         "reason": "action-constraints"
@@ -190,17 +191,7 @@
         "reason": "action-constraints"
       },
       {
-        "path": "environment.lighting_condition",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
         "path": "environment.time_of_day",
-        "prio": "P1",
-        "reason": "risk-context"
-      },
-      {
-        "path": "environment.traffic_exposure",
         "prio": "P1",
         "reason": "risk-context"
       },
@@ -210,7 +201,22 @@
         "reason": "risk-context"
       },
       {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
         "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
       },
@@ -218,11 +224,6 @@
         "path": "extras.context_notes",
         "prio": "P2",
         "reason": "semantic-guardrail"
-      },
-      {
-        "path": "incident.reporter",
-        "prio": "P2",
-        "reason": "nice-to-have"
       }
     ],
     "s2_dropped_fields": [],
@@ -235,8 +236,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe dunkel, Bereich unsicher\n\n**1. Absicherung**\n- Warnbaken oder Absperrband aufstellen, falls möglich.\n- Warnweste tragen.\n- Umfeld auf Gefahren (z.B. Stolperstellen, Verkehr) prüfen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden kontrollieren (z.B. Bruch, Vandalismus).\n- Prüfen, ob weitere Lampen betroffen sind.\n- Umgebung auf ungewöhnliche Umstände (z.B. Baustelle, Kabelarbeiten) checken.\n\n**3. Diagnose/Beobachtung**\n- Lampe reagiert nicht – vermutlich Stromausfall oder Defekt.\n- Keine offensichtlichen Schäden? Ursache könnte im Stromnetz oder Leuchtmittel liegen.\n- Annahme: Einzelstörung, da keine weiteren Lampen gemeldet.\n\n**4. Dokumentation**\n- Fotos machen (falls möglich).\n- Standort, Uhrzeit, Sichtprüfung und erste Annahmen notieren.\n- Offlinefähig dokumentieren, falls App-Verbindung schlecht.\n\n**5. Eskalation**\n- Meldung an zuständige Leitstelle/Technik (Störung mittlerer Priorität, da Bereich unsicher).\n- Hinweis auf schlechte Sicht und Verkehrssicherheit geben.\n- Dringlichkeit betonen, da Nacht und mittlere Verkehrsexposition.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder nur diese? Gibt es Hinweise auf Baustellen oder Kabelarbeiten im Umfeld?",
-    "tokens_estimate_words": 159
+    "text": "Checkliste für Straßenlampenausfall (Gefährdung: Unsicherheit, Nacht, mittlere Verkehrsexposition)\n\n1. Absicherung  \n   - Warnweste anlegen  \n   - Gefahrenbereich markieren (z. B. Warnleuchte, Absperrband falls verfügbar)  \n   - Verkehrsteilnehmer auf schlechte Sicht hinweisen, falls möglich\n\n2. Sichtprüfung  \n   - Lampe: Sichtbare Schäden, Vandalismus, lose Teile?  \n   - Umgebung: Kabel, Mast, Fundament intakt?  \n   - Sonstige Lampen in der Nähe ebenfalls betroffen?\n\n3. Diagnose/Beobachtung  \n   - Lampe reagiert auf Bewegung/Sensorik?  \n   - Geräusche, Geruch (z. B. Verschmorte Elektrik)?  \n   - Prüfen, ob Lampe komplett aus oder flackert  \n   - Annahme: Einzel-Ausfall, da keine weiteren Lampen gemeldet\n\n4. Dokumentation  \n   - Vor Ort: Fotos machen (offline speichern)  \n   - Notizen: Uhrzeit, Sichtprüfung, Umgebung, eigene Beobachtungen  \n   - Offline-Workflow: Alle Daten lokal sichern, später synchronisieren\n\n5. Eskalation  \n   - Meldung als mittlerer Ausfall (Gefährdung: Unsicherheit, Nacht)  \n   - Weiterleitung an Reparaturdienst mit Priorität „Sicherheit“  \n   - Hinweis: Bereich bleibt bis Reparatur unsicher, ggf. temporäre Absicherung prüfen\n\nFehlende Infos:  \n- Gibt es weitere Lampen in der Nähe, die ebenfalls betroffen sind?  \n- Ist eine temporäre Absicherung (z. B. mobile Beleuchtung) möglich oder erforderlich?\n\nBitte Rückmeldung, falls weitere Details zur Umgebung oder zum Asset vorliegen.",
+    "tokens_estimate_words": 172
   },
   "judge": {
     "test_id": "INC-LAMP-0012-TC3",
@@ -254,11 +255,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration. Warnweste explizit erwähnt, Offline-Dokumentation berücksichtigt, Sicherheit und Eskalation klar strukturiert, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit umgesetzt (lokal speichern, später synchronisieren), klare Absicherung bei Nacht/mittlerer Verkehrsexposition, vollständige Dokumentation und Eskalation mit Priorität Sicherheit. Kontext optimal genutzt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.076
+    "runtime_seconds": 4.436
   },
   "error": {}
 }

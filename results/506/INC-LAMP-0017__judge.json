@@ -15,9 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Umwelt-/Zeitkontext vorhanden, daher Safety-Maßnahmen generisch"
+      "Keine Erwähnung von Dämmerung/schlechter Sicht (nicht im Context)",
+      "Keine spezifische Verkehrssicherheitsmaßnahme bei Dunkelheit"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety-Fokus erkennbar, aber ohne spezifische Risikobewertung (da L0-Context)."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden. Safety-Fokus erkennbar, aber könnte bei Dunkelheit expliziter sein."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -25,8 +26,8 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
-      "K": 5
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -34,8 +35,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Low-Power-Modus werden korrekt einbezogen. Safety-Maßnahmen angemessen, Eskalation bei mittlerer Schwere und poor_visibility erkennbar. Kompakt und handlungsorientiert."
+    "missing_elements": [
+      "Low-Power-Modus wird als mögliche Asset-Fehlerursache interpretiert (betrifft aber Techniker-Gerät)"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, poor_visibility, Koordinaten, Foto). Klare Safety- und Eskalationslogik. Kleine Unschärfe: Low-Power-Modus betrifft Techniker-Gerät, nicht Asset – aber vertretbare Interpretation."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -53,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige Nutzung des L2-Contexts inkl. Guardrails (device_state ≠ Asset-Fehler). Offline-Dokumentation erwähnt (low_power_mode). Safety bei Regen/poor_visibility betont, Eskalation mit Prioritätsanpassung. Keine Halluzinationen."
+    "short_justification": "Perfekte Kontextnutzung inkl. Guardrails (Low-Power-Modus korrekt als Geräte-Zustand erkannt, nicht Asset-Fehler). Offline-Workflow erwähnt, Safety bei schlechter Sicht adressiert, klare Eskalation. Keine Halluzinationen."
   }
 ]

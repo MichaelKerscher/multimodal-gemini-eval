@@ -15,29 +15,27 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (high nicht erkennbar)"
+      "Konkrete Absicherungsmaßnahmen (Warnbaken, temporäre Beleuchtung)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung und Eskalation. Keine Halluzinationen, aber Offline-Workflow nicht erwähnt (da CONTEXT minimal, kein Abzug bei K)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation und Sicherheitsfokus. Absicherung könnte konkreter sein (nur 'meiden' statt aktive Maßnahmen). Keine Halluzinationen, angemessen für L0-Kontext."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht explizit erwähnt (connectivity=offline)"
-    ],
-    "short_justification": "Exzellente Nutzung des Kontexts (Standort, Severity, Foto), klare Safety-Priorisierung und Eskalation. Offline-Hinweis fehlt, daher K=4."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit konkreten Sicherheitsmaßnahmen, klarer Eskalation bei severity=high, und Offline-Workflow erkannt. K=3 wegen 'Fernwartung'-Erwähnung (device.connectivity beschreibt Techniker-Gerät, nicht Asset-Fernsteuerung), aber insgesamt sehr stark."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Offline-Workflow explizit adressiert, Safety priorisiert, Eskalation klar, Kontext vollständig genutzt, keine Halluzinationen."
+    "short_justification": "Perfekte Antwort: Offline-Workflow korrekt umgesetzt (lokal speichern, später synchronisieren), Sicherheit priorisiert, Eskalation klar, Dokumentation nachvollziehbar. Nutzt Kontext optimal ohne Spekulation oder Halluzinationen."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0027-TC1",
-  "timestamp": "2026-02-18T14:53:53",
+  "timestamp": "2026-02-18T15:58:56",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz (Asset-ID: n4939032947, Straßenlampe)\n\n1. Absicherung  \n- Warnwesten anziehen  \n- Absperrmaterial aufstellen (z.B. Leitkegel, Warnleuchten)  \n- Bereich um die Lampe sichern, ggf. Gehweg absperren\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung  \n- Prüfen auf Feuchtigkeitseintritt, lose Kabel, beschädigte Gehäuseteile  \n- Regenwetter beachten: Gibt es Pfützen oder Wassereintritt am Mastfuß?\n\n3. Diagnose/Beobachtung  \n- Flackern gezielt beobachten: Tritt es nur bei Regen auf?  \n- Prüfen, ob das Flackern mit Feuchtigkeit korreliert  \n- Ggf. Lampe öffnen und auf Wasser im Gehäuse oder im Anschlusskasten prüfen  \n- Elektrische Kontakte auf Korrosion oder lose Verbindungen kontrollieren\n\n4. Dokumentation  \n- Alle Beobachtungen schriftlich festhalten (Datum, Uhrzeit, Wetter, Flackerverhalten)  \n- Fotos von betroffenen Stellen machen  \n- Asset-ID und Standort notieren\n\n5. Eskalation  \n- Bei Verdacht auf Feuchtigkeitsschaden: Meldung an Elektrofachkraft  \n- Bei akuter Gefahr (z.B. Stromschlagrisiko): Lampe außer Betrieb nehmen und sofort melden  \n- Dokumentation an zuständige Stelle weiterleiten\n\nRückfrage:  \nIst das Flackern dauerhaft oder nur während/nach Regen? Gibt es Hinweise auf Wassereintritt am Mast oder Gehäuse?",
-    "tokens_estimate_words": 163
+    "text": "Checkliste für Außendienst-Einsatz (Asset-ID: n4939032947 – Flackern bei Regen)\n\n1. Absicherung  \n• Warnbaken und Absperrungen aufstellen, falls Standort im Verkehrsbereich liegt.  \n• Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n• Standort aufsuchen und Zustand der Lampe/Ampel bei Regen beobachten.  \n• Prüfen, ob Feuchtigkeit sichtbar eindringt (z.B. Kondenswasser im Gehäuse, undichte Stellen).\n\n3. Diagnose/Beobachtung  \n• Flackern gezielt dokumentieren: Zeitpunkt, Intensität, Wetterbedingungen.  \n• Elektrische Anschlüsse und Dichtungen auf Wassereintritt kontrollieren.  \n• Prüfen, ob weitere Anlagen in der Nähe betroffen sind.\n\n4. Dokumentation  \n• Fotos vom Zustand und Flackern machen.  \n• Alle Beobachtungen und Maßnahmen im Wartungsprotokoll festhalten.\n\n5. Eskalation  \n• Bei Gefahr für Verkehrssicherheit: Sofortige Meldung an Leitstelle und ggf. Abschaltung veranlassen.  \n• Bei Wassereintritt: Reparaturbedarf an Fachfirma melden (Dichtung, Elektrik).  \n• Rückmeldung an zuständige Stelle mit allen Befunden.\n\nRückfrage:  \nIst das Asset eine Straßenlampe oder eine Ampelanlage? Gibt es bereits bekannte Reparaturversuche oder Vorfälle?",
+    "tokens_estimate_words": 141
   },
   "judge": {
     "test_id": "INC-LAMP-0027-TC1",
@@ -50,13 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Erwähnung von Verkehrssicherung trotz Straßenlampe"
+      "Asset-Typ (Lampe/Ampel) unklar, aber Antwort adressiert beide Möglichkeiten"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; K=5 korrekt."
+    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt genutzt wird. Rückfrage zeigt Bewusstsein für fehlende Informationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.944
+    "runtime_seconds": 3.589
   },
   "error": {}
 }

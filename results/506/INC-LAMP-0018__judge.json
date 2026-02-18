@@ -14,17 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine explizite Priorisierung bei Verkehrsgefahr"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden. Safety-Aspekte vorhanden, aber bei minimalem Context nicht überspezifiziert."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen bei minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -35,24 +33,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, medium traffic → zusätzliche Warnleuchten). Klare Struktur, Safety-First-Ansatz erkennbar, Dokumentation nachvollziehbar. Gerät online, daher kein Offline-Workflow nötig."
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, poor_visibility, medium traffic_exposure). Sicherheitsmaßnahmen priorisiert, Eskalation klar, Dokumentation vollständig. Alle relevanten Umgebungsfaktoren berücksichtigt."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Nutzt Kontext präzise (Nacht, Nebel, medium traffic), erwähnt offlinefähige Dokumentation (obwohl online), klare Eskalationskriterien. Keine Halluzinationen, alle Fakten aus Context ableitbar."
+    "short_justification": "Vollständige, kontextsensitive Antwort. Sicherheit bei schlechter Sicht priorisiert, Eskalationswege klar, Dokumentation detailliert. Korrekte Interpretation aller Kontextfelder ohne Spekulation."
   }
 ]
