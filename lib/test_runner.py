@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from lib.logger import log_response
 from lib.clients import CLIENTS
 
-# --- S2: deterministic context policy ---
 import lib.context_policy_s2 as s2
 
 load_dotenv()
@@ -92,7 +91,7 @@ ANSWER:
 """
         )
 
-    return f"""Du bekommst mehrere Antworten zum selben Incident, jeweils mit unterschiedlicher Kontextbedingung (S0/L0, S1/L2, S2/L2B).
+    return f"""Du bekommst mehrere Antworten zum selben Incident, jeweils mit unterschiedlicher Kontextstufe (L0/L1/L2).
 
 Bewerte JEDEN Block separat nach derselben Rubrik.
 Gib ausschließlich ein gültiges JSON-Array zurück (eine Bewertung pro Block) im Schema:
@@ -191,15 +190,40 @@ def _strategy_of(tc: dict) -> str:
     return str(meta.get("strategy") or "").strip().upper()
 
 
+def _s2_meta_to_request_params(selection_meta: dict | None) -> dict:
+    """
+    Flatten selection_meta into request_params-friendly keys.
+    Keeps log schema stable and makes aggregate_results trivial.
+    """
+    if not isinstance(selection_meta, dict):
+        return {
+            "s2_selector_version": None,
+            "s2_guardrails_version": None,
+            "s2_budget_chars": None,
+            "s2_used_chars": None,
+            "s2_selected_fields": None,
+            "s2_dropped_fields": None,
+            "s2_compressed_fields": None,
+        }
+
+    bp = selection_meta.get("budget_policy") or {}
+    return {
+        "s2_selector_version": selection_meta.get("selector_version"),
+        "s2_guardrails_version": selection_meta.get("guardrails_version"),
+        "s2_budget_chars": bp.get("max"),
+        "s2_used_chars": bp.get("used"),
+        "s2_selected_fields": selection_meta.get("selected_fields"),
+        "s2_dropped_fields": selection_meta.get("dropped_fields"),
+        "s2_compressed_fields": selection_meta.get("compressed_fields"),
+    }
+
+
 def _apply_s2_if_strategy(tc: dict, context: dict) -> tuple[dict, dict | None]:
     """
     S2 Hook (deterministic):
     - If meta.strategy == 'S2' AND meta.context_level == 'L2_full'
-      => build L2B, inject *selected context only*.
+      => build L2B, inject context=selected subset, keep audit in _selection_meta
     Returns (context_for_model, selection_meta_or_none).
-
-    IMPORTANT:
-    - selection_meta is for logging/audit only and MUST NOT be passed to the model.
     """
     input_data = tc.get("input") or {}
     meta = input_data.get("meta") or {}
@@ -211,12 +235,13 @@ def _apply_s2_if_strategy(tc: dict, context: dict) -> tuple[dict, dict | None]:
         return context or {}, None
 
     budget_chars = int(os.getenv("S2_BUDGET_CHARS", "3500"))
+
     s2_out = s2.build_l2b(context or {}, budget=s2.BudgetPolicy(max_chars=budget_chars))
 
     ctx_selected = s2_out.get("context") or {}
-    selection_meta = s2_out.get("selection_meta")
+    selection_meta = s2_out.get("selection_meta") or {}
 
-    # Do NOT add selection_meta into ctx_selected
+    ctx_selected = {**ctx_selected, "_selection_meta": selection_meta}
     return ctx_selected, selection_meta
 
 
@@ -270,6 +295,9 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
         )
 
     result_dir = _result_dir_for_client(client_name)
+
+    s2_params = _s2_meta_to_request_params(selection_meta) if strategy == "S2" else _s2_meta_to_request_params(None)
+
     log_response(
         test_id=test_id,
         prompt=prompt,
@@ -285,11 +313,7 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
             "run_mode": "testcase",
             "assistant_source_of_truth": True,
             "context_strategy": strategy or "UNKNOWN",
-            "s2_selector_version": (selection_meta or {}).get("selector_version") if strategy == "S2" else None,
-            "s2_budget_chars": int(os.getenv("S2_BUDGET_CHARS", "3500")) if strategy == "S2" else None,
-            "s2_used_chars": ((selection_meta or {}).get("budget_policy") or {}).get("used") if strategy == "S2" else None,
-            "s2_selected_fields": (selection_meta or {}).get("selected_fields") if strategy == "S2" else None,
-            "s2_dropped_fields": (selection_meta or {}).get("dropped_fields") if strategy == "S2" else None,
+            **s2_params,  # NEW
         },
         judge=judge_out,
         input_context=context_for_model,
@@ -414,6 +438,8 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
                 }
             )
 
+        s2_params = _s2_meta_to_request_params(selection_meta) if strategy == "S2" else _s2_meta_to_request_params(None)
+
         log_response(
             test_id=test_id,
             prompt=input_data.get("prompt"),
@@ -430,13 +456,8 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
                 "incident_id": incident_id,
                 "assistant_source_of_truth": True,
                 "context_strategy": strategy or "UNKNOWN",
-                "s2_selector_version": (selection_meta or {}).get("selector_version") if strategy == "S2" else None,
-                "s2_budget_chars": int(os.getenv("S2_BUDGET_CHARS", "3500")) if strategy == "S2" else None,
-                "s2_used_chars": ((selection_meta or {}).get("budget_policy") or {}).get("used") if strategy == "S2" else None,
-                "s2_selected_fields": (selection_meta or {}).get("selected_fields") if strategy == "S2" else None,
-                "s2_dropped_fields": (selection_meta or {}).get("dropped_fields") if strategy == "S2" else None,
+                **s2_params,
             },
-
             judge=judge_block,
             input_context=row.get("context_json") or {},
             media={

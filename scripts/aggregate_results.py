@@ -205,14 +205,16 @@ def main():
             },
         }
 
-    # 2b) Summary by strategy (recommended; helps thesis reporting)
-    by_s = defaultdict(list)
+    # 2b) Summary by strategy (S0/S1/S2/...)
+    by_strategy = defaultdict(list)
     for r in run_rows:
-        by_s[r.get("strategy", "UNKNOWN")].append(r)
+        rp = r.get("_request_params") or {}  # (see below if you want to store it)
+        strat = r.get("strategy") or rp.get("context_strategy") or "unknown"
+        by_strategy[str(strat).upper()].append(r)
 
     summary_strategy = {}
-    for s, rows in sorted(by_s.items()):
-        summary_strategy[s] = {
+    for strat, rows in sorted(by_strategy.items()):
+        summary_strategy[strat] = {
             "n": len(rows),
             "mean_runtime": _mean([x.get("runtime_seconds") for x in rows]),
             "mean_R": _mean([x.get("R") for x in rows]),
@@ -221,6 +223,12 @@ def main():
             "mean_D": _mean([x.get("D") for x in rows]),
             "mean_K": _mean([x.get("K") for x in rows]),
         }
+
+    summary_strategy_path = out_dir / "summary_by_strategy.json"
+    summary_strategy_path.write_text(
+        json.dumps(summary_strategy, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
 
     # 3) Delta per incident (L0, L2, L2B)
     idx = {(r["incident_id"], r["context_level"]): r for r in run_rows}
@@ -300,10 +308,10 @@ def main():
         )
 
     md.append("\n## Mean scores by strategy\n")
-    for s, stats in summary_strategy.items():
-        md.append(f"### {s} (n={stats['n']})\n")
-        md.append(f"- mean runtime: {stats['mean_runtime']}\n")
-        md.append(f"- mean R/H/S/D/K: {stats['mean_R']}/{stats['mean_H']}/{stats['mean_S']}/{stats['mean_D']}/{stats['mean_K']}\n")
+    for strat, s in summary_strategy.items():
+        md.append(f"### {strat} (n={s['n']})\n")
+        md.append(f"- mean runtime: {s['mean_runtime']}\n")
+        md.append(f"- mean R/H/S/D/K: {s['mean_R']}/{s['mean_H']}/{s['mean_S']}/{s['mean_D']}/{s['mean_K']}\n")
 
     md.append("\n## Top missing elements (max 20)\n")
     for k, v in miss_counter.most_common(20):

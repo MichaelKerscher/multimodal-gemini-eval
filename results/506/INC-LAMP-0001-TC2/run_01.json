@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC2",
-  "timestamp": "2026-02-18T13:36:29",
+  "timestamp": "2026-02-18T14:05:48",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -42,10 +42,12 @@
     "assistant_source_of_truth": true,
     "context_strategy": "S1",
     "s2_selector_version": null,
+    "s2_guardrails_version": null,
     "s2_budget_chars": null,
     "s2_used_chars": null,
     "s2_selected_fields": null,
-    "s2_dropped_fields": null
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
   },
   "media": {
     "image_path": null,
@@ -54,33 +56,33 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Lampenausfall  \nStandort: Rosenheim, Bahnhof  \nVerkehr: Hoch, Tag, klare Sicht  \n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Bereich mit Leitkegeln absichern, da hohe Verkehrsexposition.\n   - Falls nötig: Kurzzeitige Sperrung der Gehwegseite.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Vandalismus kontrollieren.\n   - Prüfen, ob die Lampe aktuell leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Hinweis: Gerät meldet „low_battery“ und „offline“ – evtl. Batterieproblem oder Kommunikationsstörung.\n   - Prüfen, ob sporadischer Fehler mit Batterie oder Steuerung zusammenhängt.\n   - Foto auswerten (falls verfügbar): Gibt es Auffälligkeiten am Gehäuse, Anschluss oder Umgebung?\n\n4. **Dokumentation**\n   - Fehlerbeschreibung (sporadisch, aktuell wieder an).\n   - Foto und Sichtprüfung protokollieren.\n   - Notieren: Zeitpunkt, Wetter, Verkehrsaufkommen, Gerätezustand.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Meldung an Fachbetrieb für Austausch/Inspektion.\n   - Hinweis: Batterie zeitnah prüfen/wechseln, da „low_battery“.\n   - Bei Kommunikationsproblemen: Techniker für Netzprüfung einplanen.\n\n**Rückfrage:**  \nIst die Lampe Teil eines vernetzten Systems (z.B. Smart Lighting), oder handelt es sich um eine Einzelinstallation?  \nSind weitere Lampen in der Umgebung betroffen?",
-    "tokens_estimate_words": 161
+    "text": "Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrung bei hohem Verkehrsaufkommen (Ampel, Warnschild).\n   - Standort: Hohe Verkehrsexposition – besondere Vorsicht!\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (Kabel, Gehäuse, Verschmutzung).\n   - Prüfen, ob Lampe aktuell leuchtet.\n   - Foto vom Zustand machen (Foto liegt bereits vor).\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Sporadisch, Lampe war aus, jetzt an.\n   - Gerät meldet „low_battery“ und „offline“ – evtl. Batteriewechsel nötig.\n   - Prüfen, ob weitere Lampen betroffen sind.\n   - Annahme: Kein akuter Sicherheitsmangel, aber Risiko für Ausfall bleibt.\n\n4. **Dokumentation**\n   - Vorfall mit Zeit, Ort, Foto und Beobachtung im System erfassen.\n   - Notieren: Sporadischer Fehler, Batterie schwach, Connectivity offline.\n\n5. **Eskalation**\n   - Meldung an Wartungsteam: Batterie prüfen/tauschen, Connectivity wiederherstellen.\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Sofortige Eskalation an Leitstelle.\n\n**Rückfrage:**  \nIst ein Batteriewechsel vor Ort möglich oder muss ein Spezialteam kommen?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 151
   },
   "judge": {
     "test_id": "INC-LAMP-0001-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 3,
+      "D": 5,
       "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (device.connectivity=offline)",
-      "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät"
+      "Missverständnis: device.low_battery/offline beschreibt Techniker-Gerät, nicht Asset",
+      "Batteriewechsel-Annahme ist Halluzination"
     ],
-    "short_justification": "Gute Struktur und Safety-Fokus, aber Halluzination: device_state wird fälschlich als Lampenproblem gedeutet. Offline-Dokumentationsstrategie fehlt trotz connectivity=offline."
+    "short_justification": "Exzellente Struktur und Kontextnutzung (Verkehr, Foto), aber kritischer Fehler: device_state wird fälschlich als Asset-Problem interpretiert statt als Techniker-Geräte-Zustand. K=2 wegen Halluzination."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.206
+    "runtime_seconds": 4.03
   },
   "error": {}
 }

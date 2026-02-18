@@ -1,14 +1,10 @@
 [
   [
-    "Keine Offline-Workflow-Erwähnung nötig (CONTEXT zeigt kein device.connectivity-Problem)",
+    "Missverständnis: device.low_battery/offline beschreibt Techniker-Gerät, nicht Asset",
     1
   ],
   [
-    "Offline-Workflow fehlt (device.connectivity=offline)",
-    1
-  ],
-  [
-    "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät",
+    "Batteriewechsel-Annahme ist Halluzination",
     1
   ]
 ]

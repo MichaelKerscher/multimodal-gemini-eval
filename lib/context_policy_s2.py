@@ -33,7 +33,6 @@ def _set_path(out: dict, path: str, value: Any):
 
 
 def _estimate_chars_for_field(path: str, value: Any) -> int:
-    # deterministic char estimate
     return len(path) + 2 + len(_stable_json(value))
 
 
@@ -42,7 +41,6 @@ def _truncate_text(s: str, max_chars: int) -> str:
         s = str(s)
     if len(s) <= max_chars:
         return s
-    # head+tail, deterministic
     head = max(0, int(max_chars * 0.7))
     tail = max(0, max_chars - head - 3)
     return s[:head] + "..." + (s[-tail:] if tail > 0 else "")
@@ -52,6 +50,24 @@ def _topk_list(xs: list, k: int) -> list:
     if not isinstance(xs, list):
         return xs
     return xs[:k]
+
+
+def _append_note_dedup(container: dict, note: str):
+    """
+    Deterministically append note into extras.context_notes with dedup.
+    - Keeps insertion order for stable behavior.
+    - extras/context_notes are created if missing.
+    """
+    if not note:
+        return
+    extras = container.setdefault("extras", {})
+    notes = extras.setdefault("context_notes", [])
+    if not isinstance(notes, list):
+        # if polluted by wrong type, overwrite deterministically
+        notes = []
+        extras["context_notes"] = notes
+    if note not in notes:
+        notes.append(note)
 
 
 # ----------------------------
@@ -87,6 +103,7 @@ def normalize_l2(context_l2: Dict[str, Any]) -> Dict[str, Any]:
     out.setdefault("incident", {})
     out.setdefault("environment", {})
     out.setdefault("device", {})
+    out.setdefault("extras", {})  # NEW: ensure extras exists for semantic notes
 
     # Optional: drop None-only leaves (minimal, safe)
     def prune_none(x):
@@ -130,7 +147,7 @@ def extract_triggers(ctx: Dict[str, Any]) -> Dict[str, Any]:
         "spotty": str(connectivity).lower() in ("spotty", "poor", "unstable"),
         "connectivity": connectivity,
         "device_state": device_state,
-        "low_battery": str(device_state).lower() in ("low_battery", "critical_battery"),
+        "low_battery": str(device_state).lower() in ("low_battery", "critical_battery", "low_power_mode"),
         "weather": weather,
         "poor_visibility": str(visibility).lower() in ("poor_visibility", "low", "fog", "dark"),
         "time_of_day": time_of_day,
@@ -142,10 +159,6 @@ def extract_triggers(ctx: Dict[str, Any]) -> Dict[str, Any]:
 # S2: Deterministic Selector
 # ----------------------------
 def deterministic_selection_plan(ctx: Dict[str, Any], triggers: Dict[str, Any]) -> List[FieldSpec]:
-    """
-    Ruleset v1 for your utility field support scenarios (lamps/signals).
-    Keep it simple + explainable.
-    """
     fields: List[FieldSpec] = []
 
     # P0 — must-have
@@ -157,7 +170,6 @@ def deterministic_selection_plan(ctx: Dict[str, Any], triggers: Dict[str, Any]) 
         ("asset.latitude", "location"),
         ("asset.longitude", "location"),
     ]
-    # optional nice identity if exists
     if _deep_get(ctx, "asset.name") is not None:
         p0.append(("asset.name", "identity"))
 
@@ -166,7 +178,6 @@ def deterministic_selection_plan(ctx: Dict[str, Any], triggers: Dict[str, Any]) 
             fields.append(FieldSpec(path=path, prio="P0", reason=reason))
 
     # P1 — conditional (constraints + risk)
-    # Always include device/connectivity if present (action constraints)
     p1_always = [
         ("device.connectivity", "action-constraints"),
         ("device.device_state", "action-constraints"),
@@ -175,7 +186,6 @@ def deterministic_selection_plan(ctx: Dict[str, Any], triggers: Dict[str, Any]) 
         if _deep_get(ctx, path) is not None:
             fields.append(FieldSpec(path=path, prio="P1", reason=reason))
 
-    # Environment becomes important if severity high/medium, or poor visibility, or traffic exposure high
     sev = str(triggers.get("severity", "unknown")).lower()
     if sev in ("high", "medium") or triggers.get("poor_visibility") or triggers.get("spotty") or triggers.get("offline"):
         for path, reason in [
@@ -187,21 +197,21 @@ def deterministic_selection_plan(ctx: Dict[str, Any], triggers: Dict[str, Any]) 
             if _deep_get(ctx, path) is not None:
                 fields.append(FieldSpec(path=path, prio="P1", reason=reason))
 
-    # If photo exists, include that fact (not the image itself) to cue workflow
     if triggers.get("photo_available"):
         if _deep_get(ctx, "incident.photo_available") is not None:
             fields.append(FieldSpec(path="incident.photo_available", prio="P1", reason="workflow-cue"))
 
-    # P2 — nice-to-have (only if budget left)
+    # P2 — nice-to-have
     for path, reason in [
         ("asset.lit", "nice-to-have"),
         ("environment.noise_level", "nice-to-have"),
         ("incident.reporter", "nice-to-have"),
+        # NEW: allow extras.context_notes to flow through deterministically (small)
+        ("extras.context_notes", "semantic-guardrail"),
     ]:
         if _deep_get(ctx, path) is not None:
             fields.append(FieldSpec(path=path, prio="P2", reason=reason))
 
-    # Stable ordering: P0 then P1 then P2; within each, lex by path
     order = {"P0": 0, "P1": 1, "P2": 2}
     fields = sorted(fields, key=lambda f: (order.get(f.prio, 9), f.path))
     return fields
@@ -215,11 +225,6 @@ def pack_under_budget(
     plan: List[FieldSpec],
     budget: BudgetPolicy,
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-    """
-    Greedy packing by plan order. Deterministic compression:
-      - long strings: truncate
-      - long lists: top-k
-    """
     max_chars = budget.max_chars
     used = 0
 
@@ -231,27 +236,22 @@ def pack_under_budget(
     def add_field(spec: FieldSpec, value: Any):
         nonlocal used, out
 
-        # Estimate size
         est = _estimate_chars_for_field(spec.path, value)
 
-        # If too large, compress deterministically
         compressed = False
         before = est
         v2 = value
 
-        # compress strings
         if isinstance(v2, str) and est > 800:
             v2 = _truncate_text(v2, max_chars=600)
             compressed = True
 
-        # compress lists
         if isinstance(v2, list) and len(v2) > 10:
             v2 = _topk_list(v2, 10)
             compressed = True
 
         est2 = _estimate_chars_for_field(spec.path, v2)
 
-        # If still too large, drop
         if used + est2 > max_chars:
             dropped_fields.append({"path": spec.path, "reason": "budget_exceeded", "prio": spec.prio})
             return
@@ -263,12 +263,7 @@ def pack_under_budget(
 
         if compressed:
             compressed_fields.append(
-                {
-                    "path": spec.path,
-                    "method": "truncate_or_topk",
-                    "before_chars": before,
-                    "after_chars": est2,
-                }
+                {"path": spec.path, "method": "truncate_or_topk", "before_chars": before, "after_chars": est2}
             )
 
     for spec in plan:
@@ -290,18 +285,47 @@ def pack_under_budget(
 # S2: Stable ordering serializer
 # ----------------------------
 def stable_serialize_context(context_partial: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Ensure predictable top-level ordering by constructing a new dict.
-    (JSON dumps will sort keys anyway, but we keep human order.)
-    """
     ordered = {}
     for k in ["incident", "asset", "device", "environment", "extras"]:
         if k in context_partial:
             ordered[k] = context_partial[k]
-    # carry over any remaining keys deterministically
     for k in sorted(set(context_partial.keys()) - set(ordered.keys())):
         ordered[k] = context_partial[k]
     return ordered
+
+
+# ----------------------------
+# NEW: Deterministic semantic guardrails
+# ----------------------------
+def apply_semantic_guardrails(ctx_norm: Dict[str, Any], triggers: Dict[str, Any], *, guardrails_version: str) -> None:
+    """
+    Mutates ctx_norm in-place (deterministic). Adds small, high-value notes that prevent misinterpretation.
+    Keep this minimal; it is exactly the "policy" in S2.
+    """
+    # Guardrail 1: device.* refers to technician device, not the asset.
+    # Apply if any device information exists, or if offline/low-battery signals are present.
+    dev = ctx_norm.get("device") or {}
+    has_device_signals = isinstance(dev, dict) and any(k in dev for k in ("connectivity", "device_state"))
+    if has_device_signals or triggers.get("offline") or triggers.get("spotty") or triggers.get("low_battery"):
+        _append_note_dedup(
+            ctx_norm,
+            "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+        )
+        _append_note_dedup(
+            ctx_norm,
+            "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+        )
+
+    # Guardrail 2 (optional, example): photo_available is a workflow cue, not evidence of defect.
+    if triggers.get("photo_available"):
+        _append_note_dedup(
+            ctx_norm,
+            "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache.",
+        )
+
+    # Stamp version for audit (very small)
+    ctx_norm.setdefault("extras", {})
+    ctx_norm["extras"].setdefault("guardrails_version", guardrails_version)
 
 
 # ----------------------------
@@ -311,26 +335,26 @@ def build_l2b(
     context_l2: Dict[str, Any],
     *,
     selector_version: str = "s2-det-v1",
+    guardrails_version: str = "s2-guard-v1",  # NEW
     budget: Optional[BudgetPolicy] = None,
 ) -> Dict[str, Any]:
     budget = budget or BudgetPolicy()
 
     normalized = normalize_l2(context_l2)
     triggers = extract_triggers(normalized)
+
+    # NEW: apply guardrails BEFORE selection/packing so notes can be selected too
+    apply_semantic_guardrails(normalized, triggers, guardrails_version=guardrails_version)
+
     plan = deterministic_selection_plan(normalized, triggers)
     packed, packing_meta = pack_under_budget(normalized, plan, budget)
     packed = stable_serialize_context(packed)
-
-    packed.setdefault("extras", {})
-    packed["extras"]["context_notes"] = [
-        "device.* beschreibt das Techniker-Gerät (App), NICHT das Asset.",
-        "low_battery/offline beeinflusst Vorgehen/Workflow (z.B. kurz, offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
-    ]
 
     return {
         "context": packed,
         "selection_meta": {
             "selector_version": selector_version,
+            "guardrails_version": guardrails_version,  # NEW: audit
             "trigger_signals": triggers,
             **packing_meta,
         },

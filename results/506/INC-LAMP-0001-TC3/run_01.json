@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC3",
-  "timestamp": "2026-02-18T13:36:29",
+  "timestamp": "2026-02-18T14:05:48",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -35,9 +35,126 @@
       },
       "extras": {
         "context_notes": [
-          "device.* beschreibt das Techniker-Gerät (App), NICHT das Asset.",
-          "low_battery/offline beeinflusst Vorgehen/Workflow (z.B. kurz, offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache."
         ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "low",
+          "fault_type": "intermittent",
+          "offline": true,
+          "spotty": false,
+          "connectivity": "offline",
+          "device_state": "low_battery",
+          "low_battery": true,
+          "weather": "clear",
+          "poor_visibility": false,
+          "time_of_day": "day",
+          "photo_available": true
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 868
+        },
+        "selected_fields": [
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.name",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "incident.photo_available",
+            "prio": "P1",
+            "reason": "workflow-cue"
+          },
+          {
+            "path": "asset.lit",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
       }
     }
   },
@@ -47,8 +164,9 @@
     "assistant_source_of_truth": true,
     "context_strategy": "S2",
     "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
     "s2_budget_chars": 3500,
-    "s2_used_chars": 539,
+    "s2_used_chars": 868,
     "s2_selected_fields": [
       {
         "path": "asset.asset_osm",
@@ -131,12 +249,18 @@
         "reason": "nice-to-have"
       },
       {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      },
+      {
         "path": "incident.reporter",
         "prio": "P2",
         "reason": "nice-to-have"
       }
     ],
-    "s2_dropped_fields": []
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
   },
   "media": {
     "image_path": null,
@@ -145,8 +269,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof\n\n1. **Absicherung**\n   - Standort: Hohe Verkehrsexposition, tagsüber, normale Sicht.\n   - Warnweste tragen, Absperrmaterial bereithalten.\n   - Arbeitsbereich mit Pylonen sichern, ggf. Warnschild aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe aktuell wieder an, sporadischer Fehler gemeldet.\n   - Gehäuse, Mast und Verkabelung auf sichtbare Schäden, Feuchtigkeit oder Korrosion prüfen.\n   - Umgebung auf Störungen (z.B. Vandalismus, lose Kontakte) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt an – intermittierend.\n   - Typische Ursachen: Wackelkontakt, Vorschaltgerät, Temperaturschwankungen, Alterung.\n   - Bei Tageslicht: Funktionstest (mehrfach Ein-/Ausschalten, ggf. mit Prüfgerät).\n   - Hinweis: Techniker-Gerät offline/low battery – Notizen analog oder offline erfassen.\n\n4. **Dokumentation**\n   - Foto vom aktuellen Zustand (Lampe an, Umgebung).\n   - Fehlerbeschreibung: „Sporadischer Ausfall, aktuell wieder funktionstüchtig.“\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (offlinefähig).\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Meldung an Fachbereich Elektrotechnik.\n   - Routinewartung empfehlen, ggf. Austausch von Komponenten (z.B. Lampensockel, Vorschaltgerät).\n   - Bürger informieren: Fehler aufgenommen, weitere Beobachtung/Prüfung folgt.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Meldungen an diesem Standort?  \nSind Wartungsintervalle oder Austauschzyklen bekannt?",
-    "tokens_estimate_words": 169
+    "text": "Checkliste für sporadischen Lampenausfall (Rosenheim, Bahnhof):\n\n1. **Absicherung**\n   - Bereich mit hoher Verkehrsexposition: Warnweste tragen, ggf. Absperrung aufstellen.\n   - Bei Tageslicht und normaler Sicht keine akute Gefahr, trotzdem auf Umgebung achten.\n\n2. **Sichtprüfung**\n   - Lampe aktuell an, aber sporadischer Fehler gemeldet.\n   - Sichtkontrolle auf offensichtliche Schäden (Gehäuse, Verkabelung, Feuchtigkeit, Vandalismus).\n   - Prüfen, ob andere Lampen in der Nähe ähnliche Symptome zeigen.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt wieder an → intermittenter Fehler.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Alterung Bauteile.\n   - Keine Fernabfrage möglich (Gerät offline), vor Ort beobachten: Lampe mehrfach ein-/ausschalten, auf Reaktion achten.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Zeitpunkt, Sichtprüfungsergebnisse notieren.\n   - Foto vom Zustand der Lampe und Umgebung machen (Foto verfügbar).\n   - Offline dokumentieren, da Gerät keine Verbindung hat.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Meldung an Elektrotechnik/Service.\n   - Bei sporadischem Fehler ohne akute Gefahr: Wartungsauftrag mit Fehlerbeschreibung anlegen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Arbeiten oder Wetterereignisse (z.B. Frost, Starkregen) am Standort? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 162
   },
   "judge": {
     "test_id": "INC-LAMP-0001-TC3",
@@ -164,11 +288,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Korrekte Interpretation von device.* als Techniker-Gerät, explizite Offline-Dokumentationsstrategie, vollständige Safety- und Eskalationslogik. Kontext optimal genutzt."
+    "short_justification": "Perfekte Antwort: Korrekte Interpretation von device.* als Techniker-Gerät (extras.context_notes beachtet), Offline-Workflow erwähnt, strukturiert, sicherheitsorientiert, keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 6.156
+    "runtime_seconds": 4.405
   },
   "error": {}
 }

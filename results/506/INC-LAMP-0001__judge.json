@@ -14,31 +14,29 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung nötig (CONTEXT zeigt kein device.connectivity-Problem)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Minimal-Kontext korrekt genutzt, keine Halluzinationen."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Offline-Erwähnung nötig war."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 3,
+      "D": 5,
       "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (device.connectivity=offline)",
-      "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät"
+      "Missverständnis: device.low_battery/offline beschreibt Techniker-Gerät, nicht Asset",
+      "Batteriewechsel-Annahme ist Halluzination"
     ],
-    "short_justification": "Gute Struktur und Safety-Fokus, aber Halluzination: device_state wird fälschlich als Lampenproblem gedeutet. Offline-Dokumentationsstrategie fehlt trotz connectivity=offline."
+    "short_justification": "Exzellente Struktur und Kontextnutzung (Verkehr, Foto), aber kritischer Fehler: device_state wird fälschlich als Asset-Problem interpretiert statt als Techniker-Geräte-Zustand. K=2 wegen Halluzination."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -56,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Korrekte Interpretation von device.* als Techniker-Gerät, explizite Offline-Dokumentationsstrategie, vollständige Safety- und Eskalationslogik. Kontext optimal genutzt."
+    "short_justification": "Perfekte Antwort: Korrekte Interpretation von device.* als Techniker-Gerät (extras.context_notes beachtet), Offline-Workflow erwähnt, strukturiert, sicherheitsorientiert, keine Halluzinationen."
   }
 ]

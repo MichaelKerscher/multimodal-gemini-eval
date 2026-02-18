@@ -1,7 +1,7 @@
 {
   "S0": {
     "n": 1,
-    "mean_runtime": 3.138,
+    "mean_runtime": 4.343,
     "mean_R": 4.0,
     "mean_H": 4.0,
     "mean_S": 3.0,
@@ -10,16 +10,16 @@
   },
   "S1": {
     "n": 1,
-    "mean_runtime": 4.206,
-    "mean_R": 4.0,
-    "mean_H": 4.0,
+    "mean_runtime": 4.03,
+    "mean_R": 5.0,
+    "mean_H": 5.0,
     "mean_S": 4.0,
-    "mean_D": 3.0,
+    "mean_D": 5.0,
     "mean_K": 2.0
   },
   "S2": {
     "n": 1,
-    "mean_runtime": 6.156,
+    "mean_runtime": 4.405,
     "mean_R": 5.0,
     "mean_H": 5.0,
     "mean_S": 4.0,
