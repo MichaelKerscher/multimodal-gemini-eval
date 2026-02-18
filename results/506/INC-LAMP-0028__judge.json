@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Klare 5-Schritte-Struktur mit sofortiger Absicherung, umfassender Sichtprüfung, Dokumentation und Eskalation. Sicherheitsfokus durchgängig erkennbar, keine Halluzinationen bei minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit, Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, alle Empfehlungen sind kontextgerecht und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Kontextnutzung: Standortname integriert, severity=high führt zu klarer Eskalation und Sicherheitsmaßnahmen. Strukturiert, umsetzbar, keine erfundenen Details."
+    "short_justification": "Exzellente Nutzung des Kontexts (severity=high, photo_available, Standort). Klare Sicherheitspriorisierung, strukturierte Schritte, angemessene Eskalation und Rückfragen zur Klärung des Workflows."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Nutzt photo_available als Workflow-Hinweis korrekt, integriert Zeitstempel und Standort präzise, klare Sicherheitspriorisierung mit Eskalation. Keine Halluzinationen trotz umfangreichem Kontext."
+    "short_justification": "Präzise, kontextbewusste Antwort mit korrekter Interpretation aller Felder (device.* = Techniker-Gerät, photo_available als Workflow-Hinweis). Sicherheit, Struktur, Dokumentation und Eskalation optimal umgesetzt."
   }
 ]

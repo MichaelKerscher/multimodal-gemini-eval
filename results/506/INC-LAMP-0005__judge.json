@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung von Umgebungsbedingungen (nicht im Context verfügbar)"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden war und Antwort entsprechend generisch bleibt."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Safety-Fokus erkennbar."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
@@ -26,19 +24,16 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
-      "Batterie-Warnung erwähnt, aber keine Handlungsempfehlung dazu"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, mittlerer Verkehr, kein Foto). Absicherung und Dokumentation sehr gut. Offline-Workflow fehlt bei spotty connectivity – K=3."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Workflow implizit erwähnt ('manuelle Prüfung bevorzugen'), Safety-Maßnahmen angemessen, klare Struktur."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -56,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt (lokal speichern, später synchronisieren), Batterie-Warnung mit Handlungsempfehlung, alle Umgebungsfaktoren berücksichtigt. Keine Halluzinationen."
+    "short_justification": "Perfekte Kontextintegration inkl. explizitem Offline-Workflow ('Offline dokumentieren', 'Fotos lokal speichern', 'Synchronisation nach Wiederherstellung'). Alle Umgebungsfaktoren berücksichtigt, klare Handlungsanweisungen."
   }
 ]

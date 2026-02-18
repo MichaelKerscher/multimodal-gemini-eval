@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0022-TC3",
-  "timestamp": "2026-02-18T17:02:26",
+  "timestamp": "2026-02-18T17:44:58",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -269,30 +269,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe „Rosenheim, Heilig Blut“\n\n**1. Absicherung**\n- Warnweste tragen.\n- Bereich mit Warnleuchte/Kegel absichern, da Sicht schlecht und Schnee.\n- Bei Bedarf Polizei/Ordnungsamt informieren (hohe Gefährdung).\n\n**2. Sichtprüfung**\n- Lampe und Mast auf Schäden, Vandalismus oder lose Teile prüfen.\n- Umgebung auf weitere dunkle Lampen oder Hindernisse checken.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Lampe komplett aus oder flackert.\n- Nach Auslöser suchen: Sicherung, Verkabelung, Leuchtmittel, Feuchtigkeit.\n- Wetter (Schnee) und Dämmerung beachten – mögliche Kurzschlüsse.\n\n**4. Dokumentation**\n- Foto machen (lt. Workflow-Hinweis vorhanden).\n- Notieren: Zeitpunkt, Zustand, Maßnahmen, ggf. weitere Ausfälle.\n- Dokumentation offlinefähig, falls Technikprobleme.\n\n**5. Eskalation**\n- Bei hoher Gefährdung sofort Meldung an Leitstelle/Technik.\n- Dringende Reparatur anfordern.\n- Bürger informieren, falls länger keine Beleuchtung.\n\n**Rückfrage:**  \nIst bereits eine Sicherungskontrolle erfolgt oder liegen Hinweise auf Stromausfall im Bereich vor?  \nSind weitere Lampen betroffen?",
-    "tokens_estimate_words": 139
+    "text": "Checkliste für Vorgehen bei dunkler Straßenlampe (Rosenheim, Heilig Blut):\n\n1. **Absicherung**\n   - Bereich mit Warnbaken oder Absperrband sichern, falls möglich.\n   - Warnweste tragen, besonders bei schlechter Sicht und Schnee.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf offensichtliche Schäden prüfen (z.B. Mast, Leuchte, Kabel).\n   - Schneebedeckung oder Vereisung am Lampenkopf beachten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen betroffen sind.\n   - Foto vom Zustand machen (Foto liegt bereits vor).\n   - Hinweis: Lampe ist laut System als „lit“ geführt, aber aktuell dunkel.\n   - Annahme: Einzel-Ausfall, keine Netzstörung.\n\n4. **Dokumentation**\n   - Vorfall mit Zeit, Ort, Sichtbefund und Foto in der App dokumentieren.\n   - Notiz: Sicht ist schlecht, Bereich wirkt unsicher, Schnee erschwert Prüfung.\n\n5. **Eskalation**\n   - Meldung mit hoher Priorität an die Leitstelle/Technik weiterleiten.\n   - Hinweis auf Sicherheitsrisiko und schlechte Sicht.\n   - Empfehlung: Schnelle Reparatur, ggf. temporäre Beleuchtung oder zusätzliche Absicherung.\n\n**Rückfrage:**  \nIst Zugang zur Lampe gefahrlos möglich (Schnee, Eis, Verkehr)?  \nSind weitere Lampen in der Nähe ebenfalls betroffen?",
+    "tokens_estimate_words": 156
   },
   "judge": {
     "test_id": "INC-LAMP-0022-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Nutzt alle relevanten Kontextfelder (low_battery, poor_visibility, snow, severity=high), erwähnt Offline-Dokumentation, klare Safety-Priorisierung und Eskalation. Keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Schnee, schlechte Sicht, Foto, lit-Status). Sicherheit, Dokumentation und Eskalation klar strukturiert. Keine Halluzinationen trotz umfangreichem Context."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.355
+    "runtime_seconds": 4.204
   },
   "error": {}
 }

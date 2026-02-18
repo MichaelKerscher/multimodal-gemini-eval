@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0015-TC3",
-  "timestamp": "2026-02-18T17:00:04",
+  "timestamp": "2026-02-18T17:42:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -247,32 +247,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Straßenlampe dunkel, Bereich unsicher, hohe Verkehrsexposition – schnelles Handeln erforderlich.\n\n**Checkliste für Außendienst:**\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls möglich.\n   - Warnwesten tragen.\n   - Bei hohem Verkehrsaufkommen: Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Vandalismus, Kabel, Leuchtmittel).\n   - Umfeld auf weitere Ausfälle oder Gefahren kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Foto vom Zustand machen (Foto ist laut Workflow vorhanden).\n   - Notieren, ob Leuchtmittel, Vorschaltgerät oder Stromzufuhr betroffen sein könnten.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen in der App erfassen.\n   - Standort (OSM-ID: n13293431103, Koordinaten) und Zeit dokumentieren.\n   - Foto anhängen.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort Störungsdienst oder Bereitschaft informieren.\n   - Falls Eigenabsicherung nicht möglich: Einsatzleitung/Polizei verständigen.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder nur diese eine?  \nGab es auffällige Geräusche, Gerüche oder sichtbare Schäden am Mast?\n\n**Annahme:**  \nEinzelner Ausfall, keine Hinweise auf Stromausfall im gesamten Bereich.  \nSicherheit hat oberste Priorität – schnelle Reparatur empfohlen.",
-    "tokens_estimate_words": 168
+    "text": "Checkliste für den Außendienst – Straßenlampe dunkel, Bereich unsicher\n\n1. Absicherung  \n- Warnbaken oder Absperrband aufstellen, um den Bereich zu kennzeichnen.  \n- Bei hoher Verkehrsexposition: ggf. Polizei oder Ordnungsamt zur Unterstützung anfordern.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung (Pfosten, Leuchte, Verkabelung).  \n- Prüfen auf offensichtliche Schäden, Vandalismus oder lose Teile.\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Versuchen, die Lampe manuell zu schalten (sofern möglich).  \n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.  \n- Foto vom Zustand machen (Foto laut Workflow vorhanden, ggf. ergänzen).\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen in der App/Techniker-System erfassen.  \n- Standort, Uhrzeit, Sichtprüfungsergebnisse und Fotos dokumentieren.\n\n5. Eskalation  \n- Bei hoher Gefährdung (unsicherer Bereich, Nacht, viel Verkehr): Störung als „dringend“ markieren.  \n- Meldung an die Leitstelle/Technik weiterleiten für schnelle Reparatur.  \n- Falls Gefahr für Personen besteht: Sofortige Meldung an Polizei/Ordnungsamt.\n\nRückfrage:  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nIst bereits eine Absicherung vor Ort, oder muss diese noch eingerichtet werden?",
+    "tokens_estimate_words": 164
   },
   "judge": {
     "test_id": "INC-LAMP-0015-TC3",
-    "missing_elements": [
-      "judge_block_missing_fallback"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
+      "safety_first": true,
+      "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Umsetzung: Severity=high führt zu klarer Priorisierung und Polizei-Einbindung bei Gefahr. Umfangreicher Kontext (Nacht, hoher Verkehr, schlechte Sicht) wird präzise verarbeitet. Dokumentation und Eskalation vollständig, keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.509
+    "runtime_seconds": 3.568
   },
   "error": {}
 }

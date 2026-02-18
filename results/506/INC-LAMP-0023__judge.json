@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation, daher kein Fehler)"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine spezifischen Umgebungsdaten liefert."
+    "short_justification": "Strukturierte, relevante Antwort mit Sicherheitsmaßnahmen und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine zusätzlichen Anforderungen stellt."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -25,17 +25,19 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
-      "K": 4
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sturm/Verkehr/Offline erkannt, Safety priorisiert, Offline-Workflow erwähnt, klare Eskalation bei severity=high. Vollständig kontextgerecht."
+    "missing_elements": [
+      "Offline-Workflow fehlt (connectivity=offline erfordert lokale Dokumentation/Synchronisation)"
+    ],
+    "short_justification": "Exzellente Safety-Orientierung und Eskalation bei severity=high. Offline-Workflow nicht erwähnt, obwohl connectivity=offline im CONTEXT steht – K=3."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Offline-Workflow explizit (lokal dokumentieren/synchronisieren), Sturm/Verkehr/Sicht berücksichtigt, klare Eskalation, keine Halluzinationen. Vollständig rubrik-konform."
+    "short_justification": "Vollständige, kontextgerechte Antwort: Offline-Workflow explizit adressiert, Safety-First bei severity=high, klare Eskalation, strukturierte Dokumentation. Keine Halluzinationen."
   }
 ]

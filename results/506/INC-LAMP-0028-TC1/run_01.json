@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0028-TC1",
-  "timestamp": "2026-02-18T17:04:24",
+  "timestamp": "2026-02-18T17:46:54",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Gehäuse beschädigt, mögliche Berührungsgefahr (Asset-ID: n4470029720)\n\n1. Absicherung  \n- Bereich sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Gefahr durch Strom“ aufstellen.  \n- Unbefugte fernhalten.\n\n2. Sichtprüfung  \n- Sichtkontrolle: Wie groß ist der Schaden?  \n- Liegen Kabel frei oder sind metallische Teile berührbar?  \n- Ist Feuchtigkeit eingedrungen?\n\n3. Diagnose/Beobachtung  \n- Funktioniert die Anlage noch?  \n- Gibt es Funken, Geräusche oder Geruchsentwicklung?  \n- Ist die Stromversorgung abschaltbar (z.B. Sicherungskasten vor Ort)?\n\n4. Dokumentation  \n- Schaden fotografieren (Detail und Übersicht).  \n- Asset-ID, Standort, Uhrzeit, Maßnahmen notieren.  \n- Gefahrenlage dokumentieren.\n\n5. Eskalation  \n- Sofortige Meldung an Elektro-Fachkraft/Notdienst.  \n- Bei akuter Gefahr: Feuerwehr/Polizei verständigen.  \n- Weiterleitung an zuständige Stelle für Reparatur.\n\nBitte Rückmeldung:  \n- Ist die Stromversorgung zugänglich?  \n- Gibt es Hinweise auf weitere Schäden (z.B. an der Elektrik oder Umgebung)?",
-    "tokens_estimate_words": 131
+    "text": "Absicherung und Vorgehen bei beschädigtem Gehäuse (Asset-ID: n4470029720)\n\n1. Absicherung  \n- Bereich sofort mit Absperrband oder Warnbaken sichern.  \n- Warnschilder „Elektrische Gefahr“ aufstellen.  \n- Unbefugte fernhalten.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?  \n- Ist das Innere zugänglich oder liegen Leitungen frei?  \n- Gibt es sichtbare Funken, Rauch oder Feuchtigkeit?\n\n3. Diagnose/Beobachtung  \n- Berührungsgefahr bestätigen: Ist Metall zugänglich, sind Kabel sichtbar?  \n- Funktion der Anlage prüfen: Leuchtet/arbeitet sie noch?  \n- Wetterlage beachten (Regen erhöht Risiko).\n\n4. Dokumentation  \n- Fotos der Beschädigung und Absicherung machen.  \n- Asset-ID, Standort und Uhrzeit notieren.  \n- Kurzbeschreibung des Schadens und der Maßnahmen festhalten.\n\n5. Eskalation  \n- Meldung an Fachbereich Elektrotechnik/Servicepartner mit allen Infos.  \n- Dringlichkeit betonen: „Berührungsgefahr, sofortige Reparatur erforderlich.“  \n- Rückmeldung abwarten und ggf. weitere Absicherung verstärken.\n\nFehlen Details zur Schadensstelle (z.B. genaue Position am Gehäuse)? Bitte ergänzen, damit die Reparatur gezielt erfolgen kann.",
+    "tokens_estimate_words": 144
   },
   "judge": {
     "test_id": "INC-LAMP-0028-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Klare 5-Schritte-Struktur mit sofortiger Absicherung, umfassender Sichtprüfung, Dokumentation und Eskalation. Sicherheitsfokus durchgängig erkennbar, keine Halluzinationen bei minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit, Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, alle Empfehlungen sind kontextgerecht und umsetzbar."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 2.861
+    "runtime_seconds": 4.802
   },
   "error": {}
 }

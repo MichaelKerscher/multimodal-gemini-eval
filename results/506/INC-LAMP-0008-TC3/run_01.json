@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0008-TC3",
-  "timestamp": "2026-02-18T16:57:46",
+  "timestamp": "2026-02-18T17:40:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -248,8 +248,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Bereich mit Warnleuchten/Kegel absichern, besonders bei Nacht und Nebel.\n   - Verkehrslage prüfen (hier: geringe Verkehrsbelastung, trotzdem Vorsicht).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen entlang des Abschnitts durchführen.\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Auf offensichtliche Schäden (z.B. defekte Leuchtmittel, Kabel, Vandalismus) achten.\n\n3. **Diagnose/Beobachtung**\n   - Foto vom betroffenen Bereich machen (Foto vorhanden, ggf. ergänzen).\n   - Prüfen, ob Lampen Strom bekommen (z.B. Kontrollleuchte am Mast, falls vorhanden).\n   - Notieren, ob alle Lampen oder nur einzelne betroffen sind.\n   - Wetter und Sichtverhältnisse dokumentieren (hier: Nacht, Nebel, schlechte Sicht).\n\n4. **Dokumentation**\n   - Alle Beobachtungen lokal in der App/auf dem Gerät speichern (Offline-Modus wegen schlechter Verbindung).\n   - Foto lokal sichern.\n   - Standort (OSM-ID, GPS) und Zeit erfassen.\n   - Fehlerart: Ausfall, geringe Sicht, niedrige Priorität (laut Meldung).\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer (z.B. Kreuzung, Schulweg): Sofort an Bereitschaft weiterleiten.\n   - Sonst: Meldung an zuständige Stelle zur Reparatur (z.B. Elektrotechnik, Wartungsdienst).\n   - Synchronisation der Daten nach Wiederherstellung der Verbindung.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder Stromausfall im gesamten Abschnitt?",
-    "tokens_estimate_words": 190
+    "text": "**Checkliste für dunklen Abschnitt (Straßenbeleuchtung, Standort n13293341689):**\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Bereich mit Warnleuchten/Absperrband sichern, besonders bei schlechter Sicht (Nacht, Nebel).\n   - Verkehrslage prüfen: aktuell geringe Verkehrsbelastung, trotzdem Vorsicht.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen: Sind mehrere oder alle Lampen betroffen?\n   - Prüfen auf offensichtliche Schäden (Kabel, Mast, Leuchtmittel).\n   - Foto vom betroffenen Abschnitt machen (Foto bereits verfügbar, ggf. ergänzen).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob einzelne oder alle Lampen ausgefallen sind.\n   - Sicht auf Steuerkasten/Verteilerschrank: Auffälligkeiten (offen, beschädigt)?\n   - Keine Online-Diagnose möglich (Gerät im Low Power/Spotty-Modus): Notizen und Fotos lokal speichern.\n\n4. **Dokumentation**\n   - Alle Beobachtungen lokal erfassen (offlinefähig).\n   - Fotos und Notizen sichern, später synchronisieren.\n   - Standort, Zeit, Wetter (Nebel, Nacht), Sichtverhältnisse dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei geringer Gefährdung (aktuell: low severity, wenig Verkehr): Standardmeldung, zeitnahe Reparatur einleiten.\n   - Hinweis: Gerät synchronisieren, sobald wieder online.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder technische Defekte (z.B. Geräusche, Geruch)?",
+    "tokens_estimate_words": 168
   },
   "judge": {
     "test_id": "INC-LAMP-0008-TC3",
@@ -267,11 +267,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Kontext vollständig genutzt (Nebel, Nacht, spotty connectivity, low_power_mode), klare Struktur, Sicherheit und Eskalation adressiert. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, alle Kontextfaktoren berücksichtigt, klare Struktur, Safety und Eskalation adäquat adressiert."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.97
+    "runtime_seconds": 4.586
   },
   "error": {}
 }

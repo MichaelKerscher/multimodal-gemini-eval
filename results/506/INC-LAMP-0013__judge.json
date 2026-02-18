@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle relevanten Schritte (Absicherung, Diagnose, Dokumentation, Eskalation) sind präzise und umsetzbar beschrieben."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Absicherung und Eskalation. Alle Schritte nachvollziehbar, keine Spekulation über fehlende Kontextdaten."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Verkehrsexposition, Dämmerung). Sicherheitsmaßnahmen sind umfassend und situationsangepasst, Eskalation klar definiert, Dokumentation vollständig."
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, photo_available). Safety-First-Prinzip konsequent umgesetzt, Eskalation klar definiert, Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise Antwort mit korrekter Interpretation der Kontexthinweise (photo_available als Workflow-Cue, device.* bezieht sich auf Techniker-Gerät). Sicherheit priorisiert, Eskalation klar, Dokumentation strukturiert."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextintegration (Dämmerung, schlechte Sicht, photo_available). Alle Sicherheits- und Dokumentationsaspekte abgedeckt, klare Eskalation bei high severity."
   }
 ]

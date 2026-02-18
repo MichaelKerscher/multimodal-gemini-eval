@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0019-TC3",
-  "timestamp": "2026-02-18T17:01:27",
+  "timestamp": "2026-02-18T17:44:01",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -235,15 +235,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (n4939032796) dunkel, Bereich unsicher, Sicht schlecht (Nacht, Nebel):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Fußgänger oder Verkehr gefährdet sind.\n   - Warnweste tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf sichtbare Schäden, Vandalismus oder lose Teile kontrollieren.\n   - Prüfen, ob weitere Lampen betroffen sind (evtl. Netzproblem).\n\n3. **Diagnose/Beobachtung**\n   - Lampe auf offensichtliche Defekte (Leuchtmittel, Elektrik, Feuchtigkeit) prüfen.\n   - Sicherstellen, dass Stromversorgung vorhanden ist (sofern Zugang möglich).\n   - Wetter (Nebel) und Sichtverhältnisse dokumentieren.\n\n4. **Dokumentation**\n   - Fotos vom Standort und der Lampe machen (sofern möglich).\n   - Alle Beobachtungen und Maßnahmen in der App protokollieren.\n   - Zeit und eigene Einschätzung zur Gefährdung notieren.\n\n5. **Eskalation**\n   - Bei erhöhter Gefährdung (z. B. Schulweg, viel Verkehr, schlechte Sicht): Sofortige Meldung an Bereitschaft/Leitstelle für schnelle Reparatur.\n   - Bei Standardfall: Störmeldung weiterleiten, Reparatur im üblichen Turnus einplanen.\n\n**Rückfrage:** Ist Zugang zum Lampenmast möglich (Schloss/Schlüssel vorhanden)? Gibt es Hinweise auf Stromausfall im Bereich?",
-    "tokens_estimate_words": 157
+    "text": "Checkliste für Außendienst – Straßenlampe dunkel, unsicherer Bereich (Nacht, Nebel)\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Bereich mit Warnbaken/Kegel absichern, besonders bei mittlerer Verkehrsexposition und schlechter Sicht.\n- Bei Bedarf Polizei oder Ordnungsamt zur Unterstützung anfordern.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf Schäden, Vandalismus oder lose Teile kontrollieren.\n- Umfeld auf weitere Ausfälle prüfen (z.B. benachbarte Lampen).\n- Sicht auf Verkabelung und Schaltkasten werfen (ohne Öffnung).\n\n**3. Diagnose/Beobachtung**\n- Prüfen: Ist nur diese Lampe betroffen oder mehrere?\n- Hören: Ungewöhnliche Geräusche (Kurzschluss, Brummen)?\n- Wetter beachten: Nebel kann Feuchtigkeitsschäden begünstigen.\n- Annahme: Lampe ist stromführend, da Gerät online und Zustand „ok“.\n\n**4. Dokumentation**\n- Fotos vom Zustand (sofern möglich).\n- Notieren: Standort (OSM n4939032796, 47.8552359/12.1220818), Zeit, Sichtverhältnisse, Verkehrslage.\n- Fehlerbeschreibung: „Ausfall seit ca. 60 Minuten, Bereich unsicher, Sicht schlecht, mittlerer Verkehr.“\n\n**5. Eskalation**\n- Meldung an zuständige Wartungsfirma/Techniker mit Priorität „mittel“ (wegen Unsicherheit und Sicht).\n- Hinweis: Bei mehreren Ausfällen oder Gefahr sofortige Eskalation auf „hoch“.\n- Rückmeldung an Dispatcher: Absicherung erfolgt, Reparaturauftrag ausgelöst.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder ist es ein Einzelfall? Gibt es Hinweise auf Vandalismus oder akute Gefährdung (z.B. Unfallstelle)?",
+    "tokens_estimate_words": 189
   },
   "judge": {
     "test_id": "INC-LAMP-0019-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -254,11 +254,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige Nutzung aller Kontextinformationen (Nebel, Nacht, schlechte Sicht, mittlerer Verkehr). Klare Priorisierung von Sicherheit, strukturierte Handlungsschritte, präzise Dokumentation und differenzierte Eskalation."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Nebel, Nacht, Verkehr). Klare Sicherheitspriorisierung, strukturierte Eskalation, präzise Dokumentationsanweisungen und korrekte Interpretation der Geräte-Metadaten."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.46
+    "runtime_seconds": 4.197
   },
   "error": {}
 }

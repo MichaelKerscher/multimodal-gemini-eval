@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da L0-Kontext minimal ist und keine zusätzlichen Fakten erfunden wurden."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
@@ -23,19 +23,20 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
-      "K": 3
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt"
+      "Offline-Workflow bei spotty connectivity",
+      "Batterie-Hinweis bezieht sich fälschlich auf Asset statt Techniker-Gerät"
     ],
-    "short_justification": "Gute Kontextnutzung (Nacht, low_battery, spotty), aber Offline-Dokumentation fehlt trotz connectivity=spotty. K=3 wegen fehlender Robustheit bei instabiler Verbindung."
+    "short_justification": "Gute Struktur und Safety-Fokus, aber Halluzination: 'Gerät meldet low_battery' wird als Asset-Problem interpretiert, obwohl device.* das Techniker-Gerät beschreibt. Offline-Workflow bei spotty connectivity fehlt."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -53,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, context_notes korrekt interpretiert, alle Kontextfaktoren (Nacht, spotty, low_battery) berücksichtigt. Klare Struktur und Dokumentation."
+    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, device.* richtig interpretiert (Techniker-Gerät), Safety und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen, vollständig kontextgerecht."
   }
 ]

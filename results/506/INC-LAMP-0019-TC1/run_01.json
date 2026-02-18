@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0019-TC1",
-  "timestamp": "2026-02-18T17:01:27",
+  "timestamp": "2026-02-18T17:44:01",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n4939032796)\n\n1. Absicherung  \n– Bereich absperren oder kennzeichnen, falls möglich (z. B. Warnbaken, Warnleuchte).  \n– Bei erhöhter Unsicherheit: Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n– Lampe auf offensichtliche Schäden prüfen (z. B. Glasbruch, Kabel sichtbar, Mast beschädigt).  \n– Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n– Prüfen, ob Lampe Teil einer größeren Störung ist (z. B. mehrere Lampen betroffen).  \n– Notieren, ob Lampe flackert, komplett aus oder andere Auffälligkeiten zeigt.\n\n4. Dokumentation  \n– Asset-ID, Standort, Uhrzeit, Beobachtungen und Maßnahmen schriftlich festhalten.  \n– Fotos machen, falls möglich.\n\n5. Eskalation  \n– Meldung an zuständige Wartungsfirma/Technik (Asset-ID weitergeben).  \n– Bei akuter Gefährdung: Sofortige Eskalation an Einsatzleitung oder Stadtverwaltung.\n\nFehlende Infos:  \n– Gibt es weitere Lampen in der Nähe, die ebenfalls betroffen sind?  \n– Ist die Lampe in einem besonders sensiblen Bereich (z. B. Schulweg, Hauptstraße)?\n\nBitte Rückmeldung geben, falls weitere Details bekannt sind oder Sofortmaßnahmen gewünscht werden.",
-    "tokens_estimate_words": 154
+    "text": "Checkliste für Vorgehen bei dunkler Straßenlampe (Asset-ID: n4939032796):\n\n1. Absicherung  \n   – Bereich absichern, falls möglich (z.B. Warnbaken, Hinweisschilder).  \n   – Bei akuter Gefährdung: Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n   – Ist die Lampe beschädigt (Glas, Mast, Kabel)?  \n   – Liegt ein Stromausfall im Umfeld vor?  \n   – Sind weitere Lampen betroffen?\n\n3. Diagnose/Beobachtung  \n   – Prüfen, ob die Lampe auf Bewegungen oder Dämmerung reagiert.  \n   – Gibt es auffällige Geräusche, Gerüche oder sichtbare Defekte?\n\n4. Dokumentation  \n   – Asset-ID, Standort, Zeitpunkt, Beobachtungen notieren.  \n   – Fotos machen, falls möglich.\n\n5. Eskalation  \n   – Meldung an zuständige Wartungsfirma oder Stadtverwaltung mit allen Infos.  \n   – Bei erhöhter Unsicherheit: Dringlichkeit betonen.\n\nFehlende Infos:  \n– Gibt es weitere dunkle Lampen in der Nähe?  \n– Ist der Bereich stark frequentiert oder besonders sicherheitsrelevant (z.B. Schulweg, Bushaltestelle)?\n\nBitte ergänzen, falls möglich.",
+    "tokens_estimate_words": 127
   },
   "judge": {
     "test_id": "INC-LAMP-0019-TC1",
@@ -49,12 +49,14 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umgebungshinweise erwartbar – korrekt allgemein gehalten."
+    "missing_elements": [
+      "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte adressiert, aber persönliche Schutzmaßnahmen (Warnweste) fehlen bei minimalem Kontext."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.354
+    "runtime_seconds": 3.818
   },
   "error": {}
 }

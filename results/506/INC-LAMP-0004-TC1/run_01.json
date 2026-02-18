@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0004-TC1",
-  "timestamp": "2026-02-18T16:56:29",
+  "timestamp": "2026-02-18T17:38:58",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n12551286240)\n\n1. Absicherung  \n- Bereich absichern, ggf. Warnbaken oder Absperrband aufstellen.  \n- Bei starkem Verkehrsaufkommen: Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe: Ist das Gehäuse beschädigt?  \n- Prüfen, ob Stromzufuhr offensichtlich unterbrochen (z.B. Kabel sichtbar, Sicherungskasten offen).\n\n3. Diagnose/Beobachtung  \n- Lampe reagiert auf Bewegung/Sensor?  \n- Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).  \n- Bei Einzelstörung: Lampe auf Defekt oder Ausfall prüfen.\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen notieren.  \n- Fotos machen (Lampe, Umgebung, evtl. Schäden).\n\n5. Eskalation  \n- Bei akuter Gefährdung: Sofortige Meldung an Leitstelle/Notdienst.  \n- Bei Einzelstörung ohne Gefahr: Reparaturauftrag an zuständige Stelle weiterleiten.\n\nFehlende Informationen:  \n- Gibt es Hinweise auf Vandalismus oder Unfall?  \n- Ist die Lampe Teil einer größeren Ausfallserie?\n\nBitte Rückmeldung, falls weitere Details vor Ort auffallen.",
-    "tokens_estimate_words": 137
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für den Außendienst – Straßenlampe (Asset-ID: n12551286240)**\n\n1. **Absicherung**\n   - Bereich um die Lampe absichern, falls erhöhte Unfallgefahr besteht (z. B. Warnbaken, Absperrband).\n   - Bei akuter Gefährdung sofort Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist sie beschädigt, z. B. durch Vandalismus oder Unfall?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Reagiert die Lampe auf Schaltimpulse (sofern vor Ort möglich)?\n   - Prüfen, ob Stromversorgung oder Steuerung ausgefallen ist.\n   - Notieren, ob die Dunkelheit auf einzelne Lampe oder größere Störung hindeutet.\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Uhrzeit und Beobachtungen erfassen.\n   - Fotos von der Lampe und Umgebung machen.\n\n5. **Eskalation**\n   - Bei Sicherheitsrisiko: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei technischer Störung: Weiterleitung an Wartungsteam mit allen Dokumentationen.\n\n**Rückfrage:**  \nSind weitere Lampen im Bereich ebenfalls ausgefallen oder betrifft es nur diese eine? Gibt es Hinweise auf Beschädigung oder Stromausfall?\n\nBitte um kurze Rückmeldung, damit die weitere Bearbeitung gezielt erfolgen kann.",
+    "tokens_estimate_words": 169
   },
   "judge": {
     "test_id": "INC-LAMP-0004-TC1",
@@ -50,14 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Erwähnung von Wetter/Sicht (nicht im Context)",
-      "Keine Priorisierung bei 'unsicher' (User erwähnt)"
+      "Konkrete Sicherheitsmaßnahmen bei Nacht/schlechter Sicht fehlen (nur allgemein erwähnt)"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Safety könnte bei 'unsicher' stärker betont werden."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheit wird adressiert, aber ohne spezifische Maßnahmen für Nacht/schlechte Sicht (im Kontext nicht explizit gegeben). Keine Halluzinationen, da minimaler Kontext."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.733
+    "runtime_seconds": 3.434
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC3",
-  "timestamp": "2026-02-18T17:03:45",
+  "timestamp": "2026-02-18T17:46:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -258,8 +258,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Römerstraße, Langenpfunzen (Straßenlampe, intermittierender Fehler)\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei mittlerer Verkehrsexposition: Bereich um die Lampe mit Pylonen markieren.\n   - Sichtbarkeit prüfen (bei Nebel besonders wichtig).\n\n2. **Sichtprüfung**\n   - Lampe auf sichtbare Schäden, lose Teile, Feuchtigkeit oder Verschmutzung kontrollieren.\n   - Prüfen, ob Kabel, Anschlusskasten oder Mast auffällig sind.\n   - Umgebung auf Anzeichen von Vandalismus oder Tierbefall untersuchen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach beobachten: Schaltet sie sich während der Sichtprüfung an/aus?\n   - Prüfen, ob das Problem bei anderen Lampen in der Nähe ebenfalls auftritt.\n   - Typische Ursachen für intermittierende Fehler: Wackelkontakt, Feuchtigkeit im Gehäuse, defektes Vorschaltgerät, lose Kabel.\n   - Annahme: Kein Online-Zugriff möglich (Gerät offline), Diagnose und Dokumentation lokal durchführen.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Zeitpunkt, Wetter (Nebel), Sichtverhältnisse und eigene Beobachtungen lokal in der App notieren.\n   - Fotos lokal aufnehmen (falls möglich).\n   - Asset-ID (n4449540379), Standort und Lampe eindeutig dokumentieren.\n   - Später synchronisieren, sobald Online-Zugriff wieder möglich.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z.B. Stromschlagrisiko, Mast instabil): Sofort an Leitstelle melden.\n   - Bei intermittierendem Fehler ohne akute Gefahr: Fehlerbericht an zuständige Fachabteilung weiterleiten, ggf. Wartungstermin anfordern.\n   - Hinweis: Bei Nebel und hoher Geräuschkulisse besonders auf Verkehrssicherung achten.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Unwetter oder andere Ereignisse in der Nähe, die den Fehler ausgelöst haben könnten?  \nSind weitere Lampen betroffen oder nur diese einzelne?",
-    "tokens_estimate_words": 222
+    "text": "Checkliste für Außendienst – Römerstraße, Langenpfunzen (Straßenlampe)\n\n**1. Absicherung**\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei mittlerer Verkehrsexposition: Bereich um Lampe mit Pylonen sichern.\n- Sichtbarkeit durch Nebel prüfen, ggf. zusätzliche Warnleuchten nutzen.\n\n**2. Sichtprüfung**\n- Lampe auf offensichtliche Schäden, Feuchtigkeit, lose Kabel oder Vandalismus kontrollieren.\n- Prüfen, ob Lampe während Anwesenheit an/aus geht (intermittentes Verhalten beobachten).\n- Umgebung auf ungewöhnliche Einflüsse (z.B. starke Erschütterungen, Bauarbeiten) prüfen.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Lampe bei mehreren Durchläufen unterschiedlich reagiert.\n- Sichtkontrolle des Schalters, Sensors oder Steuergeräts (sofern zugänglich).\n- Wetter (Nebel) als Einflussfaktor beachten – Feuchtigkeit kann zu Kontaktschwierigkeiten führen.\n- Annahme: Stromversorgung grundsätzlich vorhanden, da Lampe sporadisch funktioniert.\n\n**4. Dokumentation**\n- Offline dokumentieren: Fehlerbild, Zeitpunkt, eigene Beobachtungen notieren.\n- Fotos lokal speichern (Gerät ist offline).\n- Alle Schritte und Ergebnisse festhalten, um später synchronisieren zu können.\n\n**5. Eskalation**\n- Bei weiterhin unklarer Ursache: Meldung als „intermittent, Ursache offen“ an Fachbereich weiterleiten.\n- Empfehlung: Elektriker zur Prüfung der Verdrahtung/Kontakte anfordern.\n- Hinweis auf Nebel/hohe Feuchtigkeit als möglichen Einfluss.\n\n**Rückfrage:**  \nSind vor Ort Steuergeräte oder Sensoren zugänglich, oder ist die Lampe rein konventionell geschaltet?  \nGab es in letzter Zeit Bauarbeiten oder Stromschwankungen in der Umgebung?",
+    "tokens_estimate_words": 193
   },
   "judge": {
     "test_id": "INC-LAMP-0026-TC3",
@@ -277,11 +277,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit umgesetzt (lokal dokumentieren, später synchronisieren), kontextgerechte Sicherheitsmaßnahmen, klare Struktur. Alle erwartbaren Elemente aus CONTEXT berücksichtigt."
+    "short_justification": "Exzellente Umsetzung: Offline-Workflow explizit ('Offline dokumentieren, Fotos lokal speichern, später synchronisieren'), klare Struktur, vollständige Kontextnutzung (Nebel, Verkehr, connectivity), präzise Dokumentationsanweisungen. Alle Erwartungen erfüllt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.812
+    "runtime_seconds": 5.333
   },
   "error": {}
 }

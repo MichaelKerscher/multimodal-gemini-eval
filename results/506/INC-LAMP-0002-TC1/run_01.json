@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0002-TC1",
-  "timestamp": "2026-02-18T16:55:52",
+  "timestamp": "2026-02-18T17:38:17",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Kontrolle (Asset-ID: n1987093602)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen (z. B. Leitkegel)  \n- Gefahrenbereich absichern, falls nötig (bei Straßenlampen: Gehweg; bei Ampelanlagen: Fahrbahn)\n\n2. Sichtprüfung  \n- Sichtkontrolle des Assets vor Ort  \n- Prüfen auf offensichtliche Schäden, lose Teile, Vandalismus  \n- Statusanzeige/Ampellicht beobachten (bei Ampelanlagen)\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Asset mehrmals schalten (sofern möglich)  \n- Prüfen, ob Ausfall reproduzierbar ist  \n- Wetterbedingungen oder externe Einflüsse beachten (z. B. Feuchtigkeit, Baumaßnahmen)\n\n4. Dokumentation  \n- Alle Beobachtungen notieren (Datum, Uhrzeit, Zustand, Besonderheiten)  \n- Fotos machen, falls Auffälligkeiten sichtbar  \n- Asset-ID und Standort dokumentieren\n\n5. Eskalation  \n- Bei erneutem oder reproduzierbarem Ausfall: Meldung an Technik/Service  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Eskalation an Leitstelle  \n- Falls keine Auffälligkeiten: Routinekontrolle abschließen, Bericht an zuständige Stelle\n\nFehlen weitere Angaben zum Asset (Straßenlampe oder Ampelanlage)? Bitte spezifizieren, falls Details benötigt werden.",
-    "tokens_estimate_words": 138
+    "text": "Checkliste für Kontrolle (Asset-ID: n1987093602)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Gefahrenbereich absichern (z.B. Warnschilder, ggf. Absperrung)  \n- Verkehrssicherheit prüfen\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampe/Ampelanlage  \n- Prüfen auf sichtbare Schäden (Gehäuse, Kabel, Mast)  \n- Umfeld auf Störungen (z.B. Bauarbeiten, Vandalismus) untersuchen\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Anlage mehrfach ein-/ausschalten, ggf. auf verschiedene Tageszeiten achten  \n- Prüfen, ob Ausfall reproduzierbar ist  \n- Notieren, ob andere Anlagen in der Nähe betroffen sind  \n- Verdacht auf Witterungseinfluss oder Netzschwankungen?\n\n4. Dokumentation  \n- Alle Beobachtungen und Testergebnisse notieren  \n- Fotos von Anlage und Umfeld machen  \n- Zeitpunkt und Dauer des Ausfalls dokumentieren (sofern bekannt)\n\n5. Eskalation  \n- Bei wiederholtem oder reproduzierbarem Ausfall: Meldung an Fachbereich/Störungsdienst  \n- Bei akuter Gefahr: Sofortige Eskalation an Einsatzleitung  \n- Dokumentation an zentrale Stelle weiterleiten\n\nRückfrage:  \nGibt es nähere Angaben zum Zeitpunkt oder zur Häufigkeit des Ausfalls? Sind Anwohner oder andere Anlagen betroffen?",
+    "tokens_estimate_words": 143
   },
   "judge": {
     "test_id": "INC-LAMP-0002-TC1",
@@ -49,14 +49,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Umgebungsinformationen verfügbar, daher generisch gehalten"
-    ],
-    "short_justification": "Solide generische Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID bekannt. Sicherheit könnte spezifischer sein (z.B. Verkehrslage), aber bei L0 angemessen."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalationskriterien. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt. S=3, da keine akute Gefahrensituation erkennbar."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.305
+    "runtime_seconds": 2.985
   },
   "error": {}
 }

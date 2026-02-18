@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0023-TC2",
-  "timestamp": "2026-02-18T17:02:46",
+  "timestamp": "2026-02-18T17:45:18",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Dunkler Abschnitt (Straßenbeleuchtung):\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial aufstellen (z. B. Leitkegel, Warnleuchten), besonders bei hohem Verkehrsaufkommen und schlechtem Wetter.\n   - Arbeitsbereich klar kennzeichnen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Leuchten und Umgebung durchführen.\n   - Auf offensichtliche Schäden, lose Kabel, Vandalismus oder Wasser-/Sturmschäden achten.\n\n3. **Diagnose/Beobachtung**\n   - Stromversorgung prüfen (sofern gefahrlos möglich).\n   - Da Gerät „offline“, keine Fernwartung möglich – manuelle Kontrolle erforderlich.\n   - Bei Sturm: Mögliche Ursachen wie Kurzschluss, Leitungsschaden oder Sicherungsausfall in Betracht ziehen.\n   - Foto des Ist-Zustands aufnehmen (Foto liegt laut Meldung vor – ggf. ergänzen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Fotos und Standortdaten sichern.\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden oder Gefahr für Verkehrsteilnehmer: Sofortige Meldung an Leitstelle und ggf. Polizei/Feuerwehr.\n   - Reparaturteam oder Elektriker anfordern, falls Fehler nicht vor Ort behoben werden kann.\n\n**Rückfrage:**  \nSind weitere Details zum betroffenen Abschnitt (z. B. Anzahl der ausgefallenen Leuchten, Zugang zu Schaltkasten) bekannt?  \nIst eine sofortige Reparatur möglich oder muss der Bereich vorübergehend gesperrt werden?",
-    "tokens_estimate_words": 174
+    "text": "Checkliste für die Prüfung – Dunkler Abschnitt (Straßenbeleuchtung):\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen.\n   - Bereich mit Leitkegeln sichern, besonders bei hohem Verkehrsaufkommen und schlechter Sicht.\n   - Bei Sturm: Abstand zu Bäumen und losem Material halten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen und Mastanlagen (Beschädigungen, lose Teile, Stromleitungen).\n   - Prüfen, ob alle Leuchten betroffen sind oder nur einzelne.\n   - Umgebung auf zusätzliche Gefahren (herabfallende Äste, Wasseransammlungen) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Stromversorgung prüfen (Schaltkasten, Sicherungen).\n   - Gerät ist laut Meldung „offline“, aber Zustand „ok“ – Annahme: Verbindung/Netzproblem oder Stromausfall.\n   - Bei Sturm: Möglicher Leitungsschaden, Kurzschluss oder Ausfall durch Umwelteinflüsse.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Abschnitt und den Anlagen machen (Foto liegt laut Meldung vor).\n   - Notieren: Anzahl der ausgefallenen Leuchten, Zustand der Masten, Zeitpunkt und Wetterbedingungen.\n\n5. **Eskalation**\n   - Bei hoher Verkehrsexposition und hoher Störungs-Schwere: Sofortige Meldung an die Leitstelle/Technik.\n   - Weiterleitung an Elektriker oder Netzbetreiber, falls Stromversorgung betroffen.\n   - Hinweis auf schnelle Reparatur wegen Sicherheitsrisiko.\n\n**Rückfrage:**  \nSind weitere Anlagen (Ampeln, andere Lampen) im Umfeld ebenfalls betroffen? Gibt es Hinweise auf Stromausfall im gesamten Bereich?  \nBitte ggf. ergänzende Informationen oder Fotos bereitstellen.",
+    "tokens_estimate_words": 184
   },
   "judge": {
     "test_id": "INC-LAMP-0023-TC2",
@@ -65,21 +65,23 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
-      "K": 4
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sturm/Verkehr/Offline erkannt, Safety priorisiert, Offline-Workflow erwähnt, klare Eskalation bei severity=high. Vollständig kontextgerecht."
+    "missing_elements": [
+      "Offline-Workflow fehlt (connectivity=offline erfordert lokale Dokumentation/Synchronisation)"
+    ],
+    "short_justification": "Exzellente Safety-Orientierung und Eskalation bei severity=high. Offline-Workflow nicht erwähnt, obwohl connectivity=offline im CONTEXT steht – K=3."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.789
+    "runtime_seconds": 4.6
   },
   "error": {}
 }

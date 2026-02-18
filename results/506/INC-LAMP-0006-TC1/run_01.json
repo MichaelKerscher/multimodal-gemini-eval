@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0006-TC1",
-  "timestamp": "2026-02-18T16:57:07",
+  "timestamp": "2026-02-18T17:39:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Vorgehen bei ausgefallener Straßenlampe (Asset-ID: n7230270217):\n\n1. Absicherung  \n- Bereich absichern, falls Gefahr für Fußgänger oder Verkehr besteht (z.B. Warnbaken, Absperrband).\n- Bei akuter Unsicherheit ggf. Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n- Lampe auf sichtbare Schäden prüfen (z.B. Glasbruch, Vandalismus, lose Kabel).\n- Umgebung auf weitere dunkle Lampen oder Störungen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen: Ist nur diese Lampe betroffen oder mehrere im Umfeld?\n- Mögliche Ursachen: Leuchtmittel defekt, Stromausfall, Steuerung ausgefallen.\n- Notieren: Zeitpunkt des Ausfalls, Wetterbedingungen, besondere Beobachtungen.\n\n4. Dokumentation  \n- Asset-ID, Standort, Zeitpunkt, Beobachtungen und Maßnahmen notieren.\n- Fotos machen, falls Schäden sichtbar.\n\n5. Eskalation  \n- Meldung an zuständige Wartungsfirma oder kommunalen Betrieb mit allen Infos.\n- Bei erhöhter Gefährdung schnelle Eskalation an Bereitschaftsdienst.\n\nRückfrage:  \nSind weitere Lampen in der Nähe ebenfalls ausgefallen oder betrifft es nur die Lampe mit Asset-ID n7230270217?  \nGibt es Hinweise auf Vandalismus oder Stromausfall im Umfeld?",
-    "tokens_estimate_words": 147
+    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n7230270217)\n\n1. Absicherung  \n- Bereich absperren oder kennzeichnen, falls möglich (z. B. Warnbaken, Absperrband).  \n- Warnwesten tragen, auf eigene Sicherheit achten.\n\n2. Sichtprüfung  \n- Lampe auf sichtbare Schäden prüfen (Glasbruch, Kabel, Mast).  \n- Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Stromversorgung vorhanden (andere Lampen in der Nähe leuchten?).  \n- Lampe auf offensichtliche Defekte (Leuchtmittel, Steuerung) untersuchen.  \n- Notieren: Zeitpunkt, Wetterbedingungen, Besonderheiten.\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen und Maßnahmen schriftlich festhalten.  \n- Fotos machen (Lampe, Umgebung, eventuelle Schäden).\n\n5. Eskalation  \n- Bei akuter Gefährdung: Sofortige Meldung an Leitstelle/Technik.  \n- Sonst: Störmeldung an zuständige Fachabteilung weiterleiten.\n\nFehlende Infos:  \n- Gibt es weitere dunkle Lampen im Bereich?  \n- Ist der Bereich stark frequentiert (Fußgänger, Verkehr)?  \n- Wurde bereits eine Meldung an die Leitstelle gemacht?\n\nBitte Rückmeldung zu den offenen Punkten geben, damit die Maßnahmen angepasst werden können.",
+    "tokens_estimate_words": 149
   },
   "judge": {
     "test_id": "INC-LAMP-0006-TC1",
@@ -49,12 +49,14 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Safety und Eskalation vorhanden, aber ohne explizite Priorisierung bei hoher Gefährdung."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 2.949
+    "runtime_seconds": 3.414
   },
   "error": {}
 }

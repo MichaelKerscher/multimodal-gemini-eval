@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0003-TC1",
-  "timestamp": "2026-02-18T16:56:10",
+  "timestamp": "2026-02-18T17:38:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Außendienst:**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Arbeitsbereich abgesperrt ist (Warnbaken, ggf. Warnleuchte).\n   - Trage persönliche Schutzausrüstung.\n\n2. **Sichtprüfung**\n   - Überprüfe den Lampenmast und das Umfeld auf offensichtliche Schäden (z.B. Mast verbogen, Glas gebrochen).\n   - Prüfe, ob Kabel sichtbar beschädigt oder lose sind.\n\n3. **Diagnose/Beobachtung**\n   - Kontrolliere, ob die Lampe komplett dunkel bleibt oder flackert.\n   - Prüfe, ob andere Lampen in der Nähe ebenfalls betroffen sind (Hinweis auf größere Störung).\n   - Falls möglich: Teste die Lampe mit einem mobilen Prüfgerät.\n\n4. **Dokumentation**\n   - Notiere alle Beobachtungen (Datum, Uhrzeit, Asset-ID, Zustand).\n   - Fotografiere den Schaden und die Umgebung.\n\n5. **Eskalation**\n   - Bei Gefahr (z.B. Stromkabel offen, Unfallgefahr): Sofortige Meldung an die Leitstelle und ggf. Polizei/Feuerwehr.\n   - Bei einfacher Lampenstörung: Weiterleitung an die zuständige Wartungsfirma zur Reparatur.\n\n**Rückfrage:**  \nIst bereits eine Absicherung vor Ort oder muss diese selbst vorgenommen werden? Gibt es Hinweise auf Stromausfall im Bereich oder betrifft es nur diese Lampe?",
-    "tokens_estimate_words": 166
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Außendienst:**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, Absperrung bei Arbeiten im Straßenraum).\n\n2. **Sichtprüfung**\n   - Überprüfe vor Ort: Ist die Lampe äußerlich beschädigt? Gibt es offensichtliche Defekte am Mast, Leuchtmittel oder der Verkabelung?\n\n3. **Diagnose/Beobachtung**\n   - Prüfe, ob Strom anliegt (ggf. mit Spannungsprüfer).\n   - Kontrolliere, ob weitere Lampen im Umfeld betroffen sind (Hinweis auf größere Störung).\n   - Notiere Besonderheiten (z. B. Feuchtigkeit, Vandalismus, lose Kabel).\n\n4. **Dokumentation**\n   - Erfasse alle Beobachtungen und Maßnahmen (Fotos, Notizen, Asset-ID).\n   - Dokumentiere den Bürgerhinweis und die eigene Prüfung.\n\n5. **Eskalation**\n   - Bei komplexen Defekten (z. B. Stromausfall, Netzproblem): Melde an Fachabteilung/Elektriker.\n   - Bei einfacher Ursache (z. B. Leuchtmittel defekt): Austausch vor Ort, falls möglich.\n\n**Rückfrage:**  \nIst bekannt, ob weitere Lampen in der Nähe ebenfalls betroffen sind? Gibt es Hinweise auf Vandalismus oder Bauarbeiten im Umfeld?  \nFalls nicht, gehe von einem Einzeldefekt aus und prüfe zunächst das Leuchtmittel und die Stromversorgung.\n\nBitte Rückmeldung, falls weitere Details vorliegen.",
+    "tokens_estimate_words": 176
   },
   "judge": {
     "test_id": "INC-LAMP-0003-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da L0-Kontext minimal ist und keine zusätzlichen Fakten erfunden wurden."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.766
+    "runtime_seconds": 3.518
   },
   "error": {}
 }

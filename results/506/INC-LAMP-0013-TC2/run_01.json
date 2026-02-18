@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0013-TC2",
-  "timestamp": "2026-02-18T16:59:23",
+  "timestamp": "2026-02-18T17:42:00",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Sofortmaßnahmen – Gehäuse beschädigt, Berührungsgefahr\n\n1. **Absicherung**\n   - Warnbaken und Absperrband um das betroffene Gerät aufstellen.\n   - Bei mittlerer Verkehrsexposition: Abstand zur Fahrbahn beachten, ggf. Verkehrsleitung organisieren.\n   - Warnschilder „Stromgefahr“ und „Vorsicht – beschädigtes Gerät“ gut sichtbar platzieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Ist das Gerät offen, liegen Kabel frei, sind scharfe Kanten vorhanden?\n   - Prüfen, ob weitere Bauteile betroffen sind (z.B. Mast, Fundament).\n\n3. **Diagnose/Beobachtung**\n   - Keine Berührung! Sichtprüfung aus sicherer Entfernung.\n   - Ist das Gerät weiterhin funktionsfähig (z.B. leuchtet die Lampe, reagiert die Ampel)?\n   - Gibt es Anzeichen für weitere Gefahren (z.B. Funkenflug, Feuchtigkeit im Gehäuse)?\n\n4. **Dokumentation**\n   - Fotos vom Schaden und der Absicherung machen.\n   - Standort (Koordinaten: 47.8494009, 12.1203879) und Uhrzeit notieren.\n   - Kurzbeschreibung des Vorfalls und der Sicherungsmaßnahmen erfassen.\n\n5. **Eskalation**\n   - Sofortige Meldung an die zuständige Elektrofachkraft/Notdienst.\n   - Bei hoher Gefährdung: Polizei oder Feuerwehr zur weiteren Absicherung hinzuziehen.\n   - Weiterleitung der Dokumentation an die Leitstelle und zuständige Stelle.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Kontaktaufnahme übernehmen?  \nSind weitere Geräte in der Nähe betroffen?",
-    "tokens_estimate_words": 176
+    "text": "Absicherung bei beschädigtem Gehäuse (Berührungsgefahr):\n\n**1. Absicherung**\n- Warnbaken und Absperrband um das Gerät aufstellen (Radius mind. 2 Meter).\n- Warnschilder „Stromschlaggefahr“ und „Defektes Gerät“ gut sichtbar platzieren.\n- Bei mittlerer Verkehrsexposition: Verkehrsführung ggf. anpassen, z. B. Gehweg sperren.\n\n**2. Sichtprüfung**\n- Sichtkontrolle: Ist das Gehäuse offen oder liegen Kabel frei?\n- Prüfen, ob weitere Bauteile lose oder beschädigt sind.\n- Foto vom Schaden machen (falls nicht bereits vorhanden).\n\n**3. Diagnose/Beobachtung**\n- Keine Berührung! Nur visuelle Einschätzung.\n- Prüfen, ob das Gerät weiterhin funktioniert (z. B. Licht/Ampelstatus).\n- Notieren, ob Funken, Geräusche oder Geruch auftreten.\n\n**4. Dokumentation**\n- Schaden, Absicherungsmaßnahmen und Beobachtungen schriftlich festhalten.\n- Fotos und Standortdaten sichern.\n- Meldeformular ausfüllen (inkl. Reporter, Zeit, Schweregrad).\n\n**5. Eskalation**\n- Sofortige Meldung an Elektro-Fachbetrieb oder zuständige Kommune.\n- Bei akuter Gefahr: Polizei/Feuerwehr informieren.\n- Bis zur Reparatur regelmäßig Kontrolle der Absicherung.\n\n**Rückfrage:**  \nIst bereits ein Elektro-Fachbetrieb informiert oder soll ich die Kontaktaufnahme übernehmen?  \nSind weitere Fotos oder Details zum Schaden verfügbar?",
+    "tokens_estimate_words": 160
   },
   "judge": {
     "test_id": "INC-LAMP-0013-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Verkehrsexposition, Dämmerung). Sicherheitsmaßnahmen sind umfassend und situationsangepasst, Eskalation klar definiert, Dokumentation vollständig."
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, photo_available). Safety-First-Prinzip konsequent umgesetzt, Eskalation klar definiert, Dokumentation vollständig."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.41
+    "runtime_seconds": 3.187
   },
   "error": {}
 }

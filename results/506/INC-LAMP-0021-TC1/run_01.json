@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0021-TC1",
-  "timestamp": "2026-02-18T17:02:07",
+  "timestamp": "2026-02-18T17:44:39",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Störungsbearbeitung (Asset-ID: n8486238431)\n\n1. Absicherung  \n- Bereich um die Straßenlampe/Signal sichern (Warnbaken, ggf. Warnwesten tragen).\n- Stromzufuhr prüfen und ggf. abschalten, falls Gefahr besteht.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe/Ampel: Gibt es sichtbare Schäden am Gehäuse, Sockel oder Kabel?\n- Prüfen, ob Feuchtigkeit, Korrosion oder lose Verbindungen erkennbar sind.\n\n3. Diagnose/Beobachtung  \n- Flackern/Aussetzer beobachten: Tritt das Problem dauerhaft oder nur sporadisch auf?\n- Kontaktstellen (z.B. Klemmen, Steckverbindungen) auf festen Sitz prüfen.\n- Falls möglich: Spannung messen, um Kontaktprobleme zu bestätigen.\n\n4. Dokumentation  \n- Störung (Flackern, Aussetzer) und Beobachtungen schriftlich festhalten.\n- Fotos von auffälligen Stellen machen.\n- Asset-ID und Standort notieren.\n\n5. Eskalation  \n- Bei bestätigten Kontaktproblemen: Meldung an Elektrotechnik-Fachpersonal.\n- Falls Gefahr für Verkehrssicherheit besteht: Sofortige Eskalation und ggf. Absperrung veranlassen.\n\nFehlende Informationen:  \n- Handelt es sich um eine Straßenlampe oder eine Ampelanlage?\n- Ist das Flackern wetterabhängig oder unabhängig?\n- Gibt es Hinweise auf Vandalismus oder Fremdeinwirkung?\n\nBitte ergänzen Sie diese Angaben für eine gezielte Diagnose.",
-    "tokens_estimate_words": 160
+    "text": "Checkliste für Aussetzer/Flackern (Asset-ID: n8486238431)\n\n1. Absicherung  \n- Bereich um die Straßenlampe absperren (Warnbaken, ggf. Warnleuchte).\n- Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und des Mastfußes auf offensichtliche Schäden, lose Kabel oder Feuchtigkeit.\n- Prüfen, ob Lampengehäuse geschlossen und unbeschädigt ist.\n\n3. Diagnose/Beobachtung  \n- Flackern/Aussetzer beobachten: Tritt das Problem dauerhaft oder nur sporadisch auf?\n- Mögliche Kontaktstellen (Klemmen, Steckverbindungen) auf Korrosion oder Lockerung prüfen.\n- Bei Bedarf Stromversorgung mit Prüfgerät kontrollieren.\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Asset-ID, Beschreibung).\n- Fotos von auffälligen Stellen machen.\n\n5. Eskalation  \n- Bei festgestellten Kontaktproblemen oder Sicherheitsrisiken: Meldung an Elektrotechnik-Fachpersonal zur Reparatur.\n- Bei unklarer Ursache: Weiterleitung an zuständige Wartungsfirma mit detaillierter Fehlerbeschreibung.\n\nFehlen weitere Informationen (z.B. genaue Position, Zugänglichkeit, Wetterbedingungen)? Bitte ergänzen, falls relevant.",
+    "tokens_estimate_words": 128
   },
   "judge": {
     "test_id": "INC-LAMP-0021-TC1",
@@ -50,13 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Kontextinformationen zu Umgebung/Wetter verfügbar, daher keine spezifischen Sicherheitshinweise"
+      "Keine Kontextinformationen zu Umgebung/Zeit vorhanden, daher keine spezifischen Safety-Maßnahmen erwartbar"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Eskalation und Dokumentation. Bei minimalem Kontext (nur Asset-ID) angemessen allgemein gehalten, keine Halluzinationen."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.219
+    "runtime_seconds": 2.784
   },
   "error": {}
 }

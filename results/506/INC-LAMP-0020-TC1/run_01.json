@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0020-TC1",
-  "timestamp": "2026-02-18T17:01:48",
+  "timestamp": "2026-02-18T17:44:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt (Asset-ID: n4483691318).\n\n**Checkliste für die Prüfung vor Ort:**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Gefahrenbereich absichern (z. B. mit Leitkegeln).\n\n2. **Sichtprüfung**\n   - Standort aufsuchen.\n   - Prüfen, ob Straßenlampen/Ampeln defekt oder ausgeschaltet sind.\n   - Sicht auf mögliche Schäden, Vandalismus oder Kabelprobleme.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Beleuchtung/Ampelanlage durchführen.\n   - Prüfen, ob Stromversorgung vorhanden ist.\n   - Notieren, ob einzelne oder mehrere Assets betroffen sind.\n\n4. **Dokumentation**\n   - Fotos vom Zustand machen.\n   - Asset-ID, Standort und Beobachtungen notieren.\n   - Zeitpunkt der Prüfung festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung sofortige Meldung an Leitstelle/Notdienst.\n   - Bei komplexen Schäden Fachfirma oder Elektriker informieren.\n\n**Rückfrage:**  \nHandelt es sich um Straßenlampen oder eine Ampelanlage? Gibt es Hinweise auf Unfallgefahr oder besondere Dringlichkeit?",
-    "tokens_estimate_words": 127
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt (Asset-ID: n4483691318). Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich vor Ort absichern (Warnbaken, ggf. Warnleuchten).\n   - Verkehrsteilnehmer auf mögliche Gefahren hinweisen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts.\n   - Prüfen, ob Lampen defekt, beschädigt oder ausgeschaltet sind.\n   - Umfeld auf weitere Gefahren (z. B. lose Kabel, beschädigte Masten) untersuchen.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Lampen (sofern möglich).\n   - Prüfen, ob Stromversorgung vorhanden ist.\n   - Feststellen, ob mehrere Lampen betroffen sind (Hinweis auf größere Störung).\n\n4. **Dokumentation**\n   - Zustand und Anzahl der betroffenen Lampen notieren.\n   - Fotos vom Abschnitt und den Lampen aufnehmen.\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei mehreren defekten Lampen oder Gefahr für Verkehrsteilnehmer sofort an die zentrale Leitstelle melden.\n   - Bei Einzelstörung Reparaturauftrag auslösen.\n\n**Rückfrage:**  \nSind weitere Details zum Standort (z. B. Straßenname, Abschnittslänge) bekannt oder gibt es Hinweise auf akute Gefährdung (z. B. Schulweg, Unfallstelle)? Das hilft bei der Priorisierung.\n\nBitte geben Sie Bescheid, falls Sie zusätzliche Informationen haben oder eine schnelle Eskalation wünschen.",
+    "tokens_estimate_words": 174
   },
   "judge": {
     "test_id": "INC-LAMP-0020-TC1",
@@ -50,14 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Priorisierung bei minimaler Kontextlage",
-      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+      "Keine Erwähnung von Umgebungsbedingungen (nicht im Context verfügbar)"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung und Eskalation. Bei L0-Kontext angemessen generisch, keine Halluzinationen."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur auf verfügbare Asset-ID Bezug genommen wird."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 2.797
+    "runtime_seconds": 3.594
   },
   "error": {}
 }

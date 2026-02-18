@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC1",
-  "timestamp": "2026-02-18T17:03:45",
+  "timestamp": "2026-02-18T17:46:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n4449540379\n\n1. Absicherung  \n- Warnbaken und Absperrmaterial bereitstellen  \n- Arbeitsbereich deutlich kennzeichnen  \n- Persönliche Schutzausrüstung anlegen\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampe/Ampelanlage auf äußere Schäden (Gehäuse, Verkabelung, Mast)  \n- Prüfen, ob Feuchtigkeit, Vandalismus oder lose Teile sichtbar sind\n\n3. Diagnose/Beobachtung  \n- Verhalten dokumentieren: Wann tritt das An/Aus auf? Gibt es Muster (z.B. bei bestimmten Wetterlagen)?  \n- Prüfen, ob benachbarte Anlagen ähnliche Probleme zeigen  \n- Kontrolle der Stromversorgung und Sicherungen  \n- Falls möglich: Kurztest der Steuerung/Elektronik vor Ort\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen schriftlich festhalten  \n- Fotos von Anlage und Umgebung machen  \n- Asset-ID, Datum, Uhrzeit und Ansprechpartner notieren\n\n5. Eskalation  \n- Bei unklarer Ursache: Meldung an Fachabteilung (Elektriker/Technik)  \n- Dringlichkeit bewerten (z.B. Gefährdung für Verkehr)  \n- Rückmeldung an Leitstelle mit Status und Empfehlungen\n\nRückfrage:  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf äußere Einflüsse (z.B. Bauarbeiten, Wetter, Vandalismus)?",
-    "tokens_estimate_words": 150
+    "text": "Checkliste für Außendienst-Einsatz: Asset n4449540379 (Straßenlampe/Ampel)\n\n1. Absicherung  \n- Stelle Absperrungen oder Warnschilder auf, um den Bereich zu sichern.  \n- Trage Warnweste und beachte die Verkehrssicherungspflicht.\n\n2. Sichtprüfung  \n- Kontrolliere das Asset auf äußere Schäden (Gehäuse, Verkabelung, Feuchtigkeit).  \n- Prüfe, ob ungewöhnliche Geräusche, Gerüche oder sichtbare Defekte vorliegen.\n\n3. Diagnose/Beobachtung  \n- Beobachte das Verhalten: Wann und wie tritt das An/Aus-Problem auf?  \n- Prüfe, ob das Problem mit anderen Assets in der Nähe zusammenhängt (z.B. Netzstörungen).  \n- Falls möglich, teste manuelle Schaltung oder führe einen Reset durch.\n\n4. Dokumentation  \n- Notiere Asset-ID, Standort, Uhrzeit, beobachtetes Verhalten und eigene Maßnahmen.  \n- Fotografiere relevante Schäden oder Auffälligkeiten.\n\n5. Eskalation  \n- Bei Gefahr für Verkehr oder Personen: Sofortige Meldung an Leitstelle/Technik.  \n- Sonst: Weiterleitung an Fachpersonal für elektrische Prüfung/Reparatur.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf Netzschwankungen oder Bauarbeiten in der Umgebung?",
+    "tokens_estimate_words": 145
   },
   "judge": {
     "test_id": "INC-LAMP-0026-TC1",
@@ -49,14 +49,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Offline-Workflow-Erwähnung nötig (CONTEXT enthält keine connectivity-Info). Sicherheitsaspekte angemessen bei unklarer Severity."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.44
+    "runtime_seconds": 3.459
   },
   "error": {}
 }

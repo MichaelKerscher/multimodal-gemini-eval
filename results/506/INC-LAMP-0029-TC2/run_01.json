@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0029-TC2",
-  "timestamp": "2026-02-18T17:04:42",
+  "timestamp": "2026-02-18T17:47:13",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,17 +56,17 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Straßenlampenausfall (Pang, Cafe Neu):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls Bereich stark frequentiert.\n   - Bei hoher Unsicherheit: Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Umfeld auf sichtbare Schäden, Vandalismus oder lose Kabel kontrollieren.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist laut System „ok“, aber offline. Mögliche Ursachen: Stromausfall, Netzproblem, Defekt.\n   - Foto zur Dokumentation nutzen.\n   - Annahme: Einzelstörung, da keine weiteren Lampen gemeldet.\n\n4. **Dokumentation**\n   - Vor Ort: Foto machen, Notizen zu Sichtbefund und Sicherheitslage ergänzen.\n   - Meldung im System aktualisieren (Zeit, Maßnahmen, Beobachtungen).\n\n5. **Eskalation**\n   - Bei hoher Unsicherheit und Ausfall: Störung sofort an Fachbetrieb/Notdienst weiterleiten.\n   - Hinweis: Bereich bleibt bis Reparatur unsicher – ggf. temporäre Beleuchtung organisieren.\n\n**Rückfrage:** Sind weitere Lampen in der Nähe ebenfalls betroffen oder handelt es sich nur um diese eine?",
-    "tokens_estimate_words": 137
+    "text": "Checkliste für Straßenlampen-Ausfall (Standort: Pang, Cafe Neu):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls Fußgänger oder Verkehr gefährdet sind.\n   - Bereich bei schlechter Sicht ggf. zusätzlich markieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, Vandalismus oder lose Teile kontrollieren.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose / Beobachtung**\n   - Gerät ist laut System „offline“, Zustand aber „ok“ – vermutlich Stromausfall oder Kommunikationsproblem.\n   - Foto liegt vor; Sichtung zur Bestätigung des Ausfalls und zur Dokumentation.\n\n4. **Dokumentation**\n   - Ausfall, Sichtprüfungsergebnisse und ggf. Fotos im System erfassen.\n   - Zeitpunkt, Wetter und Sichtverhältnisse notieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, Nacht, hohe Verkehrsexposition): Sofortige Meldung an Bereitschaft Stromversorgung und Straßenbeleuchtung.\n   - Falls weitere Lampen betroffen: Hinweis auf möglichen Netzfehler geben.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nWurde bereits eine temporäre Absicherung vor Ort vorgenommen?",
+    "tokens_estimate_words": 150
   },
   "judge": {
     "test_id": "INC-LAMP-0029-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 3
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -75,14 +75,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=offline",
-      "Temporäre Beleuchtung ist sinnvoll, aber nicht zwingend aus CONTEXT ableitbar"
+      "Offline-Workflow nicht erwähnt trotz connectivity=offline"
     ],
-    "short_justification": "Gute Struktur und Safety-Fokus bei severity=high. Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). K=3 wegen fehlender Offline-Handlungsanweisung."
+    "short_justification": "Exzellente Antwort: severity=high wird mit sofortiger Eskalation adressiert, Nacht+poor_visibility führt zu Safety-Fokus, device.connectivity=offline wird korrekt interpretiert. Offline-Workflow fehlt, aber K=4 da sonst kontextgenau."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.049
+    "runtime_seconds": 3.137
   },
   "error": {}
 }

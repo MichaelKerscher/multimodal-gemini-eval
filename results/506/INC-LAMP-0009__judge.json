@@ -14,28 +14,28 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (CONTEXT zeigt connectivity=offline, aber nicht in L0 sichtbar)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Offline-Workflow fehlt, aber bei L0_minimal ist das vertretbar, da CONTEXT minimal ist."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal-Kontext vorliegt. Offline-Workflow nicht erwähnt, aber auch nicht im Kontext gefordert."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Umweltbedingungen (Dämmerung, Regen, schlechte Sicht) berücksichtigt, klare Eskalation und Dokumentation. Alle Kontextinformationen sinnvoll genutzt."
+    "missing_elements": [
+      "Offline-Workflow explizit erwähnen (lokal dokumentieren, später synchronisieren)"
+    ],
+    "short_justification": "Gute Struktur und Sicherheitsfokus. Offline-Status wird erkannt ('keine Fernwartung möglich'), aber kein expliziter Offline-Workflow beschrieben. K=3 wegen fehlender Offline-Handlungsanweisung trotz connectivity=offline."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Workflow klar beschrieben (lokal dokumentieren, später synchronisieren), Umweltbedingungen präzise einbezogen, Eskalation differenziert nach Gefahrenlage. Vollständige Kontextnutzung ohne Spekulation."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit integriert ('lokal speichern', 'später synchronisieren'), klare Sicherheitsmaßnahmen bei Dämmerung/Regen, strukturierte Dokumentation und Eskalation. Vollständige Kontextnutzung ohne Halluzinationen."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0016-TC2",
-  "timestamp": "2026-02-18T17:00:24",
+  "timestamp": "2026-02-18T17:42:57",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,33 +56,33 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Lampenausfall (Standort: 47.8570666, 12.1309433, Wetter: Regen, Sicht: schlecht, Batterie: schwach):\n\n1. **Absicherung**\n   - Warnbaken aufstellen, ggf. Warnweste tragen.\n   - Umfeld absichern, da Sicht schlecht und Regen.\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden, Feuchtigkeitseintritt, lose Kabel prüfen.\n   - Prüfen, ob Lampe aktuell leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Batterie-Status kontrollieren (Gerät meldet „low battery“).\n   - Verbindung prüfen (Hinweis: „spotty“ Connectivity).\n   - Foto vom aktuellen Zustand machen (Foto verfügbar).\n   - Notieren, ob Fehler reproduzierbar ist (Lampe war aus, jetzt an).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Foto anhängen.\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei hohem Schweregrad (wie gemeldet): Meldung an Technik/Elektriker.\n   - Hinweis auf sporadischen Fehler und schwache Batterie geben.\n   - Dringlichkeit betonen wegen schlechter Sicht und Regen.\n\n**Rückfrage:**  \nIst Zugang zum Lampenschaltkasten möglich? Gibt es vor Ort Strommessgerät?  \nFalls nein, Annahme: Fehler könnte durch Feuchtigkeit, schwache Batterie oder instabile Verbindung ausgelöst sein.",
-    "tokens_estimate_words": 150
+    "text": "Checkliste für sporadischen Lampenausfall (hohe Priorität):\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen, da Sichtverhältnisse schlecht und Regen.\n   - Warnweste tragen, Umfeld auf Verkehr achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeit oder lose Kabel prüfen.\n   - Umgebung auf weitere Ausfälle kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampe aktuell stabil leuchtet.\n   - Batterie-Status kontrollieren (Gerät meldet niedrigen Ladestand).\n   - Verbindung testen (Konnektivität ist unzuverlässig).\n   - Bei Regen: Feuchtigkeitseintritt möglich, ggf. Dichtung prüfen.\n\n4. **Dokumentation**\n   - Foto vom aktuellen Zustand machen (Foto verfügbar).\n   - Fehlerbeschreibung und Beobachtungen notieren (sporadischer Ausfall, jetzt wieder an).\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Meldung an Technik/Elektriker: Verdacht auf Feuchtigkeit oder Elektronikproblem, ggf. Austausch Batterie oder Dichtung.\n   - Hinweis auf hohe Priorität wegen Sicht und Sicherheit.\n\n**Rückfrage:**  \nIst eine Fernwartung möglich oder muss vor Ort geprüft werden? Gibt es weitere Lampen mit ähnlichem Verhalten in der Nähe?",
+    "tokens_estimate_words": 146
   },
   "judge": {
     "test_id": "INC-LAMP-0016-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (spotty connectivity)",
-      "Device-State-Hinweis könnte klarer sein (Techniker-Gerät vs. Asset)"
+      "Offline-Workflow nicht erwähnt (connectivity=spotty erfordert lokale Dokumentation)",
+      "Batterie-Status bezieht sich auf Techniker-Gerät, nicht Asset (Missverständnis)"
     ],
-    "short_justification": "Gute Kontextnutzung (Wetter, Sicht, Batterie, Severity). Eskalation und Safety vorhanden. K=3, da Offline-Workflow bei spotty connectivity fehlt."
+    "short_justification": "Gute Struktur und Safety-Fokus bei hoher Severity und schlechten Sichtverhältnissen. Jedoch Verwechslung: 'Batterie-Status kontrollieren' bezieht sich fälschlich auf Asset statt Techniker-Gerät. Offline-Workflow fehlt trotz spotty connectivity."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.376
+    "runtime_seconds": 3.078
   },
   "error": {}
 }

@@ -14,29 +14,31 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Safety und Eskalation vorhanden, aber ohne explizite Priorisierung bei hoher Gefährdung."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 2
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (Gerät offline)",
-      "Batteriewechsel-Spekulation (device_state bezieht sich auf Techniker-Gerät, nicht Asset)"
+      "Offline-Workflow nicht erwähnt (CONTEXT zeigt connectivity=offline)",
+      "Keine Anweisung zur lokalen Dokumentation/Synchronisation"
     ],
-    "short_justification": "Gute Safety- und Eskalationsmaßnahmen, aber Offline-Workflow fehlt trotz connectivity=offline. Halluzination: Batteriewechsel am Asset vorgeschlagen, obwohl low_battery das Techniker-Gerät betrifft."
+    "short_justification": "Exzellente Safety-Priorisierung (Sturm, hohe Verkehrsexposition, schlechte Sicht) und klare Eskalation. Offline-Kontext wird jedoch nicht adressiert, obwohl device.connectivity=offline im CONTEXT steht."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -54,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, Safety priorisiert, Kontext präzise genutzt (Sturm, Verkehrsexposition, Gerät offline). Keine Halluzinationen, klare Dokumentation und Eskalation."
+    "short_justification": "Vollständige, kontextgerechte Antwort mit explizitem Offline-Workflow (lokal dokumentieren, später synchronisieren). Safety-First-Ansatz bei Sturm/hoher Verkehrsexposition und klare Eskalation bei hoher Gefährdung erkennbar."
   }
 ]

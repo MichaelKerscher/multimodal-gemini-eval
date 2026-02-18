@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0014-TC3",
-  "timestamp": "2026-02-18T16:59:44",
+  "timestamp": "2026-02-18T17:42:19",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -235,8 +235,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe (Ausfall, Routinekontrolle):\n\n1. **Absicherung**\n   - Standort: n4939032525 (47.8553091, 12.1230035)\n   - Verkehr: Gering, Tag, klare Sicht → Absicherung mit Warnweste und ggf. Pylonen ausreichend.\n\n2. **Sichtprüfung**\n   - Lampe komplett ohne Funktion.\n   - Prüfen: Lampenkopf, Mast, Verkabelung, sichtbare Schäden, Vandalismus, lose Teile.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen: Sicherung, Leuchtmittel, Anschluss, evtl. Steuergerät.\n   - Annahme: Stromversorgung vor Ort prüfen (da Asset offline, aber Techniker-Gerät online).\n   - Keine Hinweise auf Umwelteinflüsse (Wetter klar, keine schlechte Sicht).\n\n4. **Dokumentation**\n   - Fotos vom Zustand (falls möglich).\n   - Notieren: Zeitpunkt, Beobachtungen, Maßnahmen.\n   - Fehlerbeschreibung: „Lampe leuchtet nicht, keine sichtbaren Schäden.“\n\n5. **Eskalation**\n   - Bei defektem Leuchtmittel: Austausch vor Ort.\n   - Bei Verdacht auf Elektrik-/Steuerungsproblem: Meldung an Fachbetrieb/Elektriker.\n   - Falls Gefahr für Verkehr: Sofortige Sperrung/Meldung an Leitstelle.\n\n**Rückfrage:**  \nIst vor Ort Werkzeug/Leuchtmittel verfügbar oder muss Ersatz organisiert werden?  \nSoll direkt ein Elektriker hinzugezogen werden, falls Austausch nicht möglich?",
-    "tokens_estimate_words": 144
+    "text": "Checkliste für Außendienst – Straßenlampe (Ausfall, Routinekontrolle)\n\n1. **Absicherung**\n   - Absperrung falls nötig (bei Arbeiten im Straßenraum).\n   - Warnwesten tragen, ggf. Warnleuchten aufstellen.\n   - Verkehrssicherung prüfen (bei niedriger Verkehrsexposition meist ausreichend, trotzdem beachten).\n\n2. **Sichtprüfung**\n   - Lampe äußerlich inspizieren: Gehäuse, Mast, Verkabelung, Sockel.\n   - Auf offensichtliche Schäden, Vandalismus oder lose Teile achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden (Spannungsprüfer).\n   - Leuchtmittel und Sicherung kontrollieren.\n   - Falls vorhanden: Prüfen, ob Steuergerät/Zeitschaltuhr korrekt arbeitet.\n   - Notieren, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Fotos vom Zustand machen (falls möglich).\n   - Fehlerbeschreibung und Maßnahmen notieren (App/Protokoll).\n   - Standort (OSM-ID: n4939032525, Koordinaten) und Zeit erfassen.\n\n5. **Eskalation**\n   - Bei komplexen Defekten (z. B. Elektronik, Verkabelung, mehrere Lampen betroffen): Weiterleitung an Fachbetrieb/Elektriker.\n   - Bei Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Meldung an Leitstelle.\n\n**Rückfrage:**  \nIst bereits ein Leuchtmittelwechsel erfolgt oder wurde nur Sichtprüfung gemacht? Liegt ein Stromausfall im Bereich vor?  \nBitte um kurze Info, damit weitere Schritte gezielt geplant werden können.",
+    "tokens_estimate_words": 165
   },
   "judge": {
     "test_id": "INC-LAMP-0014-TC3",
@@ -245,7 +245,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -253,14 +253,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Missverständnis: 'Asset offline' erwähnt, obwohl device.connectivity=online (bezieht sich auf Techniker-Gerät)"
-    ],
-    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (Koordinaten, Umweltbedingungen). Kleine Ungenauigkeit bei Interpretation von device.connectivity, sonst exzellent strukturiert und dokumentiert."
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (severity medium, day, clear, low traffic). Strukturierte Schritte, klare Dokumentation, angemessene Eskalation und sinnvolle Rückfrage."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.916
+    "runtime_seconds": 4.025
   },
   "error": {}
 }

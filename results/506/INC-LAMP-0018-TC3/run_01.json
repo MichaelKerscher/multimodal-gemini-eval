@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0018-TC3",
-  "timestamp": "2026-02-18T17:01:05",
+  "timestamp": "2026-02-18T17:43:42",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -235,15 +235,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz: Steuerungsproblem (Segment fällt zeitgleich aus)\n\n1. **Absicherung**\n   - Warnbaken und Absperrmaterial bereitstellen.\n   - Bereich vor Ort absichern, besonders bei Nacht und Nebel (Sicht schlecht, Verkehr mittel).\n   - Warnwesten tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Steuerbox und betroffenen Lampen/Ampeln.\n   - Prüfen, ob äußere Schäden, Manipulation oder Feuchtigkeit sichtbar sind.\n   - Kontrollieren, ob alle betroffenen Assets im Segment ausgefallen sind.\n\n3. **Diagnose/Beobachtung**\n   - Steuerbox öffnen und auf lose Kabel, Sicherungen, Feuchtigkeit oder Verschmutzung prüfen.\n   - Prüfen, ob Steuerung (z.B. Relais, Timer) korrekt arbeitet.\n   - Dokumentieren, ob der Ausfall synchron oder zeitversetzt auftritt.\n   - Annahme: Connectivity und Gerät sind ok, Fehler liegt am Asset (Steuerbox).\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Steuerbox und Umgebung machen (sofern möglich).\n   - Alle Beobachtungen und Maßnahmen in der App/Checkliste erfassen.\n   - Notieren: Sichtverhältnisse, Wetter (Nebel), Uhrzeit, Verkehrslage.\n\n5. **Eskalation**\n   - Bei Verdacht auf Steuerbox-Defekt oder Gefahr für Verkehr: Meldung an Fachbereich/Leitstelle.\n   - Falls Reparatur vor Ort nicht möglich: Segment absichern, Störung kennzeichnen, schnelle Weiterleitung an Instandhaltung.\n\n**Rückfrage:**  \nSind Ersatzteile oder Zugang zur Steuerbox vor Ort verfügbar? Gibt es Hinweise auf vorherige Wartungen oder ähnliche Ausfälle im Segment?",
-    "tokens_estimate_words": 188
+    "text": "**Checkliste für Außendienst-Einsatz – Steuerungsproblem (Segment fällt zeitgleich aus)**\n\n1. **Absicherung**\n   - Warnbaken und Absperrmaterial bereitstellen.\n   - Bei Nacht und Nebel: zusätzliche Beleuchtung und Warnwesten nutzen.\n   - Verkehr ggf. umleiten oder sichern (Absprache mit Polizei/Ordnungsamt bei mittlerer Gefährdung).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Steuerbox und betroffenen Lampen/Ampeln.\n   - Prüfen auf äußere Schäden, Manipulation, Feuchtigkeitseintritt.\n   - Umfeld auf weitere Gefahren (z.B. Kabel freiliegend, rutschige Fahrbahn) checken.\n\n3. **Diagnose/Beobachtung**\n   - Steuerbox öffnen und auf lose/verbrannte Kontakte, Sicherungen, Feuchtigkeit prüfen.\n   - Segment-Ausfall: Prüfen, ob mehrere Anlagen am gleichen Steuerkreis hängen.\n   - Sichtprüfung der Verkabelung und ggf. Messung (Spannung, Strom).\n   - Bei Nebel: Feuchtigkeit als mögliche Ursache berücksichtigen.\n\n4. **Dokumentation**\n   - Fotos vom Schaden und Umfeld (sofern möglich).\n   - Notizen zu Sichtbefund, Maßnahmen, Verdacht auf Ursache.\n   - Alle Schritte und Beobachtungen in der App/Checkliste festhalten.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für Verkehr: Meldung an Leitstelle/Technik.\n   - Bei Verdacht auf Steuerbox-Defekt: Austausch oder Reparatur veranlassen.\n   - Bei größerem Segment-Ausfall: Prüfung durch Spezialisten oder Hersteller anfordern.\n\n**Rückfrage:**  \nSind weitere Anlagen im Umfeld betroffen oder nur das gemeldete Segment? Gibt es Hinweise auf Feuchtigkeit in der Steuerbox?  \nFalls keine Sichtprüfung möglich: Bitte Fotos oder weitere Details nachreichen.",
+    "tokens_estimate_words": 193
   },
   "judge": {
     "test_id": "INC-LAMP-0018-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -254,11 +254,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Nebel, Nacht, mittlere Verkehrsexposition). Korrekte Interpretation der context_notes (device.* = Techniker-Gerät), strukturierte Checkliste mit Safety-First-Ansatz und angemessener Eskalation."
+    "short_justification": "Hervorragend: Umweltbedingungen (Nacht, Nebel, poor_visibility) explizit berücksichtigt, Feuchtigkeit als Ursache plausibel erwähnt, klare Struktur, keine Halluzinationen, vollständige Dokumentation und Eskalation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.004
+    "runtime_seconds": 5.383
   },
   "error": {}
 }

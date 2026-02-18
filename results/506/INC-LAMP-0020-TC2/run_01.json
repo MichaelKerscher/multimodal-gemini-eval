@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0020-TC2",
-  "timestamp": "2026-02-18T17:01:48",
+  "timestamp": "2026-02-18T17:44:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Einsatz – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. Absicherung\n- Warnbaken und Absperrmaterial bereitstellen.\n- Warnwesten tragen, Einsatzfahrzeug mit Blinklicht positionieren.\n- Bei Regen und schlechter Sicht besonders auf Verkehrssicherung achten.\n\n2. Sichtprüfung\n- Standort gemäß Koordinaten (47.856655, 12.129258) aufsuchen.\n- Sichtkontrolle aller Lampen im Abschnitt: Sind mehrere oder alle Leuchten betroffen?\n- Prüfen, ob Schäden an Masten, Leuchten oder Verkabelung sichtbar sind.\n\n3. Diagnose/Beobachtung\n- Gerät ist online, aber im „low power mode“ – mögliche Ursache: Stromversorgung oder Steuerung.\n- Wetter: Regen – Feuchtigkeit kann Kurzschlüsse oder Ausfälle verursachen.\n- Prüfen, ob Sicherungen ausgelöst sind oder Feuchtigkeitsschäden vorliegen.\n- Foto auswerten (falls verfügbar): Gibt es Hinweise auf Defekte oder Fremdeinwirkung?\n\n4. Dokumentation\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos).\n- Zeitpunkt, Standort, betroffene Leuchten, vermutete Ursache dokumentieren.\n\n5. Eskalation\n- Bei hoher Ausfall-Schwere und schlechter Sicht: Sofortige Meldung an Bereitschaft/Technik.\n- Falls Gefahr für Verkehrsteilnehmer besteht: Polizei/Ordnungsamt informieren.\n- Reparaturteam oder Elektriker anfordern, falls Fehler nicht vor Ort behebbar.\n\nRückfrage: Sind weitere Abschnitte betroffen oder nur dieser Standort? Gibt es Hinweise auf Stromausfall im Umfeld?",
-    "tokens_estimate_words": 179
+    "text": "Checkliste für den Außendienst – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Bereich vor Ort absichern, besonders wegen Regen und schlechter Sicht.\n   - Verkehrsteilnehmer warnen (ggf. Hinweisschilder aufstellen).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Lampen entlang des Abschnitts.\n   - Prüfen auf offensichtliche Schäden (z.B. Mast, Leuchte, Verkabelung).\n   - Wetterbedingungen beachten: Rutschgefahr, Sicht eingeschränkt.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Lampen testen (Schaltkasten, ggf. manuell).\n   - Prüfen, ob Stromversorgung vorhanden (Gerät im Low-Power-Modus, aber online).\n   - Foto auswerten (falls verfügbar) zur schnellen Lageeinschätzung.\n   - Mögliche Ursachen: Stromausfall, Defekt am Leuchtmittel, Feuchtigkeitsschaden.\n\n4. **Dokumentation**\n   - Alle Feststellungen protokollieren (Datum, Uhrzeit, Standort, Sichtbefund).\n   - Fotos sichern und dem Bericht beifügen.\n   - Geräte-Status notieren (Low-Power-Modus, aber online).\n\n5. **Eskalation**\n   - Bei hohem Schweregrad und Ausfall ganzer Abschnitte: Störungsdienst informieren.\n   - Dringlichkeit betonen (hohe Verkehrssicherheitsrelevanz).\n   - Rückmeldung an Dispatcher mit Status und ggf. weiteren Maßnahmen.\n\n**Rückfrage:**  \nSind weitere Lampen im Abschnitt betroffen oder nur einzelne? Gibt es Hinweise auf Stromausfall im gesamten Bereich oder nur an einzelnen Leuchten? Liegt eine aktuelle Gefahrenlage für Fußgänger/Fahrzeuge vor?",
+    "tokens_estimate_words": 176
   },
   "judge": {
     "test_id": "INC-LAMP-0020-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility, severity=high). Klare Safety-Priorisierung, Eskalation bei Gefährdung, präzise Diagnose-Hinweise (low_power_mode, Feuchtigkeit). Vollständig nachvollziehbar."
+    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Nacht+Regen+poor_visibility, integriert photo_available, erwähnt Low-Power-Modus korrekt als Geräte-Zustand. Alle Dimensionen optimal erfüllt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.007
+    "runtime_seconds": 3.846
   },
   "error": {}
 }

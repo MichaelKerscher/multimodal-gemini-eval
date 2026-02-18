@@ -15,9 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Sicherheitsmaßnahmen bei 'Bereich wirkt unsicher' könnten expliziter sein"
+      "Severity-Bewusstsein (high) nicht erkennbar",
+      "Zeitdruck bei Sicherheitsrisiko fehlt"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Context korrekt genutzt wurde. Safety könnte bei 'wirkt unsicher' noch stärker betont werden."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung und Eskalation. Severity=high rechtfertigt dringlicheren Ton; Sicherheitsmaßnahmen sind vorhanden, aber nicht priorisiert genug."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -35,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high führen zu starkem Safety-Fokus (Warnbaken, Polizei). Low_battery wird korrekt als Geräte-Constraint interpretiert, keine Spekulation. Alle Context-Elemente sinnvoll genutzt."
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, Kontextnutzung (low_battery, traffic_exposure, night) ist präzise, Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -49,10 +50,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Berücksichtigt low_battery korrekt als Workflow-Constraint ('offline dokumentieren'), nutzt alle Context-Signale (high severity, traffic, night, poor_visibility) für Safety-Priorisierung. Klare Eskalationswege, keine Halluzinationen."
+    "short_justification": "Hervorragend: Severity=high wird durch Absicherung und dringende Eskalation adressiert, alle Kontextfaktoren (night, traffic_exposure, poor_visibility) fließen ein, Dokumentation klar strukturiert."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0030-TC2",
-  "timestamp": "2026-02-18T17:05:01",
+  "timestamp": "2026-02-18T17:47:32",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,15 +56,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Lampenausfall (Straßenlampe, n11833818322):\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Bereich mit Warnschild oder Absperrband sichern, falls nötig (Verkehrsexposition: mittel, Sicht: schlecht).\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf sichtbare Schäden, lose Kabel oder Feuchtigkeit kontrollieren.\n   - Prüfen, ob Lampe aktuell leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt an – sporadisch.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Elektronikfehler, Netzschwankung.\n   - Connectivity: Verbindung zum Gerät ist instabil („spotty“), könnte Einfluss haben.\n   - Prüfen, ob Fehler reproduzierbar ist (Lampe mehrfach schalten, auf Ausfälle achten).\n\n4. **Dokumentation**\n   - Foto vom aktuellen Zustand machen (Foto verfügbar).\n   - Fehlerbeschreibung und Beobachtungen notieren (Datum, Uhrzeit, Wetter, Sicht).\n   - Asset-Daten (Koordinaten, OSM-ID) ergänzen.\n\n5. **Eskalation**\n   - Bei mittlerer Schwere: Meldung an Elektrotechnik-Fachkraft zur weiteren Prüfung.\n   - Hinweis: Sporadischer Fehler, erhöhte Verkehrssicherheitsrelevanz wegen schlechter Sicht und mittlerer Verkehrsexposition.\n\n**Rückfrage:**  \nIst bereits ein Wartungsauftrag für diese Lampe offen oder soll ich einen neuen erstellen?  \nSind weitere Lampen in der Umgebung betroffen?",
-    "tokens_estimate_words": 155
+    "text": "Checkliste für sporadischen Lampenausfall  \nStandort: n11833818322 (47.8537208, 12.136073)  \nZeit: Dämmerung, mittlere Verkehrsexposition, Sicht schlecht\n\n**1. Absicherung**\n- Warnweste anziehen.\n- Bereich mit Pylonen oder Warnleuchten absichern.\n- Verkehrsteilnehmer auf mögliche Sichtbehinderung hinweisen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden, lose Kabel oder Feuchtigkeit kontrollieren.\n- Prüfen, ob die Lampe aktuell leuchtet und ob Flackern oder Aussetzer sichtbar sind.\n\n**3. Diagnose/Beobachtung**\n- Notieren, ob der Fehler reproduzierbar ist (z.B. durch Bewegung, Wetterwechsel).\n- Prüfen, ob andere Lampen in der Nähe betroffen sind.\n- Spotty Connectivity: Hinweis auf mögliche Steuerungsprobleme oder Netzschwankungen.\n\n**4. Dokumentation**\n- Foto vom Zustand der Lampe und Umgebung machen (Foto liegt vor).\n- Fehlerbeschreibung und Beobachtungen protokollieren.\n- Zeitpunkt und Dauer des Ausfalls notieren.\n\n**5. Eskalation**\n- Meldung an die zuständige Wartungsstelle mit allen gesammelten Daten.\n- Hinweis auf mittlere Verkehrsexposition und schlechte Sicht für Priorisierung.\n- Empfehlung: kurzfristige Kontrolle durch Elektriker, da sporadischer Fehler sicherheitsrelevant ist.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Meldungen an diesem Standort oder in der Umgebung?  \nSind Wartungsarbeiten oder Netzumschaltungen bekannt?",
+    "tokens_estimate_words": 171
   },
   "judge": {
     "test_id": "INC-LAMP-0030-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 4
     },
@@ -75,13 +75,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition, spotty connectivity erwähnt). Offline-Workflow fehlt trotz connectivity=spotty, daher K=4 statt 5."
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absicherung), strukturiert, kontextgerecht (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition). Spotty connectivity hätte Offline-Hinweis verdient."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.786
+    "runtime_seconds": 3.411
   },
   "error": {}
 }

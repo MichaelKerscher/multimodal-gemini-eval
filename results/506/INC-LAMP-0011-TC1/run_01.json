@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0011-TC1",
-  "timestamp": "2026-02-18T16:58:46",
+  "timestamp": "2026-02-18T17:41:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Schritt-für-Schritt-Checkliste für Kontrolle (Asset-ID: n4470029718)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen (z. B. Leitkegel)  \n- Bereich um die Straßenlampe/Ampelanlage sichern, falls nötig\n\n2. Sichtprüfung  \n- Sichtkontrolle des Assets: Schäden, lose Teile, Feuchtigkeit, Vandalismus  \n- Prüfen, ob alle Funktionen aktuell gegeben sind (Leuchten/Ampelanzeige)\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob zeitweise Ausfälle nachvollziehbar sind (z. B. Flackern, unregelmäßige Funktion)  \n- Notieren, ob Ausfall zu bestimmten Zeiten oder Bedingungen auftritt  \n- Falls möglich: Kurztest der Anlage (z. B. Schaltvorgang, Lampenwechsel)\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen schriftlich festhalten  \n- Fotos von auffälligen Stellen machen  \n- Zeitpunkt der Kontrolle dokumentieren\n\n5. Eskalation  \n- Bei festgestellten Mängeln: Meldung an Fachabteilung/Techniker  \n- Bei akutem Sicherheitsrisiko: Sofortige Sperrung und schnelle Eskalation\n\nRückfrage:  \nIst bekannt, zu welchen Zeiten oder unter welchen Bedingungen der Ausfall auftritt? Gibt es Hinweise auf äußere Einflüsse (z. B. Wetter, Bauarbeiten)?",
-    "tokens_estimate_words": 139
+    "text": "Verstanden, es liegt ein zeitweiser Ausfall vor, aktuell funktioniert die Anlage normal. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereithalten.\n   - Bereich ggf. mit Leitkegeln sichern, falls Arbeiten im Verkehrsraum nötig sind.\n\n2. **Sichtprüfung**\n   - Anlage (Asset-ID: n4470029718) vor Ort aufsuchen.\n   - Sichtkontrolle auf äußere Schäden, lose Teile, Vandalismus oder Feuchtigkeit.\n   - Prüfen, ob alle Lampen/Ampelphasen wie vorgesehen funktionieren.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob der Fehler erneut auftritt (z.B. Flackern, Ausfall einzelner Komponenten).\n   - Prüfen, ob ungewöhnliche Geräusche, Gerüche oder Temperatur auffallen.\n   - Falls möglich: Kurzzeitige Belastung/Simulation, um den Fehler zu provozieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Zustand).\n   - Fotos von der Anlage und eventuellen Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Sofortige Meldung an die Leitstelle/Technik.\n   - Falls aktuell keine Auffälligkeiten: Bericht an zuständige Stelle, regelmäßige Nachkontrolle empfehlen.\n\n**Rückfrage:**  \nIst bekannt, ob der Ausfall zu bestimmten Tageszeiten oder Wetterbedingungen auftritt? Gibt es Hinweise auf wiederkehrende Fehler oder Störungen in der Umgebung?\n\nBitte Rückmeldung geben, falls weitere Details benötigt werden oder spezielle Vorgaben bestehen.",
+    "tokens_estimate_words": 180
   },
   "judge": {
     "test_id": "INC-LAMP-0011-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Spekulation erfolgt."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit adressiert, Eskalation vorhanden. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.169
+    "runtime_seconds": 4.965
   },
   "error": {}
 }

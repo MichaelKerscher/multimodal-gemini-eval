@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen bei minimalem Kontext."
+    "missing_elements": [
+      "Keine Kontextinformationen zu Severity/Umgebung vorhanden, daher angemessen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -24,7 +26,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -32,10 +34,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Low-Power-Mode-Hinweis könnte präziser sein (Gerät vs. Asset)"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, Foto, Low-Power). Sicherheit priorisiert, Eskalation klar, Dokumentation vollständig. Kleine Unschärfe bei Low-Power-Interpretation."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, poor_visibility, low_power_mode). Klare Sicherheitsmaßnahmen, Diagnose berücksichtigt Gerätezustand, vollständige Dokumentation und Eskalationspfade."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung inkl. Guardrails (Low-Battery → offline dokumentieren). Sicherheit, Eskalation, Dokumentation vollständig. Keine Halluzinationen, präzise Unterscheidung Gerät/Asset."
+    "short_justification": "Hervorragende Antwort: Nutzt Kontext optimal (Regen, Dämmerung, low_battery), erwähnt Offline-Dokumentation bei niedrigem Batteriestand, klare Safety-First-Haltung, strukturierte Eskalation und vollständige Dokumentationshinweise."
   }
 ]

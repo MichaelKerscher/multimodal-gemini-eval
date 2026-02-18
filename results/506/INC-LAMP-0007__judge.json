@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht und bleibt bei generischen, sinnvollen Schritten."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Offline-Workflow nicht erwähnt (im L0-Kontext jedoch nicht erwartbar)."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,17 +32,15 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nur angedeutet, nicht explizit als Constraint formuliert"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Sturm, mittlerer Verkehr, Offline-Gerät erwähnt). Offline-Workflow wird implizit adressiert ('Gerät ist offline – vor Ort prüfen'), könnte aber expliziter sein (z.B. 'lokal dokumentieren, später synchronisieren')."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Sturm, offline, Foto vorhanden). Offline-Workflow erkannt ('Gerät ist offline – keine Fernanalyse möglich'). Klare Struktur, Safety und Eskalation vorhanden."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit adressiert ('offline speichern, später synchronisieren'), Sturm-Risiko berücksichtigt, klare Eskalation, präzise Dokumentationsschritte. Vollständige Kontextnutzung ohne Spekulation."
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit ('offline speichern', 'lokal dokumentieren', 'Synchronisation sobald wieder online'), vollständige Safety-Maßnahmen bei Sturm, klare Eskalation, keine Halluzinationen."
   }
 ]

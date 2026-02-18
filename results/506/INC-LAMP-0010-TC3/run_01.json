@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0010-TC3",
-  "timestamp": "2026-02-18T16:58:28",
+  "timestamp": "2026-02-18T17:41:01",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -270,8 +270,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für dunklen Abschnitt Rosenheim, Stadtmitte**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Bereich mit hohem Verkehrsaufkommen sichern, besonders bei Regen und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Prüfen: Welche Lampen sind betroffen? Einzelne oder kompletter Abschnitt?\n   - Sicht auf mögliche Gefahrenstellen (z. B. Kabelschäden, lose Teile).\n   - Foto vom Zustand machen (offline speichern wegen spotty Connectivity).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen: Ist Stromversorgung vorhanden? Sicherungen/Kabel sichtbar beschädigt?\n   - Wetterbedingte Schäden (z. B. Feuchtigkeit, Kurzschluss) beachten.\n   - Keine Online-Diagnose möglich – alles lokal dokumentieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen offline erfassen (App/Notiz).\n   - Fotos lokal sichern.\n   - Zeitpunkt, betroffene Lampen, Sichtprüfung, Diagnose notieren.\n\n5. **Eskalation**\n   - Bei hohem Risiko (Verkehr, Sicht, Wetter): Sofort an Leitstelle melden.\n   - Reparaturteam anfordern, falls Fehler nicht vor Ort behebbar.\n   - Synchronisierung der Daten nach Wiederherstellung der Verbindung.\n\n**Rückfrage:**  \nSind nur Straßenlampen betroffen oder auch Ampelanlagen?  \nGibt es Hinweise auf Stromausfall im gesamten Bereich oder nur einzelne Lampen?",
-    "tokens_estimate_words": 157
+    "text": "Checkliste für den Außendienst – Dunkler Abschnitt Rosenheim, Stadtmitte\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Bereich mit hoher Verkehrsexposition: Absperrung und Warnschilder aufstellen, besonders bei Regen und Dämmerung.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen auf offensichtliche Schäden (Kabel, Mast, Leuchtmittel).\n   - Foto vom betroffenen Abschnitt machen (offline speichern).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (z.B. andere Lampen in der Nähe).\n   - Sichtprüfung der Schaltkästen und Sicherungen, soweit zugänglich.\n   - Bei Regen: Vorsicht bei Arbeiten an elektrischen Komponenten.\n   - Connectivity ist spotty – keine Online-Abfragen, alles lokal dokumentieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen offline in der App/Checkliste erfassen.\n   - Fotos lokal speichern, später synchronisieren.\n   - Notieren: Anzahl betroffener Lampen, genaue Position, Sichtbefund.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall oder Gefahr für Verkehr: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei Einzeldefekt: Reparaturauftrag vorbereiten, ggf. Ersatzteile anfordern.\n   - Dokumentation nach Netzverfügbarkeit synchronisieren.\n\n**Rückfrage:**  \nSind nur die Straßenlampen betroffen oder auch Ampelanlagen?  \nFalls weitere Details zum Ausfall (z.B. wie viele Lampen, genaue Ausdehnung) bekannt sind, bitte ergänzen.",
+    "tokens_estimate_words": 176
   },
   "judge": {
     "test_id": "INC-LAMP-0010-TC3",
@@ -289,11 +289,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety-First bei high severity/traffic/poor visibility, expliziter Offline-Workflow bei spotty connectivity, klare Eskalation, vollständige Kontextnutzung ohne Halluzinationen."
+    "short_justification": "Perfekte Umsetzung: Spotty connectivity explizit adressiert ('keine Online-Abfragen, alles lokal dokumentieren'), Safety bei Regen/Dämmerung/hoher Verkehrsexposition priorisiert, Eskalation klar, Dokumentation offline-fähig."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.82
+    "runtime_seconds": 3.555
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0029-TC3",
-  "timestamp": "2026-02-18T17:04:42",
+  "timestamp": "2026-02-18T17:47:13",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -270,8 +270,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe „Pang, Cafe Neu“ (OSM: n9223569763)\n\n1. Absicherung  \n- Bereich sofort absichern (Warnbaken, ggf. Warnleuchte aufstellen).  \n- Bei hoher Verkehrsexposition: Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n- Lampe auf sichtbare Schäden prüfen (Glas, Mast, Kabel).  \n- Umfeld auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Lampe komplett dunkel oder flackert.  \n- Nach offensichtlichen Ursachen suchen (z.B. Vandalismus, Stromausfall).  \n- Gerät ist offline: Alle Beobachtungen und Fotos lokal speichern.\n\n4. Dokumentation  \n- Fotos vom Zustand und Umfeld machen (offline speichern).  \n- Alle Schritte und Feststellungen schriftlich festhalten (offlinefähig).\n\n5. Eskalation  \n- Bei hoher Unsicherheit oder Gefahr: Sofortige Meldung an Leitstelle/Notdienst.  \n- Reparaturauftrag mit hoher Priorität an zuständige Stelle weiterleiten.  \n- Synchronisation der Dokumentation, sobald Gerät wieder online.\n\nRückfrage:  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder ist es ein Einzelfall?  \nSind Personen im Bereich gefährdet (z.B. Fußgänger, Radfahrer)?  \n\nBitte kurze Rückmeldung, falls zusätzliche Absicherung oder Sofortmaßnahmen nötig sind.",
-    "tokens_estimate_words": 156
+    "text": "**Checkliste für Außendienst – Straßenlampe dunkel, Bereich unsicher**\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Gefahrenbereich mit Warnleuchten oder Pylonen absichern, falls verfügbar.\n   - Bei hoher Verkehrsexposition: ggf. Polizei oder Ordnungsamt zur Unterstützung anfordern.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Vandalismus oder lose Teile prüfen.\n   - Umgebung auf weitere dunkle Lampen oder ungewöhnliche Situationen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob andere Lampen in der Nähe funktionieren (Hinweis auf Netz-/Segmentausfall).\n   - Lampe auf offensichtliche Defekte (Leuchtmittel, Elektrik, Steuerung) untersuchen.\n   - Keine Online-Diagnose möglich (Gerät offline): Alle Beobachtungen lokal dokumentieren.\n\n4. **Dokumentation**\n   - Foto vom Defekt und Umfeld machen (Foto lokal speichern).\n   - Alle Feststellungen und Maßnahmen schriftlich festhalten (offline).\n   - Standort und Zeit notieren.\n\n5. **Eskalation**\n   - Bei hoher Sicherheitsrelevanz (unsicherer Bereich, Nacht): Störung als „dringend“ kennzeichnen.\n   - Meldung an Leitstelle/Technikteam weitergeben, sobald Online-Verbindung möglich.\n   - Ggf. Sofortmaßnahme anfordern (z.B. mobiler Lichtmast, Polizei).\n\n**Rückfrage:**  \nSind weitere Lampen im Bereich betroffen oder nur diese einzelne? Gibt es Hinweise auf Vandalismus oder Unfall?",
+    "tokens_estimate_words": 162
   },
   "judge": {
     "test_id": "INC-LAMP-0029-TC3",
@@ -289,11 +289,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit umgesetzt (lokal speichern, später sync), Safety-First bei severity=high, klare Eskalation, strukturiert und nachvollziehbar dokumentiert. Keine Halluzinationen."
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit umgesetzt ('lokal dokumentieren', 'Foto lokal speichern', 'später synchronisieren'), severity=high mit dringender Eskalation, Safety-First bei Nacht+poor_visibility, alle Kontexthinweise korrekt verarbeitet."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.968
+    "runtime_seconds": 4.27
   },
   "error": {}
 }

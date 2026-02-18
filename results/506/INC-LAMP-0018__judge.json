@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Berücksichtigung von Umgebungsbedingungen (nicht im Context)"
+      "Keine Umweltbedingungen im Context, daher keine spezifischen Sicherheitshinweise für Nacht/Nebel erwartbar"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden; angemessene Rückfrage zur Klärung des Asset-Typs."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Context korrekt genutzt wurde."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -35,14 +35,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, mittlere Verkehrsexposition) mit angepassten Sicherheitsmaßnahmen. Klare Diagnose-Logik, vollständige Dokumentation und angemessene Eskalation bei medium severity."
+    "short_justification": "Exzellente Antwort: Nacht+Nebel+poor_visibility korrekt adressiert, Severity=medium mit angemessener Eskalation, alle Context-Elemente sinnvoll integriert, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Nebel, Nacht, mittlere Verkehrsexposition). Korrekte Interpretation der context_notes (device.* = Techniker-Gerät), strukturierte Checkliste mit Safety-First-Ansatz und angemessener Eskalation."
+    "short_justification": "Hervorragend: Umweltbedingungen (Nacht, Nebel, poor_visibility) explizit berücksichtigt, Feuchtigkeit als Ursache plausibel erwähnt, klare Struktur, keine Halluzinationen, vollständige Dokumentation und Eskalation."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC3",
-  "timestamp": "2026-02-18T16:58:08",
+  "timestamp": "2026-02-18T17:40:43",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -258,8 +258,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Flackern bei Regen (Straßenlampe, Rosenheim, Endorfer Au / Krones)\n\n1. Absicherung  \n- Warnweste tragen, Absperrmaterial bereitstellen (bei Bedarf, z.B. bei Arbeiten direkt an der Fahrbahn).\n- Sichtbarkeit prüfen: Dämmerung, schlechte Sicht, Regen – erhöhte Vorsicht!\n- Verkehrsexposition: aktuell gering, trotzdem auf Fußgänger und Radfahrer achten.\n\n2. Sichtprüfung  \n- Lampe und Mast auf Wassereintritt, Beschädigungen, lose Kabel oder Feuchtigkeitsspuren kontrollieren.\n- Lampenkopf, Dichtung, Anschlusskasten und Verkabelung besonders bei Regen inspizieren.\n\n3. Diagnose / Beobachtung  \n- Flackern tritt nur bei Regen auf:  \n  → Vermutung: Feuchtigkeitseintritt, ggf. defekte Dichtung oder Kabelisolierung.\n- Prüfen, ob Flackern aktuell sichtbar ist (bei Regen).\n- Elektrische Verbindung kontrollieren (sofern gefahrlos möglich).\n- Keine Online-Diagnose möglich (Gerät offline): alle Beobachtungen lokal dokumentieren.\n\n4. Dokumentation  \n- Fotos vom Lampenkopf, Anschlusskasten, sichtbaren Schäden machen (lokal speichern).\n- Notizen: Zeitpunkt, Wetter, Sichtverhältnisse, Flacker-Verhalten, eigene Beobachtungen.\n- Offline-Protokoll führen, später synchronisieren.\n\n5. Eskalation  \n- Bei akuter Gefahr (z.B. Stromschlagrisiko, starker Wassereintritt): sofort an Fachbetrieb/Elektriker melden, ggf. Lampe außer Betrieb nehmen.\n- Bei geringer Gefahr: Reparaturbedarf dokumentieren, Wartungstermin anstoßen.\n- Annahme: Flackern beeinträchtigt aktuell die Verkehrssicherheit nur gering, trotzdem mittelfristig beheben.\n\nRückfrage:  \nSind Fotos oder weitere Hinweise zum Zustand der Lampe vorhanden? Ist Zugang zum Anschlusskasten möglich?",
-    "tokens_estimate_words": 198
+    "text": "**Checkliste für Außendienst-Einsatz – Flackern bei Regen (Straßenlampe, Rosenheim, Endorfer Au / Krones)**\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei Dämmerung und Regen: Sichtbarkeit erhöhen (Leuchte, Warnschild).\n   - Verkehr ist laut Kontext gering, trotzdem auf Fußgänger achten.\n\n2. **Sichtprüfung**\n   - Lampe auf Wassereintritt, Beschädigungen, lose Kabel prüfen.\n   - Sockel, Mast und Leuchtmittel kontrollieren.\n   - Umgebung auf Pfützen, mögliche Kurzschlussstellen achten.\n\n3. **Diagnose/Beobachtung**\n   - Flackern gezielt beobachten: Tritt es nur bei Regen auf?\n   - Prüfen, ob Feuchtigkeit im Gehäuse sichtbar ist.\n   - Elektrische Kontakte auf Korrosion kontrollieren.\n   - Bei Offline-Gerät: Notizen und Fotos lokal speichern.\n\n4. **Dokumentation**\n   - Alle Beobachtungen offline erfassen (App/Notizblock).\n   - Fotos lokal sichern (keine Online-Synchronisation möglich).\n   - Fehlerbeschreibung und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei Wassereintritt/Kurzschluss: Sofort an Fachkraft/Elektriker melden.\n   - Bei geringer Gefahr: Reparatur im nächsten Wartungszyklus einplanen.\n   - Dokumentation später synchronisieren, sobald Verbindung verfügbar.\n\n**Rückfrage:**  \nIst bereits Wasser im Lampengehäuse sichtbar oder gibt es Hinweise auf defekte Dichtungen?  \nFalls nein, bitte kurz beschreiben, ob das Flackern nur bei starkem Regen oder auch bei feuchter Witterung ohne Niederschlag auftritt.",
+    "tokens_estimate_words": 175
   },
   "judge": {
     "test_id": "INC-LAMP-0009-TC3",
@@ -277,11 +277,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Workflow klar beschrieben (lokal dokumentieren, später synchronisieren), Umweltbedingungen präzise einbezogen, Eskalation differenziert nach Gefahrenlage. Vollständige Kontextnutzung ohne Spekulation."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit integriert ('lokal speichern', 'später synchronisieren'), klare Sicherheitsmaßnahmen bei Dämmerung/Regen, strukturierte Dokumentation und Eskalation. Vollständige Kontextnutzung ohne Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.672
+    "runtime_seconds": 4.249
   },
   "error": {}
 }

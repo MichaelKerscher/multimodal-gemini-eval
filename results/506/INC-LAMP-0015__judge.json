@@ -15,9 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Bewusstsein (high) fehlt im Kontext, daher nicht erwartbar"
+      "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
+      "Zeitkritische Maßnahmen könnten stärker betont werden"
     ],
-    "short_justification": "Solide Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde. Safety-Fokus vorhanden, aber ohne explizite Dringlichkeit (severity unbekannt)."
+    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Minimaler Kontext wurde gut genutzt, keine Halluzinationen. Safety-Fokus erkennbar, aber bei 'unsicherem Bereich' könnte Dringlichkeit noch stärker hervorgehoben werden."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -35,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high korrekt erkannt, Safety-First-Ansatz (Polizei, Warnbaken), klare Eskalation, strukturierte Dokumentation. Alle Kontextdaten sinnvoll genutzt, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, hohe Verkehrsexposition und schlechte Sicht werden explizit berücksichtigt. Kontextnutzung optimal (device online, Foto vorhanden), keine Spekulationen."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -53,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Severity=high, poor_visibility, traffic_exposure=high führen zu klarem Safety-Fokus (Polizei, Warnbaken, sofortige Eskalation). Strukturiert, dokumentiert OSM-ID und Koordinaten, nutzt photo_available korrekt als Workflow-Hinweis. Keine Halluzinationen."
+    "short_justification": "Hervorragende Umsetzung: Severity=high führt zu klarer Priorisierung und Polizei-Einbindung bei Gefahr. Umfangreicher Kontext (Nacht, hoher Verkehr, schlechte Sicht) wird präzise verarbeitet. Dokumentation und Eskalation vollständig, keine Halluzinationen."
   }
 ]

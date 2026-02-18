@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0023-TC1",
-  "timestamp": "2026-02-18T17:02:46",
+  "timestamp": "2026-02-18T17:45:18",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt bei Asset-ID n13293397459.\n\nCheckliste für die Überprüfung:\n\n1. Absicherung  \n   - Warnbaken oder Absperrungen aufstellen, falls Gefährdung für Verkehrsteilnehmer besteht.  \n   - Warnwesten tragen, ggf. Beleuchtung für eigene Sicherheit nutzen.\n\n2. Sichtprüfung  \n   - Standort aufsuchen und den betroffenen Bereich begutachten.  \n   - Prüfen, ob mehrere Lampen oder nur einzelne betroffen sind.  \n   - Sichtbare Schäden an Lampen, Kabeln oder Masten feststellen.\n\n3. Diagnose/Beobachtung  \n   - Funktionstest der Lampen durchführen (Schaltzeiten, Reaktion auf Dämmerung).  \n   - Prüfen, ob Stromversorgung vorhanden ist.  \n   - Hinweise auf Vandalismus, Defekte oder Witterungseinflüsse suchen.\n\n4. Dokumentation  \n   - Fotos vom betroffenen Abschnitt und den Anlagen machen.  \n   - Notizen zu Anzahl und Position der ausgefallenen Lampen sowie Beobachtungen erfassen.\n\n5. Eskalation  \n   - Bei Gefahr für Verkehrsteilnehmer sofortige Meldung an Leitstelle/Notdienst.  \n   - Bei technischen Defekten Weiterleitung an zuständige Wartungsfirma mit allen Dokumentationen.\n\nBitte gib an, ob es sich um eine Hauptstraße oder Nebenstraße handelt und ob akute Gefahr besteht (z. B. Schulweg, Kreuzung). So kann die Priorität besser festgelegt werden.",
-    "tokens_estimate_words": 163
+    "text": "Danke für die Meldung zum dunklen Abschnitt (Asset-ID: n13293397459). Hier ist die empfohlene Vorgehensweise:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n- Warnbaken oder Absperrungen aufstellen, falls der Bereich stark befahren oder fußläufig genutzt wird.  \n- Warnwesten tragen.\n\n2. Sichtprüfung  \n- Prüfen, ob alle Straßenlampen entlang des Abschnitts funktionieren.  \n- Sichtbare Schäden, lose Kabel oder defekte Leuchtmittel erkennen.\n\n3. Diagnose/Beobachtung  \n- Falls Lampen ausfallen: Sind mehrere Lampen betroffen (Stromausfall) oder nur einzelne (Leuchtmittel defekt)?  \n- Gibt es Anzeichen für Vandalismus oder Witterungsschäden?\n\n4. Dokumentation  \n- Asset-ID, Standort, betroffene Lampen, Uhrzeit und Beobachtungen notieren.  \n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Bei großflächigem Ausfall: Meldung an die zentrale Leitstelle/Störungsdienst.  \n- Bei einzelnen Defekten: Reparaturauftrag für Leuchtmittel oder Elektrik.\n\nRückfrage:  \nSind nur Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf akute Gefährdung (z.B. Unfallstelle, stark frequentierter Bereich)?",
+    "tokens_estimate_words": 133
   },
   "judge": {
     "test_id": "INC-LAMP-0023-TC1",
@@ -50,13 +50,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation, daher kein Fehler)"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine spezifischen Umgebungsdaten liefert."
+    "short_justification": "Strukturierte, relevante Antwort mit Sicherheitsmaßnahmen und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine zusätzlichen Anforderungen stellt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.747
+    "runtime_seconds": 3.283
   },
   "error": {}
 }

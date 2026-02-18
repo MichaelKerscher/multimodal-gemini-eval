@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Spekulation erfolgt."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit adressiert, Eskalation vorhanden. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr) mit angepassten Sicherheitsmaßnahmen. Klare Struktur, vollständige Dokumentation und passende Eskalationskriterien."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlere Verkehrsexposition explizit berücksichtigt). Klare Struktur, Sicherheit priorisiert, Dokumentation und Eskalation vollständig."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise Kontextintegration (Nebel, Verkehr, intermittent fault) mit klarer Handlungsanweisung. Dokumentation inkl. 'nicht reproduzierbar'-Szenario und Monitoring-Empfehlung zeigt hohe Praxisrelevanz."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Nebel, Feuchtigkeit, Verkehr). Strukturiert, sicherheitsorientiert, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
   }
 ]

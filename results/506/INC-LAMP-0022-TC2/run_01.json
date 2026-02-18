@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0022-TC2",
-  "timestamp": "2026-02-18T17:02:26",
+  "timestamp": "2026-02-18T17:44:58",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Straßenlampenausfall – Rosenheim, Heilig Blut\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls der Bereich stark frequentiert wird.\n   - Bürger informieren, falls unmittelbare Gefahr besteht (z. B. bei Schneeglätte und schlechter Sicht).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, Kabel sichtbar)?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät meldet „low_battery“ – vermutlich Batterieproblem.\n   - Lampe ist online, daher keine Netzstörung.\n   - Wetter: Schnee, Sicht schlecht, Bereich unsicher → schnelle Reparatur erforderlich.\n\n4. **Dokumentation**\n   - Foto vom Ausfall und Umgebung aufnehmen (Foto liegt bereits vor).\n   - Alle Beobachtungen notieren: Zeitpunkt, Wetter, Sicht, betroffene Lampe (OSM-ID: n1987093607).\n\n5. **Eskalation**\n   - Meldung mit hoher Priorität an Wartungsteam weiterleiten (Batteriewechsel dringend).\n   - Hinweis auf Sicherheitsrisiko wegen schlechter Sicht und Schnee.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nGibt es Hinweise auf Vandalismus oder mechanische Schäden?",
-    "tokens_estimate_words": 155
+    "text": "Checkliste für Straßenlampenausfall – Rosenheim, Heilig Blut\n\n1. **Absicherung**\n   - Bereich sofort absichern, falls möglich (z. B. Warnbaken, reflektierende Markierungen).\n   - Bei hoher Unsicherheit: Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und Umgebung: Schäden, Vandalismus, Schneeablagerungen oder lose Kabel?\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, meldet aber niedrigen Batteriestand – vermutlich Batterieausfall.\n   - Wetter: Schneefall könnte Einfluss haben, aber Connectivity ist vorhanden.\n   - Foto verfügbar – zur weiteren Analyse verwenden.\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Datum, Uhrzeit, Zustand, Umgebung, Foto anhängen).\n   - Meldung im System aktualisieren.\n\n5. **Eskalation**\n   - Bei hoher Dringlichkeit (unsicherer Bereich, Dämmerung, Schneefall): Sofort an Wartungsdienst weiterleiten.\n   - Hinweis: Batterie muss zeitnah gewechselt werden.\n\n**Rückfrage:**  \nIst eine temporäre Ersatzbeleuchtung möglich oder gibt es weitere Lampen in unmittelbarer Nähe, die funktionieren?",
+    "tokens_estimate_words": 134
   },
   "judge": {
     "test_id": "INC-LAMP-0022-TC2",
@@ -66,7 +66,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -74,14 +74,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Explizite Warnung wegen poor_visibility + snow könnte stärker betont werden"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (low_battery, Schnee, dusk, severity=high). Klare Priorisierung, Safety-Fokus erkennbar, Eskalation mit Begründung."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Batterie, Schnee, Dämmerung, Foto). Klare Handlungsschritte, Sicherheit priorisiert, Eskalation bei hoher Dringlichkeit erkennbar. Vollständig und präzise."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.537
+    "runtime_seconds": 3.796
   },
   "error": {}
 }

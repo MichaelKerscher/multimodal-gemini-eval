@@ -9,15 +9,15 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Absicherungsmaßnahmen bei Dunkelheit/Verkehrsgefahr unklar"
+      "Keine Erwähnung von Leuchtmittel-/Sicherungsprüfung als konkrete Diagnoseschritte"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation. Sicherheitsaspekte angesprochen, aber nicht priorisiert. Keine Halluzinationen, passend zu minimalem Kontext."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Kontextnutzung korrekt (keine Spekulation), aber Diagnoseschritte könnten präziser sein (z.B. Spannungsprüfung)."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Verkehr gering, Sicht gut, Tag). Klare Struktur, Sicherheit priorisiert, Dokumentation und Eskalation präzise. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (Tageslicht, low traffic, device online), klare Diagnose, strukturierte Dokumentation und passende Eskalation. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -44,7 +44,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -52,9 +52,7 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Missverständnis: 'Asset offline' erwähnt, obwohl device.connectivity=online (bezieht sich auf Techniker-Gerät)"
-    ],
-    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (Koordinaten, Umweltbedingungen). Kleine Ungenauigkeit bei Interpretation von device.connectivity, sonst exzellent strukturiert und dokumentiert."
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (severity medium, day, clear, low traffic). Strukturierte Schritte, klare Dokumentation, angemessene Eskalation und sinnvolle Rückfrage."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0017-TC2",
-  "timestamp": "2026-02-18T17:00:44",
+  "timestamp": "2026-02-18T17:43:22",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Prüfung – Dunkler Abschnitt Schönau\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen, um den Bereich zu sichern.\n   - Bei Regen und schlechter Sicht: Warnwesten tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts.\n   - Prüfen, ob Lampen beschädigt, verdreht oder verschmutzt sind.\n   - Beachten: Foto vom Bürger liegt vor – zur Orientierung nutzen.\n\n3. **Diagnose/Beobachtung**\n   - Stromversorgung prüfen: Gerät ist online, aber im Low Power Mode.\n   - Mögliche Ursache: Energieversorgung eingeschränkt, Feuchtigkeitseintritt oder Defekt.\n   - Sichtbare Schäden oder Wassereintritt an Lampengehäusen kontrollieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Foto des Ist-Zustands machen und zum Vorgang hinzufügen.\n\n5. **Eskalation**\n   - Bei mehreren ausgefallenen Lampen oder Sicherheitsrisiko: Meldung an Elektrotechnik-Fachbetrieb und Gemeinde.\n   - Hinweis: Bei mittlerer Schwere und schlechter Sicht Priorität erhöhen.\n\n**Rückfrage:**  \nSind alle Lampen entlang Schönau betroffen oder nur einzelne? Gibt es Hinweise auf kürzliche Bauarbeiten oder Störungen im Stromnetz?",
-    "tokens_estimate_words": 151
+    "text": "Prüfung dunkler Abschnitt Schönau – Vorgehen\n\n1. **Absicherung**\n   - Warnbaken und Beleuchtung aufstellen, da schlechte Sicht und Regen herrschen.\n   - Verkehr ggf. umleiten oder absichern, besonders bei Dämmerung.\n\n2. **Sichtprüfung**\n   - Vor Ort prüfen: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Sicht auf mögliche Schäden (Kabel, Mast, Leuchtmittel, Wasser im Gehäuse).\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, aber im Low-Power-Modus – Hinweis auf Stromproblem oder Energiesparfunktion.\n   - Prüfen: Liegt ein Stromausfall vor? Ist die Steuerung fehlerhaft? Gibt es Feuchtigkeitseintritt?\n   - Foto auswerten, falls verfügbar.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, betroffene Lampen, Wetter, Sichtverhältnisse).\n   - Foto anhängen.\n\n5. **Eskalation**\n   - Bei komplexen Stromproblemen oder Gefahr: Elektriker und ggf. Netzbetreiber informieren.\n   - Bei akuter Verkehrsgefährdung: Polizei oder Ordnungsamt benachrichtigen.\n\n**Rückfrage:**  \nSind nur Straßenlampen betroffen oder auch Ampelanlagen? Gibt es Hinweise auf Vandalismus oder Bauarbeiten in der Nähe?",
+    "tokens_estimate_words": 141
   },
   "judge": {
     "test_id": "INC-LAMP-0017-TC2",
@@ -66,7 +66,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -74,14 +74,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Low-Power-Mode-Hinweis könnte präziser sein (Gerät vs. Asset)"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, Foto, Low-Power). Sicherheit priorisiert, Eskalation klar, Dokumentation vollständig. Kleine Unschärfe bei Low-Power-Interpretation."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, poor_visibility, low_power_mode). Klare Sicherheitsmaßnahmen, Diagnose berücksichtigt Gerätezustand, vollständige Dokumentation und Eskalationspfade."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.214
+    "runtime_seconds": 5.358
   },
   "error": {}
 }

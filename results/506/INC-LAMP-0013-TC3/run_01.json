@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0013-TC3",
-  "timestamp": "2026-02-18T16:59:23",
+  "timestamp": "2026-02-18T17:42:00",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -247,8 +247,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Absicherung bei beschädigtem Gehäuse (Berührungsgefahr):\n\n1. **Absicherung**\n   - Bereich sofort mit Warnbaken, Absperrband oder Pylonen sichern.\n   - Warnschilder „Stromschlaggefahr“ aufstellen.\n   - Bei Dämmerung: Zusätzliche Beleuchtung für Sichtbarkeit nutzen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle: Ist das Gehäuse offen, liegen stromführende Teile frei?\n   - Foto der Schadstelle machen (Foto ist laut Workflow vorhanden).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen: Sind weitere Schäden sichtbar (z. B. Kabel, Feuchtigkeit)?\n   - Beobachten: Gibt es Funken, Geräusche oder Geruchsentwicklung?\n\n4. **Dokumentation**\n   - Alle Maßnahmen und Beobachtungen in der App/Techniker-Gerät dokumentieren.\n   - Standort (OSM-ID: n13278610215, Koordinaten) und Zeit erfassen.\n   - Foto anhängen.\n\n5. **Eskalation**\n   - Bei akuter Gefahr: Sofort Fachfirma/Elektriker verständigen.\n   - Meldung an Leitstelle/Verantwortliche weiterleiten (hohe Priorität).\n   - Bis zur Reparatur: Bereich abgesperrt lassen.\n\n**Rückfrage:**  \nIst bereits eine Fachfirma informiert oder soll ich die Eskalation übernehmen?  \nSind weitere Assets in der Nähe betroffen?",
-    "tokens_estimate_words": 136
+    "text": "Checkliste für Absicherung bei beschädigtem Gehäuse (Berührungsgefahr):\n\n1. **Absicherung**\n   - Bereich sofort mit Absperrband oder Warnbaken sichern.\n   - Warnschilder „Stromschlaggefahr“ aufstellen.\n   - Abstand zu Fußgängern und Verkehr gewährleisten (mind. 2 m).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle: Liegt blankes Metall oder Kabel frei?\n   - Sind Funken, Rauch oder Feuchtigkeit sichtbar?\n   - Prüfen, ob das Gehäuse noch stabil steht.\n\n3. **Diagnose/Beobachtung**\n   - Foto vom Schaden machen (Foto laut Workflow vorhanden).\n   - Prüfen, ob weitere Bauteile betroffen sind.\n   - Notieren: Zeitpunkt, Wetter, Sichtverhältnisse (dämmerig, schlechte Sicht).\n\n4. **Dokumentation**\n   - Schaden und Absicherung in der App dokumentieren.\n   - Foto hochladen.\n   - Standort (OSM-ID: n13278610215, Koordinaten) erfassen.\n   - Reporter (Bürger) vermerken.\n\n5. **Eskalation**\n   - Meldung mit „hoher Priorität“ an Fachfirma/Elektriker weiterleiten.\n   - Hinweis: Berührungsgefahr, sofortige Reparatur erforderlich.\n   - Bei Gefahr für Leib und Leben: Polizei/Feuerwehr informieren.\n\n**Rückfrage:**  \nIst das Gehäuse einer Straßenlampe oder einer Ampelanlage betroffen?  \nSind Stromleitungen sichtbar/frei zugänglich?  \nFalls nein, bitte kurz beschreiben, wie die Öffnung aussieht.",
+    "tokens_estimate_words": 153
   },
   "judge": {
     "test_id": "INC-LAMP-0013-TC3",
@@ -266,11 +266,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise Antwort mit korrekter Interpretation der Kontexthinweise (photo_available als Workflow-Cue, device.* bezieht sich auf Techniker-Gerät). Sicherheit priorisiert, Eskalation klar, Dokumentation strukturiert."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextintegration (Dämmerung, schlechte Sicht, photo_available). Alle Sicherheits- und Dokumentationsaspekte abgedeckt, klare Eskalation bei high severity."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.359
+    "runtime_seconds": 4.57
   },
   "error": {}
 }

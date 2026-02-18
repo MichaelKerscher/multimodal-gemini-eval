@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC3",
-  "timestamp": "2026-02-18T16:55:29",
+  "timestamp": "2026-02-18T17:37:57",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -270,8 +270,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für sporadischen Lampenausfall (Rosenheim, Bahnhof)**\n\n1. **Absicherung**\n   - Bereich mit hoher Verkehrsexposition: Warnweste tragen, Absperrmaterial bereitstellen.\n   - Gefahrenzone absichern (z. B. Warnschild, ggf. Absperrung bei Arbeiten).\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf sichtbare Schäden, lose Kabel, Feuchtigkeit oder Vandalismus kontrollieren.\n   - Prüfen, ob die Lampe aktuell stabil leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt wieder an → intermittenter Fehler.\n   - Mögliche Ursachen: Wackelkontakt, Vorschaltgerät, Feuchtigkeit, Alterung.\n   - Keine Online-Diagnose möglich (Gerät offline, niedriger Akkustand).\n   - Foto vom Zustand machen (offline speichern).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen lokal in der App/auf Papier festhalten.\n   - Foto lokal sichern, später synchronisieren.\n   - Fehler als „sporadisch, aktuell keine Störung“ dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder erhöhter Gefährdung (z. B. nachts, bei schlechter Sicht): Meldung an Fachbereich/Technik.\n   - Routinekontrolle empfehlen, ggf. Austausch prüfen.\n\n**Rückfrage:**  \nGab es auffällige Geräusche, Gerüche oder Feuchtigkeit an der Lampe?  \nSind weitere Lampen betroffen oder nur diese?",
-    "tokens_estimate_words": 154
+    "text": "**Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof**\n\n1. **Absicherung**\n   - Bereich mit hoher Verkehrsexposition: Warnweste tragen, ggf. Absperrung aufstellen.\n   - Bei Tageslicht und normaler Sicht: keine zusätzliche Beleuchtung nötig.\n\n2. **Sichtprüfung**\n   - Lampe aktuell an, aber sporadischer Fehler gemeldet.\n   - Sichtkontrolle auf äußere Schäden, lose Kabel, Feuchtigkeit oder Verschmutzung.\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt wieder an → intermittenter Fehler.\n   - Mögliche Ursachen: Wackelkontakt, Vorschaltgerät, Temperaturschwankungen, Feuchtigkeit.\n   - Keine Online-Diagnose möglich (Gerät offline, niedriger Akkustand).\n   - Foto vom aktuellen Zustand aufnehmen (lokal speichern).\n\n4. **Dokumentation**\n   - Fehlerbeschreibung und Beobachtungen lokal in der App notieren.\n   - Foto lokal sichern, später synchronisieren.\n   - Zeit und Ort dokumentieren (Rosenheim, Bahnhof, OSM-ID n5718630492).\n\n5. **Eskalation**\n   - Da Fehler sporadisch und aktuell keine akute Gefahr: Routinewartung einplanen.\n   - Bei erneuten oder häufigen Ausfällen: Meldung an Fachbereich für tiefergehende Prüfung.\n   - Hinweis: Bei Offline-Gerät erst synchronisieren, wenn wieder online.\n\n**Rückfrage:**  \nSind weitere Lampen betroffen oder gibt es Hinweise auf äußere Einflüsse (z.B. Bauarbeiten, Vandalismus)?",
+    "tokens_estimate_words": 170
   },
   "judge": {
     "test_id": "INC-LAMP-0001-TC3",
@@ -289,11 +289,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige Antwort mit explizitem Offline-Workflow (lokal dokumentieren, später synchronisieren), Safety-Fokus, klare Eskalation. Kontext optimal genutzt, keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung inkl. extras.context_notes. Offline-Workflow explizit umgesetzt (lokal speichern, später synchronisieren). Sicherheit, Dokumentation und Eskalation vollständig adressiert."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.157
+    "runtime_seconds": 6.769
   },
   "error": {}
 }

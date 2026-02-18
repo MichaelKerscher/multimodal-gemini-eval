@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0017-TC3",
-  "timestamp": "2026-02-18T17:00:44",
+  "timestamp": "2026-02-18T17:43:22",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -269,8 +269,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Schönau – Dunkler Abschnitt\n\n1. **Absicherung**\n   - Warnleuchten und Absperrmaterial bereitstellen.\n   - Bei Regen und schlechter Sicht: Warnwesten tragen, Bereich ggf. zusätzlich absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang Schönau.\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Foto vom betroffenen Abschnitt machen (Foto ist laut Meldung verfügbar).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampen beschädigt oder ausgeschaltet sind.\n   - Bei mehreren Ausfällen: Hauptstromversorgung oder Steuerung prüfen.\n   - Niedriger Batteriestand am Technikergerät beachten, ggf. offline dokumentieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen festhalten (inkl. Fotos).\n   - Notieren, ob Ausfall witterungsbedingt (Regen) oder technischer Defekt vorliegt.\n   - Dokumentation offline sichern, falls Gerät bald leer.\n\n5. **Eskalation**\n   - Bei mehreren Lampen oder Gefahr für Verkehr: Störungsdienst informieren.\n   - Bei einzelnen Lampen: Reparaturauftrag auslösen.\n   - Rückmeldung an Bürger, falls Kontakt möglich.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur einzelne? Gibt es Hinweise auf Stromausfall im gesamten Abschnitt?",
-    "tokens_estimate_words": 150
+    "text": "Checkliste für Schönau – dunkler Abschnitt\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Gefahrenstelle (z. B. Stolperrisiko, schlechte Sicht).\n   - Warnweste tragen, besonders bei Regen und Dämmerung.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des Abschnitts.\n   - Prüfen: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Auf Wassereintritt, Beschädigungen oder lose Kabel achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampen Strom bekommen (z. B. Kontrollleuchte am Mast).\n   - Bei mehreren Ausfällen: Möglicher Fehler im Stromkreis oder zentraler Steuerung.\n   - Einzelne Lampe: Defekt am Leuchtmittel oder Vorschaltgerät.\n   - Niedriger Batteriestand am Technikergerät beachten, ggf. offline dokumentieren.\n\n4. **Dokumentation**\n   - Vorhandenes Foto nutzen, weitere Bilder machen (Gesamtübersicht, Detail).\n   - Alle betroffenen Lampen notieren (Nummer/Mast).\n   - Wetter und Sichtverhältnisse dokumentieren (Regen, Dämmerung, schlechte Sicht).\n\n5. **Eskalation**\n   - Bei mehreren Lampen: Meldung an Netzbetreiber oder zentrale Wartung.\n   - Einzelne Lampe: Reparaturauftrag an Elektrotechnik.\n   - Bei akuter Gefährdung (z. B. Unfallgefahr): Sofortige Meldung an Polizei/Ordnungsamt.\n\n**Rückfrage:**  \nSind alle Lampen entlang Schönau betroffen oder nur bestimmte Masten? Gibt es Hinweise auf Vandalismus oder bauliche Schäden?",
+    "tokens_estimate_words": 169
   },
   "judge": {
     "test_id": "INC-LAMP-0017-TC3",
@@ -288,11 +288,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung inkl. Guardrails (Low-Battery → offline dokumentieren). Sicherheit, Eskalation, Dokumentation vollständig. Keine Halluzinationen, präzise Unterscheidung Gerät/Asset."
+    "short_justification": "Hervorragende Antwort: Nutzt Kontext optimal (Regen, Dämmerung, low_battery), erwähnt Offline-Dokumentation bei niedrigem Batteriestand, klare Safety-First-Haltung, strukturierte Eskalation und vollständige Dokumentationshinweise."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.437
+    "runtime_seconds": 5.599
   },
   "error": {}
 }

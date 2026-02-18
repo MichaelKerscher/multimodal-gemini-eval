@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0007-TC2",
-  "timestamp": "2026-02-18T16:57:27",
+  "timestamp": "2026-02-18T17:40:01",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe „Rosenheim, BRK-Heim“\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Pylonen, Warnleuchte).\n   - Bereich um die Lampe sichern, besonders bei mittlerem Verkehr und Sturm.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Mastfußes auf offensichtliche Schäden, lose Kabel oder Feuchtigkeitseintritt.\n   - Prüfen, ob Flackern auch bei anderen Lampen auftritt.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Dauer, Häufigkeit, Zusammenhang mit Wetter (Sturm).\n   - Kontaktstellen (Klemmleiste, Anschlusskasten) auf Korrosion oder lose Verbindungen prüfen.\n   - Gerät ist offline – Annahme: Fernwartung nicht möglich, vor Ort prüfen.\n\n4. **Dokumentation**\n   - Fotos vom Lampenkopf, Anschlusskasten und Umgebung machen.\n   - Beobachtungen und Maßnahmen schriftlich festhalten (z.B. Checkliste, Tablet).\n\n5. **Eskalation**\n   - Bei festgestellten Kontaktproblemen: Reparaturbedarf an die Elektrotechnik melden.\n   - Bei Gefahr durch Sturm oder beschädigte Teile: Sofortige Sperrung und Meldung an Einsatzleitung.\n\n**Rückfrage:**  \nSind Ersatzteile oder Werkzeug für Kontaktprüfung vor Ort verfügbar?  \nSoll eine sofortige Reparatur erfolgen oder nur eine Erstdiagnose?",
-    "tokens_estimate_words": 150
+    "text": "Checkliste für Außendienst – Straßenlampe „Rosenheim, BRK-Heim“\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrung oder Warnschild aufstellen (Verkehr: mittel, Wetter: Sturm).\n   - Umfeld auf weitere Gefahren prüfen (z. B. lose Äste).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeit oder Korrosion kontrollieren.\n   - Anschlusskasten und Verkabelung auf lockere Kontakte prüfen.\n   - Foto vom Zustand machen (Foto liegt bereits vor).\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es nur bei Sturm auf?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Gerät ist offline – keine Fernanalyse möglich.\n   - Mögliche Ursache: Kontaktproblem durch Feuchtigkeit oder Vibration.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren.\n   - Foto und Bericht ins System hochladen.\n   - Zeitpunkt und Wetterbedingungen vermerken.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Stromschlagrisiko, lose Teile): Sofort an Elektrofachkraft melden.\n   - Sonst: Wartungstermin anfordern, ggf. Kontaktstellen reinigen/sichern.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder nur diese?  \nGab es vorher ähnliche Vorfälle bei Sturm?",
+    "tokens_estimate_words": 158
   },
   "judge": {
     "test_id": "INC-LAMP-0007-TC2",
@@ -66,7 +66,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -74,14 +74,12 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nur angedeutet, nicht explizit als Constraint formuliert"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Sturm, mittlerer Verkehr, Offline-Gerät erwähnt). Offline-Workflow wird implizit adressiert ('Gerät ist offline – vor Ort prüfen'), könnte aber expliziter sein (z.B. 'lokal dokumentieren, später synchronisieren')."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Sturm, offline, Foto vorhanden). Offline-Workflow erkannt ('Gerät ist offline – keine Fernanalyse möglich'). Klare Struktur, Safety und Eskalation vorhanden."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.531
+    "runtime_seconds": 5.38
   },
   "error": {}
 }

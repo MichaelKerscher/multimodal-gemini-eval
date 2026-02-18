@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0020-TC3",
-  "timestamp": "2026-02-18T17:01:48",
+  "timestamp": "2026-02-18T17:44:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -258,8 +258,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für dunklen Abschnitt (Straßenbeleuchtung, Standort n4483691318):**\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei Nacht und Regen: Bereich mit Warnleuchten sichern, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchten: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen auf offensichtliche Schäden (Kabel, Mast, Leuchtmittel).\n   - Foto aufnehmen (Foto ist laut Workflow verfügbar).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (z.B. Sicherungskasten, Verteiler).\n   - Bei mehreren ausgefallenen Lampen: Vermutung auf Sammelfehler (z.B. Hauptsicherung, Leitung).\n   - Einzelne Lampe: Leuchtmittel oder Vorschaltgerät prüfen.\n   - Wetter beachten: Regen kann Kurzschluss oder Feuchtigkeitsschäden verursachen.\n\n4. **Dokumentation**\n   - Alle Schritte und Beobachtungen in der App/Checkliste festhalten (offlinefähig, falls Gerät im Low-Power-Modus).\n   - Foto zur Dokumentation anhängen.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (dunkler Abschnitt, schlechte Sicht, Nacht, Regen): Sofortige Meldung an Bereitschaft/Leitstelle.\n   - Falls Sammelfehler oder Gefahr für Verkehrssicherheit: Reparatur priorisieren, ggf. Notbeleuchtung organisieren.\n\n**Rückfrage:**  \nSind mehrere Lampen entlang des Abschnitts betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder Unfallschäden? Bitte ggf. Details oder weitere Fotos bereitstellen.",
-    "tokens_estimate_words": 166
+    "text": "Checkliste für den Außendienst – Dunkler Abschnitt (Straßenbeleuchtung, Standort n4483691318):\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei Nacht und Regen: Bereich mit Warnleuchten sichern, ggf. Verkehr umleiten.\n   - Prüfen, ob zusätzliche Beleuchtung für Sicht und Sicherheit nötig ist.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampenreihe: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen auf offensichtliche Schäden (z.B. Mast, Leuchte, Verkabelung).\n   - Foto vom betroffenen Abschnitt machen (Foto ist laut Workflow verfügbar).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (z.B. Sicherungskasten, Hauptleitung).\n   - Bei Regen: Auf Wassereintritt achten (Schaltkasten, Lampengehäuse).\n   - Hinweis: Asset ist laut System „lit: yes“, aber aktuell „outage“ gemeldet.\n   - Gerät ist online, aber im „low_power_mode“ – dies betrifft nur das Technikergerät, nicht die Lampe selbst.\n   - Prüfen, ob weitere Lampen in der Umgebung betroffen sind (Ausfallmuster).\n\n4. **Dokumentation**\n   - Alle Feststellungen (Sichtprüfung, Diagnose) mit Fotos und Notizen dokumentieren.\n   - Zeit und Wetterbedingungen vermerken (Nacht, Regen, schlechte Sicht).\n   - Dokumentation offlinefähig halten, falls Gerät bald weniger Leistung hat.\n\n5. **Eskalation**\n   - Bei hohem Sicherheitsrisiko (dunkler Abschnitt, schlechte Sicht, Regen): Sofortige Meldung an Leitstelle/Notdienst.\n   - Falls Ursache nicht vor Ort behebbar (z.B. Netzstörung, größere Reparatur): Weiterleitung an Fachabteilung oder Bereitschaft.\n   - Dokumentation und Fotos an zentrale Stelle übermitteln.\n\n**Rückfrage:**  \nSind weitere Abschnitte betroffen oder nur dieser Standort? Gibt es Hinweise auf Vandalismus oder Bauarbeiten in der Nähe?  \n\nBitte kurze Rückmeldung, damit die nächsten Schritte abgestimmt werden können.",
+    "tokens_estimate_words": 230
   },
   "judge": {
     "test_id": "INC-LAMP-0020-TC3",
@@ -277,11 +277,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextintegration inkl. Guardrails (device_state korrekt als Techniker-Gerät interpretiert, offlinefähige Dokumentation erwähnt). Safety-First bei Nacht/Regen/poor_visibility, klare Eskalation, keine Spekulation."
+    "short_justification": "Hervorragend: Nutzt extras.context_notes korrekt (device_state betrifft Technikergerät), erwähnt offlinefähige Dokumentation wegen low_power_mode, integriert alle Risikofaktoren (Nacht, Regen, severity=high) und Workflow-Hinweise (photo_available)."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.772
+    "runtime_seconds": 4.986
   },
   "error": {}
 }

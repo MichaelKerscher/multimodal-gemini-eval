@@ -14,30 +14,28 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Offline-Workflow-Erwähnung nötig (CONTEXT enthält keine connectivity-Info). Sicherheitsaspekte angemessen bei unklarer Severity."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
+      "D": 3,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline im CONTEXT, aber keine lokale Dokumentation/Synchronisation erwähnt)"
+      "Offline-Workflow nicht explizit als Handlungsanweisung formuliert"
     ],
-    "short_justification": "Sehr gute Struktur, kontextgerechte Sicherheitsmaßnahmen (Nebel, Verkehr). Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). K=3 wegen fehlender Offline-Handlungsanweisung."
+    "short_justification": "Gute Kontextnutzung (Nebel, offline erwähnt), aber Offline-Workflow nur als Annahme ('keine Fernwartung möglich'), nicht als konkrete Handlungsanweisung (lokal dokumentieren/später sync). Dokumentation könnte präziser sein."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit umgesetzt (lokal dokumentieren, später synchronisieren), kontextgerechte Sicherheitsmaßnahmen, klare Struktur. Alle erwartbaren Elemente aus CONTEXT berücksichtigt."
+    "short_justification": "Exzellente Umsetzung: Offline-Workflow explizit ('Offline dokumentieren, Fotos lokal speichern, später synchronisieren'), klare Struktur, vollständige Kontextnutzung (Nebel, Verkehr, connectivity), präzise Dokumentationsanweisungen. Alle Erwartungen erfüllt."
   }
 ]

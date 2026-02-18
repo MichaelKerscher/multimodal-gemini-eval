@@ -15,30 +15,30 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+      "Severity-Einschätzung fehlt (im CONTEXT nicht vorhanden, daher kein Abzug)"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da L0-Kontext minimal ist und keine Spekulation erfolgt."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Safety und Dokumentation angemessen adressiert."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (spotty connectivity)",
-      "Device-State-Hinweis könnte klarer sein (Techniker-Gerät vs. Asset)"
+      "Offline-Workflow nicht erwähnt (connectivity=spotty erfordert lokale Dokumentation)",
+      "Batterie-Status bezieht sich auf Techniker-Gerät, nicht Asset (Missverständnis)"
     ],
-    "short_justification": "Gute Kontextnutzung (Wetter, Sicht, Batterie, Severity). Eskalation und Safety vorhanden. K=3, da Offline-Workflow bei spotty connectivity fehlt."
+    "short_justification": "Gute Struktur und Safety-Fokus bei hoher Severity und schlechten Sichtverhältnissen. Jedoch Verwechslung: 'Batterie-Status kontrollieren' bezieht sich fälschlich auf Asset statt Techniker-Gerät. Offline-Workflow fehlt trotz spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
@@ -56,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, Safety-First bei poor_visibility/rain/dusk, Eskalation mit Priorität, klare Dokumentation. Vollständige Kontextnutzung ohne Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-First bei hoher Severity und schlechter Sicht, Offline-Workflow explizit erwähnt ('offline speichern'), korrekte Interpretation der CONTEXT-Hinweise (device.* = Techniker-Gerät), strukturierte Dokumentation und Eskalation."
   }
 ]

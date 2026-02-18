@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0030-TC1",
-  "timestamp": "2026-02-18T17:05:01",
+  "timestamp": "2026-02-18T17:47:32",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Fehler bei Straßenlampe (Asset-ID: n11833818322)\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann.  \n- Warnweste tragen, ggf. Absperrmaterial nutzen.\n\n2. Sichtprüfung  \n- Prüfe Lampe auf sichtbare Schäden (Gehäuse, Mast, Verkabelung).  \n- Kontrolliere, ob Feuchtigkeit, Vandalismus oder lose Teile erkennbar sind.\n\n3. Diagnose/Beobachtung  \n- Notiere, ob das Problem weiterhin auftritt (Lampe aus/an, Flackern).  \n- Prüfe, ob andere Lampen in der Nähe ähnliche Fehler zeigen (Hinweis auf Netzproblem).  \n- Falls möglich: Zeitpunkt und Wetterbedingungen dokumentieren.\n\n4. Dokumentation  \n- Erstelle einen kurzen Bericht:  \n  - Asset-ID  \n  - Fehlerbeschreibung (sporadisch aus, jetzt wieder an)  \n  - Sichtprüfungsergebnisse  \n  - Beobachtungen  \n- Fotos machen, falls Auffälligkeiten sichtbar.\n\n5. Eskalation  \n- Melde den Fehler an die zuständige Fachstelle (Elektrofachkraft/Technik).  \n- Hinweis: Sporadische Fehler können auf Kontaktprobleme, Feuchtigkeit oder Steuerungsfehler hindeuten.\n\nRückfrage:  \nIst die Lampe Teil einer Gruppe mit ähnlichen Problemen oder handelt es sich um einen Einzelfall?  \nSind besondere Wetterbedingungen (z.B. Regen, Frost) aktuell relevant?",
-    "tokens_estimate_words": 156
+    "text": "Absicherung  \n- Prüfe, ob die Lampe sicher steht und keine Gefahr für Verkehrsteilnehmer besteht.  \n- Absperrung ist nicht nötig, da aktuell keine akute Gefährdung vorliegt.\n\nSichtprüfung  \n- Kontrolliere vor Ort: Ist die Lampe äußerlich unbeschädigt?  \n- Gibt es sichtbare Kabelprobleme, Feuchtigkeit oder lose Teile?\n\nDiagnose/Beobachtung  \n- Notiere, wann der Fehler auftrat und wann die Lampe wieder funktionierte.  \n- Prüfe, ob ähnliche Fehler in der Umgebung gemeldet wurden (z.B. Netzschwankungen, Witterungseinflüsse).  \n- Sporadische Fehler können auf Kontaktprobleme, Feuchtigkeit oder Elektronikdefekte hindeuten.\n\nDokumentation  \n- Halte den Vorfall mit Asset-ID, Zeitpunkten und Beobachtungen fest.  \n- Dokumentiere, ob weitere Maßnahmen nötig sind.\n\nEskalation  \n- Melde den sporadischen Fehler an die zuständige Wartungsstelle.  \n- Empfehle eine zeitnahe technische Überprüfung, da sporadische Fehler auf einen beginnenden Defekt hindeuten können.\n\nFehlen weitere Informationen (z.B. Lampentyp, Standort, letzte Wartung)? Bitte ergänzen, falls bekannt.",
+    "tokens_estimate_words": 135
   },
   "judge": {
     "test_id": "INC-LAMP-0030-TC1",
@@ -44,17 +44,20 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden. Offline-Workflow nicht erwartbar (kein connectivity-Hinweis im Context)."
+    "missing_elements": [
+      "Keine Absicherungsmaßnahmen konkret genannt (Warnweste, Pylonen)",
+      "Umgebungsrisiken nicht bewertet (Zeit, Verkehr, Sicht)"
+    ],
+    "short_justification": "Strukturierte Antwort mit klaren Schritten und Eskalation. Sicherheitsaspekte generisch, da Kontext minimal. Keine Halluzinationen, angemessen für L0."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.447
+    "runtime_seconds": 2.773
   },
   "error": {}
 }

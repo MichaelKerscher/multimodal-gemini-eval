@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0025-TC3",
-  "timestamp": "2026-02-18T17:03:24",
+  "timestamp": "2026-02-18T17:45:55",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -269,32 +269,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe Isarstraße/Gewerbegebiet, Rosenheim\n\n1. Absicherung\n- Bereich mit Warnbaken/Kegel sichern, da hohe Verkehrsexposition und schlechte Sicht.\n- Warnweste tragen, ggf. zusätzliche Beleuchtung nutzen.\n\n2. Sichtprüfung\n- Lampe und Umgebung auf offensichtliche Schäden, Manipulation oder Vandalismus prüfen.\n- Prüfen, ob weitere Lampen betroffen sind (Hinweis auf größere Störung).\n\n3. Diagnose/Beobachtung\n- Prüfen, ob Lampe auf äußere Einflüsse (z.B. Stromausfall, Sicherung, Defekt) reagiert.\n- Da Gerät online, aber Lampe dunkel: Annahme Defekt oder Stromversorgung/Sicherung.\n- Hinweis: Lampe ist als „low_battery“ im System markiert – betrifft das Techniker-Gerät, nicht die Lampe selbst.\n\n4. Dokumentation\n- Vorhandenes Foto im System ergänzen (falls nicht bereits geschehen).\n- Alle Beobachtungen und Maßnahmen protokollieren (Datum, Uhrzeit, Standort, Sichtprüfungsergebnis).\n\n5. Eskalation\n- Bei hoher Gefährdung (unsicherer Bereich, Nacht, viel Verkehr): Störung als „dringend“ an zentrale Leitstelle melden.\n- Reparaturteam mit Priorität anfordern.\n\nRückfrage: Ist die Lampe Teil einer Kette (mehrere Lampen betroffen) oder handelt es sich um einen Einzel-Ausfall? Gibt es Hinweise auf Stromausfall im Gebiet?",
-    "tokens_estimate_words": 162
+    "text": "Checkliste für den Außendienst – Straßenlampe dunkel, Bereich unsicher (Isarstraße/Gewerbegebiet, Rosenheim):\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Gefahrenbereich mit Warnleuchten oder Pylonen absichern, besonders bei hoher Verkehrsexposition und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf offensichtliche Schäden, Vandalismus oder lose Teile prüfen.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Lampe auf Stromversorgung und Leuchtmittel kontrollieren.\n   - Prüfen, ob Sicherung oder Schaltkasten zugänglich und intakt.\n   - Foto vom Defekt machen (Foto laut Workflow vorhanden, ggf. ergänzen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen in der App/Checkliste festhalten.\n   - Standort (OSM: n4465173757, Isarstraße/Gewerbegebiet) und Zeit dokumentieren.\n   - Foto anhängen.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, Nacht, viel Verkehr): Meldung an Leitstelle/Kollegen zur schnellen Reparatur.\n   - Falls Ursache nicht vor Ort behebbar: Störung als „dringend“ kennzeichnen.\n\n**Rückfrage:**  \nIst Zugang zum Schaltkasten möglich oder gibt es Hinweise auf Vandalismus?  \nFalls nicht, bitte kurz bestätigen, damit die Eskalation direkt erfolgen kann.",
+    "tokens_estimate_words": 153
   },
   "judge": {
     "test_id": "INC-LAMP-0025-TC3",
-    "missing_elements": [
-      "judge_block_missing_fallback"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
+      "safety_first": true,
+      "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: Severity=high wird durch Absicherung und dringende Eskalation adressiert, alle Kontextfaktoren (night, traffic_exposure, poor_visibility) fließen ein, Dokumentation klar strukturiert."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.545
+    "runtime_seconds": 4.097
   },
   "error": {}
 }

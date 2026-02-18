@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0004-TC2",
-  "timestamp": "2026-02-18T16:56:29",
+  "timestamp": "2026-02-18T17:38:58",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,17 +56,17 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Straßenlampenausfall – Happinger Hof\n\n1. **Absicherung**\n   - Warnbaken oder reflektierende Absperrungen aufstellen, falls möglich.\n   - Bürger informieren, falls Bereich besonders unsicher wirkt.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z.B. Glasbruch, Kabel sichtbar)?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schaltet die Lampe bei manueller Betätigung oder Reset?\n   - Prüfen, ob Stromversorgung oder Steuerung gestört ist (Hinweis: Connectivity ist spotty).\n   - Wetterbedingungen (Nebel) können Einfluss haben, aber vermutlich nicht Ursache.\n\n4. **Dokumentation**\n   - Foto der Lampe und Umgebung aufnehmen (Foto liegt vor).\n   - Notieren: Zeitpunkt, Dauer des Ausfalls, Sichtprüfungsergebnisse, Sicherheitsrisiko.\n\n5. **Eskalation**\n   - Meldung an zuständige Wartungsfirma/Techniker mit Verweis auf hohe Dringlichkeit (unsicherer Bereich, Nacht, Nebel).\n   - Bei akuter Gefahr ggf. Polizei oder Ordnungsamt informieren.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls betroffen oder handelt es sich nur um diese eine Lampe?  \nGibt es Hinweise auf Vandalismus oder Bauarbeiten in der Nähe?",
-    "tokens_estimate_words": 156
+    "text": "Checkliste für Straßenlampenausfall – Happinger Hof\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Fußgänger gefährdet sind.\n   - Bei schlechter Sicht (Nebel, Nacht) ggf. mobile Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Vandalismus oder lose Teile kontrollieren.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Lampe direkt am Mast testen (z.B. Sicherung, Schalter).\n   - Bei spotty Connectivity: Verbindung zum Steuergerät prüfen.\n   - Foto vom Zustand anfertigen (falls noch nicht geschehen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen, Maßnahmen und Fotos im System erfassen.\n   - Standort (Happinger Hof, Koordinaten) und Zeit der Prüfung notieren.\n\n5. **Eskalation**\n   - Bei hoher Sicherheitsrelevanz sofort an Bereitschaftsdienst/Störungsstelle melden.\n   - Dringlichkeit betonen (unsicherer Bereich, Nacht, Nebel).\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nIst eine schnelle Reparatur vor Ort möglich, oder muss ein Elektriker angefordert werden?",
+    "tokens_estimate_words": 147
   },
   "judge": {
     "test_id": "INC-LAMP-0004-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 3
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -75,14 +75,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=spotty)",
-      "Severity=high nicht explizit priorisiert"
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
     ],
-    "short_justification": "Gute Integration von Umgebungsfaktoren (Nacht, Nebel, poor_visibility) und Eskalation. Spotty connectivity wird erwähnt, aber kein Offline-Workflow beschrieben."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, Warnbaken, mobile Beleuchtung), severity=high adressiert, Eskalation klar. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). Standortname korrekt genutzt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.505
+    "runtime_seconds": 3.806
   },
   "error": {}
 }

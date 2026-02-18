@@ -14,17 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Umgebungsinformationen verfügbar, daher generisch gehalten"
-    ],
-    "short_justification": "Solide generische Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID bekannt. Sicherheit könnte spezifischer sein (z.B. Verkehrslage), aber bei L0 angemessen."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalationskriterien. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt. S=3, da keine akute Gefahrensituation erkennbar."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -35,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontextgerechte Sicherheitsmaßnahmen (Nebel, Nacht, mittlerer Verkehr), strukturierte Diagnose, klare Eskalation, sinnvolle Rückfragen. Alle Kontextinformationen korrekt genutzt."
+    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel+poor_visibility wird in Absicherung adressiert, severity=medium führt zu angemessener Eskalation. Strukturiert, nachvollziehbar dokumentiert, keine Spekulation."
   },
   {
     "test_id": "INC-LAMP-0002-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Kompakt, kontextbezogen (Nebel, Nacht, Verkehr), klare Schrittfolge, Foto-Workflow integriert, sinnvolle Eskalation und Rückfragen. Keine Halluzinationen, alle Kontextinformationen korrekt verarbeitet."
+    "short_justification": "Präzise Kontextintegration (Nacht, Nebel, mittlere Verkehrsbelastung in Absicherung), klare Handlungsschritte, photo_available korrekt als Workflow-Hinweis genutzt. Dokumentation und Eskalation vollständig, keine Halluzinationen."
   }
 ]

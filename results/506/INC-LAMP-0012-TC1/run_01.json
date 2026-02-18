@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0012-TC1",
-  "timestamp": "2026-02-18T16:59:06",
+  "timestamp": "2026-02-18T17:41:42",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für die Störungsbearbeitung – Asset n12520338291\n\n1. Absicherung  \n– Bereich um die Straßenlampe absichern (z. B. Warnbaken, Absperrband), falls erhöhte Unfallgefahr besteht.  \n– Bei stark frequentierten oder schlecht einsehbaren Bereichen ggf. Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n– Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, Kabel sichtbar, Mast beschädigt)?  \n– Prüfen, ob weitere Lampen in unmittelbarer Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n– Notieren: Lampe seit ca. 20 Minuten dunkel, keine offensichtlichen Schäden gemeldet.  \n– Mögliche Ursachen: Stromausfall, Defekt Leuchtmittel, Steuerungsausfall.\n\n4. Dokumentation  \n– Asset-ID, Zeitpunkt, Dauer der Dunkelheit, Sicherheitsrisiko (unsicherer Bereich), Sichtprüfungsergebnis dokumentieren.\n\n5. Eskalation  \n– Meldung an zuständige Wartungsfirma/Techniker mit Hinweis auf Sicherheitsrisiko und schnelle Bearbeitung.  \n– Bei akuter Gefährdung: Sofortige Eskalation an Einsatzleitung/Notdienst.\n\nRückfrage:  \nIst der Bereich stark frequentiert (Fußgänger, Verkehr)? Gibt es weitere Lampen, die ebenfalls betroffen sind?  \nBitte ggf. Fotos oder genauere Standortbeschreibung bereitstellen.",
-    "tokens_estimate_words": 143
+    "text": "Absicherung  \n– Bereich um die Straßenlampe absichern, ggf. Warnbaken oder Absperrband aufstellen.  \n– Passanten auf die Dunkelheit aufmerksam machen, falls möglich.\n\nSichtprüfung  \n– Sichtkontrolle der Lampe: Ist das Leuchtmittel beschädigt? Sind Kabel oder Mast sichtbar beschädigt?  \n– Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n\nDiagnose/Beobachtung  \n– Notieren: Lampe seit ca. 20 Minuten dunkel, Asset-ID n12520338291.  \n– Prüfen, ob Stromausfall vorliegt oder ob nur diese Lampe betroffen ist.\n\nDokumentation  \n– Alle Beobachtungen schriftlich festhalten (Datum, Uhrzeit, Asset-ID, Umgebung, Sicherheitsrisiko).  \n– Fotos vom Bereich und der Lampe machen, falls möglich.\n\nEskalation  \n– Meldung an die zuständige Wartungsstelle/Leitstelle mit allen Details und Hinweis auf unsicheren Bereich.  \n– Dringlichkeit betonen, da Sicherheitsrisiko besteht.\n\nFehlende Informationen:  \n– Gibt es weitere Lampen in unmittelbarer Nähe, die ebenfalls ausgefallen sind?  \n– Gibt es Hinweise auf Vandalismus oder Unfall?  \nBitte ergänzen, falls möglich.",
+    "tokens_estimate_words": 138
   },
   "judge": {
     "test_id": "INC-LAMP-0012-TC1",
@@ -49,12 +49,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt und keine Offline-Workflows erwartet werden können."
+    "missing_elements": [
+      "Keine Warnweste erwähnt trotz unsicherem Bereich",
+      "Keine Priorisierung bei akuter Gefährdung"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber Warnweste fehlt. Keine Halluzinationen bei minimalem Context."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.314
+    "runtime_seconds": 3.307
   },
   "error": {}
 }

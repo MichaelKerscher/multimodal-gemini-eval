@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0023-TC3",
-  "timestamp": "2026-02-18T17:02:46",
+  "timestamp": "2026-02-18T17:45:18",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -248,8 +248,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für dunklen Abschnitt (Straßenbeleuchtung, Standort n13293397459)**\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial aufstellen (z. B. Leitkegel), besonders bei hohem Verkehrsaufkommen und schlechter Sicht.\n   - Bei Sturm: Vorsicht wegen herabfallender Äste/Gegenstände.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen und Umgebung: Sind mehrere Lampen betroffen? Gibt es sichtbare Schäden (z. B. Mast verbogen, Kabel lose)?\n   - Prüfen, ob Stromversorgung/Kabel beschädigt sind.\n   - Wetterlage beachten: Sturm kann zu temporären Ausfällen führen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob alle Lampen im Abschnitt betroffen sind oder nur einzelne.\n   - Foto vom Zustand machen (offline speichern).\n   - Notieren, ob Ausfall durch Sturm verursacht sein könnte (z. B. umgestürzte Bäume, lose Leitungen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen lokal in der App/auf dem Gerät dokumentieren (offline-Modus).\n   - Foto(s) lokal sichern.\n   - Standort, Zeit, betroffene Lampen/Masten, Sichtprüfung und mögliche Ursachen festhalten.\n\n5. **Eskalation**\n   - Bei hohem Verkehrsrisiko und kompletter Dunkelheit: Sofortige Meldung an Leitstelle/Bauhof (offline, ggf. telefonisch).\n   - Bei Gefahr durch lose Kabel oder Mast: Bereich absperren und Notdienst verständigen.\n   - Synchronisierung der Dokumentation/Fotos nach Wiederherstellung der Konnektivität.\n\n**Rückfrage:**  \nSind weitere Abschnitte betroffen oder nur dieser Standort? Gibt es Hinweise auf Schäden durch den Sturm (z. B. umgestürzte Bäume, sichtbare Kabel)?",
-    "tokens_estimate_words": 194
+    "text": "**Checkliste für die Prüfung – Dunkler Abschnitt (Straßenbeleuchtung), Standort n13293397459**\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Bereich mit hoher Verkehrsexposition und schlechter Sicht: Absperrung/Warndreieck aufstellen, ggf. Kollegen informieren.\n   - Wetterlage (Sturm): Vorsicht bei Arbeiten im Freien, ggf. Einsatz verschieben, falls Gefahr besteht.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampenreihe: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Zustand der Masten, Leuchten und Verkabelung prüfen (Sturmschäden, lose Teile, Fremdkörper).\n   - Foto vom betroffenen Abschnitt machen (offline speichern).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Sicherungen/Schaltkasten zugänglich und intakt sind.\n   - Sichtbare Schäden oder Ausfälle dokumentieren (z.B. Mast umgeknickt, Kabel abgerissen).\n   - Da Gerät offline: Keine Online-Abfrage möglich, alle Beobachtungen lokal erfassen.\n\n4. **Dokumentation**\n   - Alle Feststellungen (inkl. Fotos) lokal in der App/auf dem Gerät speichern.\n   - Notizen zur Sichtprüfung und Diagnose ergänzen (z.B. Anzahl betroffener Lampen, mögliche Ursache).\n   - Zeitpunkt, Wetter und Verkehrsaufkommen vermerken.\n\n5. **Eskalation**\n   - Bei hohem Sicherheitsrisiko (dunkler Abschnitt, viel Verkehr, schlechte Sicht): Sofortige Meldung an Leitstelle/Notdienst (ggf. telefonisch).\n   - Synchronisation der Dokumentation sobald wieder online möglich.\n   - Falls Gefahr durch Sturm besteht: Einsatz abbrechen und Gefahrenstelle absichern, Leitstelle informieren.\n\n**Rückfrage:**  \nSind weitere Details zum betroffenen Abschnitt bekannt (z.B. Länge, Anzahl Lampen, Zugang zum Schaltkasten)?  \nIst eine sofortige Reparatur möglich oder muss eine Fachfirma hinzugezogen werden?",
+    "tokens_estimate_words": 207
   },
   "judge": {
     "test_id": "INC-LAMP-0023-TC3",
@@ -267,11 +267,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Offline-Workflow explizit (lokal dokumentieren/synchronisieren), Sturm/Verkehr/Sicht berücksichtigt, klare Eskalation, keine Halluzinationen. Vollständig rubrik-konform."
+    "short_justification": "Vollständige, kontextgerechte Antwort: Offline-Workflow explizit adressiert, Safety-First bei severity=high, klare Eskalation, strukturierte Dokumentation. Keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.741
+    "runtime_seconds": 4.627
   },
   "error": {}
 }

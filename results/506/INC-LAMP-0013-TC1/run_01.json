@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0013-TC1",
-  "timestamp": "2026-02-18T16:59:23",
+  "timestamp": "2026-02-18T17:42:00",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz: Gehäuse beschädigt, mögliche Berührungsgefahr (Asset-ID: n13278610215)\n\n1. Absicherung  \n- Bereich um die beschädigte Straßenlampe sofort mit Absperrband oder Warnbaken sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Unbefugten Zutritt verhindern.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?  \n- Prüfen, ob Kabel oder stromführende Teile sichtbar/frei liegen.\n\n3. Diagnose/Beobachtung  \n- Einschätzung: Ist die Lampe noch in Betrieb?  \n- Gibt es Funkenflug, Geruch nach verbranntem Material oder andere Hinweise auf akute Gefahr?\n\n4. Dokumentation  \n- Fotos der Beschädigung und Absicherung machen.  \n- Asset-ID, Standort und Uhrzeit notieren.  \n- Kurzbeschreibung des Schadens und der Maßnahmen erfassen.\n\n5. Eskalation  \n- Meldung an die zuständige Elektrofachkraft/Technik-Team mit allen Dokumentationen.  \n- Bei akuter Gefahr: Feuerwehr/Polizei informieren.\n\nBitte Rückmeldung, ob weitere Details zum Standort oder zur Schadensursache bekannt sind. Sind stromführende Teile sichtbar oder besteht akute Gefahr?",
-    "tokens_estimate_words": 136
+    "text": "Checkliste für Außendienst – Asset-ID: n13278610215 (Straßenlampe/Ampelanlage)\n\n1. Absicherung  \n- Bereich sofort absperren (Absperrband, Warnbaken).  \n- Warnschilder „Gefahr durch Strom“ aufstellen.  \n- Passanten fernhalten.\n\n2. Sichtprüfung  \n- Gehäuse auf weitere Schäden prüfen (z.B. Risse, offene Kabel, Feuchtigkeit).  \n- Prüfen, ob Bauteile zugänglich oder lose sind.\n\n3. Diagnose/Beobachtung  \n- Einschätzen, ob akute Berührungsgefahr besteht (offene Leitungen, blanke Metallteile).  \n- Notieren, ob die Anlage weiterhin in Betrieb ist oder abgeschaltet werden muss.\n\n4. Dokumentation  \n- Schaden fotografieren (Gesamtansicht & Detail).  \n- Asset-ID, Standort, Uhrzeit, Beschreibung der Gefahrenlage notieren.\n\n5. Eskalation  \n- Meldung an Fachabteilung/Elektrofachkraft: „Gehäuse beschädigt, Berührungsgefahr, Absicherung erfolgt.“  \n- Dringende Reparatur anfordern.\n\nRückfrage:  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es sichtbare Kabel oder blanke Metallteile?  \nBitte kurze Rückmeldung für gezielte Maßnahmen.",
+    "tokens_estimate_words": 124
   },
   "judge": {
     "test_id": "INC-LAMP-0013-TC1",
@@ -50,11 +50,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle relevanten Schritte (Absicherung, Diagnose, Dokumentation, Eskalation) sind präzise und umsetzbar beschrieben."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Absicherung und Eskalation. Alle Schritte nachvollziehbar, keine Spekulation über fehlende Kontextdaten."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.099
+    "runtime_seconds": 3.064
   },
   "error": {}
 }

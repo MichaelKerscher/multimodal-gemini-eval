@@ -1,46 +1,46 @@
 {
   "L0": {
     "n": 30,
-    "mean_runtime": 3.5110666666666663,
-    "mean_R": 3.8666666666666667,
-    "mean_H": 3.8666666666666667,
-    "mean_S": 3.033333333333333,
-    "mean_D": 3.8666666666666667,
-    "mean_K": 4.733333333333333,
+    "mean_runtime": 3.6137333333333332,
+    "mean_R": 4.066666666666666,
+    "mean_H": 4.066666666666666,
+    "mean_S": 3.1666666666666665,
+    "mean_D": 4.066666666666666,
+    "mean_K": 5.0,
     "flag_rates": {
-      "safety_first": 0.9,
-      "escalation_present": 0.9333333333333333,
+      "safety_first": 0.9666666666666667,
+      "escalation_present": 1.0,
       "offline_workflow_mentioned": 0.0,
       "hallucination_suspected": 0.0
     }
   },
   "L2": {
     "n": 30,
-    "mean_runtime": 3.9544333333333332,
-    "mean_R": 4.433333333333334,
-    "mean_H": 4.433333333333334,
-    "mean_S": 4.0,
-    "mean_D": 4.4,
-    "mean_K": 3.6,
+    "mean_runtime": 3.7607,
+    "mean_R": 4.766666666666667,
+    "mean_H": 4.766666666666667,
+    "mean_S": 4.433333333333334,
+    "mean_D": 4.566666666666666,
+    "mean_K": 4.0,
     "flag_rates": {
-      "safety_first": 0.9333333333333333,
-      "escalation_present": 0.9333333333333333,
-      "offline_workflow_mentioned": 0.16666666666666666,
-      "hallucination_suspected": 0.03333333333333333
+      "safety_first": 1.0,
+      "escalation_present": 1.0,
+      "offline_workflow_mentioned": 0.23333333333333334,
+      "hallucination_suspected": 0.06666666666666667
     }
   },
   "L2B": {
     "n": 30,
-    "mean_runtime": 4.133766666666667,
-    "mean_R": 4.733333333333333,
-    "mean_H": 4.733333333333333,
-    "mean_S": 4.266666666666667,
-    "mean_D": 4.733333333333333,
-    "mean_K": 4.7,
+    "mean_runtime": 4.421133333333334,
+    "mean_R": 5.0,
+    "mean_H": 5.0,
+    "mean_S": 4.6,
+    "mean_D": 5.0,
+    "mean_K": 5.0,
     "flag_rates": {
-      "safety_first": 0.9333333333333333,
-      "escalation_present": 0.9333333333333333,
-      "offline_workflow_mentioned": 0.7,
+      "safety_first": 1.0,
+      "escalation_present": 1.0,
+      "offline_workflow_mentioned": 0.6666666666666666,
       "hallucination_suspected": 0.0
     }
   }

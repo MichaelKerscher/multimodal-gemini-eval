@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0005-TC2",
-  "timestamp": "2026-02-18T16:56:48",
+  "timestamp": "2026-02-18T17:39:17",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für die Prüfung des dunklen Abschnitts (Standort: 47.8573976, 12.1307195):\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n   - Bereich vor Ort absichern, besonders wegen mittlerem Verkehrsaufkommen und schlechter Sicht (Nebel, Dämmerung).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen/Ampelanlagen im Abschnitt.\n   - Prüfen, ob Lampen beschädigt, verschmutzt oder ausgeschaltet sind.\n   - Beachten: Keine Fotos verfügbar, daher vor Ort besonders aufmerksam sein.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (ggf. mit Prüfgerät).\n   - Bei mehreren Lampen-Ausfällen: Möglicher Fehler im Stromnetz oder Steuerung.\n   - Einzelne Lampe: Defekt an Leuchtmittel oder Vorschaltgerät.\n   - Hinweis: Gerät vor Ort hat niedrigen Batteriestand und schlechte Verbindung – Diagnose ggf. manuell dokumentieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen schriftlich festhalten (Datum, Uhrzeit, Standort, betroffene Lampen).\n   - Skizze oder Notizen zur Ausdehnung des Ausfalls.\n   - Mängel und Gefahren (z. B. schlechte Sicht, Nebel) besonders hervorheben.\n\n5. **Eskalation**\n   - Bei mehreren Lampen oder Gefahr für Verkehr: Störungsdienst informieren.\n   - Bei Einzeldefekt: Reparaturauftrag an zuständige Stelle weiterleiten.\n   - Rückmeldung an Bürger, falls Kontakt möglich.\n\n**Rückfrage:**  \nSind weitere Details zum betroffenen Abschnitt bekannt (z. B. Anzahl der Lampen, genaue Länge)? Gibt es vor Ort Hinweise auf Bauarbeiten oder andere Störungen?",
-    "tokens_estimate_words": 189
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Bereich mit Warnbaken oder Leuchten sichern, besonders wegen mittlerem Verkehrsaufkommen und schlechter Sicht (Nebel, Dämmerung).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen entlang des Abschnitts (Standort: 47.8573976, 12.1307195).\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Auf offensichtliche Schäden (z.B. Kabel, Mast, Leuchtmittel) achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Lampen, sofern möglich.\n   - Beachten: Gerät vor Ort hat niedrigen Batteriestand und schlechte Konnektivität – ggf. manuelle Prüfung bevorzugen.\n   - Prüfen, ob Stromversorgung oder Steuerung ausgefallen ist.\n   - Wetter (Nebel) kann Sicht einschränken – ggf. Taschenlampe nutzen.\n\n4. **Dokumentation**\n   - Notieren: Anzahl und Position der ausgefallenen Lampen.\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei größerem Ausfall oder Gefahr für Verkehrsteilnehmer sofort an Leitstelle melden.\n   - Bei geringer Gefährdung: Reparaturauftrag an zuständige Stelle weiterleiten.\n   - Hinweis: Bürger hat gemeldet, daher Rückmeldung nach Abschluss sinnvoll.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder Bauarbeiten im Bereich?  \n\nBitte um kurze Rückmeldung, damit die weitere Vorgehensweise abgestimmt werden kann.",
+    "tokens_estimate_words": 190
   },
   "judge": {
     "test_id": "INC-LAMP-0005-TC2",
@@ -66,23 +66,20 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
-      "Batterie-Warnung erwähnt, aber keine Handlungsempfehlung dazu"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, mittlerer Verkehr, kein Foto). Absicherung und Dokumentation sehr gut. Offline-Workflow fehlt bei spotty connectivity – K=3."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Workflow implizit erwähnt ('manuelle Prüfung bevorzugen'), Safety-Maßnahmen angemessen, klare Struktur."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.781
+    "runtime_seconds": 3.748
   },
   "error": {}
 }

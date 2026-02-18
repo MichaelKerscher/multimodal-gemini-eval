@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0005-TC3",
-  "timestamp": "2026-02-18T16:56:48",
+  "timestamp": "2026-02-18T17:39:17",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -236,8 +236,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für dunklen Abschnitt (Straßenbeleuchtung, Standort n13293404153):\n\n1. **Absicherung**\n   - Warnweste anziehen.\n   - Absperrmaterial bereitstellen (bei mittlerem Verkehrsaufkommen).\n   - Gefahrenbereich markieren, ggf. Warnleuchte aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Sicht auf Beschädigungen, lose Kabel, Vandalismus oder Feuchtigkeitseintritt.\n   - Umgebung beachten: Sicht durch Nebel eingeschränkt, Dämmerung.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Leuchten komplett aus oder nur schwach leuchten.\n   - Notieren, ob Stromversorgung offensichtlich gestört (z.B. Sicherungskasten, Mast).\n   - Keine Online-Abfragen möglich (Gerät: spotty Verbindung), Fotos lokal speichern.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen lokal in der App erfassen.\n   - Standort, Zeit, betroffene Lampen, Sichtprüfungsergebnisse dokumentieren.\n   - Fotos machen und lokal sichern (später synchronisieren).\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr (z.B. Kreuzung, Schulweg): Sofort an Leitstelle melden.\n   - Bei geringer Gefährdung: Störmeldung an zuständige Stelle weiterleiten, Reparatur anstoßen.\n   - Hinweis: Batterie des Techniker-Geräts ist niedrig – ggf. Ersatzgerät bereithalten.\n\n**Rückfrage:**  \nSind mehrere Lampen betroffen oder nur eine? Gibt es Hinweise auf akute Gefährdung (z.B. Unfallstelle, stark frequentierter Bereich)?",
-    "tokens_estimate_words": 166
+    "text": "**Checkliste für Prüfung – Dunkler Abschnitt (Straßenbeleuchtung, Standort n13293404153)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (bei Bedarf, z. B. bei hoher Verkehrsexposition).\n   - Sichtbarkeit prüfen: Dämmerung, Nebel, mittleres Verkehrsaufkommen → erhöhte Vorsicht.\n   - Standort sichern, ggf. Warnleuchte aufstellen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampen: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Prüfen auf offensichtliche Schäden (z. B. Mast, Leuchte, Verkabelung).\n   - Umgebung beachten: Gibt es Hindernisse, die den Zugang erschweren?\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schaltet die Beleuchtung bei manueller Betätigung ein?\n   - Prüfen, ob Stromversorgung vorhanden (z. B. Sicherungskasten, Schaltschrank).\n   - Notieren, ob Ausfall auf gesamte Reihe oder einzelne Leuchten begrenzt ist.\n   - Wetter und Sichtverhältnisse dokumentieren (Nebel, Dämmerung → schlechte Sicht).\n\n4. **Dokumentation**\n   - Offline dokumentieren (Gerät hat spotty connectivity): Fotos lokal speichern, Notizen erfassen.\n   - Alle Beobachtungen und Maßnahmen festhalten (Datum, Uhrzeit, betroffene Lampen, Standort).\n   - Fehlerbild und mögliche Ursachen notieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei geringer Gefährdung (wie hier, „low severity“): Weiterleitung zur regulären Instandsetzung.\n   - Synchronisation der Dokumentation nach Wiederherstellung der Verbindung.\n\n**Rückfrage:**  \nSind mehrere Lampen entlang des Abschnitts betroffen oder nur eine? Gibt es Hinweise auf Vandalismus oder Bauarbeiten vor Ort?  \nBitte ggf. ergänzen, damit die Diagnose gezielt erfolgen kann.",
+    "tokens_estimate_words": 208
   },
   "judge": {
     "test_id": "INC-LAMP-0005-TC3",
@@ -255,11 +255,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt (lokal speichern, später synchronisieren), Batterie-Warnung mit Handlungsempfehlung, alle Umgebungsfaktoren berücksichtigt. Keine Halluzinationen."
+    "short_justification": "Perfekte Kontextintegration inkl. explizitem Offline-Workflow ('Offline dokumentieren', 'Fotos lokal speichern', 'Synchronisation nach Wiederherstellung'). Alle Umgebungsfaktoren berücksichtigt, klare Handlungsanweisungen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.648
+    "runtime_seconds": 4.556
   },
   "error": {}
 }

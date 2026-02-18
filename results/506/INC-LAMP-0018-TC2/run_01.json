@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0018-TC2",
-  "timestamp": "2026-02-18T17:01:05",
+  "timestamp": "2026-02-18T17:43:42",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,15 +56,15 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Steuerungsproblem – Segment fällt zeitgleich aus**\n\n1. **Absicherung**\n   - Warnbaken und Absperrmaterial bereitstellen.\n   - Bereich um die Steuerungsbox und betroffene Lampen/Ampeln sichern.\n   - Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): Warnwesten tragen, zusätzliche Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Steuerungsbox und Verkabelung durchführen.\n   - Prüfen, ob äußere Schäden, Manipulation oder Feuchtigkeit sichtbar sind.\n   - Segment (betroffene Lampen/Ampeln) auf gleichzeitigen Ausfall prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Steuerungsbox öffnen (nur mit Berechtigung).\n   - Statusanzeigen und Sicherungen kontrollieren.\n   - Verbindung zu Online-System prüfen (laut Daten: Gerät online, Zustand ok).\n   - Annahme: Fehler liegt nicht am Endgerät, sondern an der Steuerung.\n   - Bei fehlender Sicht auf Ursache: Rückfrage, ob weitere Segmente betroffen sind oder ob vor Kurzem Wartungsarbeiten stattfanden.\n\n4. **Dokumentation**\n   - Vorfall und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Beteiligte).\n   - Fotos machen (wenn möglich).\n   - Fehlerbeschreibung und Sichtprüfung dokumentieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für Verkehrsteilnehmer: Meldung an Fachbereich Elektrotechnik/IT.\n   - Bei mittlerer Schwere: Priorisierte Weiterleitung an Wartungsteam.\n   - Bürger informieren (z.B. über lokale App oder Webseite).\n\n**Rückfrage:**  \nSind weitere Segmente betroffen oder gab es kürzlich Wartungsarbeiten am Steuerungssystem?  \nFehlt eine Information zur genauen Steuerungsbox (Typ/Hersteller)?",
-    "tokens_estimate_words": 189
+    "text": "Checkliste für Steuerungsproblem (Segment fällt zeitgleich aus):\n\n1. **Absicherung**\n   - Warnbaken und Absperrband aufstellen.\n   - Warnleuchte nutzen, besonders bei schlechter Sicht (Nacht, Nebel).\n   - Verkehrsteilnehmer informieren, ggf. Polizei verständigen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Steuerbox und betroffenen Lampen/Ampeln.\n   - Prüfen auf offensichtliche Schäden, Manipulation oder Feuchtigkeit.\n   - Umfeld auf weitere Gefahren (z.B. lose Kabel) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Steuerbox öffnen, auf Fehlermeldungen oder ungewöhnliche Geräusche achten.\n   - Prüfen, ob Segment komplett stromlos oder nur Steuerung betroffen.\n   - Verbindung zur Zentrale testen (laut Gerät online).\n   - Annahme: Steuerbox-Fehler, da Segment synchron ausfällt.\n\n4. **Dokumentation**\n   - Vorfall mit Zeit, Ort, Wetter und Sichtverhältnissen protokollieren.\n   - Fotos machen (falls möglich), Details notieren.\n   - Meldung im System erfassen.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Fachfirma/Techniker verständigen.\n   - Bei mittlerer Schwere und schlechter Sicht: schnelle Reparatur priorisieren.\n   - Bürger über Stand informieren.\n\n**Rückfrage:**  \nSind weitere Segmente betroffen oder nur dieses? Gibt es Zugang zur Steuerbox für eine tiefergehende Diagnose?",
+    "tokens_estimate_words": 156
   },
   "judge": {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, mittlere Verkehrsexposition) mit angepassten Sicherheitsmaßnahmen. Klare Diagnose-Logik, vollständige Dokumentation und angemessene Eskalation bei medium severity."
+    "short_justification": "Exzellente Antwort: Nacht+Nebel+poor_visibility korrekt adressiert, Severity=medium mit angemessener Eskalation, alle Context-Elemente sinnvoll integriert, keine Halluzinationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.287
+    "runtime_seconds": 3.41
   },
   "error": {}
 }

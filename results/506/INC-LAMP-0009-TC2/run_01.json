@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC2",
-  "timestamp": "2026-02-18T16:58:08",
+  "timestamp": "2026-02-18T17:40:43",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,30 +56,32 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Flackern bei Regen  \nStandort: Rosenheim, Endorfer Au / Krones  \nFehlerbild: Flackern, vor allem bei Regen, Sicht schlecht, wenig Verkehr\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (z. B. Leitkegel).\n   - Bei Dämmerung und Regen besonders auf Sichtbarkeit achten.\n   - Umfeld auf Verkehr prüfen, ggf. Absicherung aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf Wassereintritt, Beschädigungen oder lose Teile kontrollieren.\n   - Anschlusskasten auf Feuchtigkeit prüfen.\n   - Prüfen, ob Flackern aktuell sichtbar ist (ggf. bei Regen gezielt beobachten).\n\n3. **Diagnose/Beobachtung**\n   - Typisches Flackern bei Regen deutet auf Feuchtigkeit im System hin (z. B. Dichtung defekt, Kabel beschädigt).\n   - Gerät ist offline – keine Ferndiagnose möglich.\n   - Prüfen, ob weitere Lampen betroffen sind (Streckenprüfung).\n   - Sichtkontrolle der Verkabelung und Kontakte.\n\n4. **Dokumentation**\n   - Fehlerbild und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Sicht).\n   - Fotos machen, falls möglich (auch bei schlechtem Wetter).\n   - Notieren, ob Flackern nur bei Regen auftritt oder auch bei Trockenheit.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Stromschlag: Sofortige Meldung an Fachfirma/Elektriker.\n   - Bei geringer Dringlichkeit: Reparaturauftrag an zuständige Stelle weiterleiten.\n   - Hinweis: Da Gerät offline, vor Ort Diagnose notwendig.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder nur diese eine?  \nWurde das Flackern auch bei Trockenheit beobachtet?  \nIst Zugang zum Anschlusskasten möglich?",
-    "tokens_estimate_words": 210
+    "text": "Checkliste für das Vorgehen bei Flackern der Straßenlampe (Rosenheim, Endorfer Au / Krones):\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Bereich mit Pylonen oder Warnleuchten absichern, besonders bei schlechter Sicht und Regen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Kabel prüfen.\n   - Prüfen, ob Wasser in das Lampengehäuse gelangt ist (häufige Ursache bei Regen).\n\n3. **Diagnose/Beobachtung**\n   - Flackern tritt nur bei Regen auf: Vermutung auf Feuchtigkeitseintritt oder Kontaktproblem.\n   - Gerät ist offline, Zustand laut System „ok“ – keine Fernwartung möglich.\n   - Prüfen, ob weitere Lampen in der Umgebung betroffen sind.\n\n4. **Dokumentation**\n   - Vor Ort Fotos machen (falls möglich).\n   - Notieren: Zeitpunkt, Wetter, Sichtverhältnisse, beobachtete Schäden.\n   - Meldung im System erfassen.\n\n5. **Eskalation**\n   - Bei Verdacht auf Feuchtigkeitseintritt: Elektriker oder Fachfirma zur Prüfung und Abdichtung beauftragen.\n   - Bei weiteren betroffenen Lampen: Sammelmeldung an zuständige Stelle.\n\n**Rückfrage:**  \nIst das Lampengehäuse bereits geöffnet worden oder gibt es Hinweise auf frühere Reparaturen?  \nFalls nicht, bitte Zugang und Werkzeug für eine Innenprüfung bereitstellen.",
+    "tokens_estimate_words": 163
   },
   "judge": {
     "test_id": "INC-LAMP-0009-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 3,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Umweltbedingungen (Dämmerung, Regen, schlechte Sicht) berücksichtigt, klare Eskalation und Dokumentation. Alle Kontextinformationen sinnvoll genutzt."
+    "missing_elements": [
+      "Offline-Workflow explizit erwähnen (lokal dokumentieren, später synchronisieren)"
+    ],
+    "short_justification": "Gute Struktur und Sicherheitsfokus. Offline-Status wird erkannt ('keine Fernwartung möglich'), aber kein expliziter Offline-Workflow beschrieben. K=3 wegen fehlender Offline-Handlungsanweisung trotz connectivity=offline."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.212
+    "runtime_seconds": 3.591
   },
   "error": {}
 }

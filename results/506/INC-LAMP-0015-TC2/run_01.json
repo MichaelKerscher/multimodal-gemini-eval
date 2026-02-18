@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0015-TC2",
-  "timestamp": "2026-02-18T17:00:04",
+  "timestamp": "2026-02-18T17:42:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,32 +56,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (n13293431103) dunkel, Bereich unsicher:\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, um den Gefahrenbereich zu kennzeichnen.\n   - Bei hohem Verkehrsaufkommen: Warnweste tragen, ggf. Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Bruch, Vandalismus, lose Kabel).\n   - Umgebung auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden ist (z.B. durch Testgerät).\n   - Kontrollieren, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n   - Gerät laut System online und Zustand „ok“ – Fehler wahrscheinlich am Leuchtmittel oder Schaltgerät.\n\n4. **Dokumentation**\n   - Foto vom defekten Bereich und der Lampe machen (falls noch nicht geschehen).\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Standort, Gefahrenlage).\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofortige Meldung an die Leitstelle/Technik.\n   - Reparaturauftrag mit Priorität „hoch“ auslösen.\n   - Bürger über voraussichtliche Reparatur informieren (falls möglich).\n\n**Rückfrage:**  \nIst bereits eine Absicherung erfolgt oder wird Unterstützung vor Ort benötigt?  \nSind weitere Lampen in der Umgebung betroffen?",
-    "tokens_estimate_words": 164
+    "text": "Checkliste für Straßenlampenausfall (hohe Verkehrsexposition, schlechte Sicht):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen.\n   - Bereich um die Lampe absichern, besonders bei hohem Verkehrsaufkommen.\n   - Warnhinweis für Fußgänger und Verkehrsteilnehmer anbringen.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf Beschädigungen, lose Teile oder Vandalismus kontrollieren.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist laut System online und Zustand ok – Stromversorgung prüfen.\n   - Sicherungen, Verkabelung und Lampenfassung inspizieren.\n   - Foto des Ausfalls dokumentieren (liegt vor).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen protokollieren.\n   - Foto und Standortdaten dem Bericht anhängen.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort Techniker und ggf. Polizei informieren.\n   - Reparaturauftrag mit Priorität „hoch“ auslösen.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder nur diese eine? Gibt es Hinweise auf Fremdeinwirkung (z.B. Vandalismus)?",
+    "tokens_estimate_words": 131
   },
   "judge": {
     "test_id": "INC-LAMP-0015-TC2",
-    "missing_elements": [
-      "judge_block_missing_fallback"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
+      "safety_first": true,
+      "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, hohe Verkehrsexposition und schlechte Sicht werden explizit berücksichtigt. Kontextnutzung optimal (device online, Foto vorhanden), keine Spekulationen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.139
+    "runtime_seconds": 3.006
   },
   "error": {}
 }

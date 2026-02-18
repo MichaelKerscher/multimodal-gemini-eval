@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0019-TC2",
-  "timestamp": "2026-02-18T17:01:27",
+  "timestamp": "2026-02-18T17:44:01",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,15 +56,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Straßenlampenausfall (Standort: 47.8552359, 12.1220818, Sicht schlecht, Nebel, Nacht, mittlerer Verkehr):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Bereich direkt an Fahrbahn liegt.\n   - Reflexwesten tragen.\n   - Bei mittlerem Verkehr: ggf. Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Vandalismus, Kabel, Feuchtigkeit).\n   - Umgebung auf weitere dunkle Lampen kontrollieren (Cluster-Ausfall?).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung vorhanden (andere Lampen in Nähe leuchten?).\n   - Gerät laut System online, Zustand „ok“ – Fehler vermutlich Leuchtmittel oder Steuerung.\n   - Wetter: Nebel, schlechte Sicht – erhöhte Unfallgefahr.\n\n4. **Dokumentation**\n   - Ausfall, Sichtverhältnisse, Verkehrslage und ggf. Absicherungsmaßnahmen notieren.\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n\n5. **Eskalation**\n   - Meldung an Wartungsdienst mit Priorität „mittel“ wegen Unsicherheitsgefühl und Sicht.\n   - Bei Cluster-Ausfall oder Gefahr: Priorität „hoch“, sofortige Reparatur anfordern.\n\n**Rückfrage:**  \nSind weitere Lampen betroffen oder nur diese eine? Gibt es Hinweise auf Vandalismus oder technische Störungen (z.B. Geräusche, sichtbare Schäden)?",
-    "tokens_estimate_words": 154
+    "text": "Checkliste für Straßenlampenausfall (Standort: 47.8552359, 12.1220818, Sicht schlecht, mittlerer Verkehr, Nebel):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls der Bereich stark frequentiert ist.\n   - Warnwesten tragen, um Sichtbarkeit zu erhöhen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Kabel, Lampenkopf, Mastfuß).\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden (z.B. Kontrollleuchte, Sicherungskasten).\n   - Nachfragen: Ist die Lampe Teil einer Kette? Sind weitere Lampen betroffen?\n   - Gerät laut System online und Zustand „ok“ – Fehler vermutlich am Leuchtmittel oder Anschluss.\n\n4. **Dokumentation**\n   - Ausfall, Sichtverhältnisse, Verkehrslage und Wetter (Nebel) notieren.\n   - Fotos machen, falls möglich (derzeit nicht verfügbar).\n   - Zeitpunkt und Dauer des Ausfalls festhalten.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsfirma mit Hinweis auf mittlere Gefährdung und schlechte Sicht.\n   - Priorität erhöhen wegen Unsicherheit im Bereich und Nebel.\n\n**Rückfrage:** Gibt es Hinweise auf weitere Ausfälle in der Umgebung oder besondere Gefahrenstellen (z.B. Fußgängerüberweg, Bushaltestelle)?",
+    "tokens_estimate_words": 159
   },
   "judge": {
     "test_id": "INC-LAMP-0019-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlerer Verkehr, schlechte Sicht). Klare Sicherheitsmaßnahmen, strukturierte Schritte, präzise Dokumentation und angemessene Eskalation bei Cluster-Ausfall."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlerer Verkehr). Alle Sicherheitsaspekte (Warnweste, Absicherung), klare Eskalation mit Prioritätsbegründung, vollständige Dokumentation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.498
+    "runtime_seconds": 3.348
   },
   "error": {}
 }

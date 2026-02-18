@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt und keine unbegründeten Annahmen getroffen werden."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
   },
   {
     "test_id": "INC-LAMP-0027-TC2",
@@ -23,26 +23,26 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
+      "D": 3,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht ausreichend konkret beschrieben"
+      "Offline-Workflow bei spotty connectivity nicht erwähnt"
     ],
-    "short_justification": "Gute Struktur und Kontextnutzung (traffic_exposure, spotty connectivity erwähnt). Offline-Workflow wird angedeutet ('spotty Konnektivität prüfen'), aber nicht explizit als Handlungsanweisung formuliert (lokal dokumentieren/später sync)."
+    "short_justification": "Gute Struktur und Safety-Fokus bei high traffic_exposure. Spotty connectivity wird nicht adressiert (lokal dokumentieren/später synchronisieren fehlt)."
   },
   {
     "test_id": "INC-LAMP-0027-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Vollständige Kontextnutzung (spotty connectivity → expliziter Offline-Workflow), klare Safety-Priorisierung bei hohem Verkehr, strukturierte Dokumentation und Eskalation. Keine Halluzinationen, alle Aussagen durch Context gedeckt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('lokal speichern, später synchronisieren'), Safety bei high traffic_exposure, klare Dokumentation und Eskalation. Kontext vollständig genutzt."
   }
 ]

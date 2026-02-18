@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0014-TC2",
-  "timestamp": "2026-02-18T16:59:44",
+  "timestamp": "2026-02-18T17:42:19",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für den Außendienst – Straßenlampe (Ausfall)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Standort sichern (Absperrung falls nötig, besonders bei Arbeiten am Mast).\n   - Umgebung prüfen: Verkehr gering, Sicht gut – keine akute Gefährdung.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich inspizieren: Schäden am Mast, Leuchtmittel, Kabel, Sockel?\n   - Prüfen, ob Fremdkörper, Vandalismus oder Feuchtigkeit sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Lampe bleibt aus, Gerät online und Zustand „ok“ – Stromversorgung prüfen.\n   - Sicherungen, Schaltkasten oder Verbindungskabel kontrollieren.\n   - Annahme: Kein Foto verfügbar, daher keine Detailanalyse möglich.\n\n4. **Dokumentation**\n   - Befund notieren: Lampe leuchtet nicht, keine sichtbaren Schäden, Gerät online.\n   - Zeitpunkt und Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Elektriker oder Fachfirma informieren, falls Stromversorgung oder Leuchtmittel defekt.\n   - Bei Verdacht auf Elektrikproblem: Gefahrenstelle kennzeichnen, Reparatur veranlassen.\n\n**Rückfrage:**  \nSoll vor Ort direkt ein Austausch des Leuchtmittels erfolgen oder ist eine tiefergehende Prüfung der Stromversorgung gewünscht?",
-    "tokens_estimate_words": 141
+    "text": "Checkliste für den Außendienst – Straßenlampe (Ausfall):\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (bei Bedarf).\n   - Standort prüfen: Geringe Verkehrsexposition, Tageslicht, klare Sicht – keine akute Gefährdung, aber trotzdem auf Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich inspizieren: Beschädigungen am Mast, Leuchtmittel, Gehäuse oder Verkabelung?\n   - Umgebung auf mögliche Unfallspuren oder Fremdeinwirkung prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe bleibt komplett dunkel, Gerät online, Zustand ok.\n   - Mögliche Ursachen: Defektes Leuchtmittel, Vorschaltgerät, Sicherung oder Verkabelung.\n   - Keine Foto-Dokumentation vorhanden – vor Ort ggf. ergänzen.\n\n4. **Dokumentation**\n   - Ausfall und Sichtprüfung im Wartungsprotokoll festhalten.\n   - Zeitpunkt, Standort (Koordinaten), Reporter (Patrol), Schweregrad (medium) notieren.\n   - Fotos machen, falls vor Ort möglich.\n\n5. **Eskalation**\n   - Techniker für Austausch/Detaildiagnose anfordern.\n   - Hinweis: Gerät meldet „ok“ und ist online – Fehler vermutlich auf Lampenseite, nicht im Steuergerät.\n   - Bei weiteren Ausfällen in der Umgebung: Sammelmeldung erwägen.\n\n**Rückfrage:**  \nIst die Lampe Teil einer Gruppe (Cluster) oder handelt es sich um einen Einzelstandort? Gibt es Hinweise auf wiederholte Ausfälle an diesem Standort?",
+    "tokens_estimate_words": 165
   },
   "judge": {
     "test_id": "INC-LAMP-0014-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Verkehr gering, Sicht gut, Tag). Klare Struktur, Sicherheit priorisiert, Dokumentation und Eskalation präzise. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (Tageslicht, low traffic, device online), klare Diagnose, strukturierte Dokumentation und passende Eskalation. Rückfrage sinnvoll."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.472
+    "runtime_seconds": 3.991
   },
   "error": {}
 }

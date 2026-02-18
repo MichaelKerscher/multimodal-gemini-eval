@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Kontextinformationen zu Umgebung/Wetter verfügbar, daher keine spezifischen Sicherheitshinweise"
+      "Keine Kontextinformationen zu Umgebung/Zeit vorhanden, daher keine spezifischen Safety-Maßnahmen erwartbar"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Eskalation und Dokumentation. Bei minimalem Kontext (nur Asset-ID) angemessen allgemein gehalten, keine Halluzinationen."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -26,7 +26,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,9 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
     ],
-    "short_justification": "Exzellente Strukturierung mit Nacht/Regen-Anpassungen und klarer Eskalation. Connectivity=spotty wurde nicht berücksichtigt (kein Offline-Workflow), daher K=3."
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility), klare Safety-Priorisierung und strukturierte Eskalation. Offline-Hinweis fehlt trotz spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -55,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit berücksichtigt, Nacht/Regen-Sicherheit betont, klare Eskalation, vollständige Dokumentation. Alle Kontextinformationen korrekt genutzt."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit integriert, Safety-Fokus bei Nacht/Regen, klare Eskalation, vollständige Dokumentation. Alle Kontexthinweise korrekt verarbeitet."
   }
 ]

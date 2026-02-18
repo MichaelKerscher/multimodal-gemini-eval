@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0025-TC2",
-  "timestamp": "2026-02-18T17:03:24",
+  "timestamp": "2026-02-18T17:45:55",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,32 +56,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Straßenlampen-Ausfall – Isarstraße/Gewerbegebiet, Rosenheim\n\n1. **Absicherung**\n   - Bereich sofort absichern, z.B. Warnbaken oder reflektierende Absperrungen aufstellen.\n   - Bei hoher Verkehrsexposition: Polizei oder Ordnungsamt informieren, falls Gefahr besteht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Manipulation oder Vandalismus prüfen.\n   - Umgebung auf weitere Ausfälle oder ungewöhnliche Situationen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, aber Batterie schwach: Vermutlich Stromversorgung/Batterieproblem.\n   - Prüfen, ob andere Lampen betroffen sind.\n   - Foto auswerten (falls verfügbar) für weitere Hinweise.\n\n4. **Dokumentation**\n   - Alle Beobachtungen, Maßnahmen und Fotos im System erfassen.\n   - Zeit, Ort, Beteiligte und Gefahrenlage dokumentieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort Techniker mit Ersatzbatterie/Material anfordern.\n   - Bei akuter Unsicherheit: Polizei/Ordnungsamt zur weiteren Absicherung hinzuziehen.\n\n**Rückfrage:**  \nIst die Lampe Teil einer größeren Ausfallserie oder handelt es sich um einen Einzelfall? Gibt es Hinweise auf Vandalismus oder Manipulation?",
-    "tokens_estimate_words": 137
+    "text": "Checkliste für den Außendienst – Straßenlampe Isarstraße/Gewerbegebiet, Rosenheim\n\n1. **Absicherung**\n   - Warnleuchten oder Absperrmaterial bereitstellen.\n   - Bereich um die Lampe absichern, besonders wegen hoher Verkehrsexposition und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf offensichtliche Schäden, Manipulation oder Gefahren kontrollieren.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist online, meldet aber niedrigen Batteriestand.\n   - Vermutung: Batterieausfall als Ursache.\n   - Foto zur Dokumentation nutzen, ggf. weitere Fotos machen.\n\n4. **Dokumentation**\n   - Alle Schritte, Beobachtungen und Maßnahmen protokollieren.\n   - Foto und Standortdaten sichern.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort Techniker mit Ersatzbatterie und ggf. mobiler Beleuchtung anfordern.\n   - Bürger informieren, falls längere Ausfallzeit zu erwarten ist.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder nur diese eine? Gibt es Hinweise auf Vandalismus oder andere Störungen?",
+    "tokens_estimate_words": 130
   },
   "judge": {
     "test_id": "INC-LAMP-0025-TC2",
-    "missing_elements": [
-      "judge_block_missing_fallback"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
+      "safety_first": true,
+      "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, Kontextnutzung (low_battery, traffic_exposure, night) ist präzise, Dokumentation vollständig."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.0
+    "runtime_seconds": 2.901
   },
   "error": {}
 }

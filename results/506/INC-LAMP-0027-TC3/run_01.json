@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0027-TC3",
-  "timestamp": "2026-02-18T17:04:06",
+  "timestamp": "2026-02-18T17:46:35",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -236,15 +236,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz: Flackern bei Regen (Straßenlampe, OSM-ID: n4939032947)\n\n1. Absicherung\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei hohem Verkehrsaufkommen: Arbeitsbereich mit Pylonen oder Warnleuchten sichern.\n- Wetter beachten: Rutschgefahr durch Regen, ggf. zusätzliche Absicherung.\n\n2. Sichtprüfung\n- Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt, lose Abdeckungen prüfen.\n- Kabelanschlüsse und Gehäuse auf Wasserspuren oder Korrosion kontrollieren.\n- Umgebung: Sind weitere Lampen betroffen? Gibt es Pfützen direkt am Mastfuß?\n\n3. Diagnose/Beobachtung\n- Flackern gezielt beobachten: Tritt es nur bei Regen auf? Intensität und Dauer notieren.\n- Prüfen, ob Feuchtigkeit ins Gehäuse gelangt (Dichtung, Kabeldurchführung).\n- Bei Verdacht auf Wassereintritt: Elektrische Messung (Spannung, Isolationswiderstand) durchführen, nur wenn sicher möglich.\n- Connectivity ist spotty: Alle Beobachtungen und Messwerte lokal dokumentieren, Fotos lokal speichern.\n\n4. Dokumentation\n- Alle Schritte, Beobachtungen und Messwerte offline in der App erfassen.\n- Fotos vom Schaden und Umfeld machen, lokal speichern.\n- Asset-ID, Standort, Zeit, Wetter, eigene Maßnahmen notieren.\n\n5. Eskalation\n- Bei Gefahr für Verkehr oder Personen (z.B. starker Flackereffekt, Mast instabil): Sofortige Meldung an Leitstelle, ggf. Lampe außer Betrieb nehmen.\n- Bei mittlerer Priorität: Reparaturbedarf und Verdacht auf Feuchtigkeitseintritt im System vermerken, Synchronisation nach Wiederherstellung der Verbindung.\n- Rückfrage: Ist ein Zugang zum Schaltschrank oder Mastfuß möglich? Sind Ersatzteile (Dichtungen, Kabel) verfügbar?\n\nHinweis: Flackern bei Regen deutet meist auf Feuchtigkeitseintritt oder defekte Dichtung/Kabel hin. Weitere Details oder Fotos helfen bei der Ursachenklärung. Bitte Rückmeldung, falls Zugang oder Material fehlt.",
-    "tokens_estimate_words": 233
+    "text": "Checkliste für Außendienst-Einsatz – Flackern bei Regen (Straßenlampe, OSM: n4939032947)\n\n1. Absicherung  \n- Warnweste tragen, Absperrmaterial bereitstellen.  \n- Bei hoher Verkehrsexposition: Bereich mit Pylonen sichern, ggf. Warnleuchte aufstellen.  \n- Wetter beachten: Rutschgefahr durch Regen, ggf. rutschfeste Schuhe.\n\n2. Sichtprüfung  \n- Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt, lose Kabel oder Korrosion prüfen.  \n- Lampengehäuse auf Dichtigkeit kontrollieren (Gummidichtung, Verschraubungen).  \n- Umgebung: Pfützen, Wasseransammlungen am Mastfuß, Erdungskabel sichtbar?\n\n3. Diagnose/Beobachtung  \n- Flackern gezielt beobachten: Tritt es nur bei Regen auf?  \n- Prüfen, ob Feuchtigkeit ins Gehäuse gelangt (Wasser im Lampenkörper, Kondenswasser).  \n- Elektrische Anschlüsse auf Festigkeit und Korrosion kontrollieren.  \n- Falls möglich: Lampenfassung und Leuchtmittel auf Feuchtigkeit prüfen.\n\n4. Dokumentation  \n- Alle Beobachtungen (Fotos, Notizen) lokal in der App speichern (Offline-Modus wegen spotty connectivity).  \n- Fehlerbild, Wetterbedingungen, Zeitpunkt, Sicherungsmaßnahmen dokumentieren.  \n- Fotos von betroffenen Stellen (Gehäuse, Kabel, Mastfuß) machen.\n\n5. Eskalation  \n- Bei Verdacht auf Feuchtigkeitseintritt: Austausch der Dichtung oder Gehäuse erforderlich, ggf. Elektriker hinzuziehen.  \n- Bei Korrosion oder Wasserschaden: Meldung an Fachbereich, Reparatur priorisieren.  \n- Dokumentation später synchronisieren, falls vor Ort kein Netz.\n\nRückfrage:  \nIst das Flackern nur bei Regen, oder auch bei hoher Luftfeuchtigkeit ohne Niederschlag zu beobachten? Gibt es Hinweise auf frühere Reparaturen oder bekannte Schwachstellen am Standort?",
+    "tokens_estimate_words": 200
   },
   "judge": {
     "test_id": "INC-LAMP-0027-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -255,11 +255,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Vollständige Kontextnutzung (spotty connectivity → expliziter Offline-Workflow), klare Safety-Priorisierung bei hohem Verkehr, strukturierte Dokumentation und Eskalation. Keine Halluzinationen, alle Aussagen durch Context gedeckt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('lokal speichern, später synchronisieren'), Safety bei high traffic_exposure, klare Dokumentation und Eskalation. Kontext vollständig genutzt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.761
+    "runtime_seconds": 5.0
   },
   "error": {}
 }

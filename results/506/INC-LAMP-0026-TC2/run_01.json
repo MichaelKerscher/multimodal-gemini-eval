@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC2",
-  "timestamp": "2026-02-18T17:03:45",
+  "timestamp": "2026-02-18T17:46:16",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,32 +56,32 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe Römerstraße, Langenpfunzen\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (z. B. Pylonen).\n   - Standort sichern, besonders bei mittlerer Verkehrsexposition und Nebel.\n\n2. **Sichtprüfung**\n   - Lampe auf sichtbare Schäden prüfen (Gehäuse, Kabel, Mast).\n   - Umfeld auf Manipulation oder Vandalismus kontrollieren.\n   - Prüfen, ob Lampe aktuell an/aus ist.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach beobachten: Schaltet sie während des Aufenthalts unregelmäßig?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Da Gerät „offline“, keine Ferndiagnose möglich.\n   - Mögliche Ursachen: Feuchtigkeit, lose Kontakte, defektes Vorschaltgerät, Umwelteinflüsse (Nebel, hohe Luftfeuchte).\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Zeitpunkte, Verhalten, Umgebung).\n   - Fotos machen, falls möglich.\n   - Notieren, ob weitere Lampen betroffen sind.\n\n5. **Eskalation**\n   - Bei weiterhin unklarer Ursache: Meldung an Elektrotechnik-Fachkraft für Tiefendiagnose.\n   - Hinweis: Bei niedriger Störungs-Schwere keine Sofortmaßnahme erforderlich, aber regelmäßige Kontrolle empfohlen.\n\n**Rückfrage:**  \nSind bereits ähnliche Störungen an anderen Lampen im Bereich Römerstraße bekannt? Gibt es Zugang zu Stromverteiler oder Schalteinheit vor Ort?",
-    "tokens_estimate_words": 159
+    "text": "Checkliste für Außendienst – Straßenlampe Römerstraße, Langenpfunzen\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchte).\n   - Bereich um die Lampe sichern, besonders bei mittlerer Verkehrsexposition und hoher Geräuschkulisse.\n\n2. **Sichtprüfung**\n   - Lampe auf sichtbare Schäden prüfen (Gehäuse, Verkabelung, Mast).\n   - Umfeld auf Manipulation oder Vandalismus kontrollieren.\n   - Prüfen, ob Lampe aktuell an oder aus ist.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Wie oft und wann schaltet die Lampe an/aus?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Hinweis: Gerät ist „offline“, aber Zustand „ok“. Mögliche Ursachen: Netzschwankungen, Feuchtigkeit (Nebel), lose Kontakte.\n   - Annahme: Keine Fernwartung möglich, da Gerät offline.\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Zeitpunkt, Verhalten, Umgebung).\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Bericht im System erfassen.\n\n5. **Eskalation**\n   - Bei Verdacht auf elektrische Gefahr: Sofort an Fachpersonal weiterleiten.\n   - Bei weiterhin unklarer Ursache: Elektriker zur Vor-Ort-Diagnose anfordern.\n   - Hinweis im Bericht: Intermittierender Fehler, Gerät offline, Umgebung feucht (Nebel).\n\n**Rückfrage:**  \nSind weitere Lampen oder Geräte in der Umgebung betroffen? Gibt es Zugang zu Stromkasten oder Steuerung vor Ort?",
+    "tokens_estimate_words": 176
   },
   "judge": {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
+      "D": 3,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline im CONTEXT, aber keine lokale Dokumentation/Synchronisation erwähnt)"
+      "Offline-Workflow nicht explizit als Handlungsanweisung formuliert"
     ],
-    "short_justification": "Sehr gute Struktur, kontextgerechte Sicherheitsmaßnahmen (Nebel, Verkehr). Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). K=3 wegen fehlender Offline-Handlungsanweisung."
+    "short_justification": "Gute Kontextnutzung (Nebel, offline erwähnt), aber Offline-Workflow nur als Annahme ('keine Fernwartung möglich'), nicht als konkrete Handlungsanweisung (lokal dokumentieren/später sync). Dokumentation könnte präziser sein."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.544
+    "runtime_seconds": 3.856
   },
   "error": {}
 }

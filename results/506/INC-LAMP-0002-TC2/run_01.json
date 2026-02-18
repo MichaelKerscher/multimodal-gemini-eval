@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0002-TC2",
-  "timestamp": "2026-02-18T16:55:52",
+  "timestamp": "2026-02-18T17:38:17",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,15 +56,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Kontroll-Checkliste für Straßenlampe „Rosenheim, Heilig Blut“ (n1987093602):\n\n1. Absicherung  \n- Warnweste tragen, Absperrmaterial bereitstellen.  \n- Bereich mit Pylonen sichern, besonders wegen mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel).\n\n2. Sichtprüfung  \n- Lampe und Mast auf äußere Schäden, Verschmutzung oder Feuchtigkeit kontrollieren.  \n- Prüfen, ob alle Leuchtmittel funktionieren (Foto vorhanden, ggf. vergleichen).  \n- Umgebung auf Störfaktoren (z. B. Vandalismus, lose Kabel) untersuchen.\n\n3. Diagnose/Beobachtung  \n- Lampe mehrfach schalten (Ein/Aus), um den Fehler zu reproduzieren.  \n- Prüfen, ob Ausfälle mit bestimmten Bedingungen (z. B. Feuchtigkeit, Lärm) korrelieren.  \n- Gerät ist laut System online und „ok“ – Fehler könnte sporadisch auftreten, ggf. Kontaktstellen prüfen.\n\n4. Dokumentation  \n- Alle Beobachtungen, Maßnahmen und ggf. Fotos im System protokollieren.  \n- Zeitpunkte und Bedingungen des Ausfalls notieren.\n\n5. Eskalation  \n- Bei erneutem oder reproduzierbarem Ausfall: Meldung an Fachbereich Elektrotechnik, ggf. Austausch oder weitere Diagnose (z. B. Messung, Feuchtigkeitsprüfung).  \n- Falls keine Auffälligkeiten: Überwachung verstärken, Rückmeldung an Melder.\n\nFragen:  \n- Gibt es Hinweise auf wiederkehrende Ausfälle zu bestimmten Tageszeiten oder Wetterlagen?  \n- Soll eine Langzeitüberwachung eingerichtet werden?  \n- Sind weitere Lampen im Umfeld betroffen?",
-    "tokens_estimate_words": 176
+    "text": "**Kontrolle Straßenlampe „Rosenheim, Heilig Blut“ – Vorgehen**\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen.\n   - Standort sichern: Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel) ggf. Warnleuchten aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe aus sicherer Entfernung beobachten: Leuchtet sie aktuell stabil?\n   - Umgebung prüfen: Feuchtigkeit, Beschädigungen, lose Kabel, Fremdkörper oder Vandalismus sichtbar?\n   - Foto aufnehmen (falls nicht bereits vorhanden).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Ausfälle reproduzierbar sind (z.B. durch mehrmaliges Schalten).\n   - Bei intermittierenden Fehlern: Auf Schwankungen im Licht achten.\n   - Geräusche oder ungewöhnliche Gerüche feststellen (Hinweis auf Elektrikproblem).\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Zeitpunkt, Zustand, Auffälligkeiten).\n   - Foto zur Dokumentation sichern.\n   - Fehlerbeschreibung ergänzen: Wann trat der Ausfall auf, wie lange, unter welchen Bedingungen?\n\n5. **Eskalation**\n   - Bei wiederholtem oder nicht nachvollziehbarem Ausfall: Meldung an Fachbetrieb/Elektriker.\n   - Bei Gefahr für Verkehrssicherheit (z.B. Totalausfall, Sicht stark beeinträchtigt): Sofortige Eskalation und ggf. temporäre Absicherung.\n\n**Rückfrage:**  \nGab es in der Vergangenheit ähnliche Störungen an diesem Standort oder ist dies ein Einzelfall? Sind Wartungsarbeiten/Erneuerungen geplant?",
+    "tokens_estimate_words": 163
   },
   "judge": {
     "test_id": "INC-LAMP-0002-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontextgerechte Sicherheitsmaßnahmen (Nebel, Nacht, mittlerer Verkehr), strukturierte Diagnose, klare Eskalation, sinnvolle Rückfragen. Alle Kontextinformationen korrekt genutzt."
+    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel+poor_visibility wird in Absicherung adressiert, severity=medium führt zu angemessener Eskalation. Strukturiert, nachvollziehbar dokumentiert, keine Spekulation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.496
+    "runtime_seconds": 3.906
   },
   "error": {}
 }

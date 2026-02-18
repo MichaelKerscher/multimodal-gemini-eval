@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0003-TC2",
-  "timestamp": "2026-02-18T16:56:10",
+  "timestamp": "2026-02-18T17:38:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Außendienst-Einsatz – Straßenlampe Schlößlstraße, Westerndorf St. Peter**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (Warnleuchte, Pylonen).\n   - Bereich um Lampe absichern, besonders wegen schlechter Sicht und Nachtzeit.\n\n2. **Sichtprüfung**\n   - Lampe auf offensichtliche Schäden prüfen (Gehäuse, Mast, Verkabelung).\n   - Umgebung auf Gefahren (z. B. Stolperstellen, lose Teile) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampe komplett ohne Funktion ist (kein Licht, keine Reaktion).\n   - Batterie-Status kontrollieren (laut Meldung: niedriger Ladestand).\n   - Verbindung prüfen (Hinweis: Verbindung ist instabil).\n   - Wetter und Sichtverhältnisse berücksichtigen (klar, aber schlechte Sicht).\n\n4. **Dokumentation**\n   - Alle Feststellungen notieren (Datum, Uhrzeit, Zustand, Maßnahmen).\n   - Fotos machen, falls möglich (aktuell kein Bürgerfoto vorhanden).\n\n5. **Eskalation**\n   - Bei defekter Batterie: Austausch veranlassen.\n   - Bei weiteren Schäden oder Unsicherheiten: Techniker informieren.\n   - Meldung im System aktualisieren und ggf. Rückmeldung an Bürger.\n\n**Rückfrage:**  \nIst Ersatzmaterial (Batterie, Werkzeug) vor Ort verfügbar oder muss dies separat organisiert werden?  \nSoll die Lampe sofort ausgetauscht werden, oder reicht ein Batteriewechsel?",
-    "tokens_estimate_words": 157
+    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe „Westerndorf St. Peter, Schlößlstraße“\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bereich um die Lampe sichern (bei Nacht: Warnleuchten nutzen).\n   - Verkehr ist laut Meldung gering, trotzdem auf Fußgänger achten.\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden kontrollieren (Gehäuse, Mast, Kabel).\n   - Prüfen, ob Manipulation oder Vandalismus vorliegt.\n   - Umgebung auf weitere Ausfälle oder Besonderheiten prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe bleibt komplett dunkel, laut Meldung keine Teilfunktion.\n   - Gerät meldet „low_battery“ und „spotty connectivity“ – vermutlich Batterieproblem.\n   - Sichtprüfung: Batterie prüfen, ggf. Messgerät verwenden.\n   - Verbindung zur Steuerung testen (bei Funkmodellen).\n   - Annahme: Kein Foto verfügbar, daher keine Details zu Schäden.\n\n4. **Dokumentation**\n   - Befund und Maßnahmen schriftlich festhalten (Tablet/Handzettel).\n   - Zeitpunkt, Wetter, Sichtverhältnisse, Zustand der Lampe notieren.\n   - Bürgerhinweis als Auslöser dokumentieren.\n\n5. **Eskalation**\n   - Bei bestätigtem Batterieausfall: Austausch veranlassen.\n   - Falls weitere Schäden oder Unsicherheiten: Meldung an Technik/Leitstelle.\n   - Bei Gefahr für Verkehrsteilnehmer: Sofortige Absicherung und schnelle Reparatur priorisieren.\n\n**Rückfrage:**  \nIst Ersatzmaterial (Batterie) vor Ort verfügbar oder muss Beschaffung organisiert werden?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 176
   },
   "judge": {
     "test_id": "INC-LAMP-0003-TC2",
@@ -65,23 +65,24 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
-      "K": 3
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt"
+      "Offline-Workflow bei spotty connectivity",
+      "Batterie-Hinweis bezieht sich fälschlich auf Asset statt Techniker-Gerät"
     ],
-    "short_justification": "Gute Kontextnutzung (Nacht, low_battery, spotty), aber Offline-Dokumentation fehlt trotz connectivity=spotty. K=3 wegen fehlender Robustheit bei instabiler Verbindung."
+    "short_justification": "Gute Struktur und Safety-Fokus, aber Halluzination: 'Gerät meldet low_battery' wird als Asset-Problem interpretiert, obwohl device.* das Techniker-Gerät beschreibt. Offline-Workflow bei spotty connectivity fehlt."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.22
+    "runtime_seconds": 4.327
   },
   "error": {}
 }

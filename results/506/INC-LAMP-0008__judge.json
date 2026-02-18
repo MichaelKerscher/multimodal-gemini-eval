@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
@@ -35,7 +35,7 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Gute Kontextnutzung (Nebel, Nacht, low_power_mode erwähnt). Offline-Workflow fehlt trotz spotty connectivity – K=3. Sicherheit und Struktur gut."
+    "short_justification": "Gute Kontextnutzung (Nacht, Nebel, low_power_mode), Safety-Fokus vorhanden. Offline-Workflow fehlt trotz spotty connectivity, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Kontext vollständig genutzt (Nebel, Nacht, spotty connectivity, low_power_mode), klare Struktur, Sicherheit und Eskalation adressiert. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, alle Kontextfaktoren berücksichtigt, klare Struktur, Safety und Eskalation adäquat adressiert."
   }
 ]

@@ -9,20 +9,23 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden. Offline-Workflow nicht erwartbar (kein connectivity-Hinweis im Context)."
+    "missing_elements": [
+      "Keine Absicherungsmaßnahmen konkret genannt (Warnweste, Pylonen)",
+      "Umgebungsrisiken nicht bewertet (Zeit, Verkehr, Sicht)"
+    ],
+    "short_justification": "Strukturierte Antwort mit klaren Schritten und Eskalation. Sicherheitsaspekte generisch, da Kontext minimal. Keine Halluzinationen, angemessen für L0."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 4
     },
@@ -33,16 +36,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition, spotty connectivity erwähnt). Offline-Workflow fehlt trotz connectivity=spotty, daher K=4 statt 5."
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absicherung), strukturiert, kontextgerecht (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition). Spotty connectivity hätte Offline-Hinweis verdient."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit integriert (lokal speichern, später synchronisieren), alle Kontextfaktoren berücksichtigt (Dämmerung, schlechte Sicht, spotty connectivity), klare Struktur und Eskalation."
+    "short_justification": "Perfekte Antwort: Safety-first, Offline-Workflow explizit (lokal speichern, später synchronisieren), alle Kontextfaktoren berücksichtigt, klare Struktur, angemessene Eskalation."
   }
 ]

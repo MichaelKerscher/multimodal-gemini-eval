@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0027-TC2",
-  "timestamp": "2026-02-18T17:04:06",
+  "timestamp": "2026-02-18T17:46:35",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für das Vorgehen bei Flackern (vor allem bei Regen):\n\n1. Absicherung  \n- Stelle sicher, dass die Gefahrenstelle (Straßenlampe) gut sichtbar ist.  \n- Warne Verkehrsteilnehmer, falls nötig (z. B. Warnbaken, Absperrband).  \n- Beachte die hohe Verkehrsexposition und das hohe Geräuschniveau.\n\n2. Sichtprüfung  \n- Prüfe die Lampe auf offensichtliche Schäden (z. B. Feuchtigkeitseintritt, lose Kabel, Korrosion).  \n- Kontrolliere den Lampenschirm und die Dichtung auf Wassereintritt.  \n- Achte auf ungewöhnliche Geräusche oder Gerüche.\n\n3. Diagnose/Beobachtung  \n- Flackern bei Regen deutet auf Feuchtigkeitsprobleme oder Kontaktstörungen hin.  \n- Prüfe, ob das Flackern nur bei Regen auftritt oder auch bei anderen Wetterlagen.  \n- Kontrolliere die elektrische Verbindung und ggf. den Trafo/Schaltkasten auf Feuchtigkeit.  \n- Bei „spotty“ Konnektivität: Prüfe, ob die Fernüberwachung zuverlässig funktioniert.\n\n4. Dokumentation  \n- Notiere alle Beobachtungen (Datum, Uhrzeit, Wetter, Zustand, Maßnahmen).  \n- Dokumentiere den Fehler und ggf. Fotos (auch wenn aktuell nicht verfügbar).  \n- Halte fest, ob das Flackern sicherheitsrelevant ist.\n\n5. Eskalation  \n- Bei mittlerer Schwere und hoher Verkehrsexposition: Melde den Vorfall an die zuständige Fachabteilung (Elektro/Technik).  \n- Fordere ggf. eine kurzfristige Reparatur an, falls die Verkehrssicherheit beeinträchtigt ist.  \n- Informiere den Betreiber über mögliche Ursachen (Feuchtigkeit, Dichtung, elektrische Kontakte).\n\nRückfrage:  \nSind bereits frühere Reparaturen oder ähnliche Vorfälle an dieser Lampe bekannt?  \nSoll eine sofortige Abschaltung erfolgen, falls das Flackern stärker wird?",
-    "tokens_estimate_words": 211
+    "text": "Checkliste für das Vorgehen bei Flackern einer Straßenlampe bei Regen:\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, um den Bereich zu sichern.\n   - Bei hohem Verkehrsaufkommen: Warnwesten tragen, ggf. Unterstützung anfordern.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Feuchtigkeitseintritt, Korrosion, lose Kabel).\n   - Umgebung auf Pfützen, Wasseransammlungen oder beschädigte Kabelabdeckungen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Flackern gezielt beobachten: Tritt es nur bei Regen auf?\n   - Prüfen, ob Wasser in den Lampenkopf oder Anschlusskasten eindringt.\n   - Annahme: Feuchtigkeit könnte elektrische Kontakte beeinträchtigen.\n\n4. **Dokumentation**\n   - Vorfall mit Datum, Uhrzeit und Wetter dokumentieren.\n   - Fotos machen, sobald möglich (aktuell nicht verfügbar).\n   - Notieren, ob weitere Lampen betroffen sind.\n\n5. **Eskalation**\n   - Bei Verdacht auf Feuchtigkeitseintritt: Elektriker oder Fachfirma informieren.\n   - Bei Gefahr für Verkehrssicherheit: Sofortige Abschaltung und Meldung an die Leitstelle.\n\n**Rückfrage:**  \nSind ähnliche Probleme bei anderen Lampen in der Nähe bekannt? Gibt es Zugang zum Lampenkopf für eine Innenprüfung?",
+    "tokens_estimate_words": 151
   },
   "judge": {
     "test_id": "INC-LAMP-0027-TC2",
@@ -65,23 +65,23 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
+      "D": 3,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht ausreichend konkret beschrieben"
+      "Offline-Workflow bei spotty connectivity nicht erwähnt"
     ],
-    "short_justification": "Gute Struktur und Kontextnutzung (traffic_exposure, spotty connectivity erwähnt). Offline-Workflow wird angedeutet ('spotty Konnektivität prüfen'), aber nicht explizit als Handlungsanweisung formuliert (lokal dokumentieren/später sync)."
+    "short_justification": "Gute Struktur und Safety-Fokus bei high traffic_exposure. Spotty connectivity wird nicht adressiert (lokal dokumentieren/später synchronisieren fehlt)."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.982
+    "runtime_seconds": 3.039
   },
   "error": {}
 }

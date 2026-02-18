@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Priorisierung der Verkehrssicherheit bei dunklem Abschnitt"
+      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber bei minimalem Kontext nicht überbetont; keine Halluzinationen."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID gegeben war. Safety und Eskalation angemessen erwähnt."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -26,18 +26,16 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
-    ],
-    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (high severity, traffic_exposure, poor_visibility), klarer Eskalation und Kontextnutzung. Offline-Workflow fehlt bei spotty connectivity."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Regen, Dämmerung, hohe Verkehrsexposition, spotty connectivity erkannt. Sicherheit priorisiert, Offline-Hinweis ('Vor Ort testen') vorhanden, Eskalation klar formuliert."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety-First bei high severity/traffic/poor visibility, expliziter Offline-Workflow bei spotty connectivity, klare Eskalation, vollständige Kontextnutzung ohne Halluzinationen."
+    "short_justification": "Perfekte Umsetzung: Spotty connectivity explizit adressiert ('keine Online-Abfragen, alles lokal dokumentieren'), Safety bei Regen/Dämmerung/hoher Verkehrsexposition priorisiert, Eskalation klar, Dokumentation offline-fähig."
   }
 ]

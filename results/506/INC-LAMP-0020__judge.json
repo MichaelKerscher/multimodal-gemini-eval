@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Priorisierung bei minimaler Kontextlage",
-      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+      "Keine Erwähnung von Umgebungsbedingungen (nicht im Context verfügbar)"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung und Eskalation. Bei L0-Kontext angemessen generisch, keine Halluzinationen."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur auf verfügbare Asset-ID Bezug genommen wird."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility, severity=high). Klare Safety-Priorisierung, Eskalation bei Gefährdung, präzise Diagnose-Hinweise (low_power_mode, Feuchtigkeit). Vollständig nachvollziehbar."
+    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Nacht+Regen+poor_visibility, integriert photo_available, erwähnt Low-Power-Modus korrekt als Geräte-Zustand. Alle Dimensionen optimal erfüllt."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextintegration inkl. Guardrails (device_state korrekt als Techniker-Gerät interpretiert, offlinefähige Dokumentation erwähnt). Safety-First bei Nacht/Regen/poor_visibility, klare Eskalation, keine Spekulation."
+    "short_justification": "Hervorragend: Nutzt extras.context_notes korrekt (device_state betrifft Technikergerät), erwähnt offlinefähige Dokumentation wegen low_power_mode, integriert alle Risikofaktoren (Nacht, Regen, severity=high) und Workflow-Hinweise (photo_available)."
   }
 ]

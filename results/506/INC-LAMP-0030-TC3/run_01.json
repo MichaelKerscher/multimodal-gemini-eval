@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0030-TC3",
-  "timestamp": "2026-02-18T17:05:01",
+  "timestamp": "2026-02-18T17:47:32",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -248,15 +248,15 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Lampenausfall (Lampe aktuell wieder an):\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Bereich ggf. mit Warnschild absichern (bei mittlerer Verkehrsexposition).\n   - Sichtbarkeit prüfen, besonders bei Dämmerung und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf sichtbare Schäden kontrollieren (Gehäuse, Kabel, Mast).\n   - Prüfen, ob Feuchtigkeit, Vandalismus oder lose Teile erkennbar sind.\n   - Foto vom aktuellen Zustand machen (offline speichern, falls Connectivity spotty).\n\n3. **Diagnose/Beobachtung**\n   - Lampe beobachten: Flackern, Aussetzer, Geräusche?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Notieren, ob Fehler nur zu bestimmten Zeiten/bei bestimmten Bedingungen auftritt.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen lokal in der App/auf dem Gerät erfassen.\n   - Foto und Notizen offline speichern.\n   - Fehler als „sporadisch, aktuell wieder an“ dokumentieren.\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Meldung an Fachbereich/Störungsdienst.\n   - Hinweis auf intermittierenden Fehler und schlechte Sicht im Bericht hervorheben.\n   - Synchronisation der Daten nach Wiederherstellung der Verbindung.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder handelt es sich nur um diese eine?  \nGab es auffällige Geräusche oder Flackern beim Ausfall?",
-    "tokens_estimate_words": 181
+    "text": "Checkliste für sporadischen Lampenausfall (Straßenlampe, OSM-ID: n11833818322):\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Bereich mit Warnschild absichern, falls Verkehr oder Sicht beeinträchtigt ist (besonders bei Dämmerung und mittlerer Verkehrsexposition).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Feuchtigkeit kontrollieren.\n   - Prüfen, ob die Lampe aktuell leuchtet.\n   - Umgebung auf Störungen (z.B. Vandalismus, Tierkontakt) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild notieren: Lampe war aus, jetzt an (sporadisch).\n   - Prüfen, ob weitere Lampen betroffen sind.\n   - Foto machen (offline speichern, falls Connectivity spotty).\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Elektronikfehler, Netzschwankung.\n   - Annahme: Kein dauerhafter Ausfall, aber mittlere Sicherheitsrelevanz wegen schlechter Sicht.\n\n4. **Dokumentation**\n   - Alle Beobachtungen lokal in der App/auf Papier festhalten.\n   - Foto lokal speichern.\n   - Zeitpunkt und Dauer des Ausfalls notieren.\n   - Asset-ID, Standort und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem Auftreten oder erhöhter Gefahr (z.B. weitere Lampen betroffen, schlechte Sicht): Meldung an Fachbereich Elektro/Technik zur detaillierten Prüfung.\n   - Hinweis: Synchronisation der Daten nach Wiederherstellung der Verbindung.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe betroffen oder handelt es sich nur um diese eine?  \nWurde die Lampe nach dem Ausfall manuell oder automatisch wieder eingeschaltet?",
+    "tokens_estimate_words": 188
   },
   "judge": {
     "test_id": "INC-LAMP-0030-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -267,11 +267,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit integriert (lokal speichern, später synchronisieren), alle Kontextfaktoren berücksichtigt (Dämmerung, schlechte Sicht, spotty connectivity), klare Struktur und Eskalation."
+    "short_justification": "Perfekte Antwort: Safety-first, Offline-Workflow explizit (lokal speichern, später synchronisieren), alle Kontextfaktoren berücksichtigt, klare Struktur, angemessene Eskalation."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.48
+    "runtime_seconds": 3.987
   },
   "error": {}
 }

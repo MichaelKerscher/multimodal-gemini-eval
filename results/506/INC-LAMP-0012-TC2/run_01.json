@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0012-TC2",
-  "timestamp": "2026-02-18T16:59:06",
+  "timestamp": "2026-02-18T17:41:42",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Straßenlampenausfall (Standort: 47.8505506, 12.1178456, Nacht, mittlere Verkehrsexposition):\n\n1. **Absicherung**\n   - Warnbaken oder reflektierende Absperrungen aufstellen, falls möglich.\n   - Verkehrsteilnehmer ggf. warnen (z. B. durch mobile Warnleuchten).\n\n2. **Sichtprüfung**\n   - Lampe auf sichtbare Schäden prüfen (Glasbruch, Kabel, Mast).\n   - Umgebung auf weitere Dunkelstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n   - Mögliche Ursachen: Stromausfall, Defekt am Leuchtmittel, Gerät im Energiesparmodus (laut Gerätedaten: „low_power_mode“).\n   - Connectivity ist „spotty“ – Fernwartung ggf. eingeschränkt.\n\n4. **Dokumentation**\n   - Ausfall, Sichtprüfung und Absicherungsmaßnahmen notieren.\n   - Foto machen, falls möglich (derzeit nicht verfügbar).\n   - Zeit und genaue Position erfassen.\n\n5. **Eskalation**\n   - Meldung an zuständige Wartungsstelle mit allen Details (inkl. Gerätedaten).\n   - Hinweis auf unsichere Verkehrssituation und mittlere Verkehrsexposition.\n   - Dringlichkeit betonen (Sicherheitsrisiko).\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder handelt es sich um einen Einzelfall? Gibt es Hinweise auf Stromausfall im Bereich?",
-    "tokens_estimate_words": 147
+    "text": "Straßenlampe dunkel – Bereich unsicher  \nCheckliste für Sofortmaßnahmen:\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen (falls verfügbar).\n   - Verkehrsteilnehmer und Fußgänger vor der Dunkelheit warnen, ggf. temporäre Beleuchtung nutzen.\n\n2. **Sichtprüfung**\n   - Lampe auf sichtbare Schäden prüfen (Glasbruch, Vandalismus, lose Teile).\n   - Umgebung auf weitere Ausfälle oder Hindernisse kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n   - Kurz nach Stromversorgung oder offensichtlichen Fehlern schauen (z.B. Sicherungskasten, Kabel).\n\n4. **Dokumentation**\n   - Standort (Koordinaten: 47.8505506, 12.1178456) und Zeit der Meldung notieren.\n   - Fehlerbild und Sichtprüfung schriftlich festhalten.\n   - Foto machen, sobald möglich (aktuell nicht verfügbar).\n\n5. **Eskalation**\n   - Meldung an zuständige Leitstelle/Technik weitergeben – Priorität: mittlere Dringlichkeit wegen Unsicherheit im Bereich.\n   - Hinweis auf spotty Connectivity und low power mode des Geräts geben.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder handelt es sich um einen Einzelfall? Gibt es Hinweise auf Vandalismus oder Stromausfall im Gebiet?",
+    "tokens_estimate_words": 151
   },
   "judge": {
     "test_id": "INC-LAMP-0012-TC2",
@@ -71,17 +71,18 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Warnweste nicht explizit erwähnt",
+      "Offline-Workflow nur implizit (Foto 'sobald möglich')"
     ],
-    "short_justification": "Gute Kontextnutzung (Koordinaten, Gerätezustand, Verkehrsexposition), aber spotty connectivity erfordert Offline-Dokumentationshinweise, die fehlen. Sicherheit und Eskalation angemessen adressiert."
+    "short_justification": "Gute Kontextnutzung (Koordinaten, spotty connectivity, low power mode). Offline-Aspekt angedeutet, aber nicht klar als Workflow formuliert. Sicherheit und Eskalation angemessen."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.068
+    "runtime_seconds": 5.501
   },
   "error": {}
 }

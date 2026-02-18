@@ -14,15 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umgebungshinweise erwartbar – korrekt allgemein gehalten."
+    "missing_elements": [
+      "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte adressiert, aber persönliche Schutzmaßnahmen (Warnweste) fehlen bei minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -33,14 +35,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlerer Verkehr, schlechte Sicht). Klare Sicherheitsmaßnahmen, strukturierte Schritte, präzise Dokumentation und angemessene Eskalation bei Cluster-Ausfall."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlerer Verkehr). Alle Sicherheitsaspekte (Warnweste, Absicherung), klare Eskalation mit Prioritätsbegründung, vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige Nutzung aller Kontextinformationen (Nebel, Nacht, schlechte Sicht, mittlerer Verkehr). Klare Priorisierung von Sicherheit, strukturierte Handlungsschritte, präzise Dokumentation und differenzierte Eskalation."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Nebel, Nacht, Verkehr). Klare Sicherheitspriorisierung, strukturierte Eskalation, präzise Dokumentationsanweisungen und korrekte Interpretation der Geräte-Metadaten."
   }
 ]

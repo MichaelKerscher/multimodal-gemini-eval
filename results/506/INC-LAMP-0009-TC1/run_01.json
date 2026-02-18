@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC1",
-  "timestamp": "2026-02-18T16:58:08",
+  "timestamp": "2026-02-18T17:40:42",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -31,8 +31,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz (Asset-ID: n12557351679 – Straßenlampe)\n\n1. Absicherung  \n- Warnweste anziehen  \n- Absperrmaterial aufstellen (z. B. Leitkegel)  \n- Bereich gegen Verkehr sichern\n\n2. Sichtprüfung  \n- Lampe bei Regen beobachten  \n- Prüfen: Ist das Flackern dauerhaft oder nur zeitweise?  \n- Sichtkontrolle auf Wassereintritt, lose Kabel, beschädigte Dichtungen\n\n3. Diagnose/Beobachtung  \n- Flackern nur bei Regen deutet auf Feuchtigkeitseintritt hin  \n- Prüfen: Sind Gehäuse, Dichtungen und Kabelanschlüsse intakt?  \n- Falls möglich: Lampe öffnen und auf Feuchtigkeit kontrollieren  \n- Elektrische Kontakte auf Korrosion prüfen\n\n4. Dokumentation  \n- Flackern dokumentieren (Zeitpunkt, Wetter, Dauer)  \n- Fotos von betroffenen Stellen machen  \n- Beobachtungen und Maßnahmen notieren\n\n5. Eskalation  \n- Bei Wassereintritt oder Sicherheitsrisiko: Meldung an Fachfirma/Elektriker  \n- Asset-ID und Befund weitergeben  \n- Bis zur Reparatur ggf. Lampe außer Betrieb nehmen\n\nFehlende Infos:  \n- Lampentyp (LED, Natriumdampflampe etc.)  \n- Zugang zum Innenraum möglich?  \n- Gibt es bereits frühere Meldungen zu diesem Asset?\n\nBitte ergänzen, falls weitere Details bekannt sind.",
-    "tokens_estimate_words": 152
+    "text": "Checkliste für Außendienst-Einsatz (Asset-ID: n12557351679 – Straßenlampe, Flackern bei Regen):\n\n1. Absicherung  \n- Warnweste tragen  \n- Gefahrenbereich absperren (z. B. Pylonen, Warnleuchten)  \n- Verkehrsteilnehmer informieren, falls nötig\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung  \n- Prüfen auf Wassereintritt, beschädigte Gehäuse, lose Kabel  \n- Notieren: Flackern nur bei Regen, sonst normaler Betrieb?\n\n3. Diagnose/Beobachtung  \n- Lampe bei Regen gezielt beobachten (ggf. künstlich Wasser aufbringen)  \n- Prüfen, ob Feuchtigkeit ins Gehäuse gelangt  \n- Kontrolle der elektrischen Anschlüsse auf Korrosion oder Wackelkontakte  \n- Dokumentieren: Zeitpunkt, Intensität, äußere Einflüsse\n\n4. Dokumentation  \n- Fotos vom Zustand und Umfeld  \n- Notizen zum Flackerverhalten  \n- Asset-ID, Standort, Datum, Wetterbedingungen\n\n5. Eskalation  \n- Bei Wassereintritt: Meldung an Elektrofachkraft  \n- Bei Gefahr für Verkehrssicherheit: Sofortige Abschaltung und Kennzeichnung  \n- Weiterleitung an zuständige Stelle für Reparatur\n\nRückfrage:  \nIst das Flackern dauerhaft bei Regen oder nur sporadisch? Gibt es Hinweise auf frühere Reparaturen oder bekannte Probleme an diesem Standort?",
+    "tokens_estimate_words": 149
   },
   "judge": {
     "test_id": "INC-LAMP-0009-TC1",
@@ -49,14 +49,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (CONTEXT zeigt connectivity=offline, aber nicht in L0 sichtbar)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Offline-Workflow fehlt, aber bei L0_minimal ist das vertretbar, da CONTEXT minimal ist."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal-Kontext vorliegt. Offline-Workflow nicht erwähnt, aber auch nicht im Kontext gefordert."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.315
+    "runtime_seconds": 3.38
   },
   "error": {}
 }

@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0006-TC3",
-  "timestamp": "2026-02-18T16:57:07",
+  "timestamp": "2026-02-18T17:39:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -270,8 +270,8 @@
   },
   "response": {
     "multi": false,
-    "text": "**Checkliste für Außendienst-Einsatz – Straßenlampe (Rosenheim, Äußere Münchener Straße/Aicherpark)**\n\n1. **Absicherung**\n   - Bereich mit Warnbaken/Kegel absichern, da hohe Verkehrsexposition und schlechte Sicht.\n   - Warnweste tragen, ggf. zusätzliche Beleuchtung verwenden.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, lose Teile, Feuchtigkeitseintritt prüfen.\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampe komplett ausgefallen oder flackert.\n   - Bei Sturm: Mögliche Ursache durch Witterung (z.B. Kurzschluss, Sicherungsausfall).\n   - Keine Online-Diagnose möglich (Gerät offline), daher vor Ort dokumentieren.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen lokal im Gerät erfassen.\n   - Foto der Lampe und Umgebung machen (Foto verfügbar, lokal speichern).\n   - Zeitpunkt, Wetter und Sichtverhältnisse notieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, hohe Verkehrsexposition): Sofortige Meldung an Leitstelle/Notdienst.\n   - Offline-Dokumentation später synchronisieren.\n   - Hinweis: Ursache kann wetterbedingt oder stromseitig sein – keine Reparatur ohne Fachpersonal.\n\n**Rückfrage:**  \nIst bereits ein Notdienst/Fachteam informiert, oder soll ich die Eskalation übernehmen? Gibt es Hinweise auf weitere Ausfälle in der Umgebung?",
-    "tokens_estimate_words": 161
+    "text": "**Checkliste für Außendienst – Straßenlampe dunkel, Bereich unsicher**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Warnbaken/Kegel absichern, besonders bei hoher Verkehrsexposition und schlechter Sicht.\n   - Bei Sturm: Abstand zu Bäumen/Masten halten, auf herabfallende Äste achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z.B. Bruch, lose Teile, Wassereintritt).\n   - Umfeld auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n   - Foto vom Zustand aufnehmen (offline speichern).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen betroffen sind (evtl. großflächiger Ausfall).\n   - Auf Geräusche, Geruch (z.B. Verschmorung), ungewöhnliche Hitze achten.\n   - Notiz: Gerät ist offline, Diagnose und Dokumentation lokal durchführen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen lokal erfassen (App/Notiz).\n   - Fotos und Notizen offline sichern.\n   - Zeitpunkt, Wetter, Sichtverhältnisse und Verkehrslage dokumentieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, Sturm, viele Fußgänger/Fahrzeuge): Sofortige Meldung an Leitstelle/Notdienst (ggf. telefonisch).\n   - Nach Synchronisation: Bericht und Fotos an zentrale Stelle übermitteln.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nIst eine schnelle Reparatur möglich, oder muss eine temporäre Absicherung (z.B. mobile Beleuchtung) eingerichtet werden?",
+    "tokens_estimate_words": 177
   },
   "judge": {
     "test_id": "INC-LAMP-0006-TC3",
@@ -289,11 +289,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, Safety priorisiert, Kontext präzise genutzt (Sturm, Verkehrsexposition, Gerät offline). Keine Halluzinationen, klare Dokumentation und Eskalation."
+    "short_justification": "Vollständige, kontextgerechte Antwort mit explizitem Offline-Workflow (lokal dokumentieren, später synchronisieren). Safety-First-Ansatz bei Sturm/hoher Verkehrsexposition und klare Eskalation bei hoher Gefährdung erkennbar."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.115
+    "runtime_seconds": 4.783
   },
   "error": {}
 }

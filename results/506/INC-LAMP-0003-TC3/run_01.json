@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0003-TC3",
-  "timestamp": "2026-02-18T16:56:10",
+  "timestamp": "2026-02-18T17:38:37",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -258,8 +258,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe (Westerndorf St. Peter, Schlößlstraße)\n\n1. Absicherung  \n- Warnweste tragen, Absperrmaterial bereitstellen.  \n- Bei Nacht und schlechter Sicht: Arbeitsbereich mit Warnleuchten markieren.  \n- Verkehr ist laut Kontext gering, trotzdem auf Fußgänger achten.\n\n2. Sichtprüfung  \n- Lampe von außen auf Schäden, Vandalismus oder lose Teile kontrollieren.  \n- Prüfen, ob Stromzufuhr sichtbar unterbrochen (z.B. Sicherungskasten, Kabel).\n\n3. Diagnose/Beobachtung  \n- Lampe reagiert nicht:  \n  - Leuchtmittel defekt?  \n  - Starter/Elektronik prüfen.  \n  - Sichtkontrolle auf Feuchtigkeit oder Korrosion.  \n- Bei Bedarf: Foto machen (offline speichern, später synchronisieren).  \n- Hinweis: Techniker-Gerät hat schlechte Verbindung, alle Schritte offline dokumentieren.\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen lokal erfassen (App/Notizblock).  \n- Standort, Uhrzeit, Zustand, ggf. Foto sichern.  \n- Fehlerart: Totalausfall, Sichtprüfung, Diagnoseergebnis.\n\n5. Eskalation  \n- Bei komplexen Schäden oder fehlender Ersatzteile: Meldung an zentrale Stelle (offline, später synchronisieren).  \n- Bei Gefahr für Verkehr oder Personen: Sofortige Eskalation an Bereitschaft/Zentrale.\n\n**Rückfrage:**  \nIst Ersatzmaterial (Leuchtmittel, Werkzeug) verfügbar? Gibt es Zugang zum Sicherungskasten vor Ort?  \nFalls nicht, bitte Info für weitere Planung.",
-    "tokens_estimate_words": 164
+    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe „Westerndorf St. Peter, Schlößlstraße“\n\n1. **Absicherung**\n   - Warnweste tragen, Absperrmaterial bereitstellen.\n   - Bei Nacht und schlechter Sicht: Arbeitsbereich mit Warnleuchten markieren.\n   - Verkehr ist laut Kontext gering, trotzdem auf Fußgänger achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf Schäden, lose Teile oder Vandalismus kontrollieren.\n   - Prüfen, ob Stromzufuhr sichtbar unterbrochen (z.B. Kabel, Sicherungskasten).\n   - Umgebung auf weitere Ausfälle oder Besonderheiten prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe reagiert nicht: Fehlerbild bestätigen (Leuchte bleibt dunkel).\n   - Typische Ursachen: Leuchtmittel defekt, Vorschaltgerät/Sicherung ausgelöst.\n   - Annahme: Einzel-Ausfall, keine Serie (da keine weiteren Meldungen).\n   - Bei Bedarf: Leuchtmittel tauschen, Sicherung prüfen.\n   - Falls vor Ort keine Reparatur möglich: Ursache notieren.\n\n4. **Dokumentation**\n   - Offline dokumentieren (Fotos lokal speichern, Notizen in App).\n   - Fehlerbild, Maßnahmen, ggf. Austausch/Materialbedarf festhalten.\n   - Standort und Zeit erfassen (GPS, Uhrzeit).\n   - Später synchronisieren, falls Connectivity weiterhin spotty.\n\n5. **Eskalation**\n   - Bei komplexen Schäden (z.B. Elektrik, Mast defekt): Meldung an Fachfirma/Elektriker.\n   - Bei Gefahr (offene Kabel, Mast instabil): Sofortige Absperrung und Eskalation an Leitstelle.\n\n**Rückfrage:**  \nIst Ersatzmaterial (Leuchtmittel/Sicherung) vor Ort verfügbar oder muss nachgeliefert werden?  \nSind Fotos zur Dokumentation erwünscht?",
+    "tokens_estimate_words": 182
   },
   "judge": {
     "test_id": "INC-LAMP-0003-TC3",
@@ -277,11 +277,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, context_notes korrekt interpretiert, alle Kontextfaktoren (Nacht, spotty, low_battery) berücksichtigt. Klare Struktur und Dokumentation."
+    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, device.* richtig interpretiert (Techniker-Gerät), Safety und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen, vollständig kontextgerecht."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.081
+    "runtime_seconds": 4.27
   },
   "error": {}
 }

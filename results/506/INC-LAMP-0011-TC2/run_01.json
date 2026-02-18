@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0011-TC2",
-  "timestamp": "2026-02-18T16:58:46",
+  "timestamp": "2026-02-18T17:41:21",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,8 +56,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Kontrolle – Leitzachstraße, Rosenheim (Straßenlampe)\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Kegel, Warnleuchte).\n   - Bei mittlerem Verkehrsaufkommen und schlechter Sicht: Arbeitsbereich deutlich kennzeichnen.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich inspizieren: Schäden, Verschmutzung, Feuchtigkeit.\n   - Umfeld prüfen: Kabel, Mast, Fundament.\n   - Bei Nebel besonders auf Sichtbarkeit achten.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein-/ausschalten (falls möglich).\n   - Prüfen, ob Ausfall reproduzierbar ist.\n   - Auf ungewöhnliche Geräusche oder Flackern achten.\n   - Anschluss und Steuerung kontrollieren (sofern zugänglich).\n\n4. **Dokumentation**\n   - Zustand notieren: Funktion aktuell normal, aber zeitweiser Ausfall gemeldet.\n   - Fotos machen (falls möglich).\n   - Datum, Uhrzeit, Wetter, Sichtverhältnisse dokumentieren.\n\n5. **Eskalation**\n   - Bei Verdacht auf Elektrik-/Steuerungsproblem: Fachfirma informieren.\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Sofortige Meldung an zuständige Stelle.\n\n**Rückfrage:**  \nIst Zugang zum Schaltschrank möglich oder gibt es Hinweise auf externe Steuerung?  \nSind weitere Lampen in der Nähe betroffen?",
-    "tokens_estimate_words": 140
+    "text": "Kontrolle Straßenlampe „Rosenheim, Leitzachstraße“ – Vorgehen bei zeitweisem Ausfall (aktuell normal):\n\n**1. Absicherung**\n- Warnweste tragen.\n- Absperrmaterial bereitstellen.\n- Bereich bei mittlerer Verkehrsexposition und schlechter Sicht (Nebel) sichern.\n\n**2. Sichtprüfung**\n- Lampe auf äußere Schäden, Verschmutzung, Feuchtigkeitsspuren prüfen.\n- Umgebung auf ungewöhnliche Einflüsse (z.B. Bauarbeiten, Vandalismus) kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Lampe mehrfach ein-/ausschalten, um Ausfall zu reproduzieren.\n- Anschluss und Verkabelung auf Wackelkontakt prüfen.\n- Bei intermittierenden Fehlern: ggf. Messgerät für Spannung/Strom verwenden.\n\n**4. Dokumentation**\n- Befund (keine Auffälligkeiten, Fehler nicht reproduzierbar) notieren.\n- Zeitpunkt, Wetterbedingungen und Sichtverhältnisse dokumentieren.\n\n**5. Eskalation**\n- Fehler aktuell nicht feststellbar: Meldung an Wartung mit Hinweis auf intermittierenden Ausfall und schlechte Sichtbedingungen.\n- Empfehlung: Lampe im Rahmen der nächsten Wartung gezielt prüfen, ggf. Monitoring einrichten.\n\n**Rückfrage:**  \nSind weitere Meldungen zu dieser Lampe oder benachbarten Anlagen bekannt? Liegen Fotos oder detaillierte Fehlerbeschreibungen vor?",
+    "tokens_estimate_words": 138
   },
   "judge": {
     "test_id": "INC-LAMP-0011-TC2",
@@ -75,11 +75,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr) mit angepassten Sicherheitsmaßnahmen. Klare Struktur, vollständige Dokumentation und passende Eskalationskriterien."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlere Verkehrsexposition explizit berücksichtigt). Klare Struktur, Sicherheit priorisiert, Dokumentation und Eskalation vollständig."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 3.867
+    "runtime_seconds": 3.225
   },
   "error": {}
 }
