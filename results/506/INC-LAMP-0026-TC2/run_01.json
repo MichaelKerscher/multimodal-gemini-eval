@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC2",
-  "timestamp": "2026-02-18T15:58:34",
+  "timestamp": "2026-02-18T16:50:53",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -56,31 +56,32 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Straßenlampe Römerstraße, Langenpfunzen\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrung/Warndreieck aufstellen (bei mittlerer Verkehrsexposition und Nebel besonders wichtig).\n   - Sichtbarkeit prüfen, ggf. zusätzliche Warnleuchten nutzen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden kontrollieren (Kabel, Gehäuse, Feuchtigkeit).\n   - Prüfen, ob Lampe während Anwesenheit an/aus schaltet.\n   - Umgebung auf Störquellen (z. B. Vibrationen, Feuchtigkeit durch Nebel) untersuchen.\n\n3. **Diagnose/Beobachtung**\n   - Stromversorgung prüfen (Hinweis: Gerät ist offline, aber Zustand „ok“).\n   - Verbindungskabel und Sicherungen inspizieren.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeitseintritt, Steuerungsausfall.\n   - Annahme: Keine Fernwartung möglich (offline).\n\n4. **Dokumentation**\n   - Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Verhalten).\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Fehlerbeschreibung und Verdachtsmomente festhalten.\n\n5. **Eskalation**\n   - Bei unklarer Ursache: Meldung an Fachbereich Elektrotechnik/Service.\n   - Dringlichkeit: Niedrig, aber regelmäßige Kontrolle empfohlen.\n   - Hinweis auf erhöhte Verkehrssicherung bei Nebel und Lärm.\n\n**Rückfrage:**  \nSind vor Ort bereits Reparaturversuche erfolgt oder gibt es Hinweise auf wiederkehrende Störungen in der Umgebung?",
-    "tokens_estimate_words": 156
+    "text": "Checkliste für Außendienst – Straßenlampe Römerstraße, Langenpfunzen\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Baustellenabsicherung: Absperrmaterial aufstellen, Verkehrsteilnehmer warnen (besonders bei mittlerer Verkehrsbelastung und Nebel).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden kontrollieren (Kabel, Lampenkopf, Feuchtigkeit).\n   - Prüfen, ob Lampe aktuell an/aus ist.\n   - Umgebung auf Störungen (z. B. Bauarbeiten, Vandalismus) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach beobachten: Schaltet sie sich während der Sichtprüfung unregelmäßig?\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Annahme: Da Gerät „offline“, könnte ein Steuerungs-/Kommunikationsproblem vorliegen.\n\n4. **Dokumentation**\n   - Vorfall und Beobachtungen schriftlich festhalten (Datum, Uhrzeit, Verhalten).\n   - Fotos machen, falls möglich (hier nicht verfügbar).\n   - Notieren, ob weitere Lampen betroffen sind.\n\n5. **Eskalation**\n   - Bei Verdacht auf Steuerungsproblem: Meldung an zentrale Leitstelle/Technik.\n   - Bei Verdacht auf Feuchtigkeit/Kabelschaden: Elektriker informieren.\n   - Bei Gefahr für Verkehr: Sofortige Absicherung und Meldung an zuständige Stelle.\n\n**Rückfrage:**  \nSind weitere Lampen in der Römerstraße betroffen oder nur diese? Gibt es Zugang zum Schaltschrank vor Ort?",
+    "tokens_estimate_words": 159
   },
   "judge": {
-    "missing_elements": [
-      "judge_missing_for_test_id"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
+    "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
-      "offline_workflow_mentioned": false,
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [
+      "Offline-Workflow nur implizit erwähnt ('Gerät offline'), nicht explizit als Handlungsanweisung (lokal dokumentieren/später synchronisieren)"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nebel, Verkehr, Offline-Status). Offline-Workflow wird angedeutet, aber nicht klar als Arbeitsanweisung formuliert (K=3)."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.564
+    "runtime_seconds": 4.592
   },
   "error": {}
 }

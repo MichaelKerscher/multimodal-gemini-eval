@@ -17,16 +17,16 @@
     "missing_elements": [
       "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine weiteren Erwartungen rechtfertigt."
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und Antwort allgemein bleibt."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
-      "K": 4
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -34,8 +34,10 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, offline, medium traffic). Offline-Workflow erkannt („Annahme: Keine Fernwartung möglich"), Safety und Eskalation klar adressiert."
+    "missing_elements": [
+      "Offline-Workflow nur implizit erwähnt ('Gerät offline'), nicht explizit als Handlungsanweisung (lokal dokumentieren/später synchronisieren)"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nebel, Verkehr, Offline-Status). Offline-Workflow wird angedeutet, aber nicht klar als Arbeitsanweisung formuliert (K=3)."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit („lokal dokumentieren", „später synchronisieren"), alle Kontextfaktoren (Nebel, traffic, connectivity) berücksichtigt, klare Struktur und Eskalation."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, Kontextnutzung präzise (Nebel, Verkehr, Geräuschkulisse), klare Struktur, Dokumentation und Eskalation vollständig."
   }
 ]

@@ -30,6 +30,113 @@ def _safe_json_dumps(obj) -> str:
     return json.dumps(obj, ensure_ascii=False)
 
 
+# ----------------------------
+# Judge JSON robustness helpers
+# ----------------------------
+def _sanitize_judge_jsonish(text: str) -> str:
+    """
+    Makes 'almost JSON' from LLM outputs parseable:
+    - fixes mojibake smart quotes (â€ž â€œ â€ etc.)
+    - normalizes unicode quotes
+    - removes BOM
+    """
+    if not isinstance(text, str):
+        return text
+
+    s = text.strip().lstrip("\ufeff")
+
+    replacements = {
+        # mojibake quotes
+        "â€ž": '"', "â€œ": '"', "â€": '"',
+        "â€™": "'", "â€˜": "'",
+        # real unicode quotes
+        "“": '"', "”": '"', "„": '"',
+        "’": "'", "‘": "'",
+    }
+    for a, b in replacements.items():
+        s = s.replace(a, b)
+
+    return s
+
+
+def _extract_first_json_array(text: str) -> str | None:
+    if not isinstance(text, str):
+        return None
+    s = text.strip()
+    l = s.find("[")
+    r = s.rfind("]")
+    if l != -1 and r != -1 and r > l:
+        return s[l : r + 1]
+    return None
+
+
+def _try_parse_judge_array(judge_out: str) -> list[dict] | None:
+    if not judge_out:
+        return None
+
+    if isinstance(judge_out, list):
+        return judge_out
+
+    if not isinstance(judge_out, str):
+        return None
+
+    s = _sanitize_judge_jsonish(judge_out)
+
+    # 1) direct parse
+    try:
+        obj = json.loads(s)
+        return obj if isinstance(obj, list) else None
+    except Exception:
+        pass
+
+    # 2) fallback: extract first array
+    candidate = _extract_first_json_array(s)
+    if candidate:
+        try:
+            obj = json.loads(candidate)
+            return obj if isinstance(obj, list) else None
+        except Exception:
+            return None
+
+    return None
+
+
+def _score_block_to_expected_schema(block: dict) -> dict:
+    if not isinstance(block, dict):
+        return {
+            "scores": {"R": 1, "H": 1, "S": 1, "D": 1, "K": 1},
+            "flags": {
+                "safety_first": False,
+                "escalation_present": False,
+                "offline_workflow_mentioned": False,
+                "hallucination_suspected": False,
+            },
+            "missing_elements": ["judge_output_not_dict"],
+            "short_justification": "",
+        }
+
+    block.setdefault("scores", {"R": 1, "H": 1, "S": 1, "D": 1, "K": 1})
+    block.setdefault(
+        "flags",
+        {
+            "safety_first": False,
+            "escalation_present": False,
+            "offline_workflow_mentioned": False,
+            "hallucination_suspected": False,
+        },
+    )
+    block.setdefault("missing_elements", [])
+    block.setdefault("short_justification", "")
+    return block
+
+
+def _norm_test_id(s: str) -> str:
+    return (s or "").strip()
+
+
+# ----------------------------
+# Judge prompts
+# ----------------------------
 def _build_judge_prompt_single(tc: dict, assistant_answer: str, expected_elements: str) -> str:
     user_message = tc["input"]["prompt"]
     context_json = tc["input"].get("context") or {}
@@ -125,66 +232,9 @@ BLOCKS:
 """
 
 
-def _try_parse_judge_array(judge_out: str) -> list[dict] | None:
-    if not judge_out:
-        return None
-
-    if isinstance(judge_out, list):
-        return judge_out
-
-    if not isinstance(judge_out, str):
-        return None
-
-    s = judge_out.strip()
-
-    try:
-        obj = json.loads(s)
-        return obj if isinstance(obj, list) else None
-    except Exception:
-        pass
-
-    l = s.find("[")
-    r = s.rfind("]")
-    if l != -1 and r != -1 and r > l:
-        candidate = s[l : r + 1]
-        try:
-            obj = json.loads(candidate)
-            return obj if isinstance(obj, list) else None
-        except Exception:
-            return None
-
-    return None
-
-
-def _score_block_to_expected_schema(block: dict) -> dict:
-    if not isinstance(block, dict):
-        return {
-            "scores": {"R": 1, "H": 1, "S": 1, "D": 1, "K": 1},
-            "flags": {
-                "safety_first": False,
-                "escalation_present": False,
-                "offline_workflow_mentioned": False,
-                "hallucination_suspected": False,
-            },
-            "missing_elements": ["judge_output_not_dict"],
-            "short_justification": "",
-        }
-
-    block.setdefault("scores", {"R": 1, "H": 1, "S": 1, "D": 1, "K": 1})
-    block.setdefault(
-        "flags",
-        {
-            "safety_first": False,
-            "escalation_present": False,
-            "offline_workflow_mentioned": False,
-            "hallucination_suspected": False,
-        },
-    )
-    block.setdefault("missing_elements", [])
-    block.setdefault("short_justification", "")
-    return block
-
-
+# ----------------------------
+# Strategy helpers
+# ----------------------------
 def _strategy_of(tc: dict) -> str:
     meta = (tc.get("input") or {}).get("meta") or {}
     return str(meta.get("strategy") or "").strip().upper()
@@ -245,6 +295,9 @@ def _apply_s2_if_strategy(tc: dict, context: dict) -> tuple[dict, dict | None]:
     return ctx_selected, selection_meta
 
 
+# ----------------------------
+# Public runners
+# ----------------------------
 def run_testcase(tc: dict, enable_judge: bool | None = None):
     enable_judge = ENABLE_JUDGE_DEFAULT if enable_judge is None else enable_judge
 
@@ -263,7 +316,7 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
 
     strategy = _strategy_of(tc)
 
-    # ---- S2 hook (strategy-driven) ----
+    # ---- S2 hook ----
     context_for_model, selection_meta = _apply_s2_if_strategy(tc, context)
 
     if client_name not in CLIENTS:
@@ -293,6 +346,9 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
             selected_mode=os.getenv("TESTSUITE_JUDGE_MODE", "BASIC"),
             internal_system_prompt=False,
         )
+        # optional: sanitize single output too (doesn't hurt logging/reading)
+        if isinstance(judge_out, str):
+            judge_out = _sanitize_judge_jsonish(judge_out)
 
     result_dir = _result_dir_for_client(client_name)
 
@@ -313,7 +369,7 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
             "run_mode": "testcase",
             "assistant_source_of_truth": True,
             "context_strategy": strategy or "UNKNOWN",
-            **s2_params,  # NEW
+            **s2_params,
         },
         judge=judge_out,
         input_context=context_for_model,
@@ -349,8 +405,8 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
     out_dir = _result_dir_for_client(client_name)
     os.makedirs(out_dir, exist_ok=True)
 
-    generated = []
-    runtimes = {}
+    generated: list[dict] = []
+    runtimes: dict[str, float] = {}
 
     for tc in testcases:
         input_data = tc["input"]
@@ -387,8 +443,9 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             }
         )
 
-    judge_array = None
-    judge_raw = None
+    judge_array: list[dict] | None = None
+    judge_raw_clean: str | None = None
+    judge_raw_any = None
 
     if enable_judge and hasattr(client, "judge"):
         judge_prompt = _build_judge_prompt_incident(
@@ -399,7 +456,7 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             fault_type=fault_type,
         )
 
-        judge_raw = client.judge(
+        judge_raw_any = client.judge(
             prompt=judge_prompt,
             model=os.getenv("TESTSUITE_JUDGE_MODEL", default_model),
             temperature=float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.1")),
@@ -407,19 +464,45 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             internal_system_prompt=False,
         )
 
+        judge_raw_str = (
+            judge_raw_any
+            if isinstance(judge_raw_any, str)
+            else json.dumps(judge_raw_any, ensure_ascii=False, indent=2)
+        )
+        judge_raw_clean = _sanitize_judge_jsonish(judge_raw_str)
+
         artifact_path = os.path.join(out_dir, f"{incident_id}__judge.json")
         with open(artifact_path, "w", encoding="utf-8") as f:
-            f.write(judge_raw if isinstance(judge_raw, str) else json.dumps(judge_raw, ensure_ascii=False, indent=2))
+            f.write(judge_raw_clean)
         print(f"[LOG] Judge-Artifact gespeichert unter: {artifact_path}")
 
-        judge_array = _try_parse_judge_array(judge_raw if isinstance(judge_raw, str) else json.dumps(judge_raw))
+        judge_array = _try_parse_judge_array(judge_raw_clean)
 
-    judge_by_test_id = {}
+    # Build mapping
+    judge_by_test_id: dict[str, dict] = {}
+
+    # 1) primary mapping by test_id
     if judge_array:
         for block in judge_array:
             if isinstance(block, dict) and block.get("test_id"):
-                judge_by_test_id[block["test_id"]] = _score_block_to_expected_schema(block)
+                judge_by_test_id[_norm_test_id(block["test_id"])] = _score_block_to_expected_schema(block)
 
+    # 2) fallback: if count matches, map by position
+    if judge_array and len(judge_array) == len(generated):
+        for i, row in enumerate(generated):
+            tid = _norm_test_id(row.get("test_id"))
+            if tid and tid not in judge_by_test_id:
+                b = judge_array[i]
+                if isinstance(b, dict):
+                    b2 = dict(b)
+                    b2["test_id"] = row.get("test_id")
+                    judge_by_test_id[tid] = _score_block_to_expected_schema(b2)
+
+    # 3) mismatch warning
+    if judge_array and len(judge_array) != len(generated):
+        print(f"[WARN] Judge blocks count mismatch: judge={len(judge_array)} vs generated={len(generated)}")
+
+    # Attach per-test logs
     for row in generated:
         test_id = row["test_id"]
         tc = next(t for t in testcases if t["test_id"] == test_id)
@@ -429,12 +512,13 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
         strategy = row.get("strategy") or _strategy_of(tc)
         selection_meta = row.get("selection_meta") or None
 
-        judge_block = judge_by_test_id.get(test_id) if judge_by_test_id else None
-        if enable_judge and hasattr(client, "judge") and judge_raw and not judge_block:
+        judge_block = judge_by_test_id.get(_norm_test_id(test_id)) if judge_by_test_id else None
+        if enable_judge and hasattr(client, "judge") and judge_raw_clean and not judge_block:
             judge_block = _score_block_to_expected_schema(
                 {
-                    "missing_elements": ["judge_missing_for_test_id"],
-                    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
+                    "test_id": test_id,
+                    "missing_elements": ["judge_block_missing_fallback"],
+                    "short_justification": "Judge-Array enthielt keinen Block für diese Antwort; Fallback gesetzt.",
                 }
             )
 
@@ -468,7 +552,7 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             error=None,
         )
 
-    if enable_judge and hasattr(client, "judge") and judge_raw and not judge_array:
+    if enable_judge and hasattr(client, "judge") and judge_raw_clean and not judge_array:
         print(
             "[WARN] Judge-Output konnte nicht als JSON-Array geparsed werden. "
             "Raw-Artifact ist gespeichert, aber per-testcase Judge-Blocks wurden nicht attached."

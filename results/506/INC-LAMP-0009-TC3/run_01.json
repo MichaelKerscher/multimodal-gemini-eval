@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0009-TC3",
-  "timestamp": "2026-02-18T15:52:55",
+  "timestamp": "2026-02-18T16:50:10",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -258,31 +258,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst-Einsatz – Flackern bei Regen  \nStandort: Rosenheim, Endorfer Au / Krones  \nFehler: Flackern (bei Regen), Sicht schlecht, Dämmerung, geringe Verkehrsbelastung\n\n**1. Absicherung**\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei schlechter Sicht: Warnleuchte aufstellen.\n- Umgebung auf Verkehr prüfen, ggf. Absperrung vornehmen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf Wassereintritt, Beschädigungen, lose Kabel prüfen.\n- Lampengehäuse, Dichtungen und Anschlussstellen kontrollieren.\n- Prüfen, ob Flackern aktuell sichtbar ist (ggf. bei Regen simulieren).\n\n**3. Diagnose/Beobachtung**\n- Flackern tritt nur bei Regen auf: Vermutung auf Feuchtigkeitseintritt, defekte Dichtung oder Kontaktproblem.\n- Elektrische Anschlüsse auf Korrosion oder Feuchtigkeit prüfen.\n- Dokumentieren, ob Flackern dauerhaft oder nur zeitweise auftritt.\n\n**4. Dokumentation**\n- Offline dokumentieren (Gerät ist offline): Fotos lokal speichern, Notizen zur Sichtprüfung und Diagnose erfassen.\n- Zeitpunkt, Wetter, Sichtverhältnisse und eigene Beobachtungen festhalten.\n\n**5. Eskalation**\n- Bei akuter Gefährdung (z.B. Kurzschluss, starker Funkenflug): Sofortige Sperrung und Meldung an Leitstelle.\n- Bei geringer Gefährdung: Reparaturbedarf an zuständige Stelle melden, ggf. Termin für Austausch/Dichtung setzen.\n\n**Rückfrage:**  \nWurde das Lampengehäuse bereits geöffnet und auf Feuchtigkeit geprüft? Sind Ersatzteile/Dichtungen vor Ort verfügbar?",
-    "tokens_estimate_words": 175
+    "text": "Checkliste für Außendienst-Einsatz (Straßenlampe, Flackern bei Regen, Standort: Rosenheim, Endorfer Au / Krones)\n\n**1. Absicherung**\n- Warnweste tragen, ggf. Absperrmaterial aufstellen (bei schlechter Sicht und Regen).\n- Umgebung prüfen: Verkehr ist laut Kontext gering, trotzdem auf Fußgänger achten.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf Wassereintritt, Beschädigungen, lose Teile kontrollieren.\n- Elektrische Anschlüsse und Dichtungen auf Feuchtigkeit prüfen.\n\n**3. Diagnose/Beobachtung**\n- Flackern gezielt beobachten: Tritt es nur bei Regen auf?\n- Prüfen, ob Wasser in Gehäuse oder Anschlusskasten gelangt.\n- Bei offline Gerät: Fotos lokal speichern, Notizen zur Situation machen.\n\n**4. Dokumentation**\n- Alle Beobachtungen (Flackern, Feuchtigkeit, Zustand) lokal in der App erfassen.\n- Fotos und Notizen offline sichern, später synchronisieren.\n\n**5. Eskalation**\n- Bei Wassereintritt oder Verdacht auf Kurzschluss: Meldung an Elektrofachkraft, Reparaturbedarf dokumentieren.\n- Bei geringer Gefahr (nur Flackern, keine akute Gefährdung): Termin für Wartung anlegen, Bürger informieren.\n\n**Rückfrage:**  \nIst das Flackern dauerhaft oder nur sporadisch bei starkem Regen? Sind weitere Lampen betroffen?  \nBitte ggf. Details nachreichen.",
+    "tokens_estimate_words": 159
   },
   "judge": {
-    "missing_elements": [
-      "judge_missing_for_test_id"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
+    "test_id": "INC-LAMP-0009-TC3",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
-      "offline_workflow_mentioned": false,
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Umsetzung: Offline-Workflow explizit genannt (lokal speichern, später synchronisieren), Umweltbedingungen integriert, klare Eskalation, keine Halluzinationen trotz umfangreichem CONTEXT."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 5.451
+    "runtime_seconds": 4.833
   },
   "error": {}
 }

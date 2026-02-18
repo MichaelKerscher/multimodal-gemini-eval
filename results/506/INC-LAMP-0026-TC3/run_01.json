@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0026-TC3",
-  "timestamp": "2026-02-18T15:58:34",
+  "timestamp": "2026-02-18T16:50:53",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -258,31 +258,30 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für Außendienst – Römerstraße, Langenpfunzen (Straßenlampe, intermittierend an/aus, Ursache unklar)\n\n**1. Absicherung**\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei mittlerer Verkehrsexposition: Bereich mit Pylonen/Kegel sichern.\n- Sichtbarkeit im Nebel prüfen, ggf. zusätzliche Warnleuchten einsetzen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf äußere Schäden, lose Teile, Feuchtigkeitsspuren kontrollieren.\n- Kabelanschlüsse und Schaltkasten auf offensichtliche Defekte oder Manipulation prüfen.\n- Umgebung auf ungewöhnliche Einflüsse (z.B. Bauarbeiten, Vibrationen) beobachten.\n\n**3. Diagnose/Beobachtung**\n- Lampe mehrfach beobachten: Schaltet sie in bestimmten Intervallen oder zufällig?\n- Prüfen, ob andere Lampen in der Nähe ähnliche Probleme zeigen.\n- Wetterbedingungen (Nebel, Feuchtigkeit) als mögliche Einflussfaktoren notieren.\n- Keine Online-Diagnose möglich (Gerät offline): Keine Fernabfrage, nur lokale Checks.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen lokal in der App/auf Papier festhalten.\n- Fotos lokal speichern (falls möglich).\n- Zeitpunkt, Dauer und Häufigkeit des Fehlverhaltens notieren.\n- Asset-ID (n4449540379), Standort (47.8772297, 12.1220096) und Reporter (Patrol) dokumentieren.\n\n**5. Eskalation**\n- Bei Gefahr für Verkehrssicherheit (z.B. schlechte Sicht, Nebel): Sofortige Meldung an Leitstelle.\n- Bei weiterhin unklarer Ursache: Techniker mit Messgerät und ggf. Ersatzteilen anfordern.\n- Offline-Dokumentation später synchronisieren.\n\n**Rückfrage:**  \nSind vor Ort weitere Lampen betroffen oder nur diese? Gibt es Hinweise auf Feuchtigkeit im Schaltkasten/Mast?",
-    "tokens_estimate_words": 195
+    "text": "Checkliste für Außendienst – Römerstraße, Langenpfunzen (Straßenlampe, intermittierendes Verhalten)\n\n**1. Absicherung**\n- Warnweste tragen, Absperrmaterial bereitstellen.\n- Bei mittlerer Verkehrsexposition: Bereich um Lampe mit Pylonen sichern.\n- Sichtbarkeit prüfen (Tag, aber Nebel): ggf. zusätzliche Warnleuchten einsetzen.\n\n**2. Sichtprüfung**\n- Lampe äußerlich inspizieren: Schäden, Feuchtigkeit, lose Kabel, Vandalismus?\n- Mast und Fundament auf Stabilität prüfen.\n- Umgebung auf ungewöhnliche Einflüsse (z.B. Bauarbeiten, Fahrzeuge) checken.\n\n**3. Diagnose/Beobachtung**\n- Lampe mehrfach beobachten: Schaltet sie sich unregelmäßig ein/aus?\n- Prüfen, ob andere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n- Witterung (Nebel) und hohe Geräuschkulisse notieren – kann Einfluss auf Sensorik haben.\n- Keine Online-Diagnose möglich (Gerät offline): Alle Beobachtungen lokal dokumentieren.\n\n**4. Dokumentation**\n- Alle Schritte und Beobachtungen in der Offline-App festhalten.\n- Fotos lokal speichern (falls möglich).\n- Fehlerart: „intermittierend“, Asset-ID: n4449540379, Standort: Römerstraße, Langenpfunzen.\n- Zeitpunkt und Wetterbedingungen notieren.\n\n**5. Eskalation**\n- Bei Verdacht auf Netz-/Steuerungsproblem: Meldung an Elektrotechnik/Netzbetreiber.\n- Bei mechanischem Defekt: Reparaturauftrag an zuständige Werkstatt.\n- Falls keine Ursache erkennbar: Störung als „unbestimmt“ dokumentieren, regelmäßige Kontrolle empfehlen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Stromausfälle oder Wartungen in der Umgebung?  \nSind weitere Assets betroffen oder nur diese Lampe?\n\n**Hinweis:**  \nOffline-Dokumentation nutzen, später synchronisieren. Sicherheit und Verkehrssicherung haben Vorrang.",
+    "tokens_estimate_words": 201
   },
   "judge": {
-    "missing_elements": [
-      "judge_missing_for_test_id"
-    ],
-    "short_justification": "Judge-Array enthielt keinen Block für diese test_id.",
+    "test_id": "INC-LAMP-0026-TC3",
     "scores": {
-      "R": 1,
-      "H": 1,
-      "S": 1,
-      "D": 1,
-      "K": 1
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
-      "escalation_present": false,
-      "offline_workflow_mentioned": false,
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
-    }
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt, Kontextnutzung präzise (Nebel, Verkehr, Geräuschkulisse), klare Struktur, Dokumentation und Eskalation vollständig."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.059
+    "runtime_seconds": 6.048
   },
   "error": {}
 }
