@@ -1,0 +1,61 @@
+[
+  {
+    "test_id": "INC-LAMP-0005-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextinformationen zu Umgebung/Risiko vorhanden, daher Safety-Maßnahmen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety-Fokus angemessen für unbekannte Situation."
+  },
+  {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz spotty connectivity + low_battery",
+      "Hinweis auf device_state bezieht sich auf Gerät, nicht Asset – könnte klarer sein"
+    ],
+    "short_justification": "Sehr gute Antwort mit starkem Safety-Fokus (Nebel, Dämmerung, mittlerer Verkehr). Offline-Dokumentation fehlt trotz spotty connectivity und low_battery im Context. K=3 wegen fehlender Robustheit bei Geräteeinschränkungen."
+  },
+  {
+    "test_id": "INC-LAMP-0005-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt, Safety-Fokus auf Nebel/Dämmerung, klare Dokumentation. Nutzt context_notes korrekt (Gerät ≠ Asset). Alle Dimensionen stark erfüllt."
+  }
+]

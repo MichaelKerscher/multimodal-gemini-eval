@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0006-TC2",
+  "timestamp": "2026-02-18T14:46:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n7230270217",
+        "longitude": 12.0941951,
+        "latitude": 47.8493667,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Äußere Münchener Straße/Aicherpark"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-19T01:52:56+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0006",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampenausfall – Rosenheim, Äußere Münchener Straße/Aicherpark\n\n1. **Absicherung**\n   - Warnbaken oder Absperrungen aufstellen, falls möglich.\n   - Polizei oder Ordnungsamt informieren, da Bereich unsicher und stark befahren.\n   - Warnhinweis für Verkehrsteilnehmer (z.B. mobile Warnleuchten).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und Umgebung: Ist Beschädigung sichtbar? Sind Kabel lose oder vandalisiert?\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist laut Meldung offline, Batterie schwach.\n   - Wetter: Sturm – mögliche Ursache für Ausfall (z.B. Kurzschluss, Wassereintritt).\n   - Prüfen, ob Foto Hinweise auf Schaden gibt (z.B. Mast verbogen, Lampenkopf beschädigt).\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren (Datum, Uhrzeit, Wetter, Sichtprüfungsergebnisse).\n   - Foto sichern und an zentrale Leitstelle weiterleiten.\n   - Standort und Asset-ID dokumentieren.\n\n5. **Eskalation**\n   - Meldung mit hoher Priorität an Instandhaltung/Technik weitergeben.\n   - Bei akuter Gefährdung: Sofortige Alarmierung der Polizei und Stadtwerke.\n   - Hinweis: Aufgrund von Sturm und hoher Verkehrsexposition schnelle Reparatur erforderlich.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder handelt es sich nur um diese eine? Gibt es Hinweise auf direkte Schäden am Mast oder Lampenkopf (z.B. durch Sturm)?",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0006-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high + storm + traffic_exposure=high führen zu klarer Priorisierung, Polizei-Einbindung, Offline-Hinweis (Gerät offline/low_battery). Alle Kontextdimensionen genutzt, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.668
+  },
+  "error": {}
+}

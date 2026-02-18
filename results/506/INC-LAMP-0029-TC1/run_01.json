@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC1",
+  "timestamp": "2026-02-18T14:54:31",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher. (Asset-ID: n9223569763)",
+    "context": {
+      "asset_osm": "n9223569763"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n9223569763)\n\n1. Absicherung  \n- Bereich absperren oder warnen, falls akute Gefahr besteht (z. B. schlechte Sicht, erhöhte Unfallgefahr).\n- Warnschilder aufstellen, falls verfügbar.\n\n2. Sichtprüfung  \n- Prüfen, ob Lampe beschädigt ist (z. B. Glasbruch, Mast verbogen).\n- Kontrollieren, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Einschätzen, ob Stromausfall vorliegt oder nur einzelne Lampe betroffen ist.\n- Prüfen, ob Lampe blinkt/flackert oder komplett aus ist.\n- Gibt es Hinweise auf Vandalismus oder technische Defekte?\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen notieren.\n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Meldung an zuständige Fachabteilung (Elektro/Technik).\n- Bei akuter Gefährdung: Sofortige Weitergabe an Bereitschaftsdienst.\n\nFragen:  \n- Gibt es weitere dunkle Lampen im Umfeld?  \n- Ist der Bereich stark frequentiert (z. B. Schulweg, Hauptstraße)?  \n- Wurde bereits eine Meldung an die Leitstelle gemacht?\n\nBitte Rückmeldung zu den offenen Punkten geben, damit ich die nächsten Schritte optimal unterstützen kann.",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (high nicht erkennbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung und Eskalation. Keine Halluzinationen, aber Offline-Workflow nicht erwähnt (da CONTEXT minimal, kein Abzug bei K)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.319
+  },
+  "error": {}
+}

@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-18T14:50:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Steuerungsproblem Segmentausfall  \nAsset-ID: n12520351647\n\n1. Absicherung  \n- Warnbaken und ggf. Absperrungen aufstellen  \n- Warnwesten tragen  \n- Verkehrsteilnehmer informieren (z. B. durch Hinweisschilder)\n\n2. Sichtprüfung  \n- Prüfen, ob das gesamte Segment betroffen ist (alle Lampen/Ampeln aus?)  \n- Sichtkontrolle der Steuerungseinheit und Verkabelung  \n- Gibt es offensichtliche Schäden (z. B. Vandalismus, Wasser, Tierbiss)?\n\n3. Diagnose/Beobachtung  \n- Steuerungseinheit auf Funktion prüfen (Statusanzeigen, Sicherungen, Reset versuchen)  \n- Liegt ein Stromausfall vor oder nur ein Steuerungsproblem?  \n- Gibt es parallele Ausfälle in angrenzenden Segmenten?\n\n4. Dokumentation  \n- Ausfallzeit, betroffene Assets, erste Diagnose schriftlich festhalten  \n- Fotos von Steuerungseinheit und Segment machen  \n- Notieren, ob Gefahr für Verkehrssicherheit besteht\n\n5. Eskalation  \n- Bei Gefahr für Verkehr unverzüglich an Leitstelle melden  \n- Bei komplexen Steuerungsproblemen Techniker oder Hersteller kontaktieren  \n- Dokumentation an zuständige Stelle weiterleiten\n\nRückfrage:  \nSind weitere Segmente betroffen oder nur das Segment mit Asset-ID n12520351647? Liegt bereits eine Vor-Ort-Diagnose vor?",
+    "tokens_estimate_words": 149
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung bei Verkehrsgefahr"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden. Safety-Aspekte vorhanden, aber bei minimalem Context nicht überspezifiziert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.027
+  },
+  "error": {}
+}

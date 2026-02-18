@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-18T14:51:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampenausfall (OSM: n4939032796, Standort: 47.8552359/12.1220818):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls Bereich direkt an Fahrbahn liegt.\n   - Reflexwesten tragen, besonders bei schlechter Sicht (Nacht, Nebel).\n   - Bei mittlerer Verkehrsexposition: Verkehrsteilnehmer warnen.\n\n2. **Sichtprüfung**\n   - Lampe auf offensichtliche Schäden prüfen (Glasbruch, Vandalismus, lose Teile).\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n   - Prüfen, ob Stromzufuhr sichtbar gestört (z.B. Kabel, Schaltschrank offen).\n\n3. **Diagnose/Beobachtung**\n   - Gerät ist laut System online und Zustand „ok“ – kein Connectivity-Problem.\n   - Fehlerbild: Einzel-Ausfall, keine Fotos verfügbar.\n   - Annahme: Leuchtmittel defekt oder internes Problem (Starter, Vorschaltgerät).\n   - Prüfen, ob andere Lampen in unmittelbarer Nähe ebenfalls betroffen.\n\n4. **Dokumentation**\n   - Ausfallzeit und Standort notieren.\n   - Sichtprüfung und Diagnose schriftlich festhalten.\n   - Falls möglich: Skizze oder Beschreibung der Umgebung ergänzen.\n\n5. **Eskalation**\n   - Bei mittlerer Sicherheitsgefährdung (unsicherer Bereich, Nacht, Nebel): Störungsdienst priorisiert informieren.\n   - Meldung an zuständige Leitstelle mit allen Details (Standort, Sichtprüfung, Diagnose).\n   - Falls mehrere Lampen betroffen: Sammelmeldung und ggf. Polizei informieren.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls ausgefallen oder handelt es sich um einen Einzel-Ausfall?  \nIst eine schnelle Reparatur (innerhalb 2 Stunden) möglich oder muss eine temporäre Absicherung erfolgen?",
+    "tokens_estimate_words": 191
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, medium traffic_exposure) mit angemessener Safety-Priorisierung. Klare Eskalation bei mittlerer Gefährdung, vollständige Dokumentation, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.038
+  },
+  "error": {}
+}

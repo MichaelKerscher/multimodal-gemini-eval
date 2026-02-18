@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist und keine Offline-Erwähnung nötig war."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (connectivity nicht im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -24,19 +24,16 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 2
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": true,
-      "hallucination_suspected": true
+      "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Missverständnis: device.low_battery/offline beschreibt Techniker-Gerät, nicht Asset",
-      "Batteriewechsel-Annahme ist Halluzination"
-    ],
-    "short_justification": "Exzellente Struktur und Kontextnutzung (Verkehr, Foto), aber kritischer Fehler: device_state wird fälschlich als Asset-Problem interpretiert statt als Techniker-Geräte-Zustand. K=2 wegen Halluzination."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Offline-Status erkannt, Batterie/Konnektivität adressiert, Foto-Workflow erwähnt, hohe Verkehrsexposition berücksichtigt. Klare Struktur, vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Korrekte Interpretation von device.* als Techniker-Gerät (extras.context_notes beachtet), Offline-Workflow erwähnt, strukturiert, sicherheitsorientiert, keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit genannt ('analog durchführen', 'offlinefähig'), Foto-Workflow integriert, hohe Verkehrsexposition adressiert. Keine Halluzinationen trotz umfangreichem CONTEXT."
   }
 ]

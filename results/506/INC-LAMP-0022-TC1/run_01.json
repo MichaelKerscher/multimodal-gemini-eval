@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-18T14:52:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für den Außendienst – Straßenlampe (Asset-ID: n1987093607)**\n\n1. **Absicherung**\n   - Bereich absichern, falls die Dunkelheit eine akute Gefahr darstellt (z.B. Warnbaken, Absperrband).\n   - Bei erhöhter Unsicherheit: Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe auf offensichtliche Schäden prüfen (z.B. Glasbruch, Vandalismus, lose Kabel).\n   - Umfeld auf weitere dunkle Lampen oder Störungen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe auf Bewegungen oder Schaltzeiten reagiert.\n   - Nachfragen: Gibt es in der Nähe einen Schaltkasten oder eine Steuerungseinheit?\n   - Annahme: Einzelstörung, da nur diese Lampe betroffen und erst seit kurzem.\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Zeitpunkt und Beobachtungen notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle weiterleiten.\n   - Bei akuter Gefährdung: Sofortige Eskalation an Notdienst.\n\n**Rückfrage:**  \nIst die Lampe Teil einer Reihe, oder handelt es sich um eine Einzelinstallation? Gibt es weitere dunkle Lampen in unmittelbarer Nähe?\n\nBitte geben Sie Bescheid, falls Sie zusätzliche Informationen haben oder eine schnelle Absicherung benötigen.",
+    "tokens_estimate_words": 166
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden war. Sicherheitsmaßnahmen erkennbar, aber könnten bei 'unsicherem Bereich' noch expliziter priorisiert werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.512
+  },
+  "error": {}
+}

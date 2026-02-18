@@ -1,0 +1,61 @@
+[
+  {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung erkennbar (nur Asset-ID vorhanden)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber minimaler Kontext erlaubt keine tiefere Bewertung der Kontextnutzung."
+  },
+  {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz spotty connectivity",
+      "Severity=high nicht ausreichend betont in Eskalation"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nebel, Nacht, poor_visibility), Safety-Fokus erkennbar. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow empfohlen (K-Abzug)."
+  },
+  {
+    "test_id": "INC-LAMP-0004-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Vollständige Kontextnutzung (Nebel, Nacht, spotty connectivity mit Offline-Hinweis), klare Safety-Priorisierung bei severity=high, strukturierte Eskalation, nachvollziehbare Dokumentation. Keine Halluzinationen."
+  }
+]

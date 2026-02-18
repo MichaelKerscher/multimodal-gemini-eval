@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-18T14:49:21",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe (Ausfall, Routinekontrolle):\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (bei Bedarf).\n   - Standort prüfen: Geringe Verkehrsbelastung, Tageslicht, klare Sicht → Absicherung minimal, aber auf Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Lampe äußerlich auf Schäden, Vandalismus oder lose Teile kontrollieren.\n   - Mast, Leuchtenkopf und Verkabelung begutachten.\n   - Keine Fotos verfügbar – bei Unklarheiten vor Ort dokumentieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung am Mast vorhanden (Gerät online, Zustand ok).\n   - Leuchtmittel defekt? Sichtbare Hinweise (z.B. dunkle Glühbirne, LED-Ausfall)?\n   - Elektronik/Steuerung prüfen: Keine offensichtlichen Fehler am Gerät laut Systemstatus.\n\n4. **Dokumentation**\n   - Ausfall und Sichtprüfung schriftlich festhalten (Datum, Uhrzeit, Zustand).\n   - Besonderheiten notieren (z.B. keine äußeren Schäden, Gerät online).\n\n5. **Eskalation**\n   - Leuchtmittelwechsel oder Elektronikprüfung veranlassen.\n   - Bei Unsicherheit oder wiederholtem Ausfall: Fachfirma oder Elektriker informieren.\n   - Rückmeldung an Zentrale mit Status und ggf. weiteren Maßnahmen.\n\n**Rückfrage:**  \nIst ein Ersatzleuchtmittel vor Ort verfügbar oder muss eine Bestellung ausgelöst werden?  \nSind in der Umgebung weitere Lampen betroffen?",
+    "tokens_estimate_words": 160
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Tageslicht, geringe Verkehrsbelastung, Gerät online). Präzise Handlungsanweisungen, angemessene Sicherheitsmaßnahmen, klare Dokumentation und Eskalation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.434
+  },
+  "error": {}
+}

@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-18T14:46:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe (Asset-ID: n12551286240)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Bereich mit Warnbaken/Kegel absichern, falls Fußgänger oder Verkehr betroffen  \n- Bei erhöhter Unsicherheit: Polizei oder Ordnungsamt informieren\n\n2. Sichtprüfung  \n- Lampe auf äußerliche Schäden prüfen (Glas, Mast, Verkabelung)  \n- Umgebung auf weitere dunkle Lampen oder Störungen kontrollieren\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Stromversorgung vorhanden (andere Lampen in der Nähe leuchten?)  \n- Sichtkontrolle der Schaltstelle/Verteilerschrank, falls zugänglich  \n- Notieren: Zeitpunkt, Wetterbedingungen, besondere Auffälligkeiten\n\n4. Dokumentation  \n- Asset-ID, Standort, Uhrzeit, Beobachtungen schriftlich festhalten  \n- Fotos vom Zustand und Umfeld machen\n\n5. Eskalation  \n- Bei akuter Gefährdung: Sofortige Meldung an Bereitschaft oder Leitstelle  \n- Bei defekter Lampe ohne akute Gefahr: Störmeldung an Instandhaltung weiterleiten  \n- Rückmeldung an Melder, falls Kontaktdaten vorhanden\n\nFehlende Infos:  \n- Ist die Lampe einzeln betroffen oder sind mehrere Lampen dunkel?  \n- Gibt es Hinweise auf Vandalismus oder Stromausfall?\n\nBitte ergänzen, falls weitere Details bekannt sind.",
+    "tokens_estimate_words": 149
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung erkennbar (nur Asset-ID vorhanden)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber minimaler Kontext erlaubt keine tiefere Bewertung der Kontextnutzung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.359
+  },
+  "error": {}
+}

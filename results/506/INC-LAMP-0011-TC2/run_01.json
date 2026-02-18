@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC2",
+  "timestamp": "2026-02-18T14:48:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-15T22:52:18+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Kontrollauftrag: Straßenlampe Rosenheim, Leitzachstraße  \nGemeldeter Fehler: Zeitweiser Ausfall, aktuell normal. Sichtverhältnisse: Nebel, mittlerer Verkehr.\n\n**Checkliste für Außendienstkontrolle**\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen.\n   - Standort absichern (besonders bei mittlerem Verkehr und schlechter Sicht).\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden, Verschmutzung oder Feuchtigkeit prüfen.\n   - Umgebung auf Störungen (z.B. Baumaßnahmen, Kabel, Vandalismus) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein-/ausschalten, um Ausfall zu provozieren.\n   - Prüfen, ob andere Lampen in der Nähe ähnliche Probleme zeigen.\n   - Bei Nebel: Feuchtigkeitseintritt besonders beachten.\n\n4. **Dokumentation**\n   - Zustand und Beobachtungen notieren (Datum, Uhrzeit, Wetter).\n   - Fotos machen, falls möglich (aktuell nicht verfügbar).\n   - Fehlerbild und Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Verdacht auf Feuchtigkeit/Kabelproblem: Meldung an Fachbetrieb/Elektriker.\n   - Bei stabiler Funktion: Überwachung empfehlen, ggf. Rückmeldung an Bürger.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder bauliche Veränderungen an der Leitzachstraße?  \nFalls nicht, vermute ich Feuchtigkeitseintritt als Ursache für den zeitweisen Ausfall. Bitte bestätigen oder ergänzen.",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Kontextgerechte Absicherung (Nebel, mittlerer Verkehr), strukturierte Diagnose mit Feuchtigkeitsverdacht, klare Eskalationskriterien. Alle relevanten Umweltfaktoren berücksichtigt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.372
+  },
+  "error": {}
+}

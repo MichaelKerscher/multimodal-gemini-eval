@@ -1,0 +1,59 @@
+[
+  {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Priorisierung erkennbar bei minimalem Kontext",
+      "Rückfrage zu Asset-Typ unnötig spekulativ"
+    ],
+    "short_justification": "Solide strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber bei L0-Kontext etwas zu detailliert und spekulativ (Ampeln/Vandalismus ohne Anhaltspunkte)."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Nacht, Regen, poor_visibility, severity=high) korrekt verarbeitet, Safety-First-Ansatz, klare Eskalation, präzise Dokumentation. Keine Halluzinationen, vollständig kontextgerecht."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextnutzung (Nacht, Regen, severity=high, photo_available). Korrekte Interpretation von device_state als Techniker-Gerät (nicht Asset), Safety-First, klare Eskalation, präzise Dokumentation. Keine Halluzinationen."
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC3",
+  "timestamp": "2026-02-18T14:52:49",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "unknown",
+          "fault_type": "unknown",
+          "offline": false,
+          "spotty": false,
+          "connectivity": "unknown",
+          "device_state": "unknown",
+          "low_battery": false,
+          "weather": "unknown",
+          "poor_visibility": false,
+          "time_of_day": "unknown",
+          "photo_available": false
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 0
+        },
+        "selected_fields": [],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 0,
+    "s2_selected_fields": [],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Warnbaken oder Absperrungen aufstellen, falls nötig.\n\n2. **Sichtprüfung**\n   - Prüfe Lampe und Mast auf sichtbare Schäden (z.B. Kabel, Lampenkopf, Feuchtigkeit).\n   - Kontrolliere, ob die Lampe aktuell stabil leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, ob der Fehler zu bestimmten Zeiten oder Bedingungen auftritt (z.B. Wetter, Tageszeit).\n   - Prüfe, ob andere Lampen in der Nähe betroffen sind.\n   - Annahme: Fehler könnte durch Wackelkontakt, Feuchtigkeit oder Elektronikproblem verursacht sein.\n\n4. **Dokumentation**\n   - Erstelle einen kurzen Bericht: Zeitpunkt, Dauer des Ausfalls, aktuelle Funktion, Beobachtungen.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Fachstelle/Technik.\n   - Hinweis: Da der Fehler nur sporadisch auftritt, sollte eine zeitnahe Kontrolle durch einen Elektriker erfolgen.\n\n**Rückfrage:**  \nIst die Lampe Teil einer größeren Anlage (z.B. mehrere Lampen betroffen)? Gibt es Hinweise auf äußere Einflüsse (z.B. Bauarbeiten, Wetter)?",
+    "tokens_estimate_words": 150
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide generische Checkliste ohne Halluzinationen. Context war minimal (_selection_meta only), daher korrekt keine spezifischen Details erfunden. Struktur und Eskalation vorhanden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 2.728
+  },
+  "error": {}
+}

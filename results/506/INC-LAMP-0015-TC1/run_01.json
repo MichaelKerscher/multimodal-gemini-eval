@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC1",
+  "timestamp": "2026-02-18T14:49:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n13293431103)",
+    "context": {
+      "asset_osm": "n13293431103"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe (Asset-ID: n13293431103)\n\n1. Absicherung  \n- Bereich absperren oder kennzeichnen, falls akute Gefahr besteht (z. B. Dunkelheit, Stolperstellen).\n- Warnschilder aufstellen, falls verfügbar.\n\n2. Sichtprüfung  \n- Lampe auf offensichtliche Schäden prüfen (Glasbruch, Kabel, Mast).\n- Umgebung auf weitere Ausfälle oder ungewöhnliche Situationen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind (Hinweis auf Netzproblem).\n- Einschätzen, ob ein Defekt am Leuchtmittel, Vorschaltgerät oder Stromversorgung vorliegt.\n- Notieren, ob die Lampe kurz vor dem Ausfall geflackert hat oder andere Auffälligkeiten zeigte.\n\n4. Dokumentation  \n- Asset-ID, Standort, Zeitpunkt des Ausfalls und Beobachtungen notieren.\n- Fotos machen, falls möglich.\n\n5. Eskalation  \n- Meldung an die zuständige Wartungsstelle/Technik weiterleiten.\n- Bei akuter Gefährdung (z. B. Schulweg, Unfallgefahr): Priorisierte Reparatur anfordern.\n\nFehlende Informationen:  \n- Gibt es Hinweise auf Stromausfall im gesamten Bereich oder nur an dieser Lampe?\n- Ist die Lampe Teil einer Kette (z. B. mehrere Lampen gleichzeitig dunkel)?\n\nBitte Rückmeldung geben, falls weitere Details bekannt sind oder Sofortmaßnahmen gewünscht werden.",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)"
+    ],
+    "short_justification": "Solide Checkliste mit Absicherung, Diagnose und Eskalation. Kontextnutzung korrekt (keine Spekulation), aber Sicherheitsaspekt könnte bei 'unsicher' stärker betont werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.43
+  },
+  "error": {}
+}

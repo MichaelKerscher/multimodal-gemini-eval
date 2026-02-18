@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context vorhanden war. Sicherheitsmaßnahmen erkennbar, aber könnten bei 'unsicherem Bereich' noch expliziter priorisiert werden."
+  },
+  {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (severity=high, Schnee, poor_visibility, low_battery). Sicherheit priorisiert, sofortige Eskalation bei hoher Gefährdung, Foto-Workflow integriert. Alle relevanten Umweltfaktoren berücksichtigt."
+  },
+  {
+    "test_id": "INC-LAMP-0022-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: Nutzt alle Context-Elemente korrekt (device_state=low_battery → offline-Vorbereitung), severity=high → sofortige Eskalation, Umweltfaktoren (Schnee, poor_visibility) in Sicherheitsmaßnahmen integriert. Korrekte Interpretation der context_notes (device.* = Techniker-Gerät)."
+  }
+]

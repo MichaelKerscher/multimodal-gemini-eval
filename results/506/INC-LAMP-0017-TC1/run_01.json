@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC1",
+  "timestamp": "2026-02-18T14:50:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen. (Asset-ID: n4446442023)",
+    "context": {
+      "asset_osm": "n4446442023"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n4446442023 (Schönau, dunkler Abschnitt)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen  \n- Gefahrenbereich (dunkler Abschnitt) vor Ort absichern, ggf. mit Warnbaken oder Licht  \n- Verkehrsteilnehmer informieren (z. B. Hinweis auf eingeschränkte Sicht)\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampen entlang des Abschnitts  \n- Prüfen: Sind einzelne Lampen oder der gesamte Abschnitt betroffen?  \n- Sicht auf Beschädigungen, Vandalismus, lose Kabel, Feuchtigkeit oder andere Auffälligkeiten\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Lampen einzeln schalten, falls möglich  \n- Prüfen, ob Stromversorgung vorhanden (z. B. Sicherungen, Verteilerkasten)  \n- Notieren: Welche Lampen sind betroffen? Gibt es Muster (z. B. nur eine Seite, nur bestimmte Typen)?  \n- Ggf. auf ungewöhnliche Geräusche, Gerüche oder Hitze achten\n\n4. Dokumentation  \n- Fotos vom Abschnitt und den betroffenen Lampen machen  \n- Asset-ID, Standort, Datum/Uhrzeit, Beobachtungen notieren  \n- Mängelbericht ausfüllen (digital oder Papier)\n\n5. Eskalation  \n- Bei akuter Gefahr (z. B. Stromausfall, Unfallrisiko): Sofortige Meldung an Leitstelle/Technik  \n- Bei mehreren Lampen oder großflächigem Ausfall: Weiterleitung an Fachabteilung für Netzprüfung  \n- Dokumentation an zuständige Stelle übermitteln\n\nRückfrage:  \nSind bereits weitere Meldungen zu diesem Abschnitt eingegangen oder gibt es Hinweise auf Bauarbeiten/Störungen im Stromnetz?  \nFalls nicht, gehe ich von einem lokalen Ausfall der Straßenbeleuchtung aus. Bitte bestätigen oder ergänzen.",
+    "tokens_estimate_words": 199
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Umwelt-/Zeitkontext vorhanden, daher Safety-Maßnahmen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety-Fokus erkennbar, aber ohne spezifische Risikobewertung (da L0-Context)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.234
+  },
+  "error": {}
+}

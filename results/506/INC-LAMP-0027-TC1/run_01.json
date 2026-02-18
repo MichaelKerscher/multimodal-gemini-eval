@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC1",
+  "timestamp": "2026-02-18T14:53:53",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n4939032947)",
+    "context": {
+      "asset_osm": "n4939032947"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz (Asset-ID: n4939032947, Straßenlampe)\n\n1. Absicherung  \n- Warnwesten anziehen  \n- Absperrmaterial aufstellen (z.B. Leitkegel, Warnleuchten)  \n- Bereich um die Lampe sichern, ggf. Gehweg absperren\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung  \n- Prüfen auf Feuchtigkeitseintritt, lose Kabel, beschädigte Gehäuseteile  \n- Regenwetter beachten: Gibt es Pfützen oder Wassereintritt am Mastfuß?\n\n3. Diagnose/Beobachtung  \n- Flackern gezielt beobachten: Tritt es nur bei Regen auf?  \n- Prüfen, ob das Flackern mit Feuchtigkeit korreliert  \n- Ggf. Lampe öffnen und auf Wasser im Gehäuse oder im Anschlusskasten prüfen  \n- Elektrische Kontakte auf Korrosion oder lose Verbindungen kontrollieren\n\n4. Dokumentation  \n- Alle Beobachtungen schriftlich festhalten (Datum, Uhrzeit, Wetter, Flackerverhalten)  \n- Fotos von betroffenen Stellen machen  \n- Asset-ID und Standort notieren\n\n5. Eskalation  \n- Bei Verdacht auf Feuchtigkeitsschaden: Meldung an Elektrofachkraft  \n- Bei akuter Gefahr (z.B. Stromschlagrisiko): Lampe außer Betrieb nehmen und sofort melden  \n- Dokumentation an zuständige Stelle weiterleiten\n\nRückfrage:  \nIst das Flackern dauerhaft oder nur während/nach Regen? Gibt es Hinweise auf Wassereintritt am Mast oder Gehäuse?",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Erwähnung von Verkehrssicherung trotz Straßenlampe"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung; K=5 korrekt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.944
+  },
+  "error": {}
+}

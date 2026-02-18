@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-18T14:45:20",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Kontrolle (Asset-ID: n1987093602)\n\n1. Absicherung  \n- Warnweste tragen  \n- Absperrmaterial bereitstellen (z. B. Leitkegel)  \n- Gefahrenbereich absichern, falls nötig (bei Straßenlage)\n\n2. Sichtprüfung  \n- Zustand der Straßenlampe/Ampelanlage vor Ort prüfen  \n- Auf sichtbare Schäden, lose Teile oder Feuchtigkeit achten  \n- Funktionstest: Gerät mehrfach schalten (sofern möglich)\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Ausfall reproduzierbar ist (z. B. durch Schaltzyklen)  \n- Nach ungewöhnlichen Geräuschen, Flackern oder Verzögerungen suchen  \n- Umfeld auf mögliche Störquellen kontrollieren (z. B. Baustellen, Vandalismus)\n\n4. Dokumentation  \n- Ergebnisse der Sichtprüfung und Diagnose notieren  \n- Fotos von Anlage und Umgebung machen  \n- Zeitpunkt und Dauer der Kontrolle festhalten\n\n5. Eskalation  \n- Bei erneutem oder reproduzierbarem Ausfall: Meldung an Fachbereich/Störungsdienst  \n- Bei normaler Funktion: Beobachtung im Wartungsplan vermerken  \n- Unsicherheiten oder fehlende Informationen: Rückmeldung an Melder mit gezielten Fragen (z. B. Zeitpunkt des Ausfalls, Wetterbedingungen)\n\nBitte Rückmeldung:  \n- Handelt es sich um eine Straßenlampe oder eine Ampelanlage?  \n- Gibt es Hinweise auf besondere Umstände beim Ausfall (z. B. Wetter, Bauarbeiten)?",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Spekulation über Asset-Typ (Lampe/Ampel) bei minimalem Context"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Rückfrage nach Asset-Typ ist sinnvoll bei minimalem Context, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.332
+  },
+  "error": {}
+}

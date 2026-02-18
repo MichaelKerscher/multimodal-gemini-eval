@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle Schritte nachvollziehbar dokumentiert, keine Halluzinationen trotz minimalem Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Standortname, severity=high, photo_available). Sicherheitsmaßnahmen priorisiert, Eskalation klar, proaktive Rückfrage zur Koordination."
+  },
+  {
+    "test_id": "INC-LAMP-0028-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Professionelle Checklisten-Struktur mit vollständiger Kontextintegration. Sicherheit und Eskalation klar priorisiert, Dokumentation präzise, gezielte Rückfragen zur Gefahrenbeurteilung."
+  }
+]

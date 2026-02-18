@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC1",
+  "timestamp": "2026-02-18T14:54:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n4470029720)",
+    "context": {
+      "asset_osm": "n4470029720"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Absicherung und Erstmaßnahmen – Asset-ID: n4470029720\n\n1. Absicherung  \n- Bereich um die beschädigte Straßenlampe sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Zugang für Unbefugte verhindern.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Ist die Beschädigung großflächig oder nur oberflächlich?  \n- Liegen stromführende Teile frei oder sind sie erreichbar?\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe weiterhin in Betrieb ist oder bereits ausgefallen.  \n- Gibt es Funkenflug, ungewöhnliche Geräusche oder Geruchsentwicklung?\n\n4. Dokumentation  \n- Fotos der Beschädigung und Absicherung machen.  \n- Kurze Beschreibung der Situation (Art der Beschädigung, Gefahrenlage, getroffene Maßnahmen).  \n- Asset-ID und Standort notieren.\n\n5. Eskalation  \n- Sofortige Meldung an die zuständige Elektrofachkraft/Technik-Team.  \n- Bei akuter Gefahr: Feuerwehr oder Polizei verständigen.  \n- Bis zur Reparatur: Bereich gesichert halten und regelmäßig kontrollieren.\n\nBitte Rückmeldung, falls weitere Details zum Schaden oder Standort benötigt werden.",
+    "tokens_estimate_words": 137
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit und Eskalation. Alle Schritte nachvollziehbar dokumentiert, keine Halluzinationen trotz minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.012
+  },
+  "error": {}
+}

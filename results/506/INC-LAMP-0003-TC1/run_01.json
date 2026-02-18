@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-18T14:45:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Störungsbearbeitung – Asset-ID: n4427359783\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Straßenlampe abgesichert ist (z. B. Warnbaken, Absperrband), falls Arbeiten vor Ort nötig werden.  \n- Prüfe, ob die Lampe in einer Gefahrenzone steht (z. B. Kreuzung, Fußgängerüberweg).\n\n2. Sichtprüfung  \n- Kontrolliere vor Ort: Ist die Lampe äußerlich beschädigt (Glasschaden, Mast verbogen, Kabel sichtbar)?  \n- Prüfe, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Teste, ob die Lampe auf manuelle Schaltung reagiert (sofern möglich).  \n- Überprüfe Sicherungen und Stromzufuhr im Schaltschrank.  \n- Notiere Auffälligkeiten (z. B. Geräusche, Geruch, Feuchtigkeit).\n\n4. Dokumentation  \n- Erfasse alle Beobachtungen und Maßnahmen digital (Foto, Beschreibung, Asset-ID).  \n- Dokumentiere den Bürgerhinweis und Zeitpunkt der Prüfung.\n\n5. Eskalation  \n- Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an Leitstelle/Notdienst.  \n- Bei technischer Störung ohne akute Gefahr: Weiterleitung an Wartungsteam mit vollständiger Dokumentation.\n\nFehlende Infos:  \n- Standortdetails (Straße, Umgebung)?  \n- Ist die Lampe Teil einer Gruppe oder Einzelstandort?  \n- Gibt es Hinweise auf wiederholte Ausfälle?\n\nBitte ergänzen, falls weitere Details bekannt sind.",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber auch nicht nötig bei L0-Kontext)"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Kontext vorhanden. Sicherheitsaspekte angemessen adressiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.408
+  },
+  "error": {}
+}

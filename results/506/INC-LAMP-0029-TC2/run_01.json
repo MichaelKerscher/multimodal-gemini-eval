@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC2",
+  "timestamp": "2026-02-18T14:54:31",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T12:53:33+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampenausfall – Bereich Pang, Cafe Neu\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen, falls der Bereich stark frequentiert ist.\n   - Bei hoher Unsicherheit: Polizei oder Ordnungsamt informieren, ggf. mobile Beleuchtung organisieren.\n\n2. **Sichtprüfung**\n   - Vor Ort prüfen: Ist nur diese Lampe betroffen oder mehrere?\n   - Sicht auf Lampenkopf, Mast und Verkabelung – Schäden, Vandalismus oder lose Teile?\n\n3. **Diagnose/Beobachtung**\n   - Lampe ist laut Gerät „offline“, aber der Zustand „ok“ – vermutlich Stromversorgung oder Steuerung ausgefallen.\n   - Prüfen: Gibt es Anzeichen für Stromausfall im Umfeld (andere Lampen, Gebäude)?\n   - Foto vom Zustand aufnehmen (Foto liegt vor, ggf. ergänzen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen notieren: Zeitpunkt, Sichtprüfungsergebnisse, Foto anhängen.\n   - Standort (Pang, Cafe Neu, OSM n9223569763, Koordinaten) exakt dokumentieren.\n\n5. **Eskalation**\n   - Meldung an zuständige Elektrofachkraft/Techniker mit allen Infos und hoher Priorität („high severity“).\n   - Bei akuter Gefährdung: Sofortige Weiterleitung an Stadtwerke/Notdienst.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder nur diese eine? Gibt es Hinweise auf Vandalismus oder Stromausfall im Umfeld?",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt (connectivity=offline)"
+    ],
+    "short_justification": "Exzellente Nutzung des Kontexts (Standort, Severity, Foto), klare Safety-Priorisierung und Eskalation. Offline-Hinweis fehlt, daher K=4."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.925
+  },
+  "error": {}
+}

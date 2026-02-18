@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC2",
+  "timestamp": "2026-02-18T14:50:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall  \nStandort: 47.8570666, 12.1309433 (Straßenlampe, OSM-ID: n13293470414)  \nBedingungen: Dämmerung, Regen, schlechte Sicht, geringe Verkehrsexposition, Gerät mit schwacher Batterie und instabiler Verbindung\n\n**1. Absicherung**\n- Warnweste anziehen.\n- Absperrmaterial bereitstellen (bei Bedarf, da Verkehr gering).\n- Umfeld auf Rutschgefahr prüfen (Regen).\n\n**2. Sichtprüfung**\n- Lampe auf äußere Schäden, Feuchtigkeitseintritt oder lose Teile kontrollieren.\n- Prüfen, ob Lampe aktuell leuchtet.\n- Foto vom Zustand machen (Foto verfügbar).\n\n**3. Diagnose/Beobachtung**\n- Notieren, ob Fehler weiterhin sporadisch auftritt.\n- Prüfen, ob Feuchtigkeit oder Witterung Einfluss hat.\n- Gerätedaten auslesen, falls möglich (Batterie schwach, Verbindung instabil).\n- Prüfen, ob andere Lampen in der Nähe betroffen sind.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n- Foto zur Dokumentation anhängen.\n- Fehler als „intermittent/high severity“ im System vermerken.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Sicherheitsrisiko sofort an Technik/Entstörung weiterleiten.\n- Hinweis auf schwache Batterie und instabile Verbindung geben.\n- Bei Bedarf Ersatzgerät oder zusätzliche Kontrolle anfordern.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder wurde nur diese Lampe gemeldet?  \nSoll eine sofortige Entstörung erfolgen oder reicht eine Überwachung?",
+    "tokens_estimate_words": 178
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Wetter, Dämmerung, Severity high, Foto, low_battery). Klare Safety-First-Haltung, strukturiert, eskaliert angemessen. Spotty connectivity könnte Offline-Hinweis rechtfertigen, aber nicht zwingend fehlend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.293
+  },
+  "error": {}
+}

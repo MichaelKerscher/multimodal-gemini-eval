@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-18T14:50:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Fehler bei Straßenlampe (Asset-ID: n13293470414):\n\n1. Absicherung  \n- Stelle sicher, dass die Umgebung verkehrssicher ist (Warnbaken, ggf. Warnwesten).\n\n2. Sichtprüfung  \n- Prüfe Lampe und Mast auf sichtbare Schäden (z.B. Kabel, Leuchtmittel, Feuchtigkeit).\n- Kontrolliere, ob die Lampe aktuell stabil leuchtet.\n\n3. Diagnose/Beobachtung  \n- Notiere, ob der Fehler reproduzierbar ist (z.B. Flackern, Ausfall bei bestimmten Bedingungen).\n- Prüfe, ob benachbarte Lampen ähnliche Probleme zeigen.\n- Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Defekt im Steuergerät.\n\n4. Dokumentation  \n- Erfasse Zeitpunkt des Ausfalls und Wiederinbetriebnahme.\n- Notiere Beobachtungen und Asset-ID (n13293470414).\n\n5. Eskalation  \n- Melde den sporadischen Fehler an die zuständige Fachstelle (Elektroservice).\n- Empfehlung: Kurzfristige Überprüfung durch Fachpersonal, da sporadische Fehler auf Sicherheitsrisiken hindeuten können.\n\nFehlen weitere Informationen (z.B. Wetterbedingungen, Häufigkeit des Fehlers)? Bitte ergänzen, um gezielter vorgehen zu können.",
+    "tokens_estimate_words": 129
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation. Sicherheit adressiert, aber ohne Kontextinformationen zu Severity/Umgebung etwas generisch. Keine Halluzinationen, passend zu minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.163
+  },
+  "error": {}
+}

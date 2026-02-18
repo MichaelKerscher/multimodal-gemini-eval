@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung – Modell spekuliert nicht und bleibt bei plausiblen Standardschritten."
+  },
+  {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Offline-Workflow erkannt, Sturm/Verkehr/Sicht adressiert, severity=high führt zu sofortiger Eskalation. Alle relevanten Risikofaktoren berücksichtigt, keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0023-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit genannt, alle Risikofaktoren adressiert, Dokumentation offlinefähig, sofortige Eskalation bei Gefahr. Nutzt Kontext vollständig ohne Spekulation."
+  }
+]

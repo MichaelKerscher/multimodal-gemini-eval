@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber auch nicht nötig bei L0-Kontext)"
+    ],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Kontext vorhanden. Sicherheitsaspekte angemessen adressiert."
+  },
+  {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Batterie-/Verbindungsprobleme des Technikergeräts erkannt, Nacht+schlechte Sicht berücksichtigt, Offline-Dokumentation erwähnt. Klare Struktur, vollständige Dokumentation, angemessene Eskalation."
+  },
+  {
+    "test_id": "INC-LAMP-0003-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Antwort mit korrekter Interpretation der context_notes (Gerätezustand ≠ Asset-Fehler). Offline-Dokumentation explizit erwähnt, Sicherheitsaspekte bei Nacht/schlechter Sicht adressiert, strukturierte Eskalation vorhanden."
+  }
+]

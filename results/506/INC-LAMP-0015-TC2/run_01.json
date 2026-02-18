@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-18T14:49:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampen-Ausfall (hohe Verkehrsexposition, schlechte Sicht):\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls möglich.\n   - Verkehrsteilnehmer durch Hinweisschilder auf die Dunkelheit aufmerksam machen.\n\n2. **Sichtprüfung**\n   - Lampe auf offensichtliche Schäden (Glasbruch, Kabel, Mast) prüfen.\n   - Umgebung auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob andere Lampen in der Nähe ebenfalls betroffen sind.\n   - Gerät zeigt „online“ und „ok“ – Stromversorgung lokal prüfen (z.B. Sicherung, Schaltkasten).\n   - Foto zur Dokumentation nutzen.\n\n4. **Dokumentation**\n   - Ausfall, Zeitpunkt, Sichtverhältnisse und Sicherheitsrisiko notieren.\n   - Foto dem Bericht anhängen.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung sofort an Bereitschaftsdienst oder Polizei melden.\n   - Reparaturauftrag mit Priorität „hoch“ an Fachfirma weiterleiten.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder handelt es sich nur um diese eine?  \nGibt es Hinweise auf Vandalismus oder Unfall?",
+    "tokens_estimate_words": 132
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Warnbaken, Verkehrsteilnehmer warnen), severity=high korrekt eskaliert, Foto-Workflow integriert, alle Kontextdaten sinnvoll genutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.078
+  },
+  "error": {}
+}

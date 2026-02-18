@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC1",
+  "timestamp": "2026-02-18T14:49:02",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n13278610215)",
+    "context": {
+      "asset_osm": "n13278610215"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n13278610215\n\n1. Absicherung  \n- Bereich um die beschädigte Straßenlampe sofort mit Warnbaken und Absperrband sichern.  \n- Warnschilder „Achtung Stromgefahr“ aufstellen.  \n- Abstand zu möglichen Berührungspunkten halten.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?  \n- Liegen Kabel oder metallische Teile frei?  \n- Ist Feuchtigkeit oder Funkenbildung erkennbar?\n\n3. Diagnose/Beobachtung  \n- Einschätzung: Ist akute Gefahr für Passanten oder Fahrzeuge gegeben?  \n- Prüfen, ob die Lampe noch in Betrieb ist – ggf. Strom abschalten (sofern möglich und berechtigt).\n\n4. Dokumentation  \n- Fotos der Schadstelle und Absicherung machen.  \n- Kurze Beschreibung der Situation notieren (Ort, Uhrzeit, Umfang der Beschädigung).\n\n5. Eskalation  \n- Meldung an die zuständige Elektrofachkraft oder den Bereitschaftsdienst.  \n- Bei akuter Gefahr: Feuerwehr oder Polizei informieren.\n\nRückfrage:  \nKannst du präzisieren, ob Stromleitungen sichtbar/frei liegen oder ob die Lampe noch eingeschaltet ist? Das hilft bei der weiteren Einschätzung.",
+    "tokens_estimate_words": 144
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absicherung, Warnschilder, Eskalation). Alle Schritte nachvollziehbar, keine Halluzinationen trotz minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 2.475
+  },
+  "error": {}
+}

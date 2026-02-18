@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Asset-Typ unklar (Lampe/Ampel) – Antwort spekuliert beide Möglichkeiten"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Asset-Typ nicht eindeutig identifizierbar aus minimalem Context."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Kontextgerechte Absicherung (Nebel, mittlerer Verkehr), strukturierte Diagnose mit Feuchtigkeitsverdacht, klare Eskalationskriterien. Alle relevanten Umweltfaktoren berücksichtigt."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Präzise, kontextbewusste Antwort mit klarer Struktur. Sicherheitsaspekte (Nebel, Verkehr) adressiert, Diagnose systematisch, Eskalationspfade definiert. Keine Halluzinationen trotz umfangreichem Context."
+  }
+]

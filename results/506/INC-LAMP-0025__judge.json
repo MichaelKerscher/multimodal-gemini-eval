@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0025-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (nur aus User message 'unsicher' ableitbar)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety-Aspekte erkennbar, aber ohne explizite Priorisierung bei hoher Gefährdung."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung adressiert, low_battery korrekt diagnostiziert, traffic_exposure+poor_visibility führen zu Safety-First-Ansatz. Alle Kontextdaten sinnvoll genutzt, keine Erfindungen."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: Severity=high führt zu sofortiger Absicherung und Eskalation, device.connectivity=online wird korrekt interpretiert (offlinefähig dokumentieren erwähnt), alle Risikofaktoren (traffic_exposure, night, poor_visibility) adressiert. Guardrails beachtet, keine Halluzinationen."
+  }
+]

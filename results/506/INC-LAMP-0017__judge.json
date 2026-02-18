@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Umwelt-/Zeitkontext vorhanden, daher Safety-Maßnahmen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety-Fokus erkennbar, aber ohne spezifische Risikobewertung (da L0-Context)."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Low-Power-Modus werden korrekt einbezogen. Safety-Maßnahmen angemessen, Eskalation bei mittlerer Schwere und poor_visibility erkennbar. Kompakt und handlungsorientiert."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige Nutzung des L2-Contexts inkl. Guardrails (device_state ≠ Asset-Fehler). Offline-Dokumentation erwähnt (low_power_mode). Safety bei Regen/poor_visibility betont, Eskalation mit Prioritätsanpassung. Keine Halluzinationen."
+  }
+]

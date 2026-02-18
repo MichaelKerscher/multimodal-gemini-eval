@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC2",
+  "timestamp": "2026-02-18T14:52:49",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, um den Bereich zu sichern.\n   - Persönliche Schutzausrüstung tragen (Warnweste, Helm).\n   - Bei hoher Verkehrsexposition: ggf. Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Feuchtigkeit prüfen.\n   - Umfeld auf weitere defekte Lampen oder ungewöhnliche Geräusche kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Fehler aktuell wieder auftritt (Lampe an/aus).\n   - Foto auswerten, falls verfügbar: Hinweise auf Wassereintritt, Vandalismus oder Kabelprobleme?\n   - Da Gerät offline: Annahme, dass Fernwartung nicht möglich ist. Vor-Ort-Kontrolle erforderlich.\n   - Wetter (Sturm): Mögliche Ursache für Wackelkontakt oder Feuchtigkeit im Gehäuse.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Zeitpunkt, Wetterbedingungen und eigene Beobachtungen notieren.\n   - Foto zur Dokumentation sichern.\n   - Status im System aktualisieren (sporadischer Fehler, vor Ort geprüft).\n\n5. **Eskalation**\n   - Bei mittlerer Schwere und hoher Verkehrsexposition: Meldung an Elektrotechnik-Fachkraft zur weiteren Prüfung.\n   - Falls Gefahr für Verkehrssicherheit besteht: Sofortige Eskalation an Bereitschaftsdienst.\n\n**Rückfrage:**  \nIst eine kurzfristige Abschaltung der Lampe zur weiteren Diagnose möglich, oder muss sie aus Sicherheitsgründen dauerhaft in Betrieb bleiben?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Offline-Status, Sturm, hohe Verkehrsexposition und Nacht/schlechte Sicht werden korrekt verarbeitet. Sicherheit priorisiert, Eskalation klar, Dokumentation vollständig."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.171
+  },
+  "error": {}
+}

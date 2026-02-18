@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Spekulation über Asset-Typ (Lampe/Ampel) bei minimalem Context"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Rückfrage nach Asset-Typ ist sinnvoll bei minimalem Context, keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlere Verkehrsexposition, Foto vorhanden). Klare Safety-Priorisierung, strukturierte Schritte, gezielte Rückfrage zu intermittierendem Fehler."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, kontextsensitive Antwort mit korrekter Interpretation aller Umgebungsfaktoren (Nebel, Nacht, mittlere Verkehrsexposition). Klare Absicherung, Diagnose, Dokumentation und Eskalationskriterien."
+  }
+]

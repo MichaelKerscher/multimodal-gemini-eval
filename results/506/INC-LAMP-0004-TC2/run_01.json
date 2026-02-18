@@ -1,0 +1,88 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC2",
+  "timestamp": "2026-02-18T14:46:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T11:25:07+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Straßenlampenausfall – Happinger Hof\n\n1. **Absicherung**\n   - Warnbaken oder reflektierende Absperrung aufstellen, falls der Bereich direkt an einer Straße liegt.\n   - Bürger informieren, falls möglich, dass die Sicht eingeschränkt ist.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist das Gehäuse beschädigt? Sind Kabel sichtbar oder lose?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schaltet die Lampe bei manuellem Auslösen (z.B. Bewegungsmelder) ein?\n   - Prüfen, ob Stromversorgung am Mast vorhanden ist (z.B. mit Prüfgerät).\n   - Wetter und Nebel können Elektronik beeinflussen – auf Feuchtigkeit achten.\n\n4. **Dokumentation**\n   - Foto vom Ausfall und Umgebung machen (Foto liegt bereits vor).\n   - Notieren: Zeitpunkt, Sichtverhältnisse, eventuelle Gefahrenstellen, eigene Beobachtungen.\n\n5. **Eskalation**\n   - Meldung mit hoher Priorität an die Leitstelle/Technik weitergeben (wegen unsicherem Bereich und hoher Sichtbehinderung).\n   - Hinweis: Connectivity vor Ort ist spotty – ggf. alternative Kommunikationswege nutzen.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder betrifft es nur diese eine?  \nIst die Lampe direkt an einer Straße oder einem Gehweg mit viel Fußverkehr?",
+    "tokens_estimate_words": 170
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz spotty connectivity",
+      "Severity=high nicht ausreichend betont in Eskalation"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nebel, Nacht, poor_visibility), Safety-Fokus erkennbar. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow empfohlen (K-Abzug)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.663
+  },
+  "error": {}
+}

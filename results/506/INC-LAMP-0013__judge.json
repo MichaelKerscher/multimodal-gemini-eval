@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absicherung, Warnschilder, Eskalation). Alle Schritte nachvollziehbar, keine Halluzinationen trotz minimalem Kontext."
+  },
+  {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, severity=high). Alle Sicherheitsmaßnahmen adressiert, Dokumentation klar, Eskalation vorhanden."
+  },
+  {
+    "test_id": "INC-LAMP-0013-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: Nutzt Kontext (Dämmerung, poor_visibility) für zusätzliche Warnleuchten, versteht photo_available als Workflow-Hinweis, klare Eskalation bei hoher Gefährdung."
+  }
+]

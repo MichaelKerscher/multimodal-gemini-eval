@@ -1,7 +1,7 @@
 {
   "suite_version": "v0.1",
   "test_id": "INC-LAMP-0001-TC3",
-  "timestamp": "2026-02-18T14:05:48",
+  "timestamp": "2026-02-18T14:45:00",
   "client": "506",
   "model": "gpt-4.1",
   "input": {
@@ -269,8 +269,8 @@
   },
   "response": {
     "multi": false,
-    "text": "Checkliste für sporadischen Lampenausfall (Rosenheim, Bahnhof):\n\n1. **Absicherung**\n   - Bereich mit hoher Verkehrsexposition: Warnweste tragen, ggf. Absperrung aufstellen.\n   - Bei Tageslicht und normaler Sicht keine akute Gefahr, trotzdem auf Umgebung achten.\n\n2. **Sichtprüfung**\n   - Lampe aktuell an, aber sporadischer Fehler gemeldet.\n   - Sichtkontrolle auf offensichtliche Schäden (Gehäuse, Verkabelung, Feuchtigkeit, Vandalismus).\n   - Prüfen, ob andere Lampen in der Nähe ähnliche Symptome zeigen.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild: Lampe war aus, jetzt wieder an → intermittenter Fehler.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Alterung Bauteile.\n   - Keine Fernabfrage möglich (Gerät offline), vor Ort beobachten: Lampe mehrfach ein-/ausschalten, auf Reaktion achten.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Zeitpunkt, Sichtprüfungsergebnisse notieren.\n   - Foto vom Zustand der Lampe und Umgebung machen (Foto verfügbar).\n   - Offline dokumentieren, da Gerät keine Verbindung hat.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Meldung an Elektrotechnik/Service.\n   - Bei sporadischem Fehler ohne akute Gefahr: Wartungsauftrag mit Fehlerbeschreibung anlegen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Arbeiten oder Wetterereignisse (z.B. Frost, Starkregen) am Standort? Sind weitere Lampen betroffen?",
-    "tokens_estimate_words": 162
+    "text": "Checkliste für sporadischen Lampenausfall – Rosenheim, Bahnhof\n\n**1. Absicherung**\n- Warnweste tragen, Absperrmaterial bereitstellen (bei hohem Verkehrsaufkommen).\n- Standort: Hohe Verkehrsexposition – auf Sichtbarkeit und eigene Sicherheit achten.\n\n**2. Sichtprüfung**\n- Lampe aktuell wieder an, aber sporadischer Fehler gemeldet.\n- Sichtkontrolle: Gehäuse, Mast, Verkabelung, Sockel auf Schäden, Feuchtigkeit oder lockere Teile prüfen.\n- Umgebung: Keine offensichtlichen Gefahren (Wetter klar, Sicht normal).\n\n**3. Diagnose/Beobachtung**\n- Fehlerbild: Lampe war aus, jetzt an – intermittierend.\n- Mögliche Ursachen: Wackelkontakt, Alterung, Feuchtigkeit, lose Verbindung.\n- Prüfen: Gibt es sichtbare Hinweise auf Defekte? (z.B. Flackern, Korrosion, lose Kabel)\n- Hinweis: Gerät ist offline, Diagnose und Dokumentation vor Ort analog durchführen.\n\n**4. Dokumentation**\n- Fehlerbeschreibung notieren: „Lampe sporadisch aus, aktuell an.“\n- Foto machen (Foto verfügbar laut Workflow).\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (offlinefähig).\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Sicherheitsrisiko: Meldung an Fachbereich Elektro/Technik.\n- Falls keine akute Gefahr: Routinewartung einplanen, ggf. Monitoring verstärken.\n- Rückmeldung an Bürger, falls Kontakt möglich.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Ereignisse am Standort?  \nSind weitere Lampen betroffen oder nur diese?  \n\nFalls weitere Details benötigt werden, bitte ergänzen.",
+    "tokens_estimate_words": 185
   },
   "judge": {
     "test_id": "INC-LAMP-0001-TC3",
@@ -288,11 +288,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Korrekte Interpretation von device.* als Techniker-Gerät (extras.context_notes beachtet), Offline-Workflow erwähnt, strukturiert, sicherheitsorientiert, keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit genannt ('analog durchführen', 'offlinefähig'), Foto-Workflow integriert, hohe Verkehrsexposition adressiert. Keine Halluzinationen trotz umfangreichem CONTEXT."
   },
   "meta": {
     "status": "success",
-    "runtime_seconds": 4.405
+    "runtime_seconds": 5.158
   },
   "error": {}
 }

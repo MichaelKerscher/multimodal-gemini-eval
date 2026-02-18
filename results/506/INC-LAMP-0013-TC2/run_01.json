@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-18T14:49:02",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Absicherung – Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnbaken und Absperrband um das betroffene Gehäuse aufstellen.\n   - Bei mittlerer Verkehrsexposition: Verkehrsleitkegel und ggf. Warnleuchte verwenden.\n   - Warnhinweis für Fußgänger und Verkehrsteilnehmer sichtbar anbringen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Ist das Gehäuse offen, liegen stromführende Teile frei?\n   - Prüfen, ob weitere Schäden oder Gefahrenstellen vorhanden sind.\n\n3. **Diagnose/Beobachtung**\n   - Einschätzung: Berührungsgefahr besteht, da Gehäuse offen und hohe Schadensschwere gemeldet.\n   - Gerät laut System online und funktionsfähig, aber Gehäuse muss dringend instandgesetzt werden.\n\n4. **Dokumentation**\n   - Vor Ort Fotos machen (falls nicht bereits vorhanden).\n   - Schaden und Absicherungsmaßnahmen im digitalen Wartungsprotokoll dokumentieren.\n\n5. **Eskalation**\n   - Sofortige Meldung an Elektrofachkraft/Notdienst zur schnellen Reparatur.\n   - Bei Gefahr im Verzug: Polizei oder Feuerwehr informieren.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Kontaktaufnahme übernehmen?  \nSind weitere Anlagen in unmittelbarer Nähe betroffen?",
+    "tokens_estimate_words": 137
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, severity=high). Alle Sicherheitsmaßnahmen adressiert, Dokumentation klar, Eskalation vorhanden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.186
+  },
+  "error": {}
+}

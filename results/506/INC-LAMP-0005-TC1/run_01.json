@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC1",
+  "timestamp": "2026-02-18T14:46:25",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293404153)",
+    "context": {
+      "asset_osm": "n13293404153"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Asset-ID: n13293404153\n\n1. Absicherung  \n- Warnweste anlegen  \n- Absperrmaterial bereitstellen  \n- Gefahrenbereich (dunkler Abschnitt) absichern, ggf. Verkehrsleitung einrichten\n\n2. Sichtprüfung  \n- Standort aufsuchen (Asset n13293404153)  \n- Sichtkontrolle: Sind mehrere Lampen betroffen? Gibt es offensichtliche Schäden (z.B. Mast, Leuchte, Verkabelung)?\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Leuchten einzeln prüfen  \n- Prüfen, ob Stromversorgung vorhanden (ggf. Sicherungskasten kontrollieren)  \n- Notieren: Sind Ausfälle punktuell oder flächig? Gibt es Hinweise auf Vandalismus oder Witterungsschäden?\n\n4. Dokumentation  \n- Fotos vom betroffenen Bereich und den Anlagen machen  \n- Befund und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Asset-ID, Beobachtungen)\n\n5. Eskalation  \n- Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an Leitstelle  \n- Bei großflächigem Ausfall: Weiterleitung an Fachbetrieb/Elektriker  \n- Dokumentation an zuständige Stelle übermitteln\n\nFehlende Informationen:  \n- Bitte Standortdetails (Straßenname, Abschnitt) bestätigen  \n- Sind weitere Assets betroffen oder nur n13293404153?  \n- Gibt es Hinweise auf akute Gefährdung (z.B. Schulweg, Hauptstraße)?  \n\nBitte Rückmeldung zu den offenen Punkten, damit die Prüfung gezielt erfolgen kann.",
+    "tokens_estimate_words": 157
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextinformationen zu Umgebung/Risiko vorhanden, daher Safety-Maßnahmen generisch"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety-Fokus angemessen für unbekannte Situation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.686
+  },
+  "error": {}
+}

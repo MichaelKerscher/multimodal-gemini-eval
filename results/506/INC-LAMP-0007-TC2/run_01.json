@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC2",
+  "timestamp": "2026-02-18T14:47:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-21T18:59:18+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst – Straßenlampe „Rosenheim, BRK-Heim“\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Absperrmaterial bereitstellen (Kegel, Warnleuchte).\n   - Verkehrsbereich sichern, besonders bei mittlerer Verkehrsexposition und Sturm.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Feuchtigkeit prüfen.\n   - Anschlusskasten kontrollieren (sofern zugänglich).\n   - Umgebung auf Sturmschäden oder Fremdeinwirkung checken.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es dauerhaft oder nur bei Wind auf?\n   - Kontaktstellen (Klemmen, Steckverbindungen) auf Korrosion oder Lockerheit prüfen.\n   - Bei Offline-Zustand: Prüfen, ob Steuerung oder Stromzufuhr betroffen ist.\n\n4. **Dokumentation**\n   - Fotos vom Lampenkopf, Mast und Anschlusskasten machen.\n   - Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Aussetzer).\n\n5. **Eskalation**\n   - Bei festgestellten Kontaktproblemen: Meldung an Elektrotechnik-Fachkraft.\n   - Bei Gefahr (z.B. lose Teile, Stromausfall): Sofortige Sperrung und Meldung an Leitstelle.\n\n**Rückfrage:**  \nIst Zugang zum Anschlusskasten möglich oder benötigt Ihr Team eine Freigabe?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 145
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Sturm, Offline-Zustand, mittlere Verkehrsexposition berücksichtigt. Klare Struktur, Safety-Fokus, offlinefähige Dokumentation erwähnt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.919
+  },
+  "error": {}
+}
