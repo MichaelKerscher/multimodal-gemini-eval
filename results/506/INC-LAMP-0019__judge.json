@@ -6,19 +6,18 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 3
+      "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Sicherheitsmaßnahmen (Warnweste, Absicherung) nicht explizit genannt",
-      "Keine Berücksichtigung der Nachtsituation (nur minimal Context)"
+      "Keine Berücksichtigung der Umgebungsbedingungen (Nacht/Nebel nicht im Context)"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Checkliste und Eskalation. Sicherheitsaspekte werden angesprochen, aber nicht priorisiert. Kontextnutzung eingeschränkt durch minimalen Context (nur OSM-ID)."
+    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID aus Context verwendet. Offline-Workflow nicht erwartet (kein connectivity-Feld)."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit wird priorisiert (Nebel, schlechte Sicht), alle Umgebungsfaktoren berücksichtigt, klare Struktur, vollständige Dokumentation und angemessene Eskalation mit Priorisierung."
+    "short_justification": "Exzellente Antwort: Berücksichtigt alle Kontextfaktoren (Nacht, Nebel, mittlerer Verkehr, poor_visibility), klare Safety-First-Haltung, strukturierte Schritte, korrekte Interpretation des device_state (Techniker-Gerät online), keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit starkem Sicherheitsfokus (Warnweste, Absicherung bei Nebel/Nacht), präziser Kontextnutzung (Koordinaten, Umgebungsbedingungen), klarer Eskalationslogik und vollständiger Dokumentation."
+    "short_justification": "Hervorragende Antwort: Nutzt alle relevanten Kontextinformationen (Koordinaten, Umgebungsbedingungen, Severity), klare Absicherungsstrategie bei schlechter Sicht und mittlerem Verkehr, präzise Dokumentation, angemessene Eskalation. Keine Halluzinationen."
   }
 ]

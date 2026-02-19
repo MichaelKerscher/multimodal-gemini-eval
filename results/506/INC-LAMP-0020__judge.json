@@ -17,7 +17,7 @@
     "missing_elements": [
       "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Risiko-Hinweise (Nacht/Regen) – korrekt generisch gehalten."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Halluzinationen. Gute Handlungsanleitung trotz minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -26,7 +26,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Nacht, Regen, poor_visibility. Absicherung priorisiert, low_power_mode erwähnt, Foto-Workflow integriert, klare Eskalation bei Gefahr."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Regen, Nacht, poor_visibility). Severity=high wird durch sofortige Eskalation und Absicherung adressiert. Device low_power_mode wird korrekt erwähnt."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Kompakte, priorisierte Checkliste mit klarem Safety-First-Fokus (Warnblinkanlage, Absicherung). Alle Kontextfaktoren (Nacht, Regen, poor_visibility, severity=high, low_power_mode, Foto) korrekt eingebunden, sofortige Eskalation bei Gefahr."
+    "short_justification": "Perfekte Kontextnutzung: OSM-ID, Foto-Hinweis, Wetter/Nacht-Risiken, severity=high durch Eskalation adressiert. Keine Halluzinationen, alle Fakten aus CONTEXT ableitbar. Klare Struktur und Dokumentation."
   }
 ]

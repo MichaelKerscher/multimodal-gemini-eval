@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Relevante, strukturierte Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Sicherheitsfokus. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage zeigt Bewusstsein für fehlende Details."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,14 +35,14 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Struktur und Dokumentation, gut auf Umgebung (Regen, Nacht) abgestimmt. Connectivity=spotty erfordert Offline-Workflow-Hinweis, der fehlt (K=3)."
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Standort, Wetter, Nacht, Regen). Sicherheit und Dokumentation sehr gut adressiert. Offline-Workflow bei spotty connectivity nicht explizit erwähnt, daher K=4."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextgerechte Antwort. Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), alle Umgebungsfaktoren berücksichtigt, klare Eskalation und Dokumentation."
+    "short_justification": "Perfekte Antwort: Vollständige Kontextnutzung, expliziter Offline-Workflow ('offline speichern, später synchronisieren'), klare Sicherheits- und Eskalationsschritte, präzise Dokumentationsanweisungen. Alle Guardrails beachtet."
   }
 ]

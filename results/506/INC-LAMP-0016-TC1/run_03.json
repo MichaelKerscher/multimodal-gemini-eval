@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-19T12:13:45",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n13293470414 (Straßenlampe). Hier die empfohlene Vorgehensweise:\n\n**Checkliste bei sporadischem Fehler**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann (z. B. Warnweste tragen, ggf. Absperrung bei starkem Verkehr).\n\n2. **Sichtprüfung**\n   - Prüfe, ob äußerliche Schäden, lose Kabel, Feuchtigkeit oder Korrosion sichtbar sind.\n   - Kontrolliere, ob die Lampe ungewöhnliche Geräusche macht oder flackert.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, wann und wie oft der Fehler auftritt (z. B. nur bei Feuchtigkeit, nach Einbruch der Dunkelheit, etc.).\n   - Prüfe, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netz- oder Steuerungsproblem).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetterbedingungen, Fehlerbild).\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Wartungsstelle mit allen gesammelten Informationen.\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Priorisierte Störungsmeldung veranlassen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten, Unwetter oder Bauarbeiten in der Nähe? Das kann bei der Fehlerursache helfen.\n\nMelde dich gern, falls du weitere Details hast oder Unterstützung brauchst!",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit adressiert, Eskalation vorhanden. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Punkte plausibel und nachvollziehbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.911
+  },
+  "error": {}
+}

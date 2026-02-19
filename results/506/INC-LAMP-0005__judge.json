@@ -15,14 +15,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfragen sinnvoll."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation und Handlungsfähigkeit gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 4
     },
@@ -33,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Berücksichtigt Nebel, Dämmerung, mittlere Verkehrsexposition mit verstärkter Absicherung. Erwähnt Offline-Dokumentation bei instabiler Verbindung und niedrigem Akku. Klare Eskalationskriterien."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Workflow wird erwähnt ('Mobile Diagnosegeräte vorher aufladen'). Sicherheit, Dokumentation und Eskalation klar strukturiert."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), Umweltbedingungen (Nebel, Dämmerung) in Sicherheitsmaßnahmen integriert, niedrigen Akkustand berücksichtigt. Präzise und umsetzbar."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration. Offline-Workflow explizit adressiert ('lokal speichern, später synchronisieren'). Sicherheit priorisiert, Dokumentation detailliert, Eskalation differenziert nach Gefährdungslage."
   }
 ]

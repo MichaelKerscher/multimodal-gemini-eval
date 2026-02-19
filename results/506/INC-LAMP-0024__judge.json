@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheit und Eskalation sind vorhanden, aber bei minimalem Kontext (L0) nicht zwingend detaillierter erforderlich. Keine Kontextfehler."
+    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Keine Offline-Erwähnung nötig (CONTEXT zeigt nur asset_osm). Sicherheit adressiert, Dokumentation gut. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
@@ -24,18 +24,16 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (lokal dokumentieren/später synchronisieren)"
-    ],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Sturm, Verkehr, Nacht), klare Struktur, standortspezifisch, Eskalation vorhanden. Offline-Kontext (connectivity=offline) wird nicht explizit adressiert, daher K=4."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Sturm, Nacht, hoher Verkehr), Offline-Workflow explizit erwähnt ('Gerät ist offline, Fernanalyse nicht möglich'), strukturiert, vollständig dokumentiert, Eskalation klar."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Alle Kontextfaktoren (Offline-Workflow, Sturm, Verkehr, Nacht) korrekt integriert. Sicherheit priorisiert, klare Struktur, Eskalation vorhanden, Dokumentation offline-fähig. Keine Halluzinationen."
+    "short_justification": "Hervorragend: Offline-Workflow klar ('Gerät ist offline, alles lokal dokumentieren, später synchronisieren'), Sicherheit priorisiert, strukturiert, Eskalation vorhanden, keine Halluzinationen, vollständig nachvollziehbar."
   }
 ]

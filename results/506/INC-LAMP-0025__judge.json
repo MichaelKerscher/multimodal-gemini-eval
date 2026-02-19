@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Zeitangabe (20 Min) nicht aufgegriffen",
-      "Keine Priorisierung wegen 'Bereich wirkt unsicher'"
+      "Severity-Einschätzung fehlt (im Kontext nicht vorhanden, aber aus User-Message 'wirkt unsicher' ableitbar)",
+      "Konkrete Zeitangabe zur Eskalation fehlt"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Safety-Aspekte angesprochen, aber 'unsicherer Bereich' hätte stärkere Priorisierung verdient. Keine Halluzinationen bei minimalem Context."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt genutzt wird. Safety könnte expliziter priorisiert werden (z.B. 'Sofortmaßnahme')."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+traffic_exposure=high führen zu klarem Safety-First-Fokus. Low_battery korrekt als Geräte-Zustand interpretiert, alle Kontextdaten sinnvoll genutzt, strukturierte Dokumentation und Eskalation."
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, Kontext (low_battery, high traffic_exposure, night, poor_visibility) vollständig genutzt, klare Struktur, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit explizitem Safety-Fokus ('sicherheitsrelevant', Absicherung priorisiert). Alle Kontextdaten korrekt verarbeitet, klare Eskalationswege, vollständige Dokumentation. Extras.context_notes korrekt beachtet (device_state bezieht sich auf Techniker-Gerät)."
+    "short_justification": "Hervorragende Umsetzung: Safety-First klar erkennbar (Absicherung Schritt 1), Eskalation bei akuter Gefahr explizit, Kontext vollständig integriert (Verkehrsexposition, Nacht, photo_available), präzise Dokumentation, keine Halluzinationen."
   }
 ]

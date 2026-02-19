@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC2",
+  "timestamp": "2026-02-19T12:18:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029720",
+        "longitude": 12.1326497,
+        "latitude": 47.8433336,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-18T06:17:02+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste bei beschädigtem Gehäuse mit möglicher Berührungsgefahr  \nStandort: Rosenheim, Leitzachstraße\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband um die Gefahrenstelle aufstellen.\n   - Warnschilder „Achtung Stromschlaggefahr“ anbringen.\n   - Abstand zur Laterne/Ampel sicherstellen (mind. 2 Meter).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo genau ist es offen/beschädigt?\n   - Sind stromführende Teile sichtbar oder zugänglich?\n   - Gibt es Anzeichen für weitere Gefahren (z. B. Funken, Feuchtigkeit)?\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Gerät noch in Betrieb ist (Licht an/aus, Funktion der Ampel).\n   - Keine Berührung! Nur Sichtprüfung durchführen.\n   - Notieren, ob Passanten gefährdet sind oder bereits Kontakt hatten.\n\n4. **Dokumentation**\n   - Fotos vom Schaden und der Absicherung anfertigen.\n   - Uhrzeit, genaue Position und Zustand dokumentieren.\n   - Besonderheiten (z. B. Kinder in der Nähe, viel Publikumsverkehr) festhalten.\n\n5. **Eskalation**\n   - Störung umgehend an die Fachabteilung/Elektrofachkraft melden.\n   - Bei akuter Gefahr zusätzlich Polizei oder Feuerwehr informieren.\n   - Bis zur Übernahme durch Fachpersonal vor Ort bleiben, falls möglich.\n\n**Rückfrage:**  \nSind bereits Maßnahmen zur Absicherung erfolgt oder wird Unterstützung vor Ort benötigt? Liegt eine akute Gefährdung für Passanten vor?",
+    "tokens_estimate_words": 171
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit severity=high angemessen behandelt: Absicherung, Abstandsregel (2m), Eskalation inkl. Polizei/Feuerwehr bei akuter Gefahr. Standortnennung korrekt, Dokumentation vollständig, Rückfrage passend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.053
+  },
+  "error": {}
+}

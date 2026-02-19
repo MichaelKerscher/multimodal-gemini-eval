@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-19T12:12:57",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störungsbearbeitung\n\n1. **Absicherung**\n   - Stelle sicher, dass der Arbeitsbereich um die Lampe ausreichend abgesichert ist (Warnbaken, ggf. Warnweste tragen).\n   - Aufgrund der niedrigen Verkehrsbelastung und Tageszeit ist das Risiko gering, trotzdem auf Sichtbarkeit achten.\n\n2. **Sichtprüfung**\n   - Überprüfe die Lampe auf offensichtliche Schäden (z. B. zerbrochenes Glas, sichtbare Kabel, Vandalismus).\n   - Prüfe, ob die Lampe korrekt im Mast sitzt und keine losen Teile erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Da das Gerät laut Fernüberwachung „online“ und „ok“ meldet, liegt vermutlich ein Problem bei der Leuchte selbst (Leuchtmittel defekt, Vorschaltgerät, interne Verkabelung).\n   - Prüfe vor Ort, ob Spannung an der Lampe anliegt (Spannungsprüfer verwenden).\n   - Falls möglich, Leuchtmittel und Sicherung kontrollieren und ggf. tauschen.\n\n4. **Dokumentation**\n   - Notiere alle durchgeführten Schritte und Beobachtungen (z. B. Art des Defekts, getauschte Teile, besondere Auffälligkeiten).\n   - Dokumentiere die Störung im System, ggf. mit Fotos nach erfolgter Reparatur.\n\n5. **Eskalation**\n   - Falls die Lampe nach Austausch des Leuchtmittels/Sicherung weiterhin nicht funktioniert, Störung an die Elektrofachkraft oder den zuständigen Wartungsdienst weiterleiten.\n   - Bei Verdacht auf größere Schäden (z. B. Mast beschädigt, Erdschluss) sofort melden und Bereich ggf. weiter absichern.\n\n**Rückfrage:**  \nIst ein Ersatzleuchtmittel vor Ort verfügbar oder soll ein Techniker mit entsprechendem Material beauftragt werden?",
+    "tokens_estimate_words": 202
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext optimal (device online, day, low traffic), gibt präzise Diagnose-Hinweise (Leuchtmittel/Vorschaltgerät), klare Struktur, gute Dokumentation und Eskalation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.716
+  },
+  "error": {}
+}

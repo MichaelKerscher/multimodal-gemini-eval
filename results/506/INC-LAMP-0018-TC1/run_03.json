@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-19T12:14:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für den Hinweis zum gleichzeitigen Ausfall des Segments (Asset-ID: n12520351647). Hier ist das empfohlene Vorgehen:\n\n**Checkliste für Außendienst-Einsatz**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die betroffenen Anlagen (Straßenlampen/Ampeln) ausreichend abgesichert ist.\n   - Warnbaken, Absperrband oder Warnleuchten aufstellen, um Verkehrsteilnehmer zu schützen.\n\n2. **Sichtprüfung**\n   - Überprüfe vor Ort, ob mehrere Anlagen gleichzeitig ausgefallen sind.\n   - Achte auf offensichtliche Schäden an Schaltschränken, Kabeln oder Masten.\n   - Prüfe, ob Anzeichen für Vandalismus, Unfälle oder Bauarbeiten vorliegen.\n\n3. **Diagnose/Beobachtung**\n   - Kontrolliere, ob die Stromversorgung am Schaltschrank anliegt.\n   - Prüfe, ob Sicherungen oder Schutzschalter ausgelöst haben.\n   - Falls vorhanden, lies Störungsmeldungen oder Fehleranzeigen an der Steuerung aus.\n   - Notiere, ob der Ausfall dauerhaft oder nur zeitweise auftritt.\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen, Maßnahmen und Auffälligkeiten schriftlich fest (inkl. Uhrzeit, betroffene Anlagen, Fotos falls möglich).\n   - Dokumentiere, welche Schritte bereits unternommen wurden.\n\n5. **Eskalation**\n   - Bei Verdacht auf Steuerungsproblem oder wenn die Ursache nicht vor Ort behoben werden kann: Störung an die Fachabteilung/Leittechnik weiterleiten.\n   - Informiere ggf. Polizei oder Feuerwehr, falls die Verkehrssicherheit akut gefährdet ist.\n\n**Rückfrage:**  \nSind weitere Details zum Segment (z. B. genaue Lage, Art der Anlagen – Straßenbeleuchtung oder Ampeln) oder zu vorangegangenen Arbeiten bekannt? Das hilft bei der gezielten Fehlersuche.",
+    "tokens_estimate_words": 203
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung der Absicherung bei unbekannten Umgebungsbedingungen"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung und Eskalation. Minimaler Kontext wurde gut genutzt, keine Halluzinationen. Safety könnte bei unbekannten Bedingungen stärker betont werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.809
+  },
+  "error": {}
+}

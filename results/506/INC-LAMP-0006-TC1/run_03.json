@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0006-TC1",
+  "timestamp": "2026-02-19T12:09:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n7230270217)",
+    "context": {
+      "asset_osm": "n7230270217"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0006",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n7230270217). Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe auf akute Gefahren prüfen (z. B. Stolperstellen, schlechte Sicht).\n- Falls möglich: Warnbaken oder Hinweisschilder aufstellen, um Verkehrsteilnehmer zu warnen.\n\n**2. Sichtprüfung**\n- Ist die Lampe beschädigt (z. B. Glasbruch, sichtbare Kabel)?\n- Brennen benachbarte Lampen oder ist nur diese betroffen?\n- Gibt es Anzeichen für Vandalismus oder Unfälle?\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob ein Stromausfall im Bereich vorliegt.\n- Notieren, ob die Lampe flackert oder komplett aus ist.\n- Uhrzeit und Wetterbedingungen festhalten.\n\n**4. Dokumentation**\n- Asset-ID, Standort und aktuelle Situation schriftlich festhalten.\n- Fotos machen, falls möglich.\n\n**5. Eskalation**\n- Meldung an die zuständige Wartungsstelle oder Leitstelle weiterleiten.\n- Bei erhöhter Gefährdung (z. B. Schulweg, Unfallgefahr): Dringlichkeit betonen.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese betroffen? Sind besondere Gefahrenstellen (z. B. Zebrastreifen, Kreuzung) in unmittelbarer Nähe?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0006-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Schritte nachvollziehbar dokumentiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.819
+  },
+  "error": {}
+}

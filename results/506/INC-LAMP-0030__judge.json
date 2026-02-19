@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen, da Kontext minimal ist."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
@@ -35,7 +35,7 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Strukturierung mit Standortdaten, Verkehrssicherung bei schlechter Sicht und mittlerer Verkehrsbelastung. Connectivity=spotty erfordert Offline-Workflow-Hinweis, der fehlt."
+    "short_justification": "Exzellente Struktur, sehr gute Kontextnutzung (Dämmerung, Verkehr, Foto). Offline-Workflow bei 'spotty' connectivity fehlt jedoch, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextbewusste Antwort. Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), Sicherheit priorisiert, Dokumentation detailliert, alle Kontextfaktoren berücksichtigt."
+    "short_justification": "Vollständige, kontextsensitive Antwort. Offline-Workflow explizit erwähnt ('lokal speichern, später synchronisieren'), alle Sicherheits- und Dokumentationsaspekte abgedeckt."
   }
 ]

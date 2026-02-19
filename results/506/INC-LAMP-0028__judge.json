@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0028-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, sicherheitsorientierte Antwort mit klarer Eskalation. Alle Schritte nachvollziehbar dokumentiert, keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absperrung, Warnschilder, keine Berührung). Eskalation an Elektrofachkraft vorhanden, Dokumentation nachvollziehbar. Rückfrage sinnvoll bei minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Standort, severity=high, photo_available). Klare Safety-First-Haltung mit sofortiger Absicherung und Eskalation. Alle relevanten Informationen präzise integriert."
+    "short_justification": "Exzellente Antwort mit severity=high angemessen behandelt: Absicherung, Abstandsregel (2m), Eskalation inkl. Polizei/Feuerwehr bei akuter Gefahr. Standortnennung korrekt, Dokumentation vollständig, Rückfrage passend."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -41,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit klarer Priorisierung der Sicherheit. Strukturierte Checkliste, explizite Eskalation bei hoher Gefährdung, vollständige Kontextnutzung ohne Spekulation."
+    "short_justification": "Kompakte, präzise Antwort mit allen Safety-Elementen (Absperrung, Warnung, keine Berührung). Eskalation mit hoher Priorität klar benannt, Foto-Workflow integriert (photo_available genutzt). Dokumentation und Rückfrage angemessen."
   }
 ]

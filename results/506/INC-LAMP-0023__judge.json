@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll."
+    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Offline-Erwähnung nötig (CONTEXT minimal). Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Sturm, schlechte Sicht, hohe Verkehrsexposition und Offline-Status. Offline-Workflow explizit erwähnt ('Keine Fernabfrage möglich'), Safety-First klar erkennbar."
+    "short_justification": "Exzellent: Offline-Workflow erkannt, Sturm/Verkehr/Sicht berücksichtigt, Eskalation klar, Dokumentation vollständig. Alle Kontextfaktoren genutzt."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Alle Kontextfaktoren (Offline, Sturm, schlechte Sicht, hohes Verkehrsaufkommen) korrekt verarbeitet. Offline-Workflow explizit ('lokal speichern', 'später synchronisieren'), Safety und Eskalation klar priorisiert."
+    "short_justification": "Hervorragend: Offline-Speicherung explizit genannt, Sturm/Verkehr/Sicht integriert, Eskalation klar, Synchronisation nach Netzrückkehr erwähnt. Vollständig kontextgerecht."
   }
 ]

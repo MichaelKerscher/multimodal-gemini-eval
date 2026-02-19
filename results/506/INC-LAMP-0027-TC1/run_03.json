@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC1",
+  "timestamp": "2026-02-19T12:18:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n4939032947)",
+    "context": {
+      "asset_osm": "n4939032947"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n4939032947. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für Außendienst-Einsatz – Flackern bei Regen**\n\n1. Absicherung  \n   - Arbeitsbereich mit Warnbaken und ggf. Warnleuchten absichern.  \n   - Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n   - Sichtkontrolle der Leuchte und Zuleitungen auf Feuchtigkeitsspuren, Korrosion oder offene Gehäuse.  \n   - Prüfen, ob Wasser ins Gehäuse eingedrungen ist.\n\n3. Diagnose/Beobachtung  \n   - Funktion der Leuchte bei Regen simulieren (z.B. mit Wassersprühflasche, falls vor Ort kein Regen).  \n   - Prüfen, ob das Flackern reproduzierbar ist.  \n   - Verdacht auf Feuchtigkeitseintritt oder defekte Dichtung notieren.\n\n4. Dokumentation  \n   - Alle Beobachtungen und Maßnahmen mit Fotos dokumentieren.  \n   - Asset-ID, Datum, Uhrzeit und Wetterbedingungen festhalten.\n\n5. Eskalation  \n   - Bei bestätigtem Feuchtigkeitseintritt: Meldung an Elektrofachkraft zur weiteren Prüfung und Reparatur.  \n   - Bei akuter Gefahr (z.B. freiliegende Kabel): Sofortige Stilllegung und Absicherung, Notdienst informieren.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bereits bekannte Schäden am Gehäuse?",
+    "tokens_estimate_words": 148
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Eskalation. Sicherheit adressiert, aber bei medium severity könnte Safety-Fokus stärker sein. Keine Kontextfehler, passend zu L0."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.576
+  },
+  "error": {}
+}

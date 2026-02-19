@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (nur 'unsicher' vom User, keine Priorisierung)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheit wird adressiert, aber ohne explizite Dringlichkeit (severity unbekannt). Keine Halluzinationen, Kontext minimal genutzt."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Schritte nachvollziehbar dokumentiert."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
@@ -31,13 +29,11 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (connectivity=offline, device_state=low_battery)"
-    ],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Sturm, hohe Verkehrsexposition, severity=high), klare Eskalation, gute Kontextnutzung (Wetter, Verkehr, low_battery). Offline-Workflow fehlt trotz offline-Gerät."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Sturm, hohe Verkehrsexposition, schlechte Sicht). Offline-Workflow erkannt ('kein Fernzugriff möglich'), Eskalation klar priorisiert, Dokumentation vollständig. Kontextnutzung sehr gut."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -55,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Sicherheit first (Sturm, Verkehr, severity=high), Offline-Workflow explizit (Fotos/Notizen offline speichern), klare Eskalation, vollständige Kontextnutzung inkl. extras.context_notes. Keine Mängel."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), Safety-First bei Sturm/schlechter Sicht, klare Eskalation bei akuter Gefahr. Alle Kontexthinweise korrekt verarbeitet, keine Halluzinationen."
   }
 ]

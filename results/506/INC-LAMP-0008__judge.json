@@ -14,17 +14,19 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Schritte nachvollziehbar dokumentiert."
+    "missing_elements": [
+      "Keine Erwähnung von Offline-Workflow (nicht erwartbar bei L0_minimal)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Dokumentation gut beschrieben. Keine Kontextfehler bei minimalem CONTEXT."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
-      "K": 4
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -32,8 +34,10 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, spotty connectivity, low_power_mode). Offline-Workflow wird indirekt erwähnt ('Fernabfrage wahrscheinlich nicht möglich'). Alle relevanten Umweltfaktoren berücksichtigt."
+    "missing_elements": [
+      "Offline-Workflow nur angedeutet ('manuell auslesen'), nicht explizit als Offline-Dokumentation beschrieben"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nebel, Nacht, spotty connectivity erwähnt). Offline-Workflow nur implizit ('manuell auslesen'), könnte expliziter sein (lokal speichern/später synchronisieren)."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
@@ -51,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung mit explizitem Offline-Workflow ('lokal speichern, später synchronisieren'). Alle Umweltfaktoren (Nebel, Nacht, spotty connectivity) korrekt eingebunden. Klare Priorisierung nach traffic_exposure=low."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit beschrieben ('lokal speichern, später synchronisieren'), alle Kontextfaktoren berücksichtigt (Nebel, Nacht, spotty connectivity, low_power_mode). Klare Struktur und Dokumentation."
   }
 ]

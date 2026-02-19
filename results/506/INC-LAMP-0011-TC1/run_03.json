@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-19T12:11:47",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein zeitweiser Ausfall vor, aktuell funktioniert die Anlage jedoch wieder. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern, besonders bei starkem Verkehr.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage (n4470029718) vor Ort: Gibt es sichtbare Schäden, lose Kabel, Feuchtigkeitseintritt oder Vandalismus?\n   - Prüfen, ob alle Leuchten/Signale aktuell wie vorgesehen funktionieren.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob der Fehler reproduzierbar ist (z. B. Flackern, Aussetzer bei bestimmten Bedingungen).\n   - Prüfen, ob in der Nähe Bauarbeiten, Witterungseinflüsse oder andere Störquellen vorliegen.\n   - Falls möglich: Kurzzeitige Funktionsprüfung (z. B. Testschaltung, falls vorhanden).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Besonderheiten).\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an die Fachabteilung/Technik.\n   - Falls Gefahr für Verkehrssicherheit besteht: Sofortige Sperrung oder weitere Absicherung veranlassen.\n\n**Rückfrage:**  \nGibt es nähere Angaben zum Ausfallzeitpunkt oder zu bestimmten Bedingungen (z. B. nur bei Regen, nachts)? Das hilft bei der gezielten Fehlersuche.",
+    "tokens_estimate_words": 170
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – aber das ist bei L0 erwartbar und kein Fehler."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.911
+  },
+  "error": {}
+}

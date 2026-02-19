@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline- oder Safety-Spezifika erwartbar. Dokumentation gut abgedeckt."
+    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Safety- oder Offline-Anforderungen erwartbar. Antwort ist angemessen generisch."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+high traffic klar adressiert, Offline-Workflow (spotty connectivity) erwähnt, umfassende Safety-Maßnahmen, strukturierte Eskalation und Dokumentation. Alle Kontextfaktoren berücksichtigt."
+    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+high traffic werden durch starke Safety-Maßnahmen adressiert. Spotty connectivity wird erkannt ('Vor-Ort-Check bevorzugen'). Alle Dimensionen gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Spotty connectivity explizit adressiert (offline dokumentieren, später synchronisieren), hohe Verkehrsexposition und schlechte Sicht betont, klare Safety-First-Haltung, strukturierte Eskalation. Alle Kontexthinweise korrekt interpretiert."
+    "short_justification": "Hervorragend: Spotty connectivity wird explizit durch Offline-Workflow adressiert ('lokal speichern', 'später synchronisieren'). Safety-First bei high severity+poor visibility+high traffic klar erkennbar. Vollständige, umsetzbare Checkliste."
   }
 ]

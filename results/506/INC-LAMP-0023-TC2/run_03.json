@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC2",
+  "timestamp": "2026-02-19T12:16:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293397459",
+        "longitude": 12.1320286,
+        "latitude": 47.8589872,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T08:16:43+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störungsprüfung\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, besonders wegen hohem Verkehrsaufkommen und schlechter Sicht.\n   - Auf Sturm achten: Standplatz sichern, lose Gegenstände vermeiden.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung am genannten Standort (OSM-ID: n13293397459, Koordinaten: 47.8589872, 12.1320286).\n   - Prüfen, ob weitere Lampen im Abschnitt betroffen sind.\n   - Auf offensichtliche Schäden (z.B. abgerissene Kabel, umgestürzte Masten) achten.\n\n3. **Diagnose/Beobachtung**\n   - Da das Gerät offline ist, keine Fernabfrage möglich.\n   - Prüfen, ob Sicherungen ausgelöst oder sichtbare Defekte an Schaltkästen vorhanden sind.\n   - Bei Sturm: Mögliche Sturmschäden (herabgefallene Äste, lose Teile) beachten.\n\n4. **Dokumentation**\n   - Fotos vom Schaden und Umfeld machen (Foto laut Meldung vorhanden).\n   - Alle Beobachtungen schriftlich festhalten (Datum, Uhrzeit, Wetter, Sichtverhältnisse, betroffene Lampen).\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden oder Gefahr für Verkehrsteilnehmer: Sofortige Meldung an Leitstelle/Notdienst.\n   - Falls Reparatur nicht direkt möglich: Gefahrenstelle absichern und Reparaturteam beauftragen.\n\n**Rückfrage:**  \nSind weitere Informationen zum betroffenen Abschnitt oder zu bereits getroffenen Maßnahmen vorhanden? Sollen zusätzliche Bereiche kontrolliert werden?",
+    "tokens_estimate_words": 164
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Offline-Workflow erkannt, Sturm/Verkehr/Sicht berücksichtigt, Eskalation klar, Dokumentation vollständig. Alle Kontextfaktoren genutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.983
+  },
+  "error": {}
+}

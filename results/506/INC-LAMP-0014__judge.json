@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalationslogik. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – das ist aber kein Fehler bei L0."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheit und Eskalation sind vorhanden, aber bei severity=medium könnte Safety-Fokus stärker sein. Keine Halluzinationen, Kontextnutzung korrekt (L0)."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Koordinaten, device_state, severity). Klare Diagnoselogik mit Bezug auf 'online/ok'-Status. Strukturiert, sicher, dokumentationsorientiert und eskalationsfähig."
+    "short_justification": "Exzellente Antwort: nutzt Kontext optimal (device online, day, low traffic), gibt präzise Diagnose-Hinweise (Leuchtmittel/Vorschaltgerät), klare Struktur, gute Dokumentation und Eskalation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise, kompakte Checkliste mit vollständiger Kontextnutzung (Asset-ID, Koordinaten, Umweltbedingungen). Klare Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, robuste Antwort."
+    "short_justification": "Kompakte, präzise Checkliste mit allen relevanten Schritten. Nutzt Kontext korrekt (Tag, low traffic, online), klare Eskalationskriterien, gute Dokumentation. Keine Halluzinationen, sehr praxisnah."
   }
 ]

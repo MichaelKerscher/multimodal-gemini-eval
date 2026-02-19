@@ -9,13 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Offline-Erwähnung nötig, da CONTEXT minimal ist und connectivity nicht enthält. Gute Rückfragen zur Klärung."
+    "short_justification": "Solide Checkliste mit klarer Struktur. Keine Offline-Erwähnung, da CONTEXT keine connectivity-Info enthält (korrekt). Sicherheit könnte expliziter sein (Warnweste/Absperrung erwähnt, aber kein 'Safety first'-Fokus bei unklarer Ursache)."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow erkannt und umgesetzt ('kein Fernzugriff möglich'), Nebel/Sicht berücksichtigt, klare Struktur, vollständige Dokumentation und Eskalation. Alle Kontextfaktoren genutzt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow klar erkannt ('keine Ferndiagnose möglich', 'Fotos vor Ort anfertigen'), Nebel/Verkehr berücksichtigt, Eskalation bei Sicherheitsrisiko, strukturierte Dokumentation. Alle Kontextdaten sinnvoll genutzt."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Offline-Workflow explizit mehrfach erwähnt ('lokal speichern', 'später synchronisieren', 'keine Online-Abfragen'), alle Umgebungsfaktoren (Nebel, Verkehr) berücksichtigt, klare Struktur und Eskalation. Vollständige Kontextnutzung."
+    "short_justification": "Hervorragend: Offline-Workflow explizit ('Fotos lokal speichern', 'Notizen handschriftlich oder in App offline', 'nach Rückkehr digital melden'), Nebel/Verkehr adressiert, klare Eskalation, präzise Dokumentation. Kontextnutzung optimal."
   }
 ]

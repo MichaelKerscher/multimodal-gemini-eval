@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-19T12:07:53",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt eine Meldung über einen zeitweisen Ausfall vor, aktuell funktioniert die Anlage jedoch wieder normal. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten sichern, um sich und andere Verkehrsteilnehmer zu schützen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage (Asset-ID: n1987093602) vor Ort durchführen.\n   - Auf offensichtliche Schäden, lose Kabel, Feuchtigkeitseintritt oder Vandalismus achten.\n\n3. **Diagnose/Beobachtung**\n   - Anlage beobachten: Funktionieren alle Leuchten/Signale wie vorgesehen?\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Falls möglich, Fehlerprotokoll oder Statusanzeige der Steuerung auslesen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten, Zeitpunkt der Kontrolle und eigene Maßnahmen dokumentieren (z. B. Fotos, Notizen).\n   - Auch festhalten, wenn aktuell kein Fehler auftritt.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an die Fachabteilung/Technik weiterleiten.\n   - Bei akuter Gefahr sofortige Absicherung und Information an die Leitstelle.\n\n**Rückfrage:**  \nGibt es nähere Angaben zum Zeitpunkt oder zur Art des Ausfalls (z. B. komplette Dunkelheit, Flackern, nur einzelne Lampen betroffen)? Das hilft bei der gezielten Fehlersuche.",
+    "tokens_estimate_words": 170
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit wird adressiert, aber ohne Umgebungskontext (L0) bleibt Safety-Bewertung moderat. Keine Halluzinationen, gute Kontextnutzung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.344
+  },
+  "error": {}
+}

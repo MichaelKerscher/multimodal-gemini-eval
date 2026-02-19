@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung von Dämmerung/schlechter Sicht trotz plausiblem Kontext 'dunkler Abschnitt'"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID gegeben war. Offline-Workflow nicht erwartet (connectivity nicht im CONTEXT)."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – das ist aber kein Fehler bei L0."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Dämmerung, Koordinaten, Energiesparmodus werden korrekt eingebunden. Klare Safety-Priorisierung, strukturierte Dokumentation, angemessene Eskalation bei severity=medium."
+    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Energiesparmodus und verfügbares Foto werden explizit einbezogen. Klare Struktur, Safety-First-Ansatz, vollständige Dokumentation und angemessene Eskalation."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -49,10 +47,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Berücksichtigt Regen, schlechte Sicht, Energiesparmodus und erwähnt korrekt offlinefähige Dokumentation. Klare Struktur, Safety-Fokus, angemessene Eskalation, keine Halluzinationen."
+    "short_justification": "Sehr gute Antwort mit vollständiger Kontextnutzung (Regen, schlechte Sicht, Foto vorhanden). Klare Sicherheitshinweise bei elektrischen Arbeiten im Regen, strukturierte Dokumentation und angemessene Eskalationskriterien."
   }
 ]

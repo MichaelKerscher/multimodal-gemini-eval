@@ -6,7 +6,7 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Offline-Erwähnung nötig, da CONTEXT connectivity nicht enthält. Dokumentation gut abgedeckt."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine connectivity-Info, daher kein Abzug)"
+    ],
+    "short_justification": "Relevante, strukturierte Antwort mit Sicherheitsmaßnahmen und Eskalation. Minimaler CONTEXT wurde korrekt genutzt, keine Halluzinationen. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
@@ -33,9 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nur erwähnt ('Keine Ferndiagnose möglich'), aber nicht operativ ausgearbeitet (lokale Speicherung, spätere Synchronisation)"
+      "Offline-Workflow nur implizit ('keine Ferndiagnose möglich'), nicht explizit als Handlungsanweisung"
     ],
-    "short_justification": "Sehr gute Antwort mit Umwelt-/Wetter-Bezug und Sicherheitsfokus. Offline-Status wird erkannt, aber Workflow-Details (lokale Speicherung, Sync) fehlen teilweise. Dokumentation exzellent."
+    "short_justification": "Sehr gute Struktur, klare Sicherheits- und Eskalationshinweise, Dokumentation gut. Offline-Status wird erwähnt, aber Offline-Workflow (lokal speichern/später sync) nicht explizit beschrieben."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt ('Fotos lokal speichern'), Umweltbedingungen berücksichtigt, Sicherheit priorisiert, Eskalation klar, Dokumentation vollständig. Kontext optimal genutzt."
+    "short_justification": "Exzellente Antwort: vollständige Nutzung des CONTEXT, expliziter Offline-Workflow ('Fotos lokal speichern'), klare Sicherheits- und Eskalationsschritte, präzise Dokumentation. Keine Halluzinationen."
   }
 ]

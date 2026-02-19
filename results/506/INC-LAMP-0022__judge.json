@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (nur aus User-Text 'unsicher' ableitbar)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety und Eskalation erkennbar, aber nicht explizit priorisiert (severity unbekannt)."
+    "missing_elements": [],
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekt ('unsicherer Bereich') wird adressiert. Keine Halluzinationen trotz minimalem Context."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -26,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: severity=high klar erkannt, Safety First (Absicherung, Polizei), Eskalation sofort, low_battery korrekt interpretiert. K=4 wegen fehlender Klarstellung, dass device_state das Techniker-Gerät betrifft (nicht Asset), aber keine Halluzination."
+    "short_justification": "Exzellente Kontextnutzung (low_battery als Ursache, Schnee/poor_visibility für Safety, severity=high für Eskalation). Klare Struktur, vollständige Dokumentation, keine Spekulation."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: severity=high erkannt, Safety First (Absicherung, Warnweste), Eskalation bei Gefahr, Dokumentation klar, keine Halluzinationen. Extras/context_notes korrekt beachtet (device_state nicht als Asset-Fehler interpretiert)."
+    "short_justification": "Vollständige, praxisnahe Checkliste mit starkem Safety-Fokus (Schnee, Dämmerung, Absicherung). Nutzt photo_available korrekt als Workflow-Hinweis. Eskalation bei Gefährdung klar formuliert."
   }
 ]

@@ -15,14 +15,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit adressiert, Eskalation vorhanden. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Punkte plausibel und nachvollziehbar."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 3
     },
@@ -35,14 +35,14 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Regen, poor_visibility, low_battery erwähnt). Sicherheit priorisiert, Eskalation klar. Offline-Workflow fehlt trotz spotty connectivity."
+    "short_justification": "Exzellente Antwort mit vollständiger Safety-First-Haltung (Warnweste, Absicherung bei Regen/Dämmerung), klarer Eskalation wegen high severity und poor_visibility. Kontextnutzung gut (low_battery, spotty erwähnt), aber Offline-Workflow fehlt trotz spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Workflow ('offline in der App erfassen, Foto lokal speichern'). Kompakt, sicherheitsorientiert, alle Guardrails beachtet."
+    "short_justification": "Perfekte Antwort: Safety-First bei high severity/poor_visibility/rain/dusk klar erkennbar, Offline-Workflow explizit erwähnt ('lokal in der App/auf dem Gerät speichern, Offline-Modus beachten'), Eskalation vorhanden, Dokumentation nachvollziehbar. Alle Kontextinformationen korrekt genutzt."
   }
 ]

@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0013-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheit wird priorisiert (Absperrung, Warnschilder, Fachkraft). Keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absperrung, Warnschilder, Berührungsgefahr). Eskalation an Fachkraft und Notdienste explizit genannt. Dokumentation und Rückfragen sinnvoll. Keine Halluzinationen, keine fehlenden Elemente."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext (Koordinaten, severity=high, dusk+poor_visibility), klare Safety-First-Haltung mit Absperrung und sofortiger Eskalation. Dokumentation vollständig, keine Spekulation."
+    "short_justification": "Exzellente Antwort: Absicherung priorisiert, Eskalation klar (hohe Priorität wegen Berührungsgefahr), Dokumentation inkl. vorhandenem Foto erwähnt. Kontextnutzung (device_state, photo_available) korrekt, keine Spekulation. Alle Dimensionen erfüllt."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Berücksichtigt Dämmerung/schlechte Sicht explizit, nutzt OSM-ID und Koordinaten korrekt, betont 'Keine Berührung', fordert Abschaltung. Dokumentation und Eskalation klar strukturiert."
+    "short_justification": "Sehr gute Antwort: Sicherheit steht an erster Stelle (Absperrung, Warnschilder, keine Berührung). Eskalation mit hoher Priorität und Notdienst-Option. Dokumentation inkl. OSM-ID und Foto. Kontextnutzung korrekt (poor_visibility, dusk erwähnt als 'schlechte Sicht'). Keine Halluzinationen."
   }
 ]
