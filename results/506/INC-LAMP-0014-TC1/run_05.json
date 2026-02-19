@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC1",
+  "timestamp": "2026-02-19T13:32:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle. (Asset-ID: n4939032525)",
+    "context": {
+      "asset_osm": "n4939032525"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4939032525). Hier ist das empfohlene Vorgehen:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung\n- Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, ggf. Absperrung bei Gefährdung).\n- Trage Warnweste und beachte die örtlichen Sicherheitsvorschriften.\n\n2. Sichtprüfung\n- Überprüfe, ob offensichtliche Schäden an Mast, Leuchte oder Verkabelung vorliegen.\n- Prüfe, ob die Lampe eventuell durch äußere Einflüsse (z. B. Unfall, Vandalismus) beschädigt wurde.\n\n3. Diagnose/Beobachtung\n- Kontrolliere, ob andere Lampen im Umkreis ebenfalls ausgefallen sind (Hinweis auf größeren Stromausfall).\n- Prüfe, ob der Dämmerungsschalter oder Zeitschaltuhr defekt sein könnte.\n- Falls möglich: Teste die Lampe mit einem mobilen Prüfgerät.\n\n4. Dokumentation\n- Notiere alle Beobachtungen (Schäden, Umgebung, evtl. Ursachen).\n- Halte Fotos vom Zustand der Lampe und Umgebung fest.\n\n5. Eskalation\n- Bei akuter Gefahr (herabfallende Teile, Stromschlaggefahr): Sofortige Meldung an die Leitstelle und ggf. Polizei/Feuerwehr.\n- Bei technischem Defekt ohne akute Gefahr: Störungsmeldung an die zuständige Wartungsfirma weiterleiten.\n\nRückfrage:  \nIst bekannt, ob in letzter Zeit an dieser Lampe Wartungsarbeiten oder Bauarbeiten in der Nähe stattgefunden haben? Gibt es Hinweise auf Vandalismus oder Unfälle?",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation vorhanden. Keine Halluzinationen bei minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.483
+  },
+  "error": {}
+}

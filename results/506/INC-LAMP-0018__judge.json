@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Sicherheitsmaßnahmen für Nacht/schlechte Sicht erwähnt (CONTEXT fehlt)"
+      "Konkrete Sicherheitsmaßnahmen bei Nacht/schlechter Sicht nicht erkennbar (Kontext fehlt)"
     ],
-    "short_justification": "Solide Checkliste mit klarer Struktur, Eskalation und Dokumentation. Keine Halluzinationen. Sicherheitsaspekte generisch, da Umgebungskontext fehlt."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation und Dokumentation. Sicherheitsaspekte allgemein gehalten, da Umgebungskontext minimal. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nacht+Nebel+mittlere Verkehrsexposition), strukturiert, eskaliert bei Bedarf, dokumentiert vollständig. Nutzt CONTEXT optimal, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, mittlere Verkehrsexposition), klare Struktur, kontextgerechte Diagnose (online-Gerät erwähnt), vollständige Dokumentation und Eskalation."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit explizit adressiert (Nacht+Nebel), klare Handlungsschritte, Eskalation und Dokumentation vollständig. Nutzt CONTEXT korrekt, keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Sicherheit klar priorisiert (Nebel, Nacht, mittlere Verkehrsbelastung), strukturiert, kontextgerecht (Online-Diagnose erwähnt), vollständige Dokumentation und Eskalation bei Gefahr."
   }
 ]

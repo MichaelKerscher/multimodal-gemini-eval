@@ -1,0 +1,276 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC3",
+  "timestamp": "2026-02-19T13:32:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "photo_available": true,
+        "reporter": "citizen"
+      },
+      "asset": {
+        "asset_osm": "n13278610215",
+        "latitude": 47.8494009,
+        "longitude": 12.1203879
+      },
+      "device": {
+        "connectivity": "online",
+        "device_state": "ok"
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache."
+        ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "high",
+          "fault_type": "open_housing",
+          "offline": false,
+          "spotty": false,
+          "connectivity": "online",
+          "device_state": "ok",
+          "low_battery": false,
+          "weather": "clear",
+          "poor_visibility": true,
+          "time_of_day": "dusk",
+          "photo_available": true
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 811
+        },
+        "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "incident.photo_available",
+            "prio": "P1",
+            "reason": "workflow-cue"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 811,
+    "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "incident.photo_available",
+        "prio": "P1",
+        "reason": "workflow-cue"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      }
+    ],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste: Gehäuse beschädigt, mögliche Berührungsgefahr\n\n1. **Absicherung**\n   - Gefahrenbereich sofort absperren (z. B. mit Warnbaken, Absperrband).\n   - Warnhinweise anbringen: „Stromschlaggefahr – Abstand halten“.\n   - Bei Dämmerung und schlechter Sicht auf ausreichende Beleuchtung achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle: Ist das Gehäuse offen, liegen stromführende Teile frei?\n   - Prüfen, ob Passanten oder Fahrzeuge gefährdet sind.\n   - Foto vom Schaden machen (Foto laut Meldung vorhanden).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Gerät weiterhin funktioniert (z. B. leuchtet die Lampe?).\n   - Keine Berührung! Keine Reparaturversuche ohne Elektrofachkraft.\n   - Notieren, ob weitere Schäden (z. B. lockere Teile, Feuchtigkeit) sichtbar sind.\n\n4. **Dokumentation**\n   - Schaden, Absicherungsmaßnahmen und Fotos in der App/Checkliste dokumentieren.\n   - Standortdaten und Uhrzeit festhalten.\n\n5. **Eskalation**\n   - Störung mit hoher Priorität an Elektrofachkraft/Notdienst melden.\n   - Bei akuter Gefahr (z. B. spielende Kinder, viel Verkehr): Polizei/Ordnungsamt informieren.\n\n**Rückfrage:**  \nSoll der Strom vor Ort abgeschaltet werden, oder ist bereits eine Elektrofachkraft unterwegs?  \nGibt es Zugang zum Schaltschrank?",
+    "tokens_estimate_words": 152
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (dusk/poor_visibility → Beleuchtung, severity=high → Priorisierung). Sicherheit und Eskalation klar im Fokus, strukturierte Dokumentation, keine erfundenen Details."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.48
+  },
+  "error": {}
+}

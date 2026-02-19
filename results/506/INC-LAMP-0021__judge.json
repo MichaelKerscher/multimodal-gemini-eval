@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gute Rückfragen zur Eingrenzung."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)"
+    ],
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Dokumentation gut. Keine Halluzinationen, da minimaler CONTEXT keine weiteren Erwartungen rechtfertigt."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -33,9 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Offline-Workflow nicht explizit erwähnt (connectivity=spotty im CONTEXT)"
     ],
-    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Nacht, Regen, schlechte Sicht). Alle Dimensionen gut abgedeckt. Offline-Workflow bei spotty connectivity nicht explizit erwähnt, aber Dokumentation ist klar strukturiert."
+    "short_justification": "Exzellente Antwort: umfassende Absicherung bei Regen/Nacht, klare Diagnose, Eskalation und Dokumentation. Kontextnutzung sehr gut (Wetter, Verkehr, Foto). Offline-Workflow fehlt trotz spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Alle Kontextinformationen korrekt verarbeitet, Offline-Workflow explizit berücksichtigt ('offline speichern', 'später synchronisieren'), Safety-First bei Nacht/Regen/schlechter Sicht, klare Eskalation und Dokumentation."
+    "short_justification": "Perfekte Antwort: alle Dimensionen erfüllt. Offline-Workflow explizit genannt ('offline speichern', 'Offline-Modus nutzen', 'lokal sichern und später synchronisieren'). Kontextnutzung vollständig, keine Halluzinationen."
   }
 ]

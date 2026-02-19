@@ -15,14 +15,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation und Dokumentation. Sicherheit adressiert, keine Halluzinationen. Offline-Workflow nicht erwartet bei L0-Kontext."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit wird adressiert, aber ohne Kontextinformationen zu Verkehr/Sicht etwas generisch. Keine Halluzinationen, gute Kontextnutzung der minimalen Daten."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 4
     },
@@ -35,14 +35,14 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Antwort mit vollständiger Struktur, klarer Sicherheitspriorisierung und Kontextnutzung (Dämmerung, mittlerer Verkehr). Offline-Workflow fehlt trotz spotty connectivity."
+    "short_justification": "Exzellente Antwort mit kontextspezifischer Sicherheitsabsicherung (Dämmerung, mittlerer Verkehr). Alle Dimensionen stark erfüllt. Einziger Punkt: Bei spotty connectivity sollte Offline-Dokumentation explizit erwähnt werden."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextsensitive Antwort. Offline-Workflow explizit adressiert ('lokal speichern, später synchronisieren'), Sicherheit priorisiert, alle relevanten Kontextfaktoren berücksichtigt."
+    "short_justification": "Perfekte Umsetzung aller Anforderungen. Offline-Workflow explizit adressiert ('offline in der App/Checkliste', 'Foto lokal speichern'), kontextgerechte Sicherheitsmaßnahmen, klare Struktur und Eskalation. Keine Halluzinationen."
   }
 ]

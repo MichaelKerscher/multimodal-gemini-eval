@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Sicherheitsmaßnahmen (Warnweste, Absperrung) bei 'Bereich wirkt unsicher'",
-      "Priorisierung der Eskalation bei Gefahrenlage"
+      "Severity-Einschätzung fehlt (nur aus User-Text 'unsicher' ableitbar)",
+      "Konkrete Absicherungsmaßnahmen bei hoher Verkehrsexposition weniger detailliert"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation. Sicherheitsaspekt wird angesprochen, aber bei 'unsicherem Bereich' könnten konkretere Sofortmaßnahmen (PSA, Absperrung) stärker betont werden. Keine Halluzinationen, gute Kontextnutzung trotz minimalem CONTEXT."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Safety-First erkennbar, aber bei minimalem Context fehlt explizite Priorisierung der Dringlichkeit trotz 'Bereich wirkt unsicher'."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Absicherung wird sofort priorisiert (severity=high, traffic_exposure=high, poor_visibility), klare Schrittfolge, vollständige Dokumentation mit Koordinaten, dringliche Eskalation wegen Gefahrenlage. Perfekte Kontextnutzung ohne Spekulation."
+    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high führen zu klarer Safety-Priorisierung (Warnweste, Absicherung), präziser Nutzung der Koordinaten, Foto-Hinweis integriert, Eskalation mit Dringlichkeit betont."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Außendienst-Checkliste: Absicherung mit konkreten Maßnahmen (Warnweste, Warnbaken, Polizei bei Bedarf) steht an erster Stelle, klare Eskalation bei akuter Gefahr, vollständige Dokumentation. Perfekte Nutzung des umfangreichen CONTEXT (severity, traffic_exposure, poor_visibility, night)."
+    "short_justification": "Hervorragende Umsetzung: Klare Safety-First-Struktur (Warnblinkanlage, PSA, Abstand), vollständige Kontextnutzung (Koordinaten, OSM-ID, Severity, Foto-Hinweis), präzise Eskalation mit Priorität 'hoch', keine Halluzinationen."
   }
 ]

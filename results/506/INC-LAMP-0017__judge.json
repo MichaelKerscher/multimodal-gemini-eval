@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation und Handlungsschritte gut nachvollziehbar."
+    "missing_elements": [
+      "Keine Anpassung an Umgebungsbedingungen (Zeit/Wetter unbekannt)"
+    ],
+    "short_justification": "Solide Standardantwort mit klarer Struktur, Sicherheit und Eskalation. Keine Kontextinformationen außer Asset-ID verfügbar, daher keine spezifischen Anpassungen erwartbar. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Wetter, Dämmerung, Foto, Koordinaten, Gerätezustand). Alle relevanten Umgebungsfaktoren (Regen, poor_visibility) werden in Absicherung und Diagnose einbezogen. Klare Struktur und Dokumentation."
+    "short_justification": "Exzellente Kontextnutzung: Regen/schlechte Sicht adressiert, low_power_mode als mögliche Ursache erwähnt, Dämmerung berücksichtigt. Vollständige Dokumentation und angemessene Eskalation bei severity=medium."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -47,10 +49,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit vollständiger Kontextnutzung. Expliziter Hinweis auf low_power_mode und offlinefähige Dokumentation. Alle Umgebungsfaktoren (Regen, Dämmerung) berücksichtigt, klare Eskalationswege und Rückfragen."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung: Regen/schlechte Sicht, low_power_mode des Geräts korrekt interpretiert (Ersatzakku-Hinweis), photo_available einbezogen. Klare Struktur, vollständige Dokumentation und angemessene Eskalation."
   }
 ]

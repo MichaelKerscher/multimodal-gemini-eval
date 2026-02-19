@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (medium im Context)",
-      "Zeitpunkt der Meldung nicht erwähnt"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Kontextnutzung gut, aber severity und reported_at nicht verarbeitet. Keine Offline-Erwähnung nötig bei L0."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
@@ -27,7 +24,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -36,9 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Struktur, klare Safety-Priorisierung (Nacht + poor_visibility), Batterie-Hinweis gut integriert. Offline-Workflow fehlt bei spotty, daher K=4."
+    "short_justification": "Exzellente Strukturierung mit kontextspezifischen Details (Nacht, low_battery, spotty). Offline-Workflow bei instabiler Verbindung nicht explizit erwähnt, obwohl connectivity=spotty im Kontext steht."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -56,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, präzise Antwort. Offline-Workflow klar benannt ('offline speichern, später synchronisieren'), alle Kontextfelder sinnvoll verarbeitet, Safety und Eskalation vorhanden."
+    "short_justification": "Vollständige, kontextgerechte Antwort. Offline-Workflow explizit adressiert (lokal dokumentieren, später synchronisieren). Alle relevanten Kontextfaktoren berücksichtigt, keine Halluzinationen."
   }
 ]

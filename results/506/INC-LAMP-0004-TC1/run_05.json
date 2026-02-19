@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-19T13:28:38",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zur Straßenlampe (Asset-ID: n12551286240). Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe auf erhöhte Unfallgefahr prüfen.\n   - Falls möglich: Warnbaken oder Hinweisschilder aufstellen, besonders bei schlechter Sicht oder viel Fußgängerverkehr.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist der Mast beschädigt? Liegt ein offensichtlicher Kabelschaden oder Vandalismus vor?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Notieren: Seit wann ist die Lampe aus? (Hier: ca. 90 Minuten)\n   - Wetterlage und Tageszeit berücksichtigen (z. B. Einfluss durch Feuchtigkeit, Sturm).\n   - Gibt es Anzeichen für einen Stromausfall im Bereich?\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Zeitpunkt und Beobachtungen festhalten.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder Leitstelle melden.\n   - Hinweis auf Unsicherheitsgefühl im Bereich weitergeben, damit Priorisierung möglich ist.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese betroffen? Gibt es Hinweise auf akute Gefahrenstellen (z. B. Baustellen, Schulweg, viel Fußgängerverkehr)?",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Checkliste mit klarer Struktur (Absicherung, Diagnose, Eskalation). Sicherheitsaspekte werden adressiert, aber ohne Kontext zu Umgebungsbedingungen etwas generisch. Keine Halluzinationen, gute Nachvollziehbarkeit."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.251
+  },
+  "error": {}
+}

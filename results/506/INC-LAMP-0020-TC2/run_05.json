@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-19T13:34:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Einsatzfahrzeug mit Warnblinker abstellen, ggf. Warnleuchten aufstellen.\n- Bei Regen und schlechter Sicht besonders auf eigene Sicherheit achten.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der gesamten dunklen Strecke entlang des angegebenen Standorts (OSM n4483691318, Koordinaten: 47.856655, 12.129258).\n- Prüfen, ob einzelne oder mehrere Leuchten betroffen sind.\n- Auf offensichtliche Schäden (z. B. defekte Lampenköpfe, lose Kabel, Wassereintritt) achten.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Stromversorgung anliegt (z. B. Sicherungen, Schaltkasten).\n- Status der Leuchten prüfen: Komplettausfall oder einzelne Lampen?\n- Gerät ist online, aber im Energiesparmodus – mögliche Ursache: Stromsparschaltung oder Störung im Steuergerät.\n- Bei Regen: Feuchtigkeitseintritt als Fehlerquelle in Betracht ziehen.\n\n**4. Dokumentation**\n- Fotos vom Ausfallbereich und ggf. von Schäden anfertigen (Foto laut Meldung verfügbar).\n- Festgestellte Mängel und getroffene Maßnahmen notieren.\n- Zeitpunkt und Wetterbedingungen dokumentieren.\n\n**5. Eskalation**\n- Bei hohem Schweregrad (wie gemeldet): Störung umgehend an die Leitstelle/Technik weiterleiten.\n- Falls Gefahr für Verkehrsteilnehmer besteht, zusätzliche Absicherung veranlassen.\n- Reparaturteam mit passendem Material und Werkzeug anfordern.\n\n**Rückfragen/Annahmen:**\n- Sind weitere Details zum Ausmaß des Ausfalls bekannt (z. B. Länge des betroffenen Abschnitts)?\n- Gibt es aktuelle Bauarbeiten oder bekannte Vorerkrankungen an der Anlage?\n- Ist Zugang zum Schaltschrank vor Ort möglich?\n\nBitte um Rückmeldung, falls weitere Informationen benötigt werden oder besondere Vorgaben zu beachten sind.",
+    "tokens_estimate_words": 220
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Eskalation adressiert, Nacht+Regen+poor_visibility führen zu expliziten Sicherheitshinweisen, Kontextnutzung (Koordinaten, Foto, low_power_mode) ist präzise und ohne Spekulation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.891
+  },
+  "error": {}
+}

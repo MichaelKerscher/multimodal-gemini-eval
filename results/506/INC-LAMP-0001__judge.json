@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Keine Offline-Workflow-Erwähnung nötig (CONTEXT enthält nur asset_osm). Sicherheitsaspekte angesprochen, aber nicht priorisiert."
+    "short_justification": "Solide Antwort mit klarer Struktur und Eskalationspfad. Keine Halluzinationen, da CONTEXT minimal ist. Safety könnte expliziter sein (traffic_exposure fehlt im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -23,8 +23,8 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 5,
-      "K": 4
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -35,7 +35,7 @@
     "missing_elements": [
       "Offline-Workflow (lokal dokumentieren, später synchronisieren)"
     ],
-    "short_justification": "Exzellente Antwort mit starkem Sicherheitsfokus (traffic_exposure=high), klarer Eskalation und Batterie-/Connectivity-Bezug. Offline-Workflow fehlt trotz connectivity=offline."
+    "short_justification": "Sehr gute Kontextnutzung (Batterie, Offline-Status, Verkehrsexposition). Offline-Workflow fehlt jedoch explizit, obwohl connectivity=offline. K=3 wegen fehlender Offline-Strategie."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit genannt ('Foto lokal speichern', 'offline erfassen, später synchronisieren'), Sicherheit priorisiert, Eskalation klar, Kontextnutzung vollständig."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), alle Kontextfaktoren berücksichtigt, klare Dokumentation und Eskalation. Vollständig konsistent mit extras.context_notes."
   }
 ]

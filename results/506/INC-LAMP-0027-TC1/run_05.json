@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC1",
+  "timestamp": "2026-02-19T13:37:41",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n4939032947)",
+    "context": {
+      "asset_osm": "n4939032947"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden Flackern bei Regen an Asset n4939032947 (Straßenlampe/Ampel). Hier die empfohlene Vorgehensweise:\n\n**Checkliste zur Störungsbearbeitung**\n\n1. Absicherung  \n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n   - Sichtkontrolle auf offensichtliche Schäden (z. B. Feuchtigkeitseintritt, Risse, lose Kabel).\n   - Prüfen, ob Wasser in Gehäuse oder Anschlusskasten eingedrungen ist.\n\n3. Diagnose/Beobachtung  \n   - Flackern bei Regen deutet auf Feuchtigkeitsproblem hin.\n   - Prüfen, ob Dichtungen defekt oder Kabeldurchführungen undicht sind.\n   - Falls möglich: Funktionstest bei feuchter Witterung durchführen.\n\n4. Dokumentation  \n   - Beobachtungen und Maßnahmen dokumentieren (Fotos, Notizen).\n   - Asset-ID und Standort vermerken.\n\n5. Eskalation  \n   - Bei bestätigtem Feuchtigkeitseintritt: Meldung an Elektrofachkraft/Servicepartner zur Reparatur.\n   - Bei Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Notfallmeldung.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bereits Hinweise auf offene Gehäuse oder sichtbare Schäden?",
+    "tokens_estimate_words": 135
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Sicherheitspriorisierung und Eskalationspfad. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.258
+  },
+  "error": {}
+}

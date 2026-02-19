@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 5
     },
@@ -15,27 +15,27 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen bei minimalem Kontext."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Sicherheitspriorisierung und Eskalationspfad. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0027-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
-      "D": 5,
+      "S": 5,
+      "D": 4,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow könnte expliziter sein (nur kurz erwähnt)"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Verkehr, Regen, spotty connectivity erwähnt). Sehr strukturiert, Safety-First klar, Dokumentation detailliert. Offline-Workflow nur angedeutet, daher K=3."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (hohe Verkehrsexposition, Regen) und klarer Struktur. Connectivity=spotty erfordert Offline-Workflow-Hinweis, der fehlt (K-Abzug)."
   },
   {
     "test_id": "INC-LAMP-0027-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit (Fotos lokal speichern, offline dokumentieren), alle Kontextfaktoren berücksichtigt (spotty connectivity, Regen, Verkehr), Safety-First, klare Eskalation, vollständige Dokumentation."
+    "short_justification": "Perfekte Antwort: Alle Kontextinformationen korrekt verarbeitet, Offline-Workflow explizit erwähnt ('Fotos lokal speichern', 'offline dokumentieren'), Safety-First bei hoher Verkehrsexposition, klare Eskalation."
   }
 ]

@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-19T13:31:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein zeitweiser Ausfall vor, aktuell funktioniert die Anlage jedoch normal. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Kontrolle (Asset-ID: n4470029718)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Arbeitsbereich gemäß Vorschrift absichern (z. B. Warnleuchten, Pylonen).\n\n2. **Sichtprüfung**\n   - Anlage äußerlich auf Beschädigungen, lose Teile oder Feuchtigkeitsspuren prüfen.\n   - Umfeld auf mögliche Störquellen (z. B. Bauarbeiten, Vandalismus) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktionsprüfung: Mehrere Schaltzyklen beobachten (z. B. Ampelphasen, Lampen an/aus).\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Falls möglich: Fehlerprotokoll oder Statusanzeige der Steuerung auslesen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen (auch wenn aktuell kein Fehler sichtbar ist) schriftlich festhalten.\n   - Fotos von Anlage und Umfeld anfertigen.\n   - Zeitpunkt und Dauer der Kontrolle notieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Auffälligkeiten: Störung an die Fachabteilung melden.\n   - Falls keine Auffälligkeiten: Rückmeldung an die Leitstelle, dass aktuell kein Fehler feststellbar ist, aber eine Beobachtung empfohlen wird.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es nähere Angaben zum Zeitpunkt oder zur Häufigkeit des Ausfalls? Das hilft, gezielter zu prüfen.",
+    "tokens_estimate_words": 179
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Erwähnung der Umweltbedingungen (nicht im Context verfügbar)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Rückfrage zur Asset-Art ist sinnvoll bei minimalem Context. Keine Halluzinationen erkennbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.725
+  },
+  "error": {}
+}

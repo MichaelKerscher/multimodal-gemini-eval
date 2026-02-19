@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC2",
+  "timestamp": "2026-02-19T13:28:38",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T11:25:07+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe Happinger Hof (n12551286240)\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) rund um den Arbeitsbereich aufstellen, besonders wegen schlechter Sicht und Nebel.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, lose Teile oder Vandalismus prüfen.\n   - Umgebung auf weitere ausgefallene Lampen kontrollieren (evtl. Serienausfall).\n   - Prüfen, ob Stromzufuhr (z. B. Sicherungskasten) zugänglich und unbeschädigt ist.\n\n3. **Diagnose/Beobachtung**\n   - Falls möglich, Funktionstest am Mast durchführen (z. B. mit Prüfgerät).\n   - Bei spotty Konnektivität: Vor Ort keine Fernwartung möglich, daher manuelle Prüfung.\n   - Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist (wegen Nebel).\n\n4. **Dokumentation**\n   - Fotos vom Defekt und Umfeld machen (Foto liegt laut Meldung bereits vor, ggf. ergänzen).\n   - Alle Beobachtungen und durchgeführten Maßnahmen notieren.\n   - Zeitpunkt und genaue Position dokumentieren.\n\n5. **Eskalation**\n   - Bei schwerwiegendem Defekt (hohe Gefährdung, Bereich unsicher): Störungsdienst oder Bereitschaft informieren, ggf. Polizei zur Verkehrsabsicherung hinzuziehen.\n   - Meldung an Leitstelle mit allen Details und Dringlichkeit weitergeben.\n\n**Rückfrage:**  \nIst Zugang zum Schaltschrank vor Ort möglich oder wird ein Elektriker benötigt? Gibt es Hinweise auf Fremdeinwirkung (z. B. Unfallspuren)?",
+    "tokens_estimate_words": 184
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Exzellente kontextbezogene Antwort (Nebel, Nacht, poor_visibility). Sicherheit priorisiert, Dokumentation klar. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync) beschrieben."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.739
+  },
+  "error": {}
+}

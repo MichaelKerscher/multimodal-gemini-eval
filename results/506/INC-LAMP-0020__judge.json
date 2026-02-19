@@ -15,9 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
+      "Severity-Einschätzung fehlt (keine Priorisierung erkennbar)",
+      "Zeitliche Dringlichkeit nicht adressiert"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Risikofaktoren adressiert – aber auch keine Halluzinationen."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Hinweise auf Wetter/Nacht/Schweregrad – das ist kein Fehler des Modells."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -26,7 +27,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -35,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high wird erkannt, Nacht+Regen+poor_visibility adressiert, low_power_mode korrekt als Geräte-Zustand interpretiert. Klare Safety-First-Haltung und Eskalation bei hohem Risiko."
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Eskalation adressiert, Nacht+Regen+poor_visibility führen zu expliziten Sicherheitshinweisen, Kontextnutzung (Koordinaten, Foto, low_power_mode) ist präzise und ohne Spekulation."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -53,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Kompakte, praxisnahe Checkliste mit klarer Priorisierung. Severity=high, Nacht, Regen und poor_visibility werden adressiert. Eskalation und Safety-Fokus sind deutlich erkennbar. Keine Halluzinationen, context_notes korrekt beachtet."
+    "short_justification": "Sehr gute Antwort mit klarer Priorisierung (hohe Priorität im Titel), starkem Safety-Fokus bei Regen/Nacht/poor_visibility, und angemessener Eskalation bei severity=high. Kontextnutzung korrekt, keine Halluzinationen."
   }
 ]

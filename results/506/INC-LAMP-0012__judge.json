@@ -9,19 +9,36 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit klarer Struktur (Absicherung, Sichtprüfung, Diagnose, Dokumentation, Eskalation). Sicherheitsaspekte werden adressiert, aber ohne Kontext zu Verkehrsexposition oder Tageszeit etwas generisch. Keine Halluzinationen, da minimaler Kontext vorliegt."
+  },
+  {
+    "test_id": "INC-LAMP-0012-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Sicherheitsmaßnahmen (Warnweste, Absicherung) nicht explizit genannt",
-      "Keine Priorisierung aufgrund poor_visibility/night erkennbar"
+      "Offline-Workflow bei spotty connectivity nicht erwähnt"
     ],
-    "short_justification": "Solide Struktur mit allen Kernschritten. Sicherheitsaspekt könnte bei 'unsicherem Bereich' deutlicher betont werden. Keine Kontextfehler, da L0 minimal ist."
+    "short_justification": "Sehr gute Kontextnutzung (night, poor_visibility, medium traffic_exposure, low_power_mode). Sicherheit und Eskalation klar priorisiert. Jedoch fehlt Hinweis auf Offline-Dokumentation trotz 'spotty' connectivity, daher K=3."
   },
   {
-    "test_id": "INC-LAMP-0012-TC2",
+    "test_id": "INC-LAMP-0012-TC3",
     "scores": {
       "R": 5,
       "H": 5,
@@ -36,24 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt erkannt (spotty connectivity), Sicherheit priorisiert (Warnweste, Absicherung), alle Kontextfelder sinnvoll genutzt, klare Eskalation bei mittlerer Gefährdung."
-  },
-  {
-    "test_id": "INC-LAMP-0012-TC3",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Mustergültige Antwort: Offline-Workflow explizit adressiert, Sicherheit konsequent priorisiert (Warnweste, Absicherung, Polizei bei Gefahr), alle Kontextfelder optimal genutzt, klare Eskalationsstufen, präzise Dokumentationsanweisungen."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('offline dokumentieren, Fotos lokal speichern, später synchronisieren'), alle Kontextfaktoren (spotty connectivity, low_power_mode, night, poor_visibility) korrekt verarbeitet. Sicherheit, Struktur und Dokumentation vorbildlich."
   }
 ]

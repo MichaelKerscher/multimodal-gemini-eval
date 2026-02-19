@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gute Dokumentationshinweise und sinnvolle Rückfrage."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sinnvolle Rückfrage zur Präzisierung."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
-      "K": 3
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,10 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow könnte expliziter sein (nur kurz erwähnt)"
-    ],
-    "short_justification": "Gute Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Aspekt wird erwähnt ('keine Fernwartung möglich'), könnte aber in Dokumentation deutlicher hervorgehoben werden. Safety und Eskalation angemessen."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Workflow erkannt ('manuelle Kontrolle bevorzugen'), Sicherheit priorisiert, vollständige Dokumentation und differenzierte Eskalation."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Workflow explizit integriert ('Fotos/Notizen offline speichern', 'später synchronisieren'), Umweltbedingungen (Nebel, Dämmerung) berücksichtigt, low battery erwähnt. Klare Struktur, Safety-First, angemessene Eskalation."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('offline speichern', 'später synchronisieren'), alle Umweltfaktoren berücksichtigt, klare Sicherheitspriorisierung, strukturierte Eskalation. Vollständige Kontextnutzung inkl. Guardrails."
   }
 ]

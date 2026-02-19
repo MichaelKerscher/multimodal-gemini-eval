@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (nur aus User message 'wirkt unsicher' ableitbar)",
-      "Konkrete Absicherungsmaßnahmen könnten detaillierter sein"
+      "Severity-Einschätzung fehlt (nur aus User-Nachricht 'wirkt unsicher' ableitbar)",
+      "Keine explizite Priorisierung der Eskalation"
     ],
-    "short_justification": "Solide Antwort mit klarer Struktur, Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety könnte expliziter priorisiert werden (z.B. 'Schritt 1: Sofortige Absicherung')."
+    "short_justification": "Solide Struktur mit Absicherung, Diagnose und Eskalation. Sicherheitsfokus erkennbar, aber ohne Kontext-Severity etwas allgemein gehalten. Keine Halluzinationen, da nur OSM-ID verfügbar war."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety First klar erkennbar (Warnweste, Pylonen, Verkehrsexposition), severity=high adäquat behandelt, low_battery korrekt interpretiert (Gerät, nicht Asset), Eskalation bei anhaltender Gefahr, vollständige Dokumentation."
+    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high führen zu klarer Sicherheitspriorisierung, Polizei/Ordnungsamt-Einbindung, Batterieproblem korrekt interpretiert, Foto-Workflow integriert. Alle Dimensionen erfüllt."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -50,10 +50,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Explizite Unterscheidung Gerät vs. Asset (context_notes korrekt verarbeitet), offline-Dokumentation bei low_battery erwähnt, Safety-Fokus durchgängig, Eskalation bei hohem Risiko, keine Spekulation über Asset-Fehlerursache."
+    "short_justification": "Hervorragend: Sofortige Absicherung wegen hoher Verkehrsexposition und poor_visibility, klare Eskalation mit Prioritätsbegründung, Foto-Workflow integriert, context_notes korrekt beachtet (device_state bezieht sich auf Techniker-Gerät). Vollständig und präzise."
   }
 ]

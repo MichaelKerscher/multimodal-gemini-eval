@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-19T13:32:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für akuten Ausfall einer Straßenlampe bei hoher Verkehrsexposition\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband bereitstellen.\n   - Warnweste anlegen.\n   - Bereich um die Lampe absichern, besonders bei hoher Verkehrsdichte und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden (z. B. Glasbruch, lose Teile, Vandalismus) prüfen.\n   - Umfeld auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob nur diese Lampe betroffen ist oder mehrere in der Nähe.\n   - Geräusche oder Gerüche (z. B. verschmort) wahrnehmen.\n   - Falls möglich: Funktion der Sicherung im Schaltschrank kontrollieren.\n\n4. **Dokumentation**\n   - Fotos vom Ausfallbereich und der Lampe machen (Foto liegt laut Meldung vor).\n   - Uhrzeit, genaue Position (47.8580112, 12.1324162) und Beobachtungen notieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (hohes Verkehrsaufkommen, schlechte Sicht): Störung sofort an Bereitschaftsdienst/Stadtwerke melden.\n   - Dringlichkeit betonen: Bereich wirkt unsicher, viele Verkehrsteilnehmer betroffen.\n\n**Rückfrage:**  \nGibt es Zugang zum Schaltschrank vor Ort oder ist ein Elektriker erforderlich?  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen?",
+    "tokens_estimate_words": 158
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high führen zu klarer Safety-Priorisierung (Warnweste, Absicherung), präziser Nutzung der Koordinaten, Foto-Hinweis integriert, Eskalation mit Dringlichkeit betont."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.73
+  },
+  "error": {}
+}

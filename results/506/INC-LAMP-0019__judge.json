@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Umweltbedingungen (Nacht, Nebel) nicht berücksichtigt"
-    ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Umweltkontext (Nacht/Nebel) fehlt, da nur minimaler Context vorliegt."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit wird adressiert, aber ohne Kenntnis der Umgebungsbedingungen (Nebel, Nacht) bleibt Safety-Fokus generisch. Keine Kontextfehler bei minimalem Input."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, mittlerer Verkehr), strukturierte Schritte, klare Eskalation, vollständige Dokumentation. Kontextnutzung optimal."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (Nebel, Nacht, mittlerer Verkehr), priorisiert Absicherung klar, strukturierte Schritte, angemessene Eskalation bei akuter Gefahr. Dokumentation und Rückfragen passend."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Sicherheit klar priorisiert (Nebel, Nacht, Verkehr), präzise Checkliste, vollständige Dokumentation inkl. Koordinaten, klare Eskalation. Kontextnutzung perfekt."
+    "short_justification": "Hervorragende Antwort: Vollständige Kontextnutzung (Nebel, Nacht, poor_visibility, medium traffic_exposure), starker Safety-Fokus mit Polizei/Ordnungsamt-Option, klare Eskalationskriterien, präzise Dokumentation. Rückfragen zielgerichtet."
   }
 ]

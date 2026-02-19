@@ -15,15 +15,15 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheit adressiert, Eskalation vorhanden. Keine Kontextfehler bei minimalem Context."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
       "K": 3
     },
     "flags": {
@@ -33,9 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht konsequent umgesetzt (Fernabfrage erwähnt, aber bei spotty connectivity sollte lokale Dokumentation priorisiert werden)"
+      "Offline-Dokumentation nicht explizit betont trotz spotty connectivity"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (Nebel, Koordinaten, Foto). Offline-Workflow erwähnt, aber nicht vollständig durchdacht (Fernabfrage bei spotty connectivity widersprüchlich). Sonst exzellent strukturiert."
+    "short_justification": "Gute Struktur, erwähnt spotty connectivity und low_power_mode. Offline-Workflow nur implizit ('Fernabfrage vermutlich nicht möglich'), könnte expliziter sein bei Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow konsequent umgesetzt (lokal speichern, später synchronisieren), alle Kontextfaktoren berücksichtigt (Nebel, low_power, spotty), klare Struktur und Dokumentation."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit integriert ('lokal speichern', 'später synchronisieren'), klare Safety-Priorisierung bei Nebel/Nacht, strukturierte Eskalation mit Risikobewertung."
   }
 ]

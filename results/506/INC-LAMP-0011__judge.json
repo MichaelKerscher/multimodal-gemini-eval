@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste für intermittierenden Fehler. Sicherheit adressiert, Eskalation klar. Keine Kontextinformationen verfügbar, daher keine Erwartung an Umgebungsanpassung."
+    "missing_elements": [
+      "Keine Erwähnung der Umweltbedingungen (nicht im Context verfügbar)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Rückfrage zur Asset-Art ist sinnvoll bei minimalem Context. Keine Halluzinationen erkennbar."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nebel und schlechte Sicht explizit in Absicherung berücksichtigt, mittleres Verkehrsaufkommen adressiert. Strukturiert, umsetzbar, vollständige Dokumentation und klare Eskalationskriterien."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr). Klare Sicherheitsmaßnahmen, strukturierte Diagnose mit Wetterbezug, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Kontextnutzung: Nebel, schlechte Sicht und mittlerer Verkehr explizit in Sicherheitsmaßnahmen integriert. Diagnose auf intermittierenden Fehler zugeschnitten, vollständige Dokumentation, klare Eskalation."
+    "short_justification": "Kompakte, präzise Checkliste mit vollständiger Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr). Sicherheit, Diagnose mit Feuchtigkeitsbezug, Dokumentation und Eskalation klar strukturiert. Keine Halluzinationen."
   }
 ]

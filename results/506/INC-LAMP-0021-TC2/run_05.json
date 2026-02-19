@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC2",
+  "timestamp": "2026-02-19T13:35:25",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Flackern/Kontaktproblemen  \n**Objekt:** Straßenlampe, Rechenauerstraße, Rosenheim  \n**Bedingungen:** Schlechte Sicht, Regen, Nacht, wenig Verkehr\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Blitzleuchte) rund um den Arbeitsbereich aufstellen.\n   - Bei Bedarf zweite Person zur Absicherung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden (z. B. Feuchtigkeitseintritt, lose Teile, Korrosion) kontrollieren.\n   - Lampenkopf und Anschlusskasten auf festen Sitz prüfen.\n   - Umgebung auf weitere betroffene Lampen prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es dauerhaft oder nur bei Erschütterung/Nässe auf?\n   - Anschlusskasten (falls gefahrlos zugänglich) auf Feuchtigkeit oder lose Klemmen prüfen.\n   - Bei Regen besondere Vorsicht: Keine Arbeiten an offenen elektrischen Teilen ohne Freischaltung!\n   - Foto vom Fehlerbild und Umfeld machen (Foto liegt laut Meldung vor).\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Zeitpunkt, Wetter, eigene Beobachtungen und getroffene Maßnahmen notieren.\n   - Fotos und ggf. Video sichern.\n   - Asset-Daten (Lampe, Standort, OSM-ID) ergänzen.\n\n5. **Eskalation**\n   - Bei Verdacht auf gefährlichen Defekt (z. B. Stromschlaggefahr, starker Wassereintritt): Lampe außer Betrieb nehmen und sofort an Fachfirma/Elektrofachkraft melden.\n   - Bei unklarer Ursache oder fehlender Besserung nach Sichtprüfung: Störungsdienst informieren, Reparatur beauftragen.\n\n**Rückfrage:**  \nWurde der Anschlusskasten bereits geöffnet/geprüft oder liegen weitere Hinweise zum Fehlerbild vor?",
+    "tokens_estimate_words": 194
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt (connectivity=spotty im CONTEXT)"
+    ],
+    "short_justification": "Exzellente Antwort: umfassende Absicherung bei Regen/Nacht, klare Diagnose, Eskalation und Dokumentation. Kontextnutzung sehr gut (Wetter, Verkehr, Foto). Offline-Workflow fehlt trotz spotty connectivity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.736
+  },
+  "error": {}
+}

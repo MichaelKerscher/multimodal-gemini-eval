@@ -15,14 +15,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden. Offline-Workflow nicht erwartbar bei L0."
+    "short_justification": "Solide Checkliste mit klarer Struktur (Absicherung, Diagnose, Eskalation). Sicherheitsaspekte werden adressiert, aber ohne Kontext zu Umgebungsbedingungen etwas generisch. Keine Halluzinationen, gute Nachvollziehbarkeit."
   },
   {
     "test_id": "INC-LAMP-0004-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 3
     },
@@ -35,7 +35,7 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Nebel, Nacht, poor_visibility). Eskalation klar. K=3, da connectivity=spotty im Context steht, aber kein Offline-Workflow erwähnt wird."
+    "short_justification": "Exzellente kontextbezogene Antwort (Nebel, Nacht, poor_visibility). Sicherheit priorisiert, Dokumentation klar. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync) beschrieben."
   },
   {
     "test_id": "INC-LAMP-0004-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Safety-First bei Nebel/Nacht, klare Eskalation, Offline-Workflow explizit erwähnt ('offline speichern', 'später synchronisieren'). Alle Context-Elemente korrekt genutzt."
+    "short_justification": "Perfekte Umsetzung: Sicherheit priorisiert (Nebel, Nacht), Offline-Workflow explizit beschrieben ('lokal dokumentieren', 'später synchronisieren'), klare Eskalation bei Gefährdung, vollständige Dokumentation. Kontext optimal genutzt."
   }
 ]

@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (kein connectivity-Feld im CONTEXT)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gut nachvollziehbar."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow klar erkannt ('kann keine Fernabfrage erfolgen'), Nebel/Verkehr berücksichtigt, Dokumentation und Eskalation präzise. Alle Kontextfelder korrekt genutzt."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Verkehr, offline). Offline-Workflow wird erwähnt ('keine Fernabfrage möglich'). Sehr strukturiert und sicherheitsorientiert. Dokumentation klar."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Offline-Workflow explizit umgesetzt ('Fotos lokal speichern', 'Offline-Modus', 'Online-Synchronisation'). Nebel, Verkehr, Geräuschkulisse berücksichtigt. Klare Eskalation und Dokumentation."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('offline in der App oder auf Papier', 'Fotos lokal speichern', 'Synchronisation nach Wiederherstellung'). Alle Kontextfaktoren berücksichtigt, sehr handlungsorientiert."
   }
 ]

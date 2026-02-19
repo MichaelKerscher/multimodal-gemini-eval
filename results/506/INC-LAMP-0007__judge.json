@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Relevante, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Offline-Workflow-Erwähnung nötig (CONTEXT minimal). Dokumentation gut, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
@@ -29,13 +29,13 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)"
+      "Offline-Workflow nicht explizit ausformuliert (nur 'keine Ferndiagnose möglich')"
     ],
-    "short_justification": "Sehr gute Antwort mit detaillierter Absicherung bei Sturm und mittlerem Verkehr. Offline-Connectivity wird nicht explizit adressiert (K=3), obwohl device.connectivity=offline im Context steht."
+    "short_justification": "Sehr gute Antwort mit Sturm-Kontext, Absicherung und Eskalation. Offline-Hinweis vorhanden, aber nicht als vollständiger Workflow (lokal speichern/später sync). K=3 wegen schwacher Offline-Handhabung."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('offline speichern', 'später synchronisieren'), Sturm-Risiken adressiert, klare Struktur und Dokumentation. Alle Kontext-Elemente korrekt genutzt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow klar beschrieben ('lokal speichern, später synchronisieren'), Sturm-Kontext integriert, Absicherung und Eskalation präzise. Alle Kontext-Elemente korrekt genutzt."
   }
 ]

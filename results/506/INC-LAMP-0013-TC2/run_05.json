@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-19T13:32:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste bei beschädigtem Gehäuse (Berührungsgefahr)\n\n1. Absicherung  \n- Bereich sofort absperren (z. B. mit Warnbaken, Absperrband oder Pylonen).  \n- Warnschilder „Stromschlaggefahr“ gut sichtbar aufstellen.  \n- Bei schlechter Sicht: zusätzliche Beleuchtung nutzen oder Warnwesten tragen.\n\n2. Sichtprüfung  \n- Gehäuse auf weitere Schäden prüfen (z. B. freiliegende Kabel, Feuchtigkeitseintritt).  \n- Prüfen, ob Personen oder Fahrzeuge gefährdet sind.\n\n3. Diagnose/Beobachtung  \n- Abstand halten, keine Berührung!  \n- Prüfen, ob das Gerät noch funktioniert (z. B. leuchtet die Lampe/Signal?).  \n- Foto vom Schaden machen (laut Meldung vorhanden).\n\n4. Dokumentation  \n- Schaden, Absicherungsmaßnahmen und Beobachtungen schriftlich festhalten.  \n- Foto und Standortdaten sichern.\n\n5. Eskalation  \n- Störungsdienst/Elektrofachkraft sofort informieren (hohe Priorität wegen Stromschlaggefahr).  \n- Bis zur Übernahme durch Fachpersonal vor Ort bleiben, falls möglich.\n\nRückfrage:  \nIst bereits ein Notdienst informiert oder soll ich die Meldung weiterleiten? Sind ausreichend Absperrmaterialien vor Ort?",
+    "tokens_estimate_words": 134
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (poor_visibility → zusätzliche Beleuchtung/Warnwesten, severity=high → sofortige Eskalation). Alle Sicherheitsaspekte adressiert, klare Handlungsschritte, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.327
+  },
+  "error": {}
+}

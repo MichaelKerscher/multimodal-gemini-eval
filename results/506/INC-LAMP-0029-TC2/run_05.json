@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC2",
+  "timestamp": "2026-02-19T13:38:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T12:53:33+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störung an der Straßenlampe (Pang, Cafe Neu)\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten.\n- Warnweste anlegen.\n- Gefahrenbereich um die Lampe mit Pylonen oder Warnleuchten absichern, besonders da schlechte Sicht herrscht und der Bereich als unsicher gemeldet wurde.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z.B. Glasbruch, Vandalismus, lose Kabel).\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob der Sicherungskasten zugänglich ist (falls vorhanden).\n- Da das Gerät laut System „offline“ ist, mögliche Ursachen: Stromausfall, Leitungsschaden, Defekt am Steuergerät.\n- Falls möglich, mit tragbarer Prüflampe testen, ob Spannung anliegt.\n\n**4. Dokumentation**\n- Fotos vom Zustand der Lampe und der Umgebung machen (Foto laut Meldung vorhanden).\n- Alle Beobachtungen und Maßnahmen notieren: Zeitpunkt, Wetter, Sichtverhältnisse, eigene Einschätzung zur Verkehrssicherheit.\n\n**5. Eskalation**\n- Bei hoher Gefährdung (wie hier: unsicherer Bereich, Nacht, schlechte Sicht) sofortige Meldung an die Leitstelle zur schnellen Behebung.\n- Falls Eigenreparatur nicht möglich oder Gefahr besteht: Fachfirma oder Bereitschaftsdienst anfordern.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere ausgefallene Lampen oder ist nur diese betroffen? Sind Kinder oder besonders gefährdete Personen im Bereich unterwegs?\n\n**Hinweis:**  \nBis zur Reparatur sollte der Bereich möglichst gemieden oder zusätzlich abgesichert werden.",
+    "tokens_estimate_words": 204
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (offline, night, poor_visibility, severity=high) korrekt verarbeitet. Offline-Workflow implizit (Foto lokal, Notizen), Safety-First klar, Eskalation angemessen, Dokumentation vollständig."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.834
+  },
+  "error": {}
+}

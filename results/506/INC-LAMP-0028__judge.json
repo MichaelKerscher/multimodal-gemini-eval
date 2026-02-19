@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Sicherheitspriorisierung mit Absperrung und Eskalation. Strukturierte Checkliste mit relevanten Rückfragen. Keine Kontextinformationen verfügbar, daher keine Halluzinationen möglich."
+    "short_justification": "Klare, strukturierte Antwort mit starkem Sicherheitsfokus und Eskalation. Alle Schritte nachvollziehbar, keine Halluzinationen. Minimaler Kontext wurde korrekt genutzt."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Standort korrekt integriert, severity=high angemessen behandelt mit sofortiger Absicherung und Eskalation. Warnschilder 'Stromschlaggefahr' zeigen klares Sicherheitsbewusstsein. Alle Kontextdaten korrekt genutzt."
+    "short_justification": "Exzellente Antwort: Standortnennung, klare Priorisierung von Sicherheit und Eskalation bei severity=high, vollständige Dokumentationshinweise. Kontext optimal genutzt, keine Spekulation."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit vollständiger Kontextnutzung. Severity=high führt zu angemessener Notdienst-Eskalation, photo_available wird erkannt, Standort korrekt integriert. Rückfrage zu gefährdeten Personen zeigt exzellentes Risikobewusstsein."
+    "short_justification": "Hervorragende Antwort mit klarem Sicherheitsfokus, expliziter Eskalation bei hoher Priorität, vollständiger Dokumentation und korrekter Kontextnutzung (Standort, photo_available). Keine Halluzinationen."
   }
 ]
