@@ -15,35 +15,34 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Basisantwort mit klarer Struktur und Eskalation. Keine Halluzinationen, da Kontext minimal ist. Safety könnte expliziter sein (Bahnhofsumfeld nicht erwähnt, aber auch nicht im Kontext)."
+    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Keine Offline-Workflow-Erwähnung nötig (CONTEXT enthält nur asset_osm). Sicherheitsaspekte angesprochen, aber nicht priorisiert."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
-      "K": 2
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline)",
-      "Verwechslung device_state mit Asset-Zustand"
+      "Offline-Workflow (lokal dokumentieren, später synchronisieren)"
     ],
-    "short_justification": "Exzellente Safety-Orientierung und Struktur, aber kritischer Fehler: device_state=low_battery wird als Lampen-Batterie interpretiert (Halluzination). Offline-Workflow nicht erwähnt trotz connectivity=offline."
+    "short_justification": "Exzellente Antwort mit starkem Sicherheitsfokus (traffic_exposure=high), klarer Eskalation und Batterie-/Connectivity-Bezug. Offline-Workflow fehlt trotz connectivity=offline."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Offline-Workflow korrekt umgesetzt, device_state richtig interpretiert (Technikergerät), Safety priorisiert, klare Dokumentation und Eskalation. Kontext vollständig und korrekt genutzt."
+    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit genannt ('Foto lokal speichern', 'offline erfassen, später synchronisieren'), Sicherheit priorisiert, Eskalation klar, Kontextnutzung vollständig."
   }
 ]

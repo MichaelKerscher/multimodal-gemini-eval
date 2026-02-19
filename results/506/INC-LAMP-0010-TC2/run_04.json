@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC2",
+  "timestamp": "2026-02-19T12:45:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427955479",
+        "longitude": 12.1253894,
+        "latitude": 47.8562438,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Stadtmitte"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "reporter": "internal",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den dunklen Abschnitt Rosenheim, Stadtmitte\n\n1. **Absicherung**\n   - Warnblinkanlage am Einsatzfahrzeug einschalten.\n   - Warnbaken und Leitkegel aufstellen, um den Gefahrenbereich abzusichern.\n   - Persönliche Schutzausrüstung (Warnweste, ggf. Regenschutz) anlegen.\n   - Bei hohem Verkehrsaufkommen: ggf. Polizei zur Verkehrsregelung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der gesamten Straßenbeleuchtung im betroffenen Abschnitt.\n   - Prüfen, ob einzelne oder alle Lampen betroffen sind.\n   - Auf offensichtliche Schäden (z. B. defekte Masten, lose Kabel, Wassereintritt) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Sicherungen ausgelöst oder Schaltschränke feucht sind.\n   - Bei Regen: besondere Vorsicht bei elektrischen Komponenten!\n   - Falls möglich, Test der Lampen durch manuelles Schalten.\n   - Notieren, ob auch benachbarte Anlagen betroffen sind (Hinweis auf größere Störung).\n\n4. **Dokumentation**\n   - Fotos vom Ausfallbereich und auffälligen Schäden machen (Foto laut Meldung vorhanden).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, betroffene Lampen).\n   - Standortdaten und betroffene Lampennummern notieren.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall und hoher Gefährdung: sofortige Meldung an Bereitschaftsdienst/Netzbetreiber.\n   - Falls Gefahr für Verkehrsteilnehmer besteht: Polizei informieren.\n   - Reparaturteam mit passender Ausrüstung (ggf. Hebebühne, Ersatzteile) anfordern.\n\n**Rückfrage:**  \nSind bereits weitere Meldungen aus angrenzenden Straßenabschnitten eingegangen oder gibt es Hinweise auf Bauarbeiten/Stromausfall in der Umgebung?  \nFalls nicht, wird von einem lokalen Defekt ausgegangen. Bitte bestätigen oder ergänzen.",
+    "tokens_estimate_words": 203
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-First bei high severity + high traffic + poor visibility klar erkennbar, strukturierte Schritte, Eskalation vorhanden. Offline-Workflow fehlt trotz spotty connectivity, daher K=4."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.361
+  },
+  "error": {}
+}

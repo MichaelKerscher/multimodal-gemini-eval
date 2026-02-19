@@ -9,13 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Checkliste mit klarer Struktur. Keine Offline-Erwähnung, da CONTEXT keine connectivity-Info enthält (korrekt). Sicherheit könnte expliziter sein (Warnweste/Absperrung erwähnt, aber kein 'Safety first'-Fokus bei unklarer Ursache)."
+    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartbar (kein connectivity-Feld im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow klar erkannt ('keine Ferndiagnose möglich', 'Fotos vor Ort anfertigen'), Nebel/Verkehr berücksichtigt, Eskalation bei Sicherheitsrisiko, strukturierte Dokumentation. Alle Kontextdaten sinnvoll genutzt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow klar erkannt ('kann keine Fernabfrage erfolgen'), Nebel/Verkehr berücksichtigt, Dokumentation und Eskalation präzise. Alle Kontextfelder korrekt genutzt."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Offline-Workflow explizit ('Fotos lokal speichern', 'Notizen handschriftlich oder in App offline', 'nach Rückkehr digital melden'), Nebel/Verkehr adressiert, klare Eskalation, präzise Dokumentation. Kontextnutzung optimal."
+    "short_justification": "Hervorragend: Offline-Workflow explizit umgesetzt ('Fotos lokal speichern', 'Offline-Modus', 'Online-Synchronisation'). Nebel, Verkehr, Geräuschkulisse berücksichtigt. Klare Eskalation und Dokumentation."
   }
 ]

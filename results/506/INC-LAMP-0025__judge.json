@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (im Kontext nicht vorhanden, aber aus User-Message 'wirkt unsicher' ableitbar)",
-      "Konkrete Zeitangabe zur Eskalation fehlt"
+      "Severity-Einschätzung fehlt (nur aus User message 'wirkt unsicher' ableitbar)",
+      "Konkrete Absicherungsmaßnahmen könnten detaillierter sein"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt genutzt wird. Safety könnte expliziter priorisiert werden (z.B. 'Sofortmaßnahme')."
+    "short_justification": "Solide Antwort mit klarer Struktur, Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety könnte expliziter priorisiert werden (z.B. 'Schritt 1: Sofortige Absicherung')."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, Kontext (low_battery, high traffic_exposure, night, poor_visibility) vollständig genutzt, klare Struktur, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety First klar erkennbar (Warnweste, Pylonen, Verkehrsexposition), severity=high adäquat behandelt, low_battery korrekt interpretiert (Gerät, nicht Asset), Eskalation bei anhaltender Gefahr, vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -50,10 +50,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Umsetzung: Safety-First klar erkennbar (Absicherung Schritt 1), Eskalation bei akuter Gefahr explizit, Kontext vollständig integriert (Verkehrsexposition, Nacht, photo_available), präzise Dokumentation, keine Halluzinationen."
+    "short_justification": "Hervorragend: Explizite Unterscheidung Gerät vs. Asset (context_notes korrekt verarbeitet), offline-Dokumentation bei low_battery erwähnt, Safety-Fokus durchgängig, Eskalation bei hohem Risiko, keine Spekulation über Asset-Fehlerursache."
   }
 ]

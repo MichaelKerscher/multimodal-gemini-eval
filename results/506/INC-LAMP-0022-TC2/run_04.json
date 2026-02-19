@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC2",
+  "timestamp": "2026-02-19T12:50:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093607",
+        "longitude": 12.116472,
+        "latitude": 47.837186,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störung an Straßenlampe (Rosenheim, Heilig Blut)\n\n1. Absicherung  \n- Bereich um die defekte Lampe absichern (z. B. Warnbaken, Absperrband), da schlechte Sicht und Schnee herrschen.  \n- Fußgänger und Verkehrsteilnehmer auf die Gefahrenstelle aufmerksam machen.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung:  \n  - Ist die Lampe äußerlich beschädigt?  \n  - Liegen Kabel frei oder gibt es andere Gefahrenquellen?  \n  - Sind weitere Lampen betroffen?\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe auf Störungen reagiert (z. B. Flackern, Geräusche).  \n- Hinweis: Gerät meldet niedrigen Batteriestand – vermutlich Ursache für Ausfall.  \n- Foto zur Dokumentation nutzen, falls vorhanden.\n\n4. Dokumentation  \n- Alle Beobachtungen (Zustand, Umgebung, Maßnahmen) schriftlich festhalten.  \n- Foto der Störung beifügen.  \n- Zeitpunkt und genaue Position notieren.\n\n5. Eskalation  \n- Meldung an die zuständige Wartungsfirma/Leitstelle mit Hinweis auf hohe Dringlichkeit (hohes Sicherheitsrisiko, schlechte Sicht, Schnee, Dämmerung).  \n- Dringende Reparatur anfordern, ggf. Notbeleuchtung prüfen.\n\nRückfrage:  \nGibt es in der Nähe weitere Lampen mit Ausfall oder ist nur diese betroffen?  \nWurde die Gefahrenstelle bereits abgesichert?",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Schnee, Dämmerung, poor_visibility, low_battery, severity=high) werden korrekt verarbeitet. Klare Safety-First-Haltung, strukturierte Schritte, präzise Eskalation, vollständige Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.245
+  },
+  "error": {}
+}

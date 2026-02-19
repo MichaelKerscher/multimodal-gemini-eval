@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-19T12:46:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\nAbsicherung  \n- Warnbaken oder Absperrband um die Gefahrenstelle aufstellen (mind. 1,5 m Abstand zum Gehäuse).\n- Bei schlechter Sicht zusätzlich Warnleuchten verwenden.\n- Passanten und Verkehrsteilnehmer aktiv warnen, falls möglich.\n\nSichtprüfung  \n- Sichtkontrolle des Gehäuses: Liegen stromführende Teile offen? Sind weitere Schäden sichtbar?\n- Prüfen, ob das Gehäuse noch stabil steht oder lose ist.\n\nDiagnose/Beobachtung  \n- Einschätzen, ob unmittelbare Gefahr besteht (z. B. freiliegende Kabel, Funken).\n- Prüfen, ob das Gerät weiterhin funktioniert oder Fehlfunktionen zeigt.\n\nDokumentation  \n- Fotos vom Schaden und der Absicherung anfertigen.\n- Standort und Uhrzeit notieren.\n- Kurze Beschreibung der Situation festhalten.\n\nEskalation  \n- Sofortige Meldung an die zuständige Fachabteilung/Notdienst (wegen Berührungsgefahr).\n- Bei akuter Gefahr: Polizei oder Feuerwehr informieren.\n\nRückfrage:  \nIst das Gehäuse einer Straßenlampe oder einer Ampelanlage betroffen? Gibt es Zugang zu einer Notabschaltung vor Ort?",
+    "tokens_estimate_words": 142
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung → Warnleuchten, schlechte Sicht, mittlere Verkehrsexposition). Safety-First klar erkennbar, Eskalation an Fachabteilung/Notdienst, Dokumentation vollständig, sinnvolle Rückfragen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.075
+  },
+  "error": {}
+}

@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Keine Offline-Erwähnung nötig (CONTEXT zeigt nur asset_osm). Sicherheit adressiert, Dokumentation gut. Keine Halluzinationen."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Offline-Erwähnung nötig (CONTEXT minimal). Dokumentation gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Sturm, Nacht, hoher Verkehr), Offline-Workflow explizit erwähnt ('Gerät ist offline, Fernanalyse nicht möglich'), strukturiert, vollständig dokumentiert, Eskalation klar."
+    "short_justification": "Exzellente Antwort: Berücksichtigt Sturm, Nacht, hohen Verkehr und Offline-Status. Sicherheit priorisiert, Eskalation mit Dringlichkeit, Offline-Workflow erkannt."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Offline-Workflow klar ('Gerät ist offline, alles lokal dokumentieren, später synchronisieren'), Sicherheit priorisiert, strukturiert, Eskalation vorhanden, keine Halluzinationen, vollständig nachvollziehbar."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit (lokal speichern, später synchronisieren), alle Risikofaktoren adressiert, klare Struktur, präzise Dokumentation und Eskalation."
   }
 ]

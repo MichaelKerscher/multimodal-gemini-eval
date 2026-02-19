@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC1",
+  "timestamp": "2026-02-19T12:44:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n4484173276)",
+    "context": {
+      "asset_osm": "n4484173276"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Aussetzern und Flackern (Asset-ID: n4484173276)\n\n1. **Absicherung**\n   - Arbeitsbereich absperren (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchte und Zuleitungen auf offensichtliche Schäden, lose Kabel oder Korrosion.\n   - Prüfen, ob Feuchtigkeit oder Verschmutzung im Gehäuse sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Leuchte einschalten und Verhalten beobachten.\n   - Kontakte und Klemmen auf festen Sitz prüfen (bei ausgeschalteter Anlage).\n   - Falls möglich: Spannung an den Anschlussklemmen messen.\n\n4. **Dokumentation**\n   - Beobachtungen, Messwerte und durchgeführte Maßnahmen notieren.\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Störung an Fachfirma/Elektriker melden.\n   - Anlage ggf. außer Betrieb nehmen, wenn Sicherheitsrisiko besteht.\n\n**Rückfrage:**  \nIst bekannt, ob das Problem wetterabhängig auftritt oder betrifft es mehrere Leuchten in der Nähe?",
+    "tokens_estimate_words": 124
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.611
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-19T12:45:41",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein zeitweiser Ausfall vor, aktuell funktioniert die Anlage jedoch normal. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Kontrolle (Asset-ID: n4470029718)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, ggf. Verkehrsregelung).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Gehäuse, Verkabelung, Lampen/Ampelköpfe auf Beschädigungen, Feuchtigkeit oder Vandalismus prüfen.\n   - Prüfen, ob alle Anzeigen/Funktionen aktuell ordnungsgemäß laufen.\n\n3. **Diagnose/Beobachtung**\n   - Anlage über einen längeren Zeitraum (mind. 10–15 Minuten) beobachten, um sporadische Fehler zu erkennen.\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Falls möglich: Fehlerprotokoll oder Ereignisspeicher der Steuerung auslesen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen, Maßnahmen und ggf. Fehlercodes notieren.\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an die Fachabteilung/Technik weiterleiten.\n   - Bei akuter Gefahr: Sofortige Absicherung und Information an die Leitstelle.\n\n**Rückfrage:**  \nGibt es bekannte Zeiten oder Bedingungen, zu denen der Ausfall auftritt (z. B. nur bei Regen, zu bestimmten Uhrzeiten)? Das hilft bei der gezielten Fehlersuche.",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste für intermittierenden Fehler. Sicherheit adressiert, Eskalation klar. Keine Kontextinformationen verfügbar, daher keine Erwartung an Umgebungsanpassung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.408
+  },
+  "error": {}
+}

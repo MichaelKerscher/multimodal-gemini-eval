@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC2",
+  "timestamp": "2026-02-19T12:47:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Arbeitsbereich mit Pylonen oder Warnleuchten sichern, besonders bei schlechter Sicht und Regen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Teile prüfen.\n- Umgebung auf Stolperfallen oder Gefahrenstellen kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob der Fehler aktuell auftritt (Lampe an/aus).\n- Batterie- und Verbindungsstatus des Geräts beachten (Hinweis: niedriger Batteriestand, instabile Verbindung).\n- Wetterbedingungen (Regen, Dämmerung) als mögliche Fehlerursache einbeziehen.\n- Falls möglich, Foto vom aktuellen Zustand machen (Foto liegt laut Meldung vor).\n\n**4. Dokumentation**\n- Alle Beobachtungen (Lampe aktuell an, Fehler sporadisch, Batterie schwach, Wetter nass) notieren.\n- Foto und Standortdaten sichern.\n- Zeitpunkt und eigene Maßnahmen festhalten.\n\n**5. Eskalation**\n- Bei hoher Störungs-Schwere und sporadischem Fehler: Meldung an Fachbereich/Technik weiterleiten.\n- Hinweis auf möglichen Batterie- oder Feuchtigkeitsfehler geben.\n- Dringlichkeit betonen, da Sicht und Sicherheit beeinträchtigt sind.\n\n**Rückfrage:**  \nIst ein Zugang zum Schaltschrank/Steuergerät vor Ort möglich? Gibt es aktuelle Wartungspläne oder bekannte Probleme mit der Stromversorgung an diesem Standort?",
+    "tokens_estimate_words": 168
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-First bei high severity, klare Eskalation, gute Kontextnutzung (Regen, Dämmerung, Batterie). Offline-Workflow fehlt trotz spotty connectivity (K=3)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.012
+  },
+  "error": {}
+}

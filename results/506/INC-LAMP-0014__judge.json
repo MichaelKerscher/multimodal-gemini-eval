@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheit und Eskalation sind vorhanden, aber bei severity=medium könnte Safety-Fokus stärker sein. Keine Halluzinationen, Kontextnutzung korrekt (L0)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen trotz minimalem Kontext. Sicherheitsaspekte könnten bei medium severity stärker betont werden."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext optimal (device online, day, low traffic), gibt präzise Diagnose-Hinweise (Leuchtmittel/Vorschaltgerät), klare Struktur, gute Dokumentation und Eskalation. Keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung (day, clear, low traffic, device online). Alle Schritte klar strukturiert, Dokumentation präzise, Eskalation angemessen. Sehr gute Gesamtleistung."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Kompakte, präzise Checkliste mit allen relevanten Schritten. Nutzt Kontext korrekt (Tag, low traffic, online), klare Eskalationskriterien, gute Dokumentation. Keine Halluzinationen, sehr praxisnah."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Tag-Situation, Funktionstest-Hinweis). Klare Struktur, angemessene Eskalation, gute Dokumentationshinweise. Keine Halluzinationen."
   }
 ]

@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – aber das ist bei L0 erwartbar und kein Fehler."
+    "short_justification": "Strukturierte, relevante Checkliste für intermittierenden Fehler. Sicherheit adressiert, Eskalation klar. Keine Kontextinformationen verfügbar, daher keine Erwartung an Umgebungsanpassung."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel und schlechte Sicht werden explizit in Absicherung und Diagnose einbezogen. Standortname, Verkehrsexposition und Witterung korrekt verarbeitet. Klare Struktur, vollständige Dokumentation."
+    "short_justification": "Exzellente Antwort: Nebel und schlechte Sicht explizit in Absicherung berücksichtigt, mittleres Verkehrsaufkommen adressiert. Strukturiert, umsetzbar, vollständige Dokumentation und klare Eskalationskriterien."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Identisch starke Leistung wie TC2: Nebel, schlechte Sicht und mittlere Verkehrsexposition werden korrekt in Absicherung und Diagnose integriert. Kompakte, umsetzbare Struktur mit vollständiger Dokumentation und Eskalation."
+    "short_justification": "Hervorragende Kontextnutzung: Nebel, schlechte Sicht und mittlerer Verkehr explizit in Sicherheitsmaßnahmen integriert. Diagnose auf intermittierenden Fehler zugeschnitten, vollständige Dokumentation, klare Eskalation."
   }
 ]

@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC2",
+  "timestamp": "2026-02-19T12:53:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall\n\n1. Absicherung  \n- Warnweste anlegen, Absperrung/Warndreieck aufstellen (Verkehr: mittel, Sicht: schlecht).\n- Auf eigene Sicherheit und die der Verkehrsteilnehmer achten.\n\n2. Sichtprüfung  \n- Lampe und Mast auf sichtbare Schäden, lose Kabel, Feuchtigkeit oder Korrosion prüfen.\n- Umgebung auf weitere betroffene Lampen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob der Fehler aktuell auftritt (Lampe jetzt an).\n- Bei intermittierenden Fehlern: Kontakte, Vorschaltgerät und Leuchtmittel auf Wackelkontakt oder Alterung prüfen.\n- Notieren, ob bei Bewegung, Wind oder Erschütterung der Fehler auftritt.\n\n4. Dokumentation  \n- Fehlerbeschreibung, Zeitpunkt, Wetter, Sichtverhältnisse und eigene Beobachtungen notieren.\n- Foto (falls vorhanden) sichern und dem Bericht beifügen.\n\n5. Eskalation  \n- Fehler als „sporadisch“ und „mittlere Priorität“ an die Fachabteilung melden.\n- Empfehlung: Lampe zeitnah durch Elektrofachkraft prüfen lassen, da sporadische Fehler auf baldigen Ausfall hindeuten können.\n\nRückfrage:  \nGab es in letzter Zeit Bauarbeiten, Stromausfälle oder ähnliche Vorfälle in der Nähe? Das kann bei der Fehlerursache helfen.",
+    "tokens_estimate_words": 151
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Exzellente Antwort mit vollständiger Struktur, klarer Sicherheitspriorisierung und Kontextnutzung (Dämmerung, mittlerer Verkehr). Offline-Workflow fehlt trotz spotty connectivity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.136
+  },
+  "error": {}
+}

@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Relevante, strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll."
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
@@ -24,16 +24,18 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente kontextbezogene Antwort: Sturm, mittlere Verkehrsbelastung, Offline-Hinweis berücksichtigt. Klare Struktur, Safety-Fokus, Dokumentation und Eskalation vollständig."
+    "missing_elements": [
+      "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)"
+    ],
+    "short_justification": "Sehr gute Antwort mit detaillierter Absicherung bei Sturm und mittlerem Verkehr. Offline-Connectivity wird nicht explizit adressiert (K=3), obwohl device.connectivity=offline im Context steht."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), alle Kontextfaktoren (Sturm, Verkehr, Tageslicht) berücksichtigt. Klare Struktur, Safety und Eskalation vollständig."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('offline speichern', 'später synchronisieren'), Sturm-Risiken adressiert, klare Struktur und Dokumentation. Alle Kontext-Elemente korrekt genutzt."
   }
 ]

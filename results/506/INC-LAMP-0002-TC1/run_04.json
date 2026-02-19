@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-19T12:42:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zum Asset n1987093602 (Straßenlampe/Ampelanlage). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Kontrolle bei zeitweisem Ausfall**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern.\n   - Bei Ampelanlagen: Verkehrsfluss beobachten, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf äußere Schäden (Gehäuse, Mast, Verkabelung).\n   - Prüfen, ob Feuchtigkeit, Vandalismus oder lose Teile sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Anlage mehrfach ein- und ausschalten, um Fehler zu reproduzieren.\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Bei Ampeln: Schaltzyklen beobachten, auf Unregelmäßigkeiten achten.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos von Schäden oder Auffälligkeiten machen.\n   - Zeitpunkt und Dauer der Kontrolle dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem oder anhaltendem Ausfall: Störung an Fachfirma oder interne Technik melden.\n   - Bei Gefahr für Verkehrssicherheit: Sofortige Eskalation an Einsatzleitung/Polizei.\n\n**Rückfrage:**  \nHandelt es sich bei Asset n1987093602 um eine Straßenlampe oder eine Ampelanlage? Gibt es bekannte Zeiten/Muster des Ausfalls?  \nBitte um kurze Rückmeldung für gezieltere Prüfung.",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Umwelt-/Zeitkontext-Anpassung (Minimalkontext)"
+    ],
+    "short_justification": "Solide Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen. Rückfrage zur Asset-Art ist sinnvoll bei Minimalkontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.96
+  },
+  "error": {}
+}

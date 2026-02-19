@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Offline-Erwähnung nötig (CONTEXT minimal). Keine Halluzinationen."
+    "short_justification": "Solide Checkliste mit klarer Struktur. Sicherheit und Eskalation sind vorhanden, aber ohne Kontext-Hinweise auf severity=high etwas generisch. Keine Halluzinationen, gute Nachvollziehbarkeit."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -24,16 +24,18 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellent: Offline-Workflow erkannt, Sturm/Verkehr/Sicht berücksichtigt, Eskalation klar, Dokumentation vollständig. Alle Kontextfaktoren genutzt."
+    "missing_elements": [
+      "Offline-Workflow (Gerät offline → lokale Dokumentation/Foto-Speicherung)"
+    ],
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Sturm, hoher Verkehr, schlechte Sicht) und klarer Eskalation. Offline-Status wird erwähnt ('Gerät offline'), aber kein expliziter Offline-Workflow (lokal speichern, später sync)."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Offline-Speicherung explizit genannt, Sturm/Verkehr/Sicht integriert, Eskalation klar, Synchronisation nach Netzrückkehr erwähnt. Vollständig kontextgerecht."
+    "short_justification": "Perfekte Antwort: Alle Kontext-Elemente korrekt verarbeitet (Offline-Workflow explizit: 'offline speichern, später synchronisieren'), starker Safety-Fokus bei severity=high/Sturm/hoher Verkehrsexposition, klare Eskalation, strukturierte Dokumentation. Keine Halluzinationen."
   }
 ]

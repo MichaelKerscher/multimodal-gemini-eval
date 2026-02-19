@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Eskalation. Sicherheit adressiert, aber bei medium severity könnte Safety-Fokus stärker sein. Keine Kontextfehler, passend zu L0."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen bei minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0027-TC2",
@@ -24,25 +24,25 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Offline-Workflow könnte expliziter sein (nur kurz erwähnt)"
     ],
-    "short_justification": "Exzellente Antwort mit präziser Kontextnutzung (Regen, traffic_exposure high, Tageslicht). Offline-Workflow fehlt trotz connectivity=spotty, daher K=4 statt 5."
+    "short_justification": "Exzellente Kontextnutzung (Verkehr, Regen, spotty connectivity erwähnt). Sehr strukturiert, Safety-First klar, Dokumentation detailliert. Offline-Workflow nur angedeutet, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0027-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), alle Kontextfaktoren berücksichtigt, klare Struktur und Eskalation. Vollständig konsistent mit extras.context_notes."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit (Fotos lokal speichern, offline dokumentieren), alle Kontextfaktoren berücksichtigt (spotty connectivity, Regen, Verkehr), Safety-First, klare Eskalation, vollständige Dokumentation."
   }
 ]

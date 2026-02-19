@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit wird adressiert, aber ohne Umgebungskontext (L0) bleibt Safety-Bewertung moderat. Keine Halluzinationen, gute Kontextnutzung."
+    "missing_elements": [
+      "Keine Umwelt-/Zeitkontext-Anpassung (Minimalkontext)"
+    ],
+    "short_justification": "Solide Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen. Rückfrage zur Asset-Art ist sinnvoll bei Minimalkontext."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Umgebungsrisiken (Nacht, Nebel, mittlerer Verkehr) explizit adressiert, intermittierender Fehler methodisch angegangen, Foto-Hinweis genutzt. Vollständige Dokumentation und Eskalation."
+    "short_justification": "Exzellente Kontextnutzung (Nacht, Nebel, schlechte Sicht, mittlerer Verkehr). Alle Sicherheits-, Diagnose- und Eskalationsschritte klar strukturiert. Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0002-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise, kontextbewusste Antwort. Sicherheitsrisiken (Nacht, Nebel, Verkehr) klar priorisiert, intermittierender Fehler systematisch adressiert, Foto-Workflow integriert. Vollständige Dokumentation und Eskalation."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Nacht, Nebel, Verkehr, Foto). Klare Struktur, Sicherheitsfokus, Eskalation und Dokumentation optimal umgesetzt."
   }
 ]

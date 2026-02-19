@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Berücksichtigung der Umgebungsbedingungen (Nacht/Nebel nicht im Context)"
+      "Umweltbedingungen (Nacht, Nebel) nicht berücksichtigt"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID aus Context verwendet. Offline-Workflow nicht erwartet (kein connectivity-Feld)."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Umweltkontext (Nacht/Nebel) fehlt, da nur minimaler Context vorliegt."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Berücksichtigt alle Kontextfaktoren (Nacht, Nebel, mittlerer Verkehr, poor_visibility), klare Safety-First-Haltung, strukturierte Schritte, korrekte Interpretation des device_state (Techniker-Gerät online), keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, mittlerer Verkehr), strukturierte Schritte, klare Eskalation, vollständige Dokumentation. Kontextnutzung optimal."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Nutzt alle relevanten Kontextinformationen (Koordinaten, Umgebungsbedingungen, Severity), klare Absicherungsstrategie bei schlechter Sicht und mittlerem Verkehr, präzise Dokumentation, angemessene Eskalation. Keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Sicherheit klar priorisiert (Nebel, Nacht, Verkehr), präzise Checkliste, vollständige Dokumentation inkl. Koordinaten, klare Eskalation. Kontextnutzung perfekt."
   }
 ]

@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekt ('unsicherer Bereich') wird adressiert. Keine Halluzinationen trotz minimalem Context."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation werden adressiert, aber ohne Kontext zu Severity/Umgebung etwas generisch. Keine Halluzinationen, gute Kontextnutzung trotz minimalem Input."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (low_battery als Ursache, Schnee/poor_visibility für Safety, severity=high für Eskalation). Klare Struktur, vollständige Dokumentation, keine Spekulation."
+    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Schnee, Dämmerung, poor_visibility, low_battery, severity=high) werden korrekt verarbeitet. Klare Safety-First-Haltung, strukturierte Schritte, präzise Eskalation, vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, praxisnahe Checkliste mit starkem Safety-Fokus (Schnee, Dämmerung, Absicherung). Nutzt photo_available korrekt als Workflow-Hinweis. Eskalation bei Gefährdung klar formuliert."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Schnee, Dämmerung, severity=high, photo_available). Klare Absicherung, strukturierte Diagnose, präzise Eskalation, umfassende Dokumentation. Keine Halluzinationen, alle relevanten Faktoren berücksichtigt."
   }
 ]

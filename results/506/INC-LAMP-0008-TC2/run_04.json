@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC2",
+  "timestamp": "2026-02-19T12:44:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293341689",
+        "longitude": 12.1302583,
+        "latitude": 47.8571756,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-20T08:57:46+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste zur Prüfung – Dunkler Straßenabschnitt\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Einsatzfahrzeug mit Warnblinker abstellen.\n   - Absperrmaterial (z. B. Leitkegel) aufstellen, um den Bereich zu sichern – besonders bei schlechter Sicht und Nebel.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung entlang des angegebenen Abschnitts (Koordinaten: 47.8571756, 12.1302583).\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Umgebung auf weitere Gefahren (z. B. beschädigte Masten, freiliegende Kabel) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Lampen komplett ausgefallen sind oder nur schwach leuchten.\n   - Sichtprüfung auf offensichtliche Defekte (z. B. zerbrochene Leuchtmittel, Vandalismus).\n   - Aufgrund von Nebel und schlechter Sicht ggf. Taschenlampe verwenden.\n   - Hinweis: Gerät vor Ort hat eingeschränkte Konnektivität und läuft im Energiesparmodus – Fernabfrage oder Steuerung ggf. nicht möglich.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Leuchten anfertigen (Fotoapparat/Handy).\n   - Notizen zu Anzahl der ausgefallenen Lampen, Zustand und eventuellen Gefahrenpunkten machen.\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei bestätigtem Ausfall Störung an die zuständige Leitstelle melden.\n   - Falls Gefahr für Verkehrsteilnehmer besteht (z. B. stark frequentierte Kreuzung, weitere Sichtbehinderung), Sofortmaßnahme anfordern.\n   - Bei geringer Verkehrsbelastung und niedriger Priorität: Reparatur in regulären Wartungsplan aufnehmen.\n\n**Rückfrage:**  \nSind bereits ähnliche Ausfälle in der Umgebung gemeldet worden oder gibt es Hinweise auf Bauarbeiten/Stromausfall im Bereich?  \nFalls weitere Details (z. B. genaue Lampennummer, Fotos) vorliegen, bitte bereitstellen.",
+    "tokens_estimate_words": 218
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht konsequent umgesetzt (Fernabfrage erwähnt, aber bei spotty connectivity sollte lokale Dokumentation priorisiert werden)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nebel, Koordinaten, Foto). Offline-Workflow erwähnt, aber nicht vollständig durchdacht (Fernabfrage bei spotty connectivity widersprüchlich). Sonst exzellent strukturiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.788
+  },
+  "error": {}
+}

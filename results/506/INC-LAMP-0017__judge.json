@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – das ist aber kein Fehler bei L0."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation und Handlungsschritte gut nachvollziehbar."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Energiesparmodus und verfügbares Foto werden explizit einbezogen. Klare Struktur, Safety-First-Ansatz, vollständige Dokumentation und angemessene Eskalation."
+    "short_justification": "Exzellente Kontextnutzung (Wetter, Dämmerung, Foto, Koordinaten, Gerätezustand). Alle relevanten Umgebungsfaktoren (Regen, poor_visibility) werden in Absicherung und Diagnose einbezogen. Klare Struktur und Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -47,10 +47,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit vollständiger Kontextnutzung (Regen, schlechte Sicht, Foto vorhanden). Klare Sicherheitshinweise bei elektrischen Arbeiten im Regen, strukturierte Dokumentation und angemessene Eskalationskriterien."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextnutzung. Expliziter Hinweis auf low_power_mode und offlinefähige Dokumentation. Alle Umgebungsfaktoren (Regen, Dämmerung) berücksichtigt, klare Eskalationswege und Rückfragen."
   }
 ]

@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Safety- oder Offline-Anforderungen erwartbar. Antwort ist angemessen generisch."
+    "missing_elements": [
+      "Keine Erwähnung von Umgebungsbedingungen (da L0-Kontext minimal)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal verfügbare Infos (Asset-ID) genutzt wurden. Offline-Workflow nicht erwartet bei L0."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -29,11 +31,13 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+high traffic werden durch starke Safety-Maßnahmen adressiert. Spotty connectivity wird erkannt ('Vor-Ort-Check bevorzugen'). Alle Dimensionen gut abgedeckt."
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-First bei high severity + high traffic + poor visibility klar erkennbar, strukturierte Schritte, Eskalation vorhanden. Offline-Workflow fehlt trotz spotty connectivity, daher K=4."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -51,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Spotty connectivity wird explizit durch Offline-Workflow adressiert ('lokal speichern', 'später synchronisieren'). Safety-First bei high severity+poor visibility+high traffic klar erkennbar. Vollständige, umsetzbare Checkliste."
+    "short_justification": "Perfekte Antwort: Safety-First bei high severity + poor visibility + high traffic, Offline-Workflow explizit erwähnt ('lokal speichern', 'später synchronisieren'), klare Eskalation, keine Halluzinationen. Alle Kontext-Hinweise korrekt umgesetzt."
   }
 ]

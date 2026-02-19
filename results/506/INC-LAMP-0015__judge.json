@@ -15,9 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)"
+      "Konkrete Sicherheitsmaßnahmen (Warnweste, Absperrung) bei 'Bereich wirkt unsicher'",
+      "Priorisierung der Eskalation bei Gefahrenlage"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur minimal Context vorhanden. Safety wird adressiert, könnte bei 'unsicher' noch expliziter priorisiert werden."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation. Sicherheitsaspekt wird angesprochen, aber bei 'unsicherem Bereich' könnten konkretere Sofortmaßnahmen (PSA, Absperrung) stärker betont werden. Keine Halluzinationen, gute Kontextnutzung trotz minimalem CONTEXT."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -35,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high werden korrekt priorisiert, Absicherung steht an erster Stelle, Eskalation mit Begründung, Kontextnutzung (online, night, poor_visibility) präzise, keine Spekulation."
+    "short_justification": "Exzellente Antwort: Absicherung wird sofort priorisiert (severity=high, traffic_exposure=high, poor_visibility), klare Schrittfolge, vollständige Dokumentation mit Koordinaten, dringliche Eskalation wegen Gefahrenlage. Perfekte Kontextnutzung ohne Spekulation."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -53,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Nutzt extras.context_notes korrekt (device != Asset), priorisiert Safety bei high severity + traffic_exposure + night, klare Eskalation, strukturierte Dokumentation, keine Halluzinationen."
+    "short_justification": "Hervorragende Außendienst-Checkliste: Absicherung mit konkreten Maßnahmen (Warnweste, Warnbaken, Polizei bei Bedarf) steht an erster Stelle, klare Eskalation bei akuter Gefahr, vollständige Dokumentation. Perfekte Nutzung des umfangreichen CONTEXT (severity, traffic_exposure, poor_visibility, night)."
   }
 ]

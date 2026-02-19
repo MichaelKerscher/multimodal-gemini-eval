@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-19T12:48:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störungseinsatz – Straßenlampe (n4939032796), Bereich unsicher\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereitstellen.  \n- Einsatzstelle absichern (z. B. Warnleuchten, Pylonen), besonders wegen schlechter Sicht und mittlerem Verkehrsaufkommen.  \n- Eigene Sicherheit und die von Passanten priorisieren.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung:  \n  - Ist die Lampe beschädigt?  \n  - Sind Kabel oder Masten sichtbar defekt?  \n  - Gibt es weitere dunkle Lampen in der Nähe?  \n- Prüfen, ob die Lampe evtl. manuell ausgeschaltet wurde.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Stromversorgung anliegt (z. B. mit Spannungsprüfer, falls Zugang möglich).  \n- Auf Geräusche, Gerüche oder ungewöhnliche Wärmeentwicklung achten.  \n- Wetter (Nebel) und Nachtzeit beachten – Sicht kann eingeschränkt sein.\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Zustand, Fotos falls möglich).  \n- Standort und Lampennummer dokumentieren.\n\n5. Eskalation  \n- Bei offensichtlicher Gefahr (z. B. freiliegende Kabel, beschädigter Mast): Sofort Polizei/Notdienst informieren.  \n- Bei unklarer Ursache oder fehlender Reparaturmöglichkeit: Störung an Fachabteilung/Technik weiterleiten.  \n- Hinweis: Da Gerät online und Zustand „ok“, könnte Fehler an der Stromzufuhr oder Leuchtmittel liegen.\n\n**Rückfrage:**  \nGibt es Zugang zu Schaltkasten oder Plänen vor Ort? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 183
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, mittlerer Verkehr), strukturierte Schritte, klare Eskalation, vollständige Dokumentation. Kontextnutzung optimal."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.712
+  },
+  "error": {}
+}

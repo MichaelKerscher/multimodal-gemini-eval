@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC2",
+  "timestamp": "2026-02-19T12:52:52",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T12:53:33+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe „Pang, Cafe Neu“\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) rund um den Arbeitsbereich aufstellen, besonders bei mittlerer Verkehrsexposition und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Glasbruch, lose Teile, Vandalismus).\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe auf äußere Einflüsse (z. B. Schalter, Zeitschaltuhr, Stromausfall) reagiert.\n   - Da das Gerät „offline“ ist, Verbindung zur Zentrale oder Fernwartung testen.\n   - Falls möglich, Sicherungskasten inspizieren (nur bei entsprechender Qualifikation).\n\n4. **Dokumentation**\n   - Fotos vom Defekt und der Absicherung machen (Foto liegt laut Meldung bereits vor).\n   - Alle Beobachtungen und Maßnahmen notieren (z. B. Zeitpunkt, Wetter, Verkehrslage).\n\n5. **Eskalation**\n   - Bei anhaltender Dunkelheit und hoher Gefährdung: Störung umgehend an die Leitstelle melden.\n   - Weitergabe an Fachpersonal für Elektroarbeiten, falls kein einfacher Fehler vorliegt.\n\n**Rückfrage:**  \nIst ein Zugang zum Sicherungskasten vor Ort möglich, oder wird ein Elektriker benötigt?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 171
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=offline im Context"
+    ],
+    "short_justification": "Exzellente Struktur, klare Sicherheitspriorisierung (Warnweste, Absperrung) bei Nacht+poor_visibility+medium traffic. Offline-Status wird erwähnt ('Gerät offline'), aber kein expliziter Offline-Workflow (lokale Speicherung). Sonst sehr gut."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.655
+  },
+  "error": {}
+}

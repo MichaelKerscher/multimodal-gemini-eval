@@ -17,7 +17,7 @@
     "missing_elements": [
       "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Halluzinationen. Gute Handlungsanleitung trotz minimalem Kontext."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Risikofaktoren adressiert – aber auch keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Regen, Nacht, poor_visibility). Severity=high wird durch sofortige Eskalation und Absicherung adressiert. Device low_power_mode wird korrekt erwähnt."
+    "short_justification": "Exzellente Antwort: Severity=high wird erkannt, Nacht+Regen+poor_visibility adressiert, low_power_mode korrekt als Geräte-Zustand interpretiert. Klare Safety-First-Haltung und Eskalation bei hohem Risiko."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung: OSM-ID, Foto-Hinweis, Wetter/Nacht-Risiken, severity=high durch Eskalation adressiert. Keine Halluzinationen, alle Fakten aus CONTEXT ableitbar. Klare Struktur und Dokumentation."
+    "short_justification": "Hervorragend: Kompakte, praxisnahe Checkliste mit klarer Priorisierung. Severity=high, Nacht, Regen und poor_visibility werden adressiert. Eskalation und Safety-Fokus sind deutlich erkennbar. Keine Halluzinationen, context_notes korrekt beachtet."
   }
 ]

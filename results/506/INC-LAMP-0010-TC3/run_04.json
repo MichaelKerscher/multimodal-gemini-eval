@@ -1,0 +1,299 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC3",
+  "timestamp": "2026-02-19T12:45:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "photo_available": true,
+        "reporter": "internal"
+      },
+      "asset": {
+        "asset_osm": "n4427955479",
+        "latitude": 47.8562438,
+        "longitude": 12.1253894,
+        "name": "Rosenheim, Stadtmitte",
+        "lit": "yes"
+      },
+      "device": {
+        "connectivity": "spotty",
+        "device_state": "ok"
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache.",
+          "Wenn connectivity=offline/spotty: nutze Offline-Workflow (lokal dokumentieren/Foto lokal speichern) und später synchronisieren; keine Schritte, die Online-Zugriff voraussetzen."
+        ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "high",
+          "fault_type": "outage",
+          "offline": false,
+          "spotty": true,
+          "connectivity": "spotty",
+          "device_state": "ok",
+          "low_battery": false,
+          "weather": "rain",
+          "poor_visibility": true,
+          "time_of_day": "dusk",
+          "photo_available": true
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 1034
+        },
+        "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.name",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "incident.photo_available",
+            "prio": "P1",
+            "reason": "workflow-cue"
+          },
+          {
+            "path": "asset.lit",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 1034,
+    "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.name",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "incident.photo_available",
+        "prio": "P1",
+        "reason": "workflow-cue"
+      },
+      {
+        "path": "asset.lit",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      }
+    ],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Dunkler Abschnitt Rosenheim, Stadtmitte\n\n1. Absicherung\n- Warnblinkanlage einschalten, Warnweste tragen.\n- Gefahrenbereich mit Leitkegeln/Absperrband sichern, besonders bei hohem Verkehrsaufkommen und schlechter Sicht.\n- Bei Bedarf Polizei oder Verkehrslenkung hinzuziehen.\n\n2. Sichtprüfung\n- Prüfen, ob mehrere oder alle Straßenlampen betroffen sind.\n- Sichtkontrolle auf offensichtliche Schäden (z. B. Mast umgefahren, Kabel sichtbar, Lampenköpfe beschädigt).\n- Prüfen, ob Feuchtigkeitseintritt (wegen Regen) sichtbar ist.\n\n3. Diagnose/Beobachtung\n- Prüfen, ob Sicherungen ausgelöst oder Schaltschränke beschädigt sind.\n- Bei mehreren ausgefallenen Lampen: Möglicher Fehler im Stromkreis oder Schalteinrichtung.\n- Einzelne Lampe betroffen: Leuchtmittel oder Vorschaltgerät prüfen.\n- Aufgrund schlechter Konnektivität: Alle Beobachtungen und Fotos lokal speichern.\n\n4. Dokumentation\n- Fotos vom Schadensbild und Absicherungsmaßnahmen machen (Foto laut Workflow vorhanden).\n- Alle Feststellungen und Maßnahmen offline in der App oder auf Papier dokumentieren.\n- Standort, Uhrzeit und eigene Maßnahmen notieren.\n\n5. Eskalation\n- Bei größerem Ausfall (mehrere Lampen, hohe Verkehrsexposition, schlechte Sicht): Störung an Leitstelle/Technik weiterleiten.\n- Bei Gefahr für Verkehrsteilnehmer: Sofortige Meldung an Polizei/Verkehrsbehörde.\n- Nach Wiederherstellung oder wenn keine Sofortmaßnahme möglich: Abschlussbericht synchronisieren, sobald Konnektivität wieder stabil.\n\nRückfrage: \nSind aktuell weitere Straßenabschnitte betroffen oder gibt es Hinweise auf Bauarbeiten/Stromausfall im Umfeld?",
+    "tokens_estimate_words": 192
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: Safety-First bei high severity + poor visibility + high traffic, Offline-Workflow explizit erwähnt ('lokal speichern', 'später synchronisieren'), klare Eskalation, keine Halluzinationen. Alle Kontext-Hinweise korrekt umgesetzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.902
+  },
+  "error": {}
+}

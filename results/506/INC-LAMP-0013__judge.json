@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absperrung, Warnschilder, Berührungsgefahr). Eskalation an Fachkraft und Notdienste explizit genannt. Dokumentation und Rückfragen sinnvoll. Keine Halluzinationen, keine fehlenden Elemente."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absperrung, Warnschilder, keine Berührung). Eskalation an Elektrofachkraft explizit genannt, Dokumentation nachvollziehbar, sinnvolle Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Absicherung priorisiert, Eskalation klar (hohe Priorität wegen Berührungsgefahr), Dokumentation inkl. vorhandenem Foto erwähnt. Kontextnutzung (device_state, photo_available) korrekt, keine Spekulation. Alle Dimensionen erfüllt."
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung → Warnleuchten, schlechte Sicht, mittlere Verkehrsexposition). Safety-First klar erkennbar, Eskalation an Fachabteilung/Notdienst, Dokumentation vollständig, sinnvolle Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort: Sicherheit steht an erster Stelle (Absperrung, Warnschilder, keine Berührung). Eskalation mit hoher Priorität und Notdienst-Option. Dokumentation inkl. OSM-ID und Foto. Kontextnutzung korrekt (poor_visibility, dusk erwähnt als 'schlechte Sicht'). Keine Halluzinationen."
+    "short_justification": "Präzise, kontextbewusste Antwort (Dämmerung/schlechte Sicht → Beleuchtung, photo_available genutzt). Safety-Maßnahmen klar priorisiert, Eskalation an Elektrofachkraft explizit, Dokumentation strukturiert, sinnvolle Rückfragen."
   }
 ]

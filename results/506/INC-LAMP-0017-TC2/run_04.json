@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC2",
+  "timestamp": "2026-02-19T12:48:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den dunklen Abschnitt Schönau\n\n1. **Absicherung**\n   - Warnblinkanlage am Einsatzfahrzeug einschalten.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Gefahrenbereich abzusichern.\n   - Bei Regen und schlechter Sicht besonders auf eigene Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder alle Lampen im Abschnitt betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden an Masten, Leuchten oder Verkabelung.\n   - Umgebung auf weitere Gefahren (z. B. rutschige Fahrbahn) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Stromversorgung anliegt (evtl. mit Spannungsprüfer).\n   - Gerätezustand: Gerät ist online, aber im Energiesparmodus – Hinweis auf mögliche Stromsparschaltung oder Defekt.\n   - Bei Regen: Feuchtigkeitseintritt an Gehäusen kontrollieren.\n   - Falls Foto vorhanden: Bild zur weiteren Analyse nutzen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen (betroffene Leuchten, Schäden, Witterung, Fotos) notieren.\n   - Zeitpunkt und genaue Position dokumentieren (Koordinaten: 47.8227101, 12.1125581).\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder größerem Ausfall: Störungsdienst/Elektriker informieren.\n   - Bei Gefahr für Verkehrsteilnehmer: Polizei/Ordnungsamt benachrichtigen.\n\n**Rückfrage:**  \nSind weitere Abschnitte betroffen oder liegt eine Einzelstörung vor? Gibt es Zugang zu den Schaltkästen vor Ort?",
+    "tokens_estimate_words": 165
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Wetter, Dämmerung, Foto, Koordinaten, Gerätezustand). Alle relevanten Umgebungsfaktoren (Regen, poor_visibility) werden in Absicherung und Diagnose einbezogen. Klare Struktur und Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.432
+  },
+  "error": {}
+}
