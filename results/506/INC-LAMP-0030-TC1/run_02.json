@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-19T12:04:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Fehler (Asset-ID: n11833818322)\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Straßenlampe gefahrlos betreten werden kann (z. B. Warnweste tragen, ggf. Absperrung aufstellen).\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und den Mast auf sichtbare Schäden (z. B. Risse, lose Teile, Feuchtigkeitseintritt).\n   - Kontrolliere, ob der Lampenkopf fest sitzt und keine Kabel sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Beobachte das Verhalten der Lampe über einen längeren Zeitraum (z. B. mehrere Minuten).\n   - Notiere, ob Flackern, Ausfälle oder andere Auffälligkeiten auftreten.\n   - Prüfe, ob Umwelteinflüsse (z. B. Feuchtigkeit, Wind) eine Rolle spielen könnten.\n   - Falls möglich: Prüfe den Schaltkasten auf lose Kontakte oder Feuchtigkeit.\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetterbedingungen, Fehlerbild).\n   - Dokumentiere, ob und wann die Lampe wieder ausgefallen ist.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Fachabteilung oder den Wartungsdienst.\n   - Weise darauf hin, dass der Fehler aktuell nicht dauerhaft auftritt, aber eine Überprüfung der elektrischen Verbindung und ggf. ein Austausch empfohlen wird.\n\n**Rückfrage:**  \nGab es in der Umgebung kürzlich Bauarbeiten, starke Witterung oder andere Ereignisse, die den Fehler ausgelöst haben könnten?  \nSoll eine kurzfristige Kontrolle durch den Bereitschaftsdienst erfolgen?",
+    "tokens_estimate_words": 198
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.293
+  },
+  "error": {}
+}

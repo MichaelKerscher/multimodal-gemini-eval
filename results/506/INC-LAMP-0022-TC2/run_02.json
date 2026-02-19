@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC2",
+  "timestamp": "2026-02-19T12:00:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093607",
+        "longitude": 12.116472,
+        "latitude": 47.837186,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störung an Straßenlampe  \nStandort: Rosenheim, Heilig Blut  \nMeldung: Lampe seit 10 Minuten dunkel, Bereich unsicher, Sicht schlecht, Schnee, Dämmerung, hohe Priorität.\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, falls vorhanden.\n   - Warnweste tragen.\n   - Bereich kontrollieren: Ist unmittelbare Gefahr für Fußgänger/Verkehr? Falls ja, Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Glasbruch, lose Teile, Vandalismus).\n   - Umgebung auf weitere dunkle Lampen prüfen (evtl. größerer Ausfall?).\n   - Ist der Zugang zur Lampe frei und sicher?\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe auf Bewegungen oder Steuerung reagiert.\n   - Gerät meldet „low_battery“: Vermutlich Batterieproblem.\n   - Prüfen, ob andere Lampen mit gleicher Stromquelle betroffen sind.\n   - Bei Schnee: Sicht auf Lampenkopf frei? (Evtl. Abdeckung durch Schnee?)\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Lampe und Umgebung machen (laut Meldung vorhanden).\n   - Notieren: Zeitpunkt, Wetter, Sichtverhältnisse, eigene Beobachtungen.\n   - Alle Maßnahmen und Feststellungen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (wie hier): Störung sofort an Bereitschaftsdienst/Technik weiterleiten.\n   - Hinweis auf „low_battery“: Austausch/Service der Batterie anfordern.\n   - Bürger informieren, dass Störung aufgenommen und bearbeitet wird.\n\n**Rückfrage:**  \nGibt es Zugang zum Lampenschaltkasten vor Ort? Sind Ersatzbatterien verfügbar oder muss ein Serviceteam angefordert werden?",
+    "tokens_estimate_words": 198
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: severity=high klar erkannt, Safety First (Absicherung, Polizei), Eskalation sofort, low_battery korrekt interpretiert. K=4 wegen fehlender Klarstellung, dass device_state das Techniker-Gerät betrifft (nicht Asset), aber keine Halluzination."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.575
+  },
+  "error": {}
+}

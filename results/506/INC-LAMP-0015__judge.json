@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
-      "Zeitkritische Maßnahmen könnten stärker betont werden"
+      "Konkrete Absicherungsmaßnahmen (Warnweste, Warnblinkanlage) fehlen bei 'unsicher' + minimal Context"
     ],
-    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Minimaler Kontext wurde gut genutzt, keine Halluzinationen. Safety-Fokus erkennbar, aber bei 'unsicherem Bereich' könnte Dringlichkeit noch stärker hervorgehoben werden."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheitsaspekte werden angesprochen, aber bei 'Bereich wirkt unsicher' könnten konkretere Schutzmaßnahmen genannt werden. Keine Halluzinationen, da Context minimal ist."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, hohe Verkehrsexposition und schlechte Sicht werden explizit berücksichtigt. Kontextnutzung optimal (device online, Foto vorhanden), keine Spekulationen."
+    "short_justification": "Exzellente Antwort: Absicherung mit konkreten Maßnahmen (Warnweste, Leitkegel), klare Diagnose, vollständige Dokumentation inkl. Koordinaten, sofortige Eskalation wegen hoher Gefährdung. Nutzt Context optimal (severity=high, traffic_exposure=high, poor_visibility, night)."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Umsetzung: Severity=high führt zu klarer Priorisierung und Polizei-Einbindung bei Gefahr. Umfangreicher Kontext (Nacht, hoher Verkehr, schlechte Sicht) wird präzise verarbeitet. Dokumentation und Eskalation vollständig, keine Halluzinationen."
+    "short_justification": "Hervorragende, präzise Checkliste mit klarem Safety-First-Ansatz (Warnblinkanlage, PSA, Absicherung bei hohem Verkehr). Eskalation bei hohem Risiko explizit genannt, Dokumentation vollständig, Context-Nutzung korrekt (photo_available als Workflow-Hinweis, device.* als Techniker-Gerät verstanden)."
   }
 ]

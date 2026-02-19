@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC2",
+  "timestamp": "2026-02-19T12:02:34",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4449540379",
+        "longitude": 12.1220096,
+        "latitude": 47.8772297,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Langenpfunzen, Römerstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-17T01:08:07+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei unregelmäßigem Verhalten (an/aus) – Straßenlampe Römerstraße, Langenpfunzen\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Pylonen) aufstellen, um Arbeitsbereich zu sichern.\n- Auf mittlere Verkehrsexposition und schlechte Sicht durch Nebel achten.\n\n**2. Sichtprüfung**\n- Lampe auf sichtbare Schäden, lose Kabel, Feuchtigkeitsspuren prüfen.\n- Mast und Anschlusskasten inspizieren.\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Da Gerät „offline“ ist: Prüfen, ob Stromversorgung unterbrochen oder Wackelkontakt vorliegt.\n- Bei intermittierenden Fehlern: Mehrfaches Ein-/Ausschalten beobachten.\n- Prüfen, ob Fehler bei bestimmten Bedingungen (z. B. Feuchtigkeit, Vibration durch Verkehr) auftritt.\n- Annahme: Kein Fernzugriff möglich, da „offline“.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Verhalten der Lampe).\n- Fotos machen, sobald möglich.\n\n**5. Eskalation**\n- Bei unklarer Ursache und weiterhin bestehendem Fehler: Meldung an Elektromeister oder Fachfirma zur weiteren Diagnose (z. B. Isolationsmessung, Austausch Bauteile).\n- Hinweis auf erhöhte Unfallgefahr bei schlechter Sicht im Nebel.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten oder Erdarbeiten in der Nähe, die die Stromversorgung beeinflusst haben könnten? Sind weitere Lampen in der Straße betroffen?",
+    "tokens_estimate_words": 180
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow erkannt und umgesetzt ('kein Fernzugriff möglich'), Nebel/Sicht berücksichtigt, klare Struktur, vollständige Dokumentation und Eskalation. Alle Kontextfaktoren genutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.665
+  },
+  "error": {}
+}

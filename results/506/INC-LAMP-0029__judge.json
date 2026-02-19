@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Priorisierung der Sicherheitsmaßnahmen bei 'unsicherem Bereich'"
+      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt kein connectivity-Problem, daher kein Fehler)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheit wird adressiert, könnte aber bei 'unsicherem Bereich' stärker priorisiert werden. Keine Kontextfehler bei minimalem CONTEXT."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Sicherheit wird adressiert, aber könnte bei 'Bereich wirkt unsicher' noch expliziter priorisiert werden. Keine Halluzinationen, gute Kontextnutzung trotz minimalem CONTEXT."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
@@ -26,18 +26,16 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=offline"
-    ],
-    "short_justification": "Exzellente Antwort: severity=high wird mit sofortiger Eskalation adressiert, Nacht+poor_visibility führt zu Safety-Fokus, device.connectivity=offline wird korrekt interpretiert. Offline-Workflow fehlt, aber K=4 da sonst kontextgenau."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit wird priorisiert (severity=high, night, poor_visibility erkannt), Offline-Status wird korrekt adressiert ('Gerät offline'), strukturierte Checkliste, klare Eskalation, vollständige Dokumentation. Alle CONTEXT-Elemente sinnvoll genutzt."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Offline-Workflow explizit umgesetzt ('lokal dokumentieren', 'Foto lokal speichern', 'später synchronisieren'), severity=high mit dringender Eskalation, Safety-First bei Nacht+poor_visibility, alle Kontexthinweise korrekt verarbeitet."
+    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit umgesetzt ('Gerät ist offline – keine Online-Diagnose möglich, alles lokal dokumentieren', 'später synchronisieren'), Sicherheit priorisiert, klare Eskalation bei akuter Gefährdung, vollständige Dokumentation. Guardrails aus extras.context_notes korrekt beachtet."
   }
 ]

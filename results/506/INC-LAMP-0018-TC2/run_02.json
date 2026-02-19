@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-19T11:59:16",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segmentausfall)\n\n**1. Absicherung**\n- Warnblinkanlage am Einsatzfahrzeug einschalten.\n- Gefahrenbereich mit Leitkegeln und Warnleuchten absichern.\n- Bei schlechter Sicht (Nacht, Nebel) zusätzliche Warnschilder aufstellen.\n- Persönliche Schutzausrüstung (Warnweste) tragen.\n\n**2. Sichtprüfung**\n- Kontrollieren, ob das gesamte Segment (mehrere Lampen/Ampeln) betroffen ist.\n- Sichtbare Schäden am Schaltschrank, Masten oder Kabeln prüfen.\n- Umgebung auf weitere Gefahren (z. B. herannahender Verkehr) beobachten.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob der Schaltschrank zugänglich und äußerlich unbeschädigt ist.\n- Kontrollieren, ob Sicherungen ausgelöst oder Anzeigen im Schaltschrank auffällig sind.\n- Da das Gerät online und „ok“ meldet, liegt vermutlich ein lokales Steuerungsproblem vor, nicht an der Fernanbindung.\n- Annahme: Kein Foto verfügbar, daher vor Ort besonders aufmerksam prüfen.\n\n**4. Dokumentation**\n- Ausfall und alle Beobachtungen (z. B. betroffene Lampen, Zustand Schaltschrank) notieren.\n- Zeitpunkt und Wetterbedingungen (Nebel, schlechte Sicht) festhalten.\n- Falls möglich, Fotos vom Zustand machen (bei nächster Gelegenheit nachholen).\n\n**5. Eskalation**\n- Bei unklarer Ursache oder Gefahr für Verkehrsteilnehmer: Störung an Leitstelle/Technik weiterleiten.\n- Bei akuter Gefährdung (z. B. Kreuzung ohne Beleuchtung/Ampel): Polizei oder Verkehrslenkung informieren.\n- Reparaturteam mit passender Qualifikation anfordern.\n\n**Rückfrage:**  \nSind genaue Pläne oder Zugangsdaten zum Schaltschrank vorhanden?  \nGibt es aktuelle Bauarbeiten oder bekannte Vorfälle im Segment?",
+    "tokens_estimate_words": 200
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, schlechte Sicht), klare Struktur, kontextgerechte Diagnose (Gerät online, lokales Problem), vollständige Dokumentation und Eskalation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.305
+  },
+  "error": {}
+}

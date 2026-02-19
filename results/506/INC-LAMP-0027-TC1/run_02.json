@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC1",
+  "timestamp": "2026-02-19T12:02:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n4939032947)",
+    "context": {
+      "asset_osm": "n4939032947"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, das Flackern der Straßenlampe (Asset-ID: n4939032947) tritt vor allem bei Regen auf. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die Lampe absperren (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung tragen (insbesondere bei Nässe).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden am Mast, Leuchtenkopf und Kabelzuführung.\n   - Achten auf Feuchtigkeitseintritt, Risse oder offene Stellen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Flackern aktuell auftritt (ggf. mit Wasser simulieren).\n   - Verdacht: Feuchtigkeitseintritt in Elektrik oder defektes Vorschaltgerät.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Fotos vom Zustand und der Umgebung machen.\n   - Beobachtungen und vermutete Ursache notieren (z.B. Flackern nur bei Regen, sichtbare Feuchtigkeit).\n\n5. **Eskalation**\n   - Meldung an die Elektrofachkraft oder Wartungsdienst mit allen gesammelten Infos.\n   - Hinweis auf mögliche Gefährdung durch Feuchtigkeit und Strom.\n\n**Rückfrage:**  \nIst bekannt, ob an dieser Lampe bereits frühere Reparaturen oder Auffälligkeiten dokumentiert wurden? Gibt es einen Wartungsplan für diesen Standort?",
+    "tokens_estimate_words": 155
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Kontextnutzung korrekt (keine Spekulation über fehlende Felder). Offline-Workflow nicht erwartet, da connectivity nicht im Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.958
+  },
+  "error": {}
+}

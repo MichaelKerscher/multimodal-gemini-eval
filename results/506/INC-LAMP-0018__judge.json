@@ -9,15 +9,15 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Umweltbedingungen im Context, daher keine spezifischen Sicherheitshinweise für Nacht/Nebel erwartbar"
+      "Konkrete Sicherheitsmaßnahmen bei Nacht/schlechter Sicht nicht erkennbar"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da minimaler Context korrekt genutzt wurde."
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Eskalation. Sicherheit wird erwähnt, aber ohne Kontextwissen (Nacht, Nebel) bleibt sie generisch. Keine Halluzinationen, gute Dokumentationshinweise."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nacht+Nebel+poor_visibility korrekt adressiert, Severity=medium mit angemessener Eskalation, alle Context-Elemente sinnvoll integriert, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nebel, Nacht, schlechte Sicht), klare Struktur, kontextgerechte Diagnose (Gerät online, lokales Problem), vollständige Dokumentation und Eskalation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Umweltbedingungen (Nacht, Nebel, poor_visibility) explizit berücksichtigt, Feuchtigkeit als Ursache plausibel erwähnt, klare Struktur, keine Halluzinationen, vollständige Dokumentation und Eskalation."
+    "short_justification": "Hervorragende Antwort: Sicherheit klar priorisiert (Nebel, Nacht), strukturierte Diagnose mit Fernzugriff-Hinweis (Gerät online), vollständige Dokumentation und Eskalation. Kontextnutzung optimal, keine Halluzinationen."
   }
 ]

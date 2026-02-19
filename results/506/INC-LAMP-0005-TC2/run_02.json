@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-19T11:53:50",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-18T05:18:22+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereithalten.\n- Einsatzfahrzeug mit Warnblinkanlage sichern.\n- Bei mittlerem Verkehrsaufkommen und schlechter Sicht (Nebel, Dämmerung) unbedingt zusätzliche Warnbaken oder Blitzleuchten aufstellen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der gesamten Straßenbeleuchtung im betroffenen Abschnitt durchführen.\n- Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n- Auf offensichtliche Schäden, lose Kabel oder Feuchtigkeitseintritt achten.\n\n**3. Diagnose/Beobachtung**\n- Aufgrund des gemeldeten Ausfalls und der schlechten Sichtverhältnisse: \n  - Prüfen, ob Sicherungen ausgelöst wurden.\n  - Bei mehreren ausgefallenen Lampen: Möglicher Fehler im Stromkreis.\n  - Einzelne Lampe: Defektes Leuchtmittel oder Vorschaltgerät.\n- Hinweis: Gerät vor Ort hat niedrigen Akkustand und instabile Verbindung – Diagnosedaten ggf. manuell erfassen.\n\n**4. Dokumentation**\n- Alle Beobachtungen (defekte Lampen, Schäden, Sicherungsstatus) schriftlich festhalten.\n- Fotos machen, sobald möglich (aktuell keine vorhanden).\n- Standort und betroffene Leuchtennummern notieren.\n\n**5. Eskalation**\n- Bei Gefahr für Verkehrsteilnehmer (z. B. komplette Dunkelheit, schlechte Sicht): Sofortige Meldung an Leitstelle zur schnellen Behebung.\n- Bei geringem Risiko: Reparaturtermin einplanen und Anwohner informieren.\n\n**Rückfragen/Annahmen:**\n- Sind genaue Leuchtennummern oder weitere Standorte betroffen?\n- Gibt es Hinweise auf Vandalismus oder Bauarbeiten in der Nähe?\n- Soll eine temporäre Beleuchtung aufgestellt werden?\n\nBitte um Rückmeldung, falls weitere Details oder Sofortmaßnahmen gewünscht sind.",
+    "tokens_estimate_words": 201
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Berücksichtigt Nebel, Dämmerung, mittlere Verkehrsexposition mit verstärkter Absicherung. Erwähnt Offline-Dokumentation bei instabiler Verbindung und niedrigem Akku. Klare Eskalationskriterien."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.121
+  },
+  "error": {}
+}

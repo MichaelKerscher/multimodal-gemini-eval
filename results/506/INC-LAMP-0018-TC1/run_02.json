@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-19T11:59:16",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segmentausfall)\n\n1. **Absicherung**\n   - Absperrung oder Warnbaken aufstellen, falls Gefährdung für Verkehrsteilnehmer besteht.\n   - Warnwesten tragen, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des betroffenen Segments (z. B. Straßenlampen oder Ampeln).\n   - Prüfen, ob weitere Segmente betroffen sind.\n   - Auffälligkeiten an Schaltschränken, Kabeln oder Leuchten notieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Ausfall auf eine zentrale Steuerung (z. B. Zeitschaltuhr, Steuergerät) zurückzuführen ist.\n   - Kontrollieren, ob Sicherungen ausgelöst wurden.\n   - Falls möglich: Steuerung manuell testen oder neu starten.\n   - Gibt es kürzliche Bauarbeiten oder Wettereinflüsse?\n\n4. **Dokumentation**\n   - Asset-ID (n12520351647), Zeitpunkt und Umfang des Ausfalls notieren.\n   - Fotos von betroffenen Komponenten machen.\n   - Alle durchgeführten Schritte und Beobachtungen dokumentieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder größerem Ausfall: Störungsdienst/Techniker informieren.\n   - Dringlichkeit je nach Verkehrsrelevanz einstufen (z. B. Hauptstraße, Schulweg).\n\n**Rückfrage:**  \nHandelt es sich um Straßenbeleuchtung oder eine Ampelanlage? Gibt es aktuelle Hinweise auf Bauarbeiten oder Wetterschäden im Segmentbereich?",
+    "tokens_estimate_words": 153
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Konkrete Sicherheitsmaßnahmen bei Nacht/schlechter Sicht nicht erkennbar"
+    ],
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Eskalation. Sicherheit wird erwähnt, aber ohne Kontextwissen (Nacht, Nebel) bleibt sie generisch. Keine Halluzinationen, gute Dokumentationshinweise."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.65
+  },
+  "error": {}
+}

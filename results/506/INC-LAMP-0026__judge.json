@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Offline-Workflow-Erwähnung nötig (CONTEXT enthält keine connectivity-Info). Sicherheitsaspekte angemessen bei unklarer Severity."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Offline-Erwähnung nötig, da CONTEXT minimal ist und connectivity nicht enthält. Gute Rückfragen zur Klärung."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 3,
-      "K": 3
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -32,10 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht explizit als Handlungsanweisung formuliert"
-    ],
-    "short_justification": "Gute Kontextnutzung (Nebel, offline erwähnt), aber Offline-Workflow nur als Annahme ('keine Fernwartung möglich'), nicht als konkrete Handlungsanweisung (lokal dokumentieren/später sync). Dokumentation könnte präziser sein."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Offline-Workflow erkannt und umgesetzt ('kein Fernzugriff möglich'), Nebel/Sicht berücksichtigt, klare Struktur, vollständige Dokumentation und Eskalation. Alle Kontextfaktoren genutzt."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Umsetzung: Offline-Workflow explizit ('Offline dokumentieren, Fotos lokal speichern, später synchronisieren'), klare Struktur, vollständige Kontextnutzung (Nebel, Verkehr, connectivity), präzise Dokumentationsanweisungen. Alle Erwartungen erfüllt."
+    "short_justification": "Hervorragend: Offline-Workflow explizit mehrfach erwähnt ('lokal speichern', 'später synchronisieren', 'keine Online-Abfragen'), alle Umgebungsfaktoren (Nebel, Verkehr) berücksichtigt, klare Struktur und Eskalation. Vollständige Kontextnutzung."
   }
 ]

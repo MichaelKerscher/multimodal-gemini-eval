@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC2",
+  "timestamp": "2026-02-19T12:00:28",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Aussetzern/Flackern (Kontaktproblem möglich)  \n**Objekt:** Straßenlampe, Rosenheim, Rechenauerstraße  \n**Bedingungen:** Schlechte Sicht, Regen, Nacht, wenig Verkehr\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Leitkegeln absichern.\n   - Bei Bedarf zusätzliche Beleuchtung aufstellen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Teile prüfen.\n   - Lampenkopf und Anschlusskasten auf Korrosion oder offene Kabel kontrollieren.\n   - Umgebung auf Stolperfallen oder Gefahrenstellen prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es dauerhaft oder nur bei Regen auf?\n   - Anschlussklemmen (sofern gefahrlos zugänglich) auf festen Sitz prüfen.\n   - Feuchtigkeit im Gehäuse feststellen.\n   - Bei Verdacht auf Wackelkontakt: Lampe vorsichtig bewegen (nur wenn sicher!).\n\n4. **Dokumentation**\n   - Fotos vom Lampenkopf, Anschlusskasten und Umgebung machen.\n   - Fehlerbild und Beobachtungen notieren (z. B. wann und wie oft Flackern).\n   - Alle Sicherungsmaßnahmen und durchgeführten Schritte dokumentieren.\n\n5. **Eskalation**\n   - Bei Verdacht auf elektrischen Defekt oder Feuchtigkeit: Fachfirma/Elektriker informieren.\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Lampe außer Betrieb nehmen und sofort melden.\n   - Störung und Maßnahmen an die Leitstelle weitergeben.\n\n**Rückfrage:**  \nSoll die Lampe sofort außer Betrieb genommen werden, falls ein Kontaktproblem bestätigt wird, oder ist eine temporäre Weiterbenutzung zulässig?  \nSind Ersatzteile oder ein Elektriker kurzfristig verfügbar?",
+    "tokens_estimate_words": 198
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Exzellente Struktur und Dokumentation, gut auf Umgebung (Regen, Nacht) abgestimmt. Connectivity=spotty erfordert Offline-Workflow-Hinweis, der fehlt (K=3)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.348
+  },
+  "error": {}
+}

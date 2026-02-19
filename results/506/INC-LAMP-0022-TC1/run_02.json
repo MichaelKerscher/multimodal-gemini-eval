@@ -1,0 +1,62 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-19T12:00:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zur Straßenlampe (Asset-ID: n1987093607). Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe beobachten: Ist die Stelle besonders unübersichtlich oder gefährlich? Falls ja, ggf. temporäre Warnbaken oder Hinweisschilder aufstellen (z.B. durch Bauhof oder Ordnungsamt anfordern).\n\n2. **Sichtprüfung**\n   - Prüfen: Ist nur diese eine Lampe betroffen oder mehrere im Umfeld?\n   - Sichtbare Schäden am Mast, Leuchtmittel oder Schaltkasten? (z.B. Glasbruch, freiliegende Kabel)\n\n3. **Diagnose/Beobachtung**\n   - Gab es in letzter Zeit Stromausfälle oder Bauarbeiten in der Nähe?\n   - Leuchtet die Lampe nach einigen Minuten wieder (evtl. Zeitschaltuhr oder Dämmerungsschalter)?\n   - Falls möglich: Uhrzeit und Wetterbedingungen notieren.\n\n4. **Dokumentation**\n   - Asset-ID, Standort und Zeitpunkt der Störung notieren.\n   - Fotos machen, falls Schäden sichtbar sind.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder den städtischen Bauhof melden (mit allen gesammelten Infos).\n   - Bei akuter Gefährdung: Polizei oder Ordnungsamt informieren, damit der Bereich gesichert wird.\n\n**Rückfragen:**\n- Ist die Lampe an einer besonders kritischen Stelle (z.B. Zebrastreifen, Kreuzung, Schulweg)?\n- Sind weitere Lampen betroffen oder nur diese eine?\n\nBitte geben Sie, falls möglich, noch diese Informationen an. So kann die Störung schneller und gezielter bearbeitet werden.",
+    "tokens_estimate_words": 191
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einschätzung fehlt (nur aus User-Text 'unsicher' ableitbar)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety und Eskalation erkennbar, aber nicht explizit priorisiert (severity unbekannt)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.215
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC1",
+  "timestamp": "2026-02-19T12:03:17",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n4470029720)",
+    "context": {
+      "asset_osm": "n4470029720"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zur Asset-ID n4470029720 (Straßenlampe/Ampelanlage). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für beschädigtes Gehäuse mit möglicher Berührungsgefahr**\n\n1. **Absicherung**\n   - Gefahrenbereich sofort absperren (z. B. mit Absperrband, Pylonen).\n   - Passanten und Verkehrsteilnehmer warnen, Abstand halten lassen.\n   - Bei akuter Gefahr: Polizei oder Feuerwehr informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle aus sicherer Entfernung: Liegen stromführende Teile offen? Ist Feuchtigkeit eingedrungen?\n   - Keine Berührung des Gehäuses oder der Umgebung!\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob Funken, Geräusche oder Rauchentwicklung auftreten.\n   - Prüfen, ob die Anlage weiterhin funktioniert oder komplett ausgefallen ist.\n\n4. **Dokumentation**\n   - Schaden fotografisch festhalten (aus sicherer Entfernung).\n   - Genaue Beschreibung des Schadens (Ort, Ausmaß, mögliche Gefahren) notieren.\n   - Asset-ID und Zeitpunkt der Feststellung dokumentieren.\n\n5. **Eskalation**\n   - Meldung an die zuständige Fachabteilung/Leitstelle weiterleiten.\n   - Bei akuter Gefahr: Sofortige Abschaltung der Stromzufuhr veranlassen (nur durch Fachpersonal).\n   - Reparatur durch qualifiziertes Personal anfordern.\n\n**Rückfrage:**  \nIst bereits Fachpersonal informiert oder soll ich die Meldung weiterleiten? Gibt es Hinweise, ob Strom bereits abgeschaltet wurde?",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, sicherheitsorientierte Antwort mit klarer Eskalation. Alle Schritte nachvollziehbar dokumentiert, keine Halluzinationen trotz minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.539
+  },
+  "error": {}
+}

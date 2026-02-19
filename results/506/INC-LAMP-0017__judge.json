@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Kontextinformationen zu Severity/Umgebung vorhanden, daher angemessen generisch"
+      "Keine Erwähnung von Dämmerung/schlechter Sicht trotz plausiblem Kontext 'dunkler Abschnitt'"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID gegeben war. Offline-Workflow nicht erwartet (connectivity nicht im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Regen, Dämmerung, poor_visibility, low_power_mode). Klare Sicherheitsmaßnahmen, Diagnose berücksichtigt Gerätezustand, vollständige Dokumentation und Eskalationspfade."
+    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, Dämmerung, Koordinaten, Energiesparmodus werden korrekt eingebunden. Klare Safety-Priorisierung, strukturierte Dokumentation, angemessene Eskalation bei severity=medium."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Nutzt Kontext optimal (Regen, Dämmerung, low_battery), erwähnt Offline-Dokumentation bei niedrigem Batteriestand, klare Safety-First-Haltung, strukturierte Eskalation und vollständige Dokumentationshinweise."
+    "short_justification": "Hervorragende Antwort: Berücksichtigt Regen, schlechte Sicht, Energiesparmodus und erwähnt korrekt offlinefähige Dokumentation. Klare Struktur, Safety-Fokus, angemessene Eskalation, keine Halluzinationen."
   }
 ]

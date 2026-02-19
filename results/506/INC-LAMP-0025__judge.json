@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Bewusstsein (high) nicht erkennbar",
-      "Zeitdruck bei Sicherheitsrisiko fehlt"
+      "Konkrete Zeitangabe (20 Min) nicht aufgegriffen",
+      "Keine Priorisierung wegen 'Bereich wirkt unsicher'"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung und Eskalation. Severity=high rechtfertigt dringlicheren Ton; Sicherheitsmaßnahmen sind vorhanden, aber nicht priorisiert genug."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Safety-Aspekte angesprochen, aber 'unsicherer Bereich' hätte stärkere Priorisierung verdient. Keine Halluzinationen bei minimalem Context."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Eskalation adressiert, Kontextnutzung (low_battery, traffic_exposure, night) ist präzise, Dokumentation vollständig."
+    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+traffic_exposure=high führen zu klarem Safety-First-Fokus. Low_battery korrekt als Geräte-Zustand interpretiert, alle Kontextdaten sinnvoll genutzt, strukturierte Dokumentation und Eskalation."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Severity=high wird durch Absicherung und dringende Eskalation adressiert, alle Kontextfaktoren (night, traffic_exposure, poor_visibility) fließen ein, Dokumentation klar strukturiert."
+    "short_justification": "Hervorragende Antwort mit explizitem Safety-Fokus ('sicherheitsrelevant', Absicherung priorisiert). Alle Kontextdaten korrekt verarbeitet, klare Eskalationswege, vollständige Dokumentation. Extras.context_notes korrekt beachtet (device_state bezieht sich auf Techniker-Gerät)."
   }
 ]

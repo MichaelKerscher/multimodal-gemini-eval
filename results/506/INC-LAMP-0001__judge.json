@@ -9,33 +9,34 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen, da minimaler Kontext keine Offline-Workflow-Erwartung rechtfertigt."
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Handlungsanleitung. Sicherheit wird erwähnt, aber nicht priorisiert (severity=low rechtfertigt das). Dokumentation und Eskalation gut abgedeckt. Keine Kontextfehler bei minimalem CONTEXT."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
-      "K": 3
+      "D": 5,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow nicht vollständig ausgearbeitet (nur Hinweis, keine konkreten Schritte für lokale Speicherung)"
+      "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)",
+      "Keine Online-Schritte bei connectivity=offline"
     ],
-    "short_justification": "Gute Kontextnutzung (Offline, Batterie, Verkehrsexposition). Offline-Workflow erwähnt, aber nicht detailliert umgesetzt. Sicherheit und Eskalation klar adressiert."
+    "short_justification": "Exzellente Struktur und Sicherheitsfokus (Warnweste, Absperrung bei high traffic_exposure). Jedoch: device_state=low_battery und connectivity=offline werden als Asset-Problem interpretiert (Halluzination), statt als Geräte-Constraint. Offline-Workflow fehlt komplett."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -53,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung inkl. extras.context_notes. Offline-Workflow explizit umgesetzt (lokal speichern, später synchronisieren). Sicherheit, Dokumentation und Eskalation vollständig adressiert."
+    "short_justification": "Hervorragende Antwort: Sicherheit priorisiert, klare Struktur, Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'). Korrekte Interpretation von device.* als Geräte-Constraint. Dokumentation und Eskalation vollständig."
   }
 ]

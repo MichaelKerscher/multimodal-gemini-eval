@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung von Leuchtmittel-/Sicherungsprüfung als konkrete Diagnoseschritte"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Kontextnutzung korrekt (keine Spekulation), aber Diagnoseschritte könnten präziser sein (z.B. Spannungsprüfung)."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalationslogik. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – das ist aber kein Fehler bei L0."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (Tageslicht, low traffic, device online), klare Diagnose, strukturierte Dokumentation und passende Eskalation. Rückfrage sinnvoll."
+    "short_justification": "Exzellente Kontextnutzung (Koordinaten, device_state, severity). Klare Diagnoselogik mit Bezug auf 'online/ok'-Status. Strukturiert, sicher, dokumentationsorientiert und eskalationsfähig."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (severity medium, day, clear, low traffic). Strukturierte Schritte, klare Dokumentation, angemessene Eskalation und sinnvolle Rückfrage."
+    "short_justification": "Präzise, kompakte Checkliste mit vollständiger Kontextnutzung (Asset-ID, Koordinaten, Umweltbedingungen). Klare Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen, robuste Antwort."
   }
 ]

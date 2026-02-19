@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Erwähnung von Umgebungsbedingungen (nicht im Context verfügbar)"
+      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur auf verfügbare Asset-ID Bezug genommen wird."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Risiko-Hinweise (Nacht/Regen) – korrekt generisch gehalten."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Nacht+Regen+poor_visibility, integriert photo_available, erwähnt Low-Power-Modus korrekt als Geräte-Zustand. Alle Dimensionen optimal erfüllt."
+    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Nacht, Regen, poor_visibility. Absicherung priorisiert, low_power_mode erwähnt, Foto-Workflow integriert, klare Eskalation bei Gefahr."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -49,10 +49,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Nutzt extras.context_notes korrekt (device_state betrifft Technikergerät), erwähnt offlinefähige Dokumentation wegen low_power_mode, integriert alle Risikofaktoren (Nacht, Regen, severity=high) und Workflow-Hinweise (photo_available)."
+    "short_justification": "Hervorragend: Kompakte, priorisierte Checkliste mit klarem Safety-First-Fokus (Warnblinkanlage, Absicherung). Alle Kontextfaktoren (Nacht, Regen, poor_visibility, severity=high, low_power_mode, Foto) korrekt eingebunden, sofortige Eskalation bei Gefahr."
   }
 ]

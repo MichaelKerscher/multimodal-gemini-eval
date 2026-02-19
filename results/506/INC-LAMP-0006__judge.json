@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation)"
+      "Severity-Einschätzung fehlt (nur 'unsicher' vom User, keine Priorisierung)"
     ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Safety und Eskalation vorhanden, aber ohne explizite Priorisierung bei hoher Gefährdung."
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheit wird adressiert, aber ohne explizite Dringlichkeit (severity unbekannt). Keine Halluzinationen, Kontext minimal genutzt."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
@@ -26,7 +26,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,10 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (CONTEXT zeigt connectivity=offline)",
-      "Keine Anweisung zur lokalen Dokumentation/Synchronisation"
+      "Offline-Workflow nicht erwähnt (connectivity=offline, device_state=low_battery)"
     ],
-    "short_justification": "Exzellente Safety-Priorisierung (Sturm, hohe Verkehrsexposition, schlechte Sicht) und klare Eskalation. Offline-Kontext wird jedoch nicht adressiert, obwohl device.connectivity=offline im CONTEXT steht."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Sturm, hohe Verkehrsexposition, severity=high), klare Eskalation, gute Kontextnutzung (Wetter, Verkehr, low_battery). Offline-Workflow fehlt trotz offline-Gerät."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -56,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextgerechte Antwort mit explizitem Offline-Workflow (lokal dokumentieren, später synchronisieren). Safety-First-Ansatz bei Sturm/hoher Verkehrsexposition und klare Eskalation bei hoher Gefährdung erkennbar."
+    "short_justification": "Perfekte Antwort: Sicherheit first (Sturm, Verkehr, severity=high), Offline-Workflow explizit (Fotos/Notizen offline speichern), klare Eskalation, vollständige Kontextnutzung inkl. extras.context_notes. Keine Mängel."
   }
 ]

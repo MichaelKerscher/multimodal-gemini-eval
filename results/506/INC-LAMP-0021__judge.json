@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Kontextinformationen zu Umgebung/Zeit vorhanden, daher keine spezifischen Safety-Maßnahmen erwartbar"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext korrekt verarbeitet wurde."
+    "missing_elements": [],
+    "short_justification": "Relevante, strukturierte Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -26,7 +24,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -35,16 +33,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Regen, poor_visibility), klare Safety-Priorisierung und strukturierte Eskalation. Offline-Hinweis fehlt trotz spotty connectivity."
+    "short_justification": "Exzellente Struktur und Dokumentation, gut auf Umgebung (Regen, Nacht) abgestimmt. Connectivity=spotty erfordert Offline-Workflow-Hinweis, der fehlt (K=3)."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit integriert, Safety-Fokus bei Nacht/Regen, klare Eskalation, vollständige Dokumentation. Alle Kontexthinweise korrekt verarbeitet."
+    "short_justification": "Vollständige, kontextgerechte Antwort. Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), alle Umgebungsfaktoren berücksichtigt, klare Eskalation und Dokumentation."
   }
 ]

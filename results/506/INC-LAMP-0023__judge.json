@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt keine Offline-Situation, daher kein Fehler)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit Sicherheitsmaßnahmen und Eskalation. Keine Halluzinationen, da minimaler CONTEXT keine zusätzlichen Anforderungen stellt."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -25,19 +23,17 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
-      "K": 3
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline erfordert lokale Dokumentation/Synchronisation)"
-    ],
-    "short_justification": "Exzellente Safety-Orientierung und Eskalation bei severity=high. Offline-Workflow nicht erwähnt, obwohl connectivity=offline im CONTEXT steht – K=3."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Sturm, schlechte Sicht, hohe Verkehrsexposition und Offline-Status. Offline-Workflow explizit erwähnt ('Keine Fernabfrage möglich'), Safety-First klar erkennbar."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -55,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextgerechte Antwort: Offline-Workflow explizit adressiert, Safety-First bei severity=high, klare Eskalation, strukturierte Dokumentation. Keine Halluzinationen."
+    "short_justification": "Hervorragend: Alle Kontextfaktoren (Offline, Sturm, schlechte Sicht, hohes Verkehrsaufkommen) korrekt verarbeitet. Offline-Workflow explizit ('lokal speichern', 'später synchronisieren'), Safety und Eskalation klar priorisiert."
   }
 ]

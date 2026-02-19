@@ -14,15 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalationskriterien. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt. S=3, da keine akute Gefahrensituation erkennbar."
+    "missing_elements": [
+      "Keine Umgebungsinformationen verfügbar, daher keine spezifischen Sicherheitshinweise für Nacht/Nebel"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Rückfrage zur Asset-Art ist sinnvoll bei minimalem Kontext. Keine Halluzinationen, da nur allgemeine Best Practices genannt werden."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -33,14 +35,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel+poor_visibility wird in Absicherung adressiert, severity=medium führt zu angemessener Eskalation. Strukturiert, nachvollziehbar dokumentiert, keine Spekulation."
+    "short_justification": "Exzellente Kontextnutzung: Nacht, Nebel, mittlerer Verkehr werden explizit in Sicherheitsmaßnahmen einbezogen. Feuchtigkeitsprobleme bei Nebel werden korrekt adressiert. Klare Struktur, vollständige Dokumentation und angemessene Eskalation."
   },
   {
     "test_id": "INC-LAMP-0002-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Präzise Kontextintegration (Nacht, Nebel, mittlere Verkehrsbelastung in Absicherung), klare Handlungsschritte, photo_available korrekt als Workflow-Hinweis genutzt. Dokumentation und Eskalation vollständig, keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Nebel, Nacht, Verkehr). Sicherheitshinweis am Ende betont schlechte Sicht. Strukturiert, dokumentationsorientiert, mit sinnvoller Rückfrage zu möglichen Ursachen. Keine Halluzinationen."
   }
 ]

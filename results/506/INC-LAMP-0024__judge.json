@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit adressiert, Eskalation vorhanden. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheit und Eskalation sind vorhanden, aber bei minimalem Kontext (L0) nicht zwingend detaillierter erforderlich. Keine Kontextfehler."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
@@ -23,19 +23,19 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
-      "K": 3
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow könnte expliziter sein (lokal speichern/später sync)"
+      "Offline-Workflow (lokal dokumentieren/später synchronisieren)"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Nacht, Sturm, hoher Verkehr, Offline). Sicherheit priorisiert, Offline-Hinweis vorhanden aber knapp. Alle relevanten Umgebungsfaktoren berücksichtigt."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Sturm, Verkehr, Nacht), klare Struktur, standortspezifisch, Eskalation vorhanden. Offline-Kontext (connectivity=offline) wird nicht explizit adressiert, daher K=4."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Mustergültige Antwort: Offline-Workflow explizit (lokal speichern, später sync), Sicherheit priorisiert (Sturm, Verkehr, Nacht), vollständige Dokumentation, klare Eskalation. Perfekte Kontextnutzung ohne Spekulation."
+    "short_justification": "Perfekte Antwort: Alle Kontextfaktoren (Offline-Workflow, Sturm, Verkehr, Nacht) korrekt integriert. Sicherheit priorisiert, klare Struktur, Eskalation vorhanden, Dokumentation offline-fähig. Keine Halluzinationen."
   }
 ]

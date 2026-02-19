@@ -1,0 +1,88 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-19T11:52:09",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste: Sporadischer Fehler Straßenlampe  \n**Standort:** Rosenheim, Bahnhof  \n**Fehlerbild:** Lampe war aus, jetzt wieder an (sporadisch), Gerät meldet niedrigen Batteriestand, keine Online-Verbindung.\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Warndreieck aufstellen, da hohe Verkehrsexposition.\n   - Auf sicheren Standplatz achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden prüfen (z. B. Risse, lose Teile, Vandalismus).\n   - Anschlusskasten auf offensichtliche Mängel (Feuchtigkeit, Korrosion, lose Kabel) kontrollieren.\n   - Prüfen, ob die Lampe aktuell leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Fehler reproduzierbar ist (z. B. Wackelkontakt, Flackern).\n   - Hinweis: Gerät meldet „low_battery“ und ist offline – vermutlich Problem mit Energieversorgung oder Kommunikationsmodul.\n   - Batterie/Akku prüfen (falls vorhanden) oder Annahme: Fehler im Steuergerät.\n   - Foto auswerten, falls verfügbar.\n\n4. **Dokumentation**\n   - Fehlerbild, Zeitpunkt, eigene Beobachtungen und Maßnahmen notieren.\n   - Foto anhängen.\n   - Niedrigen Batteriestand und Offline-Status dokumentieren.\n\n5. **Eskalation**\n   - Meldung an Fachabteilung/Technik: Austausch/Prüfung Batterie bzw. Steuergerät erforderlich.\n   - Hinweis auf hohe Verkehrsexposition und mögliche Gefährdung bei Ausfall.\n   - Bei erneutem Ausfall: Priorität erhöhen.\n\n**Rückfrage:**  \nIst ein kurzfristiger Vor-Ort-Termin zur Batteriewartung möglich oder gibt es aktuelle Wartungspläne für diesen Standort?",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)",
+      "Keine Online-Schritte bei connectivity=offline"
+    ],
+    "short_justification": "Exzellente Struktur und Sicherheitsfokus (Warnweste, Absperrung bei high traffic_exposure). Jedoch: device_state=low_battery und connectivity=offline werden als Asset-Problem interpretiert (Halluzination), statt als Geräte-Constraint. Offline-Workflow fehlt komplett."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.251
+  },
+  "error": {}
+}

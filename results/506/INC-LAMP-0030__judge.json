@@ -9,25 +9,22 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Absicherungsmaßnahmen konkret genannt (Warnweste, Pylonen)",
-      "Umgebungsrisiken nicht bewertet (Zeit, Verkehr, Sicht)"
-    ],
-    "short_justification": "Strukturierte Antwort mit klaren Schritten und Eskalation. Sicherheitsaspekte generisch, da Kontext minimal. Keine Halluzinationen, angemessen für L0."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -36,16 +33,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=spotty"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absicherung), strukturiert, kontextgerecht (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition). Spotty connectivity hätte Offline-Hinweis verdient."
+    "short_justification": "Exzellente Strukturierung mit Standortdaten, Verkehrssicherung bei schlechter Sicht und mittlerer Verkehrsbelastung. Connectivity=spotty erfordert Offline-Workflow-Hinweis, der fehlt."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -56,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Safety-first, Offline-Workflow explizit (lokal speichern, später synchronisieren), alle Kontextfaktoren berücksichtigt, klare Struktur, angemessene Eskalation."
+    "short_justification": "Vollständige, kontextbewusste Antwort. Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), Sicherheit priorisiert, Dokumentation detailliert, alle Kontextfaktoren berücksichtigt."
   }
 ]

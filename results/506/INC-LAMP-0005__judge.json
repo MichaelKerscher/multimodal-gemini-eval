@@ -15,14 +15,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Safety-Fokus erkennbar."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 4
     },
@@ -33,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Workflow implizit erwähnt ('manuelle Prüfung bevorzugen'), Safety-Maßnahmen angemessen, klare Struktur."
+    "short_justification": "Exzellente Antwort: Berücksichtigt Nebel, Dämmerung, mittlere Verkehrsexposition mit verstärkter Absicherung. Erwähnt Offline-Dokumentation bei instabiler Verbindung und niedrigem Akku. Klare Eskalationskriterien."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextintegration inkl. explizitem Offline-Workflow ('Offline dokumentieren', 'Fotos lokal speichern', 'Synchronisation nach Wiederherstellung'). Alle Umgebungsfaktoren berücksichtigt, klare Handlungsanweisungen."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), Umweltbedingungen (Nebel, Dämmerung) in Sicherheitsmaßnahmen integriert, niedrigen Akkustand berücksichtigt. Präzise und umsetzbar."
   }
 ]

@@ -15,28 +15,25 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Sicherheitsfokus. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Eskalation und Dokumentation angemessen adressiert."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 3,
-      "K": 2
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow bei spotty connectivity",
-      "Batterie-Hinweis bezieht sich fälschlich auf Asset statt Techniker-Gerät"
-    ],
-    "short_justification": "Gute Struktur und Safety-Fokus, aber Halluzination: 'Gerät meldet low_battery' wird als Asset-Problem interpretiert, obwohl device.* das Techniker-Gerät beschreibt. Offline-Workflow bei spotty connectivity fehlt."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: low_battery und spotty connectivity werden korrekt als Geräte-Zustand interpretiert und Offline-Workflow implizit berücksichtigt. Alle Dimensionen stark erfüllt, Nacht + poor_visibility angemessen adressiert."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow korrekt umgesetzt, device.* richtig interpretiert (Techniker-Gerät), Safety und Eskalation adressiert, Dokumentation nachvollziehbar. Keine Halluzinationen, vollständig kontextgerecht."
+    "short_justification": "Hervorragende Antwort mit explizitem Offline-Workflow ('offline speichern, später synchronisieren'). Kontextnutzung optimal, Sicherheit bei Nacht/poor_visibility betont, Dokumentation und Eskalation klar strukturiert."
   }
 ]

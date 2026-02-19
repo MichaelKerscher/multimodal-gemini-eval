@@ -6,7 +6,7 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -14,15 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit adressiert, Eskalation vorhanden. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen rechtfertigt."
+    "missing_elements": [
+      "Keine Berücksichtigung der Umgebungsbedingungen (nicht im Context verfügbar)"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung und Eskalation. Bei minimalem Context angemessen allgemein gehalten, keine Spekulation über fehlende Daten."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -33,14 +35,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlere Verkehrsexposition explizit berücksichtigt). Klare Struktur, Sicherheit priorisiert, Dokumentation und Eskalation vollständig."
+    "short_justification": "Exzellente Kontextnutzung: Nebel/schlechte Sicht und mittlerer Verkehr werden explizit in Absicherung einbezogen. Intermittierender Fehler wird methodisch adressiert, Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Nebel, Feuchtigkeit, Verkehr). Strukturiert, sicherheitsorientiert, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextintegration (Nebel, schlechte Sicht, mittlerer Verkehr). Intermittierender Fehler wird systematisch behandelt, klare Eskalationskriterien, vollständige Dokumentation."
   }
 ]

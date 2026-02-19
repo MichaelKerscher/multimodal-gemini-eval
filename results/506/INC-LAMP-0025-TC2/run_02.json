@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-19T12:02:10",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier die empfohlene Vorgehensweise für die Straßenlampe an der Isarstraße/Gewerbegebiet in Rosenheim:\n\n**Checkliste für Außendienst:**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Pylonen oder Warnleuchten absichern, da hohe Verkehrsexposition und schlechte Sicht herrschen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, Vandalismus oder lose Teile prüfen.\n   - Umgebung auf weitere ausgefallene Lampen kontrollieren (Hinweis auf größeren Stromausfall?).\n\n3. **Diagnose/Beobachtung**\n   - Status der Lampe prüfen: Gerät meldet „low_battery“, ist aber online.\n   - Prüfen, ob die Lampe auf Bewegungen oder Schaltbefehle reagiert.\n   - Falls möglich: Batteriestatus und Steuerungseinheit vor Ort auslesen.\n\n4. **Dokumentation**\n   - Fotos vom Ausfall und der Umgebung machen (Foto liegt bereits vor, ggf. ergänzen).\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Verkehrsaufkommen).\n\n5. **Eskalation**\n   - Bei bestätigtem Ausfall und hoher Gefährdung (unsicherer Bereich, viel Verkehr): Störung sofort an die Leitstelle/Technik weiterleiten.\n   - Hinweis auf „low_battery“: Austausch der Batterie oder Wartung anfordern.\n\n**Rückfrage:**  \nIst die Lampe Teil eines größeren Ausfalls (weitere Lampen betroffen) oder handelt es sich um einen Einzelfall? Gibt es Hinweise auf Manipulation oder Beschädigung am Mast?\n\nBitte um kurze Rückmeldung, damit die weitere Bearbeitung gezielt erfolgen kann.",
+    "tokens_estimate_words": 194
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+traffic_exposure=high führen zu klarem Safety-First-Fokus. Low_battery korrekt als Geräte-Zustand interpretiert, alle Kontextdaten sinnvoll genutzt, strukturierte Dokumentation und Eskalation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.663
+  },
+  "error": {}
+}

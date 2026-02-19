@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (im CONTEXT nicht vorhanden, daher kein Abzug)"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Safety und Dokumentation angemessen adressiert."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
@@ -32,20 +30,19 @@
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (connectivity=spotty erfordert lokale Dokumentation)",
-      "Batterie-Status bezieht sich auf Techniker-Gerät, nicht Asset (Missverständnis)"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Gute Struktur und Safety-Fokus bei hoher Severity und schlechten Sichtverhältnissen. Jedoch Verwechslung: 'Batterie-Status kontrollieren' bezieht sich fälschlich auf Asset statt Techniker-Gerät. Offline-Workflow fehlt trotz spotty connectivity."
+    "short_justification": "Exzellente Kontextnutzung (Regen, poor_visibility, low_battery erwähnt). Sicherheit priorisiert, Eskalation klar. Offline-Workflow fehlt trotz spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -56,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-First bei hoher Severity und schlechter Sicht, Offline-Workflow explizit erwähnt ('offline speichern'), korrekte Interpretation der CONTEXT-Hinweise (device.* = Techniker-Gerät), strukturierte Dokumentation und Eskalation."
+    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Workflow ('offline in der App erfassen, Foto lokal speichern'). Kompakt, sicherheitsorientiert, alle Guardrails beachtet."
   }
 ]

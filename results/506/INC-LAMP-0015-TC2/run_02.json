@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-19T11:57:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störung der Straßenlampe\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Gefahrenbereich abzusichern, besonders wegen hoher Verkehrsexposition und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Vandalismus prüfen.\n   - Umgebung auf weitere ausgefallene Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe einzeln oder im Verbund ausgefallen ist.\n   - Geräuschentwicklung oder ungewöhnliche Gerüche am Mast wahrnehmen.\n   - Da das Gerät online und der Gerätezustand „ok“ ist, liegt vermutlich ein Problem bei der Leuchte selbst oder der Stromversorgung vor.\n\n4. **Dokumentation**\n   - Fotos vom Ausfall und der Umgebung anfertigen (Foto ist laut Meldung vorhanden).\n   - Uhrzeit, genaue Position (47.8580112, 12.1324162), und alle Beobachtungen notieren.\n   - Schweregrad als „hoch“ dokumentieren (unsichere Situation, viel Verkehr).\n\n5. **Eskalation**\n   - Störung umgehend an die zuständige Leitstelle/Technik weiterleiten, da hohe Gefährdung besteht.\n   - Hinweis auf schnelle Behebung und ggf. temporäre Zusatzbeleuchtung geben.\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder handelt es sich nur um diese eine Leuchte? Gibt es Hinweise auf Manipulation oder Unfallspuren?",
+    "tokens_estimate_words": 182
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Absicherung mit konkreten Maßnahmen (Warnweste, Leitkegel), klare Diagnose, vollständige Dokumentation inkl. Koordinaten, sofortige Eskalation wegen hoher Gefährdung. Nutzt Context optimal (severity=high, traffic_exposure=high, poor_visibility, night)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.608
+  },
+  "error": {}
+}

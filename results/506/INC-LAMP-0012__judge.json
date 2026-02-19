@@ -14,39 +14,35 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Warnweste erwähnt trotz unsicherem Bereich",
-      "Keine Priorisierung bei akuter Gefährdung"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte vorhanden, aber Warnweste fehlt. Keine Halluzinationen bei minimalem Context."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherungs- und Eskalationslogik. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation und Handlungsschritte gut nachvollziehbar."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Warnweste nicht explizit erwähnt",
-      "Offline-Workflow nur implizit (Foto 'sobald möglich')"
+      "Offline-Workflow bei spotty connectivity nicht erwähnt"
     ],
-    "short_justification": "Gute Kontextnutzung (Koordinaten, spotty connectivity, low power mode). Offline-Aspekt angedeutet, aber nicht klar als Workflow formuliert. Sicherheit und Eskalation angemessen."
+    "short_justification": "Sehr gute Struktur und Dokumentation, klare Sicherheits- und Eskalationslogik bei medium severity und night/poor_visibility. Kontextnutzung gut (low_power_mode, spotty erwähnt), aber Offline-Workflow fehlt trotz connectivity=spotty."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -57,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Warnweste explizit, klarer Offline-Workflow (lokal speichern, später synchronisieren), differenzierte Eskalation, vollständige Kontextnutzung inkl. context_notes. Alle Dimensionen optimal erfüllt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit berücksichtigt ('offline speichern', 'später synchronisieren'), klare Sicherheits- und Eskalationslogik, präzise Dokumentation. Vollständige und robuste Kontextnutzung inkl. extras.context_notes."
   }
 ]

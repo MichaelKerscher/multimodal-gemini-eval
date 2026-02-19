@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-19T11:53:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchten absichern, besonders bei Dunkelheit oder in verkehrsreichen Bereichen.\n\n2. **Sichtprüfung**\n   - Prüfen, ob offensichtliche Schäden an Mast, Leuchte oder Verkabelung vorliegen.\n   - Umgebung auf weitere defekte Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Überprüfen, ob die Lampe komplett ohne Funktion ist oder z.B. flackert.\n   - Falls möglich: Sicherungen und Anschlüsse im Schaltschrank kontrollieren.\n   - Prüfen, ob andere Lampen im Umkreis betroffen sind (Hinweis auf größere Störung).\n\n4. **Dokumentation**\n   - Zustand der Lampe und getroffene Maßnahmen fotografisch und schriftlich festhalten.\n   - Asset-ID, Datum, Uhrzeit und besondere Beobachtungen notieren.\n\n5. **Eskalation**\n   - Bei offensichtlicher Gefahr (z.B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei einfachem Lampenausfall: Reparaturauftrag an zuständige Wartungsfirma weiterleiten.\n\n**Rückfrage:**  \nGibt es Informationen, ob die Lampe an einer Hauptstraße oder in einer Nebenstraße steht? Das beeinflusst die Dringlichkeit der Reparatur und die Absicherungsmaßnahmen.",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Sicherheitsfokus. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Eskalation und Dokumentation angemessen adressiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.613
+  },
+  "error": {}
+}

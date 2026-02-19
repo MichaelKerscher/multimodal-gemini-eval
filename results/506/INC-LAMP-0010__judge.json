@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)"
-    ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID gegeben war. Safety und Eskalation angemessen erwähnt."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline- oder Safety-Spezifika erwartbar. Dokumentation gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, Dämmerung, hohe Verkehrsexposition, spotty connectivity erkannt. Sicherheit priorisiert, Offline-Hinweis ('Vor Ort testen') vorhanden, Eskalation klar formuliert."
+    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility+high traffic klar adressiert, Offline-Workflow (spotty connectivity) erwähnt, umfassende Safety-Maßnahmen, strukturierte Eskalation und Dokumentation. Alle Kontextfaktoren berücksichtigt."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Spotty connectivity explizit adressiert ('keine Online-Abfragen, alles lokal dokumentieren'), Safety bei Regen/Dämmerung/hoher Verkehrsexposition priorisiert, Eskalation klar, Dokumentation offline-fähig."
+    "short_justification": "Perfekte Umsetzung: Spotty connectivity explizit adressiert (offline dokumentieren, später synchronisieren), hohe Verkehrsexposition und schlechte Sicht betont, klare Safety-First-Haltung, strukturierte Eskalation. Alle Kontexthinweise korrekt interpretiert."
   }
 ]

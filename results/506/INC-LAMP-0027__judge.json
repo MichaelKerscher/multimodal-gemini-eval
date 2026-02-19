@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0027-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine spezifischen Erwartungen setzt."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Kontextnutzung korrekt (keine Spekulation über fehlende Felder). Offline-Workflow nicht erwartet, da connectivity nicht im Kontext."
   },
   {
     "test_id": "INC-LAMP-0027-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 3,
-      "K": 3
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,16 +33,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Gute Struktur und Safety-Fokus bei high traffic_exposure. Spotty connectivity wird nicht adressiert (lokal dokumentieren/später synchronisieren fehlt)."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Verkehrsexposition, Regen). Kontextnutzung sehr gut (Koordinaten, Wetter, traffic_exposure). Offline-Workflow bei 'spotty' connectivity sollte erwähnt werden (lokal dokumentieren/synchronisieren)."
   },
   {
     "test_id": "INC-LAMP-0027-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('lokal speichern, später synchronisieren'), Safety bei high traffic_exposure, klare Dokumentation und Eskalation. Kontext vollständig genutzt."
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit erwähnt ('offline in der App dokumentieren', 'Fotos lokal speichern'), starker Safety-Fokus bei hoher Verkehrsexposition, vollständige Kontextnutzung inkl. extras.context_notes. Alle Kriterien erfüllt."
   }
 ]

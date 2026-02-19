@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 5
     },
@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, aber Offline-Workflow nicht erwähnt (im L0-Kontext jedoch nicht erwartbar)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sinnvolle Rückfrage zur Fehlereingrenzung."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Sturm, offline, Foto vorhanden). Offline-Workflow erkannt ('Gerät ist offline – keine Fernanalyse möglich'). Klare Struktur, Safety und Eskalation vorhanden."
+    "short_justification": "Exzellente Antwort: Sturm-Kontext berücksichtigt, Offline-Status erkannt ('keine Ferndiagnose möglich'), Safety-First-Prinzip bei Sturm, vollständige Dokumentation und angemessene Eskalation. Alle Kontextfaktoren sinnvoll integriert."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Offline-Workflow explizit ('offline speichern', 'lokal dokumentieren', 'Synchronisation sobald wieder online'), vollständige Safety-Maßnahmen bei Sturm, klare Eskalation, keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Offline-Workflow explizit ('offline speichern', 'später synchronisieren'), Sturm-Sicherheit beachtet, klare Eskalationskriterien, kompakte Struktur. Kontext-Notes korrekt umgesetzt, keine Halluzinationen."
   }
 ]

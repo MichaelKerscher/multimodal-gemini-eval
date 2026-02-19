@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-19T11:55:55",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt in Rosenheim, Stadtmitte (Asset-ID: n4427955479).\n\n**Checkliste für die Überprüfung:**\n\n1. **Absicherung**\n   - Warnblinkanlage am Einsatzfahrzeug einschalten.\n   - Warnwesten anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen durchführen.\n   - Prüfen, ob mehrere Lampen oder nur eine betroffen ist.\n   - Auf offensichtliche Schäden (z. B. zerbrochene Leuchten, lose Kabel) achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schaltkasten prüfen, ggf. Sicherungen kontrollieren.\n   - Prüfen, ob ein Stromausfall im Bereich vorliegt.\n   - Bei mehreren dunklen Lampen: Möglicher Fehler im Stromkreis oder Steuerungssystem.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Lampen anfertigen.\n   - Festgestellte Mängel und Maßnahmen schriftlich festhalten.\n   - Asset-ID (n4427955479) in der Dokumentation vermerken.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei größerem Ausfall (mehrere Lampen): Weiterleitung an die Fachabteilung für Netztechnik.\n\n**Rückfrage:**  \nSind aktuell Bauarbeiten oder bekannte Störungen im Bereich Rosenheim, Stadtmitte gemeldet? Gibt es Hinweise auf Vandalismus oder Unfälle?  \nFalls nicht, gehe ich von einem technischen Defekt aus und leite die Überprüfung ein.",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline- oder Safety-Spezifika erwartbar. Dokumentation gut abgedeckt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.974
+  },
+  "error": {}
+}

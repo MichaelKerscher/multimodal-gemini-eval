@@ -15,18 +15,18 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Konkrete Sicherheitsmaßnahmen bei 'unsicherem Bereich' könnten präziser sein"
+      "Severity-Einschätzung fehlt (nur aus User-Text 'unsicher' ableitbar)"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation sind adressiert, Dokumentation gut beschrieben. Keine Halluzinationen bei minimalem Context."
+    "short_justification": "Strukturierte, relevante Antwort mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimal Context vorliegt. Safety und Eskalation erkennbar, aber nicht explizit priorisiert (severity unbekannt)."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,14 +35,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Batterie, Schnee, Dämmerung, Foto). Klare Handlungsschritte, Sicherheit priorisiert, Eskalation bei hoher Dringlichkeit erkennbar. Vollständig und präzise."
+    "short_justification": "Exzellente Antwort: severity=high klar erkannt, Safety First (Absicherung, Polizei), Eskalation sofort, low_battery korrekt interpretiert. K=4 wegen fehlender Klarstellung, dass device_state das Techniker-Gerät betrifft (nicht Asset), aber keine Halluzination."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Schnee, schlechte Sicht, Foto, lit-Status). Sicherheit, Dokumentation und Eskalation klar strukturiert. Keine Halluzinationen trotz umfangreichem Context."
+    "short_justification": "Perfekte Antwort: severity=high erkannt, Safety First (Absicherung, Warnweste), Eskalation bei Gefahr, Dokumentation klar, keine Halluzinationen. Extras/context_notes korrekt beachtet (device_state nicht als Asset-Fehler interpretiert)."
   }
 ]
