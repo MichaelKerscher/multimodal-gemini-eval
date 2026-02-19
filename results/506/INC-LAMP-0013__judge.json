@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-Fokus (Absperrung, Warnschilder, keine Berührung). Eskalation an Elektrofachkraft vorhanden, Dokumentation klar beschrieben, Asset-ID korrekt verwendet. Keine Halluzinationen, alle Empfehlungen plausibel und umsetzbar."
+    "short_justification": "Exzellente Antwort: Klare 5-Schritt-Struktur mit Sicherheitsfokus (Absperrung, Warnschilder), Eskalation an Elektrofachkraft, Dokumentation inkl. Asset-ID. Keine Kontextinformationen verfügbar, daher keine Offline-Erwartung. Rückfrage fördert Präzision."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Verkehrsexposition, Dämmerung/poor_visibility, severity=high). Safety-Maßnahmen priorisiert, Eskalation mit Hinweis auf Lebensgefahr, Dokumentation inkl. Foto und Standort. Keine Spekulation, alle Angaben aus CONTEXT ableitbar."
+    "short_justification": "Hervorragend: Nutzt Kontext optimal (Koordinaten, Dämmerung/poor_visibility → Eigenbeleuchtung, severity=high → Eskalation inkl. Feuerwehr/Polizei). Strukturiert, sicherheitsorientiert, vollständige Dokumentation. Connectivity=online, daher kein Offline-Workflow nötig."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarem Safety-First-Ansatz (Absperrung, Stromschlaggefahr, keine Berührung). Eskalation an Elektrofachkraft mit hoher Dringlichkeit, Dokumentation vollständig. Rückfragen sinnvoll (Stromabschaltung), keine Halluzinationen, Kontextnutzung korrekt."
+    "short_justification": "Exzellent: Berücksichtigt Dämmerung/schlechte Sicht, nutzt photo_available korrekt als Workflow-Hinweis, OSM-ID und Koordinaten dokumentiert. Eskalation mit Priorität 'hoch', Rückfrage zur Stromabschaltung zeigt Sicherheitsbewusstsein. Connectivity=online, kein Offline-Workflow erforderlich."
   }
 ]

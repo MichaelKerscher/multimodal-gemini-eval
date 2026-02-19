@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Schritte nachvollziehbar dokumentiert."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheit adressiert, Eskalation vorhanden. Keine Kontextfehler bei minimalem CONTEXT."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -35,14 +35,14 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, poor_visibility). Sicherheit priorisiert, Eskalation klar. Offline-Workflow bei spotty connectivity nicht explizit erwähnt, aber device_state wurde erkannt."
+    "short_justification": "Exzellente Nutzung des vollen CONTEXT (Koordinaten, Umweltbedingungen, Nebel). Erwähnt 'spotty' und 'low_power_mode', aber kein expliziter Offline-Workflow (lokal speichern/später sync)."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit adressiert (lokal speichern, später synchronisieren), Sicherheit priorisiert, alle Kontextfaktoren (Nebel, Nacht, spotty connectivity) korrekt verarbeitet. Klare Eskalationslogik."
+    "short_justification": "Perfekte Kontextnutzung inkl. explizitem Offline-Workflow ('lokal speichern', 'später synchronisieren'). Alle Guardrails beachtet, klare Struktur, Safety und Eskalation vorhanden."
   }
 ]

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC1",
+  "timestamp": "2026-02-19T15:12:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293397459)",
+    "context": {
+      "asset_osm": "n13293397459"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt (Asset-ID: n13293397459).\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. defekte Leuchtmittel, lose Kabel, Vandalismus).\n   - Umgebung auf weitere Gefahrenquellen prüfen (z. B. beschädigte Masten, freiliegende Kabel).\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Leuchten (sofern möglich).\n   - Prüfen, ob Sicherungen ausgelöst wurden.\n   - Feststellen, ob ein größerer Stromausfall vorliegt oder nur einzelne Leuchten betroffen sind.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Leuchten machen.\n   - Festgestellte Mängel und Maßnahmen notieren (Datum, Uhrzeit, Asset-ID).\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Personen: Sofortige Meldung an die Leitstelle/Notdienst.\n   - Sonst: Störungsmeldung an die zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um eine komplette Straßenbeleuchtung oder nur einzelne Lampen? Gibt es Hinweise auf akute Gefahren (z. B. herabhängende Kabel, beschädigte Masten)?",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Checkliste mit klarer Struktur und Absicherung. Keine Kontextinformationen vorhanden, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht und bleibt generisch-korrekt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.187
+  },
+  "error": {}
+}

@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Priorisierung bei minimaler Kontextlage erkennbar",
-      "Absicherungsmaßnahmen bleiben vage ('falls möglich')"
+      "Keine explizite Priorisierung wegen 'Bereich wirkt unsicher'"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheitshinweis vorhanden, aber bei L0-Kontext fehlt klare Priorisierung der Dringlichkeit. Keine Halluzinationen, solide Basisantwort."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheit wird adressiert, aber ohne Kontext (severity, traffic_exposure) bleibt die Dringlichkeit etwas allgemein formuliert."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Absicherung priorisiert (Warnbaken, Warnleuchte wegen hoher Verkehrsexposition + Nacht), device_state (low_battery) korrekt interpretiert, Eskalation mit Priorität, Foto-Workflow erwähnt. Alle Kontextdaten sinnvoll genutzt, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Sicherheit wird priorisiert (Warnweste, Absicherung wegen hoher Verkehrsexposition und schlechter Sicht), klare Schritte, Kontextnutzung (low_battery, photo_available, severity=high), Eskalation bei akuter Gefahr."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Außendienst-Checkliste: Absicherung detailliert (Warnblinkanlage, PSA, Verkehrsexposition beachtet), Diagnose strukturiert, Foto-Workflow integriert, Eskalation bei akuter Gefahr klar definiert. Kontext vollständig und korrekt genutzt, keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Sicherheit steht an erster Stelle (Absicherung wegen Nacht, Verkehr, schlechter Sicht), strukturierte Checkliste, vollständige Kontextnutzung (severity=high, photo_available), klare Eskalation bei Gefährdung."
   }
 ]

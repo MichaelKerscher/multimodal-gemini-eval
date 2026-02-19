@@ -1,46 +1,18 @@
 [
   [
     "Offline-Workflow bei spotty connectivity",
-    4
-  ],
-  [
-    "Offline-Workflow (connectivity=offline)",
-    2
+    5
   ],
   [
     "Offline-Workflow (lokal dokumentieren, später synchronisieren)",
     1
   ],
   [
-    "Severity-Einschätzung fehlt (nur aus User-Text 'wirkt unsicher' ableitbar)",
+    "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt kein connectivity-Feld, daher nicht zwingend erwartbar)",
     1
   ],
   [
-    "Offline-Workflow fehlt (connectivity=offline im CONTEXT)",
-    1
-  ],
-  [
-    "Keine Anweisung zu lokaler Datenspeicherung/Synchronisation",
-    1
-  ],
-  [
-    "Hinweis auf lokale Dokumentation/Synchronisation",
-    1
-  ],
-  [
-    "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung",
-    1
-  ],
-  [
-    "Keine konkrete Anweisung zur Verkehrssicherung bei Nacht",
-    1
-  ],
-  [
-    "Keine explizite Priorisierung wegen 'Bereich wirkt unsicher' im User-Text",
-    1
-  ],
-  [
-    "Severity-Einschätzung fehlt (nur Asset-ID gegeben)",
+    "Severity-Einschätzung fehlt (bei L0 nicht erwartbar)",
     1
   ],
   [
@@ -48,39 +20,51 @@
     1
   ],
   [
-    "Keine Erwähnung von Offline-Workflow (nicht erwartbar bei L0_minimal ohne connectivity-Info)",
+    "Keine Erwähnung von Warnweste/Warnblinkanlage trotz 'Bereich wirkt unsicher'",
     1
   ],
   [
-    "Severity-Einstufung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
+    "Keine konkrete Absicherungsmaßnahme (Pylonen/Warnbake) genannt",
     1
   ],
   [
-    "Keine Erwähnung von Zeitkritikalität trotz Sicherheitsbedenken",
+    "Offline-Workflow nicht explizit erwähnt trotz connectivity='spotty'",
     1
   ],
   [
-    "Offline-Workflow könnte expliziter sein (lokal speichern, später synchronisieren)",
+    "Severity-Einschätzung fehlt (im Kontext nicht vorhanden)",
     1
   ],
   [
-    "Keine Priorisierung bei minimaler Kontextlage erkennbar",
+    "Konkrete Verkehrssicherheits-Maßnahmen bei hoher Exposition nicht erkennbar",
     1
   ],
   [
-    "Absicherungsmaßnahmen bleiben vage ('falls möglich')",
+    "Keine Erwähnung von Dämmerung/Sichtverhältnissen (im Kontext nicht vorhanden, daher kein Fehler)",
     1
   ],
   [
-    "Lokale Dokumentation/Synchronisation",
+    "Keine Erwähnung der Umgebungsbedingungen (Nacht, Nebel, schlechte Sicht)",
     1
   ],
   [
-    "Konkrete Sicherheitsmaßnahmen bei Dämmerung/schlechter Sicht nicht erwähnt",
+    "Severity/Dringlichkeit nicht erkennbar (CONTEXT leer)",
     1
   ],
   [
-    "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
+    "Keine Priorisierung erkennbar trotz 'Bereich wirkt unsicher'",
+    1
+  ],
+  [
+    "Keine Hinweise auf Zeitkritikalität",
+    1
+  ],
+  [
+    "Keine explizite Priorisierung wegen 'Bereich wirkt unsicher'",
+    1
+  ],
+  [
+    "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)",
     1
   ]
 ]

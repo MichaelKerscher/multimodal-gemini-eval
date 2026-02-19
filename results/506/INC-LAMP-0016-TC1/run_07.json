@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-19T15:09:58",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Info zum Asset n13293470414. Hier die empfohlene Vorgehensweise bei sporadischem Fehler einer Straßenlampe:\n\n**Checkliste für Außendienst:**\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnweste, ggf. Absperrung bei Gefährdung).\n   - Auf fließenden Verkehr achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeit, lose Teile prüfen.\n   - Prüfen, ob der Lampenkopf fest sitzt.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Fehler aktuell auftritt (Lampe an/aus).\n   - Nach Anzeichen für Wackelkontakt, Feuchtigkeit oder Vandalismus suchen.\n   - Falls möglich: Schaltzeiten und Umgebungsbedingungen notieren (z.B. Wetter, Tageszeit).\n\n4. **Dokumentation**\n   - Beobachtungen und Maßnahmen im System dokumentieren (inkl. Asset-ID).\n   - Fotos bei Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Verdacht auf elektrischen Defekt: Meldung an Fachabteilung/Elektriker weiterleiten.\n   - Hinweis: Bei Gefahr (z.B. freiliegende Kabel) sofortige Sperrung und Notfallmeldung.\n\n**Rückfrage:**  \nGab es in der Umgebung Bauarbeiten, Feuchtigkeitseintritt oder andere Auffälligkeiten?  \nSoll ein Elektriker zur weiteren Prüfung beauftragt werden?",
+    "tokens_estimate_words": 145
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Relevanz und Handlungsfähigkeit gut, Dokumentation klar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.793
+  },
+  "error": {}
+}

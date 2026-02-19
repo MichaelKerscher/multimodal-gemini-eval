@@ -6,7 +6,7 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 3
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Antwort mit klarer Struktur und Eskalation. Bei L0-Kontext angemessen generisch, keine Halluzinationen. Sicherheit adressiert, aber könnte bei 'Bereich wirkt unsicher' noch expliziter priorisiert werden."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfrage zur Priorisierung ist sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0004-TC2",
@@ -24,18 +24,16 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
-    ],
-    "short_justification": "Exzellente Antwort mit vollständiger Checkliste, klarer Safety-First-Haltung (Nebel, Nacht, high severity) und Eskalation. Spotty connectivity wird erwähnt ('Notizen für spätere digitale Diagnose'), aber kein expliziter Offline-Workflow (lokal speichern/später sync)."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high und poor_visibility werden durch starke Safety-Maßnahmen adressiert. Offline-Workflow bei spotty connectivity erwähnt. Alle Dimensionen sehr gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0004-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Safety-First klar priorisiert, Offline-Workflow explizit adressiert ('lokal dokumentieren', 'offline speichern', 'später synchronisieren'), vollständige Eskalation, keine Halluzinationen. Nutzt Kontext optimal und beachtet alle Guardrails."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('offline speichern', 'lokal dokumentieren', 'später übertragen'), Safety-First bei Nebel/Nacht, klare Eskalation bei severity=high. Alle Kontexthinweise korrekt verarbeitet."
   }
 ]

@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC2",
+  "timestamp": "2026-02-19T15:15:50",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für sporadischen Lampenausfall**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchte, Pylone).\n   - Verkehr beachten, da Sichtverhältnisse schlecht und Verkehrsmittel vorhanden.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Feuchtigkeit prüfen.\n   - Umgebung auf Anzeichen von Manipulation oder Vandalismus kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach beobachten: Geht sie erneut aus/ein?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Notieren, ob Fehler bei bestimmten Bedingungen (z. B. Feuchtigkeit, Erschütterung) auftritt.\n   - Aufgrund „spotty“ Konnektivität: Fernüberwachung ggf. eingeschränkt.\n\n4. **Dokumentation**\n   - Fehlerbild und Beobachtungen schriftlich festhalten.\n   - Foto vom Ist-Zustand machen (Foto liegt laut Meldung vor).\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Meldung an Fachfirma/Elektriker weiterleiten (Stichwort: intermittierender Fehler, erhöhte Unfallgefahr bei schlechter Sicht).\n   - Dringlichkeit: mittelhoch, da sporadischer Ausfall bei schlechter Sicht ein Sicherheitsrisiko darstellt.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Erschütterungen oder Stromausfälle in der Nähe? Das kann die Fehlerursache eingrenzen.",
+    "tokens_estimate_words": 155
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit explizitem Bezug auf poor_visibility, traffic_exposure und spotty connectivity. Offline-Workflow wird indirekt erwähnt ('Fernüberwachung eingeschränkt'). Alle Kontextfaktoren sinnvoll integriert, Safety-First klar erkennbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.405
+  },
+  "error": {}
+}

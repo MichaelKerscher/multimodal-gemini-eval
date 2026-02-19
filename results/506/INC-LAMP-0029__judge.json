@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Offline-Workflow nicht erwartbar (kein connectivity-Signal)."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -33,10 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (connectivity=offline)",
-      "Lokale Dokumentation/Synchronisation"
+      "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)"
     ],
-    "short_justification": "Exzellente Struktur, Safety und Eskalation bei severity=high. Kritischer Fehler: connectivity=offline wird ignoriert, keine Offline-Dokumentationshinweise trotz explizitem Kontext."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus, klarer Struktur und Eskalation passend zu severity=high + night + poor_visibility. Offline-Workflow fehlt trotz connectivity=offline, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit adressiert ('lokal dokumentieren', 'offline speichern', 'später synchronisieren'), Safety-First bei night+poor_visibility, klare Eskalation bei severity=high, vollständige Dokumentation."
+    "short_justification": "Perfekte Antwort: Safety-First, klare Struktur, Eskalation bei Gefahr, Offline-Workflow explizit erwähnt ('lokal speichern', 'Offline-Protokoll', 'später synchronisieren'). Alle Kontext-Signale korrekt verarbeitet."
   }
 ]

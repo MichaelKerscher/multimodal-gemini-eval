@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umwelthinweise erwartbar. Sicherheit könnte stärker betont werden bei unbekannter Gefahrenlage."
+    "missing_elements": [
+      "Keine Erwähnung von Dämmerung/Sichtverhältnissen (im Kontext nicht vorhanden, daher kein Fehler)"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimaler Kontext vorliegt. Sicherheitsaspekte angemessen, aber nicht explizit auf Dämmerung/Regen eingegangen (war nicht im Kontext)."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -33,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Regen, schlechte Sicht, low_power_mode und Dämmerung werden adressiert. Klare Sicherheitshinweise, strukturierte Dokumentation, angemessene Eskalation. Vollständig und umsetzbar."
+    "short_justification": "Exzellente Kontextnutzung: Regen, Dämmerung, poor_visibility und low_power_mode werden korrekt einbezogen. Sicherheit, Struktur, Dokumentation und Eskalation vollständig. Kein Offline-Workflow nötig (connectivity=online)."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -47,10 +49,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Regen, Dämmerung, schlechte Sicht, low_power_mode). Klare Sicherheitspriorisierung, strukturierte Schritte, umfassende Dokumentation und angemessene Eskalation bei medium severity."
+    "short_justification": "Kompakte, präzise Antwort mit vollständiger Kontextnutzung (Regen, Dämmerung, low_power_mode). Offline-Dokumentation wird korrekt erwähnt ('digital oder offline dokumentieren'). Alle Dimensionen erfüllt, keine Halluzinationen."
   }
 ]

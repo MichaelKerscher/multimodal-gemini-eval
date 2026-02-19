@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit (Absperrung, Warnung, keine Berührung). Eskalation an Elektrofachkraft explizit genannt. Dokumentation und Rückfragen angemessen. Keine Kontextinformationen verfügbar, daher keine Erwartung an Kontextnutzung."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarem Safety-First-Fokus (Absperrung, Warnung, Abstand). Eskalation an Elektrofachkraft explizit genannt. Dokumentation und Rückfrage angemessen. Keine Halluzinationen trotz minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Standortname, severity=high erkannt). Sicherheitsmaßnahmen priorisiert, Eskalation mit Prioritätshinweis ('hohe Priorität: Berührungsgefahr!'). Strukturiert, umsetzbar, dokumentationsorientiert. Rückfragen sinnvoll."
+    "short_justification": "Exzellente Umsetzung: Standortname korrekt genutzt, severity=high führt zu klarer Priorisierung bei Eskalation. Alle Sicherheitsschritte (Absperrung, Abstand, keine Berührung) explizit genannt. Kontextnutzung präzise, keine Spekulation."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Kompakte, präzise Checkliste mit klarem Safety-First-Ansatz (Absperrung, Warnung, keine Berührung). Eskalation an Elektro-Fachpersonal mit Priorität genannt. Dokumentation und Rückfrage zur Zugänglichkeit zeigen Situationsbewusstsein. Kontext angemessen genutzt."
+    "short_justification": "Kompakte, präzise Checkliste mit allen erforderlichen Elementen. Safety-First-Prinzip durchgängig (Absperrung, Warnschilder, Abstand, keine Berührung). Eskalation mit Prioritätshinweis. Photo_available korrekt als Workflow-Hinweis interpretiert, keine Halluzinationen."
   }
 ]

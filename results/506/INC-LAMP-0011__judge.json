@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – aber das ist bei L0 erwartbar und kein Fehler."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheitsmaßnahmen vorhanden, aber bei minimalem Kontext etwas generisch. Keine Halluzinationen, gute Dokumentationshinweise."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel und schlechte Sicht werden explizit in Absicherung einbezogen, mittlere Verkehrsbelastung berücksichtigt, intermittierender Fehler durch Mehrfachtests adressiert. Vollständige Dokumentation und klare Eskalationskriterien."
+    "short_justification": "Exzellente Kontextnutzung: Nebel/schlechte Sicht, mittlere Verkehrsbelastung, intermittierender Fehler werden gezielt adressiert. Klare Sicherheitspriorisierung, strukturierte Diagnose, vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Kompakte, präzise Checkliste mit vollständiger Kontextintegration (Nebel, schlechte Sicht, mittlerer Verkehr). Intermittierender Fehler durch Mehrfachtests adressiert, klare Eskalation und Dokumentation. Effiziente Struktur ohne Redundanz."
+    "short_justification": "Hervorragende Antwort mit vollständiger Kontextintegration (Nebel, mittlere Verkehrsexposition, intermittierender Fehler). Klare Sicherheitspriorisierung, strukturierte Diagnose mit Reproduktionsversuch, umfassende Dokumentation und Eskalationspfade."
   }
 ]

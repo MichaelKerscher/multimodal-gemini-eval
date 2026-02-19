@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0027-TC1",
+  "timestamp": "2026-02-19T15:14:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n4939032947)",
+    "context": {
+      "asset_osm": "n4939032947"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0027",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Checkliste für Außendienst-Einsatz – Asset n4939032947 (Straßenlampe/Ampel, Flackern bei Regen)\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, ggf. Verkehrslenkung).\n   - Eigene Sicherheit und die von Verkehrsteilnehmern gewährleisten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Assets bei Regen (wenn möglich) oder direkt nach Niederschlag.\n   - Prüfen auf sichtbare Feuchtigkeitseintritte, beschädigte Gehäuse, offene Kabel oder Korrosion.\n   - Umfeld auf Pfützen, Wasseransammlungen oder beschädigte Schächte kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es nur bei Regen/Nässe auf?\n   - Prüfen, ob weitere Lampen/Ampeln in der Nähe betroffen sind.\n   - Mögliche Ursachen: Undichte Gehäuse, defekte Dichtungen, Feuchtigkeit in elektrischen Komponenten.\n   - Falls möglich: Isolationsmessung oder Feuchtigkeitsprüfung durchführen.\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Wetterbedingungen und Beobachtungen notieren.\n   - Fotos von betroffenen Stellen und Umgebung anfertigen.\n   - Zeitpunkt und Dauer des Flackerns festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Funkenbildung, starker Wassereintritt): Sofortige Abschaltung und Meldung an die Leitstelle/Technik.\n   - Bei wiederholtem Flackern ohne akute Gefahr: Störungsmeldung mit allen Dokumentationen an die Instandhaltung weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf offene Kabel oder beschädigte Gehäuseteile?",
+    "tokens_estimate_words": 183
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Sicherheitspriorisierung und Eskalationskriterien. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gute Dokumentationshinweise."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.356
+  },
+  "error": {}
+}

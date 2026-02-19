@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert, Dokumentation gut. Keine Halluzinationen trotz minimalem Kontext."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID aus CONTEXT genutzt. Keine Offline-Erwähnung nötig (CONTEXT minimal)."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort mit vollständiger Nutzung des Kontexts (Koordinaten, severity, Umgebungsbedingungen). Klare Struktur, gute Diagnose-Hinweise, angemessene Sicherheitsmaßnahmen."
+    "short_justification": "Exzellente Nutzung des CONTEXT (severity=medium, traffic_exposure=low, device online). Klare Schritte, Absicherung, Diagnose mit Bezug auf 'online/ok'-Status. Eskalation passend zur mittleren Priorität. Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit kontextsensibler Risikoeinschätzung (Tag, klares Wetter, niedriges Verkehrsaufkommen). Strukturiert, umsetzbar, angemessene Eskalationswege. Hinweis zur Dringlichkeit passend."
+    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (Asset-ID, Koordinaten, severity, traffic_exposure). Absicherung, Diagnose, Dokumentation und Eskalation klar strukturiert. Keine Halluzinationen, keine unnötigen Spekulationen."
   }
 ]

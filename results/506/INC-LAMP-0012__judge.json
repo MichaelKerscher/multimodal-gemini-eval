@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung",
-      "Keine konkrete Anweisung zur Verkehrssicherung bei Nacht"
+      "Keine Erwähnung von Warnweste/Warnblinkanlage trotz 'Bereich wirkt unsicher'",
+      "Keine konkrete Absicherungsmaßnahme (Pylonen/Warnbake) genannt"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte werden angesprochen, aber bei Nacht und unsicherem Bereich könnte persönliche Schutzausrüstung expliziter sein. Gute Dokumentationshinweise."
+    "short_justification": "Gute Struktur und Eskalation erkennbar. Absicherung wird erwähnt, aber ohne konkrete Schutzmaßnahmen für den Techniker selbst (Warnweste, Warnblinkanlage). Kontextnutzung angemessen bei minimalem CONTEXT."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
@@ -32,11 +32,13 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort mit expliziter Warnweste, Warnblinkanlage und Absicherung. Berücksichtigt spotty connectivity und low_power_mode. Klare Eskalation mit Dringlichkeitsbewertung. Vollständige Dokumentation und kontextgerechte Sicherheitsmaßnahmen."
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt trotz connectivity='spotty'"
+    ],
+    "short_justification": "Exzellente Antwort mit klarer Absicherung (Warnweste, Pylonen), strukturierter Diagnose und Eskalation. Koordinaten und Kontextdaten gut genutzt. Offline-Workflow bei 'spotty' connectivity könnte expliziter sein (nur 'Fernabfrage ggf. nicht möglich' erwähnt)."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
@@ -54,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung aller Anforderungen. Expliziter Offline-Workflow (lokal dokumentieren, später synchronisieren) entsprechend spotty connectivity. Warnweste, Absicherung und Eskalation klar strukturiert. Vollständige Kontextnutzung ohne Spekulation."
+    "short_justification": "Perfekte Umsetzung: Absicherung klar (Warnweste, Pylonen), Offline-Workflow explizit genannt ('offline dokumentieren', 'Fotos lokal speichern', 'Synchronisation nach Wiederherstellung'), Eskalation differenziert, alle Kontextdaten sinnvoll genutzt. Keine Halluzinationen."
   }
 ]

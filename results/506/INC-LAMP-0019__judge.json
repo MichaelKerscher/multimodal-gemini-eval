@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, angemessen für minimalen Kontext."
+    "short_justification": "Solide Antwort trotz minimalem Kontext. Absicherung, Diagnose, Dokumentation und Eskalation klar strukturiert. Keine Halluzinationen, angemessene Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Nutzung des vollen Kontexts (Nebel, poor_visibility, night, medium traffic). Sicherheit priorisiert, Diagnose plausibel, Dokumentation klar."
+    "short_justification": "Exzellente Antwort. Alle Kontextfaktoren (Nacht, Nebel, poor_visibility, medium traffic) optimal verarbeitet. Absicherung priorisiert, strukturierte Schritte, klare Eskalation, gute Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Koordinaten, OSM-ID, Umweltbedingungen). Sicherheit, Diagnose und Dokumentation vollständig abgedeckt."
+    "short_justification": "Hervorragende Antwort. Alle Umgebungsfaktoren (Nebel, Nacht, poor_visibility, medium traffic) korrekt einbezogen. Klare Priorisierung von Absicherung und Eigenschutz, strukturierte Checkliste, vollständige Dokumentation und Eskalation."
   }
 ]

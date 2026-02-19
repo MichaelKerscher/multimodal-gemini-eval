@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC2",
+  "timestamp": "2026-02-19T15:12:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093607",
+        "longitude": 12.116472,
+        "latitude": 47.837186,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n**1. Absicherung**\n- Bereich um die defekte Lampe (Rosenheim, Heilig Blut) sofort absichern, da schlechte Sicht und Schnee herrschen.\n- Warnbaken oder mobile Warnleuchten aufstellen, um Fußgänger und Verkehrsteilnehmer zu schützen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Lampe durchführen: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, lose Teile)?\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Hinweis aus Gerätedaten: Lampe ist online, aber Batterie schwach („low_battery“).\n- Wahrscheinlich ist die Batterie erschöpft. Kein Hinweis auf Vandalismus oder größere Störung.\n- Foto der Störung liegt vor – zur weiteren Analyse nutzen.\n\n**4. Dokumentation**\n- Alle Beobachtungen (Sichtprüfung, Gerätestatus, Umfeldbedingungen) dokumentieren.\n- Foto und Standortdaten sichern.\n\n**5. Eskalation**\n- Störung mit hoher Priorität an Wartungsteam melden (wegen hoher Gefährdungslage).\n- Hinweis auf Batterieproblem und aktuelle Wetterlage weitergeben.\n- Bis zur Reparatur regelmäßige Kontrolle und ggf. weitere Absicherungsmaßnahmen einplanen.\n\n**Rückfrage:**  \nSoll eine temporäre Ersatzbeleuchtung organisiert werden, bis die Reparatur erfolgt?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Priorisierung reflektiert. Kontextdaten (low_battery, snow, poor_visibility) werden korrekt interpretiert. Klare Eskalation mit Hinweis auf hohe Priorität."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.447
+  },
+  "error": {}
+}

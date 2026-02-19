@@ -15,28 +15,25 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, praxisnahe Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Relevante Rückfragen zur Eingrenzung."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimaler Kontext vorliegt. Offline-Workflow nicht erwartbar (kein connectivity-Hinweis im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 3,
-      "K": 2
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (connectivity=offline)",
-      "Hinweis auf lokale Dokumentation/Synchronisation"
-    ],
-    "short_justification": "Gute Struktur und Safety-Fokus bei Sturm. Jedoch fehlt expliziter Offline-Workflow trotz connectivity=offline im Context. Dokumentation erwähnt 'im System erfassen', was Online-Zugriff impliziert."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sturm-Kontext berücksichtigt, Offline-Hinweis integriert ('Gerät ist laut System offline, daher keine Ferndiagnose möglich'), klare Safety- und Eskalationsschritte. Vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Umsetzung: Offline-Workflow explizit berücksichtigt ('offline speichern', 'offline-Formular'), klare Safety-Maßnahmen bei Sturm, strukturierte Eskalation, präzise Dokumentationshinweise. Vollständig kontextgerecht."
+    "short_justification": "Perfekte Antwort: Offline-Workflow explizit ('offline speichern', 'lokal dokumentieren, später synchronisieren'), Sturm-Kontext integriert, klare Struktur, keine Spekulation. Alle Kontext-Hinweise korrekt umgesetzt."
   }
 ]

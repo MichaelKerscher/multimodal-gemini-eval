@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einstufung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
-      "Keine Erwähnung von Zeitkritikalität trotz Sicherheitsbedenken"
+      "Keine Priorisierung erkennbar trotz 'Bereich wirkt unsicher'",
+      "Keine Hinweise auf Zeitkritikalität"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung und Eskalation. Kontextnutzung korrekt (keine Spekulation über fehlende Daten). Sicherheitsfokus erkennbar, aber könnte bei 'unsicher' noch deutlicher priorisiert werden."
+    "short_justification": "Strukturierte, vollständige Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen bei minimalem Context. Safety und Eskalation vorhanden, aber Dringlichkeit könnte stärker betont werden."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high wird korrekt erkannt und priorisiert, Sicherheitsmaßnahmen stehen an erster Stelle, low_battery wird korrekt als Geräte-Constraint interpretiert (nicht als Asset-Fehler), alle Kontextdaten sinnvoll genutzt."
+    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Absicherung und Priorisierung reflektiert. Kontextdaten (low_battery, snow, poor_visibility) werden korrekt interpretiert. Klare Eskalation mit Hinweis auf hohe Priorität."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Umsetzung: Sicherheit priorisiert, Severity=high adäquat behandelt, device_state korrekt als Workflow-Constraint verstanden (Akku-Hinweis), keine Halluzinationen, strukturiert und praxisnah."
+    "short_justification": "Sehr gute Antwort mit klarer Priorisierung der Absicherung bei hoher Severity. Kontextdaten (Schnee, schlechte Sicht, hohe Dringlichkeit) werden korrekt verarbeitet. Eskalation und Dokumentation vollständig adressiert."
   }
 ]

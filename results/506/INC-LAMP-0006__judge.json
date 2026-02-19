@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (nur aus User-Text 'wirkt unsicher' ableitbar)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartet (connectivity nicht im CONTEXT)."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da Kontext minimal ist. Offline-Workflow nicht erwartbar (kein connectivity-Signal im L0-Kontext)."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
@@ -26,19 +24,18 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline im CONTEXT)",
-      "Keine Anweisung zu lokaler Datenspeicherung/Synchronisation"
+      "Offline-Workflow (lokal dokumentieren, später synchronisieren)"
     ],
-    "short_justification": "Exzellente Safety- und Eskalations-Struktur, severity=high korrekt adressiert. ABER: connectivity=offline wird ignoriert, Fotos/Dokumentation ohne Offline-Hinweis → K=2, hallucination_suspected=true."
+    "short_justification": "Exzellente Safety-Priorisierung, klare Eskalation, detaillierte Dokumentation. Offline-Workflow fehlt trotz connectivity=offline im Kontext (K=3). Keine Halluzinationen, alle Fakten aus Kontext ableitbar."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -56,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständig korrekt: Safety first, Offline-Workflow explizit ('offline speichern, später synchronisieren'), severity=high adressiert, keine Halluzinationen. Alle CONTEXT-Signale (storm, offline, low_battery) berücksichtigt."
+    "short_justification": "Vollständig: Safety-First, klare Eskalation, Offline-Workflow explizit genannt ('offline speichern', 'später synchronisieren'). Alle Kontextinformationen korrekt genutzt, keine Halluzinationen."
   }
 ]

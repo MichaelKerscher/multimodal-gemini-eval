@@ -9,13 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Schritte nachvollziehbar dokumentiert."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsfolge. Sicherheit angemessen für minimalen Kontext (keine Gefahrenindikatoren). Keine Halluzinationen, korrekte Kontextnutzung."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Sturm, Nacht, hoher Verkehr, Offline-Gerät). Sicherheit priorisiert, Offline-Workflow erwähnt, klare Eskalationskriterien. Sehr gut strukturiert und dokumentiert."
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nacht, Sturm, hoher Verkehr), Offline-Workflow erkannt ('keine Fernabfrage möglich'), vollständige Dokumentation und Eskalation. Alle Kontextfaktoren berücksichtigt."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort mit vollständiger Kontextintegration. Offline-Workflow explizit erwähnt ('lokal dokumentieren'), Sicherheit priorisiert (Sturm, Nacht, Verkehr), klare Eskalation bei akuter Gefahr. Kompakt und präzise."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('lokal speichern, später synchronisieren'), Sicherheit priorisiert, strukturierte Diagnose, vollständige Dokumentation. Extras-Hinweise korrekt interpretiert."
   }
 ]

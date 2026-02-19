@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-19T15:10:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segment fällt zeitgleich aus)\n\n**1. Absicherung**\n- Warnblinkanlage einschalten, ggf. Absperrmaterial aufstellen.\n- Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): Bereich großzügig absichern, Warnwesten tragen.\n- Verkehrsteilnehmer durch Hinweisschilder oder Lichtsignale warnen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle des betroffenen Segments und der Steuerbox vor Ort.\n- Prüfen, ob äußere Schäden, Manipulation oder Feuchtigkeit sichtbar sind.\n- Kontrollieren, ob weitere Segmente betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob die Steuerbox Strom erhält (Sicherung, Zuleitung).\n- Statusanzeigen an der Steuerbox kontrollieren.\n- Da Gerät online und Zustand „ok“: Fehler könnte in der Steuerlogik oder Verkabelung liegen.\n- Prüfen, ob ein Reset der Steuerbox möglich und sinnvoll ist.\n- Notieren, ob das Problem reproduzierbar ist (tritt der Fehler nach Reset erneut auf?).\n\n**4. Dokumentation**\n- Alle Maßnahmen, Beobachtungen und Auffälligkeiten schriftlich festhalten.\n- Fotos machen (sofern möglich, aktuell nicht verfügbar).\n- Zeit, Wetter, Sichtverhältnisse und Verkehrsaufkommen dokumentieren.\n\n**5. Eskalation**\n- Bei unklarer Ursache oder anhaltendem Ausfall: Störung an Fachfirma/Techniker weiterleiten.\n- Bei erhöhter Gefährdung (z.B. Kreuzung, Schulweg): Sofortige Meldung an Verkehrsbehörde und ggf. Polizei.\n\n**Rückfragen/Annahmen:**\n- Gibt es Zugang zur Steuerbox vor Ort?\n- Sind Pläne/Schaltbilder verfügbar?\n- Ist ein Reset der Steuerbox erlaubt/vorgesehen?\n\nBitte gib Bescheid, falls weitere Details zum Segment, zur Steuerbox oder zum bisherigen Verlauf vorliegen.",
+    "tokens_estimate_words": 210
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontextinformationen (Nacht, Nebel, mittlere Verkehrsexposition), passt Sicherheitsmaßnahmen an, integriert device_state sinnvoll in Diagnose, klare Eskalationskriterien und Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.17
+  },
+  "error": {}
+}

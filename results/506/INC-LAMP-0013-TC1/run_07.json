@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC1",
+  "timestamp": "2026-02-19T15:08:41",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n13278610215)",
+    "context": {
+      "asset_osm": "n13278610215"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Gefahrenbereich sofort absperren (z. B. mit Warnbaken, Absperrband).\n   - Warnschilder „Stromschlaggefahr“ aufstellen.\n   - Passanten und Verkehrsteilnehmer fernhalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung? Liegen stromführende Teile frei?\n   - Prüfen, ob weitere Bauteile betroffen sind (z. B. Mast, Fundament, Verkabelung).\n\n3. **Diagnose/Beobachtung**\n   - Einschätzen, ob akute Gefahr besteht (z. B. Funken, Geräusche, Feuchtigkeit).\n   - Keine Berührung oder Reparaturversuche vornehmen!\n\n4. **Dokumentation**\n   - Fotos der Beschädigung und der Absicherung anfertigen.\n   - Schaden und getroffene Maßnahmen schriftlich festhalten (inkl. Asset-ID: n13278610215).\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft umgehend informieren.\n   - Weitergabe aller Informationen und Dokumentation an die zuständige Stelle.\n\n**Rückfrage:**  \nKannst du die genaue Lage der Beschädigung (z. B. am Mastfuß, Tür, Kopf) beschreiben? Sind stromführende Teile sichtbar?",
+    "tokens_estimate_words": 131
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Klare 5-Schritt-Struktur mit Sicherheitsfokus (Absperrung, Warnschilder), Eskalation an Elektrofachkraft, Dokumentation inkl. Asset-ID. Keine Kontextinformationen verfügbar, daher keine Offline-Erwartung. Rückfrage fördert Präzision."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.656
+  },
+  "error": {}
+}

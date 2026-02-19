@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-19T15:04:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Kontrolle Straßenlampe \"Rosenheim, Heilig Blut\" – Checkliste\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Arbeitsbereich mit Pylonen/Leitkegeln absichern (besonders bei Nacht, Nebel, mittlerer Verkehr).\n- Auf eigene Sicherheit und Sichtbarkeit achten.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf äußere Schäden prüfen (Risse, lose Teile, Feuchtigkeitsspuren).\n- Anschlusskasten auf Manipulation oder Feuchtigkeit kontrollieren.\n- Umgebung auf mögliche Störquellen (z.B. Bäume, Fahrzeuge) prüfen.\n\n**3. Diagnose/Beobachtung**\n- Lampe mehrmals ein- und ausschalten, um Fehlerbild zu beobachten.\n- Prüfen, ob Ausfall mit bestimmten Bedingungen (Feuchtigkeit, Erschütterung) zusammenhängt.\n- Bei intermittierenden Fehlern: Kontakte, Verkabelung und Dichtungen auf Korrosion oder Wackelkontakt prüfen.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen notieren.\n- Foto vom aktuellen Zustand machen (Foto liegt laut Meldung vor, ggf. ergänzen).\n- Fehlerbild und Zeitpunkt dokumentieren.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Verdacht auf sicherheitsrelevanten Defekt: Störung an Zentrale melden, ggf. Reparaturteam anfordern.\n- Bei unklarer Ursache: Weiterführende Diagnose durch Fachpersonal veranlassen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Bauarbeiten in der Nähe, die Einfluss auf die Stromversorgung gehabt haben könnten?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 178
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Berücksichtigt Nacht, Nebel, mittleren Verkehr (Absicherung betont), intermittierenden Fehler (Wackelkontakt, Feuchtigkeit), Foto-Hinweis, klare Eskalation. Alle Kontextdaten sinnvoll genutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.933
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-19T15:04:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die Lampe absichern (z. B. Warnbaken, ggf. Absperrband).\n   - Auf ausreichende Verkehrssicherung achten, besonders bei Dunkelheit oder in Gefahrenbereichen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts: Gibt es offensichtliche Schäden (z. B. Glasbruch, verbogene Teile, freiliegende Kabel)?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Leuchtmittel defekt? (Prüfen, ob Glühfaden gebrochen oder LED ausgefallen)\n   - Stromversorgung prüfen: Ist der Sicherungskasten zugänglich? Liegt Spannung an?\n   - Gibt es Anzeichen für Vandalismus oder Feuchtigkeitseintritt?\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Lampe und Umgebung machen.\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Asset-ID).\n\n5. **Eskalation**\n   - Bei Gefahr (z. B. freiliegende Kabel): Sofort an die Leitstelle/Notdienst melden.\n   - Bei einfachem Leuchtmitteltausch: Auftrag an Wartungsteam weitergeben.\n   - Bei unklarer Ursache oder größerem Schaden: Fachfirma oder Elektriker informieren.\n\n**Rückfrage:**  \nIst bekannt, ob die Lampe an einer Hauptstraße oder in einem sensiblen Bereich (z. B. Schulweg) steht? Das beeinflusst die Dringlichkeit der Reparatur.",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Struktur mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflows erwartbar. Rückfrage zur Dringlichkeit ist sinnvoll."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.86
+  },
+  "error": {}
+}

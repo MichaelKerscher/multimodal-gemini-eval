@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC1",
+  "timestamp": "2026-02-19T15:05:17",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293404153)",
+    "context": {
+      "asset_osm": "n13293404153"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n13293404153 (Straßenbeleuchtung).\n\n**Checkliste für die Überprüfung vor Ort**\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern.\n   - Auf fließenden Verkehr achten, ggf. zweite Person zur Absicherung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. defekte Leuchtmittel, beschädigte Masten, lose Kabel).\n   - Umgebung auf weitere Gefahrenquellen prüfen (z. B. freiliegende Kabel, Stolperstellen).\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schalten die Lampen bei Dämmerung ein?\n   - Prüfen, ob Sicherungen ausgelöst oder Schaltschränke beschädigt sind.\n   - Bei Bedarf Messgerät für Spannung/Kontinuität verwenden.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und von Schäden machen.\n   - Festgestellte Mängel und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Asset-ID).\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Stromschlagrisiko, Verkehrsgefährdung): Sofort Notdienst/Techniker und ggf. Polizei informieren.\n   - Sonst: Störung an die zuständige Fachabteilung weiterleiten, Reparatur beauftragen.\n\n**Rückfrage:**  \nIst bekannt, ob nur dieser Abschnitt oder auch benachbarte Lampen betroffen sind? Gibt es Hinweise auf kürzliche Bauarbeiten oder Unwetter in dem Bereich?",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gute Dokumentationshinweise."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.627
+  },
+  "error": {}
+}

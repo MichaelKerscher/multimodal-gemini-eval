@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sicherheitsaspekte angemessen adressiert."
+    "short_justification": "Solide Checkliste mit klarer Struktur und Absicherung. Keine Kontextinformationen vorhanden, daher keine Offline-Workflow-Erwartung; Modell spekuliert nicht und bleibt generisch-korrekt."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,10 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow könnte expliziter sein (lokal speichern, später synchronisieren)"
-    ],
-    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Koordinaten, Severity, Wetter, Verkehr). Offline-Status wird erwähnt ('Gerät offline, keine Fernabfrage'), aber Offline-Dokumentations-Workflow könnte deutlicher sein. Sicherheit priorisiert (Sturm, hoher Verkehr)."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sturm, hohe Verkehrsexposition und Offline-Status werden korrekt adressiert. Offline-Workflow ('keine Fernabfrage möglich') erkannt, Safety priorisiert, Eskalation klar formuliert."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('offline speichern', 'lokal dokumentieren', 'nach Rückkehr synchronisieren'), Sicherheit priorisiert (Sturm, hoher Verkehr, poor visibility), severity=high adäquat behandelt mit Eskalation. Alle Kontextinformationen korrekt genutzt."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('offline speichern', 'nachträglich synchronisieren'), Sturm/Sicht/Verkehr adressiert, Eskalation bei akuter Gefahr klar, Dokumentation vollständig. Keine Halluzinationen."
   }
 ]

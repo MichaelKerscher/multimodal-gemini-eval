@@ -9,13 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen stellt."
+    "short_justification": "Relevante, strukturierte Antwort mit klarer Handlungsfolge. Sicherheit wird angesprochen, aber nicht priorisiert. Dokumentation und Eskalation sind vorhanden. Keine Halluzinationen, Kontext minimal genutzt."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -24,18 +24,16 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (lokal dokumentieren, später synchronisieren)"
-    ],
-    "short_justification": "Exzellente Struktur und Kontextnutzung (Batterie, Verkehr, Standort). Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow beschrieben (K=3)."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Warnweste, Absicherung bei hohem Verkehr), Offline-Workflow erkannt (Foto lokal, keine Fernabfrage), Batteriestand adressiert, vollständige Dokumentation und Eskalation. Kontext optimal genutzt."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('lokal speichern', 'später synchronisieren'), alle Kontextaspekte korrekt verarbeitet, klare Struktur und Sicherheitsfokus."
+    "short_justification": "Sehr gute Antwort: Sicherheit priorisiert, Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), hohe Verkehrsexposition berücksichtigt, klare Eskalationskriterien. Kontext inkl. Guardrails korrekt interpretiert."
   }
 ]

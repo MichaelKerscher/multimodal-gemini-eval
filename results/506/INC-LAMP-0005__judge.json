@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (spotty connectivity, low_battery, fog, dusk). Offline-Workflow implizit erwähnt ('manuell prüfen'), Sicherheit priorisiert, vollständige Dokumentation und Eskalation."
+    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Nebel, Dämmerung, spotty connectivity erwähnt). Offline-Workflow implizit berücksichtigt ('keine Ferndiagnose möglich'). Sehr strukturiert und sicherheitsorientiert."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextintegration: Offline-Workflow explizit genannt ('lokal dokumentieren', 'später synchronisieren'), Umweltbedingungen (Nebel, Dämmerung) berücksichtigt, low_battery-Hinweis korrekt als Geräte-Constraint interpretiert. Vollständig und umsetzbar."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('Fotos lokal speichern', 'Offline-Modus beachten'), alle Kontextfaktoren berücksichtigt (Nebel, Dämmerung, spotty connectivity). Klare Struktur und Eskalation."
   }
 ]

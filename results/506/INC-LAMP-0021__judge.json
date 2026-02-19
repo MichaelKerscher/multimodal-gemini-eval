@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung von Offline-Workflow (nicht erwartbar bei L0_minimal ohne connectivity-Info)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimaler Kontext vorliegt. Rückfrage sinnvoll."
+    "missing_elements": [],
+    "short_justification": "Solide Checkliste mit klarer Struktur, Sicherheitsmaßnahmen und Eskalation. Keine Offline-Workflow-Erwähnung nötig (connectivity nicht im Context). Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -31,11 +29,13 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Regen, Nacht, spotty connectivity) berücksichtigt, Safety-First-Prinzip klar, Offline-Hinweis vorhanden. Dokumentation und Eskalation vollständig."
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Exzellente Antwort mit detaillierter Absicherung (Regen, Nacht, poor_visibility), klarer Diagnose und Eskalation. Offline-Workflow fehlt trotz connectivity=spotty (K=4)."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Alle Kontextfaktoren (Regen, Nacht, spotty connectivity, photo_available) optimal integriert. Offline-Workflow explizit erwähnt ('lokal speichern, später synchronisieren'). Safety, Eskalation und Dokumentation vollständig."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit erwähnt (lokal speichern, später synchronisieren), alle Sicherheits- und Kontextaspekte berücksichtigt, klare Eskalation und Dokumentation."
   }
 ]

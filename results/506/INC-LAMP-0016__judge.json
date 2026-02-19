@@ -9,15 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (nur Asset-ID gegeben)"
-    ],
-    "short_justification": "Solide Struktur mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety könnte expliziter sein (kein 'Safety First'-Fokus erkennbar)."
+    "missing_elements": [],
+    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Relevanz und Handlungsfähigkeit gut, Dokumentation klar."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
@@ -26,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -35,9 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Antwort: Safety First klar erkennbar (Warnweste, Absicherung bei schlechter Sicht), severity=high adressiert, Eskalation vorhanden. Nur Offline-Workflow fehlt trotz spotty connectivity."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (severity=high, poor_visibility, rain), klarer Eskalation und Dokumentation. Kontextnutzung gut (low_battery, photo_available), aber spotty connectivity erfordert Offline-Workflow-Hinweis."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety First (Warnweste, Absicherung bei Regen/schlechter Sicht), Offline-Workflow explizit genannt ('lokal im Gerät speichern'), severity=high adressiert, klare Eskalation. Alle Kontext-Signale korrekt verarbeitet."
+    "short_justification": "Perfekte Antwort: Safety-First bei high severity und poor_visibility, expliziter Offline-Workflow (spotty connectivity), klare Eskalation, strukturierte Dokumentation. Alle Kontextinformationen korrekt genutzt, keine Halluzinationen."
   }
 ]

@@ -1,0 +1,63 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-19T15:12:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für den Außendienst – Dunkle Straßenlampe (Asset-ID: n1987093607)**\n\n1. **Absicherung**\n   - Bereich um die Lampe absichern, falls möglich (z. B. Warnbaken, Warnweste tragen).\n   - Auf ausreichende eigene Sichtbarkeit achten, besonders bei Dunkelheit.\n\n2. **Sichtprüfung**\n   - Prüfen, ob die Lampe beschädigt ist (z. B. Glasbruch, sichtbare Kabel).\n   - Umgebung auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Auf auffällige Geräusche, Gerüche oder Funken achten.\n   - Notieren, ob die Lampe komplett aus oder nur schwach leuchtet.\n\n4. **Dokumentation**\n   - Asset-ID, Standort und Uhrzeit notieren.\n   - Fotos vom Zustand der Lampe und Umgebung machen.\n   - Festgestellte Gefahren dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei unsicherem Bereich: Polizei oder Ordnungsamt informieren.\n   - Störung an die zuständige Wartungsfirma weiterleiten.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen oder besondere Gefahren (z. B. offenes Kabel, Unfallgefahr)?  \nFalls nicht, wird die Störung als Einzelereignis dokumentiert und weitergeleitet.",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Priorisierung erkennbar trotz 'Bereich wirkt unsicher'",
+      "Keine Hinweise auf Zeitkritikalität"
+    ],
+    "short_justification": "Strukturierte, vollständige Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Halluzinationen bei minimalem Context. Safety und Eskalation vorhanden, aber Dringlichkeit könnte stärker betont werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.176
+  },
+  "error": {}
+}

@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-19T15:13:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Störungsbearbeitung – Straßenlampe Isarstraße/Gewerbegebiet, Rosenheim\n\n1. Absicherung  \n- Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.  \n- Gefahrenbereich mit Pylonen oder Warnleuchten absichern, da hohe Verkehrsexposition und schlechte Sicht.\n\n2. Sichtprüfung  \n- Lampe und Mast auf sichtbare Schäden prüfen (z. B. Glasbruch, Vandalismus, lose Teile).  \n- Umgebung auf weitere Ausfälle oder Gefahrenquellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe auf andere Weise Strom erhält (z. B. Test mit Prüfgerät).  \n- Hinweis: Gerät meldet niedrigen Batteriestand, Lampe ist aber online – vermutlich Batterieproblem.  \n- Foto auswerten, falls verfügbar, um Defekt besser einzuschätzen.\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen mit Zeitstempel notieren.  \n- Foto und Standortdaten dem Störungsbericht anhängen.\n\n5. Eskalation  \n- Bei bestätigtem Ausfall und hoher Gefährdung: Störung an Bereitschaftsdienst/Technik weiterleiten, schnelle Reparatur anfordern.  \n- Polizei oder Ordnungsamt informieren, falls akute Gefahr für Verkehrsteilnehmer besteht.\n\nRückfrage:  \nSoll die Lampe sofort außer Betrieb genommen werden, falls ein Sicherheitsrisiko besteht, oder ist eine temporäre Notbeleuchtung möglich?",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Sicherheit wird priorisiert (Warnweste, Absicherung wegen hoher Verkehrsexposition und schlechter Sicht), klare Schritte, Kontextnutzung (low_battery, photo_available, severity=high), Eskalation bei akuter Gefahr."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.061
+  },
+  "error": {}
+}
