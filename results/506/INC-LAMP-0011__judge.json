@@ -14,17 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung der Umweltbedingungen (nicht im Context verfügbar)"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Rückfrage zur Asset-Art ist sinnvoll bei minimalem Context. Keine Halluzinationen erkennbar."
+    "missing_elements": [],
+    "short_justification": "Strukturierte Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Umweltfaktoren berücksichtigt – aber das ist bei L0 erwartbar und kein Fehler."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -35,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr). Klare Sicherheitsmaßnahmen, strukturierte Diagnose mit Wetterbezug, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung: Nebel und schlechte Sicht werden explizit in Absicherung einbezogen, mittlere Verkehrsbelastung berücksichtigt, intermittierender Fehler durch Mehrfachtests adressiert. Vollständige Dokumentation und klare Eskalationskriterien."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Kompakte, präzise Checkliste mit vollständiger Kontextnutzung (Nebel, schlechte Sicht, mittlerer Verkehr). Sicherheit, Diagnose mit Feuchtigkeitsbezug, Dokumentation und Eskalation klar strukturiert. Keine Halluzinationen."
+    "short_justification": "Kompakte, präzise Checkliste mit vollständiger Kontextintegration (Nebel, schlechte Sicht, mittlerer Verkehr). Intermittierender Fehler durch Mehrfachtests adressiert, klare Eskalation und Dokumentation. Effiziente Struktur ohne Redundanz."
   }
 ]

@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sinnvolle Rückfrage zur Präzisierung."
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gute Dokumentationshinweise."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Dämmerung, spotty connectivity, low battery). Offline-Workflow erkannt ('manuelle Kontrolle bevorzugen'), Sicherheit priorisiert, vollständige Dokumentation und differenzierte Eskalation."
+    "short_justification": "Exzellente Kontextnutzung (spotty connectivity, low_battery, fog, dusk). Offline-Workflow implizit erwähnt ('manuell prüfen'), Sicherheit priorisiert, vollständige Dokumentation und Eskalation."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('offline speichern', 'später synchronisieren'), alle Umweltfaktoren berücksichtigt, klare Sicherheitspriorisierung, strukturierte Eskalation. Vollständige Kontextnutzung inkl. Guardrails."
+    "short_justification": "Perfekte Kontextintegration: Offline-Workflow explizit genannt ('lokal dokumentieren', 'später synchronisieren'), Umweltbedingungen (Nebel, Dämmerung) berücksichtigt, low_battery-Hinweis korrekt als Geräte-Constraint interpretiert. Vollständig und umsetzbar."
   }
 ]

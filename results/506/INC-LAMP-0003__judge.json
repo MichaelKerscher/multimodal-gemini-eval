@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit und Eskalation adressiert. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Eskalationspfaden. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sicherheit adressiert, aber ohne spezifische Umgebungsanpassung."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
@@ -24,25 +24,23 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
-    ],
-    "short_justification": "Exzellente Strukturierung mit kontextspezifischen Details (Nacht, low_battery, spotty). Offline-Workflow bei instabiler Verbindung nicht explizit erwähnt, obwohl connectivity=spotty im Kontext steht."
+    "missing_elements": [],
+    "short_justification": "Exzellente kontextbezogene Antwort: Nacht/schlechte Sicht adressiert, low_battery und spotty connectivity erkannt und in Diagnose integriert. Offline-Workflow implizit durch 'Fotos sofern möglich' angedeutet, könnte expliziter sein."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, kontextgerechte Antwort. Offline-Workflow explizit adressiert (lokal dokumentieren, später synchronisieren). Alle relevanten Kontextfaktoren berücksichtigt, keine Halluzinationen."
+    "short_justification": "Perfekte Umsetzung: Expliziter Offline-Workflow ('offline dokumentieren, lokal speichern, später synchronisieren'), vollständige Kontextnutzung (Nacht, schlechte Sicht, spotty connectivity), klare Sicherheitspriorisierung und strukturierte Eskalation. Alle Guardrails beachtet."
   }
 ]

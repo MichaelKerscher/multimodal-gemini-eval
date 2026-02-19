@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC2",
+  "timestamp": "2026-02-19T14:57:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093607",
+        "longitude": 12.116472,
+        "latitude": 47.837186,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n**1. Absicherung**\n- Bereich um die defekte Lampe (Rosenheim, Heilig Blut) sofort absichern, da schlechte Sicht und Schnee die Unfallgefahr erhöhen.\n- Warnbaken oder mobile Warnleuchten aufstellen, falls verfügbar.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n- Auf offensichtliche Schäden (z. B. Kabel, Mast, Lampenkopf) achten.\n- Umgebung auf Stolperfallen oder Hindernisse kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Gerät meldet „low_battery“ – vermutlich Batterieproblem.\n- Lampe ist online, daher kein genereller Netzausfall.\n- Prüfen, ob ein kurzfristiger Neustart möglich ist (z. B. durch Fernzugriff).\n\n**4. Dokumentation**\n- Fotos vom Zustand der Lampe und Umgebung anfertigen (Foto liegt laut Meldung vor).\n- Alle Beobachtungen und Maßnahmen notieren: Zeitpunkt, Wetter, Sichtverhältnisse, getroffene Sicherungsmaßnahmen.\n\n**5. Eskalation**\n- Störung als „hoch“ einstufen und sofort an den Bereitschaftsdienst/Techniker weiterleiten.\n- Hinweis auf erhöhte Unfallgefahr und schlechte Sicht geben.\n- Dringende Reparatur oder Batterietausch anfordern.\n\n**Rückfrage:**  \nIst eine mobile Absicherung (z. B. Warnleuchten) vor Ort verfügbar, oder muss diese separat angefordert werden?",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Severity=high wird korrekt erkannt und priorisiert, Sicherheitsmaßnahmen stehen an erster Stelle, low_battery wird korrekt als Geräte-Constraint interpretiert (nicht als Asset-Fehler), alle Kontextdaten sinnvoll genutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.542
+  },
+  "error": {}
+}

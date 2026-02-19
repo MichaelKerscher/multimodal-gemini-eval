@@ -9,20 +9,22 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit wird adressiert, aber ohne Kontextinformationen zu Verkehr/Sicht etwas generisch. Keine Halluzinationen, gute Kontextnutzung der minimalen Daten."
+    "missing_elements": [
+      "Konkrete Sicherheitsmaßnahmen bei Dämmerung/schlechter Sicht nicht erwähnt"
+    ],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Eskalation. Sicherheitsaspekte sind vorhanden, aber nicht priorisiert. Keine Halluzinationen, da Kontext minimal ist."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 4
     },
@@ -33,9 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
     ],
-    "short_justification": "Exzellente Antwort mit kontextspezifischer Sicherheitsabsicherung (Dämmerung, mittlerer Verkehr). Alle Dimensionen stark erfüllt. Einziger Punkt: Bei spotty connectivity sollte Offline-Dokumentation explizit erwähnt werden."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition). Kontextnutzung sehr gut, nur Offline-Hinweis fehlt bei spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung aller Anforderungen. Offline-Workflow explizit adressiert ('offline in der App/Checkliste', 'Foto lokal speichern'), kontextgerechte Sicherheitsmaßnahmen, klare Struktur und Eskalation. Keine Halluzinationen."
+    "short_justification": "Perfekte Antwort: Safety-First-Ansatz, klare Eskalation, Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), alle Kontextfaktoren berücksichtigt."
   }
 ]

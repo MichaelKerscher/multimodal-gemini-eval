@@ -1,14 +1,10 @@
 [
   [
     "Offline-Workflow bei spotty connectivity",
-    5
+    4
   ],
   [
-    "Offline-Workflow nicht explizit ausformuliert (nur 'keine Ferndiagnose möglich')",
-    2
-  ],
-  [
-    "Offline-Workflow bei spotty connectivity nicht erwähnt",
+    "Offline-Workflow (connectivity=offline)",
     2
   ],
   [
@@ -16,99 +12,75 @@
     1
   ],
   [
-    "Keine Sicherheitsmaßnahmen für Nacht/schlechte Sicht erwähnt (Kontext fehlt)",
+    "Severity-Einschätzung fehlt (nur aus User-Text 'wirkt unsicher' ableitbar)",
     1
   ],
   [
-    "Severity-Einschätzung fehlt (nur 'unsicher' erwähnt)",
+    "Offline-Workflow fehlt (connectivity=offline im CONTEXT)",
     1
   ],
   [
-    "Keine Priorisierung der Eskalation erkennbar",
+    "Keine Anweisung zu lokaler Datenspeicherung/Synchronisation",
     1
   ],
   [
-    "Offline-Workflow nicht erwähnt (connectivity=offline, device_state=low_battery)",
+    "Hinweis auf lokale Dokumentation/Synchronisation",
     1
   ],
   [
-    "Keine Anweisung zu lokaler Speicherung/Synchronisation",
+    "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung",
     1
   ],
   [
-    "Offline-Dokumentation nicht explizit betont trotz spotty connectivity",
+    "Keine konkrete Anweisung zur Verkehrssicherung bei Nacht",
     1
   ],
   [
-    "Keine Erwähnung der Umweltbedingungen (nicht im Context verfügbar)",
+    "Keine explizite Priorisierung wegen 'Bereich wirkt unsicher' im User-Text",
     1
   ],
   [
-    "Severity-Einschätzung fehlt (nur aus User-Text 'unsicher' ableitbar)",
+    "Severity-Einschätzung fehlt (nur Asset-ID gegeben)",
     1
   ],
   [
-    "Konkrete Absicherungsmaßnahmen bei hoher Verkehrsexposition weniger detailliert",
+    "Offline-Workflow bei spotty connectivity nicht erwähnt",
     1
   ],
   [
-    "Keine Erwähnung von Foto-Workflow (photo_available nicht im Context)",
+    "Keine Erwähnung von Offline-Workflow (nicht erwartbar bei L0_minimal ohne connectivity-Info)",
     1
   ],
   [
-    "Device-State (low_battery) nicht als Geräte-Constraint erklärt",
+    "Severity-Einstufung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
     1
   ],
   [
-    "Keine Anpassung an Umgebungsbedingungen (Zeit/Wetter unbekannt)",
+    "Keine Erwähnung von Zeitkritikalität trotz Sicherheitsbedenken",
     1
   ],
   [
-    "Konkrete Sicherheitsmaßnahmen bei Nacht/schlechter Sicht nicht erkennbar (Kontext fehlt)",
+    "Offline-Workflow könnte expliziter sein (lokal speichern, später synchronisieren)",
     1
   ],
   [
-    "Severity-Einschätzung fehlt (keine Priorisierung erkennbar)",
+    "Keine Priorisierung bei minimaler Kontextlage erkennbar",
     1
   ],
   [
-    "Zeitliche Dringlichkeit nicht adressiert",
+    "Absicherungsmaßnahmen bleiben vage ('falls möglich')",
     1
   ],
   [
-    "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)",
+    "Lokale Dokumentation/Synchronisation",
     1
   ],
   [
-    "Offline-Workflow nicht explizit erwähnt (connectivity=spotty im CONTEXT)",
+    "Konkrete Sicherheitsmaßnahmen bei Dämmerung/schlechter Sicht nicht erwähnt",
     1
   ],
   [
-    "Keine Safety-Priorisierung erkennbar trotz potentieller Verkehrsgefährdung",
-    1
-  ],
-  [
-    "Keine Offline-Workflow-Erwähnung (CONTEXT gibt keine Hinweise, daher kein Fehler)",
-    1
-  ],
-  [
-    "Offline-Workflow nur implizit erwähnt ('Keine Ferndiagnose möglich'), könnte expliziter sein",
-    1
-  ],
-  [
-    "Severity-Einschätzung fehlt (nur aus User-Nachricht 'wirkt unsicher' ableitbar)",
-    1
-  ],
-  [
-    "Keine explizite Priorisierung der Eskalation",
-    1
-  ],
-  [
-    "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Problem)",
-    1
-  ],
-  [
-    "Keine Erwähnung von Warnweste/Warnblinkanlage (Safety-Details)",
+    "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
     1
   ]
 ]

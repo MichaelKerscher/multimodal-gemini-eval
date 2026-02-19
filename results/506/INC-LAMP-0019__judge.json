@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 5
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Checkliste. Sicherheit wird adressiert, aber ohne Kenntnis der Umgebungsbedingungen (Nebel, Nacht) bleibt Safety-Fokus generisch. Keine Kontextfehler bei minimalem Input."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, angemessen für minimalen Kontext."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (Nebel, Nacht, mittlerer Verkehr), priorisiert Absicherung klar, strukturierte Schritte, angemessene Eskalation bei akuter Gefahr. Dokumentation und Rückfragen passend."
+    "short_justification": "Exzellente Nutzung des vollen Kontexts (Nebel, poor_visibility, night, medium traffic). Sicherheit priorisiert, Diagnose plausibel, Dokumentation klar."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Vollständige Kontextnutzung (Nebel, Nacht, poor_visibility, medium traffic_exposure), starker Safety-Fokus mit Polizei/Ordnungsamt-Option, klare Eskalationskriterien, präzise Dokumentation. Rückfragen zielgerichtet."
+    "short_justification": "Hervorragende Antwort mit präziser Kontextnutzung (Koordinaten, OSM-ID, Umweltbedingungen). Sicherheit, Diagnose und Dokumentation vollständig abgedeckt."
   }
 ]

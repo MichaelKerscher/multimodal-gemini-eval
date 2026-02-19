@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (nur aus User-Text 'unsicher' ableitbar)",
-      "Konkrete Absicherungsmaßnahmen bei hoher Verkehrsexposition weniger detailliert"
+      "Keine explizite Priorisierung wegen 'Bereich wirkt unsicher' im User-Text"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Safety-First erkennbar, aber bei minimalem Context fehlt explizite Priorisierung der Dringlichkeit trotz 'Bereich wirkt unsicher'."
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose, Dokumentation und Eskalation. Sicherheit wird adressiert, aber ohne Kontext (severity, traffic_exposure) bleibt die Dringlichkeit etwas allgemein. Keine Halluzinationen, Asset-ID korrekt verwendet."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high und traffic_exposure=high führen zu klarer Safety-Priorisierung (Warnweste, Absicherung), präziser Nutzung der Koordinaten, Foto-Hinweis integriert, Eskalation mit Dringlichkeit betont."
+    "short_justification": "Exzellente Antwort: Sicherheit steht an erster Stelle (Warnblinkanlage, Absperrung), klare Eskalation bei hoher Gefährdung, präzise Koordinaten und Kontextnutzung (night, poor_visibility, high traffic_exposure). Vollständig strukturiert und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Umsetzung: Klare Safety-First-Struktur (Warnblinkanlage, PSA, Abstand), vollständige Kontextnutzung (Koordinaten, OSM-ID, Severity, Foto-Hinweis), präzise Eskalation mit Priorität 'hoch', keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort mit klarem Safety-First-Ansatz (Absicherung, Warnweste, Pylonen), präziser Kontextnutzung (severity=high, traffic_exposure=high, poor_visibility), vollständiger Dokumentation inkl. OSM-ID und Koordinaten. Eskalation bei akuter Gefahr explizit genannt."
   }
 ]

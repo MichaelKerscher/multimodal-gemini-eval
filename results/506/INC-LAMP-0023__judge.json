@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sicherheitsaspekte angemessen adressiert."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -32,8 +32,10 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Berücksichtigt severity=high, Sturm, hohe Verkehrsexposition und Offline-Status. Klare Sicherheits- und Eskalationsschritte, Offline-Workflow erwähnt ('keine Fernabfrage möglich')."
+    "missing_elements": [
+      "Offline-Workflow könnte expliziter sein (lokal speichern, später synchronisieren)"
+    ],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Koordinaten, Severity, Wetter, Verkehr). Offline-Status wird erwähnt ('Gerät offline, keine Fernabfrage'), aber Offline-Dokumentations-Workflow könnte deutlicher sein. Sicherheit priorisiert (Sturm, hoher Verkehr)."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Alle kritischen Faktoren (Sturm, hohe Verkehrsexposition, Offline-Gerät, severity=high) optimal integriert. Offline-Dokumentation explizit ('offline speichern', 'lokal dokumentieren'), klare Eskalation bei Gefahr."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('offline speichern', 'lokal dokumentieren', 'nach Rückkehr synchronisieren'), Sicherheit priorisiert (Sturm, hoher Verkehr, poor visibility), severity=high adäquat behandelt mit Eskalation. Alle Kontextinformationen korrekt genutzt."
   }
 ]

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC1",
+  "timestamp": "2026-02-19T14:56:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n4483691318)",
+    "context": {
+      "asset_osm": "n4483691318"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n4483691318 (Straßenbeleuchtung).\n\n**Checkliste für die Überprüfung vor Ort**\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern.\n   - Eigene Sicherheit und die der Verkehrsteilnehmer gewährleisten.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. Mast, Leuchte, Verkabelung).\n   - Umgebung auf Gefahrenquellen (offene Kabel, lose Teile) untersuchen.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Leuchten bei Dunkelheit testen.\n   - Prüfen, ob Zeitschaltuhr, Dämmerungsschalter oder Sicherungen defekt sind.\n   - Nach Anzeichen für Vandalismus oder Unfallschäden suchen.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und Maßnahmen fotografisch und schriftlich festhalten.\n   - Asset-ID, Standort und Uhrzeit dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Stromschlagrisiko, herunterhängende Kabel): Sofortige Meldung an Bereitschaftsdienst/Netzbetreiber.\n   - Bei Standardstörung: Reparaturauftrag an zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nSind weitere Details zum Ausmaß der Dunkelheit oder zur Anzahl der betroffenen Leuchten bekannt? Gab es kürzlich Bauarbeiten oder Unwetter in dem Bereich?",
+    "tokens_estimate_words": 158
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Sicherheitsmaßnahmen erwartbar. Saubere Dokumentationshinweise."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.759
+  },
+  "error": {}
+}

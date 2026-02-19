@@ -1,0 +1,87 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC2",
+  "timestamp": "2026-02-19T14:52:16",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427955479",
+        "longitude": 12.1253894,
+        "latitude": 47.8562438,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Stadtmitte"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "reporter": "internal",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Checkliste für Außendienst-Einsatz: Dunkler Abschnitt Rosenheim, Stadtmitte\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, besonders wegen hoher Verkehrsexposition und schlechter Sicht.\n   - Bei Bedarf Polizei oder Verkehrslenkung informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der gesamten Straßenbeleuchtung im betroffenen Abschnitt.\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Auf offensichtliche Schäden (z.B. umgeknickte Masten, offene Kabel, Wassereintritt) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Sicherungen ausgelöst oder Schaltschränke beschädigt sind.\n   - Bei Regen: Besondere Vorsicht bei elektrischen Anlagen!\n   - Geräusche, Gerüche oder sichtbare Defekte dokumentieren.\n   - Falls möglich, Funktion einzelner Lampen testen (z.B. durch manuelles Schalten).\n\n4. **Dokumentation**\n   - Fotos vom Ausfallbereich und von eventuellen Schäden anfertigen (Foto liegt laut Meldung vor).\n   - Alle Beobachtungen und Maßnahmen notieren.\n   - Zeitpunkt und Wetterbedingungen festhalten.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall oder Gefahr für Verkehrsteilnehmer: Störungsdienst/Notdienst informieren.\n   - Bei Gefahr im Verzug (z.B. freiliegende Kabel, Unfallgefahr): Sofortige Meldung an Einsatzleitung/Polizei.\n\n**Rückfrage:**  \nSind bereits weitere Meldungen aus angrenzenden Straßen eingegangen oder gibt es Hinweise auf Bauarbeiten/Störungen im Stromnetz?  \nFalls nicht, wird von einem lokalen Ausfall ausgegangen.  \n\nBitte Rückmeldung geben, sobald die Sichtprüfung abgeschlossen ist oder weitere Informationen vorliegen.",
+    "tokens_estimate_words": 193
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (high severity, poor visibility, high traffic). Eskalation klar benannt. Offline-Workflow bei spotty connectivity nicht explizit erwähnt, aber Dokumentation gut strukturiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.909
+  },
+  "error": {}
+}

@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-19T14:55:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein gleichzeitiger Ausfall eines Segments mit der Asset-ID n12520351647 vor. Hier ist das empfohlene Vorgehen:\n\n**Checkliste bei Steuerungsproblem – Segmentausfall**\n\n1. **Absicherung**\n   - Bereich absichern: Warnbaken, ggf. Absperrband aufstellen.\n   - Bei Dunkelheit: Ersatzbeleuchtung prüfen oder Polizei informieren.\n   - Verkehrsteilnehmer warnen, falls Verkehrsfluss beeinträchtigt.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Lampen/Ampeln: Leuchten alle aus oder nur einzelne?\n   - Prüfen, ob offensichtliche Schäden (z. B. Kabel, Masten, Schaltschränke) sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Segmente betroffen sind.\n   - Gibt es Bauarbeiten, Unwetter oder andere äußere Einflüsse?\n   - Steuergerät/Schaltschrank auf Störungen oder Fehlermeldungen kontrollieren.\n\n4. **Dokumentation**\n   - Ausfallzeit, betroffene Assets und erste Beobachtungen notieren.\n   - Fotos von der Situation und eventuellen Schäden machen.\n\n5. **Eskalation**\n   - Bei bestätigtem Steuerungsproblem: Störungsdienst/Techniker informieren.\n   - Bei Gefahr im Verzug (z. B. Kreuzung ohne Ampel): Polizei und ggf. Verkehrslenkung einschalten.\n\n**Rückfragen:**\n- Um welchen Anlagentyp handelt es sich (Straßenbeleuchtung oder Ampelanlage)?\n- Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Bereich?\n- Wurde bereits ein Techniker informiert?\n\nBitte ergänzen Sie die fehlenden Informationen, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, angemessene Rückfragen bei minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.977
+  },
+  "error": {}
+}

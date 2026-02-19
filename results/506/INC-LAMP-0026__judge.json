@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gut nachvollziehbar."
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfragen zeigen gute Praxis."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 4,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Verkehr, offline). Offline-Workflow wird erwähnt ('keine Fernabfrage möglich'). Sehr strukturiert und sicherheitsorientiert. Dokumentation klar."
+    "short_justification": "Exzellente Antwort: Berücksichtigt Offline-Status explizit, passt Absicherung an Nebel/mittleren Verkehr an, strukturierte Diagnose und Dokumentation. Alle Kontextfaktoren sinnvoll integriert."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('offline in der App oder auf Papier', 'Fotos lokal speichern', 'Synchronisation nach Wiederherstellung'). Alle Kontextfaktoren berücksichtigt, sehr handlungsorientiert."
+    "short_justification": "Hervorragend: Offline-Workflow klar umgesetzt ('offline in der App oder auf Papier', 'Fotos lokal speichern', 'später synchronisieren'). Absicherung berücksichtigt Nebel und Verkehr. Vollständige, umsetzbare Checkliste."
   }
 ]

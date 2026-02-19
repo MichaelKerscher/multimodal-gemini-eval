@@ -1,0 +1,63 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC1",
+  "timestamp": "2026-02-19T14:53:07",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n12520338291)",
+    "context": {
+      "asset_osm": "n12520338291"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Störungsbearbeitung – Straßenlampe (Asset-ID: n12520338291)**\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe auf erhöhte Unfallgefahr prüfen (z. B. dunkle Gehwege, Kreuzungen).\n   - Falls notwendig: Provisorische Absicherung (z. B. Warnbaken, Hinweisschilder) veranlassen.\n\n2. **Sichtprüfung**\n   - Vor Ort prüfen: Ist nur diese Lampe betroffen oder mehrere im Umfeld?\n   - Sichtbare Schäden am Mast, Leuchtmittel oder Kabel?\n\n3. **Diagnose/Beobachtung**\n   - Leuchte reagiert auf Bewegung/Sensorik? Flackern oder Totalausfall?\n   - Wurde kürzlich an der Anlage gearbeitet (z. B. Wartung, Bauarbeiten)?\n\n4. **Dokumentation**\n   - Zeitpunkt und Dauer des Ausfalls notieren.\n   - Asset-ID, Standort und Besonderheiten (z. B. unsicherer Bereich) festhalten.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder den Bereitschaftsdienst melden.\n   - Hinweis auf die erhöhte Unsicherheit im Bereich geben (Priorisierung!).\n\n**Rückfrage:**  \nBefindet sich die Lampe an einer besonders kritischen Stelle (z. B. Schulweg, Kreuzung, Haltestelle)? Gibt es weitere defekte Lampen in der Nähe?\n\nBitte um kurze Rückmeldung, damit wir gezielt und schnell reagieren können.",
+    "tokens_estimate_words": 164
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Erwähnung von Warnweste/persönlicher Schutzausrüstung",
+      "Keine konkrete Anweisung zur Verkehrssicherung bei Nacht"
+    ],
+    "short_justification": "Strukturierte Checkliste mit Absicherung, Diagnose und Eskalation. Sicherheitsaspekte werden angesprochen, aber bei Nacht und unsicherem Bereich könnte persönliche Schutzausrüstung expliziter sein. Gute Dokumentationshinweise."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.979
+  },
+  "error": {}
+}

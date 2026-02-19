@@ -9,13 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Antwort mit klarer Struktur und Eskalationspfad. Keine Halluzinationen, da CONTEXT minimal ist. Safety könnte expliziter sein (traffic_exposure fehlt im CONTEXT)."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen stellt."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 3
     },
     "flags": {
@@ -35,7 +35,7 @@
     "missing_elements": [
       "Offline-Workflow (lokal dokumentieren, später synchronisieren)"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (Batterie, Offline-Status, Verkehrsexposition). Offline-Workflow fehlt jedoch explizit, obwohl connectivity=offline. K=3 wegen fehlender Offline-Strategie."
+    "short_justification": "Exzellente Struktur und Kontextnutzung (Batterie, Verkehr, Standort). Offline-Status wird erwähnt, aber kein expliziter Offline-Workflow beschrieben (K=3)."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit erwähnt ('offline speichern, später synchronisieren'), alle Kontextfaktoren berücksichtigt, klare Dokumentation und Eskalation. Vollständig konsistent mit extras.context_notes."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('lokal speichern', 'später synchronisieren'), alle Kontextaspekte korrekt verarbeitet, klare Struktur und Sicherheitsfokus."
   }
 ]

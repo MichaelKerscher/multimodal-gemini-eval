@@ -4,9 +4,9 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
-      "K": 3
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Problem)",
-      "Keine Erwähnung von Warnweste/Warnblinkanlage (Safety-Details)"
-    ],
-    "short_justification": "Antwort ist relevant, strukturiert und sicherheitsorientiert mit klarer Eskalation. Minimaler Kontext wurde gut genutzt, keine Halluzinationen. Kleinere Safety-Details fehlen, aber bei L0 vertretbar."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Dokumentation gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
@@ -27,16 +24,19 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (offline, night, poor_visibility, severity=high) korrekt verarbeitet. Offline-Workflow implizit (Foto lokal, Notizen), Safety-First klar, Eskalation angemessen, Dokumentation vollständig."
+    "missing_elements": [
+      "Offline-Workflow (connectivity=offline)",
+      "Lokale Dokumentation/Synchronisation"
+    ],
+    "short_justification": "Exzellente Struktur, Safety und Eskalation bei severity=high. Kritischer Fehler: connectivity=offline wird ignoriert, keine Offline-Dokumentationshinweise trotz explizitem Kontext."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit genannt ('lokal speichern', 'später synchronisieren'), alle Kontextfaktoren berücksichtigt, Safety-First, klare Eskalation, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit adressiert ('lokal dokumentieren', 'offline speichern', 'später synchronisieren'), Safety-First bei night+poor_visibility, klare Eskalation bei severity=high, vollständige Dokumentation."
   }
 ]

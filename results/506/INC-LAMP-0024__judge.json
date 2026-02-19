@@ -9,16 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Safety-Priorisierung erkennbar trotz potentieller Verkehrsgefährdung",
-      "Keine Offline-Workflow-Erwähnung (CONTEXT gibt keine Hinweise, daher kein Fehler)"
-    ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Handlungsanleitung. Sicherheitsaspekte vorhanden, aber nicht priorisiert. Keine Halluzinationen, da minimaler CONTEXT keine weiteren Erwartungen rechtfertigt."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Alle Schritte nachvollziehbar dokumentiert."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
@@ -35,10 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nur implizit erwähnt ('Keine Ferndiagnose möglich'), könnte expliziter sein"
-    ],
-    "short_justification": "Exzellente Antwort: Safety First klar erkennbar (Absicherung an erster Stelle), Offline-Situation berücksichtigt, severity=medium und Umweltfaktoren (Sturm, poor_visibility, high traffic) angemessen adressiert. Strukturiert, umsetzbar, kontextgerecht."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Sturm, Nacht, hoher Verkehr, Offline-Gerät). Sicherheit priorisiert, Offline-Workflow erwähnt, klare Eskalationskriterien. Sehr gut strukturiert und dokumentiert."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
@@ -56,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Mustergültige Antwort: Safety First explizit priorisiert, Offline-Workflow klar benannt ('lokal speichern', 'später synchronisieren'), alle Kontextfaktoren (Sturm, Nacht, hoher Verkehr, offline) berücksichtigt. Präzise, umsetzbar, keine Halluzinationen."
+    "short_justification": "Perfekte Antwort mit vollständiger Kontextintegration. Offline-Workflow explizit erwähnt ('lokal dokumentieren'), Sicherheit priorisiert (Sturm, Nacht, Verkehr), klare Eskalation bei akuter Gefahr. Kompakt und präzise."
   }
 ]

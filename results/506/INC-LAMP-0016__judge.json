@@ -9,15 +9,15 @@
       "K": 5
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Erwähnung von Foto-Workflow (photo_available nicht im Context)"
+      "Severity-Einschätzung fehlt (nur Asset-ID gegeben)"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Gute Nachvollziehbarkeit."
+    "short_justification": "Solide Struktur mit Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur Asset-ID im Context. Safety könnte expliziter sein (kein 'Safety First'-Fokus erkennbar)."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
@@ -26,7 +26,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,10 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht erwähnt",
-      "Device-State (low_battery) nicht als Geräte-Constraint erklärt"
+      "Offline-Workflow bei spotty connectivity nicht erwähnt"
     ],
-    "short_justification": "Exzellente Safety-Priorisierung (Regen, poor_visibility, high severity) und klare Eskalation. Foto-Workflow integriert. Jedoch fehlt Hinweis auf Offline-Dokumentation bei spotty connectivity."
+    "short_justification": "Exzellente Antwort: Safety First klar erkennbar (Warnweste, Absicherung bei schlechter Sicht), severity=high adressiert, Eskalation vorhanden. Nur Offline-Workflow fehlt trotz spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
@@ -56,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety-First bei high severity und poor_visibility, klare Eskalation, Offline-Workflow explizit erwähnt ('lokal sichern und später synchronisieren'), vollständige Dokumentation. Alle Context-Hinweise korrekt verarbeitet."
+    "short_justification": "Perfekte Umsetzung: Safety First (Warnweste, Absicherung bei Regen/schlechter Sicht), Offline-Workflow explizit genannt ('lokal im Gerät speichern'), severity=high adressiert, klare Eskalation. Alle Kontext-Signale korrekt verarbeitet."
   }
 ]

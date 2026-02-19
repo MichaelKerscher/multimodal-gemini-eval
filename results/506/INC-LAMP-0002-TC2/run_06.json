@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-19T14:48:47",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Kontroll-Checkliste für gemeldeten zeitweisen Ausfall  \n**Objekt:** Rosenheim, Heilig Blut (n1987093602)  \n**Bedingungen:** Schlechte Sicht, Nacht, Nebel, mittlerer Verkehr, hoher Lärmpegel\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereithalten.\n- Arbeitsbereich mit Leitkegeln/Leuchten sichern.\n- Bei Bedarf Verkehr kurzzeitig anhalten oder umleiten.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Leuchte auf Beschädigungen, Feuchtigkeit, lose Kabel.\n- Prüfen, ob die Leuchte aktuell funktioniert.\n- Umgebung auf ungewöhnliche Geräusche oder Gerüche prüfen.\n\n**3. Diagnose/Beobachtung**\n- Leuchte mehrfach ein-/ausschalten (falls möglich), um Fehler zu provozieren.\n- Auf Flackern, verzögertes Einschalten oder Aussetzer achten.\n- Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist.\n- Bei intermittierenden Fehlern: Beobachtungszeit einplanen.\n\n**4. Dokumentation**\n- Fotos vom Zustand der Leuchte und Umgebung machen.\n- Alle Beobachtungen und durchgeführten Maßnahmen notieren.\n- Zeitpunkt und Wetterbedingungen festhalten.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Verdacht auf elektrischen Defekt: Fachfirma/Elektriker informieren.\n- Bei akuter Gefahr (z.B. freiliegende Kabel): Sofortige Sperrung und Meldung an Leitstelle.\n\n**Rückfrage:**  \nGab es in letzter Zeit weitere Störungen an diesem Standort oder angrenzenden Leuchten?  \nSind Wartungsprotokolle oder frühere Reparaturberichte verfügbar?",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Umfassende Checkliste mit starkem Safety-Fokus (Nacht, Nebel, schlechte Sicht), klare Eskalation, präzise Dokumentation. Alle Kontextinformationen korrekt genutzt, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.939
+  },
+  "error": {}
+}

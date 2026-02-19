@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide Checkliste mit klarer Struktur, Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Anpassungen erwartbar. Sicherheitsaspekte angemessen adressiert."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen erkennbar."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -35,7 +35,7 @@
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (severity=high, traffic_exposure=high, poor_visibility). Alle Kontextfaktoren (Regen, Dämmerung, Verkehr) berücksichtigt. Offline-Workflow bei spotty connectivity nicht explizit erwähnt, aber K=4 da sonst robust."
+    "short_justification": "Exzellente Antwort mit starkem Safety-Fokus (high severity, poor visibility, high traffic). Eskalation klar benannt. Offline-Workflow bei spotty connectivity nicht explizit erwähnt, aber Dokumentation gut strukturiert."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety-First bei high severity, expliziter Offline-Workflow (lokal speichern, später synchronisieren), alle Umgebungsfaktoren berücksichtigt, klare Eskalation, präzise Dokumentation. Vollständig kontextgerecht."
+    "short_justification": "Perfekte Antwort: Safety-First bei high severity/poor visibility, klare Eskalation, Offline-Workflow explizit adressiert ('lokal speichern', 'offline speichern', 'Synchronisation'). Alle Kontextinformationen korrekt genutzt."
   }
 ]

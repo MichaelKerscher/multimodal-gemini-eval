@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte Checkliste mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen trotz minimalem Kontext. Sicherheitsaspekte angemessen, aber nicht explizit priorisiert bei 'Bereich wirkt unsicher'."
+    "missing_elements": [
+      "Severity-Einstufung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
+      "Keine Erwähnung von Zeitkritikalität trotz Sicherheitsbedenken"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung und Eskalation. Kontextnutzung korrekt (keine Spekulation über fehlende Daten). Sicherheitsfokus erkennbar, aber könnte bei 'unsicher' noch deutlicher priorisiert werden."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -33,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (severity=high, poor_visibility, snow, low_battery). Sicherheit klar priorisiert, Eskalation bei hoher Gefährdung explizit, Dokumentation vollständig. Alle relevanten Faktoren berücksichtigt."
+    "short_justification": "Exzellente Antwort: Severity=high wird korrekt erkannt und priorisiert, Sicherheitsmaßnahmen stehen an erster Stelle, low_battery wird korrekt als Geräte-Constraint interpretiert (nicht als Asset-Fehler), alle Kontextdaten sinnvoll genutzt."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständige, praxisnahe Checkliste mit starkem Sicherheitsfokus. Kontext optimal genutzt (Schnee, Dämmerung, severity=high). Eskalation differenziert nach Gefährdungslage, Dokumentation klar strukturiert."
+    "short_justification": "Hervorragende Umsetzung: Sicherheit priorisiert, Severity=high adäquat behandelt, device_state korrekt als Workflow-Constraint verstanden (Akku-Hinweis), keine Halluzinationen, strukturiert und praxisnah."
   }
 ]

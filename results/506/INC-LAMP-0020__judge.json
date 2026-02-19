@@ -14,18 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Einschätzung fehlt (keine Priorisierung erkennbar)",
-      "Zeitliche Dringlichkeit nicht adressiert"
-    ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Hinweise auf Wetter/Nacht/Schweregrad – das ist kein Fehler des Modells."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Kontextinformationen verfügbar, daher keine spezifischen Sicherheitsmaßnahmen erwartbar. Saubere Dokumentationshinweise."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -36,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Severity=high wird durch sofortige Eskalation adressiert, Nacht+Regen+poor_visibility führen zu expliziten Sicherheitshinweisen, Kontextnutzung (Koordinaten, Foto, low_power_mode) ist präzise und ohne Spekulation."
+    "short_justification": "Exzellente Kontextnutzung (Nachtsituation, Regen, poor_visibility, severity=high). Absicherung wird explizit auf Wetterbedingungen angepasst. Low-power-mode wird als mögliche Ursache erwähnt, Eskalation klar definiert."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit klarer Priorisierung (hohe Priorität im Titel), starkem Safety-Fokus bei Regen/Nacht/poor_visibility, und angemessener Eskalation bei severity=high. Kontextnutzung korrekt, keine Halluzinationen."
+    "short_justification": "Perfekte Antwort: Nutzt alle relevanten Kontextinformationen (Regen, schlechte Sicht, Nacht, severity=high), unterscheidet korrekt zwischen Geräte- und Asset-Fehler (context_notes beachtet), betont Safety-First bei Eskalation. Kompakt und umsetzbar."
   }
 ]

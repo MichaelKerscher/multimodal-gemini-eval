@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC2",
+  "timestamp": "2026-02-19T14:59:10",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4449540379",
+        "longitude": 12.1220096,
+        "latitude": 47.8772297,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Langenpfunzen, Römerstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-17T01:08:07+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Arbeitsbereich mit Pylonen/Warndreieck absichern (Verkehrsbelastung: mittel, Sicht durch Nebel eingeschränkt).\n- Bei Bedarf zweite Person zur Absicherung hinzuziehen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Straßenlampe auf äußere Schäden (Gehäuse, Mast, Leuchtmittel).\n- Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist (besonders bei Nebel).\n- Umgebung auf Manipulation oder Vandalismus prüfen.\n\n**3. Diagnose/Beobachtung**\n- Da das Gerät „offline“ ist: Prüfen, ob Zugang zum Schaltschrank/Verteiler möglich ist.\n- Sichtprüfung der Verkabelung und Sicherungen.\n- Prüfen, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netzproblem).\n- Notieren, ob das Problem bei Tageslicht auftritt oder nur nachts.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Uhrzeit, Wetter, Sichtverhältnisse).\n- Fotos machen, sobald möglich (aktuell nicht verfügbar).\n\n**5. Eskalation**\n- Bei unklarer Ursache und weiterhin bestehendem Fehler: Meldung an die Fachabteilung/Elektrofachkraft zur weiteren Diagnose (z.B. Messung der Stromversorgung, Austausch von Komponenten).\n- Hinweis: Da die Lampe offline ist, könnte ein Kommunikations- oder Stromversorgungsproblem vorliegen.\n\n**Rückfragen/Annahmen:**\n- Ist Zugang zum Schaltschrank/Verteiler möglich?\n- Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Bereich?\n- Sind weitere Lampen betroffen?\n\nBitte Rückmeldung geben, falls weitere Details bekannt sind oder Unterstützung vor Ort benötigt wird.",
+    "tokens_estimate_words": 196
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Berücksichtigt Offline-Status explizit, passt Absicherung an Nebel/mittleren Verkehr an, strukturierte Diagnose und Dokumentation. Alle Kontextfaktoren sinnvoll integriert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.273
+  },
+  "error": {}
+}

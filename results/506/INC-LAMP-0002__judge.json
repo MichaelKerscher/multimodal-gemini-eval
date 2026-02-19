@@ -9,15 +9,13 @@
       "K": 5
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Sicherheitsmaßnahmen für Nacht/schlechte Sicht erwähnt (Kontext fehlt)"
-    ],
-    "short_justification": "Strukturierte, relevante Checkliste mit Eskalation. Sicherheitsaspekte generisch, da Umgebungskontext (Nacht, Nebel) fehlt. Keine Halluzinationen, gute Kontextnutzung der minimalen Infos."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit klarer Absicherung und Eskalation. Keine Halluzinationen, da Kontext minimal ist. Rückfrage sinnvoll, aber Asset-Typ (Lampe/Ampel) nicht aus Kontext ableitbar – daher keine Spekulation nötig."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Sicherheit priorisiert (Nacht, Nebel, Verkehr), strukturierte Schritte, klare Dokumentation und Eskalation. Vollständige, kontextgerechte Nutzung aller relevanten Felder ohne Spekulation."
+    "short_justification": "Exzellente Antwort: Umfassende Checkliste mit starkem Safety-Fokus (Nacht, Nebel, schlechte Sicht), klare Eskalation, präzise Dokumentation. Alle Kontextinformationen korrekt genutzt, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0002-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Sicherheit klar priorisiert (Nacht, Nebel, Verkehr), strukturierte Checkliste, explizite Nutzung des vorhandenen Fotos, klare Eskalationskriterien. Vollständige Kontextnutzung ohne Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Kompakte, umsetzbare Checkliste mit starkem Safety-Fokus (Nacht, Nebel, mittlerer Verkehr), klare Eskalation bei Sicherheitsrisiko, präzise Dokumentation. Korrekte Kontextnutzung, keine Halluzinationen, Workflow-Hinweis (Foto) integriert."
   }
 ]

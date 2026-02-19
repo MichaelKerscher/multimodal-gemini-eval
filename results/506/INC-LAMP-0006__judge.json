@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Einschätzung fehlt (nur 'unsicher' erwähnt)",
-      "Keine Priorisierung der Eskalation erkennbar"
+      "Severity-Einschätzung fehlt (nur aus User-Text 'wirkt unsicher' ableitbar)"
     ],
-    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Dokumentation gut abgedeckt. Kontext minimal, daher keine Offline-Workflow-Erwartung; keine Halluzinationen."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung und Eskalation. Keine Halluzinationen, da CONTEXT minimal ist. Offline-Workflow nicht erwartet (connectivity nicht im CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
@@ -27,19 +26,19 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (connectivity=offline, device_state=low_battery)",
-      "Keine Anweisung zu lokaler Speicherung/Synchronisation"
+      "Offline-Workflow fehlt (connectivity=offline im CONTEXT)",
+      "Keine Anweisung zu lokaler Datenspeicherung/Synchronisation"
     ],
-    "short_justification": "Exzellente Safety-First-Haltung, klare Eskalation bei severity=high, strukturiert und dokumentationsstark. Offline-Kontext jedoch nicht adressiert, daher K=3."
+    "short_justification": "Exzellente Safety- und Eskalations-Struktur, severity=high korrekt adressiert. ABER: connectivity=offline wird ignoriert, Fotos/Dokumentation ohne Offline-Hinweis → K=2, hallucination_suspected=true."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -57,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Vollständig: Safety-First, Offline-Workflow explizit ('lokal speichern', 'sobald wieder online'), Eskalation priorisiert, Dokumentation klar. Kontext optimal genutzt, keine Halluzinationen."
+    "short_justification": "Vollständig korrekt: Safety first, Offline-Workflow explizit ('offline speichern, später synchronisieren'), severity=high adressiert, keine Halluzinationen. Alle CONTEXT-Signale (storm, offline, low_battery) berücksichtigt."
   }
 ]

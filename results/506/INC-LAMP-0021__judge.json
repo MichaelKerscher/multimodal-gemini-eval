@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 5
     },
@@ -15,9 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber CONTEXT zeigt nur asset_osm, keine connectivity-Info, daher kein Fehler)"
+      "Keine Erwähnung von Offline-Workflow (nicht erwartbar bei L0_minimal ohne connectivity-Info)"
     ],
-    "short_justification": "Relevante, strukturierte Antwort mit klarer Absicherung, Diagnose und Eskalation. Dokumentation gut. Keine Halluzinationen, da minimaler CONTEXT keine weiteren Erwartungen rechtfertigt."
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da nur minimaler Kontext vorliegt. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -31,13 +31,11 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht explizit erwähnt (connectivity=spotty im CONTEXT)"
-    ],
-    "short_justification": "Exzellente Antwort: umfassende Absicherung bei Regen/Nacht, klare Diagnose, Eskalation und Dokumentation. Kontextnutzung sehr gut (Wetter, Verkehr, Foto). Offline-Workflow fehlt trotz spotty connectivity."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Alle Kontextfaktoren (Regen, Nacht, spotty connectivity) berücksichtigt, Safety-First-Prinzip klar, Offline-Hinweis vorhanden. Dokumentation und Eskalation vollständig."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: alle Dimensionen erfüllt. Offline-Workflow explizit genannt ('offline speichern', 'Offline-Modus nutzen', 'lokal sichern und später synchronisieren'). Kontextnutzung vollständig, keine Halluzinationen."
+    "short_justification": "Perfekte Umsetzung: Alle Kontextfaktoren (Regen, Nacht, spotty connectivity, photo_available) optimal integriert. Offline-Workflow explizit erwähnt ('lokal speichern, später synchronisieren'). Safety, Eskalation und Dokumentation vollständig."
   }
 ]

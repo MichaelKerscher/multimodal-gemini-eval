@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0028-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare, strukturierte Antwort mit starkem Sicherheitsfokus und Eskalation. Alle Schritte nachvollziehbar, keine Halluzinationen. Minimaler Kontext wurde korrekt genutzt."
+    "short_justification": "Vollständige, strukturierte Antwort mit klarer Priorisierung von Sicherheit (Absperrung, Warnung, keine Berührung). Eskalation an Elektrofachkraft explizit genannt. Dokumentation und Rückfragen angemessen. Keine Kontextinformationen verfügbar, daher keine Erwartung an Kontextnutzung."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Standortnennung, klare Priorisierung von Sicherheit und Eskalation bei severity=high, vollständige Dokumentationshinweise. Kontext optimal genutzt, keine Spekulation."
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Standortname, severity=high erkannt). Sicherheitsmaßnahmen priorisiert, Eskalation mit Prioritätshinweis ('hohe Priorität: Berührungsgefahr!'). Strukturiert, umsetzbar, dokumentationsorientiert. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort mit klarem Sicherheitsfokus, expliziter Eskalation bei hoher Priorität, vollständiger Dokumentation und korrekter Kontextnutzung (Standort, photo_available). Keine Halluzinationen."
+    "short_justification": "Kompakte, präzise Checkliste mit klarem Safety-First-Ansatz (Absperrung, Warnung, keine Berührung). Eskalation an Elektro-Fachpersonal mit Priorität genannt. Dokumentation und Rückfrage zur Zugänglichkeit zeigen Situationsbewusstsein. Kontext angemessen genutzt."
   }
 ]

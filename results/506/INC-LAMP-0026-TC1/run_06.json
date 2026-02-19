@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-19T14:59:10",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Checkliste für Außendienst-Einsatz: Unregelmäßiges Verhalten (an/aus)  \n**Asset-ID:** n4449540379\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Arbeitsbereich absichern (z. B. Pylonen, Warnleuchten).\n   - Auf fließenden Verkehr achten, ggf. zweite Person zur Absicherung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Sind äußere Schäden, lose Kabel, Feuchtigkeit oder Vandalismus erkennbar?\n   - Prüfen, ob andere Lampen/Ampeln in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Wann tritt das An/Aus auf? (z. B. nur bei Dunkelheit, bei Regen, zufällig)\n   - Prüfen, ob der Fehler reproduzierbar ist.\n   - Notieren, ob Geräusche, Flackern oder Geruch auftreten.\n   - Falls möglich: Sicherungen und Schaltkasten auf offensichtliche Defekte prüfen (ohne Eingriff in Elektrik).\n\n4. **Dokumentation**\n   - Alle Beobachtungen (Zeit, Wetter, Fehlerbild) schriftlich festhalten.\n   - Fotos von Anlage und Umgebung machen.\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. blanke Kabel, Ausfall wichtiger Verkehrsführung): Sofortige Meldung an Leitstelle/Technik.\n   - Bei unklarer Ursache: Störung an Fachabteilung melden, ggf. Elektriker anfordern.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf Witterungseinflüsse oder Bauarbeiten in der Nähe?  \nBitte ggf. weitere Details angeben, um gezielter unterstützen zu können.",
+    "tokens_estimate_words": 186
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Checkliste mit Absicherung, Diagnose und Eskalation. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Rückfragen zeigen gute Praxis."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.738
+  },
+  "error": {}
+}

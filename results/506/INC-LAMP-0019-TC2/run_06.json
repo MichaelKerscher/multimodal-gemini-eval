@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-19T14:56:02",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe n4939032796 (Ausfall, unsichere Umgebung)\n\n1. Absicherung  \n- Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.  \n- Gefahrenbereich um die Lampe mit Pylonen oder Warnleuchten absichern, besonders wegen schlechter Sicht und mittlerem Verkehrsaufkommen.\n\n2. Sichtprüfung  \n- Lampe und Mast auf sichtbare Schäden, lose Teile oder Vandalismus prüfen.  \n- Umgebung auf weitere ausgefallene Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe auf offensichtliche Weise beschädigt ist (z.B. zerbrochenes Glas, Kabel sichtbar).  \n- Da das Gerät online und im Normalzustand ist, liegt vermutlich ein Leuchtmittelausfall oder ein lokales Stromproblem vor.  \n- Bei Nebel und schlechter Sicht: Besondere Vorsicht bei Arbeiten im Bereich der Fahrbahn.\n\n4. Dokumentation  \n- Ausfall, Sichtbefund und getroffene Maßnahmen (Absicherung, Sichtprüfung) mit Zeit und Ort dokumentieren.  \n- Fotos anfertigen, falls möglich und sicher.\n\n5. Eskalation  \n- Bei fehlender Möglichkeit zur Sofortreparatur oder erhöhtem Sicherheitsrisiko: Störungsdienst und ggf. Polizei informieren.  \n- Meldung an Leitstelle mit Angabe der Dringlichkeit (unsichere Umgebung, schlechte Sicht).\n\n**Rückfrage:**  \nIst eine Ersatzleuchte oder Werkzeug für Sofortmaßnahmen verfügbar, oder soll nur die Gefahrenstelle gesichert und gemeldet werden?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Nutzung des vollen Kontexts (Nebel, poor_visibility, night, medium traffic). Sicherheit priorisiert, Diagnose plausibel, Dokumentation klar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.458
+  },
+  "error": {}
+}

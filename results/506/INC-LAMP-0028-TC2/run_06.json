@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC2",
+  "timestamp": "2026-02-19T14:59:59",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029720",
+        "longitude": 12.1326497,
+        "latitude": 47.8433336,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-18T06:17:02+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für beschädigtes Gehäuse mit möglicher Berührungsgefahr  \nStandort: Rosenheim, Leitzachstraße (n4470029720)\n\n1. **Absicherung**\n   - Bereich sofort absperren (z. B. mit Absperrband oder Pylonen).\n   - Warnhinweise anbringen: „Stromschlaggefahr – Zutritt verboten“.\n   - Falls möglich, Stromzufuhr unterbrechen (nur durch Elektrofachkraft).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle aus sicherer Entfernung: Ist das Gehäuse offen, liegen blanke Leitungen frei?\n   - Prüfen, ob Passanten gefährdet sind oder bereits Kontakt hatten.\n\n3. **Diagnose/Beobachtung**\n   - Einschätzung: Ist die Anlage weiterhin in Betrieb? Gibt es Funken, Geräusche oder Geruchsentwicklung?\n   - Foto dokumentieren (liegt laut Meldung bereits vor).\n\n4. **Dokumentation**\n   - Schadensbeschreibung, Zeitpunkt, Maßnahmen und Fotos festhalten.\n   - Standort und Gefahrenlage im Bericht vermerken.\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft sofort informieren (hohe Priorität: Berührungsgefahr!).\n   - Bis zur Reparatur Absperrung und Warnhinweise aufrechterhalten.\n\n**Rückfrage:**  \nIst die Stromzufuhr bereits abgeschaltet oder muss dies noch organisiert werden? Wer übernimmt die weitere Überwachung bis zur Reparatur?",
+    "tokens_estimate_words": 140
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort mit vollständiger Kontextnutzung (Standortname, severity=high erkannt). Sicherheitsmaßnahmen priorisiert, Eskalation mit Prioritätshinweis ('hohe Priorität: Berührungsgefahr!'). Strukturiert, umsetzbar, dokumentationsorientiert. Rückfragen sinnvoll."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.919
+  },
+  "error": {}
+}

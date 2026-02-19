@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-19T14:49:17",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei Dunkelheit zusätzliche Beleuchtung aufstellen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Mastes auf offensichtliche Schäden (z. B. Glasbruch, verbogene Teile, freiliegende Kabel).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Leuchtkörper defekt ist oder ein Stromausfall vorliegt.\n   - Falls möglich, Sicherungskasten kontrollieren.\n   - Bei Verdacht auf Stromausfall: Prüfen, ob weitere Anlagen betroffen sind.\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Lampe und Umgebung machen.\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Asset-ID).\n\n5. **Eskalation**\n   - Bei Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Elektrofachkraft.\n   - Bei einfachem Lampendefekt: Reparaturauftrag auslösen.\n   - Bei unklarer Ursache: Weiterleitung an Fachpersonal zur Diagnose.\n\n**Rückfrage:**  \nGibt es Angaben zum genauen Standort (z. B. Straße, Hausnummer) oder zur Umgebung (z. B. Kreuzung, Park)? Das erleichtert die schnelle Lokalisierung vor Ort.",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Eskalationspfaden. Keine Kontextinformationen verfügbar, daher keine Offline-Workflow-Erwartung. Sicherheit adressiert, aber ohne spezifische Umgebungsanpassung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.382
+  },
+  "error": {}
+}

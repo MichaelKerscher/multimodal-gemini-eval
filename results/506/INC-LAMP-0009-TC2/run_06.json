@@ -1,0 +1,85 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC2",
+  "timestamp": "2026-02-19T14:51:51",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12557351679",
+        "longitude": 12.0896193,
+        "latitude": 47.8457235,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Endorfer Au / Krones"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-19T09:04:59+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Checkliste für Außendienst-Einsatz: Flackernde Straßenlampe bei Regen  \n**Standort:** Rosenheim, Endorfer Au / Krones  \n**Fehlerbild:** Flackern, vor allem bei Regen  \n**Wetter:** Regen, schlechte Sicht  \n**Verkehr:** Gering  \n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Arbeitsbereich mit Pylonen oder Warnleuchten absichern.\n- Bei Dämmerung und Regen besonders auf Sichtbarkeit achten.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden prüfen (z. B. Risse, Feuchtigkeitseintritt, lose Teile).\n- Lampenkopf und Anschlusskasten auf Undichtigkeiten kontrollieren.\n- Umgebung auf Pfützen oder Wasseransammlungen prüfen.\n\n**3. Diagnose/Beobachtung**\n- Flackern direkt beobachten: Tritt es nur bei Regen auf?\n- Prüfen, ob Wasser in den Lampenkopf oder Anschlusskasten eindringt.\n- Sichtkontrolle der Dichtungen und Kabelverschraubungen.\n- Da Gerät offline: Keine Ferndiagnose möglich, Sichtprüfung vor Ort entscheidend.\n\n**4. Dokumentation**\n- Beobachtungen und vermutete Ursache (z. B. Feuchtigkeitseintritt) notieren.\n- Fotos machen, falls möglich (auch bei Regen, falls sicher).\n- Alle Maßnahmen und Auffälligkeiten dokumentieren.\n\n**5. Eskalation**\n- Bei Verdacht auf Feuchtigkeitseintritt oder elektrische Gefahr: Lampe außer Betrieb nehmen und Fachfirma informieren.\n- Bei geringem Risiko: Reparatur (z. B. Dichtungen prüfen/ersetzen) einplanen.\n- Rückmeldung an Leitstelle mit allen Befunden.\n\n**Rückfrage:**  \nSoll die Lampe sofort außer Betrieb genommen werden, falls Feuchtigkeit festgestellt wird, oder reicht eine kurzfristige Reparatur?  \nFehlt eine aktuelle Wartungshistorie oder gibt es bekannte Probleme an diesem Standort?",
+    "tokens_estimate_words": 209
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Wetter, Dämmerung, offline). Offline-Workflow wird korrekt erwähnt ('Keine Ferndiagnose möglich'). Klare Struktur, Safety-Fokus und Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.937
+  },
+  "error": {}
+}

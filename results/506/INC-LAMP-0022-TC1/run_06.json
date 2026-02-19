@@ -1,0 +1,63 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-19T14:57:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).\n   - Passanten auf die Dunkelheit hinweisen, falls akute Gefahr besteht.\n\n2. **Sichtprüfung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, freiliegende Kabel).\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob die Lampe flackert oder komplett aus ist.\n   - Prüfen, ob ein Stromausfall im Bereich vorliegt (andere Infrastruktur betroffen?).\n\n4. **Dokumentation**\n   - Asset-ID (n1987093607), Standort und Zeitpunkt der Störung notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder Stadtwerke melden.\n   - Hinweis auf unsicheren Bereich und schnelle Behebung anfordern.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere defekte Lampen oder ist nur diese eine betroffen?  \nSind akute Gefahrenstellen (z. B. Baustellen, Kreuzungen) in unmittelbarer Nähe?\n\nBitte geben Sie Bescheid, falls zusätzliche Informationen vorliegen.",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Einstufung fehlt (User erwähnt 'unsicher', aber keine explizite Priorisierung)",
+      "Keine Erwähnung von Zeitkritikalität trotz Sicherheitsbedenken"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung und Eskalation. Kontextnutzung korrekt (keine Spekulation über fehlende Daten). Sicherheitsfokus erkennbar, aber könnte bei 'unsicher' noch deutlicher priorisiert werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.576
+  },
+  "error": {}
+}

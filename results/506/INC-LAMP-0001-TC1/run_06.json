@@ -1,0 +1,60 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-19T14:48:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, sporadischer Ausfall bei Straßenlampe (Asset-ID: n5718630492). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Außendienst-Einsatz**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Pylone, Warnleuchte).\n\n2. **Sichtprüfung**\n   - Lampe und Umfeld auf sichtbare Schäden, Feuchtigkeit, lose Kabel oder Vandalismus prüfen.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Lampe beobachten: Flackert sie, geht sie erneut aus?\n   - Prüfen, ob der Fehler mit Umwelteinflüssen (z. B. Feuchtigkeit, Wind) zusammenhängt.\n   - Falls möglich, Schaltkasten auf lose Kontakte oder Feuchtigkeit prüfen.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Zeitpunkt und eigene Beobachtungen notieren.\n   - Fotos von Lampe und Umfeld machen.\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Verdacht auf elektrischen Defekt: Meldung an Fachabteilung/Elektriker weiterleiten.\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Meldung an Leitstelle.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter in dem Bereich? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 148
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, relevante Antwort mit klarer Absicherung, Diagnose und Eskalation. Keine Halluzinationen, da minimaler Kontext keine weiteren Erwartungen stellt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.264
+  },
+  "error": {}
+}
