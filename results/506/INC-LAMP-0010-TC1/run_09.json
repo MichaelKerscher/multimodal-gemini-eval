@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-26T16:42:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt entlang Rosenheim, Stadtmitte (Asset-ID: n4427955479). Hier ist das empfohlene Vorgehen:\n\nCheckliste für die Überprüfung\n\n1. Absicherung  \n   - Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.  \n   - Gefahrenbereich mit Pylonen oder Warnleuchten absichern, besonders bei Dunkelheit und viel Verkehr.\n\n2. Sichtprüfung  \n   - Prüfen, ob mehrere oder alle Lampen im Abschnitt betroffen sind.  \n   - Sichtkontrolle auf offensichtliche Schäden an Masten, Leuchten oder Verkabelung.  \n   - Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Gehwege) prüfen.\n\n3. Diagnose/Beobachtung  \n   - Testen, ob einzelne Lampen eventuell noch funktionieren (z. B. durch manuelles Einschalten, falls möglich).  \n   - Prüfen, ob ein Stromausfall vorliegt (ggf. Nachbarbereiche vergleichen).  \n   - Notieren, ob kürzlich Bauarbeiten oder Unwetter in der Nähe waren.\n\n4. Dokumentation  \n   - Genaue Beschreibung des Ausfalls (wie viele Lampen, welcher Abschnitt, Uhrzeit).  \n   - Fotos von der Situation und evtl. Schäden anfertigen.  \n   - Asset-ID (n4427955479) und Standort notieren.\n\n5. Eskalation  \n   - Bei Gefahr für Verkehr oder Fußgänger sofortige Meldung an die Leitstelle/Notdienst.  \n   - Sonst Störung an die zuständige Wartungsfirma oder den städtischen Betrieb weiterleiten.\n\nRückfrage:  \nBetrifft der Ausfall nur Straßenlampen oder auch Ampelanlagen? Gibt es Hinweise auf akute Gefahr (z. B. Kreuzung, Schulweg)?  \nBitte um kurze Rückmeldung, damit ich gezielt weiterleiten kann.",
+    "tokens_estimate_words": 196
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Safety-first-Priorisierung und Eskalationslogik. Kontext minimal, daher keine Offline-Workflow-Erwartung; generisch aber solide."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.944
+  },
+  "error": {}
+}

@@ -14,17 +14,20 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Eskalationslogik. Kontext minimal (nur Asset-ID), daher generische Rückfragen sinnvoll. Keine Halluzinationen, aber Kontext kaum nutzbar (K=3)."
+    "missing_elements": [
+      "Keine Nutzung von Kontext-Signalen (severity, time_of_day, traffic)",
+      "Keine Erwähnung von Foto-Verfügbarkeit"
+    ],
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Eskalationslogik und Dokumentation. Bleibt aber generisch, da minimaler Kontext nicht genutzt wird (nur Asset-ID). Sinnvolle Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 5,
-      "D": 4,
-      "K": 4
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Safety-first-Priorisierung, klare Eskalation bei severity=high. Nutzt Kontext gut (dusk/poor_visibility → zusätzliche Beleuchtung, photo_available implizit). Dokumentation vollständig, Struktur umsetzbar."
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, nutzt Kontext sichtbar (Koordinaten, dusk/poor_visibility → Warnleuchten, medium traffic → Absperrung, photo_available erwähnt). Klare Schrittfolge, Eskalation mit Trigger, vollständige Dokumentation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first klar, nutzt Kontext explizit (dusk/poor_visibility → Warnleuchten, traffic_exposure → Abstand, OSM-ID/Koordinaten dokumentiert). Eskalation mit 'Gefahr im Verzug' passend zu severity=high. Keine Halluzinationen, alle relevanten Elemente integriert."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Struktur, nutzt Kontext vollständig (Koordinaten, OSM-ID, photo_available, severity high → Notdienst/Feuerwehr). Eskalation mit klaren Triggern (Funkenflug/Rauch), vollständige Dokumentation, sinnvolle Rückfragen. Keine Halluzinationen."
   }
 ]

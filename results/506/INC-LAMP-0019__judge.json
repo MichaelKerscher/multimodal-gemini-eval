@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung von Umgebungskontext (Nacht/Nebel/Verkehr)",
-      "Keine Erwähnung von Foto-Dokumentation trotz photo_available=false im realen Kontext"
+      "Keine Nutzung von Umgebungskontext (Nebel/Nacht/Sicht)",
+      "Keine Erwähnung von Geräte-Konnektivität"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung als Schritt 1 und Eskalationslogik. Kontext minimal (nur Asset-ID), daher keine Erwartung an Wetter/Zeit/Verkehr. Dokumentation und Handlungsfähigkeit gut, aber Stop-Conditions könnten klarer sein."
+    "short_justification": "Klare Struktur mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur Asset-ID), daher keine Umgebungs-/Geräte-Infos erwartbar – K=3 ist angemessen."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext (Nebel, Nacht, mittlerer Verkehr) explizit für Safety-Maßnahmen. Klare Schrittfolge, Absicherung zuerst, Eskalation bei Gefährdung, Dokumentation vollständig. Keine Halluzinationen, keine irrelevanten Teile."
+    "short_justification": "Exzellent: Safety-first (Warnweste, Absicherung wegen Nebel/Sicht), klare Schrittfolge, nutzt Kontext (Nebel, Nacht, mittlerer Verkehr, online-Gerät), vollständige Dokumentation, passende Eskalation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Nutzt vollen Kontext (Nebel, Nacht, mittlere Verkehrsexposition) sichtbar in Safety-Schritten. Klare Priorisierung, Absicherung zuerst, differenzierte Eskalation nach Dringlichkeit, vollständige Dokumentation inkl. Foto-Hinweis. Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first (Warnweste, Absicherung wegen Nebel/Nacht), klare Struktur, nutzt Kontext korrekt (Nebel, Nacht, Gerät online), vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, extras.context_notes korrekt beachtet."
   }
 ]

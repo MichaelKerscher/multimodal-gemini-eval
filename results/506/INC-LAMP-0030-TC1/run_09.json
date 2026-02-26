@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-26T16:50:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Fehler (Asset-ID: n11833818322)\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Straßenlampe gefahrlos betreten werden kann.\n   - Bei Arbeiten an der Lampe: Absperrung und Warnschilder aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfe, ob äußerliche Schäden, lose Kabel oder Feuchtigkeit sichtbar sind.\n   - Kontrolliere, ob die Lampe ungewöhnliche Geräusche macht oder flackert.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Prüfe, ob in der Umgebung weitere Lampen betroffen sind.\n   - Notiere, ob der Fehler zu bestimmten Tageszeiten oder Wetterlagen auftritt.\n   - Falls möglich, führe eine Funktionsprüfung durch (z. B. mit einem Prüfgerät oder durch mehrmaliges Ein- und Ausschalten).\n\n4. **Dokumentation**\n   - Halte den aktuellen Zustand, den beobachteten Fehler und alle durchgeführten Maßnahmen schriftlich fest.\n   - Notiere Datum, Uhrzeit und Asset-ID.\n\n5. **Eskalation**\n   - Bei wiederholtem oder anhaltendem Fehler: Melde das Problem an die Fachabteilung für Elektrotechnik/Instandhaltung.\n   - Informiere ggf. den Netzbetreiber, falls ein größeres Problem im Stromnetz vermutet wird.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten, Unwetter oder Stromausfälle in der Nähe? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 170
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Keine Anpassung an fehlende Kontextinformationen"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Nutzt minimalen Kontext (Asset-ID) nicht aktiv, bleibt allgemein. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.121
+  },
+  "error": {}
+}

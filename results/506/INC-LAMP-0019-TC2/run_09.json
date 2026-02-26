@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-26T16:46:17",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für den Außendienst – Straßenlampe ausgefallen\n\n1. Absicherung  \n- Warnblinkanlage am Fahrzeug einschalten, ggf. Warnweste anlegen.  \n- Gefahrenbereich um die Lampe absichern (z. B. Pylone, Warnleuchte), besonders wegen schlechter Sicht und mittlerem Verkehrsaufkommen.\n\n2. Sichtprüfung  \n- Lampe und Umfeld auf offensichtliche Schäden, Vandalismus oder lose Kabel prüfen.  \n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe auf äußere Einflüsse (z. B. Feuchtigkeit durch Nebel) reagiert hat.  \n- Falls möglich, Sicherungskasten kontrollieren (nur bei Zugang und Befugnis).  \n- Keine offensichtliche Ursache? Notieren.\n\n4. Dokumentation  \n- Ausfall, Sichtbefund und getroffene Maßnahmen dokumentieren (Uhrzeit, Wetter, Fotos falls möglich).  \n- Standortdaten (Koordinaten) und besondere Gefahrenlage (Unsicherheit, schlechte Sicht) festhalten.\n\n5. Eskalation  \n- Bei anhaltender Dunkelheit und unsicherem Bereich Störung an die Leitstelle/Technik weiterleiten.  \n- Dringlichkeit betonen: Bereich wirkt unsicher, Sicht schlecht, mittlerer Verkehr.\n\nRückfrage:  \nIst Zugang zum Sicherungskasten möglich oder soll direkt die Fachabteilung informiert werden?",
+    "tokens_estimate_words": 151
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first (Warnweste, Absicherung wegen Nebel/Sicht), klare Schrittfolge, nutzt Kontext (Nebel, Nacht, mittlerer Verkehr, online-Gerät), vollständige Dokumentation, passende Eskalation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.138
+  },
+  "error": {}
+}

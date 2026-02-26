@@ -2,8 +2,8 @@
   {
     "test_id": "INC-LAMP-0015-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
       "D": 4,
       "K": 3
@@ -15,16 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Priorisierung bei severity=high erkennbar",
-      "Sicherheitsmaßnahmen könnten konkreter sein"
+      "Severity-Bewusstsein (high) nicht erkennbar",
+      "Verkehrsexposition/Sichtbedingungen nicht adressiert",
+      "Foto-Workflow nicht erwähnt"
     ],
-    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Nutzt minimalen Kontext korrekt (Asset-ID), bleibt aber teils generisch, da kaum Kontext verfügbar. Eskalation und Dokumentation sind vorhanden."
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Kontext minimal, daher keine Erwartung an Umwelt-/Severity-Details. Dokumentation gut, aber Priorisierung bei hoher Gefährdung könnte schärfer sein."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
     "scores": {
       "R": 5,
-      "H": 5,
+      "H": 4,
       "S": 5,
       "D": 5,
       "K": 5
@@ -36,13 +37,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (severity=high, traffic_exposure=high, night, poor_visibility, photo_available). Klare Priorisierung mit Safety-first, strukturierte Schritte, umfassende Dokumentation, explizite Eskalation mit Begründung. Keine Halluzinationen."
+    "short_justification": "Exzellente Nutzung des vollen Kontexts: severity=high + traffic_exposure=high + poor_visibility führen zu klarer Safety-Priorisierung, Warnbaken, Polizei-Option. Dokumentation inkl. Koordinaten, Foto erwähnt, Eskalation passend. Sehr strukturiert und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
     "scores": {
       "R": 5,
-      "H": 5,
+      "H": 4,
       "S": 5,
       "D": 5,
       "K": 5
@@ -54,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Nutzt erweiterten Kontext optimal (severity, traffic, visibility, photo_available, device online). Safety-first klar priorisiert, strukturierte Checkliste, vollständige Dokumentation, differenzierte Eskalation. Beachtet context_notes korrekt (device ≠ asset). Keine Halluzinationen."
+    "short_justification": "Nahezu identisch zu TC2: klare Safety-first-Logik, Kontext voll genutzt (severity, traffic, visibility), Dokumentation mit Foto-Workflow, Eskalation bei akuter Gefährdung. Struktur klar, umsetzbar, keine Halluzinationen."
   }
 ]

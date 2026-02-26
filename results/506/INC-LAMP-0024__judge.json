@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0024-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
+      "R": 4,
+      "H": 4,
       "S": 3,
-      "D": 3,
-      "K": 3
+      "D": 4,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -14,20 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)",
-      "Wetter-/Verkehrskontext (nicht erwartbar)"
-    ],
-    "short_justification": "Solide generische Antwort mit Absicherung, Diagnose, Dokumentation und Eskalation. Keine Kontextnutzung erkennbar (minimaler Context), aber auch keine Halluzinationen. Struktur klar, aber Stop-Conditions/Priorisierung schwach."
+    "missing_elements": [],
+    "short_justification": "Klare, strukturierte Antwort mit Safety-first, Eskalation und Dokumentation. Kontext minimal, daher kein Offline-Workflow erwartbar. Alle Schritte fallbezogen und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
     "scores": {
       "R": 5,
-      "H": 4,
+      "H": 5,
       "S": 5,
-      "D": 4,
-      "K": 5
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -36,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Sturm, Nacht, hohes Verkehrsaufkommen, offline → offline-Hinweis). Safety-first klar, Eskalation differenziert, Dokumentation detailliert. Struktur sehr gut, nur minimale Schwächen bei Stop-Conditions."
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, Offline-Status erkannt ('Gerät ist offline – keine Fernabfrage möglich'), Sturm/Verkehr/Sicht berücksichtigt, klare Eskalation. Sehr strukturiert und vollständig."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Kontext vollständig genutzt (offline → lokal dokumentieren/später sync, Sturm/Nacht/Verkehr → Absicherung), Safety-first, klare Schrittfolge, Eskalation differenziert, Dokumentation vollständig. Keine Halluzinationen, keine irrelevanten Teile."
+    "short_justification": "Perfekte Umsetzung: Offline-Workflow explizit ('offline speichern', 'später synchronisieren'), Safety-first, Sturm/Verkehr/Sicht integriert, klare Eskalation, vollständige Dokumentation. Kontext optimal genutzt."
   }
 ]

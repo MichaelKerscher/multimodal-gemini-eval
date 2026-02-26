@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC1",
+  "timestamp": "2026-02-26T16:43:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n12520338291)",
+    "context": {
+      "asset_osm": "n12520338291"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für den Außendienst – Dunkle Straßenlampe (Asset-ID: n12520338291)**\n\n1. **Absicherung**\n   - Bereich um die Lampe absichern, um Gefahren für Fußgänger und Verkehr zu minimieren (z. B. Warnbaken, Warnweste tragen).\n   - Bei akuter Unsicherheit ggf. Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und Umgebung: Ist offensichtlicher Schaden (z. B. Glasbruch, Mast beschädigt) erkennbar?\n   - Prüfen, ob weitere Lampen in der Nähe ebenfalls betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Leuchtmittel defekt? (Kein Licht trotz Dunkelheit)\n   - Stromversorgung prüfen (z. B. Sicherungskasten, falls zugänglich).\n   - Witterungseinflüsse oder Vandalismus als Ursache möglich?\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Uhrzeit und Beobachtungen notieren.\n   - Fotos vom Zustand der Lampe und Umgebung anfertigen.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung: Sofortige Meldung an die Leitstelle/Notdienst.\n   - Ansonsten: Störungsmeldung an zuständige Wartungsfirma weiterleiten.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese betroffen?  \nSind Schäden am Mast oder Lampenkopf sichtbar?  \n\nBitte um kurze Rückmeldung, damit wir gezielt weiter vorgehen können.",
+    "tokens_estimate_words": 168
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung), Eskalation und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber gut umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.632
+  },
+  "error": {}
+}

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC2",
+  "timestamp": "2026-02-26T16:42:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12557351679",
+        "longitude": 12.0896193,
+        "latitude": 47.8457235,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Endorfer Au / Krones"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-19T09:04:59+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Flackern (vor allem bei Regen)  \n**Objekt:** Rosenheim, Endorfer Au / Krones (n12557351679)  \n**Fehlerbild:** Flackern, verstärkt bei Regen  \n**Gerätestatus:** Offline, Zustand „ok“  \n**Verkehr:** Gering, schlechte Sicht, Dämmerung, Regen\n\n---\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereithalten.\n- Arbeitsbereich mit Pylonen/Leitkegeln absichern.\n- Bei schlechter Sicht: zusätzliche Warnleuchten verwenden.\n\n**2. Sichtprüfung**\n- Gehäuse, Mast und Anschlussstellen auf sichtbare Feuchtigkeit, Korrosion oder Beschädigungen prüfen.\n- Prüfen, ob Wasser in das Lampengehäuse eingedrungen ist.\n- Kabelzuführungen und Dichtungen kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob das Flackern bei Trockenheit ebenfalls auftritt (ggf. Rückfrage: Ist das Problem nur bei Regen?).\n- Mögliche Ursachen: Feuchtigkeitseintritt, defekte Dichtung, Isolationsproblem, Wackelkontakt.\n- Da Gerät offline: Keine Fernabfrage möglich, Sicht- und Funktionsprüfung vor Ort erforderlich.\n\n**4. Dokumentation**\n- Festgestellte Auffälligkeiten (z.B. Feuchtigkeit, Korrosion, defekte Dichtung) notieren.\n- Fotos machen, falls möglich (aktuell laut Meldung nicht verfügbar).\n- Zeitpunkt und Wetterbedingungen dokumentieren.\n\n**5. Eskalation**\n- Bei bestätigtem Feuchtigkeitseintritt: Reparatur/Abdichtung beauftragen.\n- Bei Gefahr für Verkehrssicherheit (z.B. Ausfall): Sofortige Meldung an Leitstelle, ggf. temporäre Abschaltung.\n- Falls Ursache unklar: Elektrofachkraft zur weiteren Diagnose hinzuziehen.\n\n**Rückfrage:**  \nTritt das Flackern ausschließlich bei Regen auf, oder auch bei hoher Luftfeuchtigkeit/Nebel? Gibt es Hinweise auf vorherige Reparaturen oder bekannte Undichtigkeiten an dieser Leuchte?",
+    "tokens_estimate_words": 200
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first, klare Schritte, Offline-Workflow erkannt ('Keine Fernabfrage möglich'), Wetter/Sicht/Verkehr integriert, Eskalation klar. K=4 wegen leicht generischer Formulierung, aber keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 7.346
+  },
+  "error": {}
+}

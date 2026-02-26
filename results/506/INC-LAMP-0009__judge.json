@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0009-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
       "K": 2
     },
@@ -15,18 +15,18 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (connectivity=offline nicht erkannt/genutzt)",
-      "Kontext-Signale (weather=rain, time_of_day, traffic) nicht sichtbar integriert"
+      "Offline-Workflow (Kontext zeigt offline, aber nicht erwähnt)",
+      "Wetter/Sicht-Risiko nicht explizit adressiert"
     ],
-    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber nutzt minimalen Kontext (nur asset_osm) nicht optimal. Offline-Status wird ignoriert, obwohl im CONTEXT vorhanden. Dokumentation gut, aber keine Anpassung an Offline-Bedingungen."
+    "short_justification": "Strukturiert, Safety-first, klare Eskalation. Kontext minimal (nur asset_osm), daher Offline-Workflow nicht erwartbar – aber Modell nutzt Kontext nicht aktiv (K=2). Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 4
     },
     "flags": {
@@ -35,10 +35,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Explizite Offline-Sync-Erwähnung könnte klarer sein"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung: Regen, Dämmerung, Offline-Status werden erkannt und integriert ('Gerät offline → keine Ferndiagnose'). Klare Struktur, Safety-first, gute Dokumentation. Offline-Workflow implizit vorhanden, könnte expliziter sein."
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first, klare Schritte, Offline-Workflow erkannt ('Keine Fernabfrage möglich'), Wetter/Sicht/Verkehr integriert, Eskalation klar. K=4 wegen leicht generischer Formulierung, aber keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -56,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontext-Signale (Regen, Dämmerung, low traffic, offline). Expliziter Offline-Workflow ('Offline dokumentieren, Fotos lokal speichern'). Klare Priorisierung, Safety-first, präzise Eskalationslogik, vollständige Dokumentation."
+    "short_justification": "Perfekt: Safety-first, Offline-Workflow explizit ('offline dokumentieren', 'lokal speichern', 'synchronisieren'), Wetter/Dämmerung/Sicht integriert, klare Eskalation, keine Halluzinationen. Nutzt extras.context_notes korrekt."
   }
 ]

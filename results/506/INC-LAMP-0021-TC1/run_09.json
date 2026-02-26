@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-26T16:47:03",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störung: Kurze Aussetzer & Flackern (Asset-ID: n8486238431)\n\n1. Absicherung  \n- Warnweste anlegen  \n- Gefahrenbereich absichern (z. B. Warnbaken, ggf. Verkehrslenkung)  \n- Stromzufuhr prüfen, ggf. abschalten (nur bei Arbeiten am offenen Gehäuse)\n\n2. Sichtprüfung  \n- Sichtkontrolle der Leuchte/Ampel auf offensichtliche Schäden (Gehäuse, Kabel, Feuchtigkeit)  \n- Prüfen, ob Flackern bei Erschütterung oder Berührung auftritt\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob das Flackern regelmäßig oder zufällig auftritt  \n- Kontakte und Klemmen im Gehäuse auf festen Sitz und Korrosion kontrollieren  \n- Ggf. Test mit Spannungsprüfer (nur durch Elektrofachkraft)\n\n4. Dokumentation  \n- Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Asset-ID, genaue Symptome)  \n- Fotos von auffälligen Stellen machen\n\n5. Eskalation  \n- Bei Verdacht auf Wackelkontakt oder Defekt: Meldung an Elektrofachkraft/Technik  \n- Bei akuter Gefahr (z. B. Funken, starke Hitze): Sofortige Abschaltung und Sperrung, Notdienst informieren\n\nFehlen weitere Angaben (z. B. Leuchtentyp, genaue Position, Zugang)? Bitte ergänzen!",
+    "tokens_estimate_words": 141
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Etwas generisch (z.B. 'Leuchte/Ampel'), aber umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.116
+  },
+  "error": {}
+}

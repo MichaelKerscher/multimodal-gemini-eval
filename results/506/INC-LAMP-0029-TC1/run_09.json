@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC1",
+  "timestamp": "2026-02-26T16:50:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher. (Asset-ID: n9223569763)",
+    "context": {
+      "asset_osm": "n9223569763"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n9223569763). Hier ist das empfohlene Vorgehen:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n   - Bereich möglichst absichern, z. B. durch Warnbaken oder Hinweisschilder, falls vorhanden.  \n   - Passanten auf die Dunkelheit aufmerksam machen, falls der Bereich stark frequentiert ist.\n\n2. Sichtprüfung  \n   - Prüfen, ob offensichtliche Schäden an der Lampe, dem Mast oder der Verkabelung erkennbar sind.  \n   - Gibt es weitere dunkle Lampen in der Nähe? Das könnte auf einen größeren Ausfall hindeuten.\n\n3. Diagnose/Beobachtung  \n   - Gab es in letzter Zeit Stromausfälle oder Bauarbeiten in der Nähe?  \n   - Flackert die Lampe gelegentlich oder bleibt sie komplett aus?  \n   - Sind ungewöhnliche Geräusche oder Gerüche wahrnehmbar?\n\n4. Dokumentation  \n   - Zeitpunkt und Dauer des Ausfalls notieren.  \n   - Fotos vom Standort und eventuellen Schäden machen (falls möglich und sicher).  \n   - Asset-ID (n9223569763) und genaue Standortbeschreibung festhalten.\n\n5. Eskalation  \n   - Meldung an die zuständige Wartungsstelle oder den Bereitschaftsdienst weiterleiten.  \n   - Bei akuter Gefahr (z. B. Unfallgefahr, stark frequentierter Bereich) sofortige Priorisierung anfordern.\n\nRückfrage:  \nIst die Lampe Teil einer ganzen Reihe, die ausgefallen ist, oder handelt es sich nur um diese eine? Gibt es Hinweise auf Vandalismus oder Unfallschäden?  \n\nBitte geben Sie weitere Details, falls vorhanden. Ich leite die Meldung umgehend weiter.",
+    "tokens_estimate_words": 197
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Safety-first nicht als Schritt 1 priorisiert",
+      "Keine Eskalations-Trigger bei 'Bereich wirkt unsicher'",
+      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Antwort ist grundsätzlich passend und strukturiert, aber Absicherung steht nicht klar als Schritt 1 im Safety-first-Sinne. Eskalation wird erwähnt, aber ohne klare Trigger bei 'unsicher'. Kontext minimal, daher K=3 akzeptabel."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.564
+  },
+  "error": {}
+}

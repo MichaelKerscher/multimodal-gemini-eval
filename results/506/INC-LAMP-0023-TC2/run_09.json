@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC2",
+  "timestamp": "2026-02-26T16:47:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293397459",
+        "longitude": 12.1320286,
+        "latitude": 47.8589872,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T08:16:43+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier die empfohlene Vorgehensweise für den dunklen Abschnitt (Koordinaten: 47.8589872, 12.1320286, hohe Verkehrsexposition, schlechte Sicht, Sturm):\n\n**Checkliste für den Außendienst-Einsatz**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) rund um den Arbeitsbereich aufstellen.\n   - Bei hoher Verkehrsbelastung ggf. Polizei oder Verkehrslenkung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung und ggf. Ampelanlagen im betroffenen Abschnitt.\n   - Prüfen, ob offensichtliche Schäden (z. B. umgestürzte Masten, lose Kabel, Wassereintritt) vorliegen.\n   - Wetterlage beachten: Bei Sturm besondere Vorsicht vor herabfallenden Teilen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob einzelne oder alle Leuchten/Ampeln betroffen sind.\n   - Da Gerät „offline“ ist: Keine Fernwartung möglich, Fehler muss vor Ort lokalisiert werden.\n   - Bei offensichtlichem Defekt (z. B. Sicherungskasten, Verkabelung, Leuchtmittel) Ursache notieren.\n   - Falls keine Ursache erkennbar: Störung dokumentieren, keine Reparatur bei Gefahr durch Sturm!\n\n4. **Dokumentation**\n   - Fotos vom Schaden und der Absicherung anfertigen (Foto laut Meldung vorhanden).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Gefahrenlage).\n   - Standort und betroffene Assets exakt dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (herabfallende Teile, Stromschlagrisiko): Einsatz abbrechen, Bereich absperren, Notdienst/Polizei informieren.\n   - Bei nicht behebbarer Störung oder Gefahr durch Wetter: Reparatur verschieben, Störung an Leitstelle melden.\n   - Nach Besserung der Wetterlage erneute Prüfung/Reparatur einplanen.\n\n**Rückfrage:**  \nIst eine sofortige Reparatur trotz Sturm gewünscht, oder soll der Einsatz aus Sicherheitsgründen verschoben werden? Sind weitere Fotos oder Details zum Ausmaß des Ausfalls verfügbar?",
+    "tokens_estimate_words": 232
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Sturm/hohe Verkehrsexposition → verstärkte Absicherung, Offline-Gerät → 'keine Fernwartung möglich', Wetter-Eskalation klar. Safety-first, strukturiert, vollständige Dokumentation, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.635
+  },
+  "error": {}
+}

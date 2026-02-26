@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC1",
+  "timestamp": "2026-02-26T16:45:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen. (Asset-ID: n4446442023)",
+    "context": {
+      "asset_osm": "n4446442023"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, ich unterstütze Sie bei der Überprüfung des gemeldeten dunklen Abschnitts entlang Schönau (Asset-ID: n4446442023).\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Gefahrenbereich absichern (z. B. Warnleuchten, Pylonen aufstellen).\n\n2. **Sichtprüfung**\n   - Prüfen, ob die Straßenbeleuchtung am genannten Abschnitt komplett oder teilweise ausgefallen ist.\n   - Sichtkontrolle auf offensichtliche Schäden an Lampenmasten, Leuchten, Kabeln oder Schaltkästen.\n\n3. **Diagnose/Beobachtung**\n   - Funktion einzelner Leuchten testen (z. B. durch Schaltkastenprüfung, falls zugänglich).\n   - Prüfen, ob der Ausfall auf eine einzelne Leuchte, eine Gruppe oder den gesamten Abschnitt zutrifft.\n   - Mögliche Ursachen notieren (z. B. Lampendefekt, Stromausfall, Vandalismus).\n\n4. **Dokumentation**\n   - Festgestellte Mängel und Beobachtungen fotografisch und schriftlich dokumentieren.\n   - Asset-ID (n4446442023) und genaue Position festhalten.\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel, Unfallgefahr): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei regulärem Defekt: Störungsmeldung an zuständige Wartungsfirma oder interne Technik weiterleiten.\n\n**Rückfrage:**  \nBetrifft der Ausfall nur die Straßenbeleuchtung oder auch Ampelanlagen? Gibt es Hinweise auf akute Gefahrenstellen (z. B. Kreuzungen, Schulwege)?",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal (nur OSM-ID), daher keine Umwelt-/Geräte-Anpassungen erwartbar. Rückfragen sinnvoll."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.099
+  },
+  "error": {}
+}

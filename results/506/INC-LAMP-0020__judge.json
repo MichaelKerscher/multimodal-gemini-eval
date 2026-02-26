@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0020-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
-      "D": 4,
+      "D": 3,
       "K": 3
     },
     "flags": {
@@ -14,17 +14,20 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal, daher keine Offline-Erwartung. Eskalation vorhanden, aber Trigger könnten schärfer sein (severity unbekannt im Kontext)."
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Anpassung an fehlende Umgebungsdaten"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Nutzt minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt allgemein. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,8 +35,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Regen, Nacht, severity=high, GPS, low_power_mode), klare Priorisierung, Safety-first, scharfe Eskalationskriterien, vollständige Dokumentation. Keine Halluzinationen."
+    "missing_elements": [
+      "Kein expliziter Hinweis auf low_power_mode des Geräts",
+      "Foto-Workflow nicht klar priorisiert"
+    ],
+    "short_justification": "Sehr gute kontextbezogene Antwort: nutzt severity=high, night, rain, poor_visibility für Safety-Entscheidungen. Klare Struktur, Eskalation passend, Dokumentation gut. Low_power_mode nur indirekt erwähnt ('eingeschränkte Ferndiagnose')."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -41,16 +47,16 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: kompakt, nutzt alle relevanten Kontextsignale (severity=high, Regen, Nacht, poor_visibility, low_battery), klare Safety-first-Logik, scharfe Eskalation, vollständige Dokumentation inkl. Offline-Hinweis. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt alle relevanten Kontextsignale (severity, night, rain, poor_visibility, low_power_mode → 'offlinefähig'). Sehr klare Priorisierung, Safety-first mit Polizei-Option, präzise Eskalationslogik. Kurz und umsetzbar."
   }
 ]

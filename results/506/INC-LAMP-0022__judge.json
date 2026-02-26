@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Sehr strukturierte, umsetzbare Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur Asset-ID), daher generisch aber angemessen. Keine Halluzinationen."
+    "missing_elements": [
+      "Severity-Bewertung fehlt (high nicht erkennbar aus minimalem Kontext)",
+      "Zeitstempel/reported_at nicht dokumentiert"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit Safety-first (Absicherung Schritt 1) und klarer Eskalationslogik. Dokumentation gut (Asset-ID, Standort, Zeit). Kontext minimal genutzt (nur Asset-ID), keine Halluzinationen. Severity/Dringlichkeit nicht explizit priorisiert, da im Kontext nicht sichtbar."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -24,7 +27,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (low_battery, Schnee, poor_visibility, severity=high), klare Schrittfolge, Safety-first, Eskalation mit Dringlichkeit, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Pylonen bei Schnee/schlechter Sicht), klare 5-Schritte-Struktur, severity=high → 'dringend' kennzeichnen, Foto-Workflow integriert, low_battery korrekt als Geräte-Problem erkannt (nicht Asset-Fehler). Kontext umfassend genutzt (Wetter, Sicht, Dringlichkeit). Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig und korrekt (Schnee, Dämmerung, low_battery des Geräts, severity=high), klare Struktur, Safety-first, Eskalation, Dokumentation. Versteht context_notes korrekt (device_state betrifft Techniker-Gerät). Keine Halluzinationen."
+    "short_justification": "Perfekte Antwort: Safety-first (Warnweste, Pylonen bei Schnee/schlechter Sicht), klare 5-Schritte-Struktur, severity=high → 'hoch priorisieren', Foto-Workflow integriert, extras.context_notes korrekt beachtet (device_state ist Techniker-Gerät, nicht Asset-Fehler). Kontext vollständig und korrekt genutzt, keine Halluzinationen, gezielt nach Schaltkasten/Elektriker gefragt."
   }
 ]

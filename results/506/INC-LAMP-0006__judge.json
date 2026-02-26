@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0006-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 3,
+      "H": 3,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -14,26 +14,33 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), guter Eskalationslogik und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung; generisch aber solide umsetzbar."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)",
+      "Keine explizite Priorisierung bei high severity"
+    ],
+    "short_justification": "Solide Grundstruktur mit Absicherung zuerst und Eskalation. Dokumentation gut detailliert. Bei minimalem Context angemessen generisch, aber keine klare Priorisierung für high-severity-Szenarien erkennbar."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
     "scores": {
       "R": 5,
-      "H": 5,
-      "S": 5,
+      "H": 4,
+      "S": 4,
       "D": 4,
-      "K": 4
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Nutzung des vollen Kontexts (Sturm, offline, high traffic, poor visibility). Safety-first klar, Offline-Hinweis ('offline' und 'low_battery' erwähnt), Eskalation passend zu severity=high. Sehr gut strukturiert und umsetzbar."
+    "missing_elements": [
+      "Offline-Workflow fehlt komplett (connectivity=offline im Context)",
+      "Keine Erwähnung lokaler Dokumentation/Sync später",
+      "Low_battery des Geräts nicht adressiert"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, high traffic, poor visibility) und klare Safety-first-Struktur. Kritischer Fehler: ignoriert offline/low_battery komplett, obwohl im Context prominent. K daher maximal 2."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -51,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung inkl. expliziter Offline-Workflow-Anweisungen ('lokal speichern', 'später synchronisieren'). Safety-first, klare Eskalation, vollständige Dokumentations-Checkliste, keine Halluzinationen. Nahezu ideal."
+    "short_justification": "Nahezu perfekt: Safety-first klar, Offline-Workflow explizit ('offline speichern, später synchronisieren'), alle Context-Signale genutzt (Sturm, high traffic, poor visibility, offline, low_battery). Klare Struktur, umsetzbar, keine Halluzinationen."
   }
 ]

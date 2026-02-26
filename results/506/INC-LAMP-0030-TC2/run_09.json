@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC2",
+  "timestamp": "2026-02-26T16:50:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Lampenausfall\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchte absichern, da mittlere Verkehrsexposition und schlechte Sichtverhältnisse herrschen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, lose Kabel oder Feuchtigkeitsspuren prüfen.\n   - Prüfen, ob die Lampe aktuell leuchtet und ob auffällige Geräusche oder Flackern auftreten.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Lampe mehrfach ein- und ausschalten (sofern möglich).\n   - Auf Wackelkontakte, lose Fassungen oder Korrosion achten.\n   - Hinweis: Die Konnektivität des Geräts ist „spotty“, daher können Ferndiagnosen eingeschränkt sein.\n\n4. **Dokumentation**\n   - Fotos vom aktuellen Zustand und der Umgebung machen (Foto liegt laut Meldung bereits vor).\n   - Fehlerbeschreibung und Beobachtungen notieren (z. B. Zeitpunkt, Wetter, Sichtverhältnisse, ob Fehler reproduzierbar ist).\n\n5. **Eskalation**\n   - Bei weiterhin sporadischem Fehler: Meldung an Elektrotechnik-Fachkraft zur tiefergehenden Prüfung (z. B. Messung der Stromversorgung, Austausch von Bauteilen).\n   - Falls Gefahr für Verkehrssicherheit besteht (z. B. Totalausfall bei schlechter Sicht): Sofortige Priorisierung der Reparatur.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Bauarbeiten in der Nähe, die Einfluss auf die Stromversorgung gehabt haben könnten?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 183
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht erwähnt",
+      "Keine explizite Anweisung zur lokalen Dokumentation/Synchronisation"
+    ],
+    "short_justification": "Gute fallbezogene Antwort mit klarer Sicherheitspriorisierung (Warnweste, Absicherung bei dusk/poor_visibility/medium traffic). Nutzt Kontext teilweise (Sichtverhältnisse, Verkehr, Foto), aber ignoriert spotty connectivity für Workflow-Anpassung (Offline-Dokumentation). K=2 wegen fehlender Robustheit bei Konnektivitätsproblem."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.003
+  },
+  "error": {}
+}

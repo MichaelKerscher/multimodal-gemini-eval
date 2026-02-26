@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-26T16:39:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Kontrolle – Straßenlampe Rosenheim, Heilig Blut**\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Warnbaken und Blitzleuchte absichern (besonders wichtig bei Nacht, Nebel und mittlerem Verkehrsaufkommen).\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden prüfen (z. B. Risse, lose Teile, Feuchtigkeitseintritt).\n   - Umgebung auf Gefahrenquellen (z. B. rutschiger Boden durch Nebel) achten.\n   - Sichtprüfung bei eingeschaltetem Licht: Flackern, Aussetzer oder Farbabweichungen beobachten.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein- und ausschalten, um Fehlerbild (zeitweiser Ausfall) nachzustellen.\n   - Prüfen, ob Feuchtigkeit (z. B. durch Nebel) im Gehäuse sichtbar ist.\n   - Geräusche (Brummen, Knistern) beachten.\n   - Falls möglich: Foto aus dem Bericht sichten und mit aktuellem Zustand vergleichen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen (auch wenn aktuell kein Fehler sichtbar) notieren.\n   - Fotos vom aktuellen Zustand machen.\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Verdacht auf Feuchtigkeitsschaden: Fachfirma zur elektrischen Prüfung beauftragen.\n   - Bei akuter Gefahr (z. B. loser Mast, offene Kabel): Sofortige Sperrung und Meldung an Leitstelle.\n\n**Rückfrage:**  \nSoll die Kontrolle sofort erfolgen oder ist ein bestimmter Zeitraum vorgesehen? Liegt das Foto aus dem Bericht digital vor?",
+    "tokens_estimate_words": 184
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontextfelder (Nacht, Nebel, mittlerer Verkehr, photo_available, intermittent fault). Klare Struktur, Safety-first, spezifische Maßnahmen für schlechte Sicht, sinnvolle Eskalation und Dokumentation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.486
+  },
+  "error": {}
+}

@@ -2,29 +2,33 @@
   {
     "test_id": "INC-LAMP-0029-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
       "K": 3
     },
     "flags": {
-      "safety_first": true,
+      "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation bei akuter Gefahr, gute Dokumentation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Fragt sinnvoll nach weiteren Infos (Reihenausfall, Gefahrenstellen)."
+    "missing_elements": [
+      "Safety-first nicht als Schritt 1 priorisiert",
+      "Keine Eskalations-Trigger bei 'Bereich wirkt unsicher'",
+      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Antwort ist grundsätzlich passend und strukturiert, aber Absicherung steht nicht klar als Schritt 1 im Safety-first-Sinne. Eskalation wird erwähnt, aber ohne klare Trigger bei 'unsicher'. Kontext minimal, daher K=3 akzeptabel."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 4
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -33,9 +37,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow explizit (lokal speichern/später sync)"
+      "Offline-Workflow fehlt trotz connectivity=offline",
+      "Keine explizite Anweisung zu lokaler Dokumentation/Sync später"
     ],
-    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absperrung), klare Schrittfolge, nutzt Kontext sehr gut (Nacht, poor_visibility, medium traffic, severity=high → Dringlichkeit). Offline-Workflow wird implizit behandelt (Foto machen), aber nicht explizit als 'lokal speichern/später synchronisieren' formuliert, daher K=4 statt 5."
+    "short_justification": "Sehr gute Struktur, Safety-first klar als Schritt 1, Eskalation bei severity=high passend. ABER: connectivity=offline wird ignoriert, kein Offline-Workflow erwähnt → K<=2 (harte Cap)."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -53,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Safety-first, klare Struktur, nutzt Kontext vollständig (offline → 'lokal speichern, später synchronisieren' explizit in Schritt 3+4), severity=high → sofortige Eskalation bei Gefahr, Dokumentation vollständig. Keine Halluzinationen, fragt gezielt nach."
+    "short_justification": "Nahezu perfekt: Safety-first klar Schritt 1, Offline-Workflow explizit (lokal speichern/später sync), Eskalation bei severity=high mit klaren Triggern, Dokumentation vollständig, Kontext korrekt genutzt (offline, night, poor_visibility, medium traffic). Keine Halluzinationen."
   }
 ]

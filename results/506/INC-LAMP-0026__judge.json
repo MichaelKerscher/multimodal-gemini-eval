@@ -5,28 +5,6 @@
       "R": 3,
       "H": 3,
       "S": 3,
-      "D": 3,
-      "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Offline-Workflow (Kontext fehlt, daher nicht erwartbar)",
-      "Spezifische Umweltfaktoren (Kontext fehlt)",
-      "Severity-basierte Priorisierung"
-    ],
-    "short_justification": "Grundsolide Antwort mit klarer Struktur und Safety-first. Bleibt aber generisch, da minimaler Kontext. Fragt sinnvoll nach Asset-Typ. Keine Halluzinationen, aber auch keine Kontextnutzung über Asset-ID hinaus."
-  },
-  {
-    "test_id": "INC-LAMP-0026-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
       "D": 4,
       "K": 2
     },
@@ -37,10 +15,30 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow explizit (connectivity=offline im Kontext)",
-      "Hinweis auf lokale Speicherung/Synchronisation"
+      "Offline-Workflow (kein Signal im CONTEXT, daher nicht erwartbar)",
+      "Spezifische Diagnose-Schritte für intermittent fault"
     ],
-    "short_justification": "Sehr gute fallbezogene Antwort mit Nebel/Verkehr/Ort integriert. Safety-first klar, Eskalation passend zu severity=low. ABER: connectivity=offline wird ignoriert – kein Offline-Workflow erwähnt, daher K=2."
+    "short_justification": "Solide generische Checkliste mit Safety-first und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Struktur gut, aber teils allgemein; Rückfragen sinnvoll."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Offline-Synchronisations-Hinweise könnten klarer sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nebel, offline, mittlere Verkehrsexposition). Safety-first, klare Schrittfolge, Offline-Workflow implizit (lokal dokumentieren/Fotos später). Eskalation klar. Rückfragen passend."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -58,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit ('lokal dokumentieren/Foto lokal speichern, später synchronisieren'), Nebel/Verkehr integriert, klare Schrittfolge, Safety-first, passende Eskalation zu severity=low. Nutzt Kontext vollständig und korrekt."
+    "short_justification": "Exzellente Antwort: Kontext vollständig genutzt (offline → lokal speichern/später sync, Nebel/Verkehr → Safety), klare Schrittfolge, Eskalation passend zu severity=low, Dokumentation detailliert. Rückfragen gezielt."
   }
 ]

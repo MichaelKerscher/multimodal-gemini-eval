@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte 5-Schritte-Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation vorhanden, aber Trigger könnten präziser sein. Kontext minimal, daher generisch aber angemessen."
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge. Sicherheit als Schritt 1, Eskalation vorhanden. Kontext minimal, daher keine Offline-Erwartung. Keine Halluzinationen erkennbar."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 4,
-      "K": 4
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nutzt Kontext gut (severity=medium, traffic_exposure=low, device online). Klare Struktur, Safety first, Eskalation mit Priorisierungshinweis. Dokumentation vollständig."
+    "short_justification": "Exzellente Antwort: nutzt Kontext sichtbar (online/ok, Koordinaten, severity, traffic_exposure low), klare Priorisierung, Safety first, vollständige Dokumentations-Checkliste, keine Halluzinationen. Offline nicht erwartbar (connectivity=online)."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Tag/klare Sicht/low traffic explizit eingebunden). Sehr klare 5-Schritte-Struktur mit konkreten Handlungen, Eskalation mit Dringlichkeitsbewertung, vollständige Dokumentation inkl. Fotos."
+    "short_justification": "Hervorragend: nutzt Kontext präzise (Tag/clear/low traffic → angepasste Absicherung, online → kein Offline-Workflow nötig), klare Struktur, Safety first, vollständige Doku-Punkte, sinnvolle Eskalation. Keine Halluzinationen."
   }
 ]

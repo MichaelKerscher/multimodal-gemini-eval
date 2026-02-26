@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -15,14 +15,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal, daher keine spezifischen Umwelt-/Device-Hinweise erwartbar – generische Antwort ist hier angemessen."
+    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal (nur OSM-ID), daher keine Umwelt-/Geräte-Anpassungen erwartbar. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -33,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Regen, dusk, poor_visibility, low_power_mode, photo_available). Safety-first klar, Schritte priorisiert, Dokumentation vollständig, Eskalation passend zu severity=medium."
+    "short_justification": "Exzellente Kontextnutzung (Dämmerung, Regen, low_power_mode erwähnt), klare Schrittfolge, Safety-first, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: nutzt Kontext (Regen, dusk, low_power_mode, photo_available) präzise, Safety-first, klare Schrittfolge, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, robuste Rückfragen."
+    "short_justification": "Kompakt und präzise, nutzt Kontext optimal (Regen, Dämmerung, low_power_mode als Workflow-Hinweis), klare Priorisierung, Safety-first, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
   }
 ]

@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare, strukturierte Checkliste mit Safety-first und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Rückfragen sinnvoll, aber Priorisierung könnte schärfer sein."
+    "short_justification": "Klare, strukturierte 5-Schritte-Checkliste mit Safety-first (Absicherung zuerst), sinnvoller Eskalationslogik und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Rückfragen sinnvoll und fallbezogen."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
-      "K": 5
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (spotty connectivity → manuelle Prüfung, Nebel/Dämmerung → Absicherung, low_battery → Notizblock). Klare Schrittfolge, Safety-first, Eskalationslogik passend zu severity=low. Dokumentation vollständig."
+    "short_justification": "Gut strukturiert, Safety-first vorhanden, Eskalation passend zu Nebel/mittlerem Verkehr. Erwähnt 'spotty connectivity' und 'low_battery' korrekt als Geräte-Constraint, aber Offline-Workflow nur implizit (Fotos 'falls möglich'). Kontext gut genutzt."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextintegration (spotty → offline speichern/später sync, low_battery → lokale Notizen, Nebel/Dämmerung → Sichtverhältnisse dokumentieren). Klare Struktur, Safety-first, Eskalation differenziert nach Gefährdung. Dokumentation vollständig."
+    "short_justification": "Exzellente Umsetzung: Safety-first, klare Schrittfolge, expliziter Offline-Workflow ('offline dokumentieren, Fotos lokal speichern'), differenzierte Eskalation, vollständige Dokumentation. Kontext (spotty/low_battery, Nebel, Dämmerung) optimal genutzt, keine Halluzinationen."
   }
 ]

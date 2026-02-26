@@ -4,7 +4,7 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
+      "S": 3,
       "D": 3,
       "K": 3
     },
@@ -14,8 +14,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide Grundstruktur mit Absicherung, Diagnose und Eskalation. Severity/Kontext fehlen im CONTEXT, daher keine höheren Erwartungen. Safety-first erkennbar, aber nicht stark priorisiert (Schritt 1 eher generisch). Dokumentation vorhanden, aber ohne Ticket-Checkliste."
+    "missing_elements": [
+      "Keine Nutzung des minimalen Kontexts (nur asset_osm vorhanden)",
+      "Keine Priorisierung bei sporadischem Fehler",
+      "Keine klaren Stop-Conditions"
+    ],
+    "short_justification": "Grundsolide generische Antwort mit Safety-first und Eskalation. Nutzt den minimalen Kontext (asset_osm) korrekt, bleibt aber allgemein ohne Priorisierung für intermittent fault. Struktur ist klar, aber Stop-Conditions fehlen."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
@@ -33,17 +37,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (spotty connectivity)",
-      "Explizite Stop-Conditions"
+      "Kein expliziter Offline-Workflow trotz connectivity=spotty",
+      "Keine klare Priorisierung der Beobachtung vs. sofortige Reparatur"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (Regen, Dämmerung, severity=high → klare Absicherung). Struktur klar, Eskalation passend. K=3, weil spotty connectivity nicht zu Offline-Workflow führt (lokal speichern fehlt). Dokumentation gut, aber keine explizite Ticket-Checkliste."
+    "short_justification": "Sehr gute Kontextnutzung (Wetter, Sicht, severity=high, photo_available, device_state). Safety-first klar erkennbar, Eskalation passend zu severity. Offline-Workflow bei spotty connectivity fehlt, sonst stark fallbezogen."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -54,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty → Offline-Workflow explizit, Regen/Dämmerung → Safety, severity=high → Eskalation). Klare Schrittfolge, umsetzbar, keine Halluzinationen. Dokumentation mit lokalem Speichern. Nahezu perfekt."
+    "short_justification": "Exzellent: Nutzt alle relevanten Kontextsignale (spotty→offline-Workflow, rain/dusk/poor_visibility→Safety, severity=high→Eskalation, photo_available→Workflow). Klar strukturiert, priorisiert, keine Halluzinationen. Erfüllt alle Erwartungen."
   }
 ]

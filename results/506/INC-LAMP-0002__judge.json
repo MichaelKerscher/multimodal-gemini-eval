@@ -4,7 +4,7 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 2
     },
@@ -15,38 +15,18 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Kontext-Nutzung (nur OSM-ID vorhanden, keine Umwelt-/Geräte-Infos genutzt)",
-      "Spezifische Diagnose für intermittent fault (generisch gehalten)"
+      "Kein Bezug zu Umgebungsbedingungen (nicht im Kontext)",
+      "Keine Nutzung von photo_available (nicht im Kontext)",
+      "Generische Antwort ohne spezifische Kontextanpassung"
     ],
-    "short_justification": "Solide Struktur mit Safety-first und Eskalation. Dokumentation gut. Aber: Kontext minimal (nur OSM-ID), Antwort bleibt generisch und fragt nach Infos, die nicht erwartbar sind (Ampel vs. Lampe unklar). K=2 wegen fehlender Kontext-Nutzung."
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation. Bleibt aber generisch, da minimaler Kontext (nur asset_osm) keine spezifischen Anpassungen ermöglicht. K=2 wegen fehlender Kontextnutzung, obwohl keine Halluzinationen vorliegen."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Explizite Erwähnung photo_available im Workflow (nur 'Foto-Dokumentation nutzen' generisch)",
-      "Kein Hinweis auf reporter=patrol (könnte Rückfrage erleichtern)"
-    ],
-    "short_justification": "Sehr gute Kontext-Nutzung (Nacht, Nebel, mittlerer Verkehr, intermittent). Safety-first klar, Struktur umsetzbar, Dokumentation vollständig. Eskalation passend. K=4 wegen guter Kontext-Integration, aber photo_available nicht explizit genutzt."
-  },
-  {
-    "test_id": "INC-LAMP-0002-TC3",
-    "scores": {
       "R": 5,
-      "H": 4,
-      "S": 4,
+      "H": 5,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -57,6 +37,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontext-Nutzung (Nacht, Nebel, photo_available explizit genutzt, intermittent fault adressiert). Safety-first, klare Struktur, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, keine fehlenden Elemente erkennbar."
+    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontextfelder (Nacht, Nebel, mittlerer Verkehr, photo_available, intermittent fault). Klare Struktur, Safety-first, spezifische Maßnahmen für schlechte Sicht, sinnvolle Eskalation und Dokumentation. Keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort mit vollständiger Kontextnutzung (Nacht, Nebel, photo_available, intermittent). Klare Schrittfolge, Safety-first, spezifische Sicherheitshinweise für schlechte Sicht, sinnvolle Eskalation. Beachtet context_notes korrekt (device.* als Techniker-Gerät). Keine Halluzinationen."
   }
 ]

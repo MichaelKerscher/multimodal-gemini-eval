@@ -15,11 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung der Asset-ID im Kontext",
-      "Keine Anpassung an minimalen Kontext (generisch)",
-      "Keine Priorisierung bei unbekanntem Asset-Typ"
+      "Keine Anpassung an fehlende Umwelt-/Severity-Infos",
+      "Keine Erwähnung von Kontextlücken"
     ],
-    "short_justification": "Grundsätzlich passende Antwort mit Sicherheit und Eskalation, aber sehr generisch. Nutzt minimalen Kontext (nur Asset-ID) nicht sichtbar, bleibt allgemein für Ampel/Beleuchtung. Struktur vorhanden, aber keine klare Priorisierung bei unbekanntem Asset-Typ."
+    "short_justification": "Grundsolide Checkliste mit Safety-first und Eskalation. Bleibt aber generisch, da minimaler Kontext nicht reflektiert wird (keine Hinweise auf fehlende Infos zu Wetter/Verkehr/Severity). Rückfragen sind gut, aber Antwort hätte expliziter auf Datenlücken hinweisen können."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
@@ -37,10 +36,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "GPS-Koordinaten nicht explizit für Dokumentation genannt",
-      "Zeitstempel (reported_at) nicht in Doku erwähnt"
+      "Kein expliziter Hinweis auf photo_available=false als Constraint"
     ],
-    "short_justification": "Sehr gute Antwort: nutzt Kontext sichtbar (Nacht, Nebel, mittlerer Verkehr → erweiterte Absicherung, keine Fotos → Notizen). Safety-first klar, strukturiert, gute Dokumentation. Kleine Lücken bei expliziter GPS/Zeitstempel-Nutzung."
+    "short_justification": "Sehr gute kontextbezogene Antwort: Nebel/Nacht/mittlere Verkehrsexposition werden in Absicherung integriert, Steuerungsdiagnose passt zu control_box_issue, Dokumentation erwähnt Fotos ('sobald möglich'). Klare Struktur, Safety-first, sinnvolle Eskalation. Nur minimale Lücke bei expliziter Erwähnung von photo_available=false."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
@@ -54,12 +52,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "GPS-Koordinaten nicht explizit in Doku genannt"
-    ],
-    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel → Absicherung, Online → Fernstatus, mittlerer Verkehr → zweite Person. Safety-first, klare Struktur, gute Doku. Nutzt Kontext optimal, keine Halluzinationen. Nur GPS nicht explizit erwähnt."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht in Absicherung, Offline-Dokumentation explizit erwähnt ('offlinefähig, falls nötig'), Severity/Verkehr in Eskalation integriert, Steuerungsdiagnose passend. Klare Struktur, Safety-first, vollständige Dokumentation. Rückfragen sinnvoll. Nahezu perfekte Erfüllung aller Dimensionen."
   }
 ]
