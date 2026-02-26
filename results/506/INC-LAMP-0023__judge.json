@@ -1,0 +1,61 @@
+[
+  {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (Kontext zeigt kein offline-Signal)",
+      "Severity/Traffic nicht sichtbar genutzt (Kontext minimal)"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-/Severity-Signale erwartbar. Generisch solide, aber ohne spezifische Kontextnutzung."
+  },
+  {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Stop-Condition bei Sturm (nur 'ggf. unterbrechen')"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Sturm, hoher Verkehr, offline-Gerät, Koordinaten genannt. Offline-Workflow klar ('keine Fernabfrage möglich, Sichtdiagnose'). Safety-first, klare Eskalation bei Gefahr. Struktur und Dokumentation stark."
+  },
+  {
+    "test_id": "INC-LAMP-0023-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Safety-first mit Sturm-Warnung, klare 5-Schritte-Struktur, expliziter Offline-Workflow ('offline dokumentieren, lokal speichern, später synchronisieren'), severity/traffic/weather sichtbar integriert, keine Halluzinationen. Eskalation klar bei Gefahr."
+  }
+]

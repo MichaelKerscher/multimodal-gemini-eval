@@ -1,0 +1,59 @@
+[
+  {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Workflow",
+      "Keine Anpassung an minimalen Kontext"
+    ],
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Nutzt Asset-ID nicht aktiv, bleibt sehr allgemein trotz minimalem Kontext. Struktur und Dokumentation vorhanden, aber keine kontextspezifische Anpassung erkennbar."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontextfelder (Nacht, Regen, high severity, low_power_mode, photo_available). Safety-first klar priorisiert, strukturierte Schritte, umfassende Dokumentation, passende Eskalation. Keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Antwort: Nutzt Kontext präzise (Nacht, Regen, poor_visibility, high severity, low_power_mode korrekt interpretiert als Geräte-Zustand). Safety-first, klare Struktur, vollständige Dokumentation, angemessene Eskalation. Versteht Guardrails korrekt (device_state ≠ Asset-Fehler)."
+  }
+]

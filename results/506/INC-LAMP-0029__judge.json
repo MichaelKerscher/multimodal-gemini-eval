@@ -1,0 +1,63 @@
+[
+  {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-angemessene Priorisierung",
+      "Klare Eskalations-Trigger",
+      "Offline-Workflow (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Grundsolide Struktur mit Absicherung zuerst und Eskalation. Severity/Kontext fehlen im CONTEXT, daher keine härteren Anforderungen. Generisch, aber umsetzbar."
+  },
+  {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow explizit (connectivity=offline)",
+      "Lokale Speicherung/Sync-Hinweis"
+    ],
+    "short_justification": "Sehr gute Struktur, Safety-first, klare Eskalation bei severity=high. Nutzt Kontext (Nacht, traffic, poor_visibility) gut. Ignoriert aber connectivity=offline komplett → K=2."
+  },
+  {
+    "test_id": "INC-LAMP-0029-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schritte, Offline-Workflow explizit (lokal speichern, später sync), nutzt Kontext vollständig (severity, Nacht, traffic, connectivity). Keine Halluzinationen."
+  }
+]

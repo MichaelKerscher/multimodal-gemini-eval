@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, Diagnose und Eskalation. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Keine Halluzinationen, aber auch keine kontextspezifischen Details (Wetter/Traffic), da nicht verfügbar."
+  },
+  {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first mit Sturm/Traffic-Anpassung, klare Schrittfolge, Offline-Hinweis ('Gerät ist offline, keine Ferndiagnose'), Eskalation bei Gefahr, Dokumentation mit Fotos. Nutzt Kontext vollständig und korrekt."
+  },
+  {
+    "test_id": "INC-LAMP-0007-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first mit Sturm/Traffic-Bezug, klare Offline-Workflow-Integration ('offline speichern', 'Daten synchronisieren'), strukturierte Schritte, Eskalation bei Gefahr, vollständige Dokumentation. Nutzt extras.context_notes korrekt."
+  }
+]

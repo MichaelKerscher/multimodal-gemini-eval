@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC2",
+  "timestamp": "2026-02-26T14:05:04",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für sporadischen Lampenausfall (hohe Priorität, schlechte Sicht, Regen):**\n\n1. **Absicherung**\n   - Warnblinkanlage einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) rund um den Arbeitsbereich aufstellen, da schlechte Sicht und Regen herrschen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Teile prüfen.\n   - Umgebung auf Gefahren (z. B. rutschiger Boden, Verkehr) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe aktuell leuchtet.\n   - Auf auffällige Geräusche, Flackern oder Geruch achten.\n   - Batterie- und Verbindungsstatus des Geräts kontrollieren (Hinweis: „low_battery“ und „spotty connectivity“).\n   - Bei Regen: Feuchtigkeitseintritt an Gehäuse oder Anschlüssen vermuten.\n\n4. **Dokumentation**\n   - Fehlerbild (sporadisch, aktuell an) und alle Beobachtungen notieren.\n   - Foto vom Zustand und Umfeld machen (Foto liegt laut Meldung vor).\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Da Fehler sporadisch und sicherheitsrelevant (schlechte Sicht, hohe Priorität): Meldung an Fachabteilung/Elektriker weiterleiten.\n   - Hinweis auf möglichen Feuchtigkeitseintritt und schwache Batterie geben.\n   - Bis zur Instandsetzung regelmäßige Kontrolle empfehlen.\n\n**Rückfrage:**  \nGibt es Zugang zu einer Fernüberwachung oder muss vor Ort weiter beobachtet werden? Liegt eine Wartungshistorie zur Lampe vor?",
+    "tokens_estimate_words": 174
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit (spotty connectivity)",
+      "Batterie-Hinweis könnte klarer als Geräte-Constraint formuliert sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Regen, schlechte Sicht, hohe Priorität). Safety-first klar umgesetzt, Eskalation passend. Spotty connectivity wird erwähnt, aber Offline-Workflow nicht explizit beschrieben."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.968
+  },
+  "error": {}
+}

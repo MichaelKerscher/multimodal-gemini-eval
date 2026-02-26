@@ -1,0 +1,38 @@
+[
+  {
+    "test_id": "INC-LAMP-0015-TC1",
+    "scores": {"R": 3, "H": 3, "S": 3, "D": 3, "K": 2},
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": ["Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)", "Keine Priorisierung nach Severity/Traffic/Visibility"],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Kontext minimal (nur Asset-ID), daher keine erweiterten Signale nutzbar – K=2 wegen fehlender Kontextnutzung, aber keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {"R": 5, "H": 5, "S": 5, "D": 5, "K": 5},
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first klar (Warnweste, Absicherung), nutzt severity=high + traffic_exposure=high + poor_visibility für Priorisierung, klare Schrittfolge, Dokumentation vollständig, Eskalation passend. Keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC3",
+    "scores": {"R": 5, "H": 5, "S": 5, "D": 5, "K": 5},
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first (Warnblinkanlage, Pylonen), nutzt severity=high + traffic_exposure=high + poor_visibility sichtbar, klare Struktur, vollständige Dokumentation (OSM-ID, Koordinaten), Eskalation passend. Keine Halluzinationen."
+  }
+]

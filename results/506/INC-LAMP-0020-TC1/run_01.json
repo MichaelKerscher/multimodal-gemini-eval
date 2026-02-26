@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC1",
+  "timestamp": "2026-02-26T14:06:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n4483691318)",
+    "context": {
+      "asset_osm": "n4483691318"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei der Straßenbeleuchtung (Asset-ID: n4483691318). Hier ist das empfohlene Vorgehen:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n   - Warnweste anlegen, ggf. Warnleuchten oder Pylonen aufstellen.\n   - Arbeitsbereich gegen fließenden Verkehr sichern.\n\n2. Sichtprüfung  \n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. defekte Leuchten, lose Kabel, Vandalismus).\n\n3. Diagnose/Beobachtung  \n   - Funktioniert der Stromanschluss? (z. B. Sicherungen, Schaltkasten prüfen)\n   - Leuchten einzeln testen, falls möglich.\n   - Prüfen, ob ein größerer Stromausfall vorliegt.\n\n4. Dokumentation  \n   - Fotos vom betroffenen Bereich und den Leuchten machen.\n   - Festgestellte Mängel und Maßnahmen notieren (Datum, Uhrzeit, Asset-ID).\n\n5. Eskalation  \n   - Bei Gefahr für Verkehr oder Fußgänger: Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei größerem Ausfall oder unklarer Ursache: Weiterleitung an Fachpersonal/Elektriker.\n\nRückfrage:  \nKönnen Sie angeben, ob nur einzelne Lampen oder der gesamte Abschnitt betroffen ist? Gab es besondere Vorkommnisse (z. B. Unwetter, Bauarbeiten) in letzter Zeit?",
+    "tokens_estimate_words": 149
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Workflow",
+      "Keine Anpassung an minimalen Kontext"
+    ],
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Nutzt Asset-ID nicht aktiv, bleibt sehr allgemein trotz minimalem Kontext. Struktur und Dokumentation vorhanden, aber keine kontextspezifische Anpassung erkennbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.451
+  },
+  "error": {}
+}

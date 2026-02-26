@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Kontext)"
+    ],
+    "short_justification": "Klare Struktur mit Safety-first, Diagnose, Dokumentation und Eskalation. Relevante Rückfragen. Kontext minimal, daher generisch aber angemessen – keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Nutzt Kontext vollständig (Nebel, offline, mittlere Verkehrsexposition, keine Fotos). Offline-Workflow explizit erwähnt, Safety-first, klare Schrittfolge, vollständige Dokumentation."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Nutzt Kontext vollständig inkl. Guardrails (offline → lokal speichern/später synchronisieren). Safety-first, klare Struktur, Diagnose auf Tageslicht-Kontext bezogen, vollständige Dokumentation."
+  }
+]

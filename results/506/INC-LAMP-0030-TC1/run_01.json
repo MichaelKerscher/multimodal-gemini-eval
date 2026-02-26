@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-26T14:10:45",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein sporadischer Fehler bei der Straßenlampe (Asset-ID: n11833818322) vor – sie war zeitweise aus, funktioniert aktuell aber wieder. Hier die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung (z. B. dunkler Fußweg, Kreuzung) ggf. temporäre Warnbaken oder Hinweisschilder aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und den Mast auf sichtbare Schäden (z. B. Risse, lose Kabel, Feuchtigkeit im Gehäuse).\n   - Kontrolliere, ob die Lampe jetzt stabil leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, wann und wie lange die Lampe ausgefallen war.\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netz- oder Steuerungsproblem).\n   - Falls möglich: Teste die Lampe mehrmals (An-/Ausschalten, Dämmerungssensor prüfen).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Zeitpunkt, Dauer, aktuelle Funktion, sichtbare Auffälligkeiten).\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem oder längerem Ausfall: Störung an die Fachabteilung/den Elektriker melden.\n   - Bei akuter Gefahr (z. B. Kabeldefekt, Stromschlaggefahr): Sofortige Sperrung und Notdienst informieren.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter in dem Bereich? Das könnte die Fehlerursache eingrenzen.  \nSoll die Lampe vorsorglich kurzfristig überwacht werden, oder reicht eine reguläre Kontrolle im nächsten Wartungsintervall?",
+    "tokens_estimate_words": 197
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit klarer Struktur und Sicherheitsfokus. Kontext ist minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Alle Schritte sind sinnvoll und umsetzbar, aber ohne spezifische Kontextnutzung bleibt es etwas generisch."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.49
+  },
+  "error": {}
+}

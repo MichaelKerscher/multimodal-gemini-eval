@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC2",
+  "timestamp": "2026-02-26T14:05:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Prüfung – Dunkler Abschnitt Schönau\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereitstellen.  \n- Einsatzfahrzeug mit Warnblinker abstellen, ggf. Warnbaken aufstellen.  \n- Bei Regen und Dämmerung besonders auf Rutschgefahr und Sichtbarkeit achten.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Straßenlampen entlang des Abschnitts durchführen.  \n- Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.  \n- Auf offensichtliche Schäden (z. B. Kabel, Lampenköpfe, Feuchtigkeitseintritt) achten.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Sicherungen ausgelöst oder Schaltschränke feucht sind.  \n- Status der Lampen im Steuergerät kontrollieren (Gerät ist online, aber im Energiesparmodus).  \n- Bei Regen: Feuchtigkeit als mögliche Fehlerursache berücksichtigen.\n\n4. Dokumentation  \n- Fotos vom betroffenen Bereich und den Lampen machen (Foto liegt laut Meldung bereits vor).  \n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, betroffene Leuchten).\n\n5. Eskalation  \n- Bei unklarer Ursache oder Gefahr (z. B. Strom, beschädigte Kabel): Fachfirma oder Bereitschaftsdienst informieren.  \n- Bei akuter Gefährdung für Verkehrsteilnehmer: Polizei oder Ordnungsamt benachrichtigen.\n\nRückfrage:  \nSind bereits frühere Störungen an diesem Abschnitt bekannt oder gibt es Zugang zum Schaltschrank vor Ort?",
+    "tokens_estimate_words": 166
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (Regen, Dämmerung, low_power_mode, Foto vorhanden), klare Schrittfolge mit Safety-first, Eskalation und Dokumentation vollständig. Keine Halluzinationen, sehr umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.16
+  },
+  "error": {}
+}

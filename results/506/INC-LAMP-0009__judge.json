@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0009-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (connectivity nicht im CONTEXT, daher nicht erwartbar)"
+    ],
+    "short_justification": "Klare Struktur mit Safety-first, Sichtprüfung, Diagnose, Dokumentation und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Erwähnung erwartbar. Fragt sinnvoll nach Asset-Typ."
+  },
+  {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Standort, Regen, Dämmerung, offline), Safety-first klar, strukturierte Schritte, Offline-Hinweis ('keine Ferndiagnose möglich'), klare Eskalation. Sehr umsetzbar."
+  },
+  {
+    "test_id": "INC-LAMP-0009-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Antwort: nutzt Kontext vollständig (Regen, Dämmerung, offline), expliziter Offline-Workflow ('Offline dokumentieren, Fotos lokal speichern, später synchronisieren'), Safety-first, klare Eskalation, sehr strukturiert und umsetzbar."
+  }
+]

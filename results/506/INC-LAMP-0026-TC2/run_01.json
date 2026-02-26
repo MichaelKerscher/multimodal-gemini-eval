@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC2",
+  "timestamp": "2026-02-26T14:09:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4449540379",
+        "longitude": 12.1220096,
+        "latitude": 47.8772297,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Langenpfunzen, Römerstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-17T01:08:07+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei unregelmäßigem Verhalten (an/aus) – Straßenlampe Römerstraße, Langenpfunzen\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Absperrmaterial bereitstellen.\n- Arbeitsbereich mit Pylonen oder Warnleuchten absichern, besonders bei mittlerer Verkehrsexposition und hoher Geräuschkulisse.\n- Sichtbarkeit wegen Nebel beachten.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden, lose Kabel oder Feuchtigkeitsspuren prüfen.\n- Prüfen, ob der Lampenkopf fest sitzt.\n- Umgebung auf Anzeichen von Manipulation oder Vandalismus kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Da das Gerät „offline“ ist, keine Fernabfrage möglich.\n- Prüfen, ob der Schaltkasten zugänglich ist und ob Sicherungen ausgelöst wurden.\n- Sichtkontrolle der Verkabelung im Schaltkasten (sofern Zugang möglich).\n- Beobachten, ob das unregelmäßige Verhalten während der Anwesenheit auftritt.\n- Annahme: Keine Foto-Dokumentation vorhanden, daher vor Ort eigene Fotos machen.\n\n**4. Dokumentation**\n- Alle Feststellungen (auch „keine Auffälligkeiten“) notieren.\n- Fotos vom Zustand und Umfeld anfertigen.\n- Zeitpunkt und Wetterbedingungen (Nebel!) dokumentieren.\n\n**5. Eskalation**\n- Bei weiterhin unklarer Ursache und bestehender Störung: Meldung an die Fachabteilung für Elektrotechnik/Netzbetreiber zur weiteren Diagnose (z. B. Messung der Versorgungsspannung, Prüfung der Steuerung).\n- Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Absperrung und Notfallmeldung.\n\n**Rückfrage:**  \nIst Zugang zum Schaltkasten vor Ort möglich, oder wird ein Elektriker benötigt? Gibt es in der Nähe weitere Lampen mit ähnlichem Verhalten?",
+    "tokens_estimate_words": 204
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Nutzt Kontext vollständig (Nebel, offline, mittlere Verkehrsexposition, keine Fotos). Offline-Workflow explizit erwähnt, Safety-first, klare Schrittfolge, vollständige Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.11
+  },
+  "error": {}
+}

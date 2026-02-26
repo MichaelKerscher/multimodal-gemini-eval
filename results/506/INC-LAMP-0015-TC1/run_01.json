@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC1",
+  "timestamp": "2026-02-26T14:04:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n13293431103)",
+    "context": {
+      "asset_osm": "n13293431103"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist das empfohlene Vorgehen:\n\nAbsicherung  \n– Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).  \n– Andere Verkehrsteilnehmer auf die Dunkelheit aufmerksam machen (z. B. durch Hinweis an Passanten oder Polizei, falls akute Gefahr besteht).\n\nSichtprüfung  \n– Prüfen, ob weitere Lampen in der Nähe betroffen sind.  \n– Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, lose Kabel, Unfallspuren).\n\nDiagnose/Beobachtung  \n– Beobachten, ob die Lampe zwischenzeitlich wieder funktioniert.  \n– Prüfen, ob ein Stromausfall im Bereich vorliegt.\n\nDokumentation  \n– Asset-ID (n13293431103), Standort und Uhrzeit notieren.  \n– Festhalten, wie lange die Lampe bereits ausgefallen ist und ob weitere Lampen betroffen sind.\n\nEskalation  \n– Meldung an die zuständige Wartungsstelle oder den Bereitschaftsdienst weiterleiten.  \n– Bei akuter Gefährdung (z. B. an einer gefährlichen Kreuzung): Polizei informieren.\n\nRückfrage:  \nSind weitere Lampen betroffen oder ist es nur diese eine? Liegt eine besondere Gefährdung (z. B. Schulweg, Kreuzung) vor?",
+    "tokens_estimate_words": 149
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
+      "Keine Priorisierung nach Severity/Traffic/Visibility"
+    ],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Kontext minimal (nur Asset-ID), daher keine erweiterten Signale nutzbar – K=2 wegen fehlender Kontextnutzung, aber keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.558
+  },
+  "error": {}
+}

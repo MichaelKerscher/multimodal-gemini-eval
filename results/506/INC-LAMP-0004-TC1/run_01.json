@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-26T14:00:10",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. Absicherung  \n   - Bereich um die defekte Lampe absichern, falls möglich (z. B. Warnbaken, Hinweisschilder).\n   - Bei akuter Gefährdung (z. B. Unfallschwerpunkt, Schulweg) Polizei oder Ordnungsamt informieren.\n\n2. Sichtprüfung  \n   - Prüfen, ob weitere Lampen betroffen sind (Einzelfall oder größere Störung).\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochene Leuchte, freiliegende Kabel).\n\n3. Diagnose/Beobachtung  \n   - Notieren, ob die Lampe flackert, Geräusche macht oder komplett aus ist.\n   - Prüfen, ob es kürzlich Unwetter oder Bauarbeiten gab.\n\n4. Dokumentation  \n   - Asset-ID (n12551286240), Standort, Uhrzeit und Beobachtungen festhalten.\n   - Fotos machen, falls möglich.\n\n5. Eskalation  \n   - Störung an die zuständige Wartungsfirma oder den Bereitschaftsdienst melden.\n   - Bei erhöhter Gefährdung schnelle Bearbeitung anfordern.\n\n**Rückfrage:**  \nGibt es in der Nähe besondere Gefahrenstellen (z. B. Zebrastreifen, Haltestellen, Schulen)? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 141
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Safety-first. Dokumentation gut, aber Kontextnutzung minimal (nur Asset-ID verwendet). Keine Halluzinationen, aber auch keine Anpassung an fehlende Umgebungsdaten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.458
+  },
+  "error": {}
+}

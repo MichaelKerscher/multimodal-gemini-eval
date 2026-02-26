@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-26T14:06:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Straßenabschnitt (Standort: n4483691318)\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereitstellen.  \n- Einsatzstelle mit Warnleuchten/Pylonen absichern, besonders bei Nacht und Regen.  \n- Eigene Sicherheit und die der Verkehrsteilnehmer priorisieren.\n\n2. Sichtprüfung  \n- Sichtkontrolle der gesamten Beleuchtungsstrecke durchführen.  \n- Prüfen, ob einzelne oder mehrere Lampen betroffen sind.  \n- Auf offensichtliche Schäden (z. B. Mast, Leuchte, Verkabelung, Feuchtigkeitseintritt) achten.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Anlage Strom hat (z. B. durch Testen benachbarter Lampen).  \n- Geräusche, Gerüche oder sichtbare Defekte am Schaltschrank oder an den Leuchten feststellen.  \n- Gerät ist online, aber im Low-Power-Modus: Hinweis auf Energieproblem oder Steuerungsfehler.  \n- Wetter (Regen) kann Einfluss auf Elektrik haben – Feuchtigkeitsschäden möglich.\n\n4. Dokumentation  \n- Fotos vom Ausfallbereich und von auffälligen Schäden machen (Foto liegt laut Meldung vor).  \n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, betroffene Lampen).  \n- Dokumentation für spätere Nachverfolgung sichern.\n\n5. Eskalation  \n- Bei schwerwiegendem Ausfall (hohe Priorität, schlechte Sicht, Nacht): Störung umgehend an die Leitstelle/Technik weiterleiten.  \n- Falls Gefahr für Verkehrsteilnehmer besteht, ggf. Polizei oder Straßenmeisterei informieren.  \n- Reparaturteam mit passender Ausrüstung (ggf. Hebebühne, Elektrofachkraft) anfordern.\n\nRückfrage:  \nSind bereits weitere Ausfälle in der Umgebung gemeldet oder gibt es Hinweise auf Bauarbeiten/Stromausfall im Gebiet?  \nSoll die Fotoaufnahme zur weiteren Analyse bereitgestellt werden?",
+    "tokens_estimate_words": 208
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontextfelder (Nacht, Regen, high severity, low_power_mode, photo_available). Safety-first klar priorisiert, strukturierte Schritte, umfassende Dokumentation, passende Eskalation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.473
+  },
+  "error": {}
+}

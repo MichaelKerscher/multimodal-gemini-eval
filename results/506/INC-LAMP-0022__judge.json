@@ -1,0 +1,59 @@
+[
+  {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Bewusstsein (high) nicht explizit sichtbar",
+      "Keine Priorisierung Schnelligkeit bei hoher Gefährdung"
+    ],
+    "short_justification": "Strukturierte Antwort mit Safety-first und Eskalation. Kontext minimal (nur OSM-ID), daher generische Schritte angemessen. Severity 'high' nicht explizit adressiert, sonst solide."
+  },
+  {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar, nutzt Kontext präzise (Schnee, poor_visibility, low_battery, severity high), strukturiert, eskaliert angemessen, dokumentiert vollständig. Keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0022-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: Safety-first, nutzt Kontext inkl. Guardrails (low_battery → offline-Hinweis), severity high → schnelle Eskalation, strukturiert, dokumentiert vollständig. Keine Halluzinationen, alle Signale korrekt verarbeitet."
+  }
+]

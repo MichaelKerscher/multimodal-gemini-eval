@@ -1,0 +1,60 @@
+[
+  {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
+      "Generische Antwort ohne Bezug zu intermittent fault",
+      "Keine Priorisierung auf intermittierenden Fehler"
+    ],
+    "short_justification": "Strukturierte Antwort mit Safety-first und Eskalation, aber sehr generisch. Kontext minimal (nur Asset-ID), daher keine spezifische Anpassung an intermittent fault möglich. Dokumentation gut, aber keine Kontextnutzung erkennbar."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel/poor visibility → Absicherung, intermittent → Reproduktion, Feuchtigkeit als Ursache). Klare Struktur, Safety-first, vollständige Dokumentation. Sehr fallbezogen und umsetzbar."
+  },
+  {
+    "test_id": "INC-LAMP-0011-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Kompakte, präzise Antwort mit exzellenter Kontextnutzung (Nebel/Feuchtigkeit, intermittent fault, medium traffic). Klare 5-Schritt-Struktur, Safety-first, vollständige Dokumentation. Sehr umsetzbar und fallspezifisch."
+  }
+]

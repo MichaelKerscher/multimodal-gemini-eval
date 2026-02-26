@@ -1,0 +1,63 @@
+[
+  {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
+      "Keine Priorisierung nach Severity",
+      "Keine Anpassung an Umgebungsbedingungen"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Eskalation und Dokumentation vorhanden. Kontext minimal, daher keine spezifischen Anpassungen erwartbar oder fehlend."
+  },
+  {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit (spotty connectivity)",
+      "Batterie-Hinweis könnte klarer als Geräte-Constraint formuliert sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Regen, schlechte Sicht, hohe Priorität). Safety-first klar umgesetzt, Eskalation passend. Spotty connectivity wird erwähnt, aber Offline-Workflow nicht explizit beschrieben."
+  },
+  {
+    "test_id": "INC-LAMP-0016-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Offline-Workflow explizit ('offline dokumentieren, Foto lokal speichern'), Kontextnutzung perfekt (Regen, Dämmerung, spotty connectivity), Eskalation klar, Dokumentation vollständig."
+  }
+]

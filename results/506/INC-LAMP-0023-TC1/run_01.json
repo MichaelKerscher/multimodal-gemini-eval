@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC1",
+  "timestamp": "2026-02-26T14:08:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293397459)",
+    "context": {
+      "asset_osm": "n13293397459"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n13293397459 (Straßenbeleuchtung). Hier ist das empfohlene Vorgehen:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchten, Pylone aufstellen).\n   - Verkehrsteilnehmer auf mögliche Gefahren hinweisen.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Auf offensichtliche Schäden, lose Kabel, Vandalismus oder Feuchtigkeit achten.\n   - Umgebung auf weitere Gefahrenquellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Sicherungen und Schaltkästen kontrollieren (sofern zugänglich).\n   - Prüfen, ob Zeitschaltuhr oder Dämmerungssensor korrekt arbeiten.\n   - Notieren, ob der Ausfall punktuell oder flächig ist.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Leuchten machen.\n   - Genaue Position und Umfang des Ausfalls notieren.\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei größerem Ausfall oder unklarer Ursache: Weiterleitung an Fachabteilung/Elektriker.\n\n**Rückfrage:**  \nSind weitere Details zum Ausmaß des Ausfalls bekannt (z. B. wie viele Leuchten betroffen, seit wann besteht der Defekt)? Gibt es Hinweise auf akute Gefahrenstellen?",
+    "tokens_estimate_words": 167
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (Kontext zeigt kein offline-Signal)",
+      "Severity/Traffic nicht sichtbar genutzt (Kontext minimal)"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-/Severity-Signale erwartbar. Generisch solide, aber ohne spezifische Kontextnutzung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.919
+  },
+  "error": {}
+}

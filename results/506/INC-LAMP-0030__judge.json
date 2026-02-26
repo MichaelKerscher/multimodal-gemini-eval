@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit klarer Struktur und Sicherheitsfokus. Kontext ist minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Alle Schritte sind sinnvoll und umsetzbar, aber ohne spezifische Kontextnutzung bleibt es etwas generisch."
+  },
+  {
+    "test_id": "INC-LAMP-0030-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity"
+    ],
+    "short_justification": "Sehr gute Antwort mit klarer Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, schlechte Sicht). Safety-first gut umgesetzt, Eskalation klar. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt), aber sonst stark."
+  },
+  {
+    "test_id": "INC-LAMP-0030-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (spotty connectivity → Offline-Workflow, Dämmerung/Verkehr → Safety), klare Schrittfolge, vollständige Dokumentation, keine Halluzinationen. Eskalation klar, aber könnte noch expliziter priorisiert sein (daher S=4 statt 5)."
+  }
+]

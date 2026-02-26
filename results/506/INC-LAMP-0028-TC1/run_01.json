@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC1",
+  "timestamp": "2026-02-26T14:10:00",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n4470029720)",
+    "context": {
+      "asset_osm": "n4470029720"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die beschädigte Straßenlampe/Ampel sofort absperren (z. B. mit Warnbaken, Absperrband).\n   - Warnschilder „Achtung Stromschlaggefahr“ aufstellen.\n   - Passanten und Verkehrsteilnehmer fernhalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung? Liegen blanke Leitungen frei?\n   - Ist Feuchtigkeit oder Funkenbildung erkennbar?\n\n3. **Diagnose/Beobachtung**\n   - Keine Berührung! Nur Sichtprüfung durchführen.\n   - Prüfen, ob die Anlage weiterhin in Betrieb ist oder bereits ausgefallen ist.\n\n4. **Dokumentation**\n   - Fotos der Schadstelle und der Absicherung anfertigen.\n   - Schaden und getroffene Maßnahmen kurz schriftlich festhalten (Datum, Uhrzeit, Asset-ID).\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft umgehend informieren (Asset-ID: n4470029720, mögliche Berührungsgefahr).\n   - Bis zur Übernahme durch Fachpersonal vor Ort bleiben, falls möglich.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Meldung weiterleiten? Gibt es Hinweise, wie groß die beschädigte Stelle ist (z. B. Loch, Riss, abgebrochenes Teil)?",
+    "tokens_estimate_words": 147
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 5,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Sicherheitspriorisierung und klare Schrittfolge. Kontext minimal, daher keine Offline-Erwartung; Antwort bleibt angemessen generisch und fragt gezielt nach fehlenden Infos."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.227
+  },
+  "error": {}
+}

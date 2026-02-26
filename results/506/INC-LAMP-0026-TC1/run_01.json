@@ -1,0 +1,66 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-26T14:09:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden ein unregelmäßiges An-/Aus-Verhalten bei Asset n4449540379 (vermutlich eine Straßenlampe oder Ampel). Die genaue Ursache ist noch unklar.\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Bereich absichern: Warnbaken/Leitkegel aufstellen.\n   - Persönliche Schutzausrüstung tragen (Warnweste, ggf. Helm).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Masts, Gehäuses und sichtbarer Kabel.\n   - Prüfen, ob offensichtliche Schäden, Feuchtigkeit oder Manipulationen erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Wann tritt das An-/Aus-Problem auf (z. B. bei Feuchtigkeit, bestimmten Tageszeiten)?\n   - Prüfen, ob benachbarte Anlagen ähnliche Probleme zeigen.\n   - Falls möglich: Schaltkasten öffnen und auf lose Kontakte, Feuchtigkeit oder Korrosion prüfen (nur bei entsprechender Qualifikation).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetterbedingungen, Fotos).\n   - Asset-ID und Standort notieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Störung an die Fachabteilung/Elektriker melden.\n   - Dringlichkeit angeben (z. B. sicherheitsrelevante Kreuzung).\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise, wann das Problem besonders häufig auftritt (z. B. nach Regen, nachts, bei Wind)?",
+    "tokens_estimate_words": 160
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Kontext)"
+    ],
+    "short_justification": "Klare Struktur mit Safety-first, Diagnose, Dokumentation und Eskalation. Relevante Rückfragen. Kontext minimal, daher generisch aber angemessen – keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.701
+  },
+  "error": {}
+}

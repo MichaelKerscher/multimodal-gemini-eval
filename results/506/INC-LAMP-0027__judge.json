@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0027-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Absicherung zuerst, gute Diagnose-Schritte für Feuchtigkeitsproblem. Kontext minimal, daher keine Offline-Workflow-Erwartung; generische Antwort angemessen für L0."
+  },
+  {
+    "test_id": "INC-LAMP-0027-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nutzt Kontext gut (spotty connectivity erwähnt, high traffic → Absicherung betont). Erwähnt Offline-Aspekt ('vor Ort prüfen'), aber könnte expliziter sein bzgl. lokaler Dokumentation."
+  },
+  {
+    "test_id": "INC-LAMP-0027-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: spotty connectivity → 'offline speichern', 'lokal erfassen', 'Synchronisation nach Wiederherstellung'. Klare Safety-first-Struktur, präzise Eskalationslogik, vollständige Dokumentations-Checkliste inkl. Asset-ID/Wetter/Zeit."
+  }
+]

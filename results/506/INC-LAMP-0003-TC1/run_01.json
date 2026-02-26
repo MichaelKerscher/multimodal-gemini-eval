@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-26T13:59:50",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, ggf. Warnweste tragen).\n   - Bei Gefährdung des Straßenverkehrs: Sofortige Absicherung und ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Prüfe, ob offensichtliche Schäden an der Lampe, dem Mast oder der Verkabelung erkennbar sind.\n   - Kontrolliere, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größeren Stromausfall).\n\n3. **Diagnose/Beobachtung**\n   - Notiere, ob die Lampe komplett dunkel ist oder flackert.\n   - Prüfe, ob der Ausfall nur nachts oder auch tagsüber besteht (Hinweis auf Dämmerungsschalter).\n   - Falls möglich: Sicherungskasten kontrollieren (Sicherung ausgelöst?).\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Zeitpunkt und Beobachtungen dokumentieren.\n   - Fotos von der Lampe und Umgebung machen.\n\n5. **Eskalation**\n   - Bei Gefahr im Verzug (z. B. herabhängende Kabel): Sofort an die Leitstelle/Notdienst weitergeben.\n   - Ansonsten Störungsmeldung an die zuständige Fachabteilung oder den Wartungsdienst weiterleiten.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen in der Nähe oder besondere Gefahrenstellen (z. B. Kreuzung, Schulweg)?  \nFalls nicht bekannt, bitte bei der Sichtprüfung besonders darauf achten.",
+    "tokens_estimate_words": 179
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung erkennbar (minimaler Context)",
+      "Keine spezifische Anpassung an Umgebung/Zeit/Gerät"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext ist minimal, daher keine Erwartung an spezifische Anpassungen. Alle Kernelemente vorhanden, aber keine Differenzierung möglich."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.799
+  },
+  "error": {}
+}

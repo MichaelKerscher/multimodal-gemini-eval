@@ -1,0 +1,56 @@
+[
+  {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Eskalation, gute Dokumentation. Nutzt minimalen Kontext korrekt (Asset-ID), keine Überbehauptungen. Strukturiert und umsetzbar."
+  },
+  {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, nutzt Kontext optimal (Dämmerung/poor visibility → Beleuchtung der Absperrung, Koordinaten, severity=high → Notdienst). Strukturiert, vollständig dokumentiert, keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0013-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext korrekt (OSM-ID, Koordinaten, photo_available → Workflow-Hinweis), severity=high → Eskalation mit Feuerwehr/Polizei-Option. Vollständige Dokumentation, keine Halluzinationen."
+  }
+]

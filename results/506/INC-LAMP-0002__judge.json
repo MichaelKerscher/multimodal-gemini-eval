@@ -1,0 +1,62 @@
+[
+  {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Workflow",
+      "Keine Anpassung an Umgebungsbedingungen (nicht im Context)",
+      "Generische Rückfrage ohne Kontextbezug"
+    ],
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation. Bleibt aber generisch, da minimaler Context nicht genutzt wird (Asset-ID nur erwähnt, nicht integriert). Rückfrage zu Ampel/Lampe ist sinnvoll bei fehlendem asset_type."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Context-Signale (Nacht, Nebel, mittlerer Verkehr, intermittent fault, photo_available) präzise. Klare Schrittfolge, Safety-first, spezifische Diagnose-Hinweise (Feuchtigkeitseintritt bei Nebel), saubere Dokumentation und Eskalation. Rückfrage zu Wartungshistorie ist sinnvoll."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Dokumentation könnte GPS/Koordinaten explizit erwähnen"
+    ],
+    "short_justification": "Sehr gute, kompakte Antwort mit präziser Kontextnutzung (Nacht, Nebel, mittlerer Verkehr, intermittent, photo_available). Klare Struktur, Safety-first, spezifische Diagnose-Hinweise. Leicht knapper bei Dokumentations-Details (GPS nicht explizit), aber insgesamt sehr stark. Rückfrage zu benachbarten Lampen ist sinnvoll."
+  }
+]

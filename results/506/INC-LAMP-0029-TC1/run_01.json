@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC1",
+  "timestamp": "2026-02-26T14:10:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher. (Asset-ID: n9223569763)",
+    "context": {
+      "asset_osm": "n9223569763"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe überprüfen: Gibt es Stolperfallen oder besondere Gefahrenstellen?\n   - Falls möglich, provisorisch absichern (z. B. Warnbake, Hinweisschild).\n\n2. **Sichtprüfung**\n   - Ist die Lampe äußerlich beschädigt (z. B. Glas gebrochen, Mast verbogen)?\n   - Sind weitere Lampen in der Nähe betroffen?\n\n3. **Diagnose/Beobachtung**\n   - Leuchtet die Lampe gar nicht oder flackert sie?\n   - Gab es in letzter Zeit Stromausfälle oder Bauarbeiten in der Nähe?\n\n4. **Dokumentation**\n   - Asset-ID notieren: n9223569763.\n   - Zeitpunkt und genaue Position festhalten.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsstelle melden.\n   - Hinweis auf unsicheren Bereich und schnelle Behebung anfordern.\n\n**Rückfrage:**  \nGibt es in der Nähe besonders sensible Bereiche (z. B. Zebrastreifen, Bushaltestelle)? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 135
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-angemessene Priorisierung",
+      "Klare Eskalations-Trigger",
+      "Offline-Workflow (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Grundsolide Struktur mit Absicherung zuerst und Eskalation. Severity/Kontext fehlen im CONTEXT, daher keine härteren Anforderungen. Generisch, aber umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.098
+  },
+  "error": {}
+}

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC2",
+  "timestamp": "2026-02-26T14:01:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-21T18:59:18+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Störung: Kurze Aussetzer und Flackern (mögliche Kontaktprobleme) – Standort Rosenheim, BRK-Heim**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Warndreieck absichern.\n   - Bei mittlerer Verkehrsbelastung und Sturm: besondere Vorsicht, ggf. zweite Person zur Absicherung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden, lose Kabel, Feuchtigkeitseintritt oder Korrosion.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es regelmäßig oder nur bei Windböen auf?\n   - Sichtbare Kontaktstellen (z. B. Lampenfassung, Anschlusskasten) auf festen Sitz prüfen (ohne Stromfreischaltung keine Berührung!).\n   - Hinweis: Gerät ist offline, keine Ferndiagnose möglich.\n\n4. **Dokumentation**\n   - Fotos vom Schadensbild und Umfeld anfertigen.\n   - Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Besonderheiten).\n\n5. **Eskalation**\n   - Bei Verdacht auf Wackelkontakt, Feuchtigkeit oder Korrosion: Meldung an Elektrofachkraft zur weiteren Prüfung und Reparatur.\n   - Bei akuter Gefahr (z. B. herabhängende Kabel, Funken): Bereich sofort sperren und Notdienst informieren.\n\n**Rückfrage:**  \nWurde die Lampe bereits stromlos geschaltet oder ist Zugang zum Anschlusskasten möglich?",
+    "tokens_estimate_words": 165
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first mit Sturm/Traffic-Anpassung, klare Schrittfolge, Offline-Hinweis ('Gerät ist offline, keine Ferndiagnose'), Eskalation bei Gefahr, Dokumentation mit Fotos. Nutzt Kontext vollständig und korrekt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.878
+  },
+  "error": {}
+}

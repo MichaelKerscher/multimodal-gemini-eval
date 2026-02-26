@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-26T14:05:04",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen sporadischen Fehler an der Straßenlampe (Asset-ID: n13293470414), die zeitweise aus war und jetzt wieder funktioniert.\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die Lampe auf mögliche Gefahren prüfen (z. B. herunterhängende Kabel, defekte Abdeckung).\n   - Bei unmittelbarer Gefahr: Absperrung veranlassen und Störungsdienst informieren.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, Korrosion oder Vandalismus kontrollieren.\n   - Prüfen, ob die Lampe flackert oder ungewöhnliche Geräusche macht.\n\n3. **Diagnose/Beobachtung**\n   - Notieren, ob der Fehler zu bestimmten Zeiten oder Wetterbedingungen auftritt.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Asset-ID, Zeitpunkt und eigene Beobachtungen festhalten.\n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. **Eskalation**\n   - Bei wiederholtem oder anhaltendem Fehler: Meldung an die zuständige Wartungsfirma/Technik weiterleiten.\n   - Bei Gefahr im Verzug: Sofortige Eskalation an Notdienst.\n\n**Rückfrage:**  \nGab es in der Umgebung weitere Lampen mit ähnlichem Verhalten? Sind Ihnen äußere Schäden oder Auffälligkeiten am Mast oder Leuchtmittel aufgefallen?",
+    "tokens_estimate_words": 157
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
+      "Keine Priorisierung nach Severity",
+      "Keine Anpassung an Umgebungsbedingungen"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Eskalation und Dokumentation vorhanden. Kontext minimal, daher keine spezifischen Anpassungen erwartbar oder fehlend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.145
+  },
+  "error": {}
+}

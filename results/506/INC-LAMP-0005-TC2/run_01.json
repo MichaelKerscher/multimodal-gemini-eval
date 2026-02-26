@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-26T14:00:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-18T05:18:22+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Straßenabschnitt  \nStandort: OSM n13293404153 (47.8573976, 12.1307195)  \nMeldung: Ausfall, schlechte Sicht, Dämmerung, Nebel, mittlerer Verkehr\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Warnleuchten/Kegel aufstellen, um Arbeitsbereich abzusichern.\n- Auf Sichtbarkeit achten, besonders wegen Nebel und Dämmerung.\n- Verkehr beobachten, ggf. zweite Person zur Absicherung hinzuziehen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Straßenlampen: Sind Lampen beschädigt, sichtbar defekt oder verschmutzt?\n- Prüfen, ob mehrere Lampen betroffen sind (ganzer Abschnitt dunkel?) oder nur einzelne.\n- Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Masten) prüfen.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Stromversorgung sichtbar gestört ist (z. B. Sicherungskasten, offensichtliche Kabelschäden).\n- Aufgrund „spotty“ Konnektivität und „low_battery“ des Geräts: Vor Ort keine Ferndiagnose möglich, ggf. Sichtprüfung und Notizen.\n- Keine Fotos verfügbar – genaue Beschreibung der Situation notieren.\n\n**4. Dokumentation**\n- Alle Beobachtungen schriftlich festhalten (welche Lampen, welcher Bereich, was genau auffällig).\n- Zeitpunkt, Wetterbedingungen und eigene Maßnahmen dokumentieren.\n- Falls möglich, Skizze oder Karte anfertigen.\n\n**5. Eskalation**\n- Bei größerem Ausfall (ganzer Abschnitt, schlechte Sicht, Nebel): Störungsdienst/Leitstelle informieren, schnelle Reparatur anfordern.\n- Falls Gefahr für Verkehrssicherheit besteht: Sofortige Meldung an Polizei oder Ordnungsamt.\n- Bei unklarer Ursache: Fachfirma für Elektroprüfung hinzuziehen.\n\n**Rückfragen/Annahmen:**\n- Gibt es Zugang zu Schaltkästen vor Ort?\n- Sind weitere Meldungen aus dem Bereich bekannt?\n- Ist eine temporäre Beleuchtung möglich, bis Reparatur erfolgt?\n\nBitte Rückmeldung geben, falls weitere Details oder Fotos nachgereicht werden können.",
+    "tokens_estimate_words": 229
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Priorisierung bei low_battery (erwähnt, aber nicht als Handlungseinschränkung betont)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Nebel/Dämmerung/spotty connectivity/low_battery werden sichtbar integriert. Safety-first klar, Offline-Workflow erwähnt ('keine Ferndiagnose', 'Notizen'). Struktur gut, Eskalation passend zu severity=low + Umgebung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.075
+  },
+  "error": {}
+}

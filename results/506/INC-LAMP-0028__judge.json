@@ -1,0 +1,38 @@
+[
+  {
+    "test_id": "INC-LAMP-0028-TC1",
+    "scores": {"R": 4, "H": 4, "S": 5, "D": 4, "K": 3},
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Sicherheitspriorisierung und klare Schrittfolge. Kontext minimal, daher keine Offline-Erwartung; Antwort bleibt angemessen generisch und fragt gezielt nach fehlenden Infos."
+  },
+  {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {"R": 5, "H": 4, "S": 5, "D": 4, "K": 5},
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Standort, severity=high, photo_available), Safety-first klar erkennbar, strukturiert und umsetzbar. Keine Halluzinationen, connectivity=online korrekt nicht als Offline-Trigger gewertet."
+  },
+  {
+    "test_id": "INC-LAMP-0028-TC3",
+    "scores": {"R": 5, "H": 5, "S": 5, "D": 4, "K": 5},
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Safety-first explizit betont, klare Priorisierung (Polizei/Feuerwehr bei akuter Gefahr), Kontext vollständig genutzt (Standort, severity, photo), robuste Dokumentation inkl. Offline-Option erwähnt. Keine Halluzinationen."
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T13:59:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zum zeitweisen Ausfall (Asset-ID: n1987093602). Hier die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, ggf. Verkehrsregelung).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf offensichtliche Schäden, lose Teile, Feuchtigkeitseintritt oder Vandalismus.\n   - Prüfen, ob alle Leuchten/Ampeln aktuell funktionieren.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob der Fehler erneut auftritt (z. B. Flackern, Aussetzer).\n   - Prüfen, ob externe Einflüsse (z. B. Witterung, Bauarbeiten) als Ursache infrage kommen.\n   - Falls möglich, Kurzdiagnose am Schaltschrank durchführen (Sicherungen, Steuerung prüfen).\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten, Zeitpunkt und eigene Maßnahmen notieren.\n   - Fotos von eventuellen Schäden oder Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Sicherheitsrisiko: Störungsdienst/Technik informieren und weitere Maßnahmen einleiten.\n   - Falls keine Auffälligkeiten: Beobachtung fortsetzen und Rückmeldung an die Leitstelle geben.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bekannte Zeiten oder Bedingungen, zu denen der Ausfall auftritt (z. B. nur bei Regen, nachts, Stoßzeiten)?",
+    "tokens_estimate_words": 158
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Workflow",
+      "Keine Anpassung an Umgebungsbedingungen (nicht im Context)",
+      "Generische Rückfrage ohne Kontextbezug"
+    ],
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation. Bleibt aber generisch, da minimaler Context nicht genutzt wird (Asset-ID nur erwähnt, nicht integriert). Rückfrage zu Ampel/Lampe ist sinnvoll bei fehlendem asset_type."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.111
+  },
+  "error": {}
+}
