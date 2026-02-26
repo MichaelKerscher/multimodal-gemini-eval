@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC2",
+  "timestamp": "2026-02-26T15:36:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-21T18:59:18+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste bei Flackern/Kontaktproblemen – Straßenlampe Rosenheim, BRK-Heim**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Warndreieck absichern.\n   - Bei Sturm besondere Vorsicht: keine Arbeiten an stromführenden Teilen im Freien!\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z. B. lose Abdeckungen, Korrosion, Wackelkontakt).\n   - Prüfen, ob Wasser eindringt (bei Sturm möglich).\n   - Umgebung auf weitere Gefahren (herabfallende Äste, lose Teile) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, wann das Flackern auftritt (nur bei Wind, dauerhaft, bei Berührung?).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Aufgrund „offline“-Status keine Ferndiagnose möglich.\n\n4. **Dokumentation**\n   - Fotos vom Schaden und Umfeld anfertigen.\n   - Beobachtungen und Maßnahmen notieren (inkl. Wetterbedingungen).\n   - Zeitpunkt und Dauer des Flackerns festhalten.\n\n5. **Eskalation**\n   - Bei Verdacht auf gefährliche Schäden (z. B. loser Mast, Stromschlaggefahr): Sofort an Fachfirma/Notdienst melden, Bereich absperren.\n   - Bei geringfügigen Kontaktproblemen: Reparatur für nächsten planmäßigen Einsatz vormerken.\n\n**Rückfragen:**\n- Gibt es Zugang zu einer Hebebühne oder muss eine Anfahrt organisiert werden?\n- Sind Ersatzteile (Fassung, Leuchtmittel, Klemmen) vorhanden?\n- Wurde das Flackern nur bei Sturm beobachtet oder auch bei ruhigem Wetter?\n\nBitte Rückmeldung zu den offenen Punkten geben, damit die weitere Vorgehensweise geplant werden kann.",
+    "tokens_estimate_words": 195
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Offline-Sync-Anweisung (erwähnt 'offline', aber kein klarer Sync-Hinweis)",
+      "Foto-Workflow-Integration (photo_available=true nicht explizit genutzt)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, offline, mittlerer Verkehr, Standort). Klare Struktur mit Safety-first, Eskalation passend zu severity=low. Dokumentation detailliert, offline erwähnt. Kleine Lücken: Foto-Workflow und Sync nicht explizit."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.921
+  },
+  "error": {}
+}

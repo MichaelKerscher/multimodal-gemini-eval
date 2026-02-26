@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC1",
+  "timestamp": "2026-02-26T15:39:35",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle. (Asset-ID: n4939032525)",
+    "context": {
+      "asset_osm": "n4939032525"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4939032525). Hier die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei Bedarf Verkehr umleiten oder absperren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts: Schäden, lose Teile, offensichtliche Defekte?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Leuchtmittel prüfen: Ist es durchgebrannt?\n   - Sicherungen und Anschlüsse im Schaltschrank kontrollieren (nur durch Elektrofachkraft).\n   - Feuchtigkeit oder Vandalismus erkennbar?\n\n4. **Dokumentation**\n   - Befund und Maßnahmen im Wartungssystem dokumentieren (Asset-ID angeben).\n   - Fotos von Defekten oder Besonderheiten machen.\n\n5. **Eskalation**\n   - Bei Gefahr (z. B. freiliegende Kabel, umgestürzter Mast): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei einfachem Lampendefekt: Austausch beauftragen.\n   - Bei unklarer Ursache: Weiterleitung an Fachabteilung für Elektroprüfung.\n\n**Rückfrage:**  \nIst bekannt, ob nur diese Lampe betroffen ist, oder gibt es weitere Ausfälle im Umfeld?  \nSind besondere Gefahrenstellen (z. B. Fußgängerüberweg) betroffen?",
+    "tokens_estimate_words": 148
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine spezifische Nutzung des Kontexts (nur Asset-ID vorhanden)",
+      "Keine Priorisierung bei minimaler Info"
+    ],
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Bei minimalem Kontext (nur Asset-ID) bleibt die Antwort erwartbar allgemein, keine Halluzinationen. Struktur und Dokumentation vorhanden, aber nicht optimal priorisiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.028
+  },
+  "error": {}
+}

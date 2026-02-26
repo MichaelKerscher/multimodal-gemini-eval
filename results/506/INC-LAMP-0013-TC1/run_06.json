@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC1",
+  "timestamp": "2026-02-26T15:39:13",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n13278610215)",
+    "context": {
+      "asset_osm": "n13278610215"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zur Asset-ID n13278610215 (Straßenlampe/Ampel). Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Bereich sofort absperren (z. B. mit Warnbaken oder Absperrband).\n   - Warnschilder „Stromschlaggefahr“ aufstellen.\n   - Passanten und Verkehrsteilnehmer fernhalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo und wie stark ist die Beschädigung?\n   - Sind stromführende Teile sichtbar oder erreichbar?\n   - Gibt es Funken, Geräusche oder Geruchsentwicklung?\n\n3. **Diagnose/Beobachtung**\n   - Keine Berührung! Nur Sichtprüfung durchführen.\n   - Fotos für die Dokumentation anfertigen.\n   - Einschätzen, ob akute Gefahr besteht (z. B. freiliegende Kabel).\n\n4. **Dokumentation**\n   - Schaden und Absicherungsmaßnahmen schriftlich festhalten.\n   - Fotos und genaue Standortbeschreibung ergänzen.\n   - Asset-ID und Zeitpunkt notieren.\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft umgehend informieren.\n   - Bei akuter Gefahr zusätzlich Polizei/Feuerwehr alarmieren.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bereits eine akute Gefährdung (z. B. freiliegende Kabel, Funkenflug)?  \nBitte um kurze Rückmeldung für die weitere Koordination!",
+    "tokens_estimate_words": 147
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal (nur Asset-ID), daher keine Offline-Erwartung. Rückfrage sinnvoll, aber etwas generisch (Ampel/Lampe-Unterscheidung nicht aus Kontext ableitbar)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.26
+  },
+  "error": {}
+}

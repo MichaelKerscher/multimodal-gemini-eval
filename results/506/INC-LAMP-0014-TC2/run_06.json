@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-26T15:39:35",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Schritt-für-Schritt-Checkliste für die Störungsbearbeitung\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Absperrmaterial (z. B. Pylonen) aufstellen, um den Arbeitsbereich zu sichern.\n   - Warnweste tragen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden prüfen (z. B. Vandalismus, Anfahrschäden, lose Teile).\n   - Prüfen, ob der Leuchtkörper sichtbar defekt ist (z. B. zerbrochen, schwarz verfärbt).\n   - Umgebung auf weitere Ausfälle oder Besonderheiten kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Sicherstellen, dass die Stromversorgung anliegt (z. B. Sicherungskasten prüfen, falls zugänglich).\n   - Prüfen, ob andere Lampen in der Nähe funktionieren (Hinweis auf Leitungsproblem).\n   - Falls möglich, Funktionstest am Lampenkopf oder Steuergerät durchführen.\n\n4. **Dokumentation**\n   - Festgestellte Schäden und Maßnahmen notieren.\n   - Fotos machen (sofern möglich und sinnvoll).\n   - Zeitpunkt und Namen der ausführenden Person dokumentieren.\n\n5. **Eskalation**\n   - Bei offensichtlichem Defekt (z. B. Leuchtmittel defekt, Kabelbruch): Reparaturauftrag auslösen.\n   - Bei unklarer Ursache oder größerem Ausfall (z. B. mehrere Lampen betroffen): Störung an Fachabteilung/Elektriker weiterleiten.\n   - Bei Gefahr im Verzug (z. B. freiliegende Kabel): Sofortige Sperrung und Meldung an Einsatzleitung.\n\n**Rückfrage:**  \nIst ein Zugang zum Schaltschrank vor Ort möglich, oder wird ein Elektriker benötigt? Liegen weitere Meldungen zu benachbarten Lampen vor?",
+    "tokens_estimate_words": 185
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Nutzung von 'day' und 'clear' für Safety-Entscheidungen",
+      "Severity=medium nicht sichtbar in Priorisierung"
+    ],
+    "short_justification": "Sehr gute strukturierte Antwort mit klarer Schrittfolge, Safety-first, Eskalation und Dokumentation. Kontext (online, day, low traffic) wird implizit genutzt (keine Offline-Workflows nötig). Keine Halluzinationen, passende Rückfrage."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.215
+  },
+  "error": {}
+}

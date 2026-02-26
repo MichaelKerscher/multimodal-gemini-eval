@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC1",
+  "timestamp": "2026-02-26T15:35:57",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293404153)",
+    "context": {
+      "asset_osm": "n13293404153"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n13293404153 (Straßenbeleuchtung).\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Arbeitsbereich zu sichern.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. defekte Leuchtmittel, lose Kabel, Vandalismus).\n   - Umgebung auf Gefahrenstellen (z. B. Stolperfallen, beschädigte Masten) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schalten die Lampen bei Dämmerung ein/aus?\n   - Prüfen, ob Sicherungen ausgelöst wurden oder Stromzufuhr unterbrochen ist.\n   - Notieren, ob weitere Infrastruktur (z. B. Ampeln) betroffen ist.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Leuchten machen.\n   - Festgestellte Mängel und Maßnahmen protokollieren.\n   - Asset-ID und Standort eindeutig vermerken.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Personen: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei größerem Ausfall (mehrere Leuchten, ganze Strecke): Weiterleitung an Fachabteilung/Netzbetreiber.\n   - Kleinere Defekte: Reparaturauftrag an zuständigen Elektriker.\n\n**Rückfrage:**  \nSind aktuell akute Gefahrenstellen (z. B. Unfallgefahr, stark frequentierter Bereich) bekannt, oder handelt es sich „nur“ um die Beleuchtung? Gibt es Hinweise auf Vandalismus oder Unwetterschäden?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute strukturierte Antwort mit klarer Priorisierung (Absicherung zuerst), umsetzbaren Schritten und differenzierter Eskalationslogik. Nutzt minimalen Kontext korrekt (Asset-ID), keine Halluzinationen, sinnvolle Rückfragen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.558
+  },
+  "error": {}
+}

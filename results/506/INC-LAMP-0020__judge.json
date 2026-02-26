@@ -2,7 +2,7 @@
   {
     "test_id": "INC-LAMP-0020-TC1",
     "scores": {
-      "R": 3,
+      "R": 4,
       "H": 4,
       "S": 3,
       "D": 4,
@@ -15,37 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity/Zeitkontext nicht genutzt (nicht im CONTEXT)",
-      "Foto-Workflow nicht erwähnt (nicht im CONTEXT)"
+      "Keine Nutzung der GPS-Koordinaten (nicht im Kontext vorhanden)",
+      "Keine Anpassung an Umgebungsbedingungen (nicht im Kontext)"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge (Absicherung zuerst, Eskalation klar). Nutzt minimalen Kontext korrekt (Asset-ID), bleibt aber generisch, da kaum Kontext vorhanden. Dokumentation gut, keine Halluzinationen."
+    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung zuerst, guter Handlungsfolge und Eskalationslogik. Kontext ist minimal (nur Asset-ID), daher keine erweiterten Elemente erwartbar. Dokumentation gut abgedeckt."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 5,
-      "K": 4
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Low-power-mode könnte expliziter als Geräte-Constraint erwähnt werden"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Koordinaten, Regen, Nacht, severity=high, Foto vorhanden). Klare Safety-first-Struktur, Eskalation passend zu severity. Dokumentation vollständig inkl. Foto-Hinweis. Keine Halluzinationen."
-  },
-  {
-    "test_id": "INC-LAMP-0020-TC3",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -56,6 +36,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Regen, Nacht, severity, low-power-mode als Geräte-Constraint, Foto-Workflow). Safety-first klar, Eskalation passend, Dokumentation vollständig. Keine Halluzinationen, robuste Antwort."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (GPS, Wetter, Nacht, severity=high, photo_available), klare Safety-first-Struktur, präzise Eskalation bei akuter Gefahr, umfassende Dokumentation. Keine Halluzinationen, alle erwartbaren Elemente integriert."
+  },
+  {
+    "test_id": "INC-LAMP-0020-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragende Antwort: Nutzt erweiterten Kontext korrekt (severity, Wetter, Nacht, photo_available, low_power_mode als Geräte-Hinweis), klare Priorisierung mit Safety first, präzise Eskalation, vollständige Dokumentation. Keine Halluzinationen, kompakt und umsetzbar."
   }
 ]

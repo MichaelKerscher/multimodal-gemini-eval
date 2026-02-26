@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-26T15:44:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Die Situation wird als sicherheitsrelevant eingestuft. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, um den Bereich um die defekte Lampe abzusichern.\n   - Bei hoher Verkehrsexposition: Polizei oder Ordnungsamt informieren, falls schnelle Absicherung notwendig ist.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z. B. Vandalismus, Kabeldefekt, lose Teile).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe auf Bewegungen oder Schaltimpulse reagiert.\n   - Hinweis: Gerät meldet niedrigen Batteriestand, könnte Ursache sein.\n   - Falls möglich, Batteriestatus vor Ort kontrollieren.\n\n4. **Dokumentation**\n   - Fotos vom Ausfallbereich und der Lampe anfertigen (Foto liegt laut Meldung bereits vor).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Störung mit hoher Priorität an die zuständige Wartungsfirma oder den Bereitschaftsdienst melden (Hinweis auf hohe Verkehrsexposition und Unsicherheitsgefühl).\n   - Bei Gefahr im Verzug: Polizei/Ordnungsamt informieren.\n\n**Rückfrage:**  \nGibt es Zugang zum Schaltschrank oder zur Lampe für eine Batteriewechsel-Prüfung, oder muss ein Serviceteam angefordert werden?  \nSind weitere Lampen im Bereich betroffen?\n\nBitte um kurze Rückmeldung, damit die nächsten Schritte eingeleitet werden können.",
+    "tokens_estimate_words": 189
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "low_battery as device state, not asset cause (minor confusion)",
+      "stop-conditions for escalation could be sharper"
+    ],
+    "short_justification": "Sehr gute Antwort: nutzt severity=high, traffic_exposure=high, night/poor_visibility sichtbar für Safety-first und Eskalation. Dokumentation klar, Struktur umsetzbar. Leichte Unschärfe bei device.low_battery (Techniker-Gerät, nicht Asset), aber insgesamt kontextbewusst und handlungsfähig."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.079
+  },
+  "error": {}
+}

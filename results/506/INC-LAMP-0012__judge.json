@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)"
-    ],
-    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first (Absicherung zuerst), klarer Eskalation und Dokumentation. Kontextnutzung minimal (nur Asset-ID), aber keine Halluzinationen. Rückfrage sinnvoll."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Eskalation vorhanden, aber Sicherheitstrigger könnten präziser sein. Kontext minimal, daher keine Offline-Workflow-Erwartung."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
@@ -35,16 +33,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht explizit genannt trotz spotty connectivity"
+      "Offline-Workflow explizit (spotty connectivity)"
     ],
-    "short_justification": "Sehr gute Struktur mit Safety-first, nutzt Kontext (Koordinaten, low_power_mode, spotty, night, medium traffic). Eskalation klar priorisiert. Offline-Workflow fehlt trotz spotty-Signal, daher K=3."
+    "short_justification": "Sehr gute Struktur, nutzt Kontext (low_power_mode, spotty, night, medium traffic). Offline-Workflow wird implizit angedeutet ('schriftlich festhalten'), aber nicht explizit als Offline-Strategie benannt bei spotty connectivity."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absicherung), klare 5-Schritte-Struktur, nutzt Kontext vollständig (spotty→offline dokumentieren, night/poor_visibility→Dringlichkeit), Eskalation differenziert, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty→offline dokumentieren, low_power_mode, night, medium traffic), klare Schrittfolge mit Safety-first, expliziter Offline-Workflow, präzise Dokumentation inkl. OSM-ID und Koordinaten, differenzierte Eskalationslogik."
   }
 ]

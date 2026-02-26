@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-26T15:44:41",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden unregelmäßiges Ein- und Ausschalten bei Asset n4449540379 (vermutlich eine Straßenlampe oder Ampel). Ursache ist unklar.\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei Ampelanlagen: Verkehrsfluss beachten, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. Witterungseinflüsse, Vandalismus, lose Kabel).\n   - Prüfen, ob Feuchtigkeit oder Verschmutzung sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Gibt es ein Muster beim An-/Ausschalten? (z. B. bei bestimmten Wetterlagen, Tageszeiten)\n   - Prüfen, ob benachbarte Anlagen betroffen sind.\n   - Falls möglich: Schaltkasten öffnen (nur bei Befugnis!) und auf lose Kontakte, Sicherungen, Feuchtigkeit prüfen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Verhalten der Anlage).\n   - Fotos machen, falls relevant.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Störung an Fachfirma/Technik weiterleiten.\n   - Dringlichkeit je nach Verkehrsrelevanz und Sicherheitslage einstufen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es weitere Auffälligkeiten (z. B. Geräusche, Geruch, andere betroffene Anlagen in der Nähe)?",
+    "tokens_estimate_words": 160
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (Kontext fehlt)",
+      "Spekulation über Ampelanlage ohne Basis"
+    ],
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber spekuliert über Ampelanlage ohne Kontext-Basis (Halluzination). Minimaler Kontext wird nicht optimal genutzt; keine Offline-Hinweise, obwohl nicht erwartbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 7.124
+  },
+  "error": {}
+}

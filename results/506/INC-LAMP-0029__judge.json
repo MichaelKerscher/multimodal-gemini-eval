@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0029-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 3,
+      "H": 3,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -14,17 +14,20 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Sehr strukturierte, fallbezogene Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation und Dokumentation gut abgedeckt. Kontextnutzung eingeschränkt (nur Asset-ID vorhanden), daher K=3."
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (kein Signal dafür im Kontext)",
+      "Kontextnutzung minimal (nur Asset-ID)"
+    ],
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert (Absicherung zuerst), mit klarer Eskalationslogik. Dokumentation gut. Kontext ist minimal, daher keine Offline-Workflow-Erwartung; Antwort bleibt etwas generisch, aber passend."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 4
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -32,8 +35,11 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar erkennbar, Offline-Workflow explizit erwähnt ('Gerät offline, keine Fernabfrage möglich'), Eskalation passend zu severity=high/night/medium traffic. Kontext sehr gut genutzt, nur minimale Verbesserungsmöglichkeiten."
+    "missing_elements": [
+      "Offline-Workflow nur erwähnt ('Gerät offline'), aber nicht als klare Handlungsanweisung (lokal dokumentieren/später sync)",
+      "Kontextnutzung teilweise gut (Name, Severity, Night), aber Offline-Implikation nicht voll ausgearbeitet"
+    ],
+    "short_justification": "Gute Struktur, Safety-first, klare Eskalation bei high severity/night/poor visibility. Offline wird erwähnt, aber Workflow-Konsequenzen (lokal speichern/sync später) fehlen als explizite Schritte. K=2 wegen unvollständiger Offline-Handhabung trotz klarem Signal."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -51,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Offline-Workflow konsequent umgesetzt ('lokal speichern', 'offline dokumentieren', 'später synchronisieren'), Safety-first, klare Eskalationslogik, alle Kontextfaktoren (night/poor_visibility/medium traffic/offline) sichtbar integriert. Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first (Absicherung Schritt 1), klare Offline-Workflow-Integration (lokal speichern, später sync), präzise Eskalation bei high severity/night, vollständige Dokumentation, nutzt Kontext optimal (offline, photo_available, severity, time_of_day). Keine Halluzinationen."
   }
 ]

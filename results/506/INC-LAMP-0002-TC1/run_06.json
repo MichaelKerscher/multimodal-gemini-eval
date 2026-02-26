@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T15:34:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zum zeitweisen Ausfall (Asset-ID: n1987093602). Hier die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, ggf. Verkehrsregelung).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf äußere Schäden, lose Teile, Feuchtigkeitsspuren oder Manipulation.\n   - Prüfen, ob die Anlage aktuell wie vorgesehen funktioniert.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob der Fehler reproduzierbar ist (z. B. Flackern, Aussetzer).\n   - Prüfen, ob ungewöhnliche Geräusche, Gerüche oder Temperaturentwicklungen auftreten.\n   - Falls möglich: Kurzzeitige Unterbrechung und Neustart der Anlage testen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und aktuelle Funktion dokumentieren (Fotos, Notizen).\n   - Zeitpunkt und Dauer der Beobachtung festhalten.\n\n5. **Eskalation**\n   - Bei erneutem oder anhaltendem Ausfall: Meldung an die Fachabteilung/Technik weiterleiten.\n   - Bei Gefahr für Verkehrssicherheit: Sofortige Eskalation und ggf. Abschaltung/Absperrung veranlassen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bekannte Zeiten oder Bedingungen, unter denen der Ausfall auftritt (z. B. nur nachts, bei Regen)? Das hilft bei der gezielten Diagnose.",
+    "tokens_estimate_words": 159
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine spezifische Lokalisierung",
+      "Generische Antwort ohne Kontextanpassung"
+    ],
+    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Nutzt jedoch den minimalen Kontext (Asset-ID) nicht sichtbar, bleibt sehr generisch. Rückfrage zu Lampe/Ampel ist sinnvoll, aber Antwort hätte spezifischer sein können."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.25
+  },
+  "error": {}
+}

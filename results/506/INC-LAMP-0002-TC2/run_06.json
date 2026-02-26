@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-26T15:34:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Kontrolle Straßenlampe – Rosenheim, Heilig Blut**  \n_Betreff: Zeitweiser Ausfall, aktuell normal. Sicht: schlecht, Verkehr: mittel, Wetter: Nebel, Nacht_\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Pylonen/Leitkegeln sichern, besonders bei schlechter Sicht und mittlerem Verkehrsaufkommen.\n\n2. **Sichtprüfung**\n   - Lampe aus sicherer Entfernung beobachten.\n   - Auf Flackern, Aussetzer oder ungewöhnliche Geräusche achten.\n   - Lampengehäuse und Verkabelung auf sichtbare Schäden prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein- und ausschalten (sofern möglich), um Fehler zu provozieren.\n   - Prüfen, ob der Fehler erneut auftritt.\n   - Umgebung auf mögliche Fremdeinwirkungen (z. B. Vandalismus, Feuchtigkeitseintritt) untersuchen.\n   - Hinweis: Gerät meldet aktuell „ok“ und ist online, Fehler ist nicht reproduzierbar.\n\n4. **Dokumentation**\n   - Beobachtungen (auch „kein Fehler feststellbar“) mit Zeitstempel notieren.\n   - Foto vom aktuellen Zustand aufnehmen (bei Sichtprüfung und Umgebung).\n   - Alle Maßnahmen im System dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem oder dauerhaftem Ausfall: Störung an Fachabteilung melden.\n   - Bei Gefahr für Verkehrssicherheit (z. B. Totalausfall bei schlechter Sicht): Sofortige Reparatur oder provisorische Beleuchtung veranlassen.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Meldungen an diesem Standort oder ist dies ein Einzelfall?  \nSoll eine Langzeitbeobachtung (z. B. Monitoring über mehrere Nächte) eingerichtet werden?",
+    "tokens_estimate_words": 190
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kein expliziter Hinweis auf vorhandenes Foto nutzen"
+    ],
+    "short_justification": "Exzellente Kontextnutzung: Standort, Nebel, Nacht, schlechte Sicht, mittlerer Verkehr werden sichtbar integriert. Klare Struktur mit Safety-first, gute Dokumentation. Erwähnt device_state 'ok' korrekt. Nur photo_available könnte expliziter genutzt werden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.639
+  },
+  "error": {}
+}

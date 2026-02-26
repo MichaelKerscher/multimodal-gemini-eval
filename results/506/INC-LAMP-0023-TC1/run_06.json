@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC1",
+  "timestamp": "2026-02-26T15:43:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293397459)",
+    "context": {
+      "asset_osm": "n13293397459"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, ich unterstütze Sie bei der Überprüfung des dunklen Abschnitts (Asset-ID: n13293397459).\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel, Warnleuchten) bereitstellen.\n   - Gefahrenbereich absichern, besonders bei Dunkelheit und fließendem Verkehr.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen/Ampelanlagen im betroffenen Abschnitt.\n   - Prüfen, ob mehrere Leuchten/Ampeln betroffen sind oder nur einzelne.\n   - Auf offensichtliche Schäden, lose Kabel, Vandalismus oder Feuchtigkeit achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schalten die Lampen/Ampeln bei manueller Betätigung?\n   - Prüfen, ob Sicherungen ausgelöst oder Schaltschränke zugänglich sind.\n   - Gibt es Anzeichen für Stromausfall im gesamten Bereich?\n\n4. **Dokumentation**\n   - Festgestellte Mängel und Maßnahmen schriftlich festhalten (Foto, Notizen).\n   - Asset-ID und genaue Position dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer: Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei größeren Ausfällen oder unklarer Ursache: Weiterleitung an Fachabteilung/Elektriker.\n\n**Rückfrage:**  \nHandelt es sich um Straßenbeleuchtung oder eine Ampelanlage? Gibt es Hinweise auf einen Stromausfall im umliegenden Bereich?  \nBitte geben Sie an, ob bereits eine akute Gefährdung besteht (z. B. unbeleuchtete Kreuzung).",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)",
+      "Keine Nutzung von Geo-Koordinaten (nicht im CONTEXT vorhanden)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung → Diagnose → Eskalation). Relevanz und Handlungsfähigkeit gut, aber ohne spezifische Kontextnutzung (nur Asset-ID). Sicherheit und Dokumentation angemessen erwähnt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.508
+  },
+  "error": {}
+}

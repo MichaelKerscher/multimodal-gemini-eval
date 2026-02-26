@@ -4,7 +4,7 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 3,
+      "S": 2,
       "D": 3,
       "K": 2
     },
@@ -15,20 +15,20 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung der Asset-ID im Kontext",
-      "Spekuliert über Ampel vs. Straßenlampe ohne Basis",
-      "Keine Anpassung an minimalen Kontext"
+      "Keine Nutzung von Umgebungskontext (Nacht/Nebel/Sicht)",
+      "Keine Priorisierung nach severity",
+      "Generische Schritte ohne Anpassung an minimalen Kontext"
     ],
-    "short_justification": "Grundsätzlich passende Antwort mit Absicherung und Eskalation. Spekuliert jedoch über Ampel/Straßenlampe ohne Kontextbasis und nutzt die gegebene Asset-ID nicht aktiv. Struktur ist solide, aber teilweise zu generisch für den minimalen Kontext."
+    "short_justification": "Grundsätzlich passende Checkliste mit Absicherung und Eskalation. Jedoch sehr generisch, da minimaler Kontext nicht genutzt wird (z.B. keine Anpassung an fehlende Umgebungsdaten). Struktur vorhanden, aber Priorisierung schwach."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -36,19 +36,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Foto-Status (nicht verfügbar) nicht explizit adressiert"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung: Nebel, Nacht, mittlere Verkehrsexposition werden in Absicherung integriert. Klare Struktur, Safety-first, Eskalation passend zu severity=medium. Device-Status (online/ok) wird korrekt interpretiert. Nur photo_available=false nicht explizit erwähnt."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt Kontext (Nacht, Nebel, mittlerer Verkehr) explizit für Safety-Maßnahmen. Klare Schrittfolge, priorisiert Absicherung, konkrete Diagnose-Schritte, Eskalations-Trigger klar definiert. Dokumentation umfassend."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -56,9 +54,7 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Context_notes (Device vs. Asset) nicht explizit reflektiert"
-    ],
-    "short_justification": "Exzellente Antwort: Nebel/Nacht/mittlere Verkehrsexposition klar in Absicherung integriert, Struktur sehr umsetzbar, Safety-first, Eskalation passend. Dokumentation gut. Nutzt Kontext sichtbar und korrekt, keine Halluzinationen. Nur context_notes nicht explizit adressiert."
+    "missing_elements": [],
+    "short_justification": "Sehr starke Antwort: Nutzt Umgebungskontext (Nacht, Nebel, mittlerer Verkehr) gezielt für Sicherheitsmaßnahmen. Klare Struktur, Safety-first, konkrete Diagnose-Schritte, Eskalations-Trigger definiert. Dokumentation gut strukturiert."
   }
 ]

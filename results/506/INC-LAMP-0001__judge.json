@@ -16,10 +16,9 @@
     },
     "missing_elements": [
       "Safety-first nicht als Schritt 1 priorisiert",
-      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)",
-      "Eskalationstrigger könnten klarer sein"
+      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)"
     ],
-    "short_justification": "Grundsätzlich passende Antwort mit sinnvoller Struktur und Dokumentation. Absicherung wird erwähnt, aber nicht als oberste Priorität. Kontext minimal, daher keine Offline-Workflow-Erwartung."
+    "short_justification": "Grundsätzlich passende Antwort mit klarer Struktur und Eskalationslogik. Absicherung steht an erster Stelle, aber ohne explizite Priorisierung als 'Safety-first'. Kontext minimal genutzt (nur Asset-ID), was bei L0 akzeptabel ist."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -38,17 +37,17 @@
     },
     "missing_elements": [
       "Offline-Workflow fehlt trotz connectivity=offline",
-      "Halluzination: 'Gerät meldet niedrigen Batteriestand' als Ursache für Lampenausfall interpretiert"
+      "Batterie-Diagnose spekulativ (device_state bezieht sich auf Techniker-Gerät, nicht Asset)"
     ],
-    "short_justification": "Sehr gute Struktur mit Safety-first und klarer Eskalation. Schwere Halluzination: device_state wird fälschlich als Asset-Problem interpretiert statt als Techniker-Gerät. Offline-Workflow fehlt komplett."
+    "short_justification": "Sehr gute Struktur, Safety-first klar erkennbar, hohe Verkehrsexposition berücksichtigt. ABER: Halluzination bei Batterie-Interpretation (device_state=low_battery bezieht sich auf Techniker-Smartphone, nicht auf Lampe). Offline-Workflow fehlt komplett trotz connectivity=offline."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -58,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), korrekte Kontextnutzung ohne Halluzinationen, klare Dokumentation und Eskalationslogik."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), korrekte Kontext-Interpretation (device.* = Techniker-Gerät). Keine Halluzinationen, alle erwartbaren Elemente erfüllt."
   }
 ]

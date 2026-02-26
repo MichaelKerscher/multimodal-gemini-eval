@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC1",
+  "timestamp": "2026-02-26T15:37:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n12557351679)",
+    "context": {
+      "asset_osm": "n12557351679"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n12557351679 (Straßenlampe/Ampelanlage). Flackern bei Regen deutet oft auf Feuchtigkeitseintritt oder Isolationsprobleme hin.\n\n**Checkliste für die Störungsbearbeitung:**\n\n1. **Absicherung**\n   - Arbeitsbereich absperren (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung tragen.\n   - Stromzufuhr prüfen und ggf. abschalten.\n\n2. **Sichtprüfung**\n   - Gehäuse und Dichtungen auf Beschädigungen oder Undichtigkeiten kontrollieren.\n   - Sichtbare Korrosion oder Feuchtigkeitsspuren im Inneren prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Elektrische Anschlüsse und Klemmen auf Feuchtigkeit oder Oxidation untersuchen.\n   - Prüfen, ob Wasser in die Leuchte/Ampel eingedrungen ist.\n   - Testweise Betrieb bei trockener und nasser Witterung vergleichen.\n\n4. **Dokumentation**\n   - Festgestellte Schäden und durchgeführte Maßnahmen notieren (Fotos anfertigen).\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden (z. B. Kurzschlussgefahr) sofort Fachfirma oder Elektriker informieren.\n   - Bei unklarer Ursache Rücksprache mit dem technischen Dienst.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es weitere Auffälligkeiten (z. B. Ausfall, Geräusche, Geruch)?  \nBitte um kurze Rückmeldung, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Signal)",
+      "Keine Nutzung von Standortdaten (lat/lon fehlen im Kontext)",
+      "Keine Erwähnung von Wetter/Umgebungsbedingungen (nicht im Kontext)"
+    ],
+    "short_justification": "Grundsätzlich passende Antwort mit klarer Struktur und Sicherheitsfokus. Kontext ist minimal (nur asset_osm), daher keine erweiterten Kontextinformationen erwartbar. Antwort bleibt generisch, aber angemessen für den gegebenen Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.572
+  },
+  "error": {}
+}

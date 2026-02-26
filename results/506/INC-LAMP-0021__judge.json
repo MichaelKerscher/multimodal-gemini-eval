@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
-      "Keine Anpassung an Umgebung/Wetter/Zeit",
-      "Offline-Workflow nicht erwähnt (nicht erwartbar bei L0)"
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Umgebung/Zeit/Wetter",
+      "Offline-Workflow nicht erwähnt trotz fehlendem Kontext"
     ],
-    "short_justification": "Grundsolide generische Antwort mit Safety-first und Eskalation. Bleibt aber sehr allgemein, da kaum Kontext vorhanden. Struktur und Dokumentation sind vorhanden, aber ohne spezifische Anpassung."
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Struktur klar, aber ohne Kontext bleibt sie allgemein. Keine Halluzinationen, aber auch keine Kontextanpassung möglich."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
     "scores": {
-      "R": 4,
+      "R": 5,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -38,9 +38,9 @@
     },
     "missing_elements": [
       "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
-      "Foto-Nutzung (photo_available=true) nicht integriert"
+      "Stop-Conditions könnten klarer sein"
     ],
-    "short_justification": "Sehr gute kontextbezogene Antwort: Regen/Nacht/schlechte Sicht werden in Safety integriert, Feuchtigkeit als Ursache genannt. Spotty connectivity wird nicht als Workflow-Constraint genutzt (lokal dokumentieren). Struktur, Safety und Eskalation sind klar."
+    "short_justification": "Sehr gute fallbezogene Antwort mit klarer Kontextnutzung (Nacht, Regen, schlechte Sicht). Safety-first, strukturiert, gute Dokumentation. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt)."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -58,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Spotty connectivity wird explizit als Workflow-Constraint genutzt ('lokal dokumentieren', 'offline speichern', 'später synchronisieren'). Kontext (Regen, Nacht, schlechte Sicht) wird in Safety und Diagnose integriert. Klare Struktur, Eskalation und Dokumentation."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nacht, Regen, spotty connectivity → Offline-Workflow explizit), klare Struktur, Safety-first, präzise Dokumentation mit lokalem Speichern. Keine Halluzinationen, alle erwartbaren Elemente erfüllt."
   }
 ]

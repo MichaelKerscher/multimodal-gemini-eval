@@ -2,8 +2,8 @@
   {
     "test_id": "INC-LAMP-0006-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
       "D": 4,
       "K": 3
@@ -15,30 +15,31 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwartbar (kein Signal im Context)",
-      "Wetter/Traffic-Kontext nicht vorhanden, daher nicht fehlend"
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)",
+      "Severity/Traffic/Weather nicht adressiert (nicht im Context)"
     ],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Dokumentation und Eskalation gut abgedeckt. Kontextnutzung minimal (nur Asset-ID vorhanden), aber keine Halluzinationen."
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation. Dokumentation gut. Bleibt aber generisch, da Context minimal ist – keine spezifischen Risikofaktoren adressierbar."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Explizite Erwähnung 'lokal speichern/später synchronisieren' könnte klarer sein"
+      "Offline-Workflow fehlt (connectivity=offline, device_state=low_battery im Context)",
+      "Keine explizite Anweisung zu lokaler Speicherung/Synchronisation"
     ],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, Sturm/Verkehr/Offline-Kontext sichtbar integriert, strukturierte Schritte mit klaren Eskalations-Triggern. Dokumentation gut, Offline-Workflow implizit (Foto vorhanden, System aktualisieren nach Möglichkeit)."
+    "short_justification": "Sehr gute Nutzung von Severity/Weather/Traffic (Sturm, hoher Verkehr, schlechte Sicht). Safety-first klar, Eskalation passend. Offline-Constraint wird aber nicht adressiert – K=3."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -56,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Offline-Workflow-Integration ('lokal speichern', 'telefonisch/Funk'), Sturm/Verkehr/Sicht-Kontext explizit genutzt, strukturierte Schritte, vollständige Dokumentations-Checkliste, passende Eskalation. Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/synchronisieren), Severity/Weather/Traffic adressiert, Dokumentation vollständig, keine Halluzinationen. Nahezu perfekt."
   }
 ]

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC2",
+  "timestamp": "2026-02-26T15:38:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-15T22:52:18+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Kontroll-Checkliste für gemeldeten Ausfall (Leitzachstraße, Rosenheim)\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Absperrmaterial bereithalten.\n- Bei mittlerer Verkehrsbelastung und schlechter Sicht (Nebel): Arbeitsbereich mit Pylonen/Leitbaken sichern.\n- Auf ausreichende Eigen- und Verkehrssicherheit achten.\n\n**2. Sichtprüfung**\n- Lampe auf äußere Schäden, Verschmutzung oder Feuchtigkeitsspuren prüfen.\n- Mast, Sockel und Verkabelung auf offensichtliche Mängel kontrollieren.\n- Umgebung auf Anzeichen von Manipulation oder Vandalismus prüfen.\n\n**3. Diagnose/Beobachtung**\n- Lampe mehrmals ein- und ausschalten (sofern möglich), um den Fehler zu reproduzieren.\n- Auf Flackern, verzögertes Einschalten oder Aussetzer achten.\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n- Bei intermittierenden Fehlern: Witterungseinflüsse (Feuchtigkeit, Nebel) als mögliche Ursache notieren.\n\n**4. Dokumentation**\n- Festgestellte Auffälligkeiten, Uhrzeit und Wetterbedingungen notieren.\n- Fotos anfertigen (sofern möglich).\n- Fehlerbild und eigene Beobachtungen im System dokumentieren.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Verdacht auf elektrischen Defekt: Fachfirma oder Elektromeister informieren.\n- Bei akuter Gefahr (z.B. freiliegende Kabel): Sofortige Absperrung und Meldung an Einsatzleitung.\n\n**Rückfrage:**  \nGab es in letzter Zeit weitere Störungen an dieser oder benachbarten Lampen?  \nSoll eine Langzeitüberwachung eingerichtet werden, um den Fehler gezielt zu erfassen?",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, mittlere Verkehrsbelastung, intermittent fault), klare Schrittfolge, Safety-first, Eskalation mit Triggern, Dokumentation vollständig, keine Halluzinationen. Nahezu perfekt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.393
+  },
+  "error": {}
+}

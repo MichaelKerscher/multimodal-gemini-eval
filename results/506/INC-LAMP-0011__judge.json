@@ -2,7 +2,7 @@
   {
     "test_id": "INC-LAMP-0011-TC1",
     "scores": {
-      "R": 4,
+      "R": 3,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Priorisierung (Safety first, Diagnose, Dokumentation, Eskalation). Kontext minimal, daher keine spezifischen Umweltfaktoren integriert, aber sinnvolle Rückfragen gestellt."
+    "missing_elements": [
+      "Spezifische Anpassung an intermittent fault_type",
+      "Kontextnutzung minimal (nur Asset-ID)"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Bleibt aber generisch, da Kontext minimal ist. Keine Halluzinationen, aber auch keine sichtbare Nutzung von Umgebungsdaten (weil nicht vorhanden)."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -33,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, mittlere Verkehrsbelastung, intermittierender Fehler). Klare Schrittfolge, Safety-first, präzise Eskalationskriterien, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, mittlere Verkehrsbelastung, intermittent fault), klare Schrittfolge, Safety-first, Eskalation mit Triggern, Dokumentation vollständig, keine Halluzinationen. Nahezu perfekt."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Kontext vollständig genutzt (Nebel, schlechte Sicht, mittlerer Verkehr, intermittierender Fehler). Klare Struktur, Safety-first, präzise Eskalation, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Kompakte, präzise Antwort mit vollständiger Kontextnutzung (Nebel, Verkehr, intermittent). Safety-first, klare Struktur, Eskalation, Dokumentation vollständig. Keine Halluzinationen, sehr umsetzbar."
   }
 ]

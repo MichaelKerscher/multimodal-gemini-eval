@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0006-TC1",
+  "timestamp": "2026-02-26T15:36:21",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n7230270217)",
+    "context": {
+      "asset_osm": "n7230270217"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0006",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Bereich um die defekte Straßenlampe absichern, falls möglich (z. B. Warnbaken, Hinweisschilder).\n   - Bei akuter Gefährdung (z. B. Unfallgefahr) Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, freiliegende Kabel).\n\n3. **Diagnose/Beobachtung**\n   - Notieren, ob die Lampe komplett aus ist oder flackert.\n   - Prüfen, ob ein Zusammenhang mit Witterung oder Bauarbeiten bestehen könnte.\n\n4. **Dokumentation**\n   - Asset-ID (n7230270217), Standort und Uhrzeit der Störung notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an den zuständigen Bereitschaftsdienst oder die Wartungsfirma melden.\n   - Bei erhöhter Unsicherheit oder Gefährdung schnelle Bearbeitung anfordern.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese betroffen? Sind akute Gefahrenstellen (z. B. Fußgängerüberweg, Haltestelle) im Bereich?",
+    "tokens_estimate_words": 145
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0006-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)",
+      "Severity/Traffic/Weather nicht adressiert (nicht im Context)"
+    ],
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation. Dokumentation gut. Bleibt aber generisch, da Context minimal ist – keine spezifischen Risikofaktoren adressierbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.431
+  },
+  "error": {}
+}

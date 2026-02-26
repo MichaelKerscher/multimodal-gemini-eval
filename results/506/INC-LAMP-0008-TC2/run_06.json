@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC2",
+  "timestamp": "2026-02-26T15:37:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293341689",
+        "longitude": 12.1302583,
+        "latitude": 47.8571756,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-20T08:57:46+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereithalten.  \n- Einsatzfahrzeug mit Warnblinker abstellen, Gefahrenbereich absichern (besonders bei schlechter Sicht und Nacht).  \n- Eigene Sicherheit und die der Verkehrsteilnehmer priorisieren.\n\n2. Sichtprüfung  \n- Sichtkontrolle der betroffenen Leuchten entlang des angegebenen Abschnitts (Koordinaten: 47.8571756, 12.1302583).  \n- Prüfen, ob mehrere oder einzelne Lampen betroffen sind.  \n- Auf offensichtliche Schäden, lose Kabel, offene Gehäuse oder Feuchtigkeitseintritt achten.\n\n3. Diagnose/Beobachtung  \n- Aufgrund von Nebel und schlechter Sicht: besondere Vorsicht.  \n- Gerät ist im Energiesparmodus und Verbindung ist instabil – direkte Ferndiagnose ggf. eingeschränkt.  \n- Prüfen, ob Sicherungen ausgelöst oder Leuchtmittel defekt sind (sofern Zugang möglich).  \n- Falls mehrere Lampen betroffen: Möglicher Ausfall einer Zuleitung oder eines Steuergeräts.\n\n4. Dokumentation  \n- Fotos vom Zustand der Anlage und Umgebung machen (Foto laut Meldung vorhanden).  \n- Festgestellte Mängel, betroffene Lampen und Maßnahmen dokumentieren (Datum, Uhrzeit, Standort).\n\n5. Eskalation  \n- Bei unklarer Ursache oder größerem Ausfall: Störung an Fachfirma/Technik weiterleiten.  \n- Bei Gefahr für Verkehrsteilnehmer (z. B. Kreuzung, Fußgängerüberweg): Sofortige Meldung an Leitstelle.\n\nRückfrage:  \n- Gibt es Zugang zu Schaltkästen vor Ort?  \n- Sind weitere Meldungen aus dem Bereich bekannt?  \n- Soll eine temporäre Beleuchtung eingerichtet werden, bis die Reparatur erfolgt?",
+    "tokens_estimate_words": 199
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur implizit (Energiesparmodus/instabile Verbindung erwähnt, aber keine explizite Offline-Dokumentations-Anweisung)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Koordinaten, Nebel, Nacht, spotty connectivity, low_power_mode). Safety-first klar, Eskalation differenziert, Dokumentation mit Foto-Hinweis. Offline-Workflow angedeutet ('Ferndiagnose eingeschränkt'), aber nicht explizit als Schritt formuliert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.547
+  },
+  "error": {}
+}

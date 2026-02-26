@@ -3,9 +3,9 @@
     "test_id": "INC-LAMP-0008-TC1",
     "scores": {
       "R": 3,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "H": 3,
+      "S": 3,
+      "D": 3,
       "K": 3
     },
     "flags": {
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Priorisierung und Eskalationslogik. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung; generische Schritte sind hier angemessen."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)",
+      "Keine Nutzung von Koordinaten (nicht im CONTEXT vorhanden)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung → Prüfung → Eskalation). Kontext minimal, daher keine spezifischen Details erwartbar. Safety-first erkennbar, Eskalation vorhanden, Dokumentation genannt."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
@@ -24,26 +27,25 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (spotty connectivity)",
-      "Lokale Speicherung/Synchronisation"
+      "Offline-Workflow nur implizit (Energiesparmodus/instabile Verbindung erwähnt, aber keine explizite Offline-Dokumentations-Anweisung)"
     ],
-    "short_justification": "Gute Struktur und Safety-Priorisierung, nutzt Koordinaten und Umweltkontext. Ignoriert jedoch spotty connectivity und low_power_mode – kein Offline-Workflow erwähnt, obwohl CONTEXT dies signalisiert (K=2)."
+    "short_justification": "Sehr gute Kontextnutzung (Koordinaten, Nebel, Nacht, spotty connectivity, low_power_mode). Safety-first klar, Eskalation differenziert, Dokumentation mit Foto-Hinweis. Offline-Workflow angedeutet ('Ferndiagnose eingeschränkt'), aber nicht explizit als Schritt formuliert."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -54,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, nutzt Kontext vollständig (Nebel, Nacht, spotty connectivity → Offline-Workflow explizit integriert), saubere Dokumentation und Eskalationslogik. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (Koordinaten, Nebel, Nacht, spotty → Offline-Workflow explizit: 'offline speichern', 'lokal sichern', 'später synchronisieren'). Safety-first, klare Schrittfolge, Eskalation differenziert, Dokumentation vollständig. Keine Halluzinationen."
   }
 ]

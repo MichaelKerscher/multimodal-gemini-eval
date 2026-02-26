@@ -4,26 +4,8 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation vorhanden, Dokumentation gut. Kontext minimal, daher keine Offline-Erwartung. Keine Halluzinationen, aber Kontext kaum nutzbar (nur Asset-ID)."
-  },
-  {
-    "test_id": "INC-LAMP-0015-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
       "K": 5
     },
     "flags": {
@@ -33,7 +15,25 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first (Absicherung + PSA), klare Schrittfolge, nutzt Kontext sichtbar (night/high traffic/poor visibility → Absicherung, online → kein Offline-Workflow, severity high → Eskalation), Dokumentation vollständig, keine Halluzinationen."
+    "short_justification": "Sehr gute Antwort trotz minimalem Kontext. Klare 5-Schritt-Struktur mit Safety-first, sinnvoller Eskalationslogik und gezielten Rückfragen. Keine Halluzinationen, nutzt verfügbare Asset-ID korrekt."
+  },
+  {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort. Nutzt Kontext optimal (high traffic/poor visibility → Warnblinkanlage, Pylonen; severity=high → sofortige Eskalation bei Gefahr; photo_available → Foto anfertigen; online → Systemstatus checken). Safety-first klar erkennbar, präzise Schrittfolge."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first (Absicherung Schritt 1, Polizei bei hoher Verkehrsexposition), klare Struktur, nutzt Kontext optimal (high traffic/night/poor visibility → Absicherung, severity high → Eskalation, photo_available → Foto anhängen), vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt. Nutzt erweiterten Kontext vollständig (OSM-ID, Koordinaten, photo_available, high traffic/poor visibility → Absicherung, severity=high → Eskalationslogik). Dokumentation mit allen relevanten Feldern, keine Halluzinationen, klare Struktur."
   }
 ]

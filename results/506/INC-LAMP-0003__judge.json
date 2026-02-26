@@ -14,8 +14,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Dokumentation. Sicherheit wird adressiert, aber ohne Kontext zu severity/time_of_day etwas generisch. Keine Offline-Workflow-Erwähnung (nicht erwartbar bei minimalem Kontext)."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first, klarer Eskalation und Dokumentation. Kontext minimal genutzt (nur Asset-ID), keine Halluzinationen. Gute Handlungsfähigkeit, aber Priorisierung könnte schärfer sein."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
@@ -33,9 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow explizit (spotty connectivity)"
+      "Offline-Workflow nicht explizit genannt trotz spotty connectivity"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (night, poor_visibility, low_battery, spotty connectivity). Sicherheit priorisiert, klare Struktur, Dokumentation vollständig. Offline-Workflow wird implizit (schriftlich/Fotos) erwähnt, aber nicht explizit als Strategie bei spotty connectivity hervorgehoben."
+    "short_justification": "Sehr gute Kontextnutzung (low_battery, spotty, night, poor_visibility → Absicherung betont). Klare Struktur, Safety-first, Eskalation vorhanden. Offline-Workflow fehlt trotz spotty-Signal, daher K=4 statt 5."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (spotty → offline-Workflow explizit, night/poor_visibility → Absicherung, severity → Eskalationslogik). Klare Schrittfolge, Safety-first, vollständige Dokumentation, keine Halluzinationen. Berücksichtigt context_notes korrekt."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty/low_battery → Offline-Workflow explizit, night/poor_visibility → Absicherung), klare 5-Schritt-Struktur, Safety-first, Eskalation differenziert, Dokumentation vollständig. Keine Halluzinationen."
   }
 ]

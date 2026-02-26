@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC1",
+  "timestamp": "2026-02-26T15:36:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n4484173276)",
+    "context": {
+      "asset_osm": "n4484173276"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden kurze Aussetzer und Flackern bei der Straßenlampe (Asset-ID: n4484173276), vermutlich durch Kontaktprobleme. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Arbeitsbereich absperren (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden, lose Kabel oder Korrosion.\n   - Prüfen, ob Feuchtigkeit oder Verschmutzung im Leuchtenkopf sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Lampe gezielt ein- und ausschalten, um das Flackern zu beobachten.\n   - Klemmen und Kontakte im Leuchtenkopf auf festen Sitz und Korrosion prüfen.\n   - Falls möglich: Spannung und Stromfluss messen.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und durchgeführte Maßnahmen notieren (inkl. Fotos, falls relevant).\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden oder Verdacht auf Netzprobleme: Fachfirma oder Netzbetreiber informieren.\n   - Bei einfachen Kontaktproblemen: Reinigung und Nachziehen der Klemmen, ggf. Austausch defekter Teile.\n\n**Rückfrage:**  \nIst das Flackern dauerhaft oder nur bei bestimmten Wetterlagen? Gibt es weitere Auffälligkeiten (z. B. Geräusche, Geruch)?",
+    "tokens_estimate_words": 157
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (Kontext fehlt, daher nicht erwartbar)",
+      "Wetter-/Verkehrskontext (nicht im CONTEXT)",
+      "Foto-Workflow (photo_available nicht im CONTEXT)"
+    ],
+    "short_justification": "Antwort ist grundsätzlich passend (Flackern/Kontaktprobleme), strukturiert mit Absicherung zuerst. Kontext wird kaum genutzt (nur Asset-ID), keine Halluzinationen, aber generisch. Dokumentation und Eskalation vorhanden, aber nicht detailliert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.614
+  },
+  "error": {}
+}

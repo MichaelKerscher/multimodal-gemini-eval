@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC2",
+  "timestamp": "2026-02-26T15:38:04",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427955479",
+        "longitude": 12.1253894,
+        "latitude": 47.8562438,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Stadtmitte"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "reporter": "internal",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Störungsprüfung – Rosenheim, Stadtmitte (dunkler Abschnitt)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Gefahrenbereich abzusichern.\n   - Bei hoher Verkehrsbelastung ggf. Polizei oder Verkehrslenkung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle aller betroffenen Straßenlampen im Abschnitt durchführen.\n   - Prüfen, ob einzelne oder alle Leuchten ausgefallen sind.\n   - Auf offensichtliche Schäden (z. B. Mast umgefahren, Kabel freiliegend) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Sicherungen ausgelöst oder Schaltschränke beschädigt sind.\n   - Bei Regen: Besondere Vorsicht wegen möglicher Kurzschlüsse.\n   - Geräusche, Gerüche oder ungewöhnliche Wärmeentwicklung an den Anlagen beachten.\n   - Bei „spotty“ Konnektivität: Vor Ort ggf. manuelle Diagnose, da Fernzugriff eingeschränkt.\n\n4. **Dokumentation**\n   - Fotos der betroffenen Lampen und Umgebung aufnehmen (Foto liegt laut Meldung vor).\n   - Alle Beobachtungen, Maßnahmen und ggf. Gefahrenquellen schriftlich festhalten.\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall und hoher Gefährdung: Störung sofort an die Leitstelle/Notdienst melden.\n   - Falls Gefahr für Personen besteht (z. B. freiliegende Kabel): Bereich absperren und Feuerwehr/Polizei informieren.\n   - Reparaturteam mit passender Ausrüstung (z. B. Hebebühne, Ersatzteile) anfordern.\n\n**Rückfragen/Annahmen:**\n- Sind weitere Details zum betroffenen Abschnitt (z. B. genaue Länge, Anzahl der Lampen) bekannt?\n- Gibt es Zugang zu Schaltschränken vor Ort?\n- Liegt das Foto digital vor und kann zur weiteren Analyse genutzt werden?\n\nBitte Rückmeldung geben, falls zusätzliche Informationen benötigt werden oder Sofortmaßnahmen gewünscht sind.",
+    "tokens_estimate_words": 221
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur indirekt erwähnt ('manuelle Diagnose'), nicht explizit als Dokumentations-/Sync-Strategie"
+    ],
+    "short_justification": "Sehr gute Nutzung von severity=high, traffic_exposure=high, weather=rain, photo_available. Spotty connectivity wird erwähnt ('manuelle Diagnose'), aber Offline-Dokumentations-Workflow nicht klar ausformuliert. Safety und Eskalation passend zu high severity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 7.272
+  },
+  "error": {}
+}

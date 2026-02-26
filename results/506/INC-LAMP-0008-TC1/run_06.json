@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC1",
+  "timestamp": "2026-02-26T15:37:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293341689)",
+    "context": {
+      "asset_osm": "n13293341689"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt bei Asset-ID n13293341689.\n\nHier ist die empfohlene Vorgehensweise:\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich ausreichend abgesichert ist (z. B. Warnbaken, Warnleuchten), um die Sicherheit von Verkehrsteilnehmern und Personal zu gewährleisten.\n\n2. Sichtprüfung  \n- Überprüfe vor Ort, ob die Straßenbeleuchtung tatsächlich ausgefallen ist und wie viele Leuchten betroffen sind.  \n- Achte auf offensichtliche Schäden (z. B. umgefahrene Masten, lose Kabel, defekte Leuchtmittel).\n\n3. Diagnose/Beobachtung  \n- Prüfe, ob der Ausfall auf einen Stromausfall, einen Defekt einzelner Leuchten oder einen Steuerungsfehler zurückzuführen ist.  \n- Notiere Besonderheiten (z. B. ungewöhnliche Geräusche, Geruch, Feuchtigkeitseintritt).\n\n4. Dokumentation  \n- Halte alle Beobachtungen schriftlich fest (Fotos, genaue Position, Umfang des Ausfalls, Uhrzeit).  \n- Dokumentiere auch getroffene Sicherungsmaßnahmen.\n\n5. Eskalation  \n- Bei Gefahr im Verzug (z. B. Unfallgefahr, stark frequentierte Kreuzung): Sofortige Meldung an die Leitstelle/Notdienst.  \n- Bei einfachem Ausfall: Störungsmeldung an die zuständige Wartungsfirma weiterleiten.\n\nFehlen noch Informationen zum genauen Standort (Straßenname, Abschnittslänge) oder zur Dringlichkeit? Bitte ergänzen, falls möglich.",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)",
+      "Keine Nutzung von Koordinaten (nicht im CONTEXT vorhanden)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung → Prüfung → Eskalation). Kontext minimal, daher keine spezifischen Details erwartbar. Safety-first erkennbar, Eskalation vorhanden, Dokumentation genannt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.508
+  },
+  "error": {}
+}

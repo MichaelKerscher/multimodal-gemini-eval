@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC2",
+  "timestamp": "2026-02-26T15:43:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall (Bahnhof Rosenheim)\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Arbeitsbereich mit Leitkegeln und Warnleuchten absichern (hohes Verkehrsaufkommen, schlechte Sicht, Sturm).\n- Auf Eigen- und Verkehrssicherheit achten.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden, lose Teile oder Feuchtigkeitsspuren prüfen.\n- Umgebung auf Sturmschäden oder Fremdeinwirkung kontrollieren.\n- Prüfen, ob weitere Lampen betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Da Fehler sporadisch und Gerät offline: \n  - Mögliche Ursachen (z. B. Wackelkontakt, Feuchtigkeit, Vorschaltgerät) in Betracht ziehen.\n  - Bei erneutem Ausfall: Zeitpunkt und Umgebungsbedingungen notieren.\n- Prüfen, ob Foto des Bürgers Hinweise liefert (z. B. sichtbare Beschädigungen).\n\n**4. Dokumentation**\n- Alle Beobachtungen, Maßnahmen und Fotos im System erfassen.\n- Fehlerbild und vermutete Ursache festhalten.\n- Zeitpunkt und Wetterbedingungen dokumentieren.\n\n**5. Eskalation**\n- Bei wiederholtem Ausfall oder Sicherheitsrisiko: Störung an Fachfirma/Elektriker weiterleiten.\n- Hinweis auf mögliche Gefahr durch Sturm und hohe Verkehrsbelastung geben.\n\n**Rückfrage:**  \nSoll eine sofortige Fachprüfung beauftragt werden, oder reicht zunächst eine Beobachtung? Liegen weitere Meldungen zu dieser Lampe oder Umgebung vor?",
+    "tokens_estimate_words": 166
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 5,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow fehlt (connectivity=offline, aber nicht erwähnt)",
+      "Keine Anweisung zu lokaler Speicherung/Synchronisation"
+    ],
+    "short_justification": "Sehr gute Struktur, Safety-first klar erkennbar, Kontext (Sturm, hohes Verkehrsaufkommen, schlechte Sicht) gut genutzt. Dokumentation und Eskalation stark. Kritischer Fehler: connectivity=offline wird ignoriert, kein Offline-Workflow erwähnt. K=2 wegen fehlender Offline-Handhabung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.24
+  },
+  "error": {}
+}

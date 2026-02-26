@@ -2,29 +2,11 @@
   {
     "test_id": "INC-LAMP-0016-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 4,
-      "K": 4
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Klare, strukturierte Antwort mit Safety-first, guter Diagnose-Logik für sporadischen Fehler und vollständiger Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung; Eskalation vorhanden, aber könnte bei 'high severity' expliziter priorisiert sein."
-  },
-  {
-    "test_id": "INC-LAMP-0016-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 4
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -33,16 +15,38 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (spotty connectivity)"
+      "Keine Priorisierung nach Severity (nicht im Context)",
+      "Keine Anpassung an Umgebungsbedingungen (nicht im Context)"
     ],
-    "short_justification": "Exzellente Nutzung des Kontexts (Regen, Dämmerung, poor_visibility, low_battery, photo_available). Safety-first klar, Eskalation mit Verkehrssicherungs-Priorität. Spotty connectivity wird nicht explizit als Offline-Workflow adressiert, aber Foto-Auswertung erwähnt."
+    "short_justification": "Solide Grundstruktur mit Absicherung zuerst und klaren Schritten. Bleibt aber generisch, da minimaler Context keine spezifischen Anpassungen ermöglicht. Dokumentation und Eskalation vorhanden, aber ohne Dringlichkeit."
+  },
+  {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kein expliziter Offline-Workflow trotz spotty connectivity",
+      "Batterie-Hinweis könnte klarer als Geräte-Constraint formuliert sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Regen/Dämmerung/poor visibility führen zu spezifischen Safety-Maßnahmen, severity=high wird in Eskalation reflektiert. Offline-Workflow fehlt trotz spotty connectivity, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -53,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextnutzung: Offline-Workflow explizit (Foto lokal speichern, später synchronisieren), Safety-first, klare Eskalation mit Unfallrisiko-Hinweis, vollständige Dokumentation, GPS-Koordinaten integriert. Keine Halluzinationen, robuste Rückfragen."
+    "short_justification": "Exzellente Antwort: nutzt Context vollständig (Regen/Dämmerung/poor visibility → Safety, spotty → 'offline speichern, später synchronisieren'), klare Schrittfolge, severity=high in Eskalation ('dringend'), kompakt und umsetzbar."
   }
 ]

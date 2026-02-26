@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 5,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Safety-first-Struktur mit klarer Absicherung als Schritt 1, sinnvolle Eskalation und Dokumentation. Kontext minimal, daher generische Rückfragen angemessen. Keine Offline-Erwähnung nötig (kein Signal im Context)."
+    "short_justification": "Sehr gute Struktur mit klarer Safety-first-Priorisierung und Eskalation. Kontext minimal, daher keine Offline-Erwartung. Leicht generisch, aber vollständig umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar umgesetzt, nutzt Kontext präzise (Standort, online-Status, Foto, severity=high → sofortige Eskalation), strukturiert, umsetzbar, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext (Standort, online-Status, severity=high), vollständige Dokumentation, starke Eskalationslogik. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext vollständig (Standort, Foto, severity, online), explizite Eskalation mit Priorität, umfassende Dokumentation, sinnvolle Rückfragen. Keine Halluzinationen, keine irrelevanten Elemente."
+    "short_justification": "Exzellent: Safety-first, präzise Schrittfolge, nutzt Kontext optimal (Standort, photo_available, severity=high), klare Eskalation mit Priorität, vollständige Dokumentation. Keine Halluzinationen."
   }
 ]

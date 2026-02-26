@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-26T15:41:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segmentausfall)\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.\n- Gefahrenbereich mit Leitkegeln/Warndreieck absichern (besonders bei Nacht, Nebel und mittlerem Verkehrsaufkommen).\n- Bei Bedarf Polizei oder Verkehrslenkung zur Unterstützung anfordern.\n\n**2. Sichtprüfung**\n- Kontrolliere, ob alle betroffenen Lampen/Ampeln im Segment ausgefallen sind.\n- Prüfe, ob der Schaltschrank/Steuerkasten äußerlich beschädigt ist (Vandalismus, Feuchtigkeit, offene Türen).\n- Achte auf ungewöhnliche Geräusche oder Gerüche (z.B. verschmorte Kabel).\n\n**3. Diagnose/Beobachtung**\n- Prüfe, ob die Spannungsversorgung am Steuerkasten anliegt.\n- Kontrolliere die Sicherungen und Schalter im Steuerkasten.\n- Falls möglich, führe einen Reset der Steuerung durch.\n- Notiere, ob das Problem nach Reset weiterhin besteht.\n- Prüfe, ob andere Segmente oder Anlagen in der Nähe betroffen sind (Hinweis auf übergeordnetes Problem).\n\n**4. Dokumentation**\n- Notiere alle Beobachtungen, Maßnahmen und Zeiten.\n- Fertige Fotos an, falls möglich (auch wenn laut Meldung aktuell kein Foto vorliegt).\n- Dokumentiere die betroffenen Anlagen (z.B. OSM-ID: n12520351647, Standortdaten).\n\n**5. Eskalation**\n- Bei anhaltendem Ausfall oder Verdacht auf schwerwiegenden Steuerungsfehler: Meldung an die Leitstelle/Technik weiterleiten.\n- Bei Gefahr für Verkehrssicherheit (z.B. Kreuzung ohne Licht): Sofortige Eskalation und ggf. Polizei informieren.\n\n**Rückfragen/Annahmen:**\n- Ist Zugang zum Steuerkasten vor Ort möglich?\n- Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Bereich?\n- Sind weitere Segmente/Ampelanlagen betroffen?\n\nBitte gib Bescheid, falls weitere Details (z.B. Fotos, Zugangsdaten, Ansprechpartner vor Ort) benötigt werden!",
+    "tokens_estimate_words": 222
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt Kontext (Nacht, Nebel, mittlerer Verkehr) explizit für Safety-Maßnahmen. Klare Schrittfolge, priorisiert Absicherung, konkrete Diagnose-Schritte, Eskalations-Trigger klar definiert. Dokumentation umfassend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.351
+  },
+  "error": {}
+}

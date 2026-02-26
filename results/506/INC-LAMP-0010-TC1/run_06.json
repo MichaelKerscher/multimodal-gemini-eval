@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-26T15:38:04",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt entlang Rosenheim, Stadtmitte (Asset-ID: n4427955479).\n\n**Checkliste für die Überprüfung:**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (z. B. Pylonen, Warnleuchten).\n   - Arbeitsbereich vor Ort sichern, um Gefährdung für Verkehr und Personal zu vermeiden.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung im betroffenen Abschnitt.\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Auf offensichtliche Schäden, lose Kabel, defekte Leuchtmittel oder Vandalismus achten.\n\n3. **Diagnose/Beobachtung**\n   - Leuchten auf Funktion testen (sofern möglich).\n   - Prüfen, ob der Ausfall auf einen Stromausfall, Zeitschaltuhr, Dämmerungsschalter oder Sicherung zurückzuführen ist.\n   - Notieren, ob weitere Infrastruktur (z. B. Ampeln) betroffen ist.\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Uhrzeit und Beobachtungen notieren.\n   - Fotos von der Situation und eventuellen Schäden machen.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel) sofort Notdienst oder Polizei informieren.\n   - Störung an die zuständige Fachabteilung oder den Bereitschaftsdienst weiterleiten.\n\n**Rückfrage:**  \nBetrifft der Ausfall nur die Straßenbeleuchtung oder sind auch Ampeln/Ampelanlagen betroffen? Gibt es Hinweise auf akute Gefahrenstellen (z. B. Kreuzungen, Schulwege)?\n\nBitte um kurze Rückmeldung, damit wir gezielt vorgehen können.",
+    "tokens_estimate_words": 178
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation. Kontext minimal (nur OSM-ID), daher keine Offline-Workflow-Erwartung. Dokumentation gut, aber severity/traffic nicht erkennbar aus Kontext, daher keine Abwertung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.984
+  },
+  "error": {}
+}

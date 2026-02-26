@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, Eskalation und Dokumentation. Kontext minimal (nur Asset-ID), daher generisch aber angemessen. Keine Halluzinationen."
+    "missing_elements": [
+      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
+      "Keine spezifische Priorisierung bei minimalem Kontext"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first (Absicherung Schritt 1), klarer Eskalationslogik und Dokumentation. Kontext minimal, daher generisch aber korrekt – keine Halluzinationen. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -24,7 +27,7 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext (Schnee, dusk, poor_visibility, low_battery) sichtbar für Safety und Diagnose. Klare Schrittfolge, priorisiert, umsetzbar. K=4 wegen leichter Spekulation zu 'Batterie defekt' (device_state bezieht sich laut Guardrails auf Techniker-Gerät, nicht Asset)."
+    "short_justification": "Exzellente Kontextnutzung: Schnee/poor_visibility → Absicherung betont, low_battery korrekt als Geräte-Constraint erkannt (nicht Asset-Fehler), severity=high → hohe Priorität Eskalation, Foto-Workflow integriert. Alle Dimensionen erfüllt."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: nutzt Kontext korrekt (Schnee, Sicht, Dämmerung), klare Safety-first-Logik, strukturierte Schritte, Eskalation bei Gefahr. Vermeidet Fehlinterpretation von device_state (erwähnt es nicht als Asset-Fehler). Dokumentation vollständig."
+    "short_justification": "Perfekte Antwort: Nutzt extras.context_notes korrekt (low_battery = Gerät, nicht Asset), Schnee/poor_visibility → Absicherung/Sicht prüfen, severity=high → dringende Eskalation, Foto-Workflow, klare Schrittfolge. Keine Halluzinationen, robust."
   }
 ]

@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC2",
+  "timestamp": "2026-02-26T15:37:37",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12557351679",
+        "longitude": 12.0896193,
+        "latitude": 47.8457235,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Endorfer Au / Krones"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-19T09:04:59+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Flackern (vor allem bei Regen)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Leitkegeln absichern.\n   - Bei schlechter Sicht und Regen besonders auf Rutschgefahr achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchte und Verkabelung auf offensichtliche Schäden, Feuchtigkeitseintritt oder Korrosion.\n   - Prüfen, ob Wasser in das Gehäuse eingedrungen ist (Dichtungen, Abdeckungen inspizieren).\n   - Umfeld auf weitere betroffene Lampen prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob das Flackern bei Regen reproduzierbar ist.\n   - Prüfen, ob das Problem nur bei dieser einen Lampe auftritt.\n   - Da das Gerät offline ist: Keine Ferndiagnose möglich, daher Sicht- und Funktionsprüfung vor Ort notwendig.\n\n4. **Dokumentation**\n   - Alle Beobachtungen (z. B. Feuchtigkeit, Korrosion, Zustand der Dichtungen) notieren.\n   - Fotos machen, falls möglich (auch wenn aktuell keine vorhanden sind).\n   - Zeitpunkt, Wetterbedingungen und eigene Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Bei Verdacht auf Feuchtigkeitseintritt oder elektrische Gefahr: Störung an Fachfirma/Elektrofachkraft melden.\n   - Bei akutem Sicherheitsrisiko (z. B. freiliegende Kabel, starker Wassereintritt): Lampe außer Betrieb nehmen und sofort melden.\n\n**Rückfrage:**  \nGab es in der Vergangenheit bereits ähnliche Probleme an diesem Standort oder ist dies der erste Vorfall?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 186
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Erwähnung von 'lokal speichern/später synchronisieren'",
+      "Zeitpunkt (dusk) könnte stärker in Sicherheitsmaßnahmen einfließen"
+    ],
+    "short_justification": "Sehr gute Antwort: nutzt Kontext sichtbar (offline, Regen, dusk, low traffic), klare Schrittfolge mit Safety-first, erwähnt Offline-Einschränkung ('keine Ferndiagnose möglich'), gute Dokumentation und Eskalationslogik. Kleine Lücke: Offline-Workflow könnte expliziter sein (lokal speichern/synchronisieren)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.407
+  },
+  "error": {}
+}

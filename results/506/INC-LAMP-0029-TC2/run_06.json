@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC2",
+  "timestamp": "2026-02-26T15:45:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T12:53:33+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störungseinsatz – Straßenlampe „Pang, Cafe Neu“\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich um die Lampe absichern (z. B. Warnbaken, Pylone).\n   - Auf Verkehr achten, besonders bei mittlerer Verkehrsbelastung und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden prüfen (Gehäuse, Mast, Leuchtmittel).\n   - Umgebung auf weitere Dunkelstellen oder Gefahrenquellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen betroffen sind.\n   - Da das Gerät „offline“ ist, keine Ferndiagnose möglich.\n   - Sichtprüfung auf offensichtliche Defekte (z. B. zerbrochene Abdeckung, Kabelschäden).\n   - Foto der Situation anfertigen (Foto liegt laut Meldung vor).\n\n4. **Dokumentation**\n   - Störung, Zeitpunkt, Maßnahmen und Beobachtungen notieren.\n   - Foto und Standortdaten dokumentieren.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, Nacht, schlechte Sicht): Störung umgehend an Bereitschaft/Technik weiterleiten.\n   - Hinweis: Da das Gerät offline ist, könnte ein Stromausfall oder ein Defekt am Vorschaltgerät vorliegen. Weitere Prüfung durch Elektrofachkraft nötig.\n\n**Rückfrage:**  \nSind weitere Lampen in der Umgebung betroffen oder ist es ein Einzelfall? Gibt es Hinweise auf Vandalismus oder Unfallschäden?",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur erwähnt ('Gerät offline'), aber nicht als klare Handlungsanweisung (lokal dokumentieren/später sync)",
+      "Kontextnutzung teilweise gut (Name, Severity, Night), aber Offline-Implikation nicht voll ausgearbeitet"
+    ],
+    "short_justification": "Gute Struktur, Safety-first, klare Eskalation bei high severity/night/poor visibility. Offline wird erwähnt, aber Workflow-Konsequenzen (lokal speichern/sync später) fehlen als explizite Schritte. K=2 wegen unvollständiger Offline-Handhabung trotz klarem Signal."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.61
+  },
+  "error": {}
+}

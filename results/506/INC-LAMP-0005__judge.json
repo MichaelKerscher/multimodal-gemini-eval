@@ -4,7 +4,25 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute strukturierte Antwort mit klarer Priorisierung (Absicherung zuerst), umsetzbaren Schritten und differenzierter Eskalationslogik. Nutzt minimalen Kontext korrekt (Asset-ID), keine Halluzinationen, sinnvolle Rückfragen."
+  },
+  {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,26 +32,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber solide umsetzbar."
-  },
-  {
-    "test_id": "INC-LAMP-0005-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 5,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel/Dämmerung → Sicherheit, spotty connectivity → analoge Notizen, photo_available=false → Skizze. Klare Priorisierung, Safety-first, vollständige Dokumentation."
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity"
+    ],
+    "short_justification": "Gute Antwort mit Safety-first, klarer Struktur und Kontextnutzung (Nebel, Dämmerung, mittlerer Verkehr). Erwähnt spotty/low_battery, aber kein expliziter Offline-Workflow (lokal speichern/später sync), obwohl im Kontext signalisiert."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Kontextintegration: spotty/low_battery → 'lokal dokumentieren, später synchronisieren', Nebel/Dämmerung → Sicherheit betont. Klare Schrittfolge, vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, nutzt Kontext optimal (Nebel/Dämmerung/Verkehr), expliziter Offline-Workflow (lokal speichern, später sync) passend zu spotty connectivity. Dokumentation sehr präzise, keine Halluzinationen."
   }
 ]

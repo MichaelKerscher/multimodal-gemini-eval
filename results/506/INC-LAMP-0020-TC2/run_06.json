@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-26T15:42:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst  \n**Vor Ort: Standort n4483691318 (47.856655, 12.129258), dunkler Abschnitt, schlechte Sicht, Regen, Nacht, hohe Dringlichkeit**\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Warnbaken/Kegeln absichern, besonders bei schlechter Sicht und Nässe.\n   - Auf rutschigen Untergrund achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen und Umgebung: Sind mehrere Lampen betroffen oder nur einzelne?\n   - Auf offensichtliche Schäden (z.B. umgestürzte Masten, offene Kabel, Wassereintritt) achten.\n   - Prüfen, ob Notbeleuchtung oder andere Lichtquellen vorhanden sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Lampen einzeln testen (sofern gefahrlos möglich).\n   - Prüfen, ob Sicherungen ausgelöst wurden oder Feuchtigkeit eingedrungen ist.\n   - Gerät ist online, aber im Energiesparmodus – mögliche Ursache: Stromversorgung gestört oder Energiemanagement aktiv.\n   - Foto-Dokumentation nutzen, falls verfügbar.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen mit Zeitstempel festhalten.\n   - Fotos vom Schaden und der Absicherung anfertigen.\n   - Notieren, welche Lampen betroffen sind und ob Gefahr für Verkehrsteilnehmer besteht.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z.B. Totalausfall, Unfallgefahr): Sofortige Meldung an Leitstelle und ggf. Polizei/Feuerwehr.\n   - Bei komplexem Fehler (z.B. Stromausfall im Netz): Weitergabe an Energieversorger/Technik-Team.\n   - Rückmeldung an Disposition mit Status und weiteren Schritten.\n\n**Rückfrage:**  \nSind weitere Details zum Lampentyp, zur Anzahl der betroffenen Leuchten oder zu besonderen Gefahrenstellen bekannt? Liegt das Foto zur Schadensdokumentation bereits vor?",
+    "tokens_estimate_words": 207
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (GPS, Wetter, Nacht, severity=high, photo_available), klare Safety-first-Struktur, präzise Eskalation bei akuter Gefahr, umfassende Dokumentation. Keine Halluzinationen, alle erwartbaren Elemente integriert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.746
+  },
+  "error": {}
+}

@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-26T15:34:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n5718630492. Hier ist das empfohlene Vorgehen bei einem sporadischen Fehler einer Straßenlampe:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist. Bei Gefahr (z. B. Dunkelheit an gefährlicher Stelle) ggf. temporäre Absicherung veranlassen.\n\n2. **Sichtprüfung**\n   - Prüfe vor Ort, ob äußerliche Schäden, lose Teile oder Feuchtigkeit sichtbar sind.\n   - Kontrolliere, ob die Lampe aktuell wieder funktioniert.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, ob der Fehler reproduzierbar ist (z. B. Flackern, Ausfall bei bestimmten Bedingungen).\n   - Prüfe, ob andere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Halte den Fehlerverlauf fest: Wann trat der Fehler auf, wie lange, unter welchen Bedingungen?\n   - Füge Fotos bei, falls Auffälligkeiten sichtbar sind.\n\n5. **Eskalation**\n   - Bei wiederholtem oder sicherheitsrelevantem Ausfall: Störung an die Fachabteilung/den Elektriker melden.\n   - Bei einmaligem, nicht sicherheitsrelevantem Fehler: Weiter beobachten, ggf. regelmäßige Kontrolle einplanen.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Ausfälle in der Umgebung oder ist dies ein Einzelfall?  \nSind besondere Witterungsbedingungen oder Bauarbeiten bekannt, die Einfluss haben könnten?",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Safety-first nicht als Schritt 1 priorisiert",
+      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Grundsätzlich passende Antwort mit klarer Struktur und Eskalationslogik. Absicherung steht an erster Stelle, aber ohne explizite Priorisierung als 'Safety-first'. Kontext minimal genutzt (nur Asset-ID), was bei L0 akzeptabel ist."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.948
+  },
+  "error": {}
+}

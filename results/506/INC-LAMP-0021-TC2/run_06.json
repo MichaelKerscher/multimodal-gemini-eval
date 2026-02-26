@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC2",
+  "timestamp": "2026-02-26T15:42:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Störung: Kurze Aussetzer und Flackern (Kontaktproblem möglich)**  \nStandort: Rosenheim, Rechenauerstraße  \nZeit: Nacht, Regen, schlechte Sicht, wenig Verkehr\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um Arbeitsbereich abzusichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z. B. Feuchtigkeitseintritt, lose Kabel, Korrosion).\n   - Prüfen, ob Wasser in Gehäuse oder Anschlusskasten eingedrungen ist.\n   - Sichtprüfung der Umgebung: Gibt es Spuren von Vandalismus oder Unfällen?\n\n3. **Diagnose/Beobachtung**\n   - Lampe bei eingeschaltetem Strom beobachten: Flackern reproduzierbar?\n   - Leichte Bewegungen am Mast/Leuchtenkopf (vorsichtig!) – verändert sich das Flackern?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n   - Falls möglich: Klemmen und Kontakte im Anschlusskasten auf festen Sitz und Korrosion prüfen (nur bei Freigabe und entsprechender Qualifikation).\n\n4. **Dokumentation**\n   - Fotos vom Schaden, Umgebung und Typenschild machen (Foto liegt laut Meldung bereits vor).\n   - Beobachtungen und durchgeführte Maßnahmen notieren.\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei Verdacht auf gefährliche Mängel (z. B. freiliegende Kabel, starke Korrosion): Sofortige Meldung an Bereitschaft/Leitstelle, Anlage ggf. außer Betrieb nehmen.\n   - Bei unklarer Ursache oder fehlender Behebung: Störung an Fachfirma/Elektrofachkraft weiterleiten.\n\n**Rückfrage:**  \nWurde der Anschlusskasten bereits geöffnet/geprüft oder liegen weitere Hinweise zum letzten Wartungsstand vor?",
+    "tokens_estimate_words": 205
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
+      "Stop-Conditions könnten klarer sein"
+    ],
+    "short_justification": "Sehr gute fallbezogene Antwort mit klarer Kontextnutzung (Nacht, Regen, schlechte Sicht). Safety-first, strukturiert, gute Dokumentation. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.374
+  },
+  "error": {}
+}

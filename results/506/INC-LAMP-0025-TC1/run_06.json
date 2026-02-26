@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC1",
+  "timestamp": "2026-02-26T15:44:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n4465173757)",
+    "context": {
+      "asset_osm": "n4465173757"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zur Straßenlampe (Asset-ID: n4465173757). Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Bereich um die Lampe auf akute Gefahren prüfen (z. B. Stolperstellen, schlechte Sicht).\n   - Falls möglich: Warnbaken oder Absperrband aufstellen, um Fußgänger zu schützen.\n\n2. **Sichtprüfung**\n   - Ist die Lampe äußerlich beschädigt (z. B. Glasbruch, lose Teile)?\n   - Gibt es Anzeichen für Vandalismus oder Unfälle?\n\n3. **Diagnose/Beobachtung**\n   - Leuchtet keine der Lampen in der Nähe? → Möglicher Stromausfall.\n   - Nur diese Lampe betroffen? → Möglicher Defekt am Leuchtmittel oder Vorschaltgerät.\n   - Gab es in letzter Zeit Wartungsarbeiten oder Störungen?\n\n4. **Dokumentation**\n   - Zeitpunkt und Dauer des Ausfalls notieren (seit ca. 20 Minuten).\n   - Asset-ID, Standort und besondere Beobachtungen festhalten.\n   - Fotos machen, falls Schäden sichtbar sind.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsfirma oder den Bereitschaftsdienst weiterleiten.\n   - Hinweis auf unsicheren Bereich und schnelle Behebung anfordern.\n\n**Rückfrage:**  \nGibt es weitere Details zum Standort (z. B. Nähe zu Schule, stark frequentierter Weg), die für die Priorisierung wichtig sind? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "severity-driven prioritization unclear",
+      "no explicit time/traffic context usage",
+      "generic safety steps without urgency signal"
+    ],
+    "short_justification": "Antwort ist strukturiert und nennt Absicherung zuerst, aber ohne Kontext (severity, traffic, time_of_day) bleibt sie generisch. Eskalation erwähnt, aber nicht priorisiert nach Dringlichkeit. Dokumentation solide, aber K=2 wegen fehlender Kontextnutzung (nur Asset-ID vorhanden)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.47
+  },
+  "error": {}
+}
