@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-26T14:36:45",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitlegen.\n- Einsatzstelle mit Leitkegeln oder Warnleuchten absichern, besonders wegen Regen und schlechter Sicht.\n- Auf rutschigen Untergrund achten.\n\n**2. Sichtprüfung**\n- Prüfen, ob alle Leuchten im Abschnitt betroffen sind oder nur einzelne.\n- Auf offensichtliche Schäden an Masten, Leuchten oder Verkabelung achten.\n- Umgebung auf weitere Gefahren (z. B. lose Kabel, umgestürzte Masten) kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Sicherungen ausgelöst oder Feuchtigkeitsschäden sichtbar sind.\n- Bei Online-Geräten: Status und Fehlermeldungen auslesen (Gerät ist online, aber im Energiesparmodus).\n- Foto-Dokumentation nutzen, falls vorhanden, um Schadensbild zu verifizieren.\n\n**4. Dokumentation**\n- Festgestellte Schäden und Maßnahmen protokollieren (Datum, Uhrzeit, Wetter, betroffene Leuchten).\n- Fotos anfertigen und dem Bericht beifügen.\n\n**5. Eskalation**\n- Bei großflächigem Ausfall oder Gefahr für Verkehrsteilnehmer: Störungsdienst und ggf. Polizei informieren.\n- Reparaturteam mit passender Ausrüstung (z. B. Hebebühne, Ersatzteile) anfordern.\n\n**Rückfragen/Annahmen:**\n- Sind genaue Anzahl und Position der ausgefallenen Leuchten bekannt?\n- Gibt es Zugang zu aktuellen Fotos der Schadstelle?\n- Ist eine sofortige Reparatur möglich oder muss abgesperrt werden?\n\nBitte um Rückmeldung zu den offenen Punkten, damit die Einsatzplanung abgeschlossen werden kann.",
+    "tokens_estimate_words": 187
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Regen, Nacht, schlechte Sicht, online-Gerät, Foto vorhanden), klare Priorisierung, Safety-first, strukturiert, keine Halluzinationen. Alle Dimensionen erfüllt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 8.222
+  },
+  "error": {}
+}

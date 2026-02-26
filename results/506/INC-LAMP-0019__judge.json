@@ -15,37 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung von Umgebungskontext (Wetter/Sicht/Verkehr) - nicht im CONTEXT vorhanden, daher kein Fehler",
-      "Eskalation könnte konkreter sein (Trigger/Priorität)"
+      "Keine Umwelt-/Wetterkontextnutzung (nicht im CONTEXT vorhanden)",
+      "Eskalation könnte priorisierter sein"
     ],
-    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal, daher generisch aber korrekt. Keine Halluzinationen. Rückfragen sinnvoll."
+    "short_justification": "Strukturierte Checkliste mit Absicherung zuerst, klarer Eskalation und Dokumentation. Kontext minimal, daher generisch aber korrekt. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
     "scores": {
       "R": 5,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Stop-Conditions könnten expliziter sein"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlerer Verkehr, schlechte Sicht). Safety-first klar, Eskalation passend zu severity=medium. Struktur gut, Dokumentation vollständig."
-  },
-  {
-    "test_id": "INC-LAMP-0019-TC3",
-    "scores": {
-      "R": 5,
-      "H": 4,
-      "S": 4,
+      "H": 5,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -56,6 +36,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Kontext vollständig genutzt (Nebel, Nacht, Verkehr, Sicht), Safety-first, klare Eskalation, sehr gute Dokumentation. Struktur umsetzbar, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first klar, nutzt Nebel/Verkehr/Nacht explizit für Absicherung, strukturierte Schritte, vollständige Dokumentation inkl. Koordinaten, klare Eskalation mit Risikobezug."
+  },
+  {
+    "test_id": "INC-LAMP-0019-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Absicherung Schritt 1 mit Nebel/Verkehr-Bezug, klare Schrittfolge, vollständige Doku (OSM-ID + Koordinaten), Eskalation mit Risikobegründung, nutzt Kontext optimal."
   }
 ]

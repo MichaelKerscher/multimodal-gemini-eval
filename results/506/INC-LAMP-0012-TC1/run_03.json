@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC1",
+  "timestamp": "2026-02-26T14:33:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n12520338291)",
+    "context": {
+      "asset_osm": "n12520338291"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe prüfen: Ist die Stelle besonders unübersichtlich oder gefährlich?\n   - Falls ja: Sofortige provisorische Absicherung (z. B. Warnbaken, Hinweisschilder) veranlassen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist äußerlich ein Schaden (z. B. Glasbruch, Kabel sichtbar) erkennbar?\n   - Sind weitere Lampen in der Nähe betroffen?\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe komplett aus ist oder flackert.\n   - Beobachten, ob sich die Situation verändert (z. B. Lampe geht wieder an).\n\n4. **Dokumentation**\n   - Asset-ID, Standort und Uhrzeit der Störung notieren.\n   - Festgestellte Besonderheiten (z. B. erhöhte Unfallgefahr, weitere dunkle Lampen) dokumentieren.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder Leitstelle melden.\n   - Bei akuter Gefährdung (z. B. an unübersichtlichen Kreuzungen): Sofortige Priorisierung und schnelle Reparatur anfordern.\n\n**Rückfrage:**  \nBefindet sich die Lampe an einer besonders kritischen Stelle (z. B. Fußgängerüberweg, Kreuzung, Schulweg)? Gibt es Hinweise auf weitere defekte Lampen in der Nähe?",
+    "tokens_estimate_words": 160
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Tageszeit/Umgebung",
+      "Keine Berücksichtigung Geräte-/Konnektivitätsstatus"
+    ],
+    "short_justification": "Solide Grundstruktur mit Absicherung zuerst und klarer Eskalation. Bleibt aber generisch, da minimaler Kontext nicht genutzt wird (keine Zeit/Umgebungs-/Konnektivitätsanpassung). Umsetzbar, aber nicht optimal kontextspezifisch."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.07
+  },
+  "error": {}
+}

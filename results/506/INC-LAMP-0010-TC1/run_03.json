@@ -1,0 +1,66 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-26T14:32:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt entlang Rosenheim, Stadtmitte (Asset-ID: n4427955479). Hier die empfohlene Vorgehensweise:\n\nCheckliste für die Prüfung vor Ort\n\n1. Absicherung  \n   - Warnweste anlegen, Absperrmaterial bereitstellen.  \n   - Einsatzfahrzeug sicher abstellen, ggf. Warnblinker einschalten.  \n   - Gefahrenbereich absichern, besonders bei Dunkelheit und hohem Verkehrsaufkommen.\n\n2. Sichtprüfung  \n   - Prüfen, ob die gesamte Straßenbeleuchtung im Abschnitt betroffen ist oder nur einzelne Lampen.  \n   - Auf offensichtliche Schäden, lose Kabel, zerbrochene Leuchten oder Feuchtigkeit achten.\n\n3. Diagnose/Beobachtung  \n   - Funktioniert die Stromversorgung (z.B. Sicherungen, Schaltkästen)?  \n   - Gibt es Anzeichen für Vandalismus oder Unwetterschäden?  \n   - Prüfen, ob benachbarte Abschnitte ebenfalls betroffen sind (Hinweis auf größere Störung).\n\n4. Dokumentation  \n   - Fotos vom betroffenen Bereich und den Leuchten machen.  \n   - Asset-ID, genaue Position und Uhrzeit notieren.  \n   - Festgestellte Schäden oder Auffälligkeiten kurz beschreiben.\n\n5. Eskalation  \n   - Bei akuter Gefahr (z.B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Notdienst.  \n   - Bei Ausfall mehrerer Lampen oder unklarer Ursache: Störung an die Fachabteilung weiterleiten.\n\nRückfrage:  \nIst bekannt, ob nur die Straßenbeleuchtung oder auch Ampelanlagen betroffen sind? Gibt es Hinweise auf kürzliche Bauarbeiten oder Unwetter in dem Bereich?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Anpassung an Umgebungsbedingungen (Kontext minimal)"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first und Eskalation. Kontext minimal, daher keine spezifischen Umgebungsanpassungen erwartbar. Solide Basis-Checkliste."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.697
+  },
+  "error": {}
+}

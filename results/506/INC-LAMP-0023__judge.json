@@ -5,7 +5,7 @@
       "R": 3,
       "H": 3,
       "S": 3,
-      "D": 4,
+      "D": 3,
       "K": 3
     },
     "flags": {
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Dokumentation gut, aber keine spezifischen Risiko-Anpassungen mangels Kontext."
+    "missing_elements": [
+      "Keine Kontextnutzung (minimaler Context)",
+      "Offline-Workflow nicht erwähnt (nicht erwartbar)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext ist minimal (nur asset_osm), daher keine spezifischen Signale nutzbar. Keine Halluzinationen, aber auch keine Kontextanreicherung möglich."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -33,9 +36,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Explizite Priorisierung Verkehrssicherung bei high traffic"
+      "GPS-Koordinaten nicht explizit dokumentiert",
+      "Severity=high könnte stärkere Priorisierung rechtfertigen"
     ],
-    "short_justification": "Sehr gute Kontextnutzung: Sturm, high traffic, offline-Gerät werden sichtbar integriert. Offline-Workflow klar erwähnt ('Keine Fernwartung möglich'). Safety und Eskalation passend zu severity=high. Dokumentation vollständig."
+    "short_justification": "Sehr gute Kontextnutzung: offline-Workflow klar erwähnt, Sturm/Verkehr/Sicherheit integriert, severity=high führt zu Eskalationslogik. Struktur klar, Safety-first sichtbar, Dokumentation gut."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -43,7 +47,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -52,7 +56,9 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Alle Kontext-Signale (offline, Sturm, high traffic, poor visibility, severity=high) klar integriert. Offline-Workflow explizit ('lokal speichern', 'nach Wiederherstellung synchronisieren'). Safety-first, klare Eskalation, vollständige Dokumentation. Keine Halluzinationen."
+    "missing_elements": [
+      "GPS-Koordinaten nicht explizit in Doku-Checkliste"
+    ],
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit (lokal speichern/synchronisieren), Sturm/Verkehr/Sicht als Risikofaktoren integriert, Safety-first klar priorisiert, Eskalation bei Gefahr sofort. Kontext vollständig genutzt, keine Halluzinationen."
   }
 ]

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-26T14:30:31",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-18T05:18:22+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Straßenabschnitt  \nStandort: 47.8573976, 12.1307195 (OSM: n13293404153)  \nMeldung: Ausfall, schlechte Sicht, Dämmerung, Nebel, mittlerer Verkehr\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) aufstellen, um Arbeitsbereich zu sichern.\n   - Auf Sichtbarkeit achten, besonders bei Nebel und Dämmerung.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung am gemeldeten Abschnitt.\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Auf offensichtliche Schäden (z. B. defekte Leuchtmittel, lose Kabel, Vandalismus) achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Lampen (sofern möglich).\n   - Bei mehreren ausgefallenen Lampen: Möglicher Stromkreisfehler.\n   - Aufgrund „spotty“ Konnektivität und „low_battery“ des Geräts: Keine Ferndiagnose möglich, Vor-Ort-Prüfung notwendig.\n   - Wetter (Nebel) und Tageszeit (Dämmerung) können Sicht erschweren – Stirnlampe empfohlen.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und betroffene Lampenstandorte notieren.\n   - Fotos machen (sofern möglich und sicher).\n   - Alle Maßnahmen und Beobachtungen dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer (z. B. komplette Dunkelheit, schlechte Sicht): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei geringem Risiko: Reparaturauftrag an zuständige Stelle weiterleiten.\n\n**Rückfrage:**  \nSind weitere Details zum betroffenen Abschnitt bekannt (z. B. Länge, Anzahl der Lampen, vorherige Störungen)?  \nSoll eine Sofortmaßnahme (z. B. mobile Beleuchtung) organisiert werden?",
+    "tokens_estimate_words": 188
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schritte, nutzt Kontext (Nebel, Dämmerung, spotty connectivity → Offline-Hinweis, low_battery → Stirnlampe). Eskalation differenziert. K=4 wegen leicht impliziter Offline-Behandlung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.057
+  },
+  "error": {}
+}

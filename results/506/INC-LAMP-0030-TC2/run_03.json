@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC2",
+  "timestamp": "2026-02-26T14:41:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall  \nObjekt: Straßenlampe (n11833818322), Standort: 47.8537208, 12.136073  \nFehlerbild: Lampe war zeitweise aus, aktuell wieder an. Fehler tritt sporadisch auf.\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Arbeitsbereich mit Pylonen/Leitkegeln absichern (Verkehrsbelastung: mittel, Sicht: schlecht).\n- Bei Bedarf zweite Person zur Absicherung hinzuziehen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden, lose Teile, Feuchtigkeit oder Vandalismus prüfen.\n- Prüfen, ob die Leuchte flackert oder ungewöhnliche Geräusche macht.\n- Umgebung auf mögliche Störungen (z. B. Bäume, Fahrzeuge) kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Fehlerbild: Lampe funktioniert aktuell, Ausfall war nur zeitweise.\n- Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Vorschaltgerät, Netzschwankungen.\n- Hinweis: Konnektivität des Geräts ist „spotty“ – Ferndiagnose ggf. eingeschränkt.\n- Prüfen, ob Fehler durch Erschütterung oder Witterung ausgelöst werden könnte.\n- Bei nächster Dunkelheit gezielt beobachten oder Zeitschaltuhr prüfen.\n\n**4. Dokumentation**\n- Fehlerbeschreibung und bisherigen Verlauf notieren.\n- Foto vom aktuellen Zustand und Umgebung machen (Foto vorhanden?).\n- Zeitpunkt und Wetterbedingungen dokumentieren.\n- Alle Maßnahmen und Beobachtungen festhalten.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder erhöhter Gefährdung (z. B. Kreuzung, Schulweg) Störung an Fachfirma/Technik weiterleiten.\n- Hinweis auf sporadischen Fehler und erschwerte Diagnose geben.\n- Rückmeldung an Bürger, falls Kontakt möglich.\n\n**Rückfragen:**\n- Gibt es Zugang zu Schaltkasten/Verteilerschrank vor Ort?\n- Ist ein Wartungsintervall oder letzter Service bekannt?\n- Gibt es weitere Meldungen zu dieser Lampe oder benachbarten Leuchten?\n\nMelde dich gern, falls du weitere Details oder Unterstützung brauchst!",
+    "tokens_estimate_words": 228
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Stop-Conditions könnten expliziter sein"
+    ],
+    "short_justification": "Sehr gute Antwort: klar strukturiert, fallbezogen (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition), Safety-first erkennbar, Dokumentation vollständig (GPS, Zeit, Foto), Eskalation klar. Spotty connectivity wird erwähnt ('Ferndiagnose eingeschränkt'), Offline-Workflow implizit (lokal dokumentieren). Nur Stop-Conditions könnten expliziter sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.571
+  },
+  "error": {}
+}

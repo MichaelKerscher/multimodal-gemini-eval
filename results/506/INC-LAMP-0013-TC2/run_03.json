@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-26T14:33:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Schritt-für-Schritt-Checkliste bei beschädigtem Gehäuse (Berührungsgefahr):\n\n1. **Absicherung**\n   - Einsatzstelle sofort absichern (z. B. mit Leitkegeln, Absperrband).\n   - Abstand für Passanten und Fahrzeuge sicherstellen.\n   - Bei Dunkelheit: Warnleuchten einsetzen.\n\n2. **Sichtprüfung**\n   - Gehäuse auf weitere Schäden prüfen (z. B. freiliegende Kabel, Feuchtigkeit).\n   - Prüfen, ob Strom führende Teile sichtbar oder erreichbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Feststellen, ob akute Gefahr besteht (z. B. Funken, Geräusche, Geruch).\n   - Prüfen, ob die Anlage weiterhin funktioniert oder abgeschaltet werden muss.\n\n4. **Dokumentation**\n   - Schaden fotografisch dokumentieren (Foto liegt laut Meldung bereits vor).\n   - Alle Beobachtungen notieren (Datum, Uhrzeit, Wetter, Sichtverhältnisse).\n\n5. **Eskalation**\n   - Störungsdienst/Elektrofachkraft umgehend informieren (hohe Priorität wegen Berührungsgefahr).\n   - Bis zur Übernahme durch Fachpersonal vor Ort bleiben, falls möglich.\n\n**Rückfrage:**  \nIst bereits ein Notdienst verständigt oder soll ich die Meldung weiterleiten? Sind weitere Details zum Gehäusetyp oder zur genauen Schadensstelle bekannt?",
+    "tokens_estimate_words": 138
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Nutzung des Kontexts (severity=high, dusk/poor_visibility → Warnleuchten, photo_available → erwähnt). Safety-first klar, Eskalation mit 'hohe Priorität' passend zu severity. Struktur und Dokumentation gut, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.332
+  },
+  "error": {}
+}

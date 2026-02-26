@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC1",
+  "timestamp": "2026-02-26T14:33:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern. (Asset-ID: n13278610215)",
+    "context": {
+      "asset_osm": "n13278610215"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Meldung zur Asset-ID n13278610215 (Straßenlampe/Ampelanlage). Hier die empfohlene Vorgehensweise:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n- Bereich sofort absperren (z. B. mit Absperrband, Pylonen oder Warnbaken).  \n- Warnschilder „Achtung Stromschlaggefahr“ aufstellen.  \n- Passanten und Verkehrsteilnehmer fernhalten.\n\n2. Sichtprüfung  \n- Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?  \n- Gibt es freiliegende Kabel oder erkennbare Feuchtigkeitseintritte?  \n- Ist die Funktion der Anlage beeinträchtigt (z. B. Ausfall, Flackern)?\n\n3. Diagnose/Beobachtung  \n- Keine Berührung!  \n- Prüfen, ob weitere Gefahren bestehen (z. B. herabhängende Teile, Funkenflug).  \n- Falls möglich, Fotos zur Dokumentation machen.\n\n4. Dokumentation  \n- Schaden und Absicherungsmaßnahmen schriftlich festhalten (inkl. Uhrzeit, Ort, Asset-ID).  \n- Fotos beifügen.\n\n5. Eskalation  \n- Störungsdienst/Elektrofachkraft sofort informieren (Kontaktdaten vorhanden?).  \n- Bei akuter Gefahr ggf. Polizei/Feuerwehr benachrichtigen.\n\nRückfrage:  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Meldung weiterleiten? Gibt es besondere Hinweise zur Umgebung (z. B. viel Fußgängerverkehr, Schulweg)?",
+    "tokens_estimate_words": 143
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal, daher keine Offline-Erwartung. Etwas generisch (z.B. 'Störungsdienst/Elektrofachkraft' ohne konkrete Trigger), aber insgesamt solide."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.412
+  },
+  "error": {}
+}

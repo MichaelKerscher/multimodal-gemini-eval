@@ -5,29 +5,8 @@
       "R": 3,
       "H": 3,
       "S": 3,
-      "D": 4,
+      "D": 3,
       "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
-    },
-    "missing_elements": [
-      "Kontext-Nutzung (Umgebung, Zeit, Wetter fehlen komplett)",
-      "Spekulation über Ampelanlage ohne Basis im CONTEXT"
-    ],
-    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber spekuliert stark über Ampelanlage/Polizei ohne jede Grundlage im minimalen CONTEXT. K=2 wegen Halluzination (erfundene Asset-Typen). Dokumentation gut, aber Kontextnutzung schwach."
-  },
-  {
-    "test_id": "INC-LAMP-0018-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -36,16 +15,18 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Nebel/poor_visibility nicht explizit in Sicherheitsmaßnahmen integriert"
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine spezifische Diagnose bei Steuerungsproblem",
+      "Generische Rückfragen ohne Kontextbezug"
     ],
-    "short_justification": "Sehr gute Antwort: nutzt Kontext (Nacht, Nebel, medium traffic, online) sichtbar, klare Schrittfolge, Safety-first, Eskalation vorhanden, Dokumentation vollständig. Nebel wird erwähnt, aber könnte stärker in Absicherung einfließen."
+    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Bleibt aber sehr generisch (Ampel vs. Straßenbeleuchtung unklar), nutzt minimalen Kontext (nur Asset-ID) nicht aktiv. Keine Halluzinationen, aber wenig fallspezifisch."
   },
   {
-    "test_id": "INC-LAMP-0018-TC3",
+    "test_id": "INC-LAMP-0018-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
       "K": 5
     },
@@ -55,7 +36,29 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht/medium traffic explizit in Absicherung integriert, online-Steuerung erwähnt, klare Struktur, Safety-first, Eskalation, Dokumentation vollständig. Keine Halluzinationen, keine irrelevanten Spekulationen."
+    "missing_elements": [
+      "Asset-ID nicht explizit in Dokumentation erwähnt"
+    ],
+    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (Nebel/Nacht → erweiterte Absicherung, device online → Ferndiagnose möglich, medium severity → angemessene Eskalation). Klare 5-Schritt-Struktur, Safety-first, spezifische Diagnose bei control_box_issue, sinnvolle Rückfrage."
+  },
+  {
+    "test_id": "INC-LAMP-0018-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Asset-ID/GPS nicht explizit in Dokumentation genannt"
+    ],
+    "short_justification": "Sehr starke Antwort: nutzt Kontext vollständig (Nebel/Nacht → großzügige Absicherung, online → Fernabfrage erwähnt, control_box_issue → spezifische Diagnose). Klare Struktur, Safety-first, präzise Eskalationskriterien, sinnvolle Rückfrage. Minimal knapper als TC2, aber ebenso hochwertig."
   }
 ]

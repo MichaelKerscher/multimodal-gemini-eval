@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-26T14:28:50",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n5718630492 (Straßenlampe). Hier die empfohlene Vorgehensweise bei sporadischen Ausfällen:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Prüfen, ob die Lampe im öffentlichen Verkehrsraum steht.\n   - Bei Gefahr (z. B. Dunkelheit, Unfallgefahr): Bereich absichern oder zuständige Stelle informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und Umgebung: Gibt es sichtbare Schäden, lose Kabel, Feuchtigkeitseintritt oder Vandalismus?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild notieren: Wann trat der Fehler auf, wie lange war die Lampe aus, gibt es Muster (z. B. bei Regen)?\n   - Prüfen, ob der Fehler reproduzierbar ist (z. B. durch Erschütterung, Schaltzeiten).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen dokumentieren (Datum, Uhrzeit, Wetter, Fehlerbeschreibung).\n   - Fotos machen, falls Auffälligkeiten sichtbar sind.\n\n5. **Eskalation**\n   - Bei wiederholtem oder sicherheitsrelevantem Ausfall: Meldung an die Instandhaltung/Technik weiterleiten.\n   - Bei einmaligem, nicht reproduzierbarem Fehler: Beobachtung fortsetzen, ggf. Kontrollgang einplanen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Wetterereignisse? Sind weitere Lampen in der Umgebung betroffen?\n\nFalls weitere Informationen vorliegen, bitte ergänzen.",
+    "tokens_estimate_words": 171
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwartbar (kein Signal im Kontext)",
+      "Kontextnutzung minimal (nur Asset-ID vorhanden)"
+    ],
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Priorisierung (Absicherung zuerst). Eskalationslogik vorhanden, aber Kontextnutzung begrenzt durch minimalen Input (nur Asset-ID). Keine Halluzinationen, aber generisch gehalten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.216
+  },
+  "error": {}
+}

@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0003-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 3
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,10 +15,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Standortangabe (GPS/Name) aus CONTEXT nutzen",
-      "Offline-Workflow nicht erwartbar (kein Signal)"
+      "Keine Kontextnutzung erkennbar (minimaler Context)",
+      "Keine Anpassung an Umgebungsbedingungen",
+      "Generische Schritte ohne Fallspezifik"
     ],
-    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Priorisierung (Absicherung zuerst). Eskalation und Dokumentation gut abgedeckt. Kontext minimal, daher keine Offline-Workflow-Erwartung; Asset-ID wird erwähnt, aber Name/GPS nicht genutzt (im CONTEXT vorhanden)."
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Kontext (nur OSM-ID) wird nicht genutzt, da kaum vorhanden; keine Halluzinationen, aber auch keine Anpassung an fehlende Infos (Zeit, Wetter, Konnektivität)."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
@@ -27,26 +28,25 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (spotty connectivity)",
-      "Halluzination: 'solar-/akkubetrieben' nicht im CONTEXT"
+      "Offline-Workflow nur implizit (spotty connectivity erwähnt, aber kein klarer 'lokal speichern'-Hinweis)"
     ],
-    "short_justification": "Gute Struktur und Safety-first. ABER: Antwort spekuliert stark über 'solar-/akkubetriebene Leuchte' basierend auf device.low_battery – das beschreibt laut Kontext das Techniker-Gerät, NICHT das Asset. Spotty connectivity erfordert Offline-Workflow, fehlt hier. K<=2 wegen Halluzination."
+    "short_justification": "Sehr gute Kontextnutzung: Nacht/poor_visibility → Absicherung betont, low_battery/spotty → Diagnose-Hinweise, Standort korrekt. Safety-first klar, Eskalation vorhanden, Dokumentation strukturiert. Offline-Workflow angedeutet, aber nicht explizit als Schritt formuliert."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -57,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext korrekt (Offline-Workflow bei spotty connectivity, Standort, Nacht/poor_visibility → Absicherung), klare Schrittfolge, Safety-first, vollständige Dokumentation. Keine Halluzinationen, versteht device.* als Techniker-Gerät. Nahezu perfekt."
+    "short_justification": "Exzellente Antwort: Safety-first (Absicherung Schritt 1), klare Schrittfolge, expliziter Offline-Workflow ('lokal speichern, später synchronisieren'), Kontextnutzung perfekt (Nacht/poor_visibility, spotty connectivity), Eskalation mit klaren Triggern, Dokumentation strukturiert. Keine Halluzinationen."
   }
 ]

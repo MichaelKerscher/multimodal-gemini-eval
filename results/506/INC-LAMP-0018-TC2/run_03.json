@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-26T14:35:51",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segmentausfall)\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.\n- Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern, besonders bei schlechter Sicht und mittlerer Verkehrsexposition.\n- Bei Bedarf Polizei oder Verkehrslenkung zur Unterstützung anfordern.\n\n**2. Sichtprüfung**\n- Kontrolliere, ob das gesamte Segment betroffen ist (mehrere Lampen/Ampeln dunkel).\n- Prüfe auf offensichtliche Schäden am Schaltschrank (z. B. Vandalismus, Feuchtigkeit, offene Türen).\n- Achte auf ungewöhnliche Geräusche oder Gerüche.\n\n**3. Diagnose/Beobachtung**\n- Prüfe, ob die Steuerungseinheit im Schaltschrank reagiert (Statusanzeigen, Sicherungen, Fehlercodes).\n- Kontrolliere, ob die Stromversorgung vorhanden ist (Spannungsprüfer verwenden).\n- Überprüfe, ob externe Einflüsse (z. B. Bauarbeiten, Feuchtigkeit durch Nebel) als Ursache infrage kommen.\n- Da das Gerät online und als „ok“ gemeldet ist, liegt das Problem vermutlich an der Steuerung oder Verkabelung im Segment.\n\n**4. Dokumentation**\n- Notiere alle Beobachtungen, Maßnahmen und Besonderheiten (z. B. Sichtverhältnisse, Wetter, Zeitpunkt).\n- Dokumentiere den Zustand des Schaltschranks und der betroffenen Lampen/Ampeln.\n- Fotos machen, sobald möglich (aktuell laut Meldung nicht vorhanden).\n\n**5. Eskalation**\n- Bei unklarer Ursache oder wenn keine schnelle Behebung möglich ist: Störung an die Fachabteilung/Leitstelle melden.\n- Bei Gefahr für den Verkehr: Sofortige Eskalation an Polizei/Verkehrssicherung.\n- Rückmeldung an den Melder (Bürger) nach Abschluss oder bei längerer Bearbeitungszeit.\n\n**Rückfrage:**  \nSind aktuelle Pläne/Schaltbilder des Segments verfügbar? Gibt es Hinweise auf kürzliche Wartungsarbeiten oder Störungen in der Umgebung?",
+    "tokens_estimate_words": 220
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Asset-ID nicht explizit in Dokumentation erwähnt"
+    ],
+    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (Nebel/Nacht → erweiterte Absicherung, device online → Ferndiagnose möglich, medium severity → angemessene Eskalation). Klare 5-Schritt-Struktur, Safety-first, spezifische Diagnose bei control_box_issue, sinnvolle Rückfrage."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.82
+  },
+  "error": {}
+}

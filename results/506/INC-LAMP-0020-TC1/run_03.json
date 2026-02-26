@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC1",
+  "timestamp": "2026-02-26T14:36:45",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n4483691318)",
+    "context": {
+      "asset_osm": "n4483691318"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n4483691318 (Straßenlampe). Hier ist das empfohlene Vorgehen:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n   - Warnweste anlegen, Absperrmaterial bereitstellen.  \n   - Arbeitsbereich mit Pylonen oder Warnleuchten sichern, besonders bei Dunkelheit und Verkehr.\n\n2. Sichtprüfung  \n   - Prüfen, ob die Lampe beschädigt ist (z. B. Mast, Leuchte, Verkabelung).  \n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n   - Funktion der Lampe testen (Schaltkasten prüfen, falls zugänglich).  \n   - Prüfen, ob mehrere Lampen betroffen sind (Hinweis auf größere Störung).\n\n4. Dokumentation  \n   - Festgestellte Mängel, Standort und Asset-ID notieren.  \n   - Fotos von der Situation und ggf. Schäden anfertigen.\n\n5. Eskalation  \n   - Bei Gefahr für Verkehr oder Personen sofortige Meldung an Leitstelle/Notdienst.  \n   - Bei Einzelstörung Reparaturauftrag auslösen, bei Serienausfall Netzbetreiber informieren.\n\nRückfrage:  \nIst bekannt, ob nur diese eine Lampe betroffen ist oder ein längerer Abschnitt? Gibt es Hinweise auf akute Gefahrenstellen (z. B. Unfallgefahr, beschädigte Infrastruktur)?",
+    "tokens_estimate_words": 145
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
+      "Keine Anpassung an Umgebungsbedingungen (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Eskalation und Dokumentation gut abgedeckt. Kontext minimal, daher K=3 gerechtfertigt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.761
+  },
+  "error": {}
+}

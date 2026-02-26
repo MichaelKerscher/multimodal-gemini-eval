@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Gut strukturierte Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation vorhanden, aber Severity-Kontext fehlt (nur minimal context). Dokumentation vollständig, keine Halluzinationen."
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation vorhanden, Dokumentation gut. Kontext minimal (nur OSM-ID), daher keine erweiterten Elemente erwartbar. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (Schnee, dusk, high severity, low_battery), Safety-first klar erkennbar, strukturierte Schritte mit Eskalation passend zu Severity, vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absperrung bei Schnee/schlechter Sicht), klare Schrittfolge, nutzt Kontext präzise (low_battery, Schnee, dusk, high severity), Eskalation bei hoher Gefährdung, vollständige Dokumentation inkl. Foto-Hinweis."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Kompakte, umsetzbare Schrittfolge mit klarer Priorisierung (Absicherung → Sichtprüfung → Diagnose → Doku → Eskalation). Nutzt Kontext korrekt (Schnee, poor_visibility, high severity), keine Halluzinationen, vollständige Dokumentation."
+    "short_justification": "Nahezu perfekt: Safety-first explizit (Absicherung Schritt 1, bei akuter Gefahr Polizei), klare Priorisierung, nutzt alle relevanten Kontextfelder korrekt (Schnee, Dämmerung, high severity, Foto vorhanden), vollständige Dokumentation, klare Eskalationslogik."
   }
 ]

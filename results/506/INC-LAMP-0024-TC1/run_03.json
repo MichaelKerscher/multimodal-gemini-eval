@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC1",
+  "timestamp": "2026-02-26T14:38:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630490)",
+    "context": {
+      "asset_osm": "n5718630490"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n5718630490. Hier ist das empfohlene Vorgehen bei einem sporadischen Fehler einer Straßenlampe:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung (z. B. Dunkelheit an gefährlicher Stelle): Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Umfeld auf sichtbare Schäden (z. B. Wackelkontakt, Feuchtigkeit, lose Teile).\n   - Gibt es Anzeichen für Manipulation oder Vandalismus?\n\n3. **Diagnose/Beobachtung**\n   - Beobachte, ob die Lampe weiterhin sporadisch ausfällt.\n   - Prüfe, ob andere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n   - Notiere, ob äußere Einflüsse (z. B. Wetter, Erschütterungen) eine Rolle spielen könnten.\n\n4. **Dokumentation**\n   - Halte den aktuellen Zustand, Zeitpunkt der Ausfälle und Beobachtungen schriftlich fest.\n   - Asset-ID, Standort und Besonderheiten dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem oder längerem Ausfall: Störung an die Fachabteilung oder den Wartungsdienst weiterleiten.\n   - Dringlichkeit je nach Gefährdungslage einstufen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Ereignisse (z. B. Unwetter) an diesem Standort? Sind weitere Lampen betroffen?\n\nBitte gib Bescheid, falls du weitere Details hast oder Unterstützung bei der Eskalation benötigst.",
+    "tokens_estimate_words": 186
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Sicherheitsfokus. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Priorisierung bei sporadischem Fehler könnte schärfer sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.447
+  },
+  "error": {}
+}

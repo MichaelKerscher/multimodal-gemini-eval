@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC2",
+  "timestamp": "2026-02-26T14:29:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427359783",
+        "longitude": 12.1049944,
+        "latitude": 47.877481,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Westerndorf St. Peter, Schlößlstraße"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T22:47:36+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten.\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Leitkegel) rund um den Arbeitsbereich aufstellen, da schlechte Sichtverhältnisse herrschen und Nachtzeit ist.\n\n**2. Sichtprüfung**\n- Lampe äußerlich auf Beschädigungen, Vandalismus oder lose Teile prüfen.\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größere Störung).\n- Standortdaten bestätigen: Westerndorf St. Peter, Schlößlstraße, OSM-ID n4427359783.\n\n**3. Diagnose/Beobachtung**\n- Batterie prüfen, da der Gerätestatus „low_battery“ anzeigt.\n- Verbindung zum Steuergerät testen (Achtung: „spotty“ Konnektivität kann Diagnose erschweren).\n- Falls möglich, Testbetrieb der Lampe auslösen.\n- Prüfen, ob Sicherung ausgelöst wurde oder offensichtliche Kabelschäden vorliegen.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls möglich).\n- Zeitpunkt und genaue Position dokumentieren.\n- Hinweis: Kein Foto vom Bürger vorhanden.\n\n**5. Eskalation**\n- Bei defekter Batterie oder unklarer Ursache: Meldung an Wartungsteam/Elektriker weiterleiten.\n- Bei Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Notdienst informieren.\n\n**Rückfragen/Annahmen:**\n- Ist Zugang zur Lampe (z. B. Masttür) vor Ort möglich?\n- Gibt es einen aktuellen Wartungsplan oder bekannte Probleme an diesem Standort?\n- Soll eine Ersatzbatterie direkt mitgeführt werden?\n\nBitte Rückmeldung geben, falls weitere Details benötigt werden oder besondere Vorgaben bestehen.",
+    "tokens_estimate_words": 199
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur implizit (spotty connectivity erwähnt, aber kein klarer 'lokal speichern'-Hinweis)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Nacht/poor_visibility → Absicherung betont, low_battery/spotty → Diagnose-Hinweise, Standort korrekt. Safety-first klar, Eskalation vorhanden, Dokumentation strukturiert. Offline-Workflow angedeutet, aber nicht explizit als Schritt formuliert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.303
+  },
+  "error": {}
+}

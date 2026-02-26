@@ -2,28 +2,10 @@
   {
     "test_id": "INC-LAMP-0012-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
-      "D": 4,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung), Eskalation und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leichte Abzüge bei S (Eskalation nicht priorisiert genug) und K (generisch, da Kontext fehlt)."
-  },
-  {
-    "test_id": "INC-LAMP-0012-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "D": 3,
       "K": 2
     },
     "flags": {
@@ -33,10 +15,32 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (spotty connectivity)",
-      "Explizite Anweisung: lokal dokumentieren/später sync"
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Tageszeit/Umgebung",
+      "Keine Berücksichtigung Geräte-/Konnektivitätsstatus"
     ],
-    "short_justification": "Gute Struktur, Safety-first und Eskalation vorhanden. Aber: connectivity=spotty erfordert Offline-Workflow-Hinweis (lokal speichern/später sync), der fehlt komplett. K=2 wegen dieser Lücke."
+    "short_justification": "Solide Grundstruktur mit Absicherung zuerst und klarer Eskalation. Bleibt aber generisch, da minimaler Kontext nicht genutzt wird (keine Zeit/Umgebungs-/Konnektivitätsanpassung). Umsetzbar, aber nicht optimal kontextspezifisch."
+  },
+  {
+    "test_id": "INC-LAMP-0012-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur angedeutet, nicht explizit als Schritt",
+      "Spotty connectivity könnte stärker in Handlungsempfehlung einfließen"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nacht, mittlere Verkehrsexposition, spotty connectivity erwähnt). Klare Struktur mit Safety-first, Eskalation passend zu severity=medium. Offline-Aspekt angedeutet ('Fernwartung eingeschränkt'), aber nicht als expliziter Workflow-Schritt."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
@@ -54,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später sync), Eskalation differenziert, Dokumentation vollständig. Kontext (spotty/low_power) perfekt genutzt, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (spotty connectivity → offline dokumentieren/Fotos lokal speichern), klare Schrittfolge mit Safety-first, differenzierte Eskalation (mittel/akut), vollständige Dokumentations-Checkliste inkl. Koordinaten. Keine Halluzinationen, präzise Kontextanpassung."
   }
 ]

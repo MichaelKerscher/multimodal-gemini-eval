@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-26T14:38:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Die Situation wird als sicherheitsrelevant eingestuft. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung:**\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband aufstellen, um den Gefahrenbereich zu kennzeichnen.\n   - Bei hoher Verkehrsexposition: Polizei oder Ordnungsamt zur Unterstützung anfordern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Mastes auf offensichtliche Schäden (z. B. Vandalismus, Kabelbruch, lose Teile).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Hinweis aus Gerätedaten: „low_battery“ – vermutlich Batterieproblem.\n   - Prüfen, ob die Lampe auf Bewegungen oder Schaltimpulse reagiert.\n   - Bei Online-Gerät: Fernabfrage des Status möglich?\n\n4. **Dokumentation**\n   - Fotos vom Ausfallbereich und der Lampe anfertigen (Foto liegt laut Meldung vor).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei bestätigtem Ausfall und hoher Gefährdung: Störung sofort an die Leitstelle/Technik weiterleiten.\n   - Dringende Reparatur oder Batteriewechsel veranlassen.\n\n**Rückfrage:**  \nIst ein Zugang zur Lampe vor Ort aktuell möglich, oder gibt es Einschränkungen (z. B. Baustelle, parkende Fahrzeuge)?  \nSind weitere Lampen in der Umgebung betroffen?\n\nBitte Rückmeldung geben, damit die nächsten Schritte eingeleitet werden können.",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (severity=high, traffic_exposure=high, low_battery, photo_available), klare Safety-first-Logik, strukturierte Schritte, Eskalation passend zu Risiko, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.735
+  },
+  "error": {}
+}

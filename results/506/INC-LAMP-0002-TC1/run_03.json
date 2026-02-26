@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T14:29:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es gab einen zeitweiligen Ausfall, aktuell funktioniert die Anlage aber wieder normal. Hier ist die empfohlene Vorgehensweise:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n   - Warnweste anlegen, ggf. Absperrmaterial bereitstellen.  \n   - Arbeitsbereich sichern, auf Verkehr achten.\n\n2. Sichtprüfung  \n   - Anlage äußerlich auf Beschädigungen, lose Teile oder ungewöhnliche Geräusche prüfen.  \n   - Umfeld auf Spuren von Vandalismus oder Fremdeinwirkung kontrollieren.\n\n3. Diagnose/Beobachtung  \n   - Funktionsprüfung im laufenden Betrieb durchführen (z. B. Schaltzyklen beobachten).  \n   - Prüfen, ob alle Lampen/Signale wie vorgesehen arbeiten.  \n   - Falls möglich, Fehlerprotokoll oder Ereignisspeicher der Anlage auslesen.\n\n4. Dokumentation  \n   - Festgestellte Auffälligkeiten, Zeitpunkt und eigene Maßnahmen notieren.  \n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. Eskalation  \n   - Bei erneuten Auffälligkeiten, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an Fachabteilung/Technik weiterleiten.  \n   - Bei akutem Ausfall sofortige Reparatur oder Notdienst anfordern.\n\nRückfrage:  \nGibt es Angaben zum genauen Ausfallzeitpunkt oder zu besonderen Wetterlagen/Störungen im Umfeld? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 142
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Anpassung an intermittent fault_type",
+      "Keine Erwähnung vorhandener Foto-Dokumentation"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Nutzt aber minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt daher allgemein. Keine Halluzinationen, aber auch keine kontextspezifische Tiefe."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.308
+  },
+  "error": {}
+}

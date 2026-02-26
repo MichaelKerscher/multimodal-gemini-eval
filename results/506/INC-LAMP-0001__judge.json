@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0001-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
+      "R": 4,
+      "H": 4,
       "S": 3,
       "D": 4,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -15,31 +15,31 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwartbar (kein Signal im Context)",
-      "Kontext minimal genutzt (nur Asset-ID übernommen)"
+      "Offline-Workflow nicht erwartbar (kein Signal im Kontext)",
+      "Kontextnutzung minimal (nur Asset-ID vorhanden)"
     ],
-    "short_justification": "Grundsätzlich passende Struktur mit Absicherung, Diagnose, Dokumentation und Eskalation. Kontext ist minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Antwort bleibt teils generisch, nutzt verfügbare Info aber korrekt."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Priorisierung (Absicherung zuerst). Eskalationslogik vorhanden, aber Kontextnutzung begrenzt durch minimalen Input (nur Asset-ID). Keine Halluzinationen, aber generisch gehalten."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline, device_state=low_battery)",
-      "Keine explizite Anweisung zu lokaler Speicherung/Synchronisation"
+      "Offline-Workflow fehlt (connectivity=offline im Kontext)",
+      "Halluzination: 'Gerät meldet low_battery' suggeriert Asset-Problem, obwohl device.* das Techniker-Gerät beschreibt"
     ],
-    "short_justification": "Sehr gute Nutzung von Kontext (Standort, Verkehrsexposition, Batteriestand, Offline-Status erwähnt). Safety-first klar umgesetzt. Offline-Workflow wird aber nicht explizit adressiert (z.B. 'lokal dokumentieren, später synchronisieren'), obwohl connectivity=offline im Context steht. K daher <= 2."
+    "short_justification": "Exzellente Struktur, Safety-first, klare Eskalation, vollständige Dokumentation. ABER: Kritische Fehlinterpretation von device_state/connectivity als Asset-Problem statt Techniker-Gerät. Offline-Workflow fehlt trotz connectivity=offline."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -57,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Offline-Workflow explizit ('lokal speichern', 'später synchronisieren'), Batterie-Hinweis, Verkehrsexposition, intermittierender Fehler klar adressiert. Klare Struktur, Safety-first, vollständige Dokumentation, passende Eskalationslogik. Nahezu perfekte Erfüllung aller Kriterien."
+    "short_justification": "Nahezu perfekt: Klare Struktur, Safety-first, Offline-Workflow explizit integriert ('lokal dokumentieren', 'nach Rückkehr synchronisieren'), korrekte Interpretation von device.* als Techniker-Gerät. Vollständige Dokumentation und passende Eskalation."
   }
 ]

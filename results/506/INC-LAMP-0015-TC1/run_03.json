@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC1",
+  "timestamp": "2026-02-26T14:34:34",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n13293431103)",
+    "context": {
+      "asset_osm": "n13293431103"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls verfügbar).\n- Passanten auf die Dunkelheit hinweisen, falls akute Gefahr besteht.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen betroffen sind.\n- Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, freiliegende Kabel).\n\n**3. Diagnose/Beobachtung**\n- Kurze Notiz: Lampe seit ca. 10 Minuten dunkel, keine weiteren Auffälligkeiten gemeldet.\n- Prüfen, ob ein Stromausfall im Bereich vorliegt (andere Infrastruktur betroffen?).\n\n**4. Dokumentation**\n- Asset-ID (n13293431103) und genaue Position notieren.\n- Zeitpunkt und Dauer der Störung festhalten.\n\n**5. Eskalation**\n- Störung an die zuständige Wartungsstelle melden.\n- Hinweis auf unsicheren Bereich und mögliche Gefährdung geben (Priorität hoch).\n\n**Rückfrage:**  \nSind weitere Lampen in der Nähe ebenfalls ausgefallen oder ist nur diese eine betroffen? Gibt es besondere Gefahrenstellen (z. B. Zebrastreifen, Kreuzung) im direkten Umfeld?",
+    "tokens_estimate_words": 141
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Keine Anpassung an severity/traffic/visibility (nicht im CONTEXT)",
+      "Generische Schritte ohne klare Priorisierung"
+    ],
+    "short_justification": "Absicherung steht an erster Stelle, Eskalation vorhanden, Dokumentation gut strukturiert. Kontext (nur asset_osm) wird kaum genutzt; Antwort bleibt generisch ohne Anpassung an Umgebungsfaktoren (die nicht verfügbar waren). Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.109
+  },
+  "error": {}
+}

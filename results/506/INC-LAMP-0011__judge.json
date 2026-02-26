@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Sicherheit als Schritt 1. Kontext minimal, daher keine spezifischen Umwelt-/Risikofaktoren integriert, aber das ist hier kein Fehler."
+    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Sicherheit als Schritt 1. Kontext minimal (nur Asset-ID), daher generische aber passende Antwort. Eskalation vorhanden, aber Trigger könnten präziser sein."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, mittlere Verkehrsbelastung, Standort), klare Priorisierung, Safety-first, umfassende Dokumentation und Eskalationslogik. Nahezu perfekt strukturiert."
+    "short_justification": "Exzellente Kontextnutzung: Nebel/schlechte Sicht → verstärkte Absicherung, intermittent fault → gezielte Diagnose-Schritte. Klare Struktur, Safety-first, präzise Eskalationslogik mit Hinweis auf Elektriker."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -41,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr starke Antwort mit vollständiger Kontextintegration (Nebel, Verkehr, Standort), klarer Struktur, Safety-first, präziser Dokumentation und passender Eskalation. Alle Elemente sinnvoll erfüllt."
+    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (Nebel/Verkehr → Sicherheit, intermittent → Testverfahren). Klare 5-Schritt-Struktur, Safety-first, differenzierte Eskalation inkl. Beobachtungsempfehlung bei nicht reproduzierbarem Fehler."
   }
 ]

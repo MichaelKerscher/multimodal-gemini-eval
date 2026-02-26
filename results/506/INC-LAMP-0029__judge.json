@@ -6,6 +6,27 @@
       "H": 3,
       "S": 3,
       "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (kein Signal im Context)",
+      "Severity/Zeitkontext nicht genutzt (nicht im Context)"
+    ],
+    "short_justification": "Solide Struktur mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur asset_osm), daher keine Offline-/Severity-Erwartung berechtigt. Generisch, aber korrekt."
+  },
+  {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
       "K": 2
     },
     "flags": {
@@ -15,28 +36,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (kein Signal im CONTEXT)",
-      "Kontextnutzung schwach (nur Asset-ID verwendet)"
+      "Offline-Workflow fehlt (connectivity=offline im Context)",
+      "Keine explizite Anweisung zu lokaler Speicherung/Sync"
     ],
-    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber nutzt minimalen CONTEXT kaum (keine severity/time_of_day/connectivity). Dokumentation gut, aber K=2 wegen fehlender Kontextintegration."
-  },
-  {
-    "test_id": "INC-LAMP-0029-TC2",
-    "scores": {
-      "R": 5,
-      "H": 4,
-      "S": 5,
-      "D": 5,
-      "K": 4
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Antwort: Safety-first klar, Offline-Workflow erkannt ('Gerät offline, keine Fernabfrage'), Kontext gut genutzt (night/poor_visibility/medium traffic). Dokumentation vollständig, Eskalation passend zu severity=high."
+    "short_justification": "Gute Struktur, Safety-first, Eskalation passend zu severity=high/night. Dokumentation stark. ABER: connectivity=offline wird ignoriert – kein Offline-Workflow erwähnt. K=2 wegen fehlender Kontextnutzung (Offline-Signal)."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -54,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Offline-Workflow explizit ('Gerät offline: Fotos lokal speichern, nach Rückkehr synchronisieren'), Safety-first, klare Schrittfolge, vollständige Dokumentation inkl. GPS, Eskalation passend zu severity=high. Kontext optimal genutzt."
+    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später sync), Eskalation passend zu severity=high/night/poor_visibility. Kontext vollständig genutzt, keine Halluzinationen."
   }
 ]

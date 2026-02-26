@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC2",
+  "timestamp": "2026-02-26T14:33:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520338291",
+        "longitude": 12.1178456,
+        "latitude": 47.8505506,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T15:41:46+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Störungsmeldung – Straßenlampe (n12520338291)  \nStandort: 47.8505506, 12.1178456  \nSituation: Dunkel seit ca. 20 Minuten, Bereich wirkt unsicher, Nacht, mittlere Verkehrsexposition, schlechte Sicht.\n\n1. Absicherung  \n- Warnblinkleuchte oder Pylone aufstellen, falls verfügbar.  \n- Verkehrsteilnehmer und Fußgänger auf die Dunkelheit hinweisen (z. B. durch Handzeichen oder Warnweste).\n\n2. Sichtprüfung  \n- Lampe und Mast auf sichtbare Schäden prüfen (z. B. Glasbruch, lose Teile, Vandalismus).  \n- Umgebung auf weitere ausgefallene Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Lampe einzeln betroffen ist oder ob mehrere Lampen ausfallen (Hinweis auf größere Störung).  \n- Auf Geräusche, Geruch (z. B. verschmort) oder auffällige Wärmeentwicklung achten.  \n- Aufgrund „low_power_mode“ und „spotty“ Konnektivität: Fernwartung aktuell eingeschränkt möglich.\n\n4. Dokumentation  \n- Ausfallzeit, Standort, Sichtbefund und getroffene Maßnahmen notieren.  \n- Foto nicht verfügbar – ggf. Skizze oder genaue Beschreibung anfertigen.\n\n5. Eskalation  \n- Störung an die Leitstelle/Technik melden, Priorität „mittel“ (unsicherer Bereich, Nacht, Verkehr).  \n- Hinweis auf eingeschränkte Fernüberwachung geben.  \n- Rückmeldung an Melder/Patrouille, sobald Techniker informiert.\n\nRückfrage:  \nGab es in der Umgebung weitere Ausfälle oder Auffälligkeiten? Sind zusätzliche Sicherungsmaßnahmen vor Ort möglich?",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nur angedeutet, nicht explizit als Schritt",
+      "Spotty connectivity könnte stärker in Handlungsempfehlung einfließen"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nacht, mittlere Verkehrsexposition, spotty connectivity erwähnt). Klare Struktur mit Safety-first, Eskalation passend zu severity=medium. Offline-Aspekt angedeutet ('Fernwartung eingeschränkt'), aber nicht als expliziter Workflow-Schritt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.442
+  },
+  "error": {}
+}

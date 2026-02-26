@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-26T14:32:57",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es gab einen zeitweisen Ausfall, aktuell funktioniert die Anlage wieder normal. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Kontrolle – Asset n4470029718**\n\n1. **Absicherung**\n   - Warnweste anlegen, ggf. Absperrmaterial bereitstellen.\n   - Arbeitsbereich absichern, auf Verkehr achten.\n\n2. **Sichtprüfung**\n   - Anlage äußerlich inspizieren: Gehäuse, Verkabelung, Lampen/Ampeln.\n   - Auf sichtbare Schäden, Feuchtigkeit oder Manipulation prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest durchführen: Schaltzyklen, Leuchtmittel, Steuerung prüfen.\n   - Prüfen, ob ungewöhnliche Geräusche oder Gerüche auftreten.\n   - Nachfragen: Gab es in letzter Zeit Bauarbeiten, Wetterereignisse oder andere Störungen in der Nähe?\n\n4. **Dokumentation**\n   - Ergebnisse der Sichtprüfung und Tests notieren.\n   - Fotos bei Auffälligkeiten machen.\n   - Zeitpunkt und Dauer des gemeldeten Ausfalls dokumentieren (falls bekannt).\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an Fachabteilung/Technik weiterleiten.\n   - Sofortmaßnahmen einleiten, falls Gefahr für Verkehrssicherheit besteht.\n\n**Rückfrage:**  \nGibt es nähere Angaben zum Zeitpunkt oder zur Häufigkeit des Ausfalls? Wurde die Störung von mehreren Personen gemeldet?",
+    "tokens_estimate_words": 151
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Sicherheit als Schritt 1. Kontext minimal (nur Asset-ID), daher generische aber passende Antwort. Eskalation vorhanden, aber Trigger könnten präziser sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.803
+  },
+  "error": {}
+}

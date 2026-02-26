@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0015-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
       "D": 4,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,10 +15,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-Bewusstsein (high) nicht explizit sichtbar",
-      "Verkehrsexposition nicht thematisiert"
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Keine Anpassung an severity/traffic/visibility (nicht im CONTEXT)",
+      "Generische Schritte ohne klare Priorisierung"
     ],
-    "short_justification": "Strukturierte Antwort mit klarer Absicherung und Eskalation. Kontext minimal, daher keine Nutzung von Umgebungsdaten (traffic/lighting) erwartbar. Priorisierung gut, aber Dringlichkeit könnte stärker betont sein."
+    "short_justification": "Absicherung steht an erster Stelle, Eskalation vorhanden, Dokumentation gut strukturiert. Kontext (nur asset_osm) wird kaum genutzt; Antwort bleibt generisch ohne Anpassung an Umgebungsfaktoren (die nicht verfügbar waren). Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -26,7 +27,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -36,7 +37,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (high traffic, poor visibility, night, severity high). Safety-first klar erkennbar, Eskalation passend zu Risiko, Struktur umsetzbar, Dokumentation solide. Nahezu perfekt."
+    "short_justification": "Exzellente Antwort: Safety-first klar erkennbar (Warnweste, Absicherung, Verkehrslenkung bei high traffic), strukturierte Schrittfolge, nutzt Kontext präzise (night/poor_visibility/high traffic → Absicherung, online → kein Offline-Workflow nötig, photo_available → erwähnt). Dokumentation vollständig, Eskalation differenziert nach Gefährdung. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -44,7 +45,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -54,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Kontextnutzung (severity, traffic, visibility, photo_available). Safety-first prominent, klare Eskalationslogik, umsetzbare Schritte. Dokumentation gut, keine Halluzinationen. Nahezu perfekt."
+    "short_justification": "Nahezu identisch zu TC2, ebenfalls exzellent: Safety-first (Warnweste, Absicherung bei hohem Verkehr), klare Struktur, nutzt Kontext korrekt (high traffic/night/poor_visibility → Absicherung, photo_available → erwähnt, online → kein Offline-Workflow). Dokumentation und Eskalation differenziert. Keine Halluzinationen, keine Überbehauptungen."
   }
 ]

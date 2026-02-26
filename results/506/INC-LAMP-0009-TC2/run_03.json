@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC2",
+  "timestamp": "2026-02-26T14:32:08",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12557351679",
+        "longitude": 12.0896193,
+        "latitude": 47.8457235,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Endorfer Au / Krones"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-19T09:04:59+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für das gemeldete Flackern (vor allem bei Regen)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Leitkegeln absichern.\n   - Bei schlechter Sicht und Regen besonders auf eigene Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Leuchte bei Regen und trockener Witterung beobachten.\n   - Auf sichtbare Schäden an Mast, Leuchtenkopf, Dichtung oder Verkabelung achten.\n   - Prüfen, ob Wasser in die Leuchte eingedrungen ist (z. B. Kondenswasser, Tropfen im Gehäuse).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Flackern nur bei Nässe auftritt (ggf. gezielt bei Regen testen).\n   - Mögliche Ursachen: Feuchtigkeitseintritt, defekte Dichtung, Korrosion an Kontakten, Vorschaltgerät-Problem.\n   - Da das Gerät offline ist, keine Ferndiagnose möglich.\n\n4. **Dokumentation**\n   - Beobachtungen und vermutete Ursache notieren.\n   - Fotos machen, falls möglich (auch bei Regen, falls gefahrlos).\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei bestätigtem Feuchtigkeitseintritt: Meldung an Fachfirma/Elektriker zur Reparatur (Austausch Dichtung, Trocknung, ggf. Leuchtenkopf tauschen).\n   - Bei Unsicherheit oder fehlender Sichtbarkeit der Ursache: Weiterleitung an zuständige Stelle mit allen gesammelten Infos.\n\n**Rückfrage:**  \nIst ein Zugang zum Leuchtenkopf vor Ort möglich, oder wird eine Hubarbeitsbühne benötigt? Gibt es frühere Berichte zu ähnlichen Problemen an diesem Standort?",
+    "tokens_estimate_words": 182
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext (offline, Regen, dusk, poor_visibility) sichtbar, erwähnt Offline-Diagnose, klare Schrittfolge, Safety-first, gute Dokumentation und Eskalation. Rückfrage passend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.07
+  },
+  "error": {}
+}

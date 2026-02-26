@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC2",
+  "timestamp": "2026-02-26T14:34:59",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Störungsbearbeitung: Straßenlampe (sporadischer Fehler)**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) aufstellen, um den Arbeitsbereich zu sichern – besonders bei schlechter Sicht und Regen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, Feuchtigkeitseintritt oder lose Teile prüfen.\n   - Umgebung auf weitere Auffälligkeiten (z. B. beschädigte Kabel, Wasseransammlungen) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Lampe beobachten: Flackert sie, geht sie wieder aus?\n   - Prüfen, ob der Fehler mit der Witterung (Regen, Feuchtigkeit) zusammenhängt.\n   - Hinweis: Gerät meldet niedrigen Batteriestand und schlechte Verbindung – mögliche Ursache für sporadische Ausfälle.\n   - Falls möglich, Batteriestand messen oder Gerät kurzzeitig neu starten.\n\n4. **Dokumentation**\n   - Fotos vom aktuellen Zustand und Umfeld machen (Foto liegt laut Meldung bereits vor).\n   - Fehlerbeschreibung und eigene Beobachtungen notieren (z. B. Zeitpunkt, Wetter, Verhalten der Lampe).\n   - Alle Maßnahmen und Feststellungen dokumentieren.\n\n5. **Eskalation**\n   - Bei weiterhin unklarer Ursache oder wiederholtem Ausfall: Störung an die Fachabteilung/Technik weiterleiten.\n   - Hinweis auf erhöhtes Sicherheitsrisiko (schlechte Sicht, Regen, Dämmerung) geben.\n   - Austausch oder Wartung des Geräts (Batterie, Elektronik) anregen.\n\n**Rückfrage:**  \nSoll vor Ort ein Batteriewechsel durchgeführt werden oder ist ein kompletter Gerätetausch vorgesehen? Liegt eine aktuelle Wartungsanweisung für diesen Lampentyp vor?",
+    "tokens_estimate_words": 198
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
+      "Keine klare Anweisung zur lokalen Datenspeicherung"
+    ],
+    "short_justification": "Sehr gute Antwort: Safety-first klar erkennbar, nutzt Kontext (Regen, Dämmerung, low_battery, spotty) sichtbar. Eskalation mit Hinweis auf Sicherheitsrisiko vorhanden. Offline-Workflow fehlt trotz spotty connectivity, daher K=3."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.817
+  },
+  "error": {}
+}

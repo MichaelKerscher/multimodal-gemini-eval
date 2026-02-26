@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung; K=3 wegen fehlender Kontextnutzung (aber kein Fehler bei minimalem CONTEXT)."
+    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalationslogik. Kontext minimal, daher keine Offline-Workflow-Erwartung; Antwort bleibt angemessen generisch mit sinnvollen Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
       "R": 5,
-      "H": 5,
-      "S": 5,
+      "H": 4,
+      "S": 4,
       "D": 5,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -32,15 +32,17 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety first, klare Schrittfolge, Eskalationslogik passend zu severity=low, Nebel/Nacht berücksichtigt, spotty connectivity → Offline-Hinweis ('Fernzugriff eingeschränkt, vor Ort prüfen'). K=4 wegen impliziter statt expliziter Offline-Dokumentation."
+    "missing_elements": [
+      "Offline-Workflow nicht explizit als Schritt formuliert"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nebel, Nacht, Koordinaten, spotty connectivity erwähnt). Offline-Workflow angedeutet ('Fernabfrage eingeschränkt'), aber nicht als klarer Handlungsschritt. Dokumentation und Safety exzellent."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety first, strukturiert, Eskalation differenziert nach Risiko, expliziter Offline-Workflow ('offline speichern, später synchronisieren'), Nebel/Nacht/Low-Power klar integriert, GPS-Koordinaten genutzt. Keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Offline-Workflow explizit integriert ('lokal speichern, später synchronisieren'), klare Schrittfolge, Safety-first, exzellente Kontextnutzung (spotty/low_power_mode, Nebel, Nacht). Keine Halluzinationen, alle Guardrails beachtet."
   }
 ]

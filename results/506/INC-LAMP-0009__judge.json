@@ -14,10 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (kein Signal im CONTEXT)"
-    ],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Erwartung berechtigt. K=3, da Kontext kaum vorhanden und nicht aktiv genutzt."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, guter Diagnose-Logik und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Rückfrage sinnvoll, da asset_type unknown."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
@@ -25,8 +23,8 @@
       "R": 5,
       "H": 5,
       "S": 4,
-      "D": 4,
-      "K": 4
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -35,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: klar strukturiert, Safety-first, Offline-Workflow explizit erwähnt ('keine Ferndiagnose möglich', 'Fotos bei nächster Gelegenheit'), Kontext (offline, rain, dusk) sichtbar genutzt. Eskalation klar, Dokumentation gut."
+    "short_justification": "Exzellente Antwort: nutzt Kontext (offline, Regen, dusk, poor_visibility) sichtbar, erwähnt Offline-Diagnose, klare Schrittfolge, Safety-first, gute Dokumentation und Eskalation. Rückfrage passend."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, Offline-Workflow explizit ('offline dokumentieren', 'Fotos lokal speichern'), Kontext (rain, dusk, poor_visibility, offline) durchgängig genutzt, Eskalation klar, Dokumentation vollständig, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: expliziter Offline-Workflow ('Offline dokumentieren, lokal speichern, später synchronisieren'), Safety-first mit Dämmerung/Regen-Kontext, klare Eskalationslogik, vollständige Dokumentation. Nutzt alle relevanten Kontextfelder korrekt."
   }
 ]

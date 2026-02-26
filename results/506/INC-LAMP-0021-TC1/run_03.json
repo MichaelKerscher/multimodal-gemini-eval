@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-26T14:37:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Aussetzern/Flackern (Asset-ID: n8486238431)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnbaken, Pylone).\n   - Bei stark befahrener Straße ggf. Polizei oder Verkehrslenkung informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Leuchte/Ampel: Sind sichtbare Schäden, lose Kabel oder Feuchtigkeit zu erkennen?\n   - Prüfen, ob das Flackern bei allen oder nur einzelnen Leuchten/Ampelphasen auftritt.\n\n3. **Diagnose/Beobachtung**\n   - Flackern/Aussetzer beobachten: Tritt das Problem dauerhaft oder nur sporadisch auf?\n   - Leicht an Kabelverbindungen oder Gehäuse rütteln (ohne Gewalt), um Kontaktprobleme zu erkennen.\n   - Prüfen, ob Feuchtigkeit oder Korrosion an Kontakten sichtbar ist.\n\n4. **Dokumentation**\n   - Beobachtungen und Maßnahmen stichpunktartig notieren (Datum, Uhrzeit, Wetter, betroffene Komponenten).\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei bestätigtem Kontaktproblem: Meldung an Elektromeister/Servicepartner zur fachgerechten Reparatur.\n   - Bei unklarer Ursache: Weiterleitung an Fachpersonal mit allen gesammelten Informationen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es aktuelle Hinweise auf Feuchtigkeitseintritt oder Bauarbeiten in der Nähe?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Umgebungsbedingungen",
+      "Offline-Workflow nicht erwähnt trotz fehlendem Kontext"
+    ],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Bleibt aber generisch, da kaum Kontext vorhanden ist. Keine Halluzinationen, aber auch keine adaptive Nutzung des minimalen Kontexts."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.361
+  },
+  "error": {}
+}

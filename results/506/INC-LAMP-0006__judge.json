@@ -4,9 +4,30 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 3,
-      "D": 4,
+      "S": 2,
+      "D": 3,
       "K": 3
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Safety-first nicht als Schritt 1 priorisiert",
+      "Keine klare Eskalations-Trigger-Logik bei severity=high"
+    ],
+    "short_justification": "Antwort ist grundsätzlich passend und strukturiert, aber Absicherung steht nicht klar als Schritt 1 (Safety-first). Eskalation wird erwähnt, aber ohne klare Trigger bei hoher Severity. Kontext minimal, daher keine Offline-Workflow-Erwartung."
+  },
+  {
+    "test_id": "INC-LAMP-0006-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,31 +36,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (nicht erwartbar, da kein Signal im Context)",
-      "Wetter-/Verkehrskontext (nicht erwartbar)"
+      "Offline-Workflow nicht erwähnt (connectivity=offline im CONTEXT)",
+      "Keine Anleitung zu lokaler Dokumentation/Synchronisation"
     ],
-    "short_justification": "Antwort ist strukturiert und fallbezogen, beginnt mit Absicherung und enthält klare Eskalation. Dokumentation gut abgedeckt. Kontext minimal, daher keine Offline-/Wetter-Hinweise erwartbar – kein Fehler."
-  },
-  {
-    "test_id": "INC-LAMP-0006-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
-    },
-    "missing_elements": [
-      "Offline-Workflow explizit (connectivity=offline)",
-      "Keine Spekulation über Asset-Defekt"
-    ],
-    "short_justification": "Sehr gute Struktur, Safety-first, klare Eskalation, vollständige Dokumentation. ABER: Interpretiert 'low_battery/offline' als Asset-Defekt ('Energieversorgung oder Steuerung defekt'), obwohl Context-Notes klar sagen, dass device.* das Techniker-Gerät beschreibt. Halluzination → K=2."
+    "short_justification": "Sehr gute Struktur, Safety-first klar als Schritt 1, Eskalation passend zu severity=high und Umgebung. Aber connectivity=offline wird ignoriert – kein Offline-Workflow erwähnt, daher K<=2."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -57,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, Offline-Workflow explizit ('lokal speichern', 'nach Wiederherstellung synchronisieren'), korrekte Kontextnutzung (Sturm/Verkehr/Sicht), vollständige Dokumentation, keine Halluzinationen. Alle erwartbaren Elemente erfüllt."
+    "short_justification": "Nahezu perfekt: Safety-first klar priorisiert, Offline-Workflow explizit integriert (lokal dokumentieren, später synchronisieren), Eskalation passend zu severity/Sturm/traffic, klare Schrittfolge, keine Halluzinationen. Kontext vollständig und korrekt genutzt."
   }
 ]

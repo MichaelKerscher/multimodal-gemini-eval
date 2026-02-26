@@ -15,32 +15,31 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung des minimalen Kontexts (nur asset_osm vorhanden)",
-      "Spekuliert über Gefahrenstellen ohne Kontext-Signal",
-      "Fragt nach Infos, die nicht erwartbar sind (Bauarbeiten, Unwetter)"
+      "Kontextnutzung (nur Asset-ID vorhanden, keine weiteren Signale genutzt)",
+      "Offline-Workflow nicht erwähnt (nicht erwartbar, da kein Signal)",
+      "Priorisierung/Stop-Conditions schwach"
     ],
-    "short_justification": "Grundsätzlich strukturiert und sicherheitsorientiert, aber generisch. Nutzt den minimalen Kontext (nur asset_osm) nicht sichtbar; spekuliert über Gefahrenstellen/Wetter ohne Signal. Dokumentation und Eskalation vorhanden, aber nicht kontextspezifisch."
+    "short_justification": "Grundsätzlich passende Antwort mit Absicherung, Sichtprüfung, Dokumentation und Eskalation. Struktur ist vorhanden, aber Priorisierung und Stop-Conditions sind schwach. Kontext minimal (nur Asset-ID), daher K=2, da keine weiteren Signale genutzt werden konnten."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
     "scores": {
-      "R": 4,
+      "R": 5,
       "H": 4,
       "S": 4,
-      "D": 4,
-      "K": 3
+      "D": 5,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Kein expliziter Offline-Workflow trotz connectivity=spotty",
-      "Foto-Workflow nicht klar (Foto vorhanden vs. neues Foto machen)"
+      "Stop-Conditions könnten expliziter sein"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition, Koordinaten). Safety-first klar, Struktur gut, Dokumentation solide. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). Foto-Logik unklar."
+    "short_justification": "Sehr gute Antwort: klar strukturiert, fallbezogen (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition), Safety-first erkennbar, Dokumentation vollständig (GPS, Zeit, Foto), Eskalation klar. Spotty connectivity wird erwähnt ('Ferndiagnose eingeschränkt'), Offline-Workflow implizit (lokal dokumentieren). Nur Stop-Conditions könnten expliziter sein."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
@@ -58,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: spotty connectivity führt zu explizitem Offline-Workflow (lokal speichern, später sync). Safety-first, klare Struktur, vollständige Dokumentation, passende Eskalation. Nutzt alle relevanten Signale (Dämmerung, Sicht, Verkehr, photo_available) korrekt. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: klar strukturiert (1-2-3-4-5), fallbezogen (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition), Safety-first, vollständige Dokumentation (offline, lokal speichern), Eskalation mit Priorisierungshinweis. Spotty connectivity wird korrekt genutzt ('offline dokumentieren, lokal speichern'). Kontext optimal genutzt, keine Halluzinationen."
   }
 ]

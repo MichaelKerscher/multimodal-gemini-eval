@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 5,
       "D": 4,
       "K": 3
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal, daher keine Offline-Erwartung. Dokumentation vollständig, aber severity/traffic nicht nutzbar (fehlen im Context)."
+    "short_justification": "Sehr gute Struktur mit Safety-first (Absicherung Schritt 1), klarer Eskalation und Dokumentation. Kontext minimal, daher K=3 (keine Offline-Erwartung). Alle Kernelemente vorhanden."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, Eskalation mit severity-Bezug ('hohe Priorität'), Dokumentation inkl. Foto-Hinweis, Kontext (online, day, low traffic) korrekt genutzt. Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, nutzt Kontext (Standort, severity=high, photo_available), Eskalation mit hoher Priorität. Dokumentation und Struktur sehr gut, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -41,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first (Absicherung Schritt 1), klare Struktur, Eskalation mit 'sofortige Meldung', Dokumentation inkl. Foto-Verweis, Kontext (online, severity high, photo_available) korrekt integriert. Keine Halluzinationen, präzise Rückfragen."
+    "short_justification": "Exzellent: Safety-first, klare Struktur, nutzt Kontext optimal (Standort, severity, photo_available erwähnt), Eskalation klar als 'hoch' markiert. Dokumentation gut, keine Halluzinationen, connectivity=online korrekt nicht als Offline-Workflow interpretiert."
   }
 ]

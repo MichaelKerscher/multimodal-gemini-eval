@@ -6,7 +6,7 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare, strukturierte Antwort mit Safety-first (Absicherung Schritt 1), Eskalationslogik und guter Dokumentation. Kontextnutzung optimal (minimal context, keine Überbehauptungen). Leichte Schwäche: Eskalationskriterien könnten präziser sein (severity medium nicht explizit adressiert)."
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge. Absicherung steht an erster Stelle, Eskalation ist vorhanden. Kontextnutzung minimal (nur Asset-ID), aber angemessen für L0. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort: Safety-first klar, Eskalation mit Gefahren-Trigger (herabhängende Kabel), nutzt Kontext sinnvoll (online-Status → Fehler an Lampe selbst). Dokumentation inkl. Foto-Hinweis. Struktur und Priorisierung stark."
+    "short_justification": "Sehr gute Antwort mit klarer Struktur und Safety-first. Nutzt Kontext sichtbar (online/ok → Fokus auf Leuchte, low traffic → angepasste Absicherung, day/clear → keine zusätzlichen Risiken). Eskalation klar definiert."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -42,7 +42,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: berücksichtigt explizit Tageslicht/niedrige Verkehrsbelastung für Risikobewertung, nutzt device.connectivity korrekt (keine Offline-Workflow-Erwähnung, da online). Safety-first, klare Eskalation, gute Dokumentation. Sehr kompakt und umsetzbar."
+    "short_justification": "Kompakte, gut strukturierte Antwort. Absicherung zuerst, klare Schrittfolge, Eskalation vorhanden. Nutzt Kontext angemessen (Tageslicht/geringe Verkehrsbelastung → Risikobewertung). Keine Halluzinationen, präzise Dokumentationshinweise."
   }
 ]
