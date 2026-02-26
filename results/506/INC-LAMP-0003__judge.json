@@ -2,30 +2,9 @@
   {
     "test_id": "INC-LAMP-0003-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
-      "D": 3,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
-      "Keine Anpassung an Zeit/Umgebung (nicht erwartbar bei minimalem Kontext)"
-    ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal, daher keine spezifischen Anpassungen erwartbar. Alle Basis-Elemente vorhanden."
-  },
-  {
-    "test_id": "INC-LAMP-0003-TC2",
-    "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -35,11 +14,28 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
+    "missing_elements": [],
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Dokumentation. Sicherheit wird adressiert, aber ohne Kontext zu severity/time_of_day etwas generisch. Keine Offline-Workflow-Erwähnung (nicht erwartbar bei minimalem Kontext)."
+  },
+  {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
     "missing_elements": [
-      "Kein expliziter Offline-Workflow trotz connectivity=spotty",
-      "Device-State (low_battery) erwähnt, aber nicht als Handlungsanweisung integriert"
+      "Offline-Workflow explizit (spotty connectivity)"
     ],
-    "short_justification": "Gute kontextbezogene Antwort mit Nacht/Sicht-Anpassung und klarer Struktur. Spotty connectivity wird erwähnt, aber Offline-Workflow fehlt als konkreter Schritt."
+    "short_justification": "Sehr gute Kontextnutzung (night, poor_visibility, low_battery, spotty connectivity). Sicherheit priorisiert, klare Struktur, Dokumentation vollständig. Offline-Workflow wird implizit (schriftlich/Fotos) erwähnt, aber nicht explizit als Strategie bei spotty connectivity hervorgehoben."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -57,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty→offline-Workflow, Nacht/Sicht→Safety), klare Schrittfolge, explizite Offline-Dokumentation und Sync-Hinweis. Alle erwartbaren Elemente erfüllt."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (spotty → offline-Workflow explizit, night/poor_visibility → Absicherung, severity → Eskalationslogik). Klare Schrittfolge, Safety-first, vollständige Dokumentation, keine Halluzinationen. Berücksichtigt context_notes korrekt."
   }
 ]

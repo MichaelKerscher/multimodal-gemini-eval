@@ -2,22 +2,24 @@
   {
     "test_id": "INC-LAMP-0002-TC1",
     "scores": {
-      "R": 4,
+      "R": 3,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Keine Nutzung von Umgebungs-/Zeitkontext (nicht vorhanden im CONTEXT)"
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Spekuliert über Ampelanlagen ohne Signal",
+      "Keine Anpassung an Umgebung/Zeit/Wetter"
     ],
-    "short_justification": "Klare Struktur mit Safety-first, Sichtprüfung, Beobachtung, Dokumentation und Eskalation. Passt gut zum intermittierenden Fehler. Kontext minimal, daher generisch aber korrekt; keine Halluzinationen."
+    "short_justification": "Strukturiert und sicherheitsorientiert, aber spekuliert über Ampelanlagen und Dämmerungsschalter ohne Kontext-Basis. Nutzt nur Asset-ID, ignoriert fehlende Umgebungsdaten nicht aktiv."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
@@ -35,7 +37,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Nacht/Nebel/poor_visibility für Safety-Hinweise, erwähnt online-Status für Logdaten, integriert photo_available, klare Schrittfolge mit Eskalation. Alle Kontext-Signale sinnvoll genutzt, keine Halluzinationen."
+    "short_justification": "Exzellent: Nutzt alle Kontextdaten (Nebel, Nacht, mittlerer Verkehr, Foto vorhanden), klare Schrittfolge mit Safety-first, präzise Eskalationskriterien, vollständige Dokumentation, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0002-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: nutzt Nacht/Nebel/traffic_exposure für Safety, erwähnt photo_available explizit, klare Struktur mit intermittent-spezifischen Schritten (Fehler provozieren), Eskalation bei Sicherheitsrisiko. Kontext vollständig und korrekt genutzt."
+    "short_justification": "Exzellent: Kompakt, nutzt Kontext präzise (Nebel, Nacht, Verkehr, Foto), klare Priorisierung, Safety-first, sinnvolle Eskalation, vollständige Dokumentation, keine Halluzinationen. Fragt gezielt nach Zusatzinfos."
   }
 ]

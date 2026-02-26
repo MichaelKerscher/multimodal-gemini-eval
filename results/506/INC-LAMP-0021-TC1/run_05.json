@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-26T15:19:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden kurze Aussetzer und Flackern, vermutlich durch Kontaktprobleme an Asset n8486238431 (Straßenlampe/Ampelanlage).\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n   - Bei Ampelanlagen: Verkehrsfluss beachten, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. lose Kabel, Korrosion, Feuchtigkeit).\n   - Prüfen, ob Gehäuse geschlossen und unbeschädigt ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Flackern/Aussetzer reproduzierbar sind (z. B. durch leichtes Bewegen von Kabeln/Klemmen).\n   - Kontaktstellen (Klemmen, Fassungen, Steckverbindungen) auf festen Sitz und Korrosion prüfen.\n   - Bei Leuchten: Lampenfassung und Leuchtmittel kontrollieren.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und durchgeführte Maßnahmen dokumentieren (Fotos, Notizen).\n   - Asset-ID und Standort vermerken.\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden oder Gefahr: Fachfirma/Elektriker informieren.\n   - Bei unklarer Ursache oder wiederholtem Fehler: Weiterleitung an Instandhaltung.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gab es kürzlich Wartungsarbeiten oder Unwetter? Sind weitere Anlagen betroffen?",
+    "tokens_estimate_words": 148
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
+      "Keine Anpassung an Umgebung/Wetter/Zeit",
+      "Offline-Workflow nicht erwähnt (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Grundsolide generische Antwort mit Safety-first und Eskalation. Bleibt aber sehr allgemein, da kaum Kontext vorhanden. Struktur und Dokumentation sind vorhanden, aber ohne spezifische Anpassung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.947
+  },
+  "error": {}
+}

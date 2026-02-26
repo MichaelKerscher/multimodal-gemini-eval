@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC2",
+  "timestamp": "2026-02-26T15:19:57",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293397459",
+        "longitude": 12.1320286,
+        "latitude": 47.8589872,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T08:16:43+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste zur Prüfung des dunklen Abschnitts\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, besonders wegen hoher Verkehrsbelastung und Sturm.\n   - Auf eigene Sicherheit achten (starke Winde, schlechte Sicht).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Straßenlampen entlang des angegebenen Abschnitts (Koordinaten: 47.8589872, 12.1320286).\n   - Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.\n   - Auf offensichtliche Schäden achten (z. B. abgerissene Kabel, umgestürzte Masten).\n\n3. **Diagnose/Beobachtung**\n   - Da Gerät „offline“ ist, keine Fernabfrage möglich.\n   - Prüfen, ob Sicherungen ausgelöst wurden (sofern zugänglich).\n   - Auf Anzeichen von Sturmschäden achten (z. B. lose Teile, Wassereintritt).\n   - Bei Bedarf Fotos vom Schaden machen (Fotoapparat/Handy nutzen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Fotos dem Bericht beifügen.\n   - Zeitpunkt und genaue Position dokumentieren.\n\n5. **Eskalation**\n   - Bei größeren Schäden (z. B. mehrere Lampen, Gefahr für Verkehr) sofort Fachfirma/Notdienst informieren.\n   - Bei akuter Gefahr (herabfallende Teile, Stromschlagrisiko) Polizei/Feuerwehr alarmieren.\n   - Interne Meldung an Leitstelle mit allen Details.\n\n**Rückfrage:**  \nSind genaue Pläne oder Schaltpläne der Anlage vor Ort verfügbar? Gibt es Zugang zu den Schaltschränken?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Foto-Workflow (photo_available=true) nicht explizit genutzt",
+      "Zeitpunkt (reported_at) nicht dokumentiert"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Sturm, hoher Verkehr, schlechte Sicht und Offline-Status werden sichtbar integriert. Absicherung priorisiert, Eskalation klar, Offline-Workflow erwähnt ('keine Fernabfrage möglich'). Dokumentation gut strukturiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.83
+  },
+  "error": {}
+}

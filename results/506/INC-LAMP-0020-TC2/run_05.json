@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-26T15:18:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Straßenabschnitt (Standort: n4483691318, 47.856655/12.129258)\n\n1. Absicherung\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Leitkegel, Warnleuchten) aufstellen, um den Gefahrenbereich abzusichern.\n- Bei Regen und schlechter Sicht besonders auf eigene Sicherheit achten.\n\n2. Sichtprüfung\n- Sichtkontrolle der gesamten Beleuchtungsreihe am Abschnitt durchführen.\n- Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n- Auf offensichtliche Schäden, Feuchtigkeitseintritt oder lose Kabel achten.\n\n3. Diagnose/Beobachtung\n- Prüfen, ob die Anlage Strom hat (z. B. durch Testen benachbarter Lampen).\n- Gerät ist online, aber im „low power mode“ – Hinweis auf Stromsparbetrieb oder Energieproblem.\n- Wetter (Regen) kann zu Feuchtigkeitsschäden führen.\n- Falls möglich, Foto auswerten (liegt laut Meldung vor).\n\n4. Dokumentation\n- Alle Beobachtungen (betroffene Lampen, Schäden, Besonderheiten) notieren.\n- Fotos und ggf. weitere Hinweise zur Störung dokumentieren.\n\n5. Eskalation\n- Bei hoher Störungs-Schwere und schlechter Sicht sofortige Weiterleitung an Bereitschaft/Technik.\n- Falls Gefahr für Verkehrssicherheit besteht, Polizei oder Verkehrsbehörde informieren.\n\nRückfragen:\n- Gibt es Zugang zu dem Foto der Störung?\n- Sind weitere Abschnitte in der Nähe ebenfalls betroffen?\n- Gibt es aktuelle Bauarbeiten oder bekannte Stromausfälle im Bereich?\n\nBitte Rückmeldung geben, falls weitere Details oder das Foto benötigt werden.",
+    "tokens_estimate_words": 193
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Low-power-mode könnte expliziter als Geräte-Constraint erwähnt werden"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Koordinaten, Regen, Nacht, severity=high, Foto vorhanden). Klare Safety-first-Struktur, Eskalation passend zu severity. Dokumentation vollständig inkl. Foto-Hinweis. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.928
+  },
+  "error": {}
+}

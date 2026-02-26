@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-26T15:16:47",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Straßenlampe dunkel, Bereich unsicher\n\n1. Absicherung  \n- Warnblinkanlage am Fahrzeug einschalten, ggf. Warnbaken aufstellen.  \n- Persönliche Schutzausrüstung (Warnweste) anlegen.  \n- Verkehrsfluss beobachten, auf eigene Sicherheit achten.\n\n2. Sichtprüfung  \n- Lampe und Mast auf sichtbare Schäden, lose Teile oder Vandalismus prüfen.  \n- Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob andere Lampen im Bereich ebenfalls betroffen sind (Hinweis auf größere Störung).  \n- Geräusche, Geruch (z.B. verschmorte Elektrik) oder ungewöhnliche Wärmeentwicklung wahrnehmen.  \n- Da Gerät online und Zustand „ok“ meldet: Fehler vermutlich an Leuchtmittel oder Vorschaltgerät.\n\n4. Dokumentation  \n- Fotos vom Defekt und der Umgebung anfertigen (laut Incident verfügbar).  \n- Uhrzeit, genaue Position (Koordinaten), Sichtprüfungsergebnisse und eigene Maßnahmen notieren.\n\n5. Eskalation  \n- Bei hoher Gefährdung (hohes Verkehrsaufkommen, schlechte Sicht): Störung umgehend an Leitstelle/Notdienst melden, ggf. Polizei informieren.  \n- Reparaturteam mit Dringlichkeit „hoch“ beauftragen.\n\nRückfrage:  \nGibt es Zugang zu einer Ersatzleuchte oder kann kurzfristig eine mobile Beleuchtung aufgestellt werden, bis die Reparatur erfolgt?",
+    "tokens_estimate_words": 159
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Safety-first (Absicherung + PSA), klare Schrittfolge, nutzt Kontext sichtbar (night/high traffic/poor visibility → Absicherung, online → kein Offline-Workflow, severity high → Eskalation), Dokumentation vollständig, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.461
+  },
+  "error": {}
+}

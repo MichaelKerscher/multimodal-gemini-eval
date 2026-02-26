@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC1",
+  "timestamp": "2026-02-26T15:18:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n4483691318)",
+    "context": {
+      "asset_osm": "n4483691318"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n4483691318 (Straßenbeleuchtung). Hier die empfohlene Vorgehensweise:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n   - Warnweste anlegen, ggf. Absperrmaterial aufstellen.  \n   - Auf fließenden Verkehr achten, Gefahrenstelle absichern.\n\n2. Sichtprüfung  \n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.  \n   - Sichtbare Schäden, lose Kabel, defekte Leuchtmittel oder Vandalismus feststellen.\n\n3. Diagnose/Beobachtung  \n   - Leuchten einzeln testen (sofern möglich).  \n   - Prüfen, ob Zeitschaltuhr, Dämmerungsschalter oder Sicherung ausgefallen sind.  \n   - Bei mehreren dunklen Leuchten: Möglicher Stromausfall oder Leitungsproblem.\n\n4. Dokumentation  \n   - Genaue Position, Anzahl betroffener Leuchten, sichtbare Schäden und erste Diagnose notieren.  \n   - Fotos anfertigen, falls relevant.\n\n5. Eskalation  \n   - Bei akuter Gefahr (z. B. herabhängende Kabel): Sofortige Meldung an Bereitschaft/Notdienst.  \n   - Sonst: Störungsmeldung an zuständige Fachabteilung weiterleiten.\n\nRückfrage:  \nSind weitere Details zum Ausmaß der Dunkelheit oder zu besonderen Gefahrenstellen bekannt (z. B. Kreuzung, Schulweg)?  \nFalls nicht, gehe ich von einem Standard-Straßenabschnitt aus. Bitte bestätigen oder ergänzen.",
+    "tokens_estimate_words": 146
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity/Zeitkontext nicht genutzt (nicht im CONTEXT)",
+      "Foto-Workflow nicht erwähnt (nicht im CONTEXT)"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge (Absicherung zuerst, Eskalation klar). Nutzt minimalen Kontext korrekt (Asset-ID), bleibt aber generisch, da kaum Kontext vorhanden. Dokumentation gut, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.109
+  },
+  "error": {}
+}

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-26T15:20:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Die Situation wird als sicherheitskritisch eingestuft. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Außendienst-Einsatz – Straßenlampe Isarstraße/Gewerbegebiet, Rosenheim**\n\n1. **Absicherung**\n   - Warnblinkanlage am Einsatzfahrzeug einschalten.\n   - Absperrmaterial (Leitkegel, Warnleuchten) rund um den Arbeitsbereich platzieren.\n   - Bei hoher Verkehrsdichte ggf. Polizei oder Verkehrslenkung anfordern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z. B. Vandalismus, Kabeldefekt).\n   - Prüfen, ob weitere Lampen im Bereich betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Batteriestatus prüfen (laut System: niedriger Ladestand).\n   - Verbindung zur Steuerungseinheit kontrollieren (Gerät ist online).\n   - Sichtprüfung auf lose Kabel, Feuchtigkeitseintritt oder sichtbare Defekte.\n   - Falls möglich: Foto der Störung aufnehmen (Foto liegt laut Meldung vor).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen im Einsatzprotokoll festhalten.\n   - Foto der defekten Lampe und Umgebung dokumentieren.\n   - Zeitpunkt und genaue Position notieren.\n\n5. **Eskalation**\n   - Bei bestätigtem Ausfall und sicherheitsrelevanter Lage: Störung umgehend an die Leitstelle/Technik weiterleiten.\n   - Hinweis auf niedrigen Batteriestand und hohe Verkehrsexposition geben.\n   - Falls Ersatzteile oder Spezialisten benötigt werden, sofort anfordern.\n\n**Rückfrage:**  \nIst ein Zugang zur Lampe vor Ort aktuell gefahrlos möglich, oder besteht durch den Verkehr eine akute Gefährdung?  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen?\n\nBitte um kurze Rückmeldung, damit die nächsten Schritte optimal koordiniert werden können.",
+    "tokens_estimate_words": 206
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Severity high, Traffic high, Night, Low battery), klare Priorisierung mit Safety first, strukturierte Schritte, umfassende Dokumentation, passende Eskalationslogik. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.77
+  },
+  "error": {}
+}

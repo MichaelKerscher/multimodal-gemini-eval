@@ -14,18 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Erwähnung von Wetter/Sicht (nicht im Context)",
-      "Keine Erwähnung von Verkehrsexposition (nicht im Context)"
-    ],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), sinnvolle Schrittfolge, Eskalation vorhanden. Kontext minimal, daher generisch aber angemessen. Dokumentation gut strukturiert."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), gute Dokumentation und Eskalation. Kontextnutzung eingeschränkt durch minimalen Context (nur OSM-ID), daher K=3. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -36,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (Nebel, Nacht, mittlerer Verkehr, photo_available=false), Safety-first klar priorisiert, strukturierte Schritte mit klaren Eskalationstriggern, vollständige Dokumentation."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, Nacht, mittlere Verkehrsexposition → spezifische Absicherung), klare 5-Schritt-Struktur, Safety-first, detaillierte Dokumentation, passende Eskalationslogik. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
     "scores": {
       "R": 5,
-      "H": 5,
-      "S": 5,
+      "H": 4,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt erweiterten Kontext optimal (Nebel, Nacht, mittlere Verkehrsexposition), Safety-first konsequent umgesetzt, klare Priorisierung und Eskalationslogik, vollständige Dokumentation inkl. App-Nutzung."
+    "short_justification": "Sehr gute Antwort: nutzt Kontext korrekt (Nebel, Nacht, Koordinaten explizit dokumentiert), Safety-first, klare Struktur. Eskalation differenziert nach Gefährdung. Versteht device.* korrekt als Techniker-Gerät. Keine Halluzinationen."
   }
 ]

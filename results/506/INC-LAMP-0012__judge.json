@@ -2,8 +2,8 @@
   {
     "test_id": "INC-LAMP-0012-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
+      "R": 4,
+      "H": 4,
       "S": 3,
       "D": 4,
       "K": 3
@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)",
-      "Keine explizite Priorisierung der Schritte (z.B. 1-2-3 mit Stop-Conditions)"
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)"
     ],
-    "short_justification": "Grundsätzlich passende Antwort mit Absicherung zuerst und Eskalation. Struktur ist erkennbar, aber Priorisierung/Stop-Conditions fehlen teilweise. Dokumentation gut abgedeckt. Kontext minimal, daher keine Offline-Workflow-Erwartung."
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first (Absicherung zuerst), klarer Eskalation und Dokumentation. Kontextnutzung minimal (nur Asset-ID), aber keine Halluzinationen. Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
@@ -27,7 +26,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -36,10 +35,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt trotz connectivity=spotty + low_power_mode",
-      "Keine klare Anweisung zu lokaler Dokumentation/Foto-Speicherung"
+      "Offline-Workflow nicht explizit genannt trotz spotty connectivity"
     ],
-    "short_justification": "Gute fallbezogene Antwort mit klarer Struktur, Absicherung zuerst, Eskalation vorhanden. Dokumentation und Rückfrage sinnvoll. ABER: connectivity=spotty + low_power_mode im Context → Offline-Workflow fehlt komplett, daher K=2."
+    "short_justification": "Sehr gute Struktur mit Safety-first, nutzt Kontext (Koordinaten, low_power_mode, spotty, night, medium traffic). Eskalation klar priorisiert. Offline-Workflow fehlt trotz spotty-Signal, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
@@ -57,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Absicherung zuerst, klare Schrittfolge (1-5), Offline-Workflow explizit integriert (lokal dokumentieren/Fotos lokal speichern/später synchronisieren), Eskalation differenziert nach Gefährdung, Dokumentation vollständig, Kontext optimal genutzt (spotty/low_power_mode → offline-fähig). Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absicherung), klare 5-Schritte-Struktur, nutzt Kontext vollständig (spotty→offline dokumentieren, night/poor_visibility→Dringlichkeit), Eskalation differenziert, keine Halluzinationen."
   }
 ]

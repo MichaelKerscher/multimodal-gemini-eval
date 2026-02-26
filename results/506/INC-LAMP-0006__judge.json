@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0006-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 2,
+      "R": 4,
+      "H": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -15,31 +15,30 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Priorisierung bei severity=high erkennbar",
-      "Sicherheitsmaßnahmen nicht als Schritt 1 positioniert"
+      "Offline-Workflow nicht erwartbar (kein Signal im Context)",
+      "Wetter/Traffic-Kontext nicht vorhanden, daher nicht fehlend"
     ],
-    "short_justification": "Antwort ist strukturiert und deckt wichtige Punkte ab (Absicherung, Diagnose, Dokumentation, Eskalation). Jedoch fehlt klare Safety-First-Priorisierung trotz 'Bereich wirkt unsicher'. Kontext minimal, daher keine Offline-Workflow-Erwartung."
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Dokumentation und Eskalation gut abgedeckt. Kontextnutzung minimal (nur Asset-ID vorhanden), aber keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt trotz connectivity=offline",
-      "Keine explizite Anweisung zur lokalen Datenspeicherung"
+      "Explizite Erwähnung 'lokal speichern/später synchronisieren' könnte klarer sein"
     ],
-    "short_justification": "Sehr gute fallbezogene Antwort mit klarer Absicherung als Schritt 1, passend zu severity=high, storm, high traffic. Nutzt Kontext gut (Standort, Wetter, low_battery). Offline-Workflow fehlt trotz device.connectivity=offline – K daher nur 3."
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, Sturm/Verkehr/Offline-Kontext sichtbar integriert, strukturierte Schritte mit klaren Eskalations-Triggern. Dokumentation gut, Offline-Workflow implizit (Foto vorhanden, System aktualisieren nach Möglichkeit)."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -57,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekte Antwort: Safety-First klar als Schritt 1, strukturierte Schrittfolge, expliziter Offline-Workflow ('offline speichern, später synchronisieren'), nutzt alle relevanten Kontextfelder (storm, high traffic, offline, low_battery), klare Eskalationslogik passend zu severity=high. Keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Offline-Workflow-Integration ('lokal speichern', 'telefonisch/Funk'), Sturm/Verkehr/Sicht-Kontext explizit genutzt, strukturierte Schritte, vollständige Dokumentations-Checkliste, passende Eskalation. Keine Halluzinationen."
   }
 ]

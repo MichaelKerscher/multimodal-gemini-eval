@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,34 +15,32 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Trigger könnten präziser sein."
+    "short_justification": "Sehr strukturierte, fallbezogene Antwort mit klarer Priorisierung (Absicherung zuerst) und guter Eskalationslogik. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung; K=3 wegen fehlender Kontextnutzung (kein Wetter/Zeit/Severity sichtbar integriert)."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
     "scores": {
       "R": 5,
-      "H": 4,
-      "S": 4,
+      "H": 5,
+      "S": 5,
       "D": 4,
-      "K": 2
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (lokal dokumentieren/synchronisieren)"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Wetter, Dämmerung, Verkehr), klare Struktur und Safety-first. Aber: connectivity=offline wird erwähnt ('keine Ferndiagnose'), jedoch fehlt expliziter Offline-Workflow (lokal speichern/später sync). K=2 wegen dieser Lücke."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, nutzt Kontext explizit (offline → keine Ferndiagnose, Regen/Dämmerung → Rutschgefahr/Sicht), Offline-Workflow erwähnt ('keine Ferndiagnose möglich'), Eskalation klar. Dokumentation könnte GPS/Asset-ID expliziter nennen, daher D=4."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Offline-Workflow explizit, Wetter, Dämmerung), klare Schrittfolge mit Safety-first, präzise Dokumentation und Eskalation. Alle erwartbaren Elemente erfüllt, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Safety-first (Warnweste/Absicherung bei Dämmerung+Regen), klare Schrittfolge, expliziter Offline-Workflow ('Fotos lokal speichern, später synchronisieren'), nutzt Kontext vollständig (offline, Wetter, Zeit), klare Eskalation, vollständige Dokumentation inkl. Offline-Hinweis. Keine Halluzinationen."
   }
 ]

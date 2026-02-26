@@ -2,29 +2,11 @@
   {
     "test_id": "INC-LAMP-0004-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), guter Eskalationslogik und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber solide umsetzbar."
-  },
-  {
-    "test_id": "INC-LAMP-0004-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 4
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -33,9 +15,29 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
+      "Keine Kontextnutzung (minimaler Context nicht genutzt)",
+      "Keine spezifische Priorisierung bei 'unsicher'",
+      "Generische Schritte ohne Fallbezug"
     ],
-    "short_justification": "Exzellente Antwort: Safety-first klar (Warnwesten, Absperrung wegen Nebel), präzise Eskalation bei high severity, vollständige Dokumentation. Nutzt Kontext sehr gut (Nebel, Nacht, spotty). Offline-Workflow implizit (lokal testen), aber nicht explizit genannt."
+    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Aber: minimaler Context (nur asset_osm) wird nicht genutzt, Antwort bleibt sehr generisch. Keine Anpassung an 'Bereich wirkt unsicher' (severity implizit hoch)."
+  },
+  {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar, Struktur umsetzbar, Nebel/Nacht/spotty connectivity explizit berücksichtigt (Offline-Diagnose, Sichtbarkeit), severity=high → Eskalation priorisiert, Dokumentation vollständig, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0004-TC3",
@@ -53,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, vollständige Dokumentation, expliziter Offline-Workflow (lokal speichern/synchronisieren) bei spotty connectivity. Nutzt alle Kontext-Signale korrekt (Nebel, Nacht, high severity). Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Nebel/Nacht/spotty connectivity explizit adressiert (Offline-Workflow, lokale Speicherung), severity=high → Eskalation klar, Dokumentation vollständig, context_notes korrekt umgesetzt, keine Halluzinationen."
   }
 ]

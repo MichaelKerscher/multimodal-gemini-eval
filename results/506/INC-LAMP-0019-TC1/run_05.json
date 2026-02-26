@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC1",
+  "timestamp": "2026-02-26T15:18:19",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher. (Asset-ID: n4939032796)",
+    "context": {
+      "asset_osm": "n4939032796"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe absichern, falls möglich (z. B. mit Warnbaken oder Absperrband), um die Verkehrssicherheit zu gewährleisten.\n   - Besonders auf Fußgänger und Radfahrer achten.\n\n2. **Sichtprüfung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochene Abdeckung, lose Kabel).\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob die Lampe flackert oder komplett aus ist.\n   - Prüfen, ob Anwohner oder Passanten weitere Auffälligkeiten bemerkt haben.\n   - Annahme: Stromausfall oder Defekt an der Leuchte selbst, da nur eine Lampe betroffen ist.\n\n4. **Dokumentation**\n   - Asset-ID (n4939032796), Standort und Zeitpunkt der Störung notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder den Bereitschaftsdienst melden.\n   - Hinweis auf unsicheren Bereich und Dringlichkeit geben.\n\n**Rückfrage:**  \nGibt es in der Nähe besonders gefährdete Bereiche (z. B. Schulweg, Zebrastreifen)? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), gute Dokumentation und Eskalation. Kontextnutzung eingeschränkt durch minimalen Context (nur OSM-ID), daher K=3. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.428
+  },
+  "error": {}
+}

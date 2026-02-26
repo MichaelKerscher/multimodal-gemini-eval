@@ -2,27 +2,6 @@
   {
     "test_id": "INC-LAMP-0007-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
-      "D": 4,
-      "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Signal)",
-      "Kontextnutzung minimal (nur Asset-ID verwendet)"
-    ],
-    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber sehr generisch. Kontext (nur Asset-ID) wird kaum genutzt, keine spezifischen Hinweise zu Umgebung/Wetter/Traffic. Dokumentation gut, aber keine Offline-Workflow-Erwähnung (allerdings auch kein Signal dafür im Kontext)."
-  },
-  {
-    "test_id": "INC-LAMP-0007-TC2",
-    "scores": {
       "R": 4,
       "H": 4,
       "S": 4,
@@ -32,21 +11,18 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nur implizit ('keine Ferndiagnose möglich'), könnte expliziter sein",
-      "Sturm-Risiko für Techniker-Sicherheit könnte stärker betont werden"
-    ],
-    "short_justification": "Gute Kontextnutzung (Sturm, offline, mittlerer Traffic, Foto vorhanden). Sicherheit priorisiert, Struktur klar, Dokumentation vollständig. Offline-Workflow wird erwähnt ('keine Ferndiagnose'), aber lokale Speicherung/Synchronisation nicht explizit genannt."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, guter Handlungsfolge und Eskalation. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Leicht generisch, aber solide umsetzbar."
   },
   {
-    "test_id": "INC-LAMP-0007-TC3",
+    "test_id": "INC-LAMP-0007-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -57,6 +33,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontext vollständig genutzt (Sturm-Sicherheit, offline-Workflow explizit mit lokaler Speicherung/Synchronisation, mittlerer Traffic, Foto vorhanden). Klare Schrittfolge, Safety-first, präzise Dokumentation, keine Halluzinationen. Erfüllt alle erwartbaren Elemente."
+    "short_justification": "Exzellente Kontextnutzung (Sturm, offline, Foto vorhanden). Klare Schrittfolge, Safety-first, Offline-Workflow explizit erwähnt ('Gerät offline, keine Fernabfrage'). Dokumentation und Eskalation vollständig."
+  },
+  {
+    "test_id": "INC-LAMP-0007-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Kontextnutzung inkl. Guardrails (Offline-Workflow explizit: 'Offlinefähig dokumentieren', 'lokal speichern', 'später synchronisieren'). Klare Struktur, Safety-first, vollständige Dokumentation und Eskalation. Sehr präzise auf Kontext abgestimmt."
   }
 ]

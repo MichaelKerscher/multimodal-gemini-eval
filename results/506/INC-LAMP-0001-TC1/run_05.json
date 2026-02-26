@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-26T15:10:52",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n5718630492. Hier ist die empfohlene Vorgehensweise bei einem sporadischen Fehler einer Straßenlampe:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Prüfen, ob die Lampe an einer Gefahrenstelle steht (z. B. Fußgängerüberweg, Kreuzung).\n   - Falls ja: Bereich ggf. absichern oder zuständige Stelle informieren.\n\n2. **Sichtprüfung**\n   - Vor Ort kontrollieren: Gibt es sichtbare Schäden am Mast, Leuchtmittel oder Kabel?\n   - Prüfen, ob die Lampe aktuell wieder ausfällt oder flackert.\n\n3. **Diagnose/Beobachtung**\n   - Fehlerbild notieren: Wann tritt der Fehler auf? (z. B. nur bei Feuchtigkeit, nach Einbruch der Dunkelheit)\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetterbedingungen).\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem oder sicherheitsrelevantem Ausfall: Störung an die Fachabteilung/Technik weiterleiten.\n   - Hinweis: Sporadische Fehler können auf Wackelkontakte oder Vorschaltgerät-Defekte hindeuten.\n\n**Rückfrage:**  \nGibt es Hinweise auf äußere Einflüsse (z. B. Bauarbeiten, Unwetter) oder ist die Lampe Teil einer größeren Störung?  \nFalls nicht, empfehle ich eine gezielte Beobachtung in den nächsten Tagen und ggf. eine technische Überprüfung durch den Wartungsdienst.",
+    "tokens_estimate_words": 179
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Safety-first nicht als Schritt 1 priorisiert",
+      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)",
+      "Eskalationstrigger könnten klarer sein"
+    ],
+    "short_justification": "Grundsätzlich passende Antwort mit sinnvoller Struktur und Dokumentation. Absicherung wird erwähnt, aber nicht als oberste Priorität. Kontext minimal, daher keine Offline-Workflow-Erwartung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.837
+  },
+  "error": {}
+}

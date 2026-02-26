@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 5,
       "D": 4,
       "K": 3
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Eskalation bei Gefahr im Verzug. Kontext minimal, daher keine spezifischen Ortsinformationen erwartet – generisch aber korrekt."
+    "short_justification": "Sehr gute Safety-first-Struktur mit klarer Absicherung als Schritt 1, sinnvolle Eskalation und Dokumentation. Kontext minimal, daher generische Rückfragen angemessen. Keine Offline-Erwähnung nötig (kein Signal im Context)."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Ortsname (Leitzachstraße, Rosenheim) aus Kontext, klare Schrittfolge mit Safety-first, hohe Priorität bei Eskalation passend zu severity=high, vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first klar umgesetzt, nutzt Kontext präzise (Standort, online-Status, Foto, severity=high → sofortige Eskalation), strukturiert, umsetzbar, vollständige Dokumentation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: nutzt Kontext vollständig (Ort, severity=high, photo_available), Safety-first mit sofortiger Absicherung, klare Eskalationslogik inkl. Stromabschaltung durch Fachpersonal, strukturierte Dokumentation, keine Überbehauptungen."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext vollständig (Standort, Foto, severity, online), explizite Eskalation mit Priorität, umfassende Dokumentation, sinnvolle Rückfragen. Keine Halluzinationen, keine irrelevanten Elemente."
   }
 ]

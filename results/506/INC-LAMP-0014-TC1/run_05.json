@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC1",
+  "timestamp": "2026-02-26T15:16:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle. (Asset-ID: n4939032525)",
+    "context": {
+      "asset_osm": "n4939032525"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4939032525). Hier ist das empfohlene Vorgehen:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n- Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist (z. B. Warnbaken, ggf. Warnweste tragen).\n- Bei Gefährdung des Verkehrs: Sofortige Absperrung oder Meldung an die Leitstelle.\n\n2. Sichtprüfung  \n- Prüfe, ob äußerliche Schäden sichtbar sind (z. B. Mast verbogen, Glas gebrochen, Kabel offen).\n- Kontrolliere, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n- Teste, ob die Lampe auf manuelle Schaltung oder durch erneutes Einschalten reagiert (sofern möglich).\n- Prüfe, ob ein Stromausfall im Bereich vorliegt oder ob nur diese Lampe betroffen ist.\n\n4. Dokumentation  \n- Notiere alle Beobachtungen (Schadensbild, Umgebung, ggf. Fotos machen).\n- Halte fest, welche Maßnahmen bereits durchgeführt wurden.\n\n5. Eskalation  \n- Bei offensichtlicher Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Fachabteilung/Notdienst.\n- Bei einfachem Ausfall: Weiterleitung an die Wartung zur Reparatur/Leuchtmitteltausch.\n\nRückfrage:  \nGab es bei der Kontrolle Hinweise auf äußere Schäden oder ist nur der Ausfall der Lampe festgestellt worden? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 171
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, guter Handlungsfolge und Eskalation. Kontext minimal, daher keine spezifischen Umgebungs-/Device-Anpassungen erwartbar. Dokumentation gut, aber Ticket-Checkliste könnte präziser sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.907
+  },
+  "error": {}
+}

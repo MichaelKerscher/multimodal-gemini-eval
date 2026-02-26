@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-26T15:21:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden ein unregelmäßiges An/Aus-Verhalten bei der Anlage mit Asset-ID n4449540379. Ursache ist aktuell unklar.\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Bereich absichern (Warnbaken, ggf. Warnleuchte aufstellen)\n   - Persönliche Schutzausrüstung tragen\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden (z.B. Kabel, Gehäuse, Feuchtigkeit)\n   - Prüfen, ob Manipulation oder Vandalismus erkennbar ist\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, wann und wie das An/Aus-Verhalten auftritt (z.B. bei Nässe, zu bestimmten Tageszeiten)\n   - Prüfen, ob benachbarte Anlagen ähnliche Probleme zeigen\n   - Falls möglich: Funktionstest am Schaltschrank oder Steuergerät\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls relevant)\n   - Asset-ID und genaue Position notieren\n\n5. **Eskalation**\n   - Bei Verdacht auf elektrische Defekte oder Gefahr: Fachfirma/Elektriker informieren\n   - Bei akuter Verkehrsgefährdung: Sofortige Meldung an Leitstelle oder zuständige Behörde\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bereits Hinweise auf äußere Einflüsse (z.B. Bauarbeiten, Unwetter, Vandalismus)?",
+    "tokens_estimate_words": 144
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)",
+      "Spezifische Umweltfaktoren (nicht im Context vorhanden)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal (nur asset_osm), daher keine spezifischen Umwelt-/Connectivity-Aspekte erwartbar. Rückfrage sinnvoll, aber Antwort bleibt allgemein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.129
+  },
+  "error": {}
+}

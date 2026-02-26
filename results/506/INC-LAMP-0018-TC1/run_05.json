@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-26T15:17:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein gleichzeitiger Ausfall eines Segments (Asset-ID: n12520351647) vor, vermutlich bei Straßenlampen oder einer Ampelanlage. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich absichern: Warnbaken, ggf. Absperrband aufstellen.\n   - Bei Ampelanlagen: Polizei informieren, falls Kreuzung betroffen ist.\n\n2. **Sichtprüfung**\n   - Prüfen, ob sichtbare Schäden an Schaltkästen, Masten oder Leitungen vorliegen.\n   - Kontrollieren, ob weitere Segmente betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Ausfall auf einen offensichtlichen Defekt (z. B. Sicherung, Kabel, Steuergerät) zurückzuführen ist.\n   - Gibt es Bauarbeiten oder bekannte Störungen im Umfeld?\n   - Liegt ein Stromausfall im Bereich vor?\n\n4. **Dokumentation**\n   - Zeitpunkt und Umfang des Ausfalls notieren.\n   - Fotos von der Situation und ggf. Schäden machen.\n   - Asset-ID und betroffene Bereiche dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr im Verzug (z. B. Dunkelheit an gefährlicher Kreuzung): Störungsdienst und ggf. Polizei informieren.\n   - Meldung an die zuständige Fachabteilung oder den Netzbetreiber weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenbeleuchtung oder um eine Ampelanlage? Gibt es Hinweise auf Bauarbeiten oder Stromausfall im betroffenen Bereich?",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Spekuliert über Ampel vs. Straßenlampe ohne Basis",
+      "Keine Anpassung an minimalen Kontext"
+    ],
+    "short_justification": "Grundsätzlich passende Antwort mit Absicherung und Eskalation. Spekuliert jedoch über Ampel/Straßenlampe ohne Kontextbasis und nutzt die gegebene Asset-ID nicht aktiv. Struktur ist solide, aber teilweise zu generisch für den minimalen Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.552
+  },
+  "error": {}
+}

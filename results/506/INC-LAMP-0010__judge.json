@@ -15,11 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung des OSM-Kontexts (nur ID vorhanden)",
-      "Keine Priorisierung bei severity/traffic (nicht im Context)",
-      "Keine Offline-Workflow-Erwähnung (connectivity nicht im Context)"
+      "Kontextnutzung (minimal context, keine spezifischen Signale verarbeitet)",
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)"
     ],
-    "short_justification": "Solide generische Checkliste mit Safety-first und Eskalation. Kontext minimal (nur OSM-ID), daher keine spezifischen Anpassungen erwartbar. Struktur klar, aber ohne harte Priorisierung oder Stop-Conditions."
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Keine Kontextsignale vorhanden, daher keine spezifischen Anpassungen erwartbar. Eskalation und Dokumentation vorhanden, aber ohne Priorisierung nach Severity."
   },
   {
     "test_id": "INC-LAMP-0010-TC2",
@@ -37,18 +36,18 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Stop-Condition vor Eskalation",
-      "Offline-Workflow nur angedeutet ('Fernabfrage eingeschränkt'), nicht als klare Handlungsanweisung"
+      "Explizite Priorisierung wegen severity=high könnte stärker sein",
+      "Photo_available als Workflow-Cue nicht explizit genutzt"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (severity=high, traffic=high, weather=rain, spotty connectivity, photo_available). Safety-first klar, Eskalation passend zu high severity. Struktur gut, Dokumentation vollständig. Offline-Workflow nur indirekt erwähnt."
+    "short_justification": "Sehr gute Kontextnutzung: spotty connectivity → lokale Speicherung, rain → Sicherheitshinweis, high traffic → Polizei erwähnt, severity=high → schnelle Eskalation. Safety-first klar, Struktur umsetzbar, Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -57,7 +56,9 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first explizit, klare Schrittfolge, Offline-Workflow klar integriert ('lokal speichern, später synchronisieren'), Eskalation passend zu high severity/traffic. Kontext vollständig genutzt (spotty, rain, dusk, photo_available), keine Halluzinationen, präzise Dokumentation."
+    "missing_elements": [
+      "Photo_available könnte expliziter als 'Foto bereits vorhanden, prüfen' formuliert sein"
+    ],
+    "short_justification": "Exzellente Kontextnutzung: spotty → offline speichern explizit genannt, rain → Sicherheitswarnung, high traffic → Absperrung, severity=high → sofortige Eskalation. Extras.context_notes korrekt beachtet (device ≠ asset). Sehr robuste, umsetzbare Antwort."
   }
 ]

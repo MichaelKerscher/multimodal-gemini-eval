@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,15 +14,13 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Kein Offline-Workflow erwähnt (aber connectivity nicht im Context sichtbar, daher kein harter Abzug)"
-    ],
-    "short_justification": "Klare Struktur mit Safety-first, guter Diagnose (Feuchtigkeitseintritt), Eskalation vorhanden. Kontext minimal, daher generisch aber passend. Keine Halluzinationen."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, guter Diagnose (Feuchtigkeitseintritt) und Eskalationslogik. Kontext minimal, daher keine Offline-Workflow-Erwartung. Isolationsmessung ist sinnvoll, aber nicht zwingend für Techniker vor Ort."
   },
   {
     "test_id": "INC-LAMP-0027-TC2",
     "scores": {
-      "R": 5,
+      "R": 4,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -35,16 +33,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity nicht explizit genannt"
+      "Offline-Workflow bei spotty connectivity"
     ],
-    "short_justification": "Sehr gute Relevanz (Regen, Feuchtigkeitseintritt, high traffic), klare Schritte, Safety-first, Eskalation klar. Spotty connectivity erwähnt, aber kein Offline-Workflow beschrieben."
+    "short_justification": "Gute Struktur, Safety-first, passende Diagnose (Feuchtigkeitseintritt), Eskalation klar. Erwähnt 'spotty connectivity' als Einschränkung, aber kein expliziter Offline-Workflow (lokal speichern/später sync). K=3 wegen dieser Lücke."
   },
   {
     "test_id": "INC-LAMP-0027-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -55,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schritte, Offline-Workflow explizit (lokal speichern/später sync), Eskalation klar, nutzt Kontext optimal (spotty, rain, high traffic). Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später sync), passende Diagnose (Feuchtigkeitseintritt), Eskalation mit Trigger (Wassereintritt/Isolationsschaden). Nutzt Kontext vollständig und korrekt."
   }
 ]

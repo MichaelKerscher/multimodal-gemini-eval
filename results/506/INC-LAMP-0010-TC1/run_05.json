@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-26T15:14:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt in der Stadtmitte Rosenheim (Asset-ID: n4427955479).\n\n**Schritt-für-Schritt-Checkliste für die Prüfung vor Ort:**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Arbeitsbereich gegen Verkehr sichern (z. B. Warnleuchten, Pylonen).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen im betroffenen Abschnitt.\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Auf offensichtliche Schäden (z. B. defekte Leuchtmittel, Kabel, Masten) achten.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Lampen (sofern möglich).\n   - Prüfen, ob der Stromzufuhrkasten zugänglich ist.\n   - Auf mögliche externe Ursachen achten (z. B. Bauarbeiten, Unwetterschäden).\n\n4. **Dokumentation**\n   - Fotos vom Zustand und der Umgebung machen.\n   - Genaue Position und Anzahl der betroffenen Lampen notieren.\n   - Beobachtungen und erste Einschätzung schriftlich festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel, umgestürzte Masten): Sofort Notdienst und Polizei informieren.\n   - Bei großflächigem Ausfall: Störungsdienst der Stadtwerke benachrichtigen.\n   - Interne Meldung mit allen Dokumentationen an die zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nSind Ihnen nähere Details zum Ausfall bekannt (z. B. seit wann, wie viele Lampen betroffen, besondere Gefahrenstellen)? Das hilft uns, gezielter vorzugehen.",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontextnutzung (minimal context, keine spezifischen Signale verarbeitet)",
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Keine Kontextsignale vorhanden, daher keine spezifischen Anpassungen erwartbar. Eskalation und Dokumentation vorhanden, aber ohne Priorisierung nach Severity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.936
+  },
+  "error": {}
+}

@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC2",
+  "timestamp": "2026-02-26T15:11:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427359783",
+        "longitude": 12.1049944,
+        "latitude": 47.877481,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Westerndorf St. Peter, Schlößlstraße"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T22:47:36+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise für die Straßenlampe „Westerndorf St. Peter, Schlößlstraße“ (n4427359783):\n\n**Checkliste für den Außendienst-Einsatz**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchten absichern (besonders bei Nacht und schlechter Sicht).\n   - Bei Bedarf Kollegen informieren, falls zusätzliche Absicherung nötig ist.\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden prüfen (Gehäuse, Mast, Verkabelung).\n   - Umgebung auf Gefahrenquellen (z. B. lose Kabel, beschädigte Bauteile) kontrollieren.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe auf Schaltversuche oder Bewegungsmelder reagiert.\n   - Batteriestatus kontrollieren (laut Gerätedaten: niedriger Ladestand).\n   - Verbindung prüfen (Hinweis: Konnektivität ist instabil).\n   - Falls möglich, Batteriewechsel oder Test mit Ersatzbatterie durchführen.\n\n4. **Dokumentation**\n   - Alle Feststellungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls möglich).\n   - Zeitpunkt und genaue Position dokumentieren.\n   - Besonderheiten (z. B. weitere defekte Lampen, erhöhte Gefährdung) notieren.\n\n5. **Eskalation**\n   - Falls Fehler nicht vor Ort behebbar: Meldung an die Fachabteilung/Technik weiterleiten.\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Notdienst informieren.\n\n**Rückfrage:**  \nIst ein Batteriewechsel vor Ort möglich, oder wird spezielles Werkzeug/Material benötigt? Gibt es aktuelle Hinweise auf Vandalismus oder wiederholte Ausfälle an diesem Standort?\n\nBitte Rückmeldung geben, falls weitere Details benötigt werden.",
+    "tokens_estimate_words": 205
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow explizit (spotty connectivity)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (night, poor_visibility, low_battery, spotty connectivity). Sicherheit priorisiert, klare Struktur, Dokumentation vollständig. Offline-Workflow wird implizit (schriftlich/Fotos) erwähnt, aber nicht explizit als Strategie bei spotty connectivity hervorgehoben."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.743
+  },
+  "error": {}
+}

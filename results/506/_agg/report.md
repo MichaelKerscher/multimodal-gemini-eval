@@ -5,53 +5,53 @@
 
 ## Mean scores by context level (snapshot)
 ### L0 (n=30)
-- mean runtime: 4.415233333333333
-- mean R/H/S/D/K: 3.466666666666667/3.466666666666667/3.1/3.7/2.7333333333333334
-- mean overall (avg R/H/S/D/K): 3.2933333333333334
-- flags (rate): safety_first=0.97, escalation_present=1.00, offline_workflow_mentioned=0.00, hallucination_suspected=0.03
+- mean runtime: 4.531733333333333
+- mean R/H/S/D/K: 3.6/3.7/3.3333333333333335/3.7/2.9
+- mean overall (avg R/H/S/D/K): 3.4466666666666663
+- flags (rate): safety_first=0.93, escalation_present=1.00, offline_workflow_mentioned=0.00, hallucination_suspected=0.03
 ### L2 (n=30)
-- mean runtime: 5.582
-- mean R/H/S/D/K: 4.566666666666666/4.433333333333334/4.333333333333333/4.366666666666666/3.8
-- mean overall (avg R/H/S/D/K): 4.3
-- flags (rate): safety_first=1.00, escalation_present=1.00, offline_workflow_mentioned=0.27, hallucination_suspected=0.00
+- mean runtime: 5.4443
+- mean R/H/S/D/K: 4.566666666666666/4.533333333333333/4.4/4.533333333333333/4.2
+- mean overall (avg R/H/S/D/K): 4.446666666666667
+- flags (rate): safety_first=1.00, escalation_present=1.00, offline_workflow_mentioned=0.37, hallucination_suspected=0.03
 ### L2B (n=30)
-- mean runtime: 5.592166666666667
-- mean R/H/S/D/K: 4.966666666666667/4.966666666666667/4.633333333333334/4.9/4.933333333333334
-- mean overall (avg R/H/S/D/K): 4.88
-- flags (rate): safety_first=1.00, escalation_present=1.00, offline_workflow_mentioned=0.73, hallucination_suspected=0.00
+- mean runtime: 5.1534666666666675
+- mean R/H/S/D/K: 4.9/4.866666666666666/4.6/4.9/4.966666666666667
+- mean overall (avg R/H/S/D/K): 4.846666666666667
+- flags (rate): safety_first=1.00, escalation_present=1.00, offline_workflow_mentioned=0.63, hallucination_suspected=0.00
 
 ## Mean scores by strategy (snapshot)
 ### S0 (n=30)
-- mean runtime: 4.415233333333333
-- mean R/H/S/D/K: 3.466666666666667/3.466666666666667/3.1/3.7/2.7333333333333334
-- mean overall (avg R/H/S/D/K): 3.2933333333333334
+- mean runtime: 4.531733333333333
+- mean R/H/S/D/K: 3.6/3.7/3.3333333333333335/3.7/2.9
+- mean overall (avg R/H/S/D/K): 3.4466666666666663
 ### S1 (n=30)
-- mean runtime: 5.582
-- mean R/H/S/D/K: 4.566666666666666/4.433333333333334/4.333333333333333/4.366666666666666/3.8
-- mean overall (avg R/H/S/D/K): 4.3
+- mean runtime: 5.4443
+- mean R/H/S/D/K: 4.566666666666666/4.533333333333333/4.4/4.533333333333333/4.2
+- mean overall (avg R/H/S/D/K): 4.446666666666667
 ### S2 (n=30)
-- mean runtime: 5.592166666666667
-- mean R/H/S/D/K: 4.966666666666667/4.966666666666667/4.633333333333334/4.9/4.933333333333334
-- mean overall (avg R/H/S/D/K): 4.88
+- mean runtime: 5.1534666666666675
+- mean R/H/S/D/K: 4.9/4.866666666666666/4.6/4.9/4.966666666666667
+- mean overall (avg R/H/S/D/K): 4.846666666666667
 
 ## Top missing elements (max 20)
-- Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden): 3
-- Asset-ID explizit im Protokoll: 2
-- Keine Priorisierung nach Severity: 2
-- Generische Schritte ohne Fallbezug: 2
-- Keine Priorisierung nach Severity/Traffic: 2
-- Offline-Workflow (Gerät offline, aber nicht erwähnt): 1
-- Batterie-Hinweis (device_state fehlt im Context): 1
-- Foto-Workflow (photo_available fehlt im Context): 1
-- Explizite Stop-Conditions bei Eskalation: 1
-- Klarere Priorisierung (Batterie vs. Lampe): 1
-- Keine Nutzung von Umgebungs-/Zeitkontext (nicht vorhanden im CONTEXT): 1
-- Keine Anpassung an Zeit/Umgebung (nicht erwartbar bei minimalem Kontext): 1
-- Kein expliziter Offline-Workflow trotz connectivity=spotty: 1
-- Device-State (low_battery) erwähnt, aber nicht als Handlungsanweisung integriert: 1
-- Offline-Workflow bei spotty connectivity nicht explizit erwähnt: 1
-- Keine Priorisierung bei severity=high erkennbar: 1
-- Sicherheitsmaßnahmen nicht als Schritt 1 positioniert: 1
-- Offline-Workflow nicht erwähnt trotz connectivity=offline: 1
-- Keine explizite Anweisung zur lokalen Datenspeicherung: 1
-- Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Signal): 1
+- Offline-Workflow (spotty connectivity): 2
+- Offline-Workflow (nicht erwartbar, da connectivity nicht im Context): 2
+- Safety-first nicht als Schritt 1 priorisiert: 1
+- Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0): 1
+- Eskalationstrigger könnten klarer sein: 1
+- Offline-Workflow fehlt trotz connectivity=offline: 1
+- Halluzination: 'Gerät meldet niedrigen Batteriestand' als Ursache für Lampenausfall interpretiert: 1
+- Kontextnutzung minimal (nur Asset-ID): 1
+- Spekuliert über Ampelanlagen ohne Signal: 1
+- Keine Anpassung an Umgebung/Zeit/Wetter: 1
+- Offline-Workflow explizit (spotty connectivity): 1
+- Keine Kontextnutzung (minimaler Context nicht genutzt): 1
+- Keine spezifische Priorisierung bei 'unsicher': 1
+- Generische Schritte ohne Fallbezug: 1
+- Offline-Workflow nicht erwartbar (kein Signal im Context): 1
+- Wetter/Traffic-Kontext nicht vorhanden, daher nicht fehlend: 1
+- Explizite Erwähnung 'lokal speichern/später synchronisieren' könnte klarer sein: 1
+- Lokale Speicherung/Synchronisation: 1
+- Kontextnutzung (minimal context, keine spezifischen Signale verarbeitet): 1
+- Explizite Priorisierung wegen severity=high könnte stärker sein: 1

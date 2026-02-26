@@ -3,7 +3,7 @@
     "test_id": "INC-LAMP-0020-TC1",
     "scores": {
       "R": 3,
-      "H": 3,
+      "H": 4,
       "S": 3,
       "D": 4,
       "K": 3
@@ -15,11 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
-      "Keine Priorisierung nach Severity/Traffic",
-      "Generische Schritte ohne fallspezifische Anpassung"
+      "Severity/Zeitkontext nicht genutzt (nicht im CONTEXT)",
+      "Foto-Workflow nicht erwähnt (nicht im CONTEXT)"
     ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal, daher keine spezifischen Anpassungen möglich – Bewertung entsprechend neutral."
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge (Absicherung zuerst, Eskalation klar). Nutzt minimalen Kontext korrekt (Asset-ID), bleibt aber generisch, da kaum Kontext vorhanden. Dokumentation gut, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
@@ -27,7 +26,7 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 4
     },
     "flags": {
@@ -37,27 +36,26 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Low-Power-Mode erwähnt, aber kein konkreter Offline-Workflow",
-      "Foto vorhanden, aber nicht explizit als erster Schritt integriert"
+      "Low-power-mode könnte expliziter als Geräte-Constraint erwähnt werden"
     ],
-    "short_justification": "Sehr gute Nutzung des Kontexts (Regen, Nacht, high severity, low_power_mode). Safety-first klar, Eskalation passend, Dokumentation strukturiert. Kleine Lücke: Offline-Workflow nicht explizit trotz low_power_mode."
+    "short_justification": "Sehr gute Kontextnutzung (Koordinaten, Regen, Nacht, severity=high, Foto vorhanden). Klare Safety-first-Struktur, Eskalation passend zu severity. Dokumentation vollständig inkl. Foto-Hinweis. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 5,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, nutzt alle Kontext-Signale (Regen, Nacht, low_power_mode → offline sichern), Eskalation passend zu high severity, Dokumentation vollständig, keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Regen, Nacht, severity, low-power-mode als Geräte-Constraint, Foto-Workflow). Safety-first klar, Eskalation passend, Dokumentation vollständig. Keine Halluzinationen, robuste Antwort."
   }
 ]

@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC1",
+  "timestamp": "2026-02-26T15:22:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher. (Asset-ID: n9223569763)",
+    "context": {
+      "asset_osm": "n9223569763"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Straßenlampe prüfen: Ist die Stelle besonders dunkel oder unübersichtlich?\n   - Falls akute Gefahr (z. B. Unfallgefahr, Schulweg, viel Fußgängerverkehr): Sofortige provisorische Absicherung erwägen (z. B. Warnbaken, Hinweisschilder).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, Kabel sichtbar, Mast beschädigt)?\n   - Sind weitere Lampen in der Nähe betroffen?\n\n3. **Diagnose/Beobachtung**\n   - Seit wann besteht die Störung? (Hier: ca. 15 Minuten)\n   - Gab es auffällige Geräusche, Geruch oder andere Auffälligkeiten?\n   - Wetterlage: Gab es Unwetter, Stromausfall oder Bauarbeiten in der Nähe?\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Zeitpunkt und Beschreibung der Störung notieren.\n   - Fotos machen, falls möglich und sicher.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle/Leitstelle mit allen gesammelten Informationen.\n   - Bei akuter Gefährdung zusätzlich Polizei oder Ordnungsamt informieren.\n\n**Rückfragen:**\n- Gibt es in dem Bereich besonders viel Fußgänger- oder Radverkehr?\n- Ist die Lampe an einer Kreuzung, Haltestelle oder einem anderen sensiblen Punkt?\n- Sind weitere Lampen in der Umgebung betroffen?\n\nBitte geben Sie mir ggf. weitere Details, damit ich die Meldung optimal weiterleiten kann.",
+    "tokens_estimate_words": 190
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr strukturierte, fallbezogene Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation und Dokumentation gut abgedeckt. Kontextnutzung eingeschränkt (nur Asset-ID vorhanden), daher K=3."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.788
+  },
+  "error": {}
+}

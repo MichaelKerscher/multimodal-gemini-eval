@@ -15,13 +15,13 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Eskalation bei hoher Gefahr. Kontext minimal, daher keine spezifischen Umgebungsfaktoren erwartet – generische Antwort ist hier angemessen."
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Schrittfolge und Eskalation. Kontext minimal, daher generisch aber angemessen. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
     "scores": {
       "R": 5,
-      "H": 5,
+      "H": 4,
       "S": 5,
       "D": 5,
       "K": 5
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: poor_visibility → zusätzliche Beleuchtung, Koordinaten dokumentiert, severity=high → sofortige Eskalation. Klare Struktur, Safety-first, keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung (Koordinaten, Foto, Dämmerung/Sicht, severity=high). Safety-first klar, Dokumentation vollständig mit GPS/Zeit/Wetter, Eskalation mit Priorität. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety-first, klare 5-Schritt-Struktur, nutzt Kontext korrekt (photo_available, severity=high → sofortige Eskalation, Koordinaten). Keine Halluzinationen, präzise Rückfragen."
+    "short_justification": "Perfekte Umsetzung: Checklisten-Format, Safety-first mit Dämmerungs-/Sichthinweis, klare Priorisierung, vollständige Dokumentation (OSM-ID + GPS), Eskalation mit Priorität 'hoch'. Kontext optimal genutzt, keine Halluzinationen."
   }
 ]

@@ -4,7 +4,7 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 3,
+      "S": 2,
       "D": 3,
       "K": 3
     },
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide Basisantwort mit klarer Struktur und Safety-first. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Generisch, aber passend."
+    "missing_elements": [
+      "Severity/traffic/weather-Kontext fehlt (nicht im CONTEXT)",
+      "Offline-Workflow nicht erwähnt (aber auch nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Solide Grundstruktur mit Absicherung zuerst und Eskalationslogik. Bleibt aber generisch, da CONTEXT minimal ist (nur asset_osm). Keine Halluzinationen, aber auch keine kontextspezifische Anpassung möglich."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -24,7 +27,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,10 +36,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow unvollständig (nur erwähnt, nicht systematisch integriert)",
-      "Keine explizite Synchronisations-Anweisung nach Wiederherstellung"
+      "Foto-Workflow (photo_available=true) nicht explizit genutzt",
+      "Zeitpunkt (reported_at) nicht dokumentiert"
     ],
-    "short_justification": "Gute Antwort mit klarer Struktur, Safety-first und Eskalation. Offline wird erwähnt ('Keine Fernabfrage möglich'), aber Workflow (lokal speichern, später sync) nicht systematisch ausgeführt. K=2 wegen unvollständiger Offline-Integration."
+    "short_justification": "Sehr gute Kontextnutzung: Sturm, hoher Verkehr, schlechte Sicht und Offline-Status werden sichtbar integriert. Absicherung priorisiert, Eskalation klar, Offline-Workflow erwähnt ('keine Fernabfrage möglich'). Dokumentation gut strukturiert."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -44,7 +47,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -53,7 +56,9 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, vollständiger Offline-Workflow (lokal speichern, später synchronisieren), klare Eskalationslogik passend zu severity=high/traffic=high, strukturiert und umsetzbar. Kontext optimal genutzt."
+    "missing_elements": [
+      "Asset-ID (n13293397459) nicht explizit in Doku-Checkliste"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-first (Absicherung Schritt 1), klare Offline-Workflow-Integration ('lokal speichern', 'später synchronisieren'), Sturm/Verkehr/Sicht explizit adressiert. Eskalation differenziert (Telefon bei Offline). Struktur sehr umsetzbar, keine Halluzinationen."
   }
 ]

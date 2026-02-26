@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC2",
+  "timestamp": "2026-02-26T15:22:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n11833818322",
+        "longitude": 12.136073,
+        "latitude": 47.8537208,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T10:05:03+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für sporadischen Lampenausfall  \nObjekt: Straßenlampe (n11833818322), Standort: 47.8537208, 12.136073\n\n1. **Absicherung**\n   - Warnweste anlegen, Absperrmaterial bereithalten.\n   - Arbeitsbereich sichern, besonders bei mittlerer Verkehrsexposition und schlechter Sicht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden, lose Teile oder Feuchtigkeitsspuren kontrollieren.\n   - Prüfen, ob die Lampe aktuell leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Auf sporadisches Flackern oder Ausfälle achten.\n   - Bei schlechter Konnektivität: Notieren, ob Fernüberwachung möglich ist.\n   - Prüfen, ob Feuchtigkeit, Wackelkontakt oder Vandalismus erkennbar sind.\n   - Falls möglich, Foto auswerten oder anfordern.\n\n4. **Dokumentation**\n   - Beobachtungen und aktuelle Funktion dokumentieren (Datum, Uhrzeit, Wetter, Sichtverhältnisse).\n   - Foto der Lampe und Umgebung sichern.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Unsicherheiten: Störung an Fachfirma/Elektroservice melden.\n   - Hinweis auf sporadischen Fehler und erschwerte Diagnose durch schlechte Sicht/Konnektivität geben.\n\n**Rückfrage:**  \nGibt es Zugang zu einer Fernüberwachung oder ist ein Vor-Ort-Termin zur weiteren Diagnose gewünscht?",
+    "tokens_estimate_words": 140
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow könnte expliziter sein (nur 'Notieren' erwähnt)",
+      "Foto-Auswertung erwähnt, aber nicht als Schritt priorisiert"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Dämmerung/poor_visibility → Absicherung betont, spotty connectivity → Hinweis auf Fernüberwachung, Foto erwähnt. Klare Struktur, Safety-first, Eskalation vorhanden. Offline-Workflow angedeutet, aber nicht voll ausformuliert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.327
+  },
+  "error": {}
+}

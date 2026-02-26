@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0026-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
       "K": 3
     },
     "flags": {
@@ -14,17 +14,20 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide strukturierte Antwort mit klarer Priorisierung (Safety first, Diagnose, Eskalation). Kontext minimal, daher keine Offline-Workflow-Erwartung; sinnvolle Rückfragen. Keine Halluzinationen."
+    "missing_elements": [
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)",
+      "Spezifische Umweltfaktoren (nicht im Context vorhanden)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal (nur asset_osm), daher keine spezifischen Umwelt-/Connectivity-Aspekte erwartbar. Rückfrage sinnvoll, aber Antwort bleibt allgemein."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,15 +35,17 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, offline, mittlerer Verkehr), klare Safety-first-Struktur, expliziter Offline-Workflow ('keine Ferndiagnose möglich'), präzise Dokumentation und Eskalation. Keine Halluzinationen."
+    "missing_elements": [
+      "Explizite Offline-Sync-Anweisung könnte klarer sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nebel, mittlerer Verkehr, offline-Status erwähnt). Klare Struktur, Safety-first, Eskalation vorhanden. Offline-Workflow implizit ('keine Fotos vorliegen', 'offline-Status'), aber nicht explizit als Sync-Anweisung formuliert."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: vollständige Kontextnutzung (Nebel, offline, mittlerer Verkehr), expliziter Offline-Workflow ('lokal dokumentieren', 'später synchronisieren', 'keine Online-Diagnose'), klare Struktur mit Safety first, präzise Eskalationslogik. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, Verkehr, offline → expliziter Offline-Workflow mit Sync-Hinweis). Klare Struktur, Safety-first, Eskalation mit Severity-Bezug, vollständige Dokumentation. Keine Halluzinationen, sinnvolle Rückfragen."
   }
 ]

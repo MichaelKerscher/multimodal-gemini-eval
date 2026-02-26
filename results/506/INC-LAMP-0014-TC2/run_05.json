@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-26T15:16:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise für den Außendienst:\n\n**Checkliste für die Störungsbearbeitung – Straßenlampe (Ausfall)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Warndreieck absichern.\n   - Bei Bedarf Warnleuchte aufstellen, besonders bei schlechter Sicht oder erhöhter Verkehrsgefahr.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden (z. B. Bruch, Vandalismus, lose Teile) kontrollieren.\n   - Umgebung auf Gefahren (z. B. freiliegende Kabel) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Sicherstellen, dass Stromversorgung vorhanden ist (z. B. Sicherungskasten prüfen, falls zugänglich).\n   - Statusanzeige am Lampenkopf oder Schaltschrank kontrollieren (sofern vorhanden).\n   - Da das Gerät laut System „online“ und „ok“ ist, liegt der Fehler vermutlich an der Leuchte selbst (Leuchtmittel, Vorschaltgerät, interne Verdrahtung).\n\n4. **Dokumentation**\n   - Festgestellte Schäden und Maßnahmen notieren.\n   - Fotos machen (sofern möglich).\n   - Zeitpunkt und Namen der ausführenden Person erfassen.\n\n5. **Eskalation**\n   - Falls kein einfacher Defekt (z. B. Leuchtmitteltausch) vorliegt oder Gefahr besteht: Meldung an Fachabteilung/Elektrofachkraft weiterleiten.\n   - Bei akuter Gefahr (z. B. Stromschlagrisiko, herabhängende Teile): Bereich sofort absperren und Notdienst informieren.\n\n**Rückfrage:**  \nIst ein Zugang zum Schaltschrank vor Ort möglich, oder muss ein Elektriker hinzugezogen werden? Gibt es Hinweise auf Vandalismus oder äußere Beschädigungen?\n\nBitte Rückmeldung geben, damit die nächsten Schritte gezielt eingeleitet werden können.",
+    "tokens_estimate_words": 210
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (online/ok → Fokus auf Leuchte selbst, low traffic → angemessene Absicherung, day/clear → keine zusätzlichen Risiken). Klare Schrittfolge, Safety-first, vollständige Dokumentation, gezielte Rückfragen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.82
+  },
+  "error": {}
+}

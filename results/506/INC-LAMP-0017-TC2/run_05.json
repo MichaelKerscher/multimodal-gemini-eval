@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC2",
+  "timestamp": "2026-02-26T15:17:31",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Abschnitt Schönau\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Pylonen/Leitkegeln sichern, da Sicht schlecht und Regen.\n   - Auf rutschigen Untergrund achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampen entlang des betroffenen Abschnitts (Schönau, Koordinaten beachten).\n   - Prüfen, ob einzelne oder alle Lampen betroffen sind.\n   - Auf offensichtliche Schäden (z. B. defekte Leuchten, lose Kabel, Wassereintritt) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Stromversorgung anliegt (Achtung: Gerät im Low-Power-Modus, ggf. eingeschränkte Fernabfrage).\n   - Bei mehreren ausgefallenen Lampen: Möglicher Fehler im Stromkreis oder Steuergerät.\n   - Einzelne Lampe: Leuchtmittel oder Vorschaltgerät prüfen.\n   - Foto auswerten, falls verfügbar.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (inkl. Uhrzeit, Wetter, betroffene Lampen).\n   - Fotos dem Bericht anhängen.\n   - Eventuelle Gefahrenstellen besonders dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. kompletter Ausfall, schlechte Sicht, viel Fußgängerverkehr): Sofortige Meldung an Bereitschaftsdienst/Leitstelle.\n   - Bei mittlerer Dringlichkeit: Störungsbeseitigung zeitnah einplanen.\n   - Rückmeldung an den Melder nach Abschluss.\n\n**Rückfrage:**  \nSind die betroffenen Lampen einzeln oder als ganzer Abschnitt ausgefallen? Gibt es Hinweise auf Vandalismus oder Unwetterschäden?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Nutzt Kontext (Regen, Dämmerung, Low-Power-Modus) explizit für Safety und Workflow (rutschiger Untergrund, eingeschränkte Fernabfrage). Klare Priorisierung, Eskalation passend zu severity=medium, Dokumentation vollständig."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.555
+  },
+  "error": {}
+}

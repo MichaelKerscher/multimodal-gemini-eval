@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-26T15:19:29",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier die empfohlene Vorgehensweise:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe (Asset-ID: n1987093607) möglichst absichern, z. B. durch Warnbaken oder Hinweisschilder, falls verfügbar.\n- Passanten auf die Dunkelheit hinweisen, besonders bei erhöhter Unfallgefahr.\n\n**2. Sichtprüfung**\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n- Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochene Abdeckung, freiliegende Kabel).\n\n**3. Diagnose/Beobachtung**\n- Beobachten, ob die Lampe flackert oder komplett aus ist.\n- Gibt es Anzeichen für Stromausfall im Umfeld?\n- Gab es kürzlich Wartungsarbeiten oder Unwetter?\n\n**4. Dokumentation**\n- Asset-ID, Standort und Uhrzeit notieren.\n- Fotos machen, falls möglich.\n- Besonderheiten (z. B. erhöhte Unfallgefahr) dokumentieren.\n\n**5. Eskalation**\n- Störung an die zuständige Leitstelle oder den Bereitschaftsdienst melden.\n- Bei akuter Gefahr (z. B. Hauptverkehrsstraße, Schulweg) als dringlich kennzeichnen.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen oder besondere Gefahrenstellen im Umfeld?",
+    "tokens_estimate_words": 144
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, Eskalation und Dokumentation. Kontext minimal (nur Asset-ID), daher generisch aber angemessen. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.816
+  },
+  "error": {}
+}

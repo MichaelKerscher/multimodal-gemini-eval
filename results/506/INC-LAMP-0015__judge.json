@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0015-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,12 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Bewusstsein (high) nicht erkennbar",
-      "Verkehrsexposition nicht adressiert",
-      "Nachtsituation/poor visibility nicht explizit"
-    ],
-    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Bleibt aber generisch, da Kontext minimal ist – keine spezifischen Risikofaktoren (Nacht, hoher Verkehr) erkennbar integriert. Dokumentation gut."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation vorhanden, Dokumentation gut. Kontext minimal, daher keine Offline-Erwartung. Keine Halluzinationen, aber Kontext kaum nutzbar (nur Asset-ID)."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -37,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Nutzt alle Kontextsignale (Nacht, high traffic, poor visibility, severity=high, photo_available). Klare Schrittfolge, Safety-first mit Verkehrssicherung, präzise Dokumentation inkl. Koordinaten, passende Eskalationslogik. Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first (Absicherung + PSA), klare Schrittfolge, nutzt Kontext sichtbar (night/high traffic/poor visibility → Absicherung, online → kein Offline-Workflow, severity high → Eskalation), Dokumentation vollständig, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -55,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Nutzt Kontext vollständig (Nacht, hoher Verkehr, poor visibility, severity=high, device online). Klare Safety-first-Absicherung, strukturierte Schritte, präzise Dokumentation, passende Eskalation. Keine Halluzinationen, korrekte Interpretation der Guardrails."
+    "short_justification": "Exzellent: Safety-first (Absicherung Schritt 1, Polizei bei hoher Verkehrsexposition), klare Struktur, nutzt Kontext optimal (high traffic/night/poor visibility → Absicherung, severity high → Eskalation, photo_available → Foto anhängen), vollständige Dokumentation, keine Halluzinationen."
   }
 ]

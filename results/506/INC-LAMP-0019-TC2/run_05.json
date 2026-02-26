@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-26T15:18:19",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Dunkle Straßenlampe (n4939032796)\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereithalten.  \n- Einsatzfahrzeug mit Warnblinker abstellen, möglichst so, dass der Bereich zusätzlich beleuchtet wird.  \n- Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): Bereich um die Lampe absichern (z. B. Pylonen, Warnleuchten).  \n- Eigene Sicherheit und die von Passanten priorisieren.\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampe und Umgebung:  \n  - Ist die Lampe beschädigt (z. B. Mast, Leuchte, Verkabelung)?  \n  - Sind weitere Lampen betroffen?  \n  - Hinweise auf Vandalismus, Unfälle oder Feuchtigkeitsschäden?  \n- Prüfen, ob die Lampe ggf. noch schwach glimmt oder komplett aus ist.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Stromzufuhr zur Lampe unterbrochen ist (z. B. Sicherungskasten, Schaltkasten in der Nähe).  \n- Bei Online-Gerät und intaktem Zustand: Fehler könnte an der Leuchte selbst oder an der Stromversorgung liegen.  \n- Ohne Foto: Vor Ort genaue Beobachtungen notieren (Geräusche, Geruch, sichtbare Schäden).\n\n4. Dokumentation  \n- Alle Feststellungen (Sichtprüfung, Diagnose) schriftlich festhalten.  \n- Standort, Uhrzeit, Wetterbedingungen und eigene Maßnahmen dokumentieren.  \n- Falls möglich, Fotos nachreichen.\n\n5. Eskalation  \n- Bei mittlerer Gefährdung und unsicherem Bereich: Störung an die Leitstelle melden, ggf. Bereitschaftsdienst für schnelle Reparatur anfordern.  \n- Falls Gefahr für Verkehr oder Fußgänger besteht: Sofortige Absicherung und ggf. Polizei/Ordnungsamt informieren.\n\nRückfrage:  \nGibt es Zugang zu einem Schaltkasten in der Nähe der Lampe, oder ist ein Elektriker erforderlich?  \nSoll eine temporäre Zusatzbeleuchtung organisiert werden, bis die Reparatur erfolgt?",
+    "tokens_estimate_words": 226
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, Nacht, mittlere Verkehrsexposition → spezifische Absicherung), klare 5-Schritt-Struktur, Safety-first, detaillierte Dokumentation, passende Eskalationslogik. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.717
+  },
+  "error": {}
+}

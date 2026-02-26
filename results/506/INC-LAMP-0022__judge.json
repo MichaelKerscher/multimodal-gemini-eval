@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,18 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
-      "Keine Berücksichtigung von Umgebungsfaktoren (nicht im Context)"
-    ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Eskalation und Dokumentation gut abgedeckt. K=3, da minimaler Context kaum nutzbar war, aber keine Halluzinationen."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, Eskalation und Dokumentation. Kontext minimal (nur Asset-ID), daher generisch aber angemessen. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 4
     },
@@ -35,11 +32,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine explizite Erwähnung von severity=high als Priorisierungsfaktor",
-      "Kein Hinweis auf photo_available als Workflow-Vorteil"
-    ],
-    "short_justification": "Exzellente Kontextnutzung (Schnee, low_battery, dusk, poor_visibility). Klare Struktur mit Safety-first, guter Dokumentation und passender Eskalation. Rückfrage zu Akku-Wechsel zeigt Praxisnähe."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Schnee, dusk, poor_visibility, low_battery) sichtbar für Safety und Diagnose. Klare Schrittfolge, priorisiert, umsetzbar. K=4 wegen leichter Spekulation zu 'Batterie defekt' (device_state bezieht sich laut Guardrails auf Techniker-Gerät, nicht Asset)."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -53,10 +47,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Nutzt alle relevanten Context-Signale (Schnee, poor_visibility, severity=high, photo_available, low_battery → offline-Dokumentation). Safety-first klar priorisiert, Eskalation passend zu severity, vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: nutzt Kontext korrekt (Schnee, Sicht, Dämmerung), klare Safety-first-Logik, strukturierte Schritte, Eskalation bei Gefahr. Vermeidet Fehlinterpretation von device_state (erwähnt es nicht als Asset-Fehler). Dokumentation vollständig."
   }
 ]
