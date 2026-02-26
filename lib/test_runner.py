@@ -188,6 +188,7 @@ def _try_parse_judge_array(judge_out: str) -> list[dict] | None:
 
 
 def _score_block_to_expected_schema(block: dict) -> dict:
+    # fallback if not a dict
     if not isinstance(block, dict):
         return {
             "scores": {"R": 1, "H": 1, "S": 1, "D": 1, "K": 1},
@@ -201,18 +202,39 @@ def _score_block_to_expected_schema(block: dict) -> dict:
             "short_justification": "",
         }
 
-    block.setdefault("scores", {"R": 1, "H": 1, "S": 1, "D": 1, "K": 1})
-    block.setdefault(
-        "flags",
-        {
-            "safety_first": False,
-            "escalation_present": False,
-            "offline_workflow_mentioned": False,
-            "hallucination_suspected": False,
-        },
-    )
-    block.setdefault("missing_elements", [])
-    block.setdefault("short_justification", "")
+    # ensure nested containers exist
+    scores = block.get("scores") if isinstance(block.get("scores"), dict) else {}
+    flags = block.get("flags") if isinstance(block.get("flags"), dict) else {}
+
+    # clamp helper
+    def _clamp_1_5(x, default=1):
+        try:
+            v = int(x)
+            return max(1, min(5, v))
+        except Exception:
+            return default
+
+    block["scores"] = {
+        "R": _clamp_1_5(scores.get("R", 1)),
+        "H": _clamp_1_5(scores.get("H", 1)),
+        "S": _clamp_1_5(scores.get("S", 1)),
+        "D": _clamp_1_5(scores.get("D", 1)),
+        "K": _clamp_1_5(scores.get("K", 1)),
+    }
+
+    block["flags"] = {
+        "safety_first": bool(flags.get("safety_first", False)),
+        "escalation_present": bool(flags.get("escalation_present", False)),
+        "offline_workflow_mentioned": bool(flags.get("offline_workflow_mentioned", False)),
+        "hallucination_suspected": bool(flags.get("hallucination_suspected", False)),
+    }
+
+    me = block.get("missing_elements")
+    block["missing_elements"] = me if isinstance(me, list) else []
+
+    sj = block.get("short_justification")
+    block["short_justification"] = sj if isinstance(sj, str) else ""
+
     return block
 
 
@@ -414,6 +436,13 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
         raise ValueError(f"Unbekannter Client: '{client_name}'")
     client = CLIENTS[client_name]
 
+    # --- Judge config (always defined for safe logging) ---
+    has_judge = enable_judge and hasattr(client, "judge")
+    judge_model = os.getenv("TESTSUITE_JUDGE_MODEL", model)
+    judge_temp = float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.0"))
+    judge_mode = os.getenv("TESTSUITE_JUDGE_MODE", "BASIC")
+    judge_version = os.getenv("TESTSUITE_JUDGE_VERSION", "judge_v1_0")
+
     start = time.perf_counter()
     answer = client.generate(
         input_type=input_type,
@@ -427,13 +456,9 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
     runtime = round(time.perf_counter() - start, 3)
 
     judge_out = None
-    if enable_judge and hasattr(client, "judge"):
+    if has_judge:
         expected_elements = (input_data.get("meta") or {}).get("expected_elements_short", "")
         judge_prompt = _build_judge_prompt_single(tc, answer, expected_elements)
-        judge_model = os.getenv("TESTSUITE_JUDGE_MODEL", model)
-        judge_temp = float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.0"))
-        judge_mode = os.getenv("TESTSUITE_JUDGE_MODE", "BASIC")
-        judge_version = os.getenv("TESTSUITE_JUDGE_VERSION", "judge_v1_0")
         judge_out = client.judge(
             prompt=judge_prompt,
             model=judge_model,
@@ -441,13 +466,17 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
             selected_mode=judge_mode,
             internal_system_prompt=False,
         )
-        # optional: sanitize single output too (doesn't hurt logging/reading)
+        # sanitize single output too (doesn't hurt logging/reading)
         if isinstance(judge_out, str):
             judge_out = _sanitize_judge_jsonish(judge_out)
 
     result_dir = _result_dir_for_client(client_name)
 
-    s2_params = _s2_meta_to_request_params(selection_meta) if strategy == "S2" else _s2_meta_to_request_params(None)
+    s2_params = (
+        _s2_meta_to_request_params(selection_meta)
+        if strategy == "S2"
+        else _s2_meta_to_request_params(None)
+    )
 
     log_response(
         test_id=test_id,
@@ -464,10 +493,10 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
             "run_mode": "testcase",
             "assistant_source_of_truth": True,
             "context_strategy": strategy or "UNKNOWN",
-            "judge_version": judge_version if enable_judge else None,
-            "judge_model": judge_model if enable_judge else None,
-            "judge_temperature": judge_temp if enable_judge else None,
-            "judge_mode": judge_mode if enable_judge else None,
+            "judge_version": judge_version if has_judge else None,
+            "judge_model": judge_model if has_judge else None,
+            "judge_temperature": judge_temp if has_judge else None,
+            "judge_mode": judge_mode if has_judge else None,
             **s2_params,
         },
         judge=judge_out,
@@ -494,6 +523,13 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
     client = CLIENTS[client_name]
 
     default_model = testcases[0].get("model") or os.getenv("TESTSUITE_DEFAULT_MODEL", "gpt-4.1")
+
+    # --- Judge config (always defined for safe logging) ---
+    has_judge = enable_judge and hasattr(client, "judge")
+    judge_model = os.getenv("TESTSUITE_JUDGE_MODEL", default_model)
+    judge_temp = float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.0"))
+    judge_mode = os.getenv("TESTSUITE_JUDGE_MODE", "BASIC")
+    judge_version = os.getenv("TESTSUITE_JUDGE_VERSION", "judge_v1_0")
 
     meta0 = testcases[0].get("input", {}).get("meta") or {}
     incident_id = meta0.get("incident_id", "UNKNOWN")
@@ -546,7 +582,7 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
     judge_raw_clean: str | None = None
     judge_raw_any = None
 
-    if enable_judge and hasattr(client, "judge"):
+    if has_judge:
         judge_prompt = _build_judge_prompt_incident(
             incident_id=incident_id,
             generated_answers=generated,
@@ -554,11 +590,6 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             asset_type=asset_type,
             fault_type=fault_type,
         )
-
-        judge_model = os.getenv("TESTSUITE_JUDGE_MODEL", default_model)
-        judge_temp = float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.0"))
-        judge_mode = os.getenv("TESTSUITE_JUDGE_MODE", "BASIC")
-        judge_version = os.getenv("TESTSUITE_JUDGE_VERSION", "judge_v1_0")
 
         judge_raw_any = client.judge(
             prompt=judge_prompt,
@@ -582,7 +613,6 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
 
         judge_array = _try_parse_judge_array(judge_raw_clean)
 
-        # Optional health check (helpful for debugging)
         if judge_raw_clean and not judge_array:
             print("[WARN] Judge-Artifact gespeichert, aber JSON-Array konnte nicht geparsed werden (nach Repair).")
 
@@ -621,7 +651,7 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
         selection_meta = row.get("selection_meta") or None
 
         judge_block = judge_by_test_id.get(_norm_test_id(test_id)) if judge_by_test_id else None
-        if enable_judge and hasattr(client, "judge") and judge_raw_clean and not judge_block:
+        if has_judge and judge_raw_clean and not judge_block:
             judge_block = _score_block_to_expected_schema(
                 {
                     "test_id": test_id,
@@ -630,7 +660,11 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
                 }
             )
 
-        s2_params = _s2_meta_to_request_params(selection_meta) if strategy == "S2" else _s2_meta_to_request_params(None)
+        s2_params = (
+            _s2_meta_to_request_params(selection_meta)
+            if strategy == "S2"
+            else _s2_meta_to_request_params(None)
+        )
 
         log_response(
             test_id=test_id,
@@ -648,10 +682,10 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
                 "incident_id": incident_id,
                 "assistant_source_of_truth": True,
                 "context_strategy": strategy or "UNKNOWN",
-                "judge_version": judge_version if enable_judge else None,
-                "judge_model": judge_model if enable_judge else None,
-                "judge_temperature": judge_temp if enable_judge else None,
-                "judge_mode": judge_mode if enable_judge else None,
+                "judge_version": judge_version if has_judge else None,
+                "judge_model": judge_model if has_judge else None,
+                "judge_temperature": judge_temp if has_judge else None,
+                "judge_mode": judge_mode if has_judge else None,
                 **s2_params,
             },
             judge=judge_block,
@@ -664,7 +698,7 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             error=None,
         )
 
-    if enable_judge and hasattr(client, "judge") and judge_raw_clean and not judge_array:
+    if has_judge and judge_raw_clean and not judge_array:
         print(
             "[WARN] Judge-Output konnte nicht als JSON-Array geparsed werden. "
             "Raw-Artifact ist gespeichert, aber per-testcase Judge-Blocks wurden nicht attached."

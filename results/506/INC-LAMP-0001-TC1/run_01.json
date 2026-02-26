@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-26T13:39:34",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "gpt-4.1",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n5718630492 (Straßenlampe). Hier die empfohlene Vorgehensweise bei einem sporadischen Fehler:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefährdung: Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe, ob äußerliche Schäden, lose Teile oder Feuchtigkeit sichtbar sind.\n   - Kontrolliere, ob die Lampe aktuell stabil leuchtet.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, wann und wie oft der Fehler auftritt (z. B. nur bei Nässe, zu bestimmten Uhrzeiten).\n   - Prüfe, ob benachbarte Lampen ähnliche Probleme zeigen (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetterbedingungen, Fehlerbild).\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Verdacht auf elektrischen Defekt: Störung an die Fachabteilung/Elektrofachkraft weiterleiten.\n   - Hinweis: Sporadische Fehler können auf Wackelkontakt, Vorschaltgerät-Defekt oder Feuchtigkeit hindeuten.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Wetterereignisse (z. B. Starkregen) an diesem Standort? Das hilft bei der weiteren Eingrenzung.",
+    "tokens_estimate_words": 157
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare, strukturierte Antwort mit Safety-first, Eskalation und Dokumentation. Kontext (nur Asset-ID) korrekt genutzt, keine Überbehauptungen. Offline-Workflow nicht erwartbar (kein Signal im Kontext)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.833
+  },
+  "error": {}
+}
