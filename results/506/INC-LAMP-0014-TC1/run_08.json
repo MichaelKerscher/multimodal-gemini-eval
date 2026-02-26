@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC1",
+  "timestamp": "2026-02-26T16:23:56",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle. (Asset-ID: n4939032525)",
+    "context": {
+      "asset_osm": "n4939032525"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4939032525). Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. Absicherung  \n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnweste tragen).  \n   - Bei Dunkelheit zusätzliche Beleuchtung aufstellen.\n\n2. Sichtprüfung  \n   - Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z.B. Glasbruch, Mast verbogen, Kabel sichtbar).  \n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n   - Prüfen, ob der Leuchtmittelwechsel möglich ist oder ob ein elektrisches Problem vorliegt (z.B. Sicherung, Vorschaltgerät).  \n   - Falls keine offensichtliche Ursache erkennbar: Notieren, ob bei vorherigen Kontrollen Auffälligkeiten gemeldet wurden.\n\n4. Dokumentation  \n   - Alle Beobachtungen und Maßnahmen mit Datum/Uhrzeit dokumentieren.  \n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. Eskalation  \n   - Bei Gefahr (z.B. freiliegende Kabel, Mast instabil): Sofortige Sperrung und Meldung an die Leitstelle/Notdienst.  \n   - Bei einfachem Leuchtmittelausfall: Austausch beauftragen.  \n   - Bei unklarer Ursache oder wiederholtem Ausfall: Weiterleitung an Fachfirma/Elektriker.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen in der Umgebung oder besondere Gefahrenstellen (z.B. Kreuzung, Schulweg)?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation vorhanden, aber Trigger könnten präziser sein. Kontext minimal, daher generisch aber angemessen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.729
+  },
+  "error": {}
+}

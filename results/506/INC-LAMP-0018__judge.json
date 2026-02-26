@@ -4,7 +4,7 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
+      "S": 3,
       "D": 3,
       "K": 2
     },
@@ -15,16 +15,37 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Anpassung an Umgebungsbedingungen (Zeit/Wetter unbekannt)",
-      "Keine Nutzung von Geo-Koordinaten für Ortsbezug",
-      "Severity-Einschätzung fehlt"
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Anpassung an minimalen Kontext (generisch)",
+      "Keine Priorisierung bei unbekanntem Asset-Typ"
     ],
-    "short_justification": "Grundsolide Struktur mit Absicherung und Eskalation, aber sehr generisch. Kontext (nur asset_osm) wird nicht aktiv genutzt, keine Anpassung an unbekannte Umgebung/Zeit. Rückfragen sinnvoll, aber Handlungsfähigkeit durch fehlende Priorisierung eingeschränkt."
+    "short_justification": "Grundsätzlich passende Antwort mit Sicherheit und Eskalation, aber sehr generisch. Nutzt minimalen Kontext (nur Asset-ID) nicht sichtbar, bleibt allgemein für Ampel/Beleuchtung. Struktur vorhanden, aber keine klare Priorisierung bei unbekanntem Asset-Typ."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
-      "R": 5,
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht explizit für Dokumentation genannt",
+      "Zeitstempel (reported_at) nicht in Doku erwähnt"
+    ],
+    "short_justification": "Sehr gute Antwort: nutzt Kontext sichtbar (Nacht, Nebel, mittlerer Verkehr → erweiterte Absicherung, keine Fotos → Notizen). Safety-first klar, strukturiert, gute Dokumentation. Kleine Lücken bei expliziter GPS/Zeitstempel-Nutzung."
+  },
+  {
+    "test_id": "INC-LAMP-0018-TC3",
+    "scores": {
+      "R": 4,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -37,26 +58,8 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Erwähnung von GPS-Koordinaten für Navigation"
+      "GPS-Koordinaten nicht explizit in Doku genannt"
     ],
-    "short_justification": "Exzellente Kontextnutzung: Nebel, Nacht, mittlere Verkehrsexposition führen zu verstärkten Sicherheitsmaßnahmen. Klare Schrittfolge, safety-first, Eskalation bei Gefahr. Dokumentation umfassend. Sehr fallbezogen und umsetzbar."
-  },
-  {
-    "test_id": "INC-LAMP-0018-TC3",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Nutzt Kontext (Nebel/Nacht/medium traffic) für Safety-Maßnahmen, klare Priorisierung, Eskalations-Trigger definiert, versteht device.connectivity korrekt (online=Statusdaten möglich). Kompakt, umsetzbar, keine Halluzinationen. Dokumentation gut strukturiert."
+    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel → Absicherung, Online → Fernstatus, mittlerer Verkehr → zweite Person. Safety-first, klare Struktur, gute Doku. Nutzt Kontext optimal, keine Halluzinationen. Nur GPS nicht explizit erwähnt."
   }
 ]

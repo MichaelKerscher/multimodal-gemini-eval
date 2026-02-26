@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-26T16:24:19",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Sofortmaßnahmen bei Ausfall einer Straßenlampe (hohe Verkehrsexposition, schlechte Sicht):\n\n1. Absicherung  \n- Warnen Sie andere Verkehrsteilnehmer (z. B. mit Warnblinker, Warnweste, ggf. mobile Warnbaken).\n- Halten Sie sich selbst möglichst außerhalb des Gefahrenbereichs auf.\n\n2. Sichtprüfung  \n- Prüfen Sie aus sicherer Entfernung, ob offensichtliche Schäden an der Lampe, dem Mast oder der Verkabelung sichtbar sind.\n- Gibt es Funken, Rauch oder ungewöhnliche Geräusche?  \n- Sind weitere Lampen betroffen?\n\n3. Diagnose/Beobachtung  \n- Seit wann besteht der Ausfall? (Hier: ca. 10 Minuten)\n- Ist der Ausfall dauerhaft oder flackert die Lampe gelegentlich?\n- Gibt es Hinweise auf Vandalismus oder Unfälle?\n\n4. Dokumentation  \n- Machen Sie ein Foto der defekten Lampe und Umgebung (Foto liegt laut Meldung bereits vor).\n- Notieren Sie genaue Position (hier: 47.8580112, 12.1324162).\n- Halten Sie Datum, Uhrzeit und besondere Umstände (hohe Verkehrsbelastung, schlechte Sicht) fest.\n\n5. Eskalation  \n- Melden Sie den Ausfall umgehend an die zuständige Leitstelle/Störungsstelle mit allen gesammelten Informationen.\n- Weisen Sie auf die hohe Gefährdungslage hin (hohes Verkehrsaufkommen, schlechte Sicht, Nacht).\n- Fordern Sie ggf. eine kurzfristige Absicherung durch den Bereitschaftsdienst oder Polizei an.\n\nRückfrage:  \nGab es in der Umgebung weitere Ausfälle oder besondere Vorkommnisse (z. B. Unfall, Bauarbeiten)?  \nSind vor Ort bereits Absicherungsmaßnahmen erfolgt oder wird Unterstützung benötigt?",
+    "tokens_estimate_words": 206
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (severity=high, traffic_exposure=high, night, poor_visibility, photo_available). Klare Priorisierung mit Safety-first, strukturierte Schritte, umfassende Dokumentation, explizite Eskalation mit Begründung. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.428
+  },
+  "error": {}
+}

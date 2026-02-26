@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung von Geo-Koordinaten (vorhanden im CONTEXT)",
-      "Nebel/poor_visibility nicht berücksichtigt (nicht im CONTEXT L0)"
+      "Keine Nutzung von Umgebungskontext (Nacht/Nebel/Verkehr)",
+      "Keine Erwähnung von Foto-Dokumentation trotz photo_available=false im realen Kontext"
     ],
-    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first und Eskalation. Kontext minimal (nur OSM-ID), daher generisch aber korrekt. Keine Halluzinationen, aber Geo-Daten ungenutzt."
+    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung als Schritt 1 und Eskalationslogik. Kontext minimal (nur Asset-ID), daher keine Erwartung an Wetter/Zeit/Verkehr. Dokumentation und Handlungsfähigkeit gut, aber Stop-Conditions könnten klarer sein."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -26,7 +26,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, poor_visibility, night, medium traffic, online-Device). Safety-first klar, Eskalation passend zu severity=medium. Strukturiert, umsetzbar, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext (Nebel, Nacht, mittlerer Verkehr) explizit für Safety-Maßnahmen. Klare Schrittfolge, Absicherung zuerst, Eskalation bei Gefährdung, Dokumentation vollständig. Keine Halluzinationen, keine irrelevanten Teile."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: Nutzt alle relevanten Kontext-Signale (Nebel, Nacht, medium traffic, online), klare 5-Schritte-Struktur mit Safety-first, Eskalation passend, Foto-Hinweis, Rückfragen gezielt. Keine Halluzinationen."
+    "short_justification": "Hervorragend: Nutzt vollen Kontext (Nebel, Nacht, mittlere Verkehrsexposition) sichtbar in Safety-Schritten. Klare Priorisierung, Absicherung zuerst, differenzierte Eskalation nach Dringlichkeit, vollständige Dokumentation inkl. Foto-Hinweis. Keine Halluzinationen."
   }
 ]

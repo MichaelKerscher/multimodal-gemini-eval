@@ -6,7 +6,7 @@
       "H": 3,
       "S": 3,
       "D": 3,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,11 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (Kontext zeigt nur asset_osm, keine device-Infos)",
-      "Keine Nutzung von Standort/Verkehrsexposition (nicht im Kontext)",
-      "Keine Foto-Workflow-Hinweise (nicht im Kontext)"
+      "Offline-Workflow (Gerät offline, aber nicht erwähnt)",
+      "Kontextnutzung minimal (nur Asset-ID genutzt)"
     ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung, Sichtprüfung, Dokumentation, Eskalation). Kontext minimal (nur asset_osm), daher keine spezifischen Elemente erwartbar. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung möglich."
+    "short_justification": "Grundsolide Struktur mit Absicherung zuerst und klarer Eskalationslogik. Kontext wird kaum genutzt (nur Asset-ID), keine Anpassung an Offline-Status oder andere verfügbare Signale."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -28,26 +27,25 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt komplett (connectivity=offline erfordert lokale Dokumentation/Sync-Hinweis)",
-      "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät"
+      "Offline-Workflow nur angedeutet ('Prüfen, ob Verbindung wiederhergestellt werden kann'), nicht als klare Handlungsanweisung"
     ],
-    "short_justification": "Gute Struktur und Kontextnutzung (Standort, Verkehr, Foto). ABER: Halluzination bei device_state/connectivity – interpretiert als Asset-Problem ('Steuergerät/Batterie des Assets'), obwohl es das Techniker-Gerät beschreibt. Offline-Workflow fehlt. K<=2 wegen Halluzination."
+    "short_justification": "Sehr gute Kontextnutzung (Standort, Verkehr, Offline-Status, Batterie). Klare Struktur, Safety first, Eskalation vorhanden. Offline-Workflow nur teilweise umgesetzt (erwähnt, aber nicht als explizite lokale Dokumentations-Anweisung)."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -58,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Nutzt Kontext korrekt (Standort, Verkehr, Foto, offline-Workflow explizit erwähnt: 'lokal dokumentieren, später synchronisieren'). Klare Struktur, Safety first, Eskalation passend zu severity=low. Keine Halluzinationen, device.* korrekt als Techniker-Gerät verstanden dank extras.context_notes."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Offline-Workflow explizit, Standort, Verkehr, Batterie), klare Schrittfolge, Safety first, umfassende Dokumentation mit lokalem Speichern und späterer Synchronisation. Keine Halluzinationen, präzise Rückfragen."
   }
 ]

@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T16:18:59",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein zeitweiser Ausfall vor, aktuell funktioniert die Anlage jedoch wieder. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Kontrolle (Asset-ID: n1987093602):**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Absicherung der Arbeitsstelle nach geltenden Vorschriften (z. B. Warnleuchten, Pylonen).\n   - Eigene Sicherheit und die der Verkehrsteilnehmer gewährleisten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf äußere Schäden (Gehäuse, Verkabelung, Lampen/Ampelköpfe).\n   - Prüfen, ob Feuchtigkeit, Vandalismus oder offensichtliche Mängel vorliegen.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Anlage über mehrere Schaltzyklen beobachten.\n   - Prüfen, ob Auffälligkeiten (Flackern, Aussetzer, verzögerte Schaltung) auftreten.\n   - Falls möglich, Fehler- oder Statusanzeige am Steuergerät auslesen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten, Zeitpunkt und Dauer der Beobachtung notieren.\n   - Fotos bei sichtbaren Schäden anfertigen.\n   - Alle Maßnahmen und Beobachtungen im Wartungsprotokoll dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem oder anhaltendem Ausfall: Störung an die Leitstelle/Technik weiterleiten.\n   - Bei Gefahr im Verzug (z. B. Ausfall wichtiger Verkehrsampel): Sofortige Meldung und ggf. Notdienst anfordern.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es nähere Angaben zum genauen Standort oder zur Art des Ausfalls (z. B. nur nachts, nur einzelne Leuchte/Ampel betroffen)?",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontext-Nutzung (nur OSM-ID vorhanden, keine Umwelt-/Geräte-Infos genutzt)",
+      "Spezifische Diagnose für intermittent fault (generisch gehalten)"
+    ],
+    "short_justification": "Solide Struktur mit Safety-first und Eskalation. Dokumentation gut. Aber: Kontext minimal (nur OSM-ID), Antwort bleibt generisch und fragt nach Infos, die nicht erwartbar sind (Ampel vs. Lampe unklar). K=2 wegen fehlender Kontext-Nutzung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.048
+  },
+  "error": {}
+}

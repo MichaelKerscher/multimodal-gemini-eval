@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC1",
+  "timestamp": "2026-02-26T16:21:49",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf. (Asset-ID: n12557351679)",
+    "context": {
+      "asset_osm": "n12557351679"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Flackern bei Regen (Asset-ID: n12557351679).\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Bereich um die betroffene Straßenlampe/Ampelanlage absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei starkem Regen auf Rutschgefahr achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden: Feuchtigkeitseintritt, Risse, offene Kabel, lockere Abdeckungen.\n   - Prüfen, ob Wasser in Gehäuse oder Anschlusskasten eingedrungen ist.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob das Flackern aktuell auftritt (ggf. bei Regen simulieren).\n   - Prüfen, ob mehrere Lampen/Ampeln betroffen sind (Hinweis auf größere Störung).\n   - Mögliche Ursache: Feuchtigkeitseintritt, defekte Dichtung, Korrosion an Kontakten.\n\n4. **Dokumentation**\n   - Fotos vom Schaden und Umfeld machen.\n   - Genaue Beschreibung des Flackerns (Häufigkeit, Intensität, Wetterbedingungen).\n   - Alle Beobachtungen notieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer (z. B. Ausfall der Ampel, starkes Flackern): Sofortige Meldung an die Leitstelle/den Bereitschaftsdienst.\n   - Bei geringem Risiko: Störung an den zuständigen Elektriker oder Wartungsdienst weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es weitere Auffälligkeiten (z. B. Geräusche, Geruch, mehrere betroffene Anlagen)?",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (connectivity=offline nicht erkannt/genutzt)",
+      "Kontext-Signale (weather=rain, time_of_day, traffic) nicht sichtbar integriert"
+    ],
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber nutzt minimalen Kontext (nur asset_osm) nicht optimal. Offline-Status wird ignoriert, obwohl im CONTEXT vorhanden. Dokumentation gut, aber keine Anpassung an Offline-Bedingungen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.611
+  },
+  "error": {}
+}

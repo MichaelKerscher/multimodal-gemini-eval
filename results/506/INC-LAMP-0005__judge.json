@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Rückfragen sinnvoll, aber Priorisierung könnte schärfer sein."
+    "short_justification": "Klare, strukturierte Checkliste mit Safety-first und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Rückfragen sinnvoll, aber Priorisierung könnte schärfer sein."
   },
   {
     "test_id": "INC-LAMP-0005-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
-      "D": 4,
-      "K": 4
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Kontextnutzung (spotty connectivity, low_battery, fog, dusk, medium traffic). Offline-Workflow erwähnt ('analog sichern'), Safety-first klar, Eskalation differenziert nach Dringlichkeit."
+    "short_justification": "Exzellente Kontextnutzung (spotty connectivity → manuelle Prüfung, Nebel/Dämmerung → Absicherung, low_battery → Notizblock). Klare Schrittfolge, Safety-first, Eskalationslogik passend zu severity=low. Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0005-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty→offline-Workflow, low_battery→Ersatzakku, fog/dusk→Sichtbarkeit, medium traffic→Absicherung). Klare Schrittfolge, Safety-first, differenzierte Eskalation, keine Halluzinationen."
+    "short_justification": "Perfekte Kontextintegration (spotty → offline speichern/später sync, low_battery → lokale Notizen, Nebel/Dämmerung → Sichtverhältnisse dokumentieren). Klare Struktur, Safety-first, Eskalation differenziert nach Gefährdung. Dokumentation vollständig."
   }
 ]

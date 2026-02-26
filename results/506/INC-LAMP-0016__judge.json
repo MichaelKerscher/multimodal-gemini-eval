@@ -9,17 +9,13 @@
       "K": 3
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Safety-first nicht als Schritt 1 priorisiert",
-      "Keine klaren Eskalations-Trigger bei severity=high",
-      "Keine Offline-Workflow-Erwähnung trotz minimalem Kontext"
-    ],
-    "short_justification": "Grundsätzlich passende Struktur mit 5 Schritten, aber Absicherung nicht deutlich als Priorität 1. Eskalation erwähnt, aber ohne klare Trigger für 'high severity'. Kontext (Asset-ID) wird genutzt, aber generisch gehalten."
+    "missing_elements": [],
+    "short_justification": "Solide Grundstruktur mit Absicherung, Diagnose und Eskalation. Severity/Kontext fehlen im CONTEXT, daher keine höheren Erwartungen. Safety-first erkennbar, aber nicht stark priorisiert (Schritt 1 eher generisch). Dokumentation vorhanden, aber ohne Ticket-Checkliste."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
@@ -28,7 +24,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -37,17 +33,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
-      "Synchronisations-Hinweis fehlt"
+      "Offline-Workflow (spotty connectivity)",
+      "Explizite Stop-Conditions"
     ],
-    "short_justification": "Sehr gute Antwort: Safety-first klar als Schritt 1, nutzt Kontext sichtbar (Regen, Dämmerung, low_battery, spotty). Eskalation mit Dringlichkeit. Nur Offline-Workflow-Hinweis fehlt bei spotty connectivity."
+    "short_justification": "Sehr gute Kontextnutzung (Regen, Dämmerung, severity=high → klare Absicherung). Struktur klar, Eskalation passend. K=3, weil spotty connectivity nicht zu Offline-Workflow führt (lokal speichern fehlt). Dokumentation gut, aber keine explizite Ticket-Checkliste."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -58,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext vollständig (Regen, Dämmerung, spotty→offline dokumentieren+später sync), Eskalation mit Dringlichkeit, vollständige Dokumentation. Alle erwartbaren Elemente erfüllt."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty → Offline-Workflow explizit, Regen/Dämmerung → Safety, severity=high → Eskalation). Klare Schrittfolge, umsetzbar, keine Halluzinationen. Dokumentation mit lokalem Speichern. Nahezu perfekt."
   }
 ]

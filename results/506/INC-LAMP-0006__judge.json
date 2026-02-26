@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,31 +14,26 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)"
-    ],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation vorhanden, Dokumentation gut. Kontext minimal, daher keine Offline-Workflow-Erwartung. Sicherheit könnte expliziter priorisiert sein (z.B. 'bei Gefahr sofort Polizei')."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), guter Eskalationslogik und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung; generisch aber solide umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
     "scores": {
       "R": 5,
-      "H": 4,
-      "S": 4,
+      "H": 5,
+      "S": 5,
       "D": 4,
-      "K": 2
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline → lokal dokumentieren/später sync)",
-      "Low_battery des Geräts nicht als Workflow-Constraint erkannt"
-    ],
-    "short_justification": "Sehr gute Relevanz und Safety-first (Absicherung, Polizei bei Gefahr). Eskalation klar. ABER: connectivity=offline und device_state=low_battery werden ignoriert – kein Offline-Workflow erwähnt (lokal speichern/später sync). K<=2 wegen fehlender Kontextnutzung dieser kritischen Signale."
+    "missing_elements": [],
+    "short_justification": "Exzellente Nutzung des vollen Kontexts (Sturm, offline, high traffic, poor visibility). Safety-first klar, Offline-Hinweis ('offline' und 'low_battery' erwähnt), Eskalation passend zu severity=high. Sehr gut strukturiert und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -56,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first (Absicherung Schritt 1, Polizei bei Gefahr), klare Schrittfolge, Offline-Workflow explizit ('lokal speichern, später synchronisieren'), Dokumentation vollständig, Eskalation passend zu severity=high. Kontext (offline, low_battery, storm, high traffic) korrekt genutzt."
+    "short_justification": "Perfekte Kontextnutzung inkl. expliziter Offline-Workflow-Anweisungen ('lokal speichern', 'später synchronisieren'). Safety-first, klare Eskalation, vollständige Dokumentations-Checkliste, keine Halluzinationen. Nahezu ideal."
   }
 ]

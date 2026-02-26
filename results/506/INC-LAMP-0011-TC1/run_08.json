@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-26T16:22:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt eine Meldung über einen zeitweisen Ausfall vor, aktuell funktioniert die Anlage jedoch wieder normal. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereithalten.\n   - Bei Bedarf den Bereich um die Anlage sichern (z. B. bei starkem Verkehr oder schlechter Sicht).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage (Gehäuse, Masten, Verkabelung, Leuchtmittel, Steuergerät).\n   - Prüfen, ob äußere Schäden, Feuchtigkeit oder Manipulationen sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Anlage mehrmals beobachten (verschiedene Schaltphasen abwarten).\n   - Prüfen, ob Unregelmäßigkeiten (Flackern, Aussetzer, verzögerte Schaltung) auftreten.\n   - Falls möglich: Fehlerprotokoll oder Statusanzeige der Steuerung auslesen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten, Uhrzeit und Wetterbedingungen notieren.\n   - Fotos von eventuellen Schäden oder Auffälligkeiten machen.\n   - Alle Schritte und Beobachtungen im Wartungsprotokoll festhalten.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an die Fachabteilung/Technik weiterleiten.\n   - Ggf. kurzfristige Nachkontrolle oder Monitoring ansetzen.\n\n**Rückfrage:**  \nHandelt es sich bei Asset n4470029718 um eine Straßenlampe oder eine Ampelanlage? Gibt es Angaben zum genauen Zeitpunkt oder zur Häufigkeit des Ausfalls? Das hilft, gezielter vorzugehen.",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Anpassung an intermittent fault_type",
+      "Keine Berücksichtigung von Umgebungsfaktoren"
+    ],
+    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Kontext (nur Asset-ID) wird nicht genutzt; Antwort bleibt generisch ohne Bezug zu intermittent-Fehler oder Umgebung. Rückfrage sinnvoll, aber K=2 wegen fehlender Kontextnutzung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.719
+  },
+  "error": {}
+}

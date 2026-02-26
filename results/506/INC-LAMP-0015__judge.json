@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, Eskalation passend zu 'unsicher'. Kontext minimal (nur OSM-ID), daher keine erweiterten Elemente erwartbar. Generisch, aber korrekt."
+    "missing_elements": [
+      "Keine explizite Priorisierung bei severity=high erkennbar",
+      "Sicherheitsmaßnahmen könnten konkreter sein"
+    ],
+    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Nutzt minimalen Kontext korrekt (Asset-ID), bleibt aber teils generisch, da kaum Kontext verfügbar. Eskalation und Dokumentation sind vorhanden."
   },
   {
     "test_id": "INC-LAMP-0015-TC2",
@@ -33,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, nutzt Kontext (high traffic/night/poor visibility → Absicherung/Polizei), OSM-ID + Koordinaten dokumentiert, Eskalation bei akuter Gefahr, Foto erwähnt. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (severity=high, traffic_exposure=high, night, poor_visibility, photo_available). Klare Priorisierung mit Safety-first, strukturierte Schritte, umfassende Dokumentation, explizite Eskalation mit Begründung. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0015-TC3",
@@ -51,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first (Warnweste, Absicherung), strukturiert, nutzt Kontext optimal (high traffic/poor visibility → Pylone/Warnleuchten), Dokumentation mit OSM-ID + Koordinaten, Eskalation bei Gefährdung, Foto-Workflow integriert. Keine Halluzinationen."
+    "short_justification": "Hervorragende Antwort: Nutzt erweiterten Kontext optimal (severity, traffic, visibility, photo_available, device online). Safety-first klar priorisiert, strukturierte Checkliste, vollständige Dokumentation, differenzierte Eskalation. Beachtet context_notes korrekt (device ≠ asset). Keine Halluzinationen."
   }
 ]

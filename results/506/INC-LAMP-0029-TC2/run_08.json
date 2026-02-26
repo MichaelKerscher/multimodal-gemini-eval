@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC2",
+  "timestamp": "2026-02-26T16:30:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n9223569763",
+        "longitude": 12.0889764,
+        "latitude": 47.8238909,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Pang, Cafe Neu"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T12:53:33+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für den Außendienst – Straßenlampe „Pang, Cafe Neu“ (n9223569763)**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) rund um den Arbeitsbereich aufstellen, besonders da Sicht schlecht und Verkehrsaufkommen mittel ist.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Teile oder Vandalismus prüfen.\n   - Umgebung auf weitere Ausfälle oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Sicherungen oder Schaltkästen zugänglich und unbeschädigt sind.\n   - Da das Gerät „offline“ ist, Verbindung zur Steuerungseinheit kontrollieren (z. B. Kabelverbindungen, Feuchtigkeit).\n   - Falls möglich, Funktionstest der Lampe durchführen (z. B. manuelles Einschalten).\n   - Foto vom Ist-Zustand machen (Foto liegt laut Meldung bereits vor).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Foto der defekten Lampe und Umgebung dokumentieren.\n   - Zeitpunkt und genaue Position notieren.\n\n5. **Eskalation**\n   - Bei hohem Gefährdungspotenzial (unsicherer Bereich, Nacht, hohe Priorität) sofortige Weiterleitung an Bereitschaftsdienst/Techniker.\n   - Falls Eigenreparatur nicht möglich: Störung an Leitstelle melden, mit Hinweis auf Dringlichkeit und Sicherheitsrisiko.\n\n**Rückfrage:**  \nIst ein Zugang zum Schaltschrank vor Ort möglich oder wird ein Elektriker benötigt? Liegt bereits eine Rückmeldung der Technik vor?",
+    "tokens_estimate_words": 182
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow explizit (lokal speichern/später sync)"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absperrung), klare Schrittfolge, nutzt Kontext sehr gut (Nacht, poor_visibility, medium traffic, severity=high → Dringlichkeit). Offline-Workflow wird implizit behandelt (Foto machen), aber nicht explizit als 'lokal speichern/später synchronisieren' formuliert, daher K=4 statt 5."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.135
+  },
+  "error": {}
+}

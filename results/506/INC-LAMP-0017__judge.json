@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Nutzung der Koordinaten (nicht im Kontext vorhanden)",
-      "Keine Erwähnung von Foto (nicht im Kontext vorhanden)"
-    ],
-    "short_justification": "Sehr gute strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur asset_osm), daher keine erweiterten Details erwartbar. Rückfragen sinnvoll und fallbezogen."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal, daher keine spezifischen Umwelt-/Device-Hinweise erwartbar – generische Antwort ist hier angemessen."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
@@ -36,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Koordinaten, Wetter, Dämmerung, Foto, low_power_mode), klare 5-Schritt-Struktur mit Safety-first, präzise Eskalationslogik, vollständige Dokumentation. Keine Halluzinationen, alle relevanten Elemente integriert."
+    "short_justification": "Exzellente Kontextnutzung (Regen, dusk, poor_visibility, low_power_mode, photo_available). Safety-first klar, Schritte priorisiert, Dokumentation vollständig, Eskalation passend zu severity=medium."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -50,10 +47,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: nutzt vollen Kontext korrekt (Wetter, Dämmerung, Foto, low_power_mode → offlinefähig dokumentieren), klare Struktur, Safety-first, präzise Eskalation. Erwähnt explizit offline-Fähigkeit der App. Keine Halluzinationen, alle Elemente erfüllt."
+    "short_justification": "Hervorragend: nutzt Kontext (Regen, dusk, low_power_mode, photo_available) präzise, Safety-first, klare Schrittfolge, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, robuste Rückfragen."
   }
 ]

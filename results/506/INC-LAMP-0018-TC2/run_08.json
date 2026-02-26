@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-26T16:25:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Checkliste zur Störungsbearbeitung: Steuerungsproblem (Segment fällt zeitgleich aus)\n\n1. **Absicherung**\n   - Warnblinkanlage am Einsatzfahrzeug einschalten.\n   - Gefahrenbereich mit Leitkegeln und Warnschildern absichern.\n   - Bei schlechter Sicht (Nacht, Nebel) zusätzliche Warnleuchten verwenden.\n   - Persönliche Schutzausrüstung anlegen (Warnweste, ggf. Helm).\n\n2. **Sichtprüfung**\n   - Prüfen, ob das betroffene Segment (Straßenlampen/Ampeln) komplett ausgefallen ist.\n   - Sichtkontrolle des Steuerkastens auf äußere Schäden, Manipulation oder Feuchtigkeit.\n   - Umgebung auf weitere Gefahren (z. B. herannahender Verkehr) beobachten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Steuerungseinheit Strom erhält (ggf. mit Spannungsprüfer).\n   - Kontrollieren, ob Sicherungen ausgelöst oder Komponenten überhitzt sind.\n   - Statusanzeigen oder Fehlercodes am Steuerkasten ablesen.\n   - Da keine Fotos vorliegen: Notieren, ob ungewöhnliche Geräusche oder Gerüche wahrnehmbar sind.\n   - Prüfen, ob andere Segmente oder Anlagen in der Nähe ebenfalls betroffen sind.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Beteiligte).\n   - Skizze oder Notizen zur Ausdehnung des Ausfalls anfertigen.\n   - Fehlermeldungen und Statusanzeigen dokumentieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für die Verkehrssicherheit: Störung an die Leitstelle/Technik weiterleiten.\n   - Bei akuter Gefahr (z. B. Kreuzung ohne Lichtsignalanlage): Polizei/Verkehrssicherung informieren.\n   - Rückmeldung an den Melder, falls Kontaktdaten vorliegen.\n\n**Rückfrage:**  \nIst bekannt, ob nur Straßenlampen oder auch Ampelanlagen betroffen sind? Gibt es Zugang zum Steuerkasten vor Ort?",
+    "tokens_estimate_words": 204
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten nicht explizit für Dokumentation genannt",
+      "Zeitstempel (reported_at) nicht in Doku erwähnt"
+    ],
+    "short_justification": "Sehr gute Antwort: nutzt Kontext sichtbar (Nacht, Nebel, mittlerer Verkehr → erweiterte Absicherung, keine Fotos → Notizen). Safety-first klar, strukturiert, gute Dokumentation. Kleine Lücken bei expliziter GPS/Zeitstempel-Nutzung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.514
+  },
+  "error": {}
+}

@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC2",
+  "timestamp": "2026-02-26T16:19:50",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T11:25:07+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die strukturierte Vorgehensweise:\n\n**1. Absicherung**\n- Bereich um die defekte Lampe absichern (z. B. Warnbaken, Absperrband), besonders wegen schlechter Sicht und erhöhter Unsicherheit.\n- Bei akuter Gefahr: Polizei oder Ordnungsamt informieren.\n\n**2. Sichtprüfung**\n- Prüfen, ob offensichtliche Schäden an der Lampe, dem Mast oder der Verkabelung erkennbar sind.\n- Auf weitere dunkle Lampen in der Nähe achten (Hinweis auf größeren Ausfall).\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob die Lampe auf Bewegungen oder Schaltimpulse reagiert (sofern möglich).\n- Aufgrund der schlechten Konnektivität: Keine Ferndiagnose möglich, Techniker muss vor Ort prüfen.\n\n**4. Dokumentation**\n- Fotos vom Ausfallbereich und der Lampe anfertigen (Foto ist laut Meldung verfügbar).\n- Alle Beobachtungen und Maßnahmen protokollieren.\n\n**5. Eskalation**\n- Störung mit hoher Priorität an den Bereitschaftsdienst/Störungsstelle weiterleiten.\n- Hinweis auf unsichere Situation und schlechte Sicht explizit weitergeben.\n\n**Rückfrage:**  \nGibt es in unmittelbarer Nähe weitere dunkle Lampen oder ist nur diese betroffen?  \nSind Personen oder Fahrzeuge durch die Dunkelheit konkret gefährdet?  \n\nBitte um kurze Rückmeldung, damit wir gezielt reagieren können.",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt (lokal dokumentieren/später sync)"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-first klar umgesetzt, Kontext (Nebel, Nacht, high severity) gut genutzt, strukturierte Schritte mit Eskalation. Spotty connectivity wird erwähnt ('keine Ferndiagnose'), aber Offline-Workflow-Hinweis fehlt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.369
+  },
+  "error": {}
+}

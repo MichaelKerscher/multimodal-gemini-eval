@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0022-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,12 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Bewusstsein (high) nicht erkennbar",
-      "Umweltbedingungen (Schnee, poor visibility) nicht berücksichtigt",
-      "Device-State (low_battery) nicht erwähnt"
-    ],
-    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Kontext minimal, daher keine Umwelt-/Device-Infos genutzt. Dokumentation gut, aber Priorisierung bei severity=high könnte schärfer sein."
+    "missing_elements": [],
+    "short_justification": "Sehr strukturierte, umsetzbare Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur Asset-ID), daher generisch aber angemessen. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -37,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Nutzt alle Kontext-Signale (Schnee, poor visibility, low_battery, severity=high), klare Schrittfolge, Safety-first, sofortige Eskalation bei hoher Gefährdung, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (low_battery, Schnee, poor_visibility, severity=high), klare Schrittfolge, Safety-first, Eskalation mit Dringlichkeit, vollständige Dokumentation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -45,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -54,9 +50,7 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Device low_battery könnte expliziter als Workflow-Constraint erwähnt werden"
-    ],
-    "short_justification": "Sehr stark: Nutzt Kontext korrekt (Schnee, poor visibility, severity=high), klare Safety-first-Logik, sofortige Eskalation. Dokumentation knapp aber vollständig. Keine Halluzinationen, robuste Kontextnutzung."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig und korrekt (Schnee, Dämmerung, low_battery des Geräts, severity=high), klare Struktur, Safety-first, Eskalation, Dokumentation. Versteht context_notes korrekt (device_state betrifft Techniker-Gerät). Keine Halluzinationen."
   }
 ]

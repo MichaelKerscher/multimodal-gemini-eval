@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC2",
+  "timestamp": "2026-02-26T16:21:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293341689",
+        "longitude": 12.1302583,
+        "latitude": 47.8571756,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-20T08:57:46+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. Absicherung  \n- Warnweste anlegen.  \n- Warnblinkanlage am Fahrzeug einschalten.  \n- Arbeitsbereich mit Leitkegeln absichern, besonders bei schlechter Sicht (Nacht, Nebel).\n\n2. Sichtprüfung  \n- Sichtkontrolle der betroffenen Leuchten entlang des angegebenen Abschnitts (OSM: n13293341689, Koordinaten: 47.8571756, 12.1302583).  \n- Prüfen, ob mehrere Lampen betroffen sind oder nur einzelne.  \n- Auf offensichtliche Schäden (z. B. Mast umgeknickt, Lampenkopf defekt) achten.\n\n3. Diagnose/Beobachtung  \n- Sichtbare Defekte oder Manipulationen dokumentieren.  \n- Bei mehreren ausgefallenen Leuchten: Möglicher Fehler in der Zuleitung oder Schaltstelle.  \n- Aufgrund „low_power_mode“ und „spotty“ Konnektivität: Fernabfrage/Diagnose vermutlich eingeschränkt – vor Ort prüfen.  \n- Bei Nebel besonders auf Feuchtigkeitseintritt in Gehäusen achten.\n\n4. Dokumentation  \n- Fotos vom Zustand der Leuchten und Umgebung machen (Foto laut Meldung verfügbar).  \n- Ausgefallene Leuchten und Besonderheiten notieren (z. B. defekte Sicherung, beschädigte Kabel).  \n- Alle Maßnahmen und Beobachtungen protokollieren.\n\n5. Eskalation  \n- Bei Gefahr für Verkehrssicherheit (z. B. kompletter Ausfall auf Hauptstraße): Sofortige Meldung an Bereitschaft/Leitstelle.  \n- Bei geringem Risiko (laut Meldung „low“): Reparaturauftrag an zuständige Fachabteilung weiterleiten.  \n- Hinweis: Bei schlechter Sicht und Nebel kann auch ein kleiner Ausfall kritisch sein – im Zweifel höher einstufen.\n\nRückfrage:  \nSind weitere Details zum betroffenen Abschnitt oder zur Anzahl der ausgefallenen Leuchten bekannt? Liegt eine genaue Straßenbezeichnung oder ein Foto vor?",
+    "tokens_estimate_words": 211
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow explizit (spotty connectivity)"
+    ],
+    "short_justification": "Exzellente Antwort: nutzt Kontext sichtbar (Nebel, Nacht, spotty → Hinweis auf eingeschränkte Fernabfrage, Feuchtigkeitseintritt), Safety-first, klare Eskalation nach severity/Verkehrssicherheit, vollständige Dokumentation. Offline-Workflow nicht explizit genannt, aber 'spotty' erkannt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.628
+  },
+  "error": {}
+}

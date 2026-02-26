@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-26T16:30:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Fehler (Asset-ID: n11833818322)\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Straßenlampe gefahrlos betreten werden kann.\n   - Bei starkem Verkehr ggf. Warnbaken oder Warnleuchte aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe auf sichtbare Schäden (z. B. Wackelkontakt, Feuchtigkeit, lose Abdeckung).\n   - Kontrolliere, ob das Leuchtmittel fest sitzt und keine offensichtlichen Defekte vorliegen.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Beobachte die Lampe über einen definierten Zeitraum (z. B. 10–15 Minuten).\n   - Prüfe, ob äußere Einflüsse (Wind, Erschütterung, Feuchtigkeit) den Fehler auslösen.\n   - Notiere, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Zeitpunkt, Wetter, Fehlerbild, Asset-ID).\n   - Dokumentiere, ob und wann die Lampe wieder ausfällt oder flackert.\n\n5. **Eskalation**\n   - Bei wiederholtem oder sicherheitsrelevantem Ausfall: Störung an die Fachabteilung/Elektriker melden.\n   - Hinweis: Bei Verdacht auf Netz- oder Steuerungsproblem ggf. Netzbetreiber informieren.\n\n**Rückfrage:**  \nGab es in der Umgebung weitere Lampen mit ähnlichem Verhalten oder ist nur diese betroffen?  \nWurde kürzlich an der Anlage gearbeitet (z. B. Wartung, Erdarbeiten)?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung des minimalen Kontexts (nur asset_osm vorhanden)",
+      "Keine Anpassung an fehlende Umgebungs-/Severity-Infos"
+    ],
+    "short_justification": "Grundsolide generische Antwort mit Safety-first und Eskalation. Nutzt den minimalen Kontext (asset_osm) nicht sichtbar, bleibt sehr allgemein. Struktur und Dokumentation vorhanden, aber keine Kontextanpassung erkennbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.888
+  },
+  "error": {}
+}

@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-26T16:29:12",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum Asset n4449540379 (Straßenlampe/Ampelanlage). Hier die empfohlene Vorgehensweise:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Bereich um das Asset absichern (z. B. Warnbaken, ggf. Verkehrslenkung).\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. Kabel, Gehäuse, Feuchtigkeit).\n   - Prüfen, ob Manipulation oder Vandalismus vorliegt.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Wann tritt das An/Aus auf? Gibt es Muster (z. B. bei Nässe, zu bestimmten Tageszeiten)?\n   - Prüfen, ob benachbarte Anlagen betroffen sind.\n   - Falls möglich: Kontrollschrank öffnen und auf lose Kontakte, Feuchtigkeit oder ungewöhnliche Geräusche prüfen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls möglich).\n   - Zeitpunkt und Dauer der Störung notieren.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung (z. B. Verkehrsgefahr): Sofortige Meldung an Leitstelle/Technik.\n   - Falls keine akute Gefahr: Störung an zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bereits Hinweise auf äußere Einflüsse (z. B. Bauarbeiten, Unwetter)?  \n\nBitte um kurze Rückmeldung, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 164
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (Kontext fehlt, daher nicht erwartbar)",
+      "Spezifische Umweltfaktoren (Kontext fehlt)",
+      "Severity-basierte Priorisierung"
+    ],
+    "short_justification": "Grundsolide Antwort mit klarer Struktur und Safety-first. Bleibt aber generisch, da minimaler Kontext. Fragt sinnvoll nach Asset-Typ. Keine Halluzinationen, aber auch keine Kontextnutzung über Asset-ID hinaus."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.982
+  },
+  "error": {}
+}

@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC2",
+  "timestamp": "2026-02-26T16:19:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427359783",
+        "longitude": 12.1049944,
+        "latitude": 47.877481,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Westerndorf St. Peter, Schlößlstraße"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T22:47:36+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnblinkanlage am Einsatzfahrzeug einschalten.\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Leitkegel) aufstellen, um den Arbeitsbereich abzusichern – besonders wichtig bei Nacht und schlechter Sicht.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Lampe und des Masts auf offensichtliche Schäden (z. B. Vandalismus, Kabelbruch, Feuchtigkeitseintritt).\n- Prüfen, ob weitere Lampen in der Nähe ebenfalls ausgefallen sind.\n\n**3. Diagnose/Beobachtung**\n- Aufgrund des Hinweises „low_battery“ und „spotty connectivity“: Vermutlich handelt es sich um eine solar- oder akkubetriebene Leuchte.\n- Prüfen, ob ein Batteriewechsel oder eine Ladeeinheit vor Ort möglich ist.\n- Falls kein Zugang zur Technik: Notieren, ob Lade-/Batteriestatus angezeigt wird (z. B. Kontroll-LED).\n\n**4. Dokumentation**\n- Ausfall und alle Beobachtungen (z. B. Zustand, mögliche Ursache, getroffene Maßnahmen) schriftlich festhalten.\n- Fotos machen, falls möglich (auch wenn aktuell kein Foto vorliegt).\n\n**5. Eskalation**\n- Bei fehlender Ersatzbatterie oder unklarer Ursache: Störungsmeldung an die Fachabteilung/Technik weiterleiten.\n- Hinweis auf schlechte Sichtverhältnisse und Nachtzeit in der Meldung hervorheben (erhöhte Verkehrssicherungspriorität).\n\n**Rückfrage:**  \nIst ein Batteriewechsel vor Ort möglich, oder muss ein Techniker mit Spezialausrüstung angefordert werden?  \nSind weitere Lampen in der Umgebung betroffen?  \n\nBitte kurze Rückmeldung, damit ich die nächsten Schritte optimal vorbereiten kann.",
+    "tokens_estimate_words": 194
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
+      "Batterie-Interpretation spekulativ (solar/akku nicht im CONTEXT)"
+    ],
+    "short_justification": "Gute Kontextnutzung (Nacht, low_battery, spotty), klare Safety-first-Struktur. Jedoch Halluzination: 'solar- oder akkubetrieben' wird spekuliert, steht nicht im CONTEXT. Offline-Workflow fehlt trotz spotty connectivity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.344
+  },
+  "error": {}
+}

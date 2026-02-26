@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal, daher keine spezifischen Umweltfaktoren integriert (aber auch nicht erwartbar). Dokumentation gut strukturiert."
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Eskalationslogik. Kontext minimal (nur Asset-ID), daher generische Rückfragen sinnvoll. Keine Halluzinationen, aber Kontext kaum nutzbar (K=3)."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 5,
-      "D": 5,
-      "K": 5
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (dusk/poor_visibility → Warnleuchten, high severity → sofortige Eskalation, photo_available → Workflow-Hinweis). Safety-first, klare Struktur, vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Exzellente Safety-first-Priorisierung, klare Eskalation bei severity=high. Nutzt Kontext gut (dusk/poor_visibility → zusätzliche Beleuchtung, photo_available implizit). Dokumentation vollständig, Struktur umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Integriert alle relevanten Kontextfaktoren (dusk/poor_visibility → zusätzliche Beleuchtung, photo_available korrekt als Workflow-Cue, high severity → sofortige Eskalation). Klare Struktur, Safety-first, vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Safety-first klar, nutzt Kontext explizit (dusk/poor_visibility → Warnleuchten, traffic_exposure → Abstand, OSM-ID/Koordinaten dokumentiert). Eskalation mit 'Gefahr im Verzug' passend zu severity=high. Keine Halluzinationen, alle relevanten Elemente integriert."
   }
 ]

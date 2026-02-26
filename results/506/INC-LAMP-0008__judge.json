@@ -15,32 +15,34 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, guter Handlungsfolge und Eskalationslogik. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. K=3 wegen generischer Antwort ohne Kontextnutzung (aber kein Fehler bei minimalem Context)."
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first (Absicherung zuerst), klarer Eskalationslogik und Dokumentation. Kontext minimal (nur OSM-ID), daher keine Offline-Workflow-Erwartung. Generisch, aber vollständig und umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 5,
       "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Kontextnutzung (Nebel, Nacht, spotty connectivity → manuelle Kontrolle, Offline-Hinweis). Klare Dokumentation mit GPS-Koordinaten. Safety-first und Eskalation passend zu low severity. Annahme am Ende ist transparent."
+    "missing_elements": [
+      "Offline-Workflow explizit (spotty connectivity)"
+    ],
+    "short_justification": "Exzellente Antwort: nutzt Kontext sichtbar (Nebel, Nacht, spotty → Hinweis auf eingeschränkte Fernabfrage, Feuchtigkeitseintritt), Safety-first, klare Eskalation nach severity/Verkehrssicherheit, vollständige Dokumentation. Offline-Workflow nicht explizit genannt, aber 'spotty' erkannt."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel/Nacht → Sicherheit, spotty/low_power → Offline-Workflow explizit), klare Schrittfolge, präzise Dokumentation mit Koordinaten, passende Eskalationslogik zu low severity/traffic. Keine Halluzinationen."
+    "short_justification": "Perfekte Kontextnutzung: spotty connectivity → expliziter Offline-Workflow (lokal speichern, später synchronisieren), Nebel/Nacht → Sicherheitshinweise, photo_available integriert, klare Struktur, Safety-first, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
   }
 ]

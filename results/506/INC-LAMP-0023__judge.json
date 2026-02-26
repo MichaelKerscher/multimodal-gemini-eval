@@ -2,7 +2,7 @@
   {
     "test_id": "INC-LAMP-0023-TC1",
     "scores": {
-      "R": 3,
+      "R": 4,
       "H": 4,
       "S": 3,
       "D": 4,
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Trigger könnten schärfer sein."
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Eskalation vorhanden, aber Trigger könnten schärfer sein. Kontext minimal, daher keine Offline-Workflow-Erwartung – korrekt generisch gehalten."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
@@ -24,7 +24,7 @@
       "H": 5,
       "S": 5,
       "D": 4,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, Offline-Workflow erkannt ('Keine Fernabfrage möglich'), Sturm/hohe Verkehrsexposition direkt adressiert. Eskalation mit klaren Triggern. Dokumentation gut, könnte GPS explizit nennen."
+    "short_justification": "Exzellente Kontextnutzung: Sturm, hohe Verkehrsexposition, Offline-Gerät explizit adressiert ('keine Fernwartung möglich'). Safety-first klar, Eskalation passend zu severity=high, Dokumentation strukturiert."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Offline-Workflow explizit ('lokal speichern', 'später synchronisieren'), Safety-first, klare Eskalation, vollständige Dokumentation. Nutzt Kontext optimal (Sturm, offline, high severity). Sehr umsetzbar und präzise."
+    "short_justification": "Nahezu perfekt: Offline-Workflow explizit ('offline speichern', 'lokal sichern', 'nach Wiederherstellung synchronisieren'), alle Risikofaktoren (Sturm, Verkehr, Sicht) integriert, Safety-first + klare Eskalation bei Gefahr, vollständige Dokumentations-Checkliste."
   }
 ]
