@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC1",
+  "timestamp": "2026-02-26T14:22:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n4483691318)",
+    "context": {
+      "asset_osm": "n4483691318"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n4483691318 (Straßenlampe).\n\nCheckliste für die Überprüfung vor Ort:\n\n1. Absicherung  \n   - Warnweste anlegen, Absperrmaterial aufstellen  \n   - Bereich gegen Verkehr sichern (z. B. Warnleuchten, Pylonen)  \n\n2. Sichtprüfung  \n   - Ist die Lampe beschädigt, verdreckt oder offensichtlich defekt?  \n   - Sind weitere Lampen im Abschnitt betroffen?  \n   - Gibt es Anzeichen für Vandalismus oder Unfälle?  \n\n3. Diagnose/Beobachtung  \n   - Funktioniert die Lampe bei manueller Schaltung?  \n   - Liegt ein Stromausfall im Bereich vor?  \n   - Sind Sicherungen oder Schaltkästen zugänglich und intakt?  \n\n4. Dokumentation  \n   - Fotos vom Zustand und Umfeld machen  \n   - Festgestellte Mängel und Maßnahmen notieren  \n   - Asset-ID und Standort dokumentieren  \n\n5. Eskalation  \n   - Bei Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an Leitstelle  \n   - Bei einfachem Defekt: Reparatur veranlassen oder an zuständige Stelle weiterleiten  \n\nBitte geben Sie an, ob Sie bereits vor Ort sind oder ob eine Einsatzplanung erfolgen soll. Gibt es Hinweise auf besondere Gefahren (z. B. vielbefahrene Straße, Baustelle)?",
+    "tokens_estimate_words": 153
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Anpassung an fehlende Umgebungsdaten"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first, klarer Eskalationslogik und Dokumentation. Kontext minimal (nur Asset-ID), daher generisch aber solide. Fragt sinnvoll nach zusätzlichen Infos."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.37
+  },
+  "error": {}
+}

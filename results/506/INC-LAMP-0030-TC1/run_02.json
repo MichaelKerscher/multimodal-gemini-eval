@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-26T14:26:21",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen sporadischen Fehler an Straßenlampe n11833818322: Vorhin aus, jetzt wieder an.\n\n**Checkliste für die Vorgehensweise:**\n\n1. **Absicherung**\n   - Prüfen, ob die Lampe an einer Gefahrenstelle steht (z. B. Fußgängerüberweg, Kreuzung).\n   - Bei erhöhter Gefährdung: Sofortige provisorische Absicherung veranlassen (z. B. Warnbaken).\n\n2. **Sichtprüfung**\n   - Lampe vor Ort inspizieren: Leuchtet sie aktuell? Flackert sie? Auffälligkeiten am Mast, Sockel oder Leuchtmittel?\n   - Umgebung auf Beschädigungen oder Manipulation prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Wetterbedingungen oder Fremdeinwirkung als mögliche Ursache?\n   - Notieren, ob Fehler zu bestimmten Tageszeiten oder Bedingungen auftritt.\n\n4. **Dokumentation**\n   - Fehlerbild, Zeitpunkt und Asset-ID schriftlich festhalten.\n   - Fotos machen, falls möglich.\n   - Beobachtungen und erste Maßnahmen dokumentieren.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsfirma/Technik weiterleiten.\n   - Bei wiederholtem Ausfall oder sicherheitsrelevanter Lage: Priorisierte Störungsmeldung.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Unwetter oder andere Störungen in der Nähe der Lampe? Sind weitere Lampen betroffen?  \nFalls nicht bekannt, bitte kurz Rückmeldung geben, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 168
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung des minimalen Kontexts (nur asset_osm vorhanden)",
+      "Spekuliert über Gefahrenstellen ohne Kontext-Signal",
+      "Fragt nach Infos, die nicht erwartbar sind (Bauarbeiten, Unwetter)"
+    ],
+    "short_justification": "Grundsätzlich strukturiert und sicherheitsorientiert, aber generisch. Nutzt den minimalen Kontext (nur asset_osm) nicht sichtbar; spekuliert über Gefahrenstellen/Wetter ohne Signal. Dokumentation und Eskalation vorhanden, aber nicht kontextspezifisch."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.983
+  },
+  "error": {}
+}

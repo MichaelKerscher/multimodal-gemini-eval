@@ -6,7 +6,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Eskalation, gute Dokumentation. Nutzt minimalen Kontext korrekt (Asset-ID), keine Überbehauptungen. Strukturiert und umsetzbar."
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation vorhanden, Dokumentation gut. Kontext minimal, daher keine Nutzung von Umgebungsdaten – aber auch nicht erwartbar. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, nutzt Kontext optimal (Dämmerung/poor visibility → Beleuchtung der Absperrung, Koordinaten, severity=high → Notdienst). Strukturiert, vollständig dokumentiert, keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first klar, Eskalation mit severity=high passend, Koordinaten genutzt, schlechte Sicht (poor_visibility) adressiert ('zusätzliche Beleuchtung'), Dokumentation vollständig, keine Halluzinationen. Nahezu perfekt."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext korrekt (OSM-ID, Koordinaten, photo_available → Workflow-Hinweis), severity=high → Eskalation mit Feuerwehr/Polizei-Option. Vollständige Dokumentation, keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first (Absicherung Schritt 1), Eskalation mit hoher Priorität, Foto-Hinweis genutzt, Dokumentation vollständig, Kontext korrekt interpretiert (device.* = Techniker-Gerät, nicht Asset). Keine Halluzinationen, sehr strukturiert."
   }
 ]

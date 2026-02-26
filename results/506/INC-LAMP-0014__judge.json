@@ -6,7 +6,7 @@
       "H": 4,
       "S": 3,
       "D": 4,
-      "K": 3
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -14,16 +14,31 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
-      "Keine Priorisierung nach Severity/Traffic (nicht im Kontext)"
-    ],
-    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first, klarer Eskalationslogik und Dokumentation. Kontext minimal, daher generisch aber korrekt; keine Halluzinationen."
+    "missing_elements": [],
+    "short_justification": "Klare, strukturierte Antwort mit Safety-first (Absicherung Schritt 1), Eskalationslogik und guter Dokumentation. Kontextnutzung optimal (minimal context, keine Überbehauptungen). Leichte Schwäche: Eskalationskriterien könnten präziser sein (severity medium nicht explizit adressiert)."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
     "scores": {
-      "R": 5,
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Antwort: Safety-first klar, Eskalation mit Gefahren-Trigger (herabhängende Kabel), nutzt Kontext sinnvoll (online-Status → Fehler an Lampe selbst). Dokumentation inkl. Foto-Hinweis. Struktur und Priorisierung stark."
+  },
+  {
+    "test_id": "INC-LAMP-0014-TC3",
+    "scores": {
+      "R": 4,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -36,24 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (device online → kein Offline-Workflow, low traffic → angepasste Absicherung, day/clear → normale Sicht). Klare Struktur, Safety-first, Eskalation differenziert, Dokumentation vollständig."
-  },
-  {
-    "test_id": "INC-LAMP-0014-TC3",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 4,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Perfekte Struktur mit klaren, umsetzbaren Schritten. Nutzt Kontext optimal (low traffic, day, online), Safety-first, differenzierte Eskalation, vollständige Dokumentation. Keine Halluzinationen, präzise Rückfrage."
+    "short_justification": "Exzellente Kontextnutzung: berücksichtigt explizit Tageslicht/niedrige Verkehrsbelastung für Risikobewertung, nutzt device.connectivity korrekt (keine Offline-Workflow-Erwähnung, da online). Safety-first, klare Eskalation, gute Dokumentation. Sehr kompakt und umsetzbar."
   }
 ]

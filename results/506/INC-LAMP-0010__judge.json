@@ -2,7 +2,28 @@
   {
     "test_id": "INC-LAMP-0010-TC1",
     "scores": {
-      "R": 4,
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Priorisierung bei severity=high erkennbar",
+      "Eskalation nicht als primärer Schritt bei hoher Gefahr"
+    ],
+    "short_justification": "Antwort ist strukturiert und fallbezogen, beginnt mit Absicherung. Jedoch fehlt bei minimalem Kontext die Erkennung, dass severity/traffic nicht bekannt sind, daher konservative Eskalationslogik schwach. Dokumentation und Struktur solide."
+  },
+  {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 5,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -14,28 +35,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first (Absicherung zuerst), klarer Eskalationslogik und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber solide umsetzbar."
-  },
-  {
-    "test_id": "INC-LAMP-0010-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 4,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Offline-Workflow bei connectivity=spotty nicht erwähnt",
+      "Keine explizite Anweisung zur lokalen Datenspeicherung"
     ],
-    "short_justification": "Exzellente Struktur, Safety-first klar (Absicherung + Polizei bei hoher Verkehrsdichte), severity=high + traffic=high adressiert. Spotty connectivity nicht explizit als Offline-Workflow behandelt, sonst nahezu perfekt."
+    "short_justification": "Sehr gute Antwort: klar strukturiert, safety-first, nutzt Kontext (Regen, high traffic, dusk, severity=high) sichtbar. Eskalation bei Verkehrsgefahr klar benannt. Offline-Workflow fehlt trotz spotty connectivity, daher K=3."
   },
   {
     "test_id": "INC-LAMP-0010-TC3",
@@ -53,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Umsetzung: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später synchronisieren), Eskalation passend zu severity/traffic, Dokumentation vollständig. Kontext optimal genutzt, keine Halluzinationen."
+    "short_justification": "Nahezu perfekte Antwort: Safety-first, klare Schrittfolge, nutzt alle Kontextsignale (severity=high, spotty connectivity → offline workflow, Regen/Dusk/Traffic → Sicherheitsmaßnahmen). Dokumentation und Eskalation klar priorisiert. Keine Halluzinationen."
   }
 ]

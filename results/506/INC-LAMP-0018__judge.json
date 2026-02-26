@@ -4,27 +4,46 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
-      "D": 3,
+      "S": 3,
+      "D": 4,
       "K": 2
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Kontext-Nutzung (Umgebung, Zeit, Wetter fehlen komplett)",
+      "Spekulation über Ampelanlage ohne Basis im CONTEXT"
+    ],
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber spekuliert stark über Ampelanlage/Polizei ohne jede Grundlage im minimalen CONTEXT. K=2 wegen Halluzination (erfundene Asset-Typen). Dokumentation gut, aber Kontextnutzung schwach."
+  },
+  {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Severity-angepasste Priorisierung",
-      "Umgebungskontext (Wetter/Sicht/Verkehr)",
-      "Klare Safety-first Struktur"
+      "Nebel/poor_visibility nicht explizit in Sicherheitsmaßnahmen integriert"
     ],
-    "short_justification": "Grundsätzlich passende Schritte für Steuerungsproblem, aber Absicherung nicht klar priorisiert. Kontext minimal (nur Asset-ID), daher generische Antwort ohne Umgebungs-/Risikobewertung akzeptabel, aber K=2 wegen fehlender Kontextnutzung."
+    "short_justification": "Sehr gute Antwort: nutzt Kontext (Nacht, Nebel, medium traffic, online) sichtbar, klare Schrittfolge, Safety-first, Eskalation vorhanden, Dokumentation vollständig. Nebel wird erwähnt, aber könnte stärker in Absicherung einfließen."
   },
   {
-    "test_id": "INC-LAMP-0018-TC2",
+    "test_id": "INC-LAMP-0018-TC3",
     "scores": {
-      "R": 5,
+      "R": 4,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -37,24 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel/Nacht/medium traffic → verstärkte Absicherung), klare Safety-first Struktur, severity-angemessene Eskalation. Dokumentation umfassend, Schritte priorisiert und umsetzbar."
-  },
-  {
-    "test_id": "INC-LAMP-0018-TC3",
-    "scores": {
-      "R": 5,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Kontextintegration (Nebel/Nacht → zusätzliche Warnleuchten, Online-Verbindung → Ferndiagnose, offlinefähige Doku erwähnt). Safety-first klar, Eskalation severity-angemessen, Struktur umsetzbar."
+    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht/medium traffic explizit in Absicherung integriert, online-Steuerung erwähnt, klare Struktur, Safety-first, Eskalation, Dokumentation vollständig. Keine Halluzinationen, keine irrelevanten Spekulationen."
   }
 ]

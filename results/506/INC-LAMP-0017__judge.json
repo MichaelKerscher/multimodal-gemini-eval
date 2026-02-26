@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0017-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 3,
+      "H": 3,
+      "S": 3,
       "D": 4,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -14,16 +14,40 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal, daher generisch aber korrekt; keine Halluzinationen. Offline-Workflow nicht erwartbar (kein Signal im Context)."
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext (nur wiederholt)",
+      "Keine Anpassung an fehlende Umwelt-/Incident-Daten"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur asset_osm), Antwort bleibt generisch ohne spezifische Anpassung an Tageszeit/Wetter/Severity."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kein expliziter Hinweis auf medium severity → Priorisierung",
+      "Foto vorhanden, aber nur kurz erwähnt"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Regen, Dämmerung, schlechte Sicht explizit in Safety integriert. Strukturiert, umsetzbar, Eskalation klar. Dokumentation solide, Foto-Hinweis vorhanden. Gerät online/low_power kurz erwähnt."
+  },
+  {
+    "test_id": "INC-LAMP-0017-TC3",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -33,24 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (Regen, Dämmerung, low_power_mode, Foto vorhanden), klare Schrittfolge mit Safety-first, Eskalation und Dokumentation vollständig. Keine Halluzinationen, sehr umsetzbar."
-  },
-  {
-    "test_id": "INC-LAMP-0017-TC3",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Hervorragend: nutzt Kontext vollständig (Regen, Dämmerung, low_power_mode → offline-Hinweis, Foto vorhanden), klare Safety-first-Struktur, Eskalation differenziert, Dokumentation inkl. offline-Fähigkeit. Keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung: Regen/Dämmerung in Safety, Foto-Workflow integriert, Gerätezustand (online/low_power) korrekt als Workflow-Constraint erkannt (nicht als Asset-Fehler). Strukturiert, priorisiert, Eskalation severity-angemessen, Dokumentation vollständig."
   }
 ]

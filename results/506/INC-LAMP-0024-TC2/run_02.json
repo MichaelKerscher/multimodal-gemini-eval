@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC2",
+  "timestamp": "2026-02-26T14:23:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Lampenausfall  \n**Objekt:** Rosenheim, Bahnhof  \n**Bedingungen:** Nacht, schlechte Sicht, Sturm, viel Verkehr\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchte) aufstellen, um Arbeitsbereich zu sichern.\n   - Auf vorbeifahrenden Verkehr achten, ggf. zweite Person zur Absicherung hinzuziehen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Wackeln, Feuchtigkeit, lose Kabel).\n   - Umgebung auf Gefahren durch Sturm (herabfallende Äste, lose Teile) kontrollieren.\n   - Prüfen, ob weitere Lampen betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Da Fehler sporadisch ist: Lampe über mehrere Minuten beobachten.\n   - Prüfen, ob Ausfall mit Windböen oder Feuchtigkeit zusammenhängt.\n   - Da Gerät „offline“ ist: Keine Fernabfrage möglich, Fehlerbild vor Ort dokumentieren.\n   - Prüfen, ob Feuchtigkeit ins Gehäuse eingedrungen ist (ggf. öffnen, Sichtkontrolle).\n\n4. **Dokumentation**\n   - Fotos vom Ist-Zustand und eventuellen Auffälligkeiten machen.\n   - Fehlerbeschreibung, Wetterbedingungen und eigene Beobachtungen notieren.\n   - Zeitpunkt und Dauer der Beobachtung festhalten.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. loser Mast, Funkenbildung): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei weiterhin sporadischem Fehler: Störung an Fachfirma/Elektroservice weiterleiten, ggf. Austausch oder Feuchtigkeitsschutz prüfen lassen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder ähnliche Störungen an dieser Lampe oder im Stromnetz?  \nSind weitere Lampen in der Nähe betroffen?  \n\n**Hinweis:**  \nBei Sturm und hoher Verkehrsdichte ist besondere Vorsicht geboten. Arbeiten möglichst zu verkehrsarmen Zeiten durchführen, falls keine akute Gefahr besteht.",
+    "tokens_estimate_words": 216
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow könnte expliziter sein (z.B. 'lokal speichern, später sync')"
+    ],
+    "short_justification": "Sehr gute Antwort: Safety-first klar (Warnweste, Absicherung), nutzt Kontext sichtbar (Nacht/Sturm/high traffic/offline), strukturiert, Eskalation vorhanden. Offline-Workflow implizit ('keine Fernabfrage möglich'), aber nicht explizit als Sync-Schritt formuliert. Dokumentation stark."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.744
+  },
+  "error": {}
+}

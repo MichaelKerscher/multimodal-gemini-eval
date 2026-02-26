@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0006-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 3,
+      "H": 3,
+      "S": 3,
       "D": 4,
-      "K": 5
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -14,16 +14,19 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Antwort trotz minimalem Kontext. Klare Struktur mit Safety-first, sinnvolle Schrittfolge, Eskalation vorhanden. Keine Halluzinationen, nutzt verfügbare Asset-ID korrekt. Offline-Workflow nicht erwartbar (kein Signal im Kontext)."
+    "missing_elements": [
+      "Offline-Workflow (nicht erwartbar, da kein Signal im Context)",
+      "Wetter-/Verkehrskontext (nicht erwartbar)"
+    ],
+    "short_justification": "Antwort ist strukturiert und fallbezogen, beginnt mit Absicherung und enthält klare Eskalation. Dokumentation gut abgedeckt. Kontext minimal, daher keine Offline-/Wetter-Hinweise erwartbar – kein Fehler."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 2
     },
     "flags": {
@@ -33,10 +36,10 @@
       "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow (lokal speichern/später sync)",
-      "Keine Online-Schritte bei connectivity=offline"
+      "Offline-Workflow explizit (connectivity=offline)",
+      "Keine Spekulation über Asset-Defekt"
     ],
-    "short_justification": "Gute Struktur und Safety-first erkennbar. ABER: Kontext zeigt connectivity=offline, device_state=low_battery – Antwort ignoriert dies komplett, schlägt keine Offline-Dokumentation vor. Halluzination: 'Annahme, dass Lampe keinen Strom oder Batteriewechsel benötigt' – device.* beschreibt Techniker-Gerät, nicht Asset (siehe context_notes in TC3)."
+    "short_justification": "Sehr gute Struktur, Safety-first, klare Eskalation, vollständige Dokumentation. ABER: Interpretiert 'low_battery/offline' als Asset-Defekt ('Energieversorgung oder Steuerung defekt'), obwohl Context-Notes klar sagen, dass device.* das Techniker-Gerät beschreibt. Halluzination → K=2."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -54,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort. Nutzt Kontext perfekt: Offline-Workflow explizit (lokal speichern, später sync), Safety-first bei Sturm/high traffic, klare Eskalation bei severity=high. Keine Halluzinationen, versteht device.* korrekt als Techniker-Gerät. Struktur, Dokumentation und Robustheit vorbildlich."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, Offline-Workflow explizit ('lokal speichern', 'nach Wiederherstellung synchronisieren'), korrekte Kontextnutzung (Sturm/Verkehr/Sicht), vollständige Dokumentation, keine Halluzinationen. Alle erwartbaren Elemente erfüllt."
   }
 ]

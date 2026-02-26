@@ -15,11 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Kontextnutzung minimal (nur Asset-ID)",
-      "Keine Priorisierung nach Severity/Traffic",
-      "Keine Berücksichtigung von Zeit/Wetter"
+      "Keine Priorisierung nach severity/traffic",
+      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)"
     ],
-    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Dokumentation gut. Aber: Kontext wird kaum genutzt (nur Asset-ID), keine Anpassung an severity/traffic/time_of_day, da diese Infos fehlen. Generisch, aber korrekt."
+    "short_justification": "Grundsätzlich strukturiert mit Safety-first und Eskalation. Aber bei minimalem Kontext (nur Asset-ID) bleibt die Antwort generisch und nutzt keine spezifischen Signale. Dokumentation gut, aber Handlungsfähigkeit durch fehlende Priorisierung eingeschränkt."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -28,18 +27,16 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 2
+      "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Halluzination: 'niedrigen Batteriestand' als Asset-Problem interpretiert"
-    ],
-    "short_justification": "Exzellente Struktur, Safety-first, klare Eskalation, vollständige Dokumentation, nutzt Kontext (night/high traffic/severity). ABER: Halluzination bei device_state=low_battery – wird fälschlich als Asset-Problem dargestellt, obwohl es das Techniker-Gerät betrifft. K<=2 wegen Halluzination."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt alle relevanten Kontext-Signale (high severity, night, high traffic, low_battery, poor_visibility), klare Schrittfolge mit Safety-first, präzise Eskalationslogik, vollständige Dokumentation. Keine Halluzinationen, alle Aussagen durch Kontext gedeckt."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -57,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, vollständige Dokumentation, nutzt Kontext korrekt (night/high traffic/severity/photo_available). Erwähnt schwachen Akku korrekt als Geräte-Constraint für Dokumentation, keine Halluzination. Offline-Workflow nicht nötig (connectivity=online)."
+    "short_justification": "Nahezu identisch zu TC2: exzellente Kontextnutzung (severity high, traffic high, poor_visibility, night), klare Safety-first-Struktur, präzise Eskalation, vollständige Dokumentation inkl. Foto-Workflow. Alle Aussagen durch Kontext validiert, keine Halluzinationen."
   }
 ]

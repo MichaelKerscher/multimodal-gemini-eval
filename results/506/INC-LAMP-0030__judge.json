@@ -6,7 +6,7 @@
       "H": 3,
       "S": 3,
       "D": 3,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -14,8 +14,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide Antwort mit klarer Struktur und Sicherheitsfokus. Kontext ist minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Alle Schritte sind sinnvoll und umsetzbar, aber ohne spezifische Kontextnutzung bleibt es etwas generisch."
+    "missing_elements": [
+      "Keine Nutzung des minimalen Kontexts (nur asset_osm vorhanden)",
+      "Spekuliert über Gefahrenstellen ohne Kontext-Signal",
+      "Fragt nach Infos, die nicht erwartbar sind (Bauarbeiten, Unwetter)"
+    ],
+    "short_justification": "Grundsätzlich strukturiert und sicherheitsorientiert, aber generisch. Nutzt den minimalen Kontext (nur asset_osm) nicht sichtbar; spekuliert über Gefahrenstellen/Wetter ohne Signal. Dokumentation und Eskalation vorhanden, aber nicht kontextspezifisch."
   },
   {
     "test_id": "INC-LAMP-0030-TC2",
@@ -33,9 +37,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow bei spotty connectivity"
+      "Kein expliziter Offline-Workflow trotz connectivity=spotty",
+      "Foto-Workflow nicht klar (Foto vorhanden vs. neues Foto machen)"
     ],
-    "short_justification": "Sehr gute Antwort mit klarer Kontextnutzung (Dämmerung, mittlere Verkehrsexposition, schlechte Sicht). Safety-first gut umgesetzt, Eskalation klar. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt), aber sonst stark."
+    "short_justification": "Sehr gute Kontextnutzung (Dämmerung, schlechte Sicht, mittlere Verkehrsexposition, Koordinaten). Safety-first klar, Struktur gut, Dokumentation solide. Spotty connectivity wird erwähnt, aber kein expliziter Offline-Workflow (lokal speichern/später sync). Foto-Logik unklar."
   },
   {
     "test_id": "INC-LAMP-0030-TC3",
@@ -53,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (spotty connectivity → Offline-Workflow, Dämmerung/Verkehr → Safety), klare Schrittfolge, vollständige Dokumentation, keine Halluzinationen. Eskalation klar, aber könnte noch expliziter priorisiert sein (daher S=4 statt 5)."
+    "short_justification": "Exzellente Kontextnutzung: spotty connectivity führt zu explizitem Offline-Workflow (lokal speichern, später sync). Safety-first, klare Struktur, vollständige Dokumentation, passende Eskalation. Nutzt alle relevanten Signale (Dämmerung, Sicht, Verkehr, photo_available) korrekt. Keine Halluzinationen."
   }
 ]

@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0008-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,15 +15,15 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Dokumentation gut, aber keine spezifischen Kontextsignale genutzt (weil nicht vorhanden)."
+    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung; K=3 wegen fehlender Kontextnutzung (aber kein Fehler bei minimalem CONTEXT)."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 4
     },
     "flags": {
@@ -33,14 +33,14 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Kontextnutzung: Nebel/Sichtbarkeit, spotty connectivity → Offline-Workflow erwähnt ('Fernwartung eingeschränkt, vor Ort Diagnose bevorzugen'). Safety-first klar, Struktur umsetzbar, Dokumentation vollständig."
+    "short_justification": "Exzellente Antwort: Safety first, klare Schrittfolge, Eskalationslogik passend zu severity=low, Nebel/Nacht berücksichtigt, spotty connectivity → Offline-Hinweis ('Fernzugriff eingeschränkt, vor Ort prüfen'). K=4 wegen impliziter statt expliziter Offline-Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (Nebel, Nacht, spotty → offline speichern, Low-Power-Modus → energiesparend arbeiten). Klare Schrittfolge, Safety-first, vollständige Dokumentation inkl. Synchronisation nach Verbindungswiederherstellung. Keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Safety first, strukturiert, Eskalation differenziert nach Risiko, expliziter Offline-Workflow ('offline speichern, später synchronisieren'), Nebel/Nacht/Low-Power klar integriert, GPS-Koordinaten genutzt. Keine Halluzinationen."
   }
 ]

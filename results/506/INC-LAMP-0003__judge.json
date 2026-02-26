@@ -2,27 +2,6 @@
   {
     "test_id": "INC-LAMP-0003-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
-      "D": 3,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Keine Kontextnutzung erkennbar (minimaler Context)",
-      "Keine spezifische Anpassung an Umgebung/Zeit/Gerät"
-    ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext ist minimal, daher keine Erwartung an spezifische Anpassungen. Alle Kernelemente vorhanden, aber keine Differenzierung möglich."
-  },
-  {
-    "test_id": "INC-LAMP-0003-TC2",
-    "scores": {
       "R": 4,
       "H": 4,
       "S": 4,
@@ -36,10 +15,31 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
-      "Batterie-Hinweis gut, aber device_state bezieht sich auf Techniker-Gerät, nicht Asset"
+      "Standortangabe (GPS/Name) aus CONTEXT nutzen",
+      "Offline-Workflow nicht erwartbar (kein Signal)"
     ],
-    "short_justification": "Sehr gute kontextbezogene Antwort mit klarer Struktur, Safety-first und Eskalation. Nutzt Umgebung (Nacht, poor visibility) gut. Kleine Verwechslung: low_battery bezieht sich auf Techniker-Gerät, nicht Lampe. Offline-Workflow fehlt bei spotty connectivity."
+    "short_justification": "Strukturierte, umsetzbare Checkliste mit klarer Priorisierung (Absicherung zuerst). Eskalation und Dokumentation gut abgedeckt. Kontext minimal, daher keine Offline-Workflow-Erwartung; Asset-ID wird erwähnt, aber Name/GPS nicht genutzt (im CONTEXT vorhanden)."
+  },
+  {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow (spotty connectivity)",
+      "Halluzination: 'solar-/akkubetrieben' nicht im CONTEXT"
+    ],
+    "short_justification": "Gute Struktur und Safety-first. ABER: Antwort spekuliert stark über 'solar-/akkubetriebene Leuchte' basierend auf device.low_battery – das beschreibt laut Kontext das Techniker-Gerät, NICHT das Asset. Spotty connectivity erfordert Offline-Workflow, fehlt hier. K<=2 wegen Halluzination."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -57,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext korrekt (spotty→offline workflow, Nacht→Sicht, low_battery→Gerät nicht Asset), klare Struktur, Safety-first, vollständige Dokumentation mit Offline-Hinweis, passende Eskalation. Alle erwartbaren Elemente erfüllt."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext korrekt (Offline-Workflow bei spotty connectivity, Standort, Nacht/poor_visibility → Absicherung), klare Schrittfolge, Safety-first, vollständige Dokumentation. Keine Halluzinationen, versteht device.* als Techniker-Gerät. Nahezu perfekt."
   }
 ]

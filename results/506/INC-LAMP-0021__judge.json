@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Kontextnutzung minimal (nur Asset-ID)",
-      "Keine Anpassung an Umgebung/Zeit/Wetter",
-      "Generische Schritte ohne Priorisierung"
+      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
+      "Keine Anpassung an Umgebung/Wetter/Zeit",
+      "Keine Offline-Workflow-Erwähnung trotz minimalem Kontext"
     ],
-    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation, aber sehr generisch. Nutzt minimalen Kontext nicht für spezifische Anpassungen (z.B. Nacht/Regen/Sicht). Keine Halluzinationen, aber auch keine kontextbezogene Tiefe."
+    "short_justification": "Generisch passende Antwort mit klarer Struktur und Safety-first. Kontext wird nicht genutzt (nur Asset-ID vorhanden), daher K=2. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
     "scores": {
-      "R": 5,
+      "R": 4,
       "H": 4,
       "S": 4,
       "D": 4,
@@ -37,17 +37,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (connectivity=spotty)",
-      "Keine explizite Synchronisations-Logik"
+      "Kein expliziter Offline-Workflow trotz connectivity=spotty",
+      "Foto-Handling nicht an spotty connectivity angepasst"
     ],
-    "short_justification": "Sehr gute fallbezogene Antwort: nutzt Wetter/Nacht/Sicht für Safety-Anpassungen, klare Schrittfolge, gute Dokumentation. Connectivity=spotty wird nicht explizit adressiert (Offline-Workflow fehlt), sonst nahezu vollständig."
+    "short_justification": "Sehr gute fallbezogene Antwort mit klarer Nutzung von Standort, Wetter (Regen), Zeit (Nacht), Sicht. Safety-first und Eskalation klar. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt), daher K=3."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -58,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Wetter, Nacht, Sicht, connectivity=spotty → Offline-Workflow explizit), klare Priorisierung, Safety-first, Eskalation mit Triggern, Dokumentation inkl. Synchronisation. Keine Halluzinationen, alle erwartbaren Elemente erfüllt."
+    "short_justification": "Exzellente Antwort: nutzt alle relevanten Kontextfelder (Wetter, Sicht, Zeit, spotty connectivity), integriert Offline-Workflow explizit (lokal speichern/synchronisieren), klare Struktur, Safety-first, passende Eskalation. Keine Halluzinationen."
   }
 ]

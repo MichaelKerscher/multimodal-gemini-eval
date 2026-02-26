@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T14:14:25",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein zeitweiser Ausfall vor, aktuell funktioniert die Anlage jedoch wieder. Hier ist das empfohlene Vorgehen:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Leitkegeln oder Warnleuchten absichern.\n   - Bei Bedarf Verkehr umleiten oder Polizei informieren.\n\n2. **Sichtprüfung**\n   - Anlage äußerlich auf Beschädigungen, lose Kabel, Feuchtigkeit oder Vandalismus prüfen.\n   - Prüfen, ob alle Leuchten/Ampelphasen wie vorgesehen funktionieren.\n\n3. **Diagnose/Beobachtung**\n   - Anlage mindestens einen vollständigen Zyklus beobachten (bei Ampel: alle Phasen; bei Straßenlampe: ggf. Wartezeit einplanen).\n   - Auf Flackern, Aussetzer oder unregelmäßiges Verhalten achten.\n   - Falls möglich, Fehlerprotokoll oder Statusanzeige der Steuerung auslesen.\n\n4. **Dokumentation**\n   - Beobachtungen, Uhrzeit und Wetterbedingungen notieren.\n   - Fotos von eventuellen Auffälligkeiten machen.\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, sicherheitsrelevanten Mängeln oder unklarer Ursache: Meldung an Fachabteilung/Technik weiterleiten.\n   - Bei Gefahr im Verzug: Sofortige Absicherung und Information an Einsatzleitung.\n\n**Rückfrage:**  \nGibt es Angaben, zu welcher Tageszeit oder bei welchen Bedingungen der Ausfall auftrat? Das hilft, mögliche Ursachen (z. B. Feuchtigkeit, Dämmerungsschalter) einzugrenzen.",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Text",
+      "Keine Erwähnung des intermittierenden Charakters"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal, daher generisch aber korrekt. Asset-ID wird nicht aktiv genutzt, bleibt etwas abstrakt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.211
+  },
+  "error": {}
+}

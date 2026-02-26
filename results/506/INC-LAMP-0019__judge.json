@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -14,16 +14,19 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, Eskalation passend zu 'unsicher'. Kontext minimal (nur OSM-ID), daher keine Umgebungsdetails erwartbar. Generisch, aber korrekt."
+    "missing_elements": [
+      "Keine Nutzung von Umgebungskontext (Wetter/Sicht/Verkehr) - nicht im CONTEXT vorhanden, daher kein Fehler",
+      "Eskalation könnte konkreter sein (Trigger/Priorität)"
+    ],
+    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal, daher generisch aber korrekt. Keine Halluzinationen. Rückfragen sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
     "scores": {
       "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -32,15 +35,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellent: Nebel/poor_visibility/night explizit adressiert, klare Schrittfolge, Safety-first, differenzierte Eskalation, vollständige Dokumentation, keine Halluzinationen."
+    "missing_elements": [
+      "Stop-Conditions könnten expliziter sein"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlerer Verkehr, schlechte Sicht). Safety-first klar, Eskalation passend zu severity=medium. Struktur gut, Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
     "scores": {
       "R": 5,
-      "H": 5,
-      "S": 5,
+      "H": 4,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Nebel/Nacht/traffic_exposure klar integriert, strukturiert, Safety-first, Eskalationslogik differenziert, vollständige Doku inkl. OSM-ID/Koordinaten, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Kontext vollständig genutzt (Nebel, Nacht, Verkehr, Sicht), Safety-first, klare Eskalation, sehr gute Dokumentation. Struktur umsetzbar, keine Halluzinationen."
   }
 ]

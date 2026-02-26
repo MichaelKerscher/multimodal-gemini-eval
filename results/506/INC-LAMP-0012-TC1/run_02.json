@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC1",
+  "timestamp": "2026-02-26T14:18:38",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n12520338291)",
+    "context": {
+      "asset_osm": "n12520338291"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung! Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für den Außendienst – Dunkle Straßenlampe (Asset-ID: n12520338291)**\n\n1. **Absicherung**\n   - Bereich um die Lampe auf akute Gefahren prüfen (z. B. Stolperstellen, schlechte Sicht).\n   - Falls nötig: Warnbaken oder Absperrband aufstellen, um Passanten zu schützen.\n\n2. **Sichtprüfung**\n   - Lampe und Umgebung auf offensichtliche Schäden, Vandalismus oder lose Kabel kontrollieren.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Leuchtmittel defekt? (Glas dunkel, kein Flackern)\n   - Stromversorgung prüfen (z. B. Sicherungskasten, falls zugänglich).\n   - Gab es in der Umgebung Stromausfälle oder Bauarbeiten?\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Uhrzeit und Beobachtungen notieren.\n   - Fotos vom Zustand der Lampe und Umgebung machen.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsfirma oder Leitstelle melden.\n   - Bei akuter Gefährdung (z. B. stark frequentierter Bereich, Schulweg): Priorisierte Bearbeitung anfordern.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen oder besondere Gefahrenstellen im Umfeld?  \nFalls ja, bitte kurz beschreiben – das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 164
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung), Eskalation und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leichte Abzüge bei S (Eskalation nicht priorisiert genug) und K (generisch, da Kontext fehlt)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.838
+  },
+  "error": {}
+}

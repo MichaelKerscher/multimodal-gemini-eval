@@ -15,32 +15,34 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, Diagnose und Eskalation. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Keine Halluzinationen, aber auch keine kontextspezifischen Details (Wetter/Traffic), da nicht verfügbar."
+    "short_justification": "Klare Struktur mit Safety-first und Eskalation. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Dokumentation gut, aber keine explizite GPS/Ort-Erfassung."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first mit Sturm/Traffic-Anpassung, klare Schrittfolge, Offline-Hinweis ('Gerät ist offline, keine Ferndiagnose'), Eskalation bei Gefahr, Dokumentation mit Fotos. Nutzt Kontext vollständig und korrekt."
+    "missing_elements": [
+      "Offline-Workflow (lokal dokumentieren/Foto lokal speichern)"
+    ],
+    "short_justification": "Sehr gute Struktur, Safety-first klar, Sturm-Risiko adressiert. Offline-Kontext (connectivity=offline) nicht explizit als Workflow-Constraint genutzt, aber sonst stark."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first mit Sturm/Traffic-Bezug, klare Offline-Workflow-Integration ('offline speichern', 'Daten synchronisieren'), strukturierte Schritte, Eskalation bei Gefahr, vollständige Dokumentation. Nutzt extras.context_notes korrekt."
+    "short_justification": "Exzellent: Offline-Workflow explizit integriert (lokal speichern/später synchronisieren), Sturm-Risiko adressiert, klare Schrittfolge, vollständige Dokumentation inkl. Eskalation. Kontext optimal genutzt."
   }
 ]

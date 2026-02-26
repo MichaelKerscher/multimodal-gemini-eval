@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0012-TC2",
+  "timestamp": "2026-02-26T14:18:38",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520338291",
+        "longitude": 12.1178456,
+        "latitude": 47.8505506,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T15:41:46+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0012",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Störung an der Straßenlampe (n12520338291):\n\n1. Absicherung  \n – Stelle sicher, dass der Bereich um die Lampe gut sichtbar ist.  \n – Warne ggf. Verkehrsteilnehmer (z. B. mit Warnbake oder Warnleuchte), da schlechte Sicht herrscht und der Bereich als unsicher eingeschätzt wird.\n\n2. Sichtprüfung  \n – Überprüfe die Lampe auf offensichtliche Schäden (z. B. Glasbruch, lose Teile, Vandalismus).  \n – Prüfe, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n – Da das Gerät im „low_power_mode“ ist und die Verbindung instabil („spotty“), kann ein Stromversorgungsproblem oder ein Defekt vorliegen.  \n – Prüfe, ob ein temporärer Ausfall vorliegt oder ob die Lampe nach kurzer Zeit wieder funktioniert.\n\n4. Dokumentation  \n – Notiere den genauen Standort (Koordinaten: 47.8505506, 12.1178456).  \n – Halte fest, dass keine Fotos verfügbar sind und die Sicht schlecht ist.  \n – Dokumentiere alle Beobachtungen und Maßnahmen.\n\n5. Eskalation  \n – Melde die Störung mit Priorität „mittel“ an die zuständige Wartungsstelle, da die Verkehrssicherheit beeinträchtigt ist.  \n – Weise auf die unsichere Situation und die schlechte Sicht hin.\n\nRückfrage:  \nGibt es in der Nähe weitere dunkle Lampen oder ist nur diese betroffen? Sind aktuell viele Fußgänger oder Radfahrer unterwegs?",
+    "tokens_estimate_words": 184
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0012-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (spotty connectivity)",
+      "Explizite Anweisung: lokal dokumentieren/später sync"
+    ],
+    "short_justification": "Gute Struktur, Safety-first und Eskalation vorhanden. Aber: connectivity=spotty erfordert Offline-Workflow-Hinweis (lokal speichern/später sync), der fehlt komplett. K=2 wegen dieser Lücke."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.815
+  },
+  "error": {}
+}

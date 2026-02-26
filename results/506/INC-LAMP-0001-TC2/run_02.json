@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-26T14:14:02",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Lampenausfall  \n**Objekt:** Straßenlampe, Rosenheim Bahnhof  \n**Fehlerbild:** Lampe war aus, jetzt wieder an (sporadisch), Gerät meldet niedrigen Batteriestand, keine Online-Verbindung.\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Warndreieck aufstellen, da hohe Verkehrsexposition.\n   - Auf Sichtbarkeit und Eigenschutz achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden prüfen (Risse, lose Teile, Vandalismus).\n   - Sichtkontrolle der Verkabelung und Anschlussdose, soweit zugänglich.\n   - Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe aktuell leuchtet.\n   - Batterie-Status beachten: Gerät meldet niedrigen Ladestand – mögliches Ausfallrisiko.\n   - Da das Gerät offline ist, keine Fernabfrage möglich.\n   - Mögliche Ursachen: Wackelkontakt, schwache Batterie, Steuerungsfehler.\n   - Beobachten, ob der Fehler erneut auftritt (ggf. mehrmals schalten).\n\n4. **Dokumentation**\n   - Fotos vom aktuellen Zustand und eventuellen Auffälligkeiten machen.\n   - Fehlerbeschreibung und eigene Beobachtungen notieren.\n   - Zeitpunkt und Dauer des Ausfalls dokumentieren.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle weiterleiten, da sporadischer Fehler und niedriger Batteriestand.\n   - Hinweis auf hohe Verkehrsexposition und mögliche Verkehrssicherheitsrelevanz geben.\n   - Falls Fehler erneut auftritt oder Lampe dauerhaft ausfällt: Dringlichkeit erhöhen.\n\n**Rückfrage:**  \nSoll eine sofortige Batteriewartung beauftragt werden oder gibt es bereits einen Wartungsplan für diese Lampe?",
+    "tokens_estimate_words": 190
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow fehlt (connectivity=offline, device_state=low_battery)",
+      "Keine explizite Anweisung zu lokaler Speicherung/Synchronisation"
+    ],
+    "short_justification": "Sehr gute Nutzung von Kontext (Standort, Verkehrsexposition, Batteriestand, Offline-Status erwähnt). Safety-first klar umgesetzt. Offline-Workflow wird aber nicht explizit adressiert (z.B. 'lokal dokumentieren, später synchronisieren'), obwohl connectivity=offline im Context steht. K daher <= 2."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.743
+  },
+  "error": {}
+}

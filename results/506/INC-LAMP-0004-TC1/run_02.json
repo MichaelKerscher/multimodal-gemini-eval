@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-26T14:15:16",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\nAbsicherung  \n– Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, falls vorhanden).  \n– Passanten auf die Dunkelheit hinweisen, falls Sie vor Ort sind.\n\nSichtprüfung  \n– Prüfen, ob weitere Lampen in der Nähe betroffen sind.  \n– Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, lose Kabel, Unfallspuren).\n\nDiagnose/Beobachtung  \n– Beobachten, ob die Lampe flackert oder komplett aus ist.  \n– Prüfen, ob ein Stromausfall im Bereich vorliegt.\n\nDokumentation  \n– Asset-ID (n12551286240), Standort und Uhrzeit notieren.  \n– Festhalten, ob weitere Lampen betroffen sind.\n\nEskalation  \n– Meldung an die zuständige Wartungsstelle/Leitstelle weiterleiten, da der Bereich als unsicher beschrieben wird.  \n– Bei erhöhter Gefährdung (z. B. Schulweg, Unfallschwerpunkt) um schnelle Bearbeitung bitten.\n\nFehlen noch Angaben:  \n– Gibt es Hinweise auf Vandalismus oder Unfälle?  \n– Sind weitere Lampen in der Nähe ebenfalls ausgefallen?  \n– Gibt es eine alternative Beleuchtung im Bereich?\n\nBitte geben Sie diese Informationen an, falls möglich. Ich leite alles Weitere umgehend weiter.",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
+      "Keine Priorisierung bei high severity erkennbar"
+    ],
+    "short_justification": "Grundsolide Antwort mit Safety-first und Eskalation. Struktur ist vorhanden, aber ohne Kontext (nur Asset-ID) bleibt sie generisch. Dokumentation gut, aber keine Anpassung an severity/Umgebung möglich."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.801
+  },
+  "error": {}
+}

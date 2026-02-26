@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-26T14:24:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden ein unregelmäßiges An/Aus-Verhalten bei der Anlage mit Asset-ID n4449540379. Ursache ist aktuell unklar.\n\n**Checkliste zur Störungsbearbeitung**\n\n1. **Absicherung**\n   - Bereich absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Gibt es offensichtliche Schäden (z. B. defekte Kabel, Feuchtigkeit, Vandalismus)?\n   - Prüfen, ob weitere Anlagen im Umfeld betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Verhalten beobachten: Gibt es ein Muster beim An/Aus (z. B. wetterabhängig, tageszeitabhängig)?\n   - Prüfen, ob Schaltzeiten oder Dämmerungsschalter betroffen sein könnten.\n   - Sind in letzter Zeit Wartungsarbeiten oder Baumaßnahmen erfolgt?\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen dokumentieren (Datum, Uhrzeit, Wetter, Besonderheiten).\n   - Fotos bei sichtbaren Schäden anfertigen.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für Verkehrssicherheit: Störung an Fachfirma/Leitstelle melden.\n   - Dringlichkeit angeben (z. B. bei Hauptverkehrsstraße, Schulweg).\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es weitere Hinweise zum Störungsverlauf (z. B. seit wann, wie oft, besondere Umstände)?",
+    "tokens_estimate_words": 153
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (connectivity nicht im Context)",
+      "Spezifische Diagnose für intermittent fault"
+    ],
+    "short_justification": "Solide Struktur mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur asset_osm), daher keine Offline-Erwartung berechtigt. Generisch, aber passend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.779
+  },
+  "error": {}
+}

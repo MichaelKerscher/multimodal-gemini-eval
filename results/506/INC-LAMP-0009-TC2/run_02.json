@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0009-TC2",
+  "timestamp": "2026-02-26T14:17:20",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Flackern tritt vor allem bei Regen auf.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12557351679",
+        "longitude": 12.0896193,
+        "latitude": 47.8457235,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Endorfer Au / Krones"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-19T09:04:59+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0009",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für das Flackern der Straßenlampe (vor allem bei Regen)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (z. B. Pylonen).\n   - Arbeitsbereich absichern, auch bei geringer Verkehrsexposition.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Feuchtigkeitseintritt, Korrosion, lose Abdeckungen).\n   - Kabelzuführung und Anschlussstellen auf Feuchtigkeit oder Beschädigungen kontrollieren.\n   - Umgebung auf Pfützen oder Wasseransammlungen prüfen, die auf Undichtigkeiten hindeuten könnten.\n\n3. **Diagnose/Beobachtung**\n   - Flackern bei Regen deutet oft auf Feuchtigkeitseintritt oder Isolationsprobleme hin.\n   - Da das Gerät offline ist, keine Ferndiagnose möglich.\n   - Prüfen, ob das Flackern nur bei Nässe auftritt oder auch bei Trockenheit.\n   - Falls möglich: Lampe bei Regen und bei Trockenheit beobachten.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (z. B. Fotos bei nächster Gelegenheit nachreichen).\n   - Zeitpunkt, Wetterbedingungen und genaue Fehlerbeschreibung festhalten.\n\n5. **Eskalation**\n   - Bei bestätigtem Feuchtigkeitseintritt: Meldung an Elektrofachkraft zur weiteren Prüfung und ggf. Abdichtung/Erneuerung.\n   - Bei akuter Gefahr (z. B. freiliegende Kabel, starker Wassereintritt): Sofortige Sperrung und Meldung an Bereitschaftsdienst.\n\n**Rückfrage:**  \nGab es in der Vergangenheit bereits ähnliche Probleme an diesem Standort oder wurde kürzlich an der Lampe gearbeitet? Das hilft bei der Ursachenforschung.",
+    "tokens_estimate_words": 188
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0009-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: klar strukturiert, Safety-first, Offline-Workflow explizit erwähnt ('keine Ferndiagnose möglich', 'Fotos bei nächster Gelegenheit'), Kontext (offline, rain, dusk) sichtbar genutzt. Eskalation klar, Dokumentation gut."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.628
+  },
+  "error": {}
+}

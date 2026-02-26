@@ -15,17 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (connectivity nicht im CONTEXT, daher nicht erwartbar)"
+      "Offline-Workflow (kein Signal im CONTEXT)"
     ],
-    "short_justification": "Klare Struktur mit Safety-first, Sichtprüfung, Diagnose, Dokumentation und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Erwähnung erwartbar. Fragt sinnvoll nach Asset-Typ."
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Erwartung berechtigt. K=3, da Kontext kaum vorhanden und nicht aktiv genutzt."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
-      "D": 5,
+      "S": 4,
+      "D": 4,
       "K": 4
     },
     "flags": {
@@ -35,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext (Standort, Regen, Dämmerung, offline), Safety-first klar, strukturierte Schritte, Offline-Hinweis ('keine Ferndiagnose möglich'), klare Eskalation. Sehr umsetzbar."
+    "short_justification": "Exzellente Antwort: klar strukturiert, Safety-first, Offline-Workflow explizit erwähnt ('keine Ferndiagnose möglich', 'Fotos bei nächster Gelegenheit'), Kontext (offline, rain, dusk) sichtbar genutzt. Eskalation klar, Dokumentation gut."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -53,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: nutzt Kontext vollständig (Regen, Dämmerung, offline), expliziter Offline-Workflow ('Offline dokumentieren, Fotos lokal speichern, später synchronisieren'), Safety-first, klare Eskalation, sehr strukturiert und umsetzbar."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, Offline-Workflow explizit ('offline dokumentieren', 'Fotos lokal speichern'), Kontext (rain, dusk, poor_visibility, offline) durchgängig genutzt, Eskalation klar, Dokumentation vollständig, keine Halluzinationen."
   }
 ]

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-26T14:24:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störung an der Straßenlampe (Isarstraße/Gewerbegebiet, Rosenheim)\n\n**1. Absicherung**\n- Warnblinkanlage am Einsatzfahrzeug einschalten.\n- Warnbaken oder Pylonen aufstellen, um den Gefahrenbereich abzusichern (hohe Verkehrsexposition, schlechte Sicht).\n- Persönliche Schutzausrüstung tragen (Warnweste, ggf. Helm).\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden prüfen (z. B. Vandalismus, lose Teile, Kabel).\n- Umgebung auf weitere ausgefallene Lampen oder Gefahrenquellen kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob die Lampe tatsächlich nicht leuchtet (ggf. mit Taschenlampe kontrollieren).\n- Gerätezustand beachten: Gerät meldet „low_battery“, Lampe ist online – vermutlich Energieversorgung als Ursache.\n- Prüfen, ob andere Lampen in der Nähe betroffen sind (Hinweis auf größeren Ausfall?).\n\n**4. Dokumentation**\n- Fotos vom Ausfall und der Umgebung anfertigen (Foto laut Meldung verfügbar).\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, genaue Position).\n- Batterie-Status und Gerätezustand dokumentieren.\n\n**5. Eskalation**\n- Bei hoher Gefährdung (unsicherer Bereich, viel Verkehr): Störung umgehend an die Leitstelle/Technik weiterleiten, Priorität „hoch“.\n- Falls Ersatzbatterie vor Ort verfügbar: Austausch durchführen und Funktion prüfen.\n- Falls nicht möglich: Absicherung bis zur Reparatur aufrechterhalten, ggf. Polizei informieren.\n\n**Rückfrage:**  \nSoll die Lampe sofort vor Ort repariert werden oder ist ein Notdienst bereits informiert? Sind weitere Lampen im Bereich betroffen?",
+    "tokens_estimate_words": 196
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt alle relevanten Kontext-Signale (high severity, night, high traffic, low_battery, poor_visibility), klare Schrittfolge mit Safety-first, präzise Eskalationslogik, vollständige Dokumentation. Keine Halluzinationen, alle Aussagen durch Kontext gedeckt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.264
+  },
+  "error": {}
+}

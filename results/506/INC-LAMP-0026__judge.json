@@ -2,9 +2,9 @@
   {
     "test_id": "INC-LAMP-0026-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 3,
+      "H": 3,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -15,34 +15,38 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Kontext)"
+      "Offline-Workflow (connectivity nicht im Context)",
+      "Spezifische Diagnose für intermittent fault"
     ],
-    "short_justification": "Klare Struktur mit Safety-first, Diagnose, Dokumentation und Eskalation. Relevante Rückfragen. Kontext minimal, daher generisch aber angemessen – keine Halluzinationen."
+    "short_justification": "Solide Struktur mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur asset_osm), daher keine Offline-Erwartung berechtigt. Generisch, aber passend."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellent: Nutzt Kontext vollständig (Nebel, offline, mittlere Verkehrsexposition, keine Fotos). Offline-Workflow explizit erwähnt, Safety-first, klare Schrittfolge, vollständige Dokumentation."
+    "missing_elements": [
+      "Offline-Workflow explizit (connectivity=offline im Context)",
+      "Hinweis auf lokale Speicherung/Synchronisation"
+    ],
+    "short_justification": "Gute Struktur, Safety, Eskalation, Dokumentation. Kontext (Nebel, offline) teilweise genutzt. ABER: connectivity=offline wird NICHT adressiert (kein Offline-Workflow erwähnt) → K=2."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -53,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Nutzt Kontext vollständig inkl. Guardrails (offline → lokal speichern/später synchronisieren). Safety-first, klare Struktur, Diagnose auf Tageslicht-Kontext bezogen, vollständige Dokumentation."
+    "short_justification": "Exzellent: Offline-Workflow klar integriert ('lokal dokumentieren', 'später synchronisieren'), Kontext (Nebel, offline, intermittent) sichtbar genutzt, klare Struktur, Safety, Eskalation, Dokumentation vollständig."
   }
 ]

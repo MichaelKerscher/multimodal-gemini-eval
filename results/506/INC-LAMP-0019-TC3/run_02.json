@@ -1,0 +1,268 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC3",
+  "timestamp": "2026-02-26T14:21:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch"
+      },
+      "asset": {
+        "asset_osm": "n4939032796",
+        "latitude": 47.8552359,
+        "longitude": 12.1220818
+      },
+      "device": {
+        "connectivity": "online",
+        "device_state": "ok"
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
+        ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "medium",
+          "fault_type": "outage",
+          "offline": false,
+          "spotty": false,
+          "connectivity": "online",
+          "device_state": "ok",
+          "low_battery": false,
+          "weather": "fog",
+          "poor_visibility": true,
+          "time_of_day": "night",
+          "photo_available": false
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 666
+        },
+        "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 666,
+    "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      }
+    ],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Außendienst-Einsatz – Straßenlampe dunkel, Bereich unsicher**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Pylonen oder Warnleuchten absichern, besonders bei schlechter Sicht (Nacht, Nebel).\n   - Bei mittlerer Verkehrsexposition auf vorbeifahrende Fahrzeuge achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf offensichtliche Schäden prüfen (z. B. Glasbruch, Vandalismus, lose Kabel).\n   - Umfeld auf weitere dunkle Lampen oder Störungen prüfen.\n   - Prüfen, ob der Bereich durch andere Lichtquellen notdürftig beleuchtet ist.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob Sicherung oder Leuchtmittel defekt (sofern gefahrlos möglich).\n   - Bei mehreren betroffenen Lampen: Hinweis auf Leitungs- oder Steuerungsproblem.\n   - Witterung (Nebel) und schlechte Sicht erhöhen das Risiko – schnelle Behebung priorisieren.\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Lampe und der Absicherung machen.\n   - Uhrzeit, Wetter, Sichtverhältnisse und getroffene Maßnahmen notieren.\n   - Fehlerbeschreibung und erste Diagnose im System erfassen.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung (z. B. Unfallgefahr, kein Licht auf Hauptweg): Sofortige Meldung an Bereitschaft/Leitstelle zur schnellen Reparatur.\n   - Falls Ersatzteile oder Spezialtechnik benötigt werden, Einsatz dokumentieren und Rückmeldung geben.\n\n**Rückfrage:**  \nIst die Lampe Teil einer Kette (mehrere Lampen betroffen) oder handelt es sich um einen Einzelfall? Gibt es Hinweise auf Manipulation oder Vandalismus?",
+    "tokens_estimate_words": 194
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC3",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Kontext vollständig genutzt (Nebel, Nacht, Verkehr, Sicht), Safety-first, klare Eskalation, sehr gute Dokumentation. Struktur umsetzbar, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.852
+  },
+  "error": {}
+}

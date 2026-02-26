@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-26T14:14:25",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Kontrolle Straßenlampe „Rosenheim, Heilig Blut“ – Zeitweiser Ausfall**\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel, Warnleuchte) aufstellen, um den Arbeitsbereich abzusichern.\n   - Bei mittlerer Verkehrsexposition und schlechter Sicht (Nacht, Nebel): besonders auf eigene Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Lampe aus sicherer Entfernung beobachten: Leuchtet sie aktuell stabil?\n   - Auf sichtbare Schäden, Feuchtigkeitseintritt oder Flackern achten.\n   - Umgebung prüfen: Gibt es Anzeichen für Manipulation oder Vandalismus?\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler nur zeitweise auftritt: Lampe über mehrere Minuten beobachten.\n   - Prüfen, ob das Problem durch äußere Einflüsse (z. B. Feuchtigkeit, Temperaturschwankungen) ausgelöst werden könnte.\n   - Foto-Dokumentation nutzen, falls verfügbar, um Auffälligkeiten zu vergleichen.\n   - Falls möglich: Funktionstest (z. B. Schaltvorgang auslösen).\n\n4. **Dokumentation**\n   - Beobachtungen und Testergebnisse notieren (z. B. Zeitpunkt, Verhalten der Lampe).\n   - Fotos anfertigen und abspeichern.\n   - Alle Maßnahmen und Feststellungen im Wartungsprotokoll festhalten.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Verdacht auf Defekt: Meldung an Fachabteilung/Elektriker weiterleiten.\n   - Hinweis auf erhöhte Unfallgefahr wegen schlechter Sicht und mittlerem Verkehrsaufkommen geben.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter an diesem Standort? Sind weitere Lampen in der Nähe betroffen?  \nFalls nicht bekannt, bitte Rückmeldung geben, um gezielter vorgehen zu können.",
+    "tokens_estimate_words": 197
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nacht, Nebel, mittlere Verkehrsexposition, intermittent), klare Schrittfolge, Safety-first, Eskalation mit Risikobewertung, Dokumentation vollständig, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.282
+  },
+  "error": {}
+}

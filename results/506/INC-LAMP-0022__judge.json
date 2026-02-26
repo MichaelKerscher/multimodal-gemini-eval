@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Severity-Bewusstsein (high) nicht explizit sichtbar",
-      "Keine Priorisierung Schnelligkeit bei hoher Gefährdung"
-    ],
-    "short_justification": "Strukturierte Antwort mit Safety-first und Eskalation. Kontext minimal (nur OSM-ID), daher generische Schritte angemessen. Severity 'high' nicht explizit adressiert, sonst solide."
+    "missing_elements": [],
+    "short_justification": "Gut strukturierte Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation vorhanden, aber Severity-Kontext fehlt (nur minimal context). Dokumentation vollständig, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0022-TC2",
@@ -36,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar, nutzt Kontext präzise (Schnee, poor_visibility, low_battery, severity high), strukturiert, eskaliert angemessen, dokumentiert vollständig. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (Schnee, dusk, high severity, low_battery), Safety-first klar erkennbar, strukturierte Schritte mit Eskalation passend zu Severity, vollständige Dokumentation, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0022-TC3",
@@ -50,10 +47,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: Safety-first, nutzt Kontext inkl. Guardrails (low_battery → offline-Hinweis), severity high → schnelle Eskalation, strukturiert, dokumentiert vollständig. Keine Halluzinationen, alle Signale korrekt verarbeitet."
+    "short_justification": "Hervorragend: Kompakte, umsetzbare Schrittfolge mit klarer Priorisierung (Absicherung → Sichtprüfung → Diagnose → Doku → Eskalation). Nutzt Kontext korrekt (Schnee, poor_visibility, high severity), keine Halluzinationen, vollständige Dokumentation."
   }
 ]

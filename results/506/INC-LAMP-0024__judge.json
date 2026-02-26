@@ -4,8 +4,8 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 3,
-      "D": 4,
+      "S": 2,
+      "D": 3,
       "K": 3
     },
     "flags": {
@@ -14,39 +14,35 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwartbar (kein Signal im Kontext)",
-      "Verkehrs-/Wetter-Risiken nicht erwartbar (fehlen im Kontext)"
-    ],
-    "short_justification": "Antwort ist strukturiert und fallbezogen, mit klarer Absicherung und Eskalationslogik. Dokumentation gut abgedeckt. Kontext minimal, daher keine spezifischen Risiko-/Offline-Hinweise erwartbar."
+    "missing_elements": [],
+    "short_justification": "Grundsolide Antwort mit klarer Struktur und Sicherheitsfokus. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Severity/Traffic unbekannt, daher S=2 akzeptabel (Sicherheit erwähnt, aber nicht priorisiert). Dokumentation und Eskalation vorhanden."
   },
   {
     "test_id": "INC-LAMP-0024-TC2",
     "scores": {
-      "R": 4,
+      "R": 5,
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline → lokale Speicherung/Sync)",
-      "Kein expliziter Hinweis auf Foto-Auswertung als ersten Schritt"
+      "Offline-Workflow könnte expliziter sein (z.B. 'lokal speichern, später sync')"
     ],
-    "short_justification": "Gute Struktur, Safety-first, klare Eskalation. Kontext (Sturm, Nacht, Verkehr) gut genutzt. Aber connectivity=offline wird nur erwähnt ('keine Fernanalyse'), ohne Offline-Workflow (lokal dokumentieren/später sync). K=2 wegen fehlender Offline-Handlungsanweisung."
+    "short_justification": "Sehr gute Antwort: Safety-first klar (Warnweste, Absicherung), nutzt Kontext sichtbar (Nacht/Sturm/high traffic/offline), strukturiert, Eskalation vorhanden. Offline-Workflow implizit ('keine Fernabfrage möglich'), aber nicht explizit als Sync-Schritt formuliert. Dokumentation stark."
   },
   {
     "test_id": "INC-LAMP-0024-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -57,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später sync), Kontext vollständig genutzt (Sturm, Verkehr, Nacht, offline), Eskalation differenziert, Dokumentation vollständig. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first (Warnweste, Absicherung, hohes Verkehrsaufkommen), klare Schrittfolge, Offline-Workflow explizit ('lokal speichern', 'später synchronisieren'), nutzt Kontext perfekt (Sturm/Nacht/offline/photo_available), Dokumentation vollständig, Eskalation klar. Keine Halluzinationen."
   }
 ]

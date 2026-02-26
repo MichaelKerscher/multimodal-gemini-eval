@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-26T14:22:41",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden kurze Aussetzer und Flackern bei der Anlage (Asset-ID: n8486238431), vermutlich durch Kontaktprobleme. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Arbeitsbereich absperren (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf offensichtliche Schäden (z. B. lose Kabel, Korrosion, Feuchtigkeitseintritt).\n   - Prüfen, ob alle Abdeckungen und Gehäuse geschlossen sind.\n\n3. **Diagnose/Beobachtung**\n   - Anlage einschalten und Verhalten beobachten.\n   - Flackern/Aussetzer gezielt provozieren (z. B. leichtes Bewegen von Kabeln/Anschlüssen, falls gefahrlos möglich).\n   - Prüfen, ob das Problem wetterabhängig oder dauerhaft auftritt.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und Maßnahmen schriftlich festhalten.\n   - Fotos von auffälligen Stellen machen.\n\n5. **Eskalation**\n   - Bei bestätigtem Kontaktproblem: Meldung an Elektrofachkraft zur weiteren Prüfung und Reparatur.\n   - Bei Gefahr im Verzug (z. B. Funkenbildung, starker Geruch): Anlage sofort außer Betrieb nehmen und Notdienst informieren.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es Hinweise auf Feuchtigkeit oder Vandalismus?",
+    "tokens_estimate_words": 152
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Kontextnutzung (nur Asset-ID vorhanden)",
+      "Keine Anpassung an Umgebung/Wetter/Zeit",
+      "Keine Offline-Workflow-Erwähnung trotz minimalem Kontext"
+    ],
+    "short_justification": "Generisch passende Antwort mit klarer Struktur und Safety-first. Kontext wird nicht genutzt (nur Asset-ID vorhanden), daher K=2. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.342
+  },
+  "error": {}
+}

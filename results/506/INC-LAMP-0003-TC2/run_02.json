@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC2",
+  "timestamp": "2026-02-26T14:14:50",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427359783",
+        "longitude": 12.1049944,
+        "latitude": 47.877481,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Westerndorf St. Peter, Schlößlstraße"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T22:47:36+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten.\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Pylonen) um den Arbeitsbereich aufstellen, da schlechte Sichtverhältnisse herrschen (Nacht, schlechte Beleuchtung).\n- Bei Bedarf zusätzliche mobile Beleuchtung nutzen.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf äußere Schäden prüfen (z. B. Vandalismus, Anfahrschäden).\n- Prüfen, ob der Lampenkopf locker oder beschädigt ist.\n- Sichtkontrolle der Verkabelung, soweit zugänglich.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob die Lampe auf offensichtliche Weise stromlos ist (z. B. Sicherung ausgelöst, Kabel ab).\n- Aufgrund des gemeldeten „low_battery“-Zustands und der schlechten Konnektivität: Annahme, dass es sich um eine solar- oder akkubetriebene Leuchte handelt. Batterie/Akku prüfen, ggf. Spannung messen.\n- Bei Unsicherheit: Rückfrage, ob Ersatzakku/-batterie verfügbar ist oder vor Ort getauscht werden soll.\n\n**4. Dokumentation**\n- Fotos vom Zustand der Lampe und der Umgebung machen (sofern möglich).\n- Fehlerbeschreibung, Datum, Uhrzeit und eigene Maßnahmen notieren.\n- Besonderheiten (z. B. erhöhte Unfallgefahr durch Dunkelheit) dokumentieren.\n\n**5. Eskalation**\n- Bei Gefahr im Verzug (z. B. Unfallgefahr durch Dunkelheit): Sofortige Meldung an die Leitstelle oder zuständige Stelle.\n- Falls Ersatzteile/Akku nicht verfügbar oder Fehler nicht vor Ort behebbar: Störungsmeldung an Fachabteilung weiterleiten und Bürger über voraussichtliche Reparaturdauer informieren.\n\n**Rückfrage:**  \nHandelt es sich bei der Lampe um eine solar-/akkubetriebene Leuchte? Ist ein Ersatzakku/-batterie für den Austausch vorhanden oder soll dieser mitgebracht werden?",
+    "tokens_estimate_words": 219
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow (spotty connectivity)",
+      "Halluzination: 'solar-/akkubetrieben' nicht im CONTEXT"
+    ],
+    "short_justification": "Gute Struktur und Safety-first. ABER: Antwort spekuliert stark über 'solar-/akkubetriebene Leuchte' basierend auf device.low_battery – das beschreibt laut Kontext das Techniker-Gerät, NICHT das Asset. Spotty connectivity erfordert Offline-Workflow, fehlt hier. K<=2 wegen Halluzination."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.972
+  },
+  "error": {}
+}

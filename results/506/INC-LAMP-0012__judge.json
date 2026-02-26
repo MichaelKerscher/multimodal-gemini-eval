@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte Antwort mit klarer Absicherung und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Sicherheit als Schritt 1, aber könnte stärker priorisiert sein bei 'unsicherem Bereich'."
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung), Eskalation und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leichte Abzüge bei S (Eskalation nicht priorisiert genug) und K (generisch, da Kontext fehlt)."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
@@ -24,7 +24,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -33,16 +33,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow explizit (spotty connectivity + low_power_mode)"
+      "Offline-Workflow (spotty connectivity)",
+      "Explizite Anweisung: lokal dokumentieren/später sync"
     ],
-    "short_justification": "Gute Struktur, nutzt Kontext (spotty/low_power), erwähnt 'keine Fernwartung' und 'Vor-Ort-Check'. Offline-Workflow wird angedeutet ('Fotos falls möglich'), aber nicht explizit als Strategie formuliert."
+    "short_justification": "Gute Struktur, Safety-first und Eskalation vorhanden. Aber: connectivity=spotty erfordert Offline-Workflow-Hinweis (lokal speichern/später sync), der fehlt komplett. K=2 wegen dieser Lücke."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -53,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar, Offline-Workflow explizit ('offline dokumentieren, Fotos lokal speichern, später synchronisieren'), nutzt alle Kontext-Signale (spotty/low_power/night/poor_visibility), strukturiert, umsetzbar, vollständige Dokumentation."
+    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später sync), Eskalation differenziert, Dokumentation vollständig. Kontext (spotty/low_power) perfekt genutzt, keine Halluzinationen."
   }
 ]

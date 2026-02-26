@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-26T14:17:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt in der Stadtmitte Rosenheim (Asset-ID: n4427955479).\n\n**Checkliste für die Prüfung vor Ort**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchten sichern, besonders bei Dunkelheit und hohem Verkehrsaufkommen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung: Sind mehrere oder alle Lampen betroffen?\n   - Prüfen, ob offensichtliche Schäden (z. B. defekte Leuchtmittel, lose Kabel, Vandalismus) erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest: Schalten die Lampen bei Dämmerung ein?\n   - Prüfen, ob Sicherungen ausgelöst wurden oder Schaltschränke zugänglich sind.\n   - Gibt es Anzeichen für Stromausfall im Bereich?\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Abschnitt und den Anlagen machen.\n   - Festgestellte Mängel und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Asset-ID).\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer (z. B. komplette Dunkelheit, Unfallgefahr): Sofortige Meldung an Bereitschaftsdienst/Leitstelle.\n   - Bei technischen Defekten: Reparaturteam informieren und Termin zur Instandsetzung einplanen.\n\n**Rückfrage:**  \nBetrifft der Ausfall nur die Straßenbeleuchtung oder sind auch Ampeln betroffen? Gibt es besondere Gefahrenstellen (z. B. Zebrastreifen, Kreuzungen) im betroffenen Abschnitt?",
+    "tokens_estimate_words": 165
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Priorisierung bei severity=high erkennbar",
+      "Eskalation nicht als primärer Schritt bei hoher Gefahr"
+    ],
+    "short_justification": "Antwort ist strukturiert und fallbezogen, beginnt mit Absicherung. Jedoch fehlt bei minimalem Kontext die Erkennung, dass severity/traffic nicht bekannt sind, daher konservative Eskalationslogik schwach. Dokumentation und Struktur solide."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.488
+  },
+  "error": {}
+}
