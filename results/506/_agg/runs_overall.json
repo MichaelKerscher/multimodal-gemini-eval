@@ -1,0 +1,120 @@
+{
+  "judge_version_filter": "judge_v1_1",
+  "unweighted": true,
+  "per_strategy": {
+    "S0": {
+      "mean_R": {
+        "n_runs": 10,
+        "mean_of_run_means": 3.506666666666667,
+        "min_run_mean": 3.3666666666666667,
+        "max_run_mean": 3.6
+      },
+      "mean_H": {
+        "n_runs": 10,
+        "mean_of_run_means": 3.5333333333333337,
+        "min_run_mean": 3.4,
+        "max_run_mean": 3.7
+      },
+      "mean_S": {
+        "n_runs": 10,
+        "mean_of_run_means": 3.2166666666666663,
+        "min_run_mean": 3.1,
+        "max_run_mean": 3.3666666666666667
+      },
+      "mean_D": {
+        "n_runs": 10,
+        "mean_of_run_means": 3.6966666666666668,
+        "min_run_mean": 3.6,
+        "max_run_mean": 3.8333333333333335
+      },
+      "mean_K": {
+        "n_runs": 10,
+        "mean_of_run_means": 2.8066666666666666,
+        "min_run_mean": 2.7,
+        "max_run_mean": 2.966666666666667
+      },
+      "mean_overall": {
+        "n_runs": 10,
+        "mean_of_run_means": 3.3519999999999994,
+        "min_run_mean": 3.2666666666666666,
+        "max_run_mean": 3.4466666666666668
+      }
+    },
+    "S1": {
+      "mean_R": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.576666666666666,
+        "min_run_mean": 4.5,
+        "max_run_mean": 4.666666666666667
+      },
+      "mean_H": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.45,
+        "min_run_mean": 4.333333333333333,
+        "max_run_mean": 4.533333333333333
+      },
+      "mean_S": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.403333333333333,
+        "min_run_mean": 4.333333333333333,
+        "max_run_mean": 4.5
+      },
+      "mean_D": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.37,
+        "min_run_mean": 4.233333333333333,
+        "max_run_mean": 4.533333333333333
+      },
+      "mean_K": {
+        "n_runs": 10,
+        "mean_of_run_means": 3.9166666666666665,
+        "min_run_mean": 3.8,
+        "max_run_mean": 4.2
+      },
+      "mean_overall": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.343333333333334,
+        "min_run_mean": 4.24,
+        "max_run_mean": 4.446666666666667
+      }
+    },
+    "S2": {
+      "mean_R": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.943333333333333,
+        "min_run_mean": 4.9,
+        "max_run_mean": 5.0
+      },
+      "mean_H": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.913333333333333,
+        "min_run_mean": 4.866666666666666,
+        "max_run_mean": 4.966666666666667
+      },
+      "mean_S": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.623333333333333,
+        "min_run_mean": 4.533333333333333,
+        "max_run_mean": 4.733333333333333
+      },
+      "mean_D": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.85,
+        "min_run_mean": 4.733333333333333,
+        "max_run_mean": 4.966666666666667
+      },
+      "mean_K": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.973333333333334,
+        "min_run_mean": 4.933333333333334,
+        "max_run_mean": 5.0
+      },
+      "mean_overall": {
+        "n_runs": 10,
+        "mean_of_run_means": 4.860666666666667,
+        "min_run_mean": 4.826666666666667,
+        "max_run_mean": 4.9
+      }
+    }
+  }
+}

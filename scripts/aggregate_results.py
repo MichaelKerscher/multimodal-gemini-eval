@@ -176,7 +176,11 @@ def main():
     ap.add_argument("--results-dir", default="results", help="base results dir (default results)")
     ap.add_argument("--out", default=None, help="output dir for aggregated files (default: results/<client>/_agg)")
     ap.add_argument("--all-runs", action="store_true", help="also compute run history (runs_by_index + runs_overall)")
-    ap.add_argument("--judge-version", default=None, help="filter runs by request_params.judge_version (e.g. judge_v1_1)")
+    ap.add_argument(
+        "--judge-version",
+        default=None,
+        help="filter runs by request_params.judge_version (e.g. judge_v1_1)",
+    )
     args = ap.parse_args()
 
     base = Path(args.results_dir) / args.client
@@ -186,7 +190,7 @@ def main():
     out_dir = Path(args.out) if args.out else (base / "_agg")
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # exclude only the _agg directory (not suffix matching)
+    # exclude only the _agg directory
     test_dirs = [p for p in base.iterdir() if p.is_dir() and p.name != "_agg"]
 
     # ----------------------------
@@ -269,7 +273,7 @@ def main():
     # ----------------------------
     # 3) Delta per incident (L0, L2, L2B) (snapshot)
     # ----------------------------
-    idx = {(r["incident_id"], r["context_level"]): r for r in run_rows}
+    idx_map = {(r["incident_id"], r["context_level"]): r for r in run_rows}
     deltas = []
 
     def dk(a, b, key):
@@ -281,9 +285,9 @@ def main():
         return None
 
     for inc in sorted(set(r["incident_id"] for r in run_rows)):
-        l0 = idx.get((inc, "L0"))
-        l2 = idx.get((inc, "L2"))
-        l2b = idx.get((inc, "L2B"))
+        l0 = idx_map.get((inc, "L0"))
+        l2 = idx_map.get((inc, "L2"))
+        l2b = idx_map.get((inc, "L2B"))
 
         row = {"incident_id": inc}
 
@@ -427,6 +431,7 @@ def main():
                 }
                 run_rows_all.append(row)
 
+        # (A) Per-run summaries per strategy
         by_run_strat = defaultdict(list)
         for r in run_rows_all:
             by_run_strat[(r["run_index"], r["strategy"])].append(r)
@@ -439,25 +444,40 @@ def main():
         runs_by_index_path = out_dir / "runs_by_index.json"
         runs_by_index_path.write_text(json.dumps(runs_by_index, ensure_ascii=False, indent=2), encoding="utf-8")
 
-        # Unweighted mean over run means (mean_overall per run_index)
-        strat_run_means = defaultdict(list)
-        for ri_str, strat_map in runs_by_index.items():
+        # (B) Runs overall: UNWEIGHTED mean-of-run-means PER RUBRIC, per strategy
+        strat_metric_run_means = defaultdict(lambda: defaultdict(list))
+        # strat_metric_run_means[strategy][metric] -> [run_mean_1, run_mean_2, ...]
+
+        for _, strat_map in runs_by_index.items():
             for strat, summ in strat_map.items():
-                mo = summ.get("mean_overall")
-                if isinstance(mo, (int, float)):
-                    strat_run_means[strat].append(mo)
+                for metric in ["mean_R", "mean_H", "mean_S", "mean_D", "mean_K", "mean_overall"]:
+                    v = summ.get(metric)
+                    if isinstance(v, (int, float)):
+                        strat_metric_run_means[strat][metric].append(v)
+
+        def stats(xs):
+            return {
+                "n_runs": len(xs),
+                "mean_of_run_means": _mean(xs),
+                "min_run_mean": min(xs) if xs else None,
+                "max_run_mean": max(xs) if xs else None,
+            }
 
         runs_overall = {
             "judge_version_filter": args.judge_version,
             "unweighted": True,
             "per_strategy": {},
         }
-        for strat, mos in sorted(strat_run_means.items()):
+
+        for strat in sorted(strat_metric_run_means.keys()):
+            m = strat_metric_run_means[strat]
             runs_overall["per_strategy"][strat] = {
-                "n_runs": len(mos),
-                "mean_of_run_means": _mean(mos),
-                "min_run_mean": min(mos) if mos else None,
-                "max_run_mean": max(mos) if mos else None,
+                "mean_R": stats(m.get("mean_R", [])),
+                "mean_H": stats(m.get("mean_H", [])),
+                "mean_S": stats(m.get("mean_S", [])),
+                "mean_D": stats(m.get("mean_D", [])),
+                "mean_K": stats(m.get("mean_K", [])),
+                "mean_overall": stats(m.get("mean_overall", [])),
             }
 
         runs_overall_path = out_dir / "runs_overall.json"
