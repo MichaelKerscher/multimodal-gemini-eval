@@ -286,7 +286,7 @@ ANSWER:
 """
         )
 
-    return f"""Du bekommst mehrere Antworten zum selben Incident, jeweils mit unterschiedlicher Kontextstufe (L0/L1/L2).
+    return f"""Du bekommst mehrere Antworten zum selben Incident, jeweils mit unterschiedlicher Kontextstrategie (S0/S1/S2).
 
 Bewerte JEDEN Block separat nach derselben Rubrik.
 Gib ausschließlich ein gültiges JSON-Array zurück (eine Bewertung pro Block) im Schema:
@@ -430,11 +430,15 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
     if enable_judge and hasattr(client, "judge"):
         expected_elements = (input_data.get("meta") or {}).get("expected_elements_short", "")
         judge_prompt = _build_judge_prompt_single(tc, answer, expected_elements)
+        judge_model = os.getenv("TESTSUITE_JUDGE_MODEL", model)
+        judge_temp = float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.0"))
+        judge_mode = os.getenv("TESTSUITE_JUDGE_MODE", "BASIC")
+        judge_version = os.getenv("TESTSUITE_JUDGE_VERSION", "judge_v1_0")
         judge_out = client.judge(
             prompt=judge_prompt,
-            model=os.getenv("TESTSUITE_JUDGE_MODEL", model),
-            temperature=float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.1")),
-            selected_mode=os.getenv("TESTSUITE_JUDGE_MODE", "BASIC"),
+            model=judge_model,
+            temperature=judge_temp,
+            selected_mode=judge_mode,
             internal_system_prompt=False,
         )
         # optional: sanitize single output too (doesn't hurt logging/reading)
@@ -460,6 +464,10 @@ def run_testcase(tc: dict, enable_judge: bool | None = None):
             "run_mode": "testcase",
             "assistant_source_of_truth": True,
             "context_strategy": strategy or "UNKNOWN",
+            "judge_version": judge_version if enable_judge else None,
+            "judge_model": judge_model if enable_judge else None,
+            "judge_temperature": judge_temp if enable_judge else None,
+            "judge_mode": judge_mode if enable_judge else None,
             **s2_params,
         },
         judge=judge_out,
@@ -547,11 +555,16 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
             fault_type=fault_type,
         )
 
+        judge_model = os.getenv("TESTSUITE_JUDGE_MODEL", default_model)
+        judge_temp = float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.0"))
+        judge_mode = os.getenv("TESTSUITE_JUDGE_MODE", "BASIC")
+        judge_version = os.getenv("TESTSUITE_JUDGE_VERSION", "judge_v1_0")
+
         judge_raw_any = client.judge(
             prompt=judge_prompt,
-            model=os.getenv("TESTSUITE_JUDGE_MODEL", default_model),
-            temperature=float(os.getenv("TESTSUITE_JUDGE_TEMPERATURE", "0.1")),
-            selected_mode=os.getenv("TESTSUITE_JUDGE_MODE", "BASIC"),
+            model=judge_model,
+            temperature=judge_temp,
+            selected_mode=judge_mode,
             internal_system_prompt=False,
         )
 
@@ -635,6 +648,10 @@ def run_incident_group(testcases: list[dict], enable_judge: bool | None = None):
                 "incident_id": incident_id,
                 "assistant_source_of_truth": True,
                 "context_strategy": strategy or "UNKNOWN",
+                "judge_version": judge_version if enable_judge else None,
+                "judge_model": judge_model if enable_judge else None,
+                "judge_temperature": judge_temp if enable_judge else None,
+                "judge_mode": judge_mode if enable_judge else None,
                 **s2_params,
             },
             judge=judge_block,
