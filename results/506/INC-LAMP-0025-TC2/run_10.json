@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-26T17:06:13",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Die Situation wird als sicherheitsrelevant eingestuft (hohes Verkehrsaufkommen, schlechte Sicht, Nacht). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für den Außendienst**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Gefahrenbereich mit Leitkegeln/Absperrband sichern, besonders bei hohem Verkehrsaufkommen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampe auf äußere Schäden (z. B. Mast, Leuchte, Verkabelung).\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe auf Bewegungen oder Schaltimpulse reagiert.\n   - Hinweis aus Gerätedaten: „low_battery“ – vermutlich Batterieproblem.\n   - Bei Online-Konnektivität: Fernabfrage/Reset versuchen, falls möglich.\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Lampe und Umgebung anfertigen (bei Dunkelheit auf Blitz achten).\n   - Alle Beobachtungen und Maßnahmen protokollieren.\n\n5. **Eskalation**\n   - Bei bestätigtem Ausfall und Sicherheitsrisiko: Störungsdienst/Notdienst informieren.\n   - Hinweis auf hohe Dringlichkeit (Verkehrssicherheit, Nacht, viel Verkehr).\n\n**Rückfrage:**  \nIst ein Zugang zur Lampe für einen Batteriewechsel vor Ort möglich, oder muss ein Spezialteam angefordert werden?  \nSind weitere Lampen im Bereich betroffen?  \n\nBitte Rückmeldung geben, damit die nächsten Schritte koordiniert werden können.",
+    "tokens_estimate_words": 168
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Stop-Condition bei Gefahr",
+      "Photo_available nicht als Workflow-Cue genutzt"
+    ],
+    "short_justification": "Sehr gute kontextbasierte Antwort: nutzt severity=high, traffic_exposure=high, night, low_battery sichtbar. Safety-first klar, Eskalation passend zu Dringlichkeit. Struktur gut, Dokumentation solide. Kleine Lücken bei Stop-Conditions und Photo-Workflow."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.897
+  },
+  "error": {}
+}

@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first (Absicherung), Eskalation und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber gut umsetzbar."
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge. Sicherheit als Schritt 1, Eskalation vorhanden. Kontext minimal, daher keine Offline-Workflow-Erwartung. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
@@ -24,23 +24,25 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Nutzt Kontext gut (spotty connectivity → manuelle Kontrolle, keine Fernabfrage). Safety-first, klare Eskalation, Offline-Hinweis vorhanden. Strukturiert und fallbezogen."
+    "missing_elements": [
+      "Offline-Workflow explizit (spotty connectivity)"
+    ],
+    "short_justification": "Sehr gute Struktur, Safety-first klar, Eskalation passend zu severity=medium. Kontext (spotty, low_power_mode) wird teilweise genutzt (Geräte-Neustart erwähnt), aber Offline-Workflow nicht explizit genannt."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -51,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first mit konkreten Maßnahmen (Warnweste, Leitkegel), expliziter Offline-Workflow (lokal speichern, später sync), klare Eskalationslogik, vollständige Dokumentation. Nutzt alle Kontext-Signale optimal."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Offline-Workflow explizit ('offline speichern, falls Netz instabil'), Kontext vollständig genutzt (spotty, night, medium traffic), keine Halluzinationen, vollständige Dokumentation."
   }
 ]

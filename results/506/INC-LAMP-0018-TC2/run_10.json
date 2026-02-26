@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC2",
+  "timestamp": "2026-02-26T17:03:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12520351647",
+        "longitude": 12.1179478,
+        "latitude": 47.8502243,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segmentausfall)\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.\n- Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern (besonders wichtig bei Nacht, Nebel und mittlerem Verkehrsaufkommen).\n- Bei Bedarf Polizei oder Verkehrslenkung zur Unterstützung anfordern.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Steuerbox und betroffenen Leuchten/Signale auf offensichtliche Schäden, Manipulation oder Feuchtigkeit.\n- Prüfen, ob weitere Segmente betroffen sind.\n- Umgebung auf zusätzliche Gefahren (z. B. schlechte Sicht durch Nebel) achten.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Steuerbox zugänglich und äußerlich intakt ist.\n- Kontrollieren, ob Sicherungen ausgelöst oder Anzeigen an der Steuerbox auffällig sind.\n- Falls möglich, Steuerbox kurz zurücksetzen (Reset) und beobachten, ob Segment wieder funktioniert.\n- Notieren, ob das Problem sofort wieder auftritt oder temporär behoben ist.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Sichtverhältnisse, betroffene Segmente).\n- Fotos machen, sobald möglich (aktuell laut Meldung nicht vorhanden).\n- Fehlerbild und ggf. Seriennummer der Steuerbox dokumentieren.\n\n**5. Eskalation**\n- Bei anhaltendem Ausfall oder Verdacht auf schwerwiegenden Steuerungsfehler: Störungsdienst/Techniker mit Spezialkenntnissen informieren.\n- Bei Gefahr für Verkehrssicherheit: Sofortige Weitergabe an Einsatzleitung/Leitstelle.\n- Bürger über voraussichtliche Dauer und Maßnahmen informieren, falls möglich.\n\n**Rückfragen/Annahmen:**\n- Ist Zugang zur Steuerbox vor Ort möglich?\n- Gibt es aktuelle Pläne/Schaltbilder der Anlage?\n- Sind weitere Meldungen aus angrenzenden Segmenten bekannt?\n\nBitte gib Bescheid, falls weitere Details (z. B. genaue Lampenanzahl, Steuerbox-Typ) benötigt werden!",
+    "tokens_estimate_words": 224
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel+mittlerer Verkehr führen zu verstärkten Sicherheitsmaßnahmen. Klare Schrittfolge, Safety-first, Eskalation mit Triggern, Dokumentation umfassend. Nahezu perfekt für den Fall."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.477
+  },
+  "error": {}
+}

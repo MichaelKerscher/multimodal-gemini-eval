@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC1",
+  "timestamp": "2026-02-26T17:06:39",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar. (Asset-ID: n4449540379)",
+    "context": {
+      "asset_osm": "n4449540379"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden ein unregelmäßiges An-/Aus-Verhalten bei der Anlage mit Asset-ID n4449540379. Die Ursache ist aktuell unklar.\n\n**Schritt-für-Schritt-Checkliste:**\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnweste tragen).\n   - Bei Arbeiten an der Anlage: Stromzufuhr prüfen und ggf. abschalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage: Sind Beschädigungen, lose Kabel oder Feuchtigkeit sichtbar?\n   - Prüfen, ob äußere Einflüsse (z. B. Vandalismus, Bauarbeiten in der Nähe) erkennbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, wann das An-/Aus-Verhalten auftritt (bestimmte Tageszeiten, Wetterbedingungen?).\n   - Prüfen, ob andere Anlagen in der Nähe ähnliche Probleme zeigen.\n   - Falls möglich: Funktionstest (z. B. manuelles Schalten, Kontrolle der Sicherungen).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls relevant).\n   - Asset-ID und Standort notieren.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr für den Verkehr: Störung an Fachfirma/Techniker melden.\n   - Dringlichkeit angeben (z. B. bei Gefährdung der Verkehrssicherheit).\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es bereits Hinweise auf äußere Einflüsse oder ist das Problem wetterabhängig?",
+    "tokens_estimate_words": 162
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (Kontext zeigt kein connectivity-Signal)",
+      "Spezifische Nutzung der Asset-ID im Workflow",
+      "Klare Priorisierung bei unklarer Ursache"
+    ],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Kontext (nur asset_osm) wird kaum genutzt; keine Offline-Hinweise nötig, da connectivity nicht gegeben. Generisch, aber passend für minimalen Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.397
+  },
+  "error": {}
+}

@@ -2,8 +2,8 @@
   {
     "test_id": "INC-LAMP-0017-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
       "D": 4,
       "K": 3
@@ -14,17 +14,20 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalation. Kontext minimal (nur OSM-ID), daher keine Umwelt-/Geräte-Anpassungen erwartbar. Rückfragen sinnvoll."
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext (nur minimal vorhanden)",
+      "Keine Anpassung an fehlende Umgebungsdaten"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext ist minimal (nur OSM-ID), daher keine spezifischen Anpassungen erwartbar. Dokumentation gut, aber Kontextnutzung bleibt generisch."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
-      "K": 5
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,8 +35,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Dämmerung, Regen, low_power_mode erwähnt), klare Schrittfolge, Safety-first, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen."
+    "missing_elements": [
+      "Kein expliziter Hinweis auf low_power_mode des Geräts als Workflow-Constraint",
+      "Photo_available nicht aktiv in Workflow integriert"
+    ],
+    "short_justification": "Sehr gute kontextbezogene Antwort: Regen/Dämmerung/schlechte Sicht werden in Safety integriert, low_power_mode wird als mögliche Ursache erwähnt. Struktur klar, Eskalation passend zu severity=medium. Photo_available hätte stärker genutzt werden können."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
@@ -47,10 +53,10 @@
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Kompakt und präzise, nutzt Kontext optimal (Regen, Dämmerung, low_power_mode als Workflow-Hinweis), klare Priorisierung, Safety-first, vollständige Dokumentation und Eskalation. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (Regen/Dämmerung in Safety, low_power_mode als Workflow-Hinweis für offline-Dokumentation, photo_available integriert). Sehr kurz und umsetzbar, klare Priorisierung, keine Halluzinationen. Eskalation passend differenziert."
   }
 ]

@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 3,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Nutzung von Umgebungskontext (Nebel/Nacht/Sicht)",
-      "Keine Erwähnung von Geräte-Konnektivität"
-    ],
-    "short_justification": "Klare Struktur mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur Asset-ID), daher keine Umgebungs-/Geräte-Infos erwartbar – K=3 ist angemessen."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, Eskalation und Dokumentation. Kontext minimal, daher keine Umweltfaktoren erwartbar. Leicht generisch, aber umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -26,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -36,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first (Warnweste, Absicherung wegen Nebel/Sicht), klare Schrittfolge, nutzt Kontext (Nebel, Nacht, mittlerer Verkehr, online-Gerät), vollständige Dokumentation, passende Eskalation. Keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlere Verkehrsbelastung explizit integriert). Safety-first klar, Struktur priorisiert, Eskalation passend zu severity=medium."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -54,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first (Warnweste, Absicherung wegen Nebel/Nacht), klare Struktur, nutzt Kontext korrekt (Nebel, Nacht, Gerät online), vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, extras.context_notes korrekt beachtet."
+    "short_justification": "Nahezu perfekt: Kontext vollständig genutzt (Nebel/Nacht/Verkehr), Safety-first prominent, klare Schrittfolge, Dokumentation mit Foto-Hinweis, Eskalation differenziert nach Gefährdung."
   }
 ]

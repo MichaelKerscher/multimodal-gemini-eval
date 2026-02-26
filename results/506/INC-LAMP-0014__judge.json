@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0014-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
       "D": 4,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -14,17 +14,21 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge. Sicherheit als Schritt 1, Eskalation vorhanden. Kontext minimal, daher keine Offline-Erwartung. Keine Halluzinationen erkennbar."
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Keine Priorisierung nach Severity/Traffic",
+      "Generische Schritte ohne Kontextanpassung"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit Safety-first und Eskalation. Dokumentation gut. Aber: Kontext (nur asset_osm) wird nicht genutzt, Antwort bleibt generisch. K=2 wegen fehlender Kontextintegration."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -33,16 +37,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext sichtbar (online/ok, Koordinaten, severity, traffic_exposure low), klare Priorisierung, Safety first, vollständige Dokumentations-Checkliste, keine Halluzinationen. Offline nicht erwartbar (connectivity=online)."
+    "short_justification": "Sehr gute Kontextnutzung (Tageszeit, low traffic, Koordinaten, device online). Klare Struktur, Safety-first, Eskalation mit Trigger. Dokumentation inkl. GPS exzellent. Nur minimal generisch bei Diagnose."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
     "scores": {
-      "R": 5,
-      "H": 5,
+      "R": 4,
+      "H": 4,
       "S": 4,
-      "D": 5,
-      "K": 5
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -51,6 +55,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: nutzt Kontext präzise (Tag/clear/low traffic → angepasste Absicherung, online → kein Offline-Workflow nötig), klare Struktur, Safety first, vollständige Doku-Punkte, sinnvolle Eskalation. Keine Halluzinationen."
+    "short_justification": "Klare 5-Schritte-Struktur, Safety-first, Eskalation vorhanden. Nutzt Kontext (low traffic, day, online) sinnvoll. Dokumentation gut (Fotos, App). Leicht knapper als TC2, aber solide und umsetzbar."
   }
 ]

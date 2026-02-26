@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC1",
+  "timestamp": "2026-02-26T17:02:47",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen. (Asset-ID: n4446442023)",
+    "context": {
+      "asset_osm": "n4446442023"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, ich unterstütze Sie bei der Überprüfung des gemeldeten dunklen Abschnitts entlang Schönau (Asset-ID: n4446442023).\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Gefahrenbereich vor Ort absichern (z. B. Warnbaken, Blitzleuchten).\n\n2. **Sichtprüfung**\n   - Prüfen, ob die Straßenbeleuchtung komplett oder teilweise ausgefallen ist.\n   - Sichtkontrolle auf offensichtliche Schäden an Masten, Leuchten oder Verkabelung.\n   - Umgebung auf weitere Gefahrenquellen (z. B. lose Kabel, beschädigte Gehwege) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Funktionstest der Leuchten (sofern möglich).\n   - Prüfen, ob der Ausfall auf einen einzelnen Mast, eine Leuchtenreihe oder das gesamte Netz beschränkt ist.\n   - Wetterbedingungen und Tageszeit notieren (kann Einfluss auf Fehlerbild haben).\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Bereich und den Leuchten machen.\n   - Zustand und Besonderheiten schriftlich festhalten.\n   - Asset-ID (n4446442023) und genaue Position dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Stromkabel offen, Unfallgefahr): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei regulärem Ausfall: Störungsmeldung an zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nIst bereits bekannt, ob nur dieser Abschnitt betroffen ist oder gibt es weitere Meldungen aus angrenzenden Bereichen? Gibt es Hinweise auf Bauarbeiten oder Unwetter in letzter Zeit?",
+    "tokens_estimate_words": 179
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext (nur minimal vorhanden)",
+      "Keine Anpassung an fehlende Umgebungsdaten"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext ist minimal (nur OSM-ID), daher keine spezifischen Anpassungen erwartbar. Dokumentation gut, aber Kontextnutzung bleibt generisch."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.024
+  },
+  "error": {}
+}

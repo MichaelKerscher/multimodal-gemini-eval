@@ -3,10 +3,10 @@
     "test_id": "INC-LAMP-0021-TC1",
     "scores": {
       "R": 3,
-      "H": 4,
+      "H": 3,
       "S": 4,
-      "D": 4,
-      "K": 3
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -14,8 +14,12 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Etwas generisch (z.B. 'Leuchte/Ampel'), aber umsetzbar."
+    "missing_elements": [
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Umgebung/Zeit/Wetter",
+      "Offline-Workflow nicht erwähnt (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Safety-first-Struktur und Eskalation. Kontext wird kaum genutzt (nur Asset-ID vorhanden), daher K=2. Struktur und Sicherheit gut, aber keine fallspezifische Anpassung."
   },
   {
     "test_id": "INC-LAMP-0021-TC2",
@@ -33,9 +37,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (connectivity=spotty)"
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
+      "Foto-Workflow nicht klar integriert (photo_available=true)"
     ],
-    "short_justification": "Sehr gute Nutzung von Kontext (Regen, Nacht, Ort). Absicherung und Eskalation klar. Offline-Workflow fehlt trotz connectivity=spotty, daher K=3."
+    "short_justification": "Sehr gute fallbezogene Antwort mit klarer Struktur, Safety-first, Eskalation und Dokumentation. Kontext (Regen, Nacht, Ort) gut genutzt. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt), daher K=3."
   },
   {
     "test_id": "INC-LAMP-0021-TC3",
@@ -53,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Offline-Workflow explizit integriert (lokal speichern, später synchronisieren), Kontext vollständig genutzt (Regen, Nacht, spotty connectivity), Eskalation klar definiert."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Eskalation, Dokumentation mit Offline-Workflow ('offline speichern, später synchronisieren'), Kontextnutzung (Regen, Nacht, spotty connectivity) perfekt integriert. Alle erwartbaren Elemente erfüllt."
   }
 ]

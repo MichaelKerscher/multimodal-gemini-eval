@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-26T17:04:30",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Aussetzern und Flackern (Asset-ID: n8486238431)\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n   - Bei Arbeiten an der Stromversorgung: Freischalten und gegen Wiedereinschalten sichern.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe/Ampel auf offensichtliche Schäden (Gehäuse, Kabel, Anschlussstellen).\n   - Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist.\n   - Lose oder beschädigte Kontakte erkennen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Flackern/Aussetzen reproduzierbar ist (z. B. durch leichtes Bewegen der Kabel).\n   - Spannung messen, ggf. Isolationsmessung durchführen.\n   - Prüfen, ob das Problem nur bei bestimmten Wetterlagen auftritt (Hinweis auf Feuchtigkeit).\n\n4. **Dokumentation**\n   - Festgestellte Mängel und durchgeführte Maßnahmen dokumentieren (inkl. Fotos, falls möglich).\n   - Asset-ID und Standort notieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Leitstelle, Anlage ggf. außer Betrieb nehmen.\n   - Bei unklarer Ursache oder fehlender Behebung: Weitergabe an Fachpersonal (z. B. Elektriker).\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es aktuelle Hinweise auf Feuchtigkeitseintritt oder Vandalismus?",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 4,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Umgebung/Zeit/Wetter",
+      "Offline-Workflow nicht erwähnt (nicht erwartbar bei L0)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Safety-first-Struktur und Eskalation. Kontext wird kaum genutzt (nur Asset-ID vorhanden), daher K=2. Struktur und Sicherheit gut, aber keine fallspezifische Anpassung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.675
+  },
+  "error": {}
+}

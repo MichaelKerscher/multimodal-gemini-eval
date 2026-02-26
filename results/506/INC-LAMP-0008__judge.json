@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Priorisierung (Absicherung zuerst). Kontext minimal, daher keine Offline-Workflow-Erwartung; generische Schritte sind hier angemessen."
+    "short_justification": "Strukturierte, umsetzbare Antwort mit klarer Priorisierung (Absicherung zuerst). Eskalation und Dokumentation gut abgedeckt. Kontextnutzung minimal (nur Asset-ID), aber keine Halluzinationen; sinnvolle Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung (Nebel, spotty connectivity, low_power_mode explizit adressiert). Safety-first, klare Struktur, Offline-Workflow erkannt, Eskalation passend zu severity=low."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext präzise (Nebel/Nacht → Sicherheit, spotty → Offline-Hinweis, Koordinaten, low_power_mode). Klare Struktur, Safety-first, Eskalation differenziert, Dokumentation vollständig. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Nutzt alle relevanten Kontextsignale (Nebel, Nacht, spotty → offline dokumentieren/Foto lokal speichern), Safety-first, klare Schrittfolge, Eskalation passend, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Hervorragend: Expliziter Offline-Workflow (lokal speichern, später synchronisieren), korrekte Interpretation von device.* als Techniker-Gerät, nicht Asset. Nebel/Nacht → Sicherheit, differenzierte Eskalation, vollständige Dokumentation. Keine Halluzinationen."
   }
 ]

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC2",
+  "timestamp": "2026-02-26T17:04:54",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093607",
+        "longitude": 12.116472,
+        "latitude": 47.837186,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T18:35:50+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "snow",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störung an der Straßenlampe (Rosenheim, Heilig Blut)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchte, Pylone).\n   - Bei schlechter Sicht und Schnee besonders auf Rutschgefahr achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Glasbruch, lose Teile).\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampe einzeln betroffen ist oder mehrere Lampen ausfallen.\n   - Gerät meldet „low_battery“ – Hinweis auf Energieversorgung prüfen.\n   - Bei Online-Verbindung: Fernabfrage des Status, falls möglich.\n   - Foto der Störung sichten, falls verfügbar.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Sichtverhältnisse).\n   - Foto der defekten Lampe und Umgebung anfertigen bzw. sichern.\n\n5. **Eskalation**\n   - Bei hoher Gefährdung (unsicherer Bereich, schlechte Sicht): Störung sofort an die Leitstelle/Technik weiterleiten.\n   - Hinweis auf „low_battery“: Austausch/Aufladung der Batterie veranlassen.\n   - Bei weiteren Ausfällen: Sammelmeldung erstellen.\n\n**Rückfrage:**  \nIst ein Zugang zur Lampe vor Ort aktuell möglich (Schnee, Verkehr)? Gibt es Hinweise auf Vandalismus oder Unfallschäden?  \nFalls weitere Lampen betroffen sind, bitte melden.",
+    "tokens_estimate_words": 173
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext sehr gut (Schnee, poor_visibility, low_battery, severity=high), klare Schrittfolge mit Safety-first, umfassende Dokumentation, passende Eskalation bei hoher Gefährdung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.028
+  },
+  "error": {}
+}

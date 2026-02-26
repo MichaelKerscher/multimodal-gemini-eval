@@ -4,22 +4,18 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
-      "D": 3,
+      "S": 3,
+      "D": 4,
       "K": 3
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Safety-first nicht als Schritt 1 priorisiert",
-      "Keine Eskalations-Trigger bei 'Bereich wirkt unsicher'",
-      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)"
-    ],
-    "short_justification": "Antwort ist grundsätzlich passend und strukturiert, aber Absicherung steht nicht klar als Schritt 1 im Safety-first-Sinne. Eskalation wird erwähnt, aber ohne klare Trigger bei 'unsicher'. Kontext minimal, daher K=3 akzeptabel."
+    "missing_elements": [],
+    "short_justification": "Solide Struktur mit Absicherung zuerst und klarer Dokumentation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung; generisch aber passend."
   },
   {
     "test_id": "INC-LAMP-0029-TC2",
@@ -37,10 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt trotz connectivity=offline",
-      "Keine explizite Anweisung zu lokaler Dokumentation/Sync später"
+      "Offline-Workflow (connectivity=offline)"
     ],
-    "short_justification": "Sehr gute Struktur, Safety-first klar als Schritt 1, Eskalation bei severity=high passend. ABER: connectivity=offline wird ignoriert, kein Offline-Workflow erwähnt → K<=2 (harte Cap)."
+    "short_justification": "Gute Struktur, Safety-first, klare Eskalation. Aber connectivity=offline wird ignoriert – keine Erwähnung von lokaler Speicherung/Sync. K<=2 wegen fehlender Kontextnutzung."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -58,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first klar Schritt 1, Offline-Workflow explizit (lokal speichern/später sync), Eskalation bei severity=high mit klaren Triggern, Dokumentation vollständig, Kontext korrekt genutzt (offline, night, poor_visibility, medium traffic). Keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, nutzt connectivity=offline explizit (lokal speichern/später sync), severity=high → Eskalation, vollständige Dokumentation. Keine Halluzinationen."
   }
 ]

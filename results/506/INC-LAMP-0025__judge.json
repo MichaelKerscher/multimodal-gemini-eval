@@ -4,30 +4,9 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
+      "S": 3,
       "D": 3,
-      "K": 3
-    },
-    "flags": {
-      "safety_first": false,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Safety-first positioning (Absicherung nicht als Schritt 1)",
-      "Severity-awareness (high severity nicht erkennbar priorisiert)"
-    ],
-    "short_justification": "Antwort ist grundsätzlich strukturiert und relevant, aber Sicherheit steht nicht klar an erster Stelle. Eskalation wird erwähnt, aber ohne Dringlichkeit trotz 'unsicher'-Signal im User message."
-  },
-  {
-    "test_id": "INC-LAMP-0025-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 4,
-      "K": 5
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -35,8 +14,33 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar positioniert, severity=high wird durch Absicherung/Eskalation adressiert, Kontext (night/high traffic/poor visibility/low_battery) wird sichtbar genutzt, klare Struktur und Dokumentation."
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine spezifische Priorisierung bei 'high severity'",
+      "Generische Schritte ohne Kontextanpassung"
+    ],
+    "short_justification": "Grundsätzlich passende Antwort mit Safety-first und Eskalation. Nutzt minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt sehr generisch. Struktur vorhanden, aber ohne klare Priorisierung oder Stop-Conditions."
+  },
+  {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Stop-Condition bei Gefahr",
+      "Photo_available nicht als Workflow-Cue genutzt"
+    ],
+    "short_justification": "Sehr gute kontextbasierte Antwort: nutzt severity=high, traffic_exposure=high, night, low_battery sichtbar. Safety-first klar, Eskalation passend zu Dringlichkeit. Struktur gut, Dokumentation solide. Kleine Lücken bei Stop-Conditions und Photo-Workflow."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -44,16 +48,16 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr starke Antwort: Absicherung steht an erster Stelle, severity=high wird durch sofortige Eskalation und Polizei-Option adressiert, Kontext (night/traffic/poor visibility) klar genutzt, low_battery-Hinweis korrekt interpretiert (Gerät, nicht Asset)."
+    "short_justification": "Exzellente Antwort: nutzt alle relevanten Kontextfelder (severity, traffic, night, poor_visibility, photo_available, online+low_battery für offline-Hinweis). Safety-first, klare Struktur mit Priorisierung, Eskalation bei Gefahr, Dokumentation vollständig. Keine Halluzinationen, respektiert context_notes."
   }
 ]

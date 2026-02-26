@@ -5,7 +5,7 @@
       "R": 3,
       "H": 3,
       "S": 3,
-      "D": 4,
+      "D": 3,
       "K": 3
     },
     "flags": {
@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)",
-      "Keine explizite Priorisierung bei high severity"
+      "Keine Offline-Workflow-Hinweise (aber nicht erwartbar bei L0_minimal)",
+      "Keine explizite Priorisierung nach Severity/Traffic"
     ],
-    "short_justification": "Solide Grundstruktur mit Absicherung zuerst und Eskalation. Dokumentation gut detailliert. Bei minimalem Context angemessen generisch, aber keine klare Priorisierung für high-severity-Szenarien erkennbar."
+    "short_justification": "Solide Basisantwort mit Safety-first und Eskalation. Struktur klar, aber ohne Kontext-Signale (severity/traffic/offline) bleibt sie generisch. Dokumentation und Rückfrage sinnvoll."
   },
   {
     "test_id": "INC-LAMP-0006-TC2",
@@ -36,11 +36,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow fehlt komplett (connectivity=offline im Context)",
-      "Keine Erwähnung lokaler Dokumentation/Sync später",
-      "Low_battery des Geräts nicht adressiert"
+      "Offline-Workflow fehlt komplett (connectivity=offline, device_state=low_battery)",
+      "Keine Anweisung zu lokaler Speicherung/Synchronisation",
+      "Schritt 4 'im System dokumentieren' setzt Online-Zugriff voraus"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (Sturm, high traffic, poor visibility) und klare Safety-first-Struktur. Kritischer Fehler: ignoriert offline/low_battery komplett, obwohl im Context prominent. K daher maximal 2."
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, high traffic, poor visibility, severity=high). Safety-first und Eskalation klar. ABER: ignoriert offline/low_battery komplett – K<=2 wegen fehlender Offline-Robustheit."
   },
   {
     "test_id": "INC-LAMP-0006-TC3",
@@ -58,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first klar, Offline-Workflow explizit ('offline speichern, später synchronisieren'), alle Context-Signale genutzt (Sturm, high traffic, poor visibility, offline, low_battery). Klare Struktur, umsetzbar, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, expliziter Offline-Workflow (offline speichern, später synchronisieren), nutzt alle Kontext-Signale (Sturm, high traffic, poor visibility, offline). Keine Halluzinationen."
   }
 ]

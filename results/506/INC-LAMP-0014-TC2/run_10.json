@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-26T17:01:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Störungsbearbeitung\n\n**1. Absicherung**\n- Stelle sicher, dass der Arbeitsbereich um die defekte Lampe ausreichend abgesichert ist (Warnbaken, ggf. Warnweste).\n- Aufgrund der niedrigen Verkehrsexposition und Tageslichtsituation ist das Risiko gering, dennoch Standardmaßnahmen einhalten.\n\n**2. Sichtprüfung**\n- Prüfe die Lampe und den Mast auf sichtbare Schäden (z. B. Glasbruch, Vandalismus, lose Kabel).\n- Kontrolliere, ob der Lampenkopf fest sitzt und keine offensichtlichen Defekte an der Verkabelung oder am Gehäuse vorliegen.\n\n**3. Diagnose/Beobachtung**\n- Da das Gerät laut System „online“ und „ok“ ist, liegt vermutlich ein Problem an der Leuchte selbst (Leuchtmittel, Vorschaltgerät, Sicherung).\n- Prüfe, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größere Störung).\n- Falls möglich, teste die Stromzufuhr (Spannungsprüfer).\n\n**4. Dokumentation**\n- Notiere alle Beobachtungen: Zustand der Lampe, eventuelle Schäden, Maßnahmen vor Ort.\n- Dokumentiere die genaue Position (Koordinaten: 47.8553091, 12.1230035) und den Zeitpunkt der Kontrolle.\n\n**5. Eskalation**\n- Wenn keine einfache Behebung vor Ort möglich ist (z. B. Leuchtmittelwechsel), Störung an die Fachabteilung/Elektrofachkraft weiterleiten.\n- Bei Gefahr im Verzug (z. B. freiliegende Kabel) sofortige Sperrung und Meldung an die Leitstelle.\n\n**Rückfrage:**  \nGibt es Informationen, ob das Leuchtmittel vor Ort gewechselt werden kann, oder ist spezielles Werkzeug/Material erforderlich? Sind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 203
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Kontextnutzung (Tageszeit, low traffic, Koordinaten, device online). Klare Struktur, Safety-first, Eskalation mit Trigger. Dokumentation inkl. GPS exzellent. Nur minimal generisch bei Diagnose."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.344
+  },
+  "error": {}
+}

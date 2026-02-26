@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-26T17:00:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es gab einen zeitweiligen Ausfall, aktuell funktioniert die Anlage aber wieder normal. Hier ist das strukturierte Vorgehen zur Kontrolle:\n\n**Checkliste für Kontrolle – Asset n4470029718**\n\n1. **Absicherung**\n   - Warnweste anlegen, ggf. Absperrmaterial bereitstellen.\n   - Arbeitsbereich sichern, auf Verkehr achten.\n\n2. **Sichtprüfung**\n   - Anlage äußerlich prüfen: Beschädigungen, lose Teile, Feuchtigkeit, Vandalismus?\n   - Kontrollieren, ob alle Leuchten/Signale wie vorgesehen funktionieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Falls möglich, Statusanzeige oder Fehlerprotokoll am Schaltschrank auslesen.\n   - Nachfragen: Gibt es bekannte Störungen im Stromnetz oder Bauarbeiten in der Nähe?\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (inkl. Datum, Uhrzeit, Wetter).\n   - Fotos bei Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall, Sicherheitsrisiko oder unklarer Ursache: Störung an Technik/Leitstelle melden und ggf. Reparatur beauftragen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es nähere Angaben zum Ausfallzeitpunkt oder zur Häufigkeit?",
+    "tokens_estimate_words": 146
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine spezifische Anpassung an intermittent fault",
+      "Generische Antwort ohne Kontextintegration"
+    ],
+    "short_justification": "Solide Grundstruktur mit Safety-first und Eskalation, aber sehr generisch. Nutzt minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt allgemein gehalten ohne spezifische Anpassung an intermittierenden Fehler."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.571
+  },
+  "error": {}
+}

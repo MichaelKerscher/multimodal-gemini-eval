@@ -5,7 +5,7 @@
       "R": 3,
       "H": 3,
       "S": 3,
-      "D": 4,
+      "D": 3,
       "K": 2
     },
     "flags": {
@@ -15,10 +15,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (kein Signal im CONTEXT, daher nicht erwartbar)",
-      "Spezifische Diagnose-Schritte für intermittent fault"
+      "Offline-Workflow (Kontext zeigt kein connectivity-Signal)",
+      "Spezifische Nutzung der Asset-ID im Workflow",
+      "Klare Priorisierung bei unklarer Ursache"
     ],
-    "short_justification": "Solide generische Checkliste mit Safety-first und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Struktur gut, aber teils allgemein; Rückfragen sinnvoll."
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Kontext (nur asset_osm) wird kaum genutzt; keine Offline-Hinweise nötig, da connectivity nicht gegeben. Generisch, aber passend für minimalen Kontext."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
@@ -36,9 +37,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Explizite Offline-Synchronisations-Hinweise könnten klarer sein"
+      "Explizite Erwähnung 'später synchronisieren' bei Offline-Doku",
+      "Stop-Conditions für Eskalation könnten schärfer sein"
     ],
-    "short_justification": "Sehr gute Kontextnutzung (Nebel, offline, mittlere Verkehrsexposition). Safety-first, klare Schrittfolge, Offline-Workflow implizit (lokal dokumentieren/Fotos später). Eskalation klar. Rückfragen passend."
+    "short_justification": "Sehr gute Kontextnutzung: Nebel/Verkehr → Absicherung, offline → keine Fernabfrage, Nebel → Feuchtigkeitsprüfung. Klare Schrittfolge, Safety-first, Eskalation vorhanden. Dokumentation umfassend. Nahe an 5, aber Offline-Workflow könnte expliziter sein ('lokal speichern, später sync')."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -56,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontext vollständig genutzt (offline → lokal speichern/später sync, Nebel/Verkehr → Safety), klare Schrittfolge, Eskalation passend zu severity=low, Dokumentation detailliert. Rückfragen gezielt."
+    "short_justification": "Exzellente Kontextnutzung: offline → 'lokal speichern, später synchronisieren' explizit genannt, Nebel/Verkehr → Absicherung, extras.context_notes beachtet. Klare Struktur, Safety-first, umfassende Doku, gezielte Rückfragen. Nahezu perfekt für gegebenen Kontext."
   }
 ]

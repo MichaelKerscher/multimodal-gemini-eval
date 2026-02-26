@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC2",
+  "timestamp": "2026-02-26T17:07:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029720",
+        "longitude": 12.1326497,
+        "latitude": 47.8433336,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-18T06:17:02+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Schritt-für-Schritt-Checkliste – Gehäuse beschädigt, mögliche Berührungsgefahr (Leitzachstraße, Rosenheim):\n\n1. **Absicherung**\n   - Bereich sofort absperren (z. B. mit Absperrband, Pylonen).\n   - Warnschilder „Stromschlaggefahr“ aufstellen.\n   - Abstand für Passanten und Fahrzeuge sicherstellen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Wo genau ist die Beschädigung?\n   - Sind stromführende Teile sichtbar oder zugänglich?\n   - Foto dokumentieren (falls noch nicht geschehen).\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Gerät weiterhin funktioniert (Leuchte/Ampel an/aus).\n   - Keine Berührung! Nur Sichtprüfung durchführen.\n   - Prüfen, ob weitere Schäden (z. B. lockere Teile, Feuchtigkeit) erkennbar sind.\n\n4. **Dokumentation**\n   - Schaden und Absicherungsmaßnahmen schriftlich festhalten.\n   - Fotos und genaue Beschreibung an die Leitstelle/Technik weiterleiten.\n   - Zeitpunkt und Namen der ausführenden Person notieren.\n\n5. **Eskalation**\n   - Störung mit hoher Priorität an Elektrofachkraft/Technik melden.\n   - Reparatur und ggf. Stromabschaltung veranlassen.\n   - Bis zur Reparatur Absperrung aufrechterhalten und regelmäßig kontrollieren.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Meldung weiterleiten? Sind weitere Details zur Schadensstelle (z. B. genaue Position am Mast) bekannt?",
+    "tokens_estimate_words": 158
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Standort Leitzachstraße, severity=high, photo_available), klare 5-Schritt-Struktur mit Safety first, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, keine irrelevanten Elemente."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.116
+  },
+  "error": {}
+}

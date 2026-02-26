@@ -6,7 +6,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -15,10 +15,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (Kontext zeigt offline, aber nicht erwähnt)",
-      "Wetter/Sicht-Risiko nicht explizit adressiert"
+      "Offline-Workflow nicht erwähnt (aber auch nicht erwartbar bei L0_minimal)"
     ],
-    "short_justification": "Strukturiert, Safety-first, klare Eskalation. Kontext minimal (nur asset_osm), daher Offline-Workflow nicht erwartbar – aber Modell nutzt Kontext nicht aktiv (K=2). Rückfrage sinnvoll."
+    "short_justification": "Klare Struktur mit Safety-first, guter Fokus auf Feuchtigkeitsproblematik bei Regen, Eskalation vorhanden. Kontext minimal, daher keine Offline-Hinweise erwartbar. Solide Antwort."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
@@ -26,7 +25,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 4
     },
     "flags": {
@@ -36,7 +35,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schritte, Offline-Workflow erkannt ('Keine Fernabfrage möglich'), Wetter/Sicht/Verkehr integriert, Eskalation klar. K=4 wegen leicht generischer Formulierung, aber keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schritte, nutzt Kontext (offline, Regen, dusk/poor visibility), erwähnt Offline-Einschränkung ('Gerät ist offline, daher keine Ferndiagnose möglich'), Eskalation klar. Sehr gut strukturiert."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -54,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekt: Safety-first, Offline-Workflow explizit ('offline dokumentieren', 'lokal speichern', 'synchronisieren'), Wetter/Dämmerung/Sicht integriert, klare Eskalation, keine Halluzinationen. Nutzt extras.context_notes korrekt."
+    "short_justification": "Perfekte Antwort: Safety-first, klare Schrittfolge, nutzt Kontext optimal (offline → 'offline in der App oder auf Papier festhalten', 'später synchronisieren'), Eskalation klar, Dokumentation vollständig. Keine Halluzinationen, sehr umsetzbar."
   }
 ]

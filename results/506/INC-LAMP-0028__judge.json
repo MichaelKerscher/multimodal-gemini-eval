@@ -1,7 +1,13 @@
 [
   {
     "test_id": "INC-LAMP-0028-TC1",
-    "scores": {"R": 4, "H": 4, "S": 5, "D": 4, "K": 3},
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -9,11 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Safety-first-Struktur mit klarer Absicherung als Schritt 1, sinnvolle Eskalation und Dokumentation. Kontext minimal, daher K=3 (keine Offline-Signale, generisch aber korrekt)."
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Dokumentation vollständig. Kontext minimal, daher keine Offline-Erwartung; generische Antwort ist hier angemessen."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
-    "scores": {"R": 5, "H": 5, "S": 5, "D": 4, "K": 5},
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -21,11 +33,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, nutzt Kontext sichtbar (online-Status, Standort, severity=high), strukturiert, umsetzbar, keine Halluzinationen. Alle Dimensionen sehr gut erfüllt."
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Standort Leitzachstraße, severity=high, photo_available), klare 5-Schritt-Struktur mit Safety first, vollständige Dokumentation, passende Eskalation. Keine Halluzinationen, keine irrelevanten Elemente."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
-    "scores": {"R": 5, "H": 5, "S": 5, "D": 4, "K": 5},
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -33,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, nutzt Kontext korrekt (photo_available, severity, online), keine Überbehauptungen. Kompakt und umsetzbar, Eskalation klar adressiert."
+    "short_justification": "Nahezu perfekt: nutzt Kontext präzise (Standort, severity, photo_available), klare Priorisierung mit Absicherung zuerst, vollständige Dokumentation inkl. Foto-Verweis, angemessene Eskalation. Keine Halluzinationen, kompakt und umsetzbar."
   }
 ]

@@ -1,7 +1,13 @@
 [
   {
     "test_id": "INC-LAMP-0027-TC1",
-    "scores": {"R": 4, "H": 4, "S": 3, "D": 4, "K": 3},
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -9,23 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, guter Diagnose (Feuchtigkeitseintritt) und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber solide umsetzbar."
+    "short_justification": "Klare Struktur mit Safety-first, guter Diagnose (Feuchtigkeitseintritt) und Eskalation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Etwas lang, aber umsetzbar."
   },
   {
     "test_id": "INC-LAMP-0027-TC2",
-    "scores": {"R": 5, "H": 5, "S": 4, "D": 4, "K": 4},
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
     },
-    "missing_elements": ["offline_workflow_explicit"],
-    "short_justification": "Sehr gute Antwort: Safety-first, klare Schritte, Feuchtigkeitsdiagnose passend zu Regen, Eskalation bei Gefahr. Connectivity=spotty im Kontext, aber Offline-Workflow nicht explizit erwähnt (Foto 'falls möglich' ist schwach)."
-  },
-  {
-    "test_id": "INC-LAMP-0027-TC3",
-    "scores": {"R": 5, "H": 5, "S": 5, "D": 5, "K": 5},
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -33,6 +33,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Feuchtigkeitsdiagnose, expliziter Offline-Workflow (lokal speichern/später synchronisieren), Eskalation bei Gefahr, vollständige Dokumentation. Nutzt Kontext optimal (spotty connectivity, rain, high traffic)."
+    "short_justification": "Sehr gute Nutzung des Kontexts (spotty connectivity → Vor-Ort-Check, high traffic → Absicherung, rain → Feuchtigkeitsdiagnose). Klare Schritte, Safety-first, Eskalation mit Dringlichkeit. Kompakt und umsetzbar."
+  },
+  {
+    "test_id": "INC-LAMP-0027-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (spotty → Offline-Modus explizit, rain/traffic → Safety, Feuchtigkeitsdiagnose). Klare Schrittfolge, umfassende Dokumentation inkl. Asset-ID/Standort, starke Eskalationslogik. Nahezu perfekt."
   }
 ]

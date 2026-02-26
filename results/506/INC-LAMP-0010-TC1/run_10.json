@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC1",
+  "timestamp": "2026-02-26T16:59:58",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen. (Asset-ID: n4427955479)",
+    "context": {
+      "asset_osm": "n4427955479"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt entlang Rosenheim, Stadtmitte (Asset-ID: n4427955479). Hier ist das empfohlene Vorgehen:\n\nCheckliste für die Überprüfung – Straßenbeleuchtung\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereitstellen.  \n- Einsatzfahrzeug sicher abstellen, ggf. Warnblinker einschalten.  \n- Gefahrenbereich (Gehweg/Fahrbahn) absichern, um sicheres Arbeiten zu gewährleisten.\n\n2. Sichtprüfung  \n- Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.  \n- Sichtkontrolle auf offensichtliche Schäden (z. B. defekte Leuchtmittel, beschädigte Masten, offene Kabel).  \n- Umgebung auf weitere Gefahrenquellen prüfen (z. B. herunterhängende Leitungen).\n\n3. Diagnose/Beobachtung  \n- Funktionstest der Leuchten (sofern möglich).  \n- Prüfen, ob Zeitschaltuhr, Dämmerungsschalter oder Sicherungen ausgefallen sind.  \n- Bei mehreren dunklen Leuchten: Möglicher Ausfall einer Sammelsicherung oder Netzstörung.\n\n4. Dokumentation  \n- Genaue Beschreibung des Befunds (Anzahl und Position der betroffenen Leuchten, Art des Defekts).  \n- Fotos anfertigen, falls möglich.  \n- Asset-ID (n4427955479) und Standort notieren.\n\n5. Eskalation  \n- Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an Notdienst/Leitstelle.  \n- Sonst: Störungsmeldung an zuständige Fachabteilung oder Wartungsfirma weiterleiten.\n\nRückfrage:  \nBetrifft der dunkle Abschnitt mehrere aufeinanderfolgende Leuchten oder nur eine einzelne? Gab es kürzlich Bauarbeiten oder Unwetter in dem Bereich? Diese Infos helfen bei der Eingrenzung der Ursache.",
+    "tokens_estimate_words": 186
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Severity-Bewusstsein (high severity nicht erkennbar)",
+      "Kontextnutzung minimal (nur Asset-ID verwendet)"
+    ],
+    "short_justification": "Grundsolide Checkliste mit Safety-first und Eskalation. Kontext ist minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Struktur gut, aber generisch ohne Bezug zu möglichen Umgebungsfaktoren."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.233
+  },
+  "error": {}
+}

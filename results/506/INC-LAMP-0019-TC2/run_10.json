@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC2",
+  "timestamp": "2026-02-26T17:03:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032796",
+        "longitude": 12.1220818,
+        "latitude": 47.8552359,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:20:38+01:00",
+        "reporter": "dispatch",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störungseinsatz – Straßenlampe (n4939032796), Bereich unsicher\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereitlegen.  \n- Einsatzstelle mit Pylonen/Leitkegeln sichern, besonders wegen schlechter Sicht (Nacht, Nebel).  \n- Auf herannahenden Verkehr achten (Verkehrsbelastung: mittel).\n\n2. Sichtprüfung  \n- Lampe und Mast auf äußere Schäden, lose Teile oder Vandalismus prüfen.  \n- Umgebung auf Stolperfallen oder weitere Gefahren kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größere Störung).  \n- Sichtkontrolle des Stromkastens (sofern zugänglich und sicher).  \n- Keine Arbeiten an elektrischen Komponenten ohne Elektrofachkraft!\n\n4. Dokumentation  \n- Störung, Sichtbefund und getroffene Maßnahmen notieren (Datum, Uhrzeit, Standort, Fotos falls möglich).  \n- Besonderheiten wie schlechte Sicht und unsichere Umgebung dokumentieren.\n\n5. Eskalation  \n- Bei Gefahr für Verkehr oder Personen: Sofortige Meldung an Bereitschaft/Energieversorger zur schnellen Entstörung.  \n- Falls Eigenabsicherung nicht ausreicht: Polizei/Ordnungsamt zur Verkehrslenkung hinzuziehen.\n\nRückfrage:  \nSind weitere Lampen in der Umgebung ebenfalls ausgefallen oder ist nur diese betroffen? Gibt es Hinweise auf akute Gefährdung (z. B. Unfallgefahr, viel Fußgängerverkehr)?",
+    "tokens_estimate_words": 161
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Nebel, Nacht, mittlere Verkehrsbelastung explizit integriert). Safety-first klar, Struktur priorisiert, Eskalation passend zu severity=medium."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.636
+  },
+  "error": {}
+}

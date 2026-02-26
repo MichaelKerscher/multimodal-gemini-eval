@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-26T17:03:14",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein gleichzeitiger Ausfall eines Segments (Asset-ID: n12520351647) vor, vermutlich bei Straßenlampen oder einer Ampelanlage. Hier eine strukturierte Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Gefahrenbereich absichern (z. B. Warnbaken, Warnleuchten aufstellen).\n   - Bei Ampelanlagen: Polizei informieren, falls Kreuzung betroffen ist.\n   - Persönliche Schutzausrüstung tragen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage und des Umfelds: Gibt es offensichtliche Schäden, z. B. an Kabeln, Schaltschränken, Masten?\n   - Prüfen, ob weitere Segmente betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Ausfall auf einen zentralen Steuerungsfehler hindeutet (z. B. Ausfall der Steuerbox, Kommunikationsproblem).\n   - Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Bereich?\n   - Prüfen, ob Sicherungen ausgelöst wurden oder Fehleranzeigen sichtbar sind.\n\n4. **Dokumentation**\n   - Ausfall und erste Beobachtungen dokumentieren (Datum, Uhrzeit, betroffene Segmente, Maßnahmen).\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Bei bestätigtem Steuerungsproblem: Fachfirma oder interne Technik verständigen.\n   - Dringlichkeit je nach Verkehrsrelevanz und Sicherheitslage einstufen.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenbeleuchtung oder eine Ampelanlage? Gibt es Hinweise auf Bauarbeiten, Wettereinflüsse oder kürzliche Wartungsarbeiten im betroffenen Bereich?",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontextnutzung (Zeit/Wetter/Verkehr fehlen komplett)",
+      "Keine Anpassung an Umgebungsbedingungen erkennbar"
+    ],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Bleibt aber sehr generisch, da minimaler Kontext nicht genutzt wird (keine Zeit-/Wetter-/Verkehrsanpassung). Rückfragen sinnvoll, aber Antwort hätte spezifischer sein können."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.807
+  },
+  "error": {}
+}

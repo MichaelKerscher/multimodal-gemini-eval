@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-26T16:56:11",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall  \n**Objekt:** Rosenheim, Bahnhof (n5718630492)  \n**Fehlerbild:** Lampe war aus, jetzt wieder an (sporadisch), Gerät meldet niedrigen Batteriestand, keine Online-Verbindung.\n\n1. **Absicherung**\n   - Bereich mit hoher Verkehrsexposition: Warnweste tragen, ggf. Absperrung/Leitkegel aufstellen.\n   - Bei Tageslicht und normaler Sicht, dennoch auf Umgebung achten (Bahnhofsumfeld, viel Verkehr).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Masts auf äußere Schäden, lose Kabel, Feuchtigkeitseintritt.\n   - Prüfen, ob die Lampe aktuell stabil leuchtet.\n   - Batterie- oder Solarmodul (falls vorhanden) auf offensichtliche Defekte prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Lampe einige Minuten beobachten, ggf. mehrfach schalten.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Hinweis: Gerät ist offline und meldet niedrigen Batteriestand – mögliche Ursache für Ausfall.\n   - Falls möglich, Batteriestand messen oder Batterie tauschen.\n\n4. **Dokumentation**\n   - Fehlerbild, Zeitpunkt, eigene Beobachtungen und ggf. Fotos dokumentieren.\n   - Notieren, ob der Fehler aktuell nachvollziehbar ist oder nur sporadisch auftritt.\n\n5. **Eskalation**\n   - Bei weiterhin unklarer Ursache oder wiederholtem Ausfall: Meldung an Fachabteilung/Elektrofachkraft zur weiteren Prüfung (z. B. Batterietausch, Prüfung der Steuerung).\n   - Hinweis auf erhöhte Verkehrssicherheit am Bahnhof geben.\n\n**Rückfrage:**  \nIst ein Batterietausch vor Ort möglich oder soll ein Serviceteam mit Ersatzbatterie beauftragt werden?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 203
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Expliziter Offline-Workflow (lokal dokumentieren/synchronisieren)",
+      "Foto-Workflow-Hinweis (photo_available=true nicht genutzt)"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Standort, Verkehr, Batteriestand, offline-Status erwähnt). Klare Safety-first-Struktur, priorisierte Schritte, gute Eskalation. Offline-Workflow implizit (Dokumentation), aber nicht explizit als 'lokal speichern/später sync'."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.33
+  },
+  "error": {}
+}

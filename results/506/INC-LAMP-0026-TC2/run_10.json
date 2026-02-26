@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC2",
+  "timestamp": "2026-02-26T17:06:39",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4449540379",
+        "longitude": 12.1220096,
+        "latitude": 47.8772297,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Langenpfunzen, Römerstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-17T01:08:07+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten.\n- Warnweste anlegen.\n- Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Arbeitsbereich abzusichern – besonders bei mittlerer Verkehrsexposition und eingeschränkter Sicht durch Nebel.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Straßenlampe auf offensichtliche Schäden (Gehäuse, Mast, Leuchtmittel).\n- Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist (besonders bei Nebelwetter).\n- Kontrolle auf lose Kabel, offene Klappen oder Vandalismus.\n\n**3. Diagnose/Beobachtung**\n- Da das Gerät „offline“ ist, ist keine Fernabfrage möglich.\n- Prüfen, ob das Problem bei mehreren Lampen in der Nähe auftritt (Hinweis auf Netzproblem).\n- Beobachten, ob das an/aus-Verhalten während der Anwesenheit auftritt.\n- Falls möglich: Test mit mobilem Spannungsprüfer am Zugangspunkt.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Sichtverhältnisse).\n- Fotos machen, falls später möglich.\n- Besonderheiten (z. B. hoher Lärmpegel, erschwerte Kommunikation) vermerken.\n\n**5. Eskalation**\n- Bei unklarer Ursache und weiterhin bestehender Störung: Meldung an die Fachabteilung für Elektrotechnik/Netzbetreiber zur weiteren Diagnose.\n- Hinweis auf mögliche Fehlerquellen: Feuchtigkeitseintritt, Wackelkontakt, Steuerungsproblem.\n- Rückmeldung an den Melder (Patrouille), dass weitere Maßnahmen eingeleitet werden.\n\n**Rückfrage:**  \nGibt es in der Nähe weitere Lampen mit ähnlichem Verhalten oder ist nur diese betroffen?  \nSoll eine kurzfristige Reparatur oder eine umfassende Netzprüfung beauftragt werden?",
+    "tokens_estimate_words": 199
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Erwähnung 'später synchronisieren' bei Offline-Doku",
+      "Stop-Conditions für Eskalation könnten schärfer sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung: Nebel/Verkehr → Absicherung, offline → keine Fernabfrage, Nebel → Feuchtigkeitsprüfung. Klare Schrittfolge, Safety-first, Eskalation vorhanden. Dokumentation umfassend. Nahe an 5, aber Offline-Workflow könnte expliziter sein ('lokal speichern, später sync')."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.268
+  },
+  "error": {}
+}

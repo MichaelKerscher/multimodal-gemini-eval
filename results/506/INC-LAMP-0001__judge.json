@@ -5,26 +5,8 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Antwort trotz minimalem Kontext: klare 5-Schritt-Struktur, Safety first (Absicherung), Eskalation bei Wiederholung/Gefahr, Dokumentation systematisch, sinnvolle Rückfragen. Keine Halluzinationen, nutzt Asset-ID korrekt. Offline-Workflow nicht erwartbar (kein Signal im Kontext)."
-  },
-  {
-    "test_id": "INC-LAMP-0001-TC2",
-    "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "D": 3,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -33,9 +15,31 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow explizit (lokal speichern/später sync)"
+      "Offline-Workflow (nicht erwartbar, da CONTEXT minimal)",
+      "Spezifische Standort-/Umgebungsdetails (nicht im CONTEXT)"
     ],
-    "short_justification": "Exzellente Antwort: nutzt Kontext perfekt (Standort, Verkehr, Gerätezustand low_battery/offline), Safety first mit Warnweste/Absperrung bei hoher Verkehrsexposition, klare Schrittfolge, Eskalation bei Wiederholung/Gefahr, Dokumentation inkl. Foto. Offline-Workflow implizit (Foto/Dokumentation), aber nicht explizit 'lokal speichern/später sync' genannt – bei severity=low vertretbar."
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first. Dokumentation und Eskalation vorhanden, aber Dokumentations-Checkliste könnte detaillierter sein. Kontext minimal genutzt (nur Asset-ID), keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Expliziter Offline-Workflow (lokal dokumentieren/synchronisieren)",
+      "Foto-Workflow-Hinweis (photo_available=true nicht genutzt)"
+    ],
+    "short_justification": "Exzellente Kontextnutzung (Standort, Verkehr, Batteriestand, offline-Status erwähnt). Klare Safety-first-Struktur, priorisierte Schritte, gute Eskalation. Offline-Workflow implizit (Dokumentation), aber nicht explizit als 'lokal speichern/später sync'."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
@@ -53,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Perfekte Antwort: nutzt Kontext vollständig (Standort, Verkehr, offline/low_battery), Safety first (Warnweste/Absperrung), klare 5-Schritt-Struktur, Offline-Workflow explizit ('offline speichern, später synchronisieren'), Eskalation bei Wiederholung/Verschlechterung, Dokumentation systematisch. Keine Halluzinationen, sinnvolle Rückfrage."
+    "short_justification": "Nahezu perfekt: Safety-first, klare Schrittfolge, expliziter Offline-Workflow ('offline dokumentieren, lokal speichern, später synchronisieren'), Foto-Workflow integriert, vollständige Dokumentations-Checkliste, robuste Kontextnutzung ohne Halluzinationen. Alle erwartbaren Elemente erfüllt."
   }
 ]

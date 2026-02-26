@@ -1,26 +1,54 @@
 [
   [
-    "Offline-Workflow explizit (lokal speichern/später sync)",
+    "Keine klare Stop-Condition vor Eskalation",
+    2
+  ],
+  [
+    "Offline-Workflow (connectivity=offline)",
+    2
+  ],
+  [
+    "Keine Nutzung der Asset-ID im Kontext",
+    2
+  ],
+  [
+    "Generische Schritte ohne Kontextanpassung",
+    2
+  ],
+  [
+    "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
+    2
+  ],
+  [
+    "Offline-Workflow (nicht erwartbar, da CONTEXT minimal)",
     1
   ],
   [
-    "Kein Bezug zu Umgebungsbedingungen (nicht im Kontext)",
+    "Spezifische Standort-/Umgebungsdetails (nicht im CONTEXT)",
     1
   ],
   [
-    "Keine Nutzung von photo_available (nicht im Kontext)",
+    "Expliziter Offline-Workflow (lokal dokumentieren/synchronisieren)",
     1
   ],
   [
-    "Generische Antwort ohne spezifische Kontextanpassung",
+    "Foto-Workflow-Hinweis (photo_available=true nicht genutzt)",
     1
   ],
   [
-    "Offline-Workflow (spotty connectivity)",
+    "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei minimalem Context)",
     1
   ],
   [
-    "Klarstellung device_state vs. Asset-Zustand",
+    "Keine Nutzung von Geo-Koordinaten (nicht im Context vorhanden)",
+    1
+  ],
+  [
+    "Offline-Workflow nur implizit ('Notiz machen'), nicht explizit als Sync-Strategie",
+    1
+  ],
+  [
+    "Keine explizite GPS-Koordinaten-Dokumentation trotz Verfügbarkeit",
     1
   ],
   [
@@ -32,119 +60,95 @@
     1
   ],
   [
-    "Offline-Workflow fehlt komplett (connectivity=offline im Context)",
+    "Kein expliziter Offline-Workflow trotz spotty connectivity",
     1
   ],
   [
-    "Keine Erwähnung lokaler Dokumentation/Sync später",
+    "Keine Offline-Workflow-Hinweise (aber nicht erwartbar bei L0_minimal)",
     1
   ],
   [
-    "Low_battery des Geräts nicht adressiert",
+    "Keine explizite Priorisierung nach Severity/Traffic",
     1
   ],
   [
-    "Offline-Workflow könnte expliziter sein (z.B. 'lokal speichern, später sync')",
+    "Offline-Workflow fehlt komplett (connectivity=offline, device_state=low_battery)",
     1
   ],
   [
-    "Offline-Workflow (Kontext zeigt offline, aber nicht erwähnt)",
+    "Keine Anweisung zu lokaler Speicherung/Synchronisation",
     1
   ],
   [
-    "Wetter/Sicht-Risiko nicht explizit adressiert",
+    "Schritt 4 'im System dokumentieren' setzt Online-Zugriff voraus",
     1
   ],
   [
-    "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
+    "Explizite Anweisung zur lokalen Speicherung/Synchronisation",
     1
   ],
   [
-    "Generische Antwort ohne Anpassung an Umgebung",
+    "Offline-Workflow nicht erwähnt (aber auch nicht erwartbar bei L0_minimal)",
     1
   ],
   [
-    "Fragt nach Asset-Typ, obwohl nicht erwartbar aus Kontext",
+    "Severity-Bewusstsein (high severity nicht erkennbar)",
     1
   ],
   [
-    "Keine explizite Priorisierung bei Nebel/schlechter Sicht",
+    "Kontextnutzung minimal (nur Asset-ID verwendet)",
     1
   ],
   [
-    "Stop-Conditions könnten klarer sein",
+    "Keine spezifische Anpassung an intermittent fault",
     1
   ],
   [
-    "Keine explizite Nutzung der context_notes (device vs. asset)",
+    "Generische Antwort ohne Kontextintegration",
     1
   ],
   [
-    "Stop-Conditions bei Eskalation könnten präziser sein",
+    "Offline-Workflow explizit (spotty connectivity)",
     1
   ],
   [
-    "Keine Nutzung von Kontext-Signalen (severity, time_of_day, traffic)",
+    "Koordinaten nicht explizit dokumentiert",
     1
   ],
   [
-    "Keine Erwähnung von Foto-Verfügbarkeit",
+    "Keine Nutzung der Asset-ID im Kontext erkennbar",
     1
   ],
   [
-    "Severity-Bewusstsein (high) nicht erkennbar",
+    "Keine Priorisierung nach Severity/Traffic",
     1
   ],
   [
-    "Verkehrsexposition/Sichtbedingungen nicht adressiert",
+    "Keine Nutzung der Geo-Koordinaten (im CONTEXT vorhanden)",
     1
   ],
   [
-    "Foto-Workflow nicht erwähnt",
+    "Keine Erwähnung von Foto-Workflow (nicht im CONTEXT)",
     1
   ],
   [
-    "Keine Nutzung des minimalen Kontexts (nur asset_osm vorhanden)",
+    "Asset-ID nicht explizit in Doku genannt",
     1
   ],
   [
-    "Keine Priorisierung bei sporadischem Fehler",
+    "Asset-ID/Geo-Koordinaten nicht explizit in Doku-Checkliste",
     1
   ],
   [
-    "Keine klaren Stop-Conditions",
+    "Keine Priorisierung bei severity=high erkennbar",
     1
   ],
   [
-    "Kein expliziter Offline-Workflow trotz connectivity=spotty",
+    "Eskalation nicht als primärer Schritt bei high severity",
     1
   ],
   [
-    "Keine klare Priorisierung der Beobachtung vs. sofortige Reparatur",
-    1
-  ],
-  [
-    "Keine Anpassung an fehlende Umwelt-/Severity-Infos",
-    1
-  ],
-  [
-    "Keine Erwähnung von Kontextlücken",
-    1
-  ],
-  [
-    "Kein expliziter Hinweis auf photo_available=false als Constraint",
-    1
-  ],
-  [
-    "Keine Nutzung von Umgebungskontext (Nebel/Nacht/Sicht)",
-    1
-  ],
-  [
-    "Keine Erwähnung von Geräte-Konnektivität",
-    1
-  ],
-  [
-    "Keine Nutzung der Asset-ID im Kontext",
+    "Keine Nutzung der Asset-ID im Kontext (nur minimal vorhanden)",
     1
   ],
   [
@@ -152,51 +156,47 @@
     1
   ],
   [
-    "Kein expliziter Hinweis auf low_power_mode des Geräts",
+    "Kein expliziter Hinweis auf low_power_mode des Geräts als Workflow-Constraint",
     1
   ],
   [
-    "Foto-Workflow nicht klar priorisiert",
+    "Photo_available nicht aktiv in Workflow integriert",
     1
   ],
   [
-    "Offline-Workflow (connectivity=spotty)",
+    "Kontextnutzung (Zeit/Wetter/Verkehr fehlen komplett)",
     1
   ],
   [
-    "Severity-Bewertung fehlt (high nicht erkennbar aus minimalem Kontext)",
+    "Keine Anpassung an Umgebungsbedingungen erkennbar",
     1
   ],
   [
-    "Zeitstempel/reported_at nicht dokumentiert",
+    "Kontextnutzung minimal (nur Asset-ID)",
     1
   ],
   [
-    "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)",
+    "Keine Anpassung an Umgebung/Zeit/Wetter",
     1
   ],
   [
-    "Keine explizite Priorisierung bei severity/traffic (Kontext fehlt)",
+    "Offline-Workflow nicht erwähnt (nicht erwartbar bei L0)",
     1
   ],
   [
-    "Safety-first positioning (Absicherung nicht als Schritt 1)",
+    "Foto-Workflow nicht klar integriert (photo_available=true)",
     1
   ],
   [
-    "Severity-awareness (high severity nicht erkennbar priorisiert)",
+    "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0_minimal)",
     1
   ],
   [
-    "Offline-Workflow (kein Signal im CONTEXT, daher nicht erwartbar)",
+    "Severity/Traffic/Weather nicht sichtbar genutzt (nicht im Context)",
     1
   ],
   [
-    "Spezifische Diagnose-Schritte für intermittent fault",
-    1
-  ],
-  [
-    "Explizite Offline-Synchronisations-Hinweise könnten klarer sein",
+    "Offline-Workflow erwähnt ('Keine Fernabfrage möglich'), aber nicht als strukturierter Schritt (lokal speichern/später sync)",
     1
   ]
 ]

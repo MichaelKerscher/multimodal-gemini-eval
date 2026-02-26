@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC2",
+  "timestamp": "2026-02-26T17:02:47",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den dunklen Abschnitt Schönau\n\n1. **Absicherung**\n   - Warnblinkanlage am Einsatzfahrzeug einschalten.\n   - Warnschilder „Achtung Arbeiten an der Straßenbeleuchtung“ aufstellen.\n   - Persönliche Schutzausrüstung (Warnweste, ggf. Regenschutz) anlegen.\n   - Bei Regen und schlechter Sicht besonders auf rutschige Fahrbahn achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der gesamten Beleuchtungsstrecke entlang Schönau durchführen.\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Auf offensichtliche Schäden (z. B. umgeknickte Masten, offene Kabel, Wassereintritt) achten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampen auf einen Stromausfall oder einen Defekt hindeuten (z. B. Sicherungen, Schaltkasten, Feuchtigkeitseintritt).\n   - Kontrollieren, ob der Schaltkasten zugänglich und trocken ist.\n   - Da das Gerät im „low_power_mode“ ist, kann eine Störung im Energieversorgungssystem vorliegen.\n   - Foto-Dokumentation nutzen, falls vorhanden.\n\n4. **Dokumentation**\n   - Alle Feststellungen (betroffene Lampen, Schäden, Witterung, Zeitpunkt) notieren.\n   - Fotos der Situation und der betroffenen Anlagen anfertigen.\n   - Besonderheiten (z. B. erhöhte Rutschgefahr durch Regen) dokumentieren.\n\n5. **Eskalation**\n   - Bei größerem Ausfall oder Gefahr für Verkehrsteilnehmer sofortige Meldung an die Leitstelle/den Bereitschaftsdienst.\n   - Falls Reparatur vor Ort nicht möglich: Absperrung veranlassen und Reparaturteam anfordern.\n\n**Rückfrage:**  \nSind bereits weitere Ausfälle in der Umgebung gemeldet worden oder gibt es Hinweise auf Bauarbeiten/Stromarbeiten in der Nähe?  \nFalls nicht, gehe ich von einem lokalen Defekt aus. Bitte bestätigen oder ergänzen.",
+    "tokens_estimate_words": 206
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kein expliziter Hinweis auf low_power_mode des Geräts als Workflow-Constraint",
+      "Photo_available nicht aktiv in Workflow integriert"
+    ],
+    "short_justification": "Sehr gute kontextbezogene Antwort: Regen/Dämmerung/schlechte Sicht werden in Safety integriert, low_power_mode wird als mögliche Ursache erwähnt. Struktur klar, Eskalation passend zu severity=medium. Photo_available hätte stärker genutzt werden können."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.908
+  },
+  "error": {}
+}

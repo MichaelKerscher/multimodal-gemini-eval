@@ -15,19 +15,19 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Anpassung an fehlende Umwelt-/Severity-Infos",
-      "Keine Erwähnung von Kontextlücken"
+      "Kontextnutzung (Zeit/Wetter/Verkehr fehlen komplett)",
+      "Keine Anpassung an Umgebungsbedingungen erkennbar"
     ],
-    "short_justification": "Grundsolide Checkliste mit Safety-first und Eskalation. Bleibt aber generisch, da minimaler Kontext nicht reflektiert wird (keine Hinweise auf fehlende Infos zu Wetter/Verkehr/Severity). Rückfragen sind gut, aber Antwort hätte expliziter auf Datenlücken hinweisen können."
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Bleibt aber sehr generisch, da minimaler Kontext nicht genutzt wird (keine Zeit-/Wetter-/Verkehrsanpassung). Rückfragen sinnvoll, aber Antwort hätte spezifischer sein können."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
-      "K": 4
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -35,27 +35,25 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Kein expliziter Hinweis auf photo_available=false als Constraint"
-    ],
-    "short_justification": "Sehr gute kontextbezogene Antwort: Nebel/Nacht/mittlere Verkehrsexposition werden in Absicherung integriert, Steuerungsdiagnose passt zu control_box_issue, Dokumentation erwähnt Fotos ('sobald möglich'). Klare Struktur, Safety-first, sinnvolle Eskalation. Nur minimale Lücke bei expliziter Erwähnung von photo_available=false."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Nacht+Nebel+mittlerer Verkehr führen zu verstärkten Sicherheitsmaßnahmen. Klare Schrittfolge, Safety-first, Eskalation mit Triggern, Dokumentation umfassend. Nahezu perfekt für den Fall."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": true,
+      "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel/Nacht in Absicherung, Offline-Dokumentation explizit erwähnt ('offlinefähig, falls nötig'), Severity/Verkehr in Eskalation integriert, Steuerungsdiagnose passend. Klare Struktur, Safety-first, vollständige Dokumentation. Rückfragen sinnvoll. Nahezu perfekte Erfüllung aller Dimensionen."
+    "short_justification": "Sehr starke Antwort: Nacht+Nebel+mittlerer Verkehr klar in Sicherheitsmaßnahmen integriert, Online-Connectivity sinnvoll genutzt (Fernabfrage erwähnt). Klare Struktur, Safety-first, Eskalation, Dokumentation vollständig. Nahezu identisch zu TC2 in Qualität."
   }
 ]

@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Nutzung von Kontext-Signalen (severity, time_of_day, traffic)",
-      "Keine Erwähnung von Foto-Verfügbarkeit"
-    ],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Eskalationslogik und Dokumentation. Bleibt aber generisch, da minimaler Kontext nicht genutzt wird (nur Asset-ID). Sinnvolle Rückfragen."
+    "missing_elements": [],
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Dokumentation vollständig. Kontext minimal, daher keine Offline-Erwartung, aber auch keine aktive Kontextnutzung erkennbar (nur Asset-ID)."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -36,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, nutzt Kontext sichtbar (Koordinaten, dusk/poor_visibility → Warnleuchten, medium traffic → Absperrung, photo_available erwähnt). Klare Schrittfolge, Eskalation mit Trigger, vollständige Dokumentation. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, strukturierte Schritte, vollständige Dokumentation inkl. Koordinaten aus Context, passende Eskalation bei severity=high. Kontext (dusk/poor_visibility/medium traffic) sinnvoll genutzt (großzügige Absperrung, Warnhinweise)."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -44,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -53,7 +50,9 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Safety-first, klare Struktur, nutzt Kontext vollständig (Koordinaten, OSM-ID, photo_available, severity high → Notdienst/Feuerwehr). Eskalation mit klaren Triggern (Funkenflug/Rauch), vollständige Dokumentation, sinnvolle Rückfragen. Keine Halluzinationen."
+    "missing_elements": [
+      "Koordinaten nicht explizit dokumentiert"
+    ],
+    "short_justification": "Sehr gute Antwort: Safety-first, klare Struktur, Eskalation passend zu severity=high. Foto-Hinweis aus Context genutzt. Dokumentation gut, aber Koordinaten nicht explizit erwähnt (im Context vorhanden). Kontext-Guardrails korrekt beachtet (device.* nicht als Asset-Fehler interpretiert)."
   }
 ]

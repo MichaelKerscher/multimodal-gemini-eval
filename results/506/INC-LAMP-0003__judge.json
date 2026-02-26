@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0003-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
-      "D": 4,
-      "K": 3
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -14,8 +14,11 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur OSM-ID), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Trigger könnten schärfer sein (severity unbekannt)."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei minimalem Context)",
+      "Keine Nutzung von Geo-Koordinaten (nicht im Context vorhanden)"
+    ],
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Kontext (nur asset_osm) wird nicht aktiv genutzt, aber auch kaum vorhanden. Struktur gut, aber keine spezifischen Kontextanpassungen erkennbar."
   },
   {
     "test_id": "INC-LAMP-0003-TC2",
@@ -24,19 +27,19 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow (spotty connectivity)",
-      "Klarstellung device_state vs. Asset-Zustand"
+      "Offline-Workflow nur implizit ('Notiz machen'), nicht explizit als Sync-Strategie",
+      "Keine explizite GPS-Koordinaten-Dokumentation trotz Verfügbarkeit"
     ],
-    "short_justification": "Gute Struktur und Safety-Priorisierung. ABER: Verwechselt device.low_battery (Technikergerät) mit Asset-Batterie ('Batteriewechsel durchführen') – klare Halluzination. Offline-Workflow bei spotty connectivity fehlt komplett."
+    "short_justification": "Sehr gute Kontextnutzung: low_battery/spotty connectivity wird erkannt und in Diagnose integriert, Nacht/poor_visibility führt zu verstärkten Sicherheitsmaßnahmen. Offline-Workflow angedeutet, aber nicht vollständig ausformuliert."
   },
   {
     "test_id": "INC-LAMP-0003-TC3",
@@ -54,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext korrekt (spotty→offline-Workflow, low_battery→Technikergerät, nicht Asset), klare Schrittfolge, Safety-first, Eskalation mit Trigger, vollständige Dokumentation. Keine Halluzinationen, context_notes korrekt umgesetzt."
+    "short_justification": "Exzellente Antwort: Offline-Workflow explizit genannt ('offline dokumentieren, lokal speichern, später synchronisieren'), Kontext-Guardrails korrekt verstanden (device_state betrifft Technikergerät), alle Sicherheits- und Dokumentationsaspekte abgedeckt, klare Struktur."
   }
 ]

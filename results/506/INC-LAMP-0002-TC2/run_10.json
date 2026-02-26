@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-26T16:56:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Kontrolle: Straßenlampe Rosenheim, Heilig Blut**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchten sichern (besonders bei Nacht, Nebel und mittlerem Verkehrsaufkommen).\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden, Feuchtigkeitsspuren oder lose Teile prüfen.\n   - Umgebung auf ungewöhnliche Geräusche oder Gerüche kontrollieren (z. B. verschmorte Kabel).\n   - Sichtkontrolle auf Verschmutzungen oder Vogelnester am Lampenkopf.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein- und ausschalten (sofern möglich), um den Fehler zu reproduzieren.\n   - Auf Flackern oder Aussetzer achten.\n   - Prüfen, ob andere Lampen in der Nähe betroffen sind.\n   - Foto-Dokumentation anfertigen (Foto liegt laut Meldung bereits vor).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen im Wartungsprotokoll festhalten.\n   - Foto der aktuellen Situation beifügen.\n   - Zeitpunkt und Wetterbedingungen notieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Verdacht auf elektrischen Defekt: Fachfirma/Elektriker informieren.\n   - Bei akuter Gefahr (z. B. freiliegende Kabel): Bereich sofort absperren und Notdienst verständigen.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter in dem Bereich? Sind weitere Lampen betroffen?  \nFalls weitere Informationen benötigt werden, bitte melden.",
+    "tokens_estimate_words": 172
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nacht, Nebel, mittlerer Verkehr → verstärkte Absicherung), klare Priorisierung, Safety-first, Eskalation mit Triggern, Dokumentation inkl. Foto-Hinweis, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.44
+  },
+  "error": {}
+}

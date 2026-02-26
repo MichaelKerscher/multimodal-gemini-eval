@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-26T17:01:09",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\nAbsicherung  \n- Absperrmaterial (z. B. Leitkegel, Warnbaken) bereitstellen.  \n- Gefahrenbereich großzügig absperren, Mindestabstand zu spannungsführenden Teilen einhalten.  \n- Warnhinweise „Stromschlaggefahr“ gut sichtbar anbringen.\n\nSichtprüfung  \n- Gehäuse und Umgebung auf weitere Schäden prüfen (z. B. lose Teile, Feuchtigkeit, Kabel sichtbar?).  \n- Prüfen, ob Personen gefährdet sind oder bereits Kontakt hatten.\n\nDiagnose/Beobachtung  \n- Sichtkontrolle: Liegen stromführende Teile offen?  \n- Funktioniert die Lampe/Ampel noch?  \n- Geräusche, Gerüche oder Funkenbildung feststellen und notieren.\n\nDokumentation  \n- Fotos vom Schaden und der Absicherung machen.  \n- Uhrzeit, Standort (Koordinaten: 47.8494009, 12.1203879), Wetter, Sichtverhältnisse und eigene Maßnahmen dokumentieren.\n\nEskalation  \n- Störung umgehend an die zuständige Fachabteilung/Elektrofachkraft melden.  \n- Bei akuter Gefahr (z. B. Funken, Rauch, Personen in Gefahr): Feuerwehr oder Polizei verständigen.\n\nRückfrage:  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Meldung weiterleiten? Sind Personen verletzt worden?",
+    "tokens_estimate_words": 139
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, strukturierte Schritte, vollständige Dokumentation inkl. Koordinaten aus Context, passende Eskalation bei severity=high. Kontext (dusk/poor_visibility/medium traffic) sinnvoll genutzt (großzügige Absperrung, Warnhinweise)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.24
+  },
+  "error": {}
+}

@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC1",
+  "timestamp": "2026-02-26T17:01:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle. (Asset-ID: n4939032525)",
+    "context": {
+      "asset_osm": "n4939032525"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4939032525). Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. Absicherung  \n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.  \n   - Bei Dunkelheit oder schlechter Sicht ggf. Warnbaken oder Absperrungen aufstellen.\n\n2. Sichtprüfung  \n   - Kontrolliere vor Ort, ob die Lampe äußerlich beschädigt ist (z. B. Mast, Leuchte, Verkabelung).  \n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n   - Teste, ob die Lampe auf Schaltimpulse oder manuelle Schaltung reagiert (sofern möglich).  \n   - Notiere auffällige Geräusche, Gerüche oder sichtbare Defekte.\n\n4. Dokumentation  \n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetter, Besonderheiten).  \n   - Füge Fotos hinzu, falls Schäden sichtbar sind.\n\n5. Eskalation  \n   - Bei offensichtlicher Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an die Leitstelle/Notdienst.  \n   - Bei Standardausfall: Weiterleitung an die zuständige Wartungsfirma mit allen gesammelten Informationen.\n\n**Rückfrage:**  \nGibt es Hinweise auf Vandalismus, Unfallschäden oder Stromausfall im Bereich? Sind weitere Lampen betroffen?  \nBitte um kurze Rückmeldung, damit die nächsten Schritte gezielt eingeleitet werden können.",
+    "tokens_estimate_words": 165
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext erkennbar",
+      "Keine Priorisierung nach Severity/Traffic",
+      "Generische Schritte ohne Kontextanpassung"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Checkliste mit Safety-first und Eskalation. Dokumentation gut. Aber: Kontext (nur asset_osm) wird nicht genutzt, Antwort bleibt generisch. K=2 wegen fehlender Kontextintegration."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.074
+  },
+  "error": {}
+}

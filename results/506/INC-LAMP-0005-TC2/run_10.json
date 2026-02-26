@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-26T16:57:53",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-18T05:18:22+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste zur Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereithalten.  \n- Einsatzfahrzeug mit Warnblinker abstellen, ggf. Warnbaken aufstellen.  \n- Auf Sichtbarkeit achten: Dämmerung, Nebel und mittlerer Verkehr – erhöhte Vorsicht!\n\n2. Sichtprüfung  \n- Sichtkontrolle der Lampen und Masten entlang des Abschnitts durchführen.  \n- Prüfen, ob Lampen beschädigt, verdreht oder verschmutzt sind.  \n- Auf offensichtliche Kabelschäden oder lose Abdeckungen achten.\n\n3. Diagnose/Beobachtung  \n- Funktionstest: Leuchten einzeln prüfen (sofern möglich).  \n- Prüfen, ob der Ausfall auf eine einzelne Lampe oder einen ganzen Abschnitt zutrifft.  \n- Aufgrund „spotty“ Konnektivität und „low battery“ des Geräts: Vor Ort keine Fernabfrage möglich – Sichtprüfung und manuelle Diagnose notwendig.  \n- Wetter (Nebel) und schlechte Sicht können Fehlerbild verstärken.\n\n4. Dokumentation  \n- Festgestellte Mängel, Anzahl betroffener Lampen, Positionen (GPS, OSM-Link) notieren.  \n- Fotos machen, sobald möglich (aktuell keine verfügbar).  \n- Alle Maßnahmen und Beobachtungen protokollieren.\n\n5. Eskalation  \n- Bei Gefahr für Verkehrssicherheit (z. B. kompletter Ausfall, schlechte Sicht): Sofortige Meldung an Bereitschaft/Leitstelle zur schnellen Reparatur.  \n- Bei geringem Risiko: Störung regulär melden, Reparatur einplanen.  \n- Hinweis: Bei wiederholtem Ausfall ggf. Netzbetreiber informieren.\n\nRückfrage:  \n- Ist der genaue Abschnitt (Länge, betroffene Lampen) bekannt oder muss vor Ort ermittelt werden?  \n- Gibt es Hinweise auf Bauarbeiten oder kürzliche Reparaturen in diesem Bereich?",
+    "tokens_estimate_words": 206
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar, Offline-Workflow explizit erwähnt (spotty connectivity, low battery → keine Fernabfrage, lokale Dokumentation), Eskalation differenziert nach Risiko, Umweltfaktoren (Nebel, Dämmerung) sichtbar integriert. Vollständige Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.913
+  },
+  "error": {}
+}
