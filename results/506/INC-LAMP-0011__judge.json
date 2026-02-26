@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0011-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
-      "D": 4,
-      "K": 3
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -14,15 +14,19 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Sicherheit als Schritt 1. Kontext minimal (nur Asset-ID), daher generische aber passende Antwort. Eskalation vorhanden, aber Trigger könnten präziser sein."
+    "missing_elements": [
+      "Intermittent-spezifische Diagnose (Provokation)",
+      "Witterungseinfluss als mögliche Ursache",
+      "Standortbezug (Name/GPS)"
+    ],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation. Bleibt aber generisch, da Kontext minimal ist (nur OSM-ID). Keine Halluzinationen, aber auch keine spezifische Nutzung des intermittent-Charakters."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 4,
       "K": 5
     },
@@ -32,15 +36,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: Nebel/schlechte Sicht → verstärkte Absicherung, intermittent fault → gezielte Diagnose-Schritte. Klare Struktur, Safety-first, präzise Eskalationslogik mit Hinweis auf Elektriker."
+    "missing_elements": [
+      "Asset-ID explizit im Protokoll"
+    ],
+    "short_justification": "Exzellent: Standortbezug (Leitzachstraße), Nebel/Sicht explizit in Absicherung integriert, intermittent-spezifische Diagnose (Provokation, Witterungseinfluss), klare Struktur, Safety-first, Eskalation mit Trigger. Dokumentation sehr gut, nur Asset-ID fehlt explizit."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 4,
       "K": 5
     },
@@ -50,7 +56,9 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit präziser Kontextnutzung (Nebel/Verkehr → Sicherheit, intermittent → Testverfahren). Klare 5-Schritt-Struktur, Safety-first, differenzierte Eskalation inkl. Beobachtungsempfehlung bei nicht reproduzierbarem Fehler."
+    "missing_elements": [
+      "Asset-ID explizit im Protokoll"
+    ],
+    "short_justification": "Exzellent: Standortbezug (Leitzachstraße), Nebel/Sicht in Absicherung, intermittent-spezifische Diagnose (Provokation, Witterung), klare Struktur, Safety-first, differenzierte Eskalation. Dokumentation sehr gut, nur Asset-ID fehlt explizit."
   }
 ]

@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-26T14:55:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Lampenausfall  \n**Standort:** Rosenheim, Bahnhof  \n**Verkehrsexposition:** Hoch  \n**Gerätezustand:** Offline, niedriger Batteriestand  \n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Absperrband sichern, da viel Verkehr.\n   - Auf eigene Sicherheit und die der Verkehrsteilnehmer achten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, lose Kabel oder Korrosion prüfen.\n   - Prüfen, ob die Lampe aktuell leuchtet.\n   - Umgebung auf mögliche Fremdeinwirkung (z. B. Anfahrschäden) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Lampe mehrfach ein-/ausschalten (sofern möglich).\n   - Auf Wackelkontakte, Flackern oder Verzögerungen achten.\n   - Hinweis: Gerät ist offline und meldet niedrigen Batteriestand – mögliche Ursache für Ausfall.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n4. **Dokumentation**\n   - Zustand der Lampe und alle Beobachtungen (auch Fotos) dokumentieren.\n   - Zeitpunkt und Dauer des Ausfalls notieren.\n   - Foto aus Vorfallbericht sichern.\n\n5. **Eskalation**\n   - Meldung an Technik/Elektrofachkraft weiterleiten, da Gerät offline und Batterie schwach.\n   - Hinweis auf sporadischen Fehler und hohe Verkehrsexposition geben.\n   - Falls Gefahr für Verkehrssicherheit besteht, Sofortmaßnahme (z. B. provisorische Beleuchtung) veranlassen.\n\n**Rückfrage:**  \nSoll die Batterie vor Ort getauscht werden oder ist ein kompletter Gerätetausch vorgesehen? Sind weitere Lampen mit ähnlichen Problemen gemeldet?",
+    "tokens_estimate_words": 189
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Stop-Conditions bei Eskalation",
+      "Klarere Priorisierung (Batterie vs. Lampe)"
+    ],
+    "short_justification": "Sehr gute Nutzung des vollen Kontexts: Offline-Hinweis, Batterie, hohe Verkehrsexposition, Foto. Absicherung zuerst, klare Schrittfolge, Eskalation mit Begründung. Offline-Workflow erwähnt ('Gerät offline'), aber könnte expliziter sein (lokal speichern). Dokumentation umfassend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.712
+  },
+  "error": {}
+}

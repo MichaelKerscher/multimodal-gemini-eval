@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC2",
+  "timestamp": "2026-02-26T15:03:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4483691318",
+        "longitude": 12.129258,
+        "latitude": 47.856655,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-18T02:30:29+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Straßenabschnitt (Standort: n4483691318)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Bereich abzusichern.\n   - Bei Regen und schlechter Sicht besonders auf eigene Sicherheit achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenbeleuchtung entlang des betroffenen Abschnitts durchführen.\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Masten) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob die Lampen Strom bekommen (z. B. durch Kontrollleuchte am Schaltschrank, falls zugänglich).\n   - Auf Geräusche, Gerüche oder sichtbare Schäden achten.\n   - Da das Gerät im „low power mode“ ist, mögliche Einschränkungen bei der Fernüberwachung beachten.\n   - Foto auswerten, falls verfügbar, um den Fehler besser einzugrenzen.\n\n4. **Dokumentation**\n   - Alle Beobachtungen (defekte Lampen, Schäden, besondere Umstände) notieren.\n   - Fotos der Situation und der betroffenen Lampen anfertigen.\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei Bestätigung eines Ausfalls und hoher Gefährdung (schlechte Sicht, Nacht, Regen): Störungsdienst/Notfallteam sofort informieren.\n   - Falls Gefahr für Verkehrsteilnehmer besteht, Polizei oder Straßenmeisterei hinzuziehen.\n\n**Rückfrage:**  \nSind aktuelle Pläne oder Schaltpläne der Beleuchtungsanlage verfügbar? Gibt es Zugang zum Schaltschrank vor Ort?  \nBitte Fotos bereitstellen, falls noch nicht geschehen.",
+    "tokens_estimate_words": 191
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Low-Power-Mode erwähnt, aber kein konkreter Offline-Workflow",
+      "Foto vorhanden, aber nicht explizit als erster Schritt integriert"
+    ],
+    "short_justification": "Sehr gute Nutzung des Kontexts (Regen, Nacht, high severity, low_power_mode). Safety-first klar, Eskalation passend, Dokumentation strukturiert. Kleine Lücke: Offline-Workflow nicht explizit trotz low_power_mode."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.078
+  },
+  "error": {}
+}

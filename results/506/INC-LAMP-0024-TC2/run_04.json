@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC2",
+  "timestamp": "2026-02-26T15:05:01",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei sporadischem Lampenausfall (Bahnhof Rosenheim)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen (Leitkegel, Warnleuchte).\n   - Arbeitsbereich absichern, besonders wegen hoher Verkehrsexposition und schlechter Sicht.\n   - Bei Sturm besondere Vorsicht: keine Arbeiten an exponierten Stellen, wenn Gefahr besteht.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf äußere Schäden prüfen (z. B. lose Teile, Feuchtigkeitseintritt, Korrosion).\n   - Prüfen, ob Wasser in den Sockel eingedrungen ist (häufige Ursache bei Sturm).\n   - Umgebung auf weitere betroffene Lampen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Fehler aktuell auftritt (Lampe jetzt an, aber Fehler war gemeldet).\n   - Auf Geräusche, Flackern oder ungewöhnliches Verhalten achten.\n   - Da das Gerät offline ist: Notieren, dass keine Ferndiagnose möglich ist.\n   - Mögliche Ursachen: Feuchtigkeit, Wackelkontakt, defektes Vorschaltgerät, Spannungsschwankungen durch Wetter.\n\n4. **Dokumentation**\n   - Fotos vom aktuellen Zustand und Umfeld machen (bei Nacht und Sturm auf Sicherheit achten).\n   - Fehlerbeschreibung, Zeitpunkt, Wetterbedingungen und eigene Beobachtungen notieren.\n   - Dokumentieren, dass der Fehler aktuell nicht reproduzierbar ist.\n\n5. **Eskalation**\n   - Meldung an die Fachabteilung/Elektriker weiterleiten: Hinweis auf sporadischen Fehler, erschwerte Bedingungen (Sturm, Nacht, viel Verkehr).\n   - Empfehlung: Nachkontrolle bei Tageslicht und besserem Wetter, ggf. Austausch von Komponenten prüfen.\n   - Falls Gefahr für Verkehrssicherheit besteht (z. B. Totalausfall, lose Teile): Sofortige Reparatur oder vorübergehende Stilllegung/weitere Absicherung veranlassen.\n\n**Rückfrage:**  \nGibt es bereits frühere Störungsmeldungen an dieser Lampe oder Hinweise auf wiederkehrende Probleme im gleichen Bereich?",
+    "tokens_estimate_words": 222
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Stop-Condition bei Gefahr",
+      "Offline-Workflow nur erwähnt, nicht durchgängig integriert"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, Nacht, Verkehr, offline). Absicherung priorisiert, Eskalation mit Severity-Bezug. Offline-Workflow erwähnt ('keine Ferndiagnose'), aber nicht durchgängig in Dokumentation integriert. Struktur klar, umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.246
+  },
+  "error": {}
+}

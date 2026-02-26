@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -14,19 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Nutzung der Kontextinformationen (nur Asset-ID vorhanden)"
-    ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Priorisierung (Absicherung zuerst) und sinnvoller Eskalationslogik. Kontext ist minimal, daher keine erweiterten Informationen erwartbar. Klare Schrittfolge und gute Dokumentationshinweise."
+    "missing_elements": [],
+    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first. Kontextnutzung minimal (nur asset_osm vorhanden), daher K=3. Keine Offline-Erwähnung nötig, da kein Signal dafür im Context."
   },
   {
     "test_id": "INC-LAMP-0017-TC2",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "S": 4,
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,24 +33,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (Regen, schlechte Sicht, Dämmerung, low_power_mode), priorisiert Sicherheit klar, strukturierte Schritte mit konkreten Checks (Feuchtigkeitseintritt bei Regen), klare Eskalation bei Gefahr, vollständige Dokumentation inkl. Foto-Verweis."
+    "short_justification": "Exzellente Kontextnutzung (Regen, dusk, low_power_mode, photo_available). Klare Struktur, Safety-first, Eskalation vorhanden. Keine Offline-Erwähnung nötig (connectivity=online). Sehr umsetzbar und fallspezifisch."
   },
   {
     "test_id": "INC-LAMP-0017-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu identisch zu TC2, ebenfalls exzellent: Vollständige Kontextnutzung (Wetter, Sicht, low_power_mode), Safety-first klar erkennbar, strukturierte Schritte, passende Eskalationslogik, vollständige Dokumentation. Erwähnt korrekt Energiesparmodus als Geräte-Zustand, nicht als Asset-Fehler."
+    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Hinweis ('offlinefähig dokumentieren'), obwohl online. Nutzt alle relevanten Signale (Regen, dusk, low_power_mode, photo). Klare Struktur, Safety-first, vollständige Dokumentation. Nahezu ideal."
   }
 ]

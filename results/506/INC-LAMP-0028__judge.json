@@ -4,7 +4,7 @@
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 5,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Struktur mit Safety-first (Absicherung Schritt 1), klarer Eskalation und Dokumentation. Kontext minimal, daher K=3 (keine Offline-Erwartung). Alle Kernelemente vorhanden."
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Eskalation bei Gefahr im Verzug. Kontext minimal, daher keine spezifischen Ortsinformationen erwartet – generisch aber korrekt."
   },
   {
     "test_id": "INC-LAMP-0028-TC2",
@@ -23,7 +23,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, nutzt Kontext (Standort, severity=high, photo_available), Eskalation mit hoher Priorität. Dokumentation und Struktur sehr gut, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Ortsname (Leitzachstraße, Rosenheim) aus Kontext, klare Schrittfolge mit Safety-first, hohe Priorität bei Eskalation passend zu severity=high, vollständige Dokumentation, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0028-TC3",
@@ -41,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Struktur, nutzt Kontext optimal (Standort, severity, photo_available erwähnt), Eskalation klar als 'hoch' markiert. Dokumentation gut, keine Halluzinationen, connectivity=online korrekt nicht als Offline-Workflow interpretiert."
+    "short_justification": "Hervorragend: nutzt Kontext vollständig (Ort, severity=high, photo_available), Safety-first mit sofortiger Absicherung, klare Eskalationslogik inkl. Stromabschaltung durch Fachpersonal, strukturierte Dokumentation, keine Überbehauptungen."
   }
 ]

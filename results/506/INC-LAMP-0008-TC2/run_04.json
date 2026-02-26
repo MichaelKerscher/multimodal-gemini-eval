@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0008-TC2",
+  "timestamp": "2026-02-26T14:58:13",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293341689",
+        "longitude": 12.1302583,
+        "latitude": 47.8571756,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-20T08:57:46+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0008",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. Absicherung  \n- Warnweste anlegen, Absperrmaterial bereithalten.  \n- Einsatzfahrzeug mit Warnblinker abstellen, ggf. Warnleuchten aufstellen.  \n- Sichtbarkeit wegen Nebel und Dunkelheit besonders beachten.\n\n2. Sichtprüfung  \n- Sichtkontrolle der betroffenen Leuchten am genannten Standort (OSM: n13293341689, Koordinaten: 47.8571756, 12.1302583).  \n- Prüfen, ob mehrere oder einzelne Lampen betroffen sind.  \n- Auf offensichtliche Schäden, lose Kabel oder Feuchtigkeitseintritt achten.\n\n3. Diagnose/Beobachtung  \n- Funktion der Lampen einzeln testen (sofern möglich).  \n- Aufgrund „low_power_mode“ und „spotty“ Konnektivität: Vor Ort keine Fernwartung möglich, ggf. manuelle Diagnose.  \n- Prüfen, ob Sicherungen ausgelöst wurden oder Schaltkasten zugänglich ist.  \n- Witterung (Nebel, Nacht) erschwert Sicht – Stirnlampe verwenden.\n\n4. Dokumentation  \n- Fotos vom Ausfallbereich und ggf. defekten Komponenten machen (Fotoapparat/Handy).  \n- Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, betroffene Leuchten).  \n- Meldung im System erfassen.\n\n5. Eskalation  \n- Bei unklarer Ursache oder größerem Ausfall: Störung an Fachabteilung/Elektriker weiterleiten.  \n- Bei Gefahr für Verkehrssicherheit (z.B. Kreuzung, Fußgängerüberweg): Sofortige Meldung an Bereitschaftsdienst.\n\nRückfragen:  \n- Sind Pläne/Schaltkästen vor Ort zugänglich?  \n- Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Bereich?  \n- Ist eine kurzfristige Reparatur möglich oder muss Ersatzmaterial bestellt werden?",
+    "tokens_estimate_words": 188
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0008-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Nebel, Nacht, spotty connectivity, low_power_mode) sichtbar, erwähnt Offline-Einschränkungen ('keine Fernwartung möglich'), klare Safety-first-Struktur, präzise Dokumentation inkl. Koordinaten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.92
+  },
+  "error": {}
+}

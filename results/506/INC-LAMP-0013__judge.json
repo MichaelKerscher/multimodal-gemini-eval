@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal, daher keine Offline-Erwartung. Etwas generisch (z.B. 'Störungsdienst/Elektrofachkraft' ohne konkrete Trigger), aber insgesamt solide."
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, sinnvolle Eskalation bei hoher Gefahr. Kontext minimal, daher keine spezifischen Umgebungsfaktoren erwartet – generische Antwort ist hier angemessen."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -33,16 +33,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Nutzung des Kontexts (severity=high, dusk/poor_visibility → Warnleuchten, photo_available → erwähnt). Safety-first klar, Eskalation mit 'hohe Priorität' passend zu severity. Struktur und Dokumentation gut, keine Halluzinationen."
+    "short_justification": "Exzellente Kontextnutzung: poor_visibility → zusätzliche Beleuchtung, Koordinaten dokumentiert, severity=high → sofortige Eskalation. Klare Struktur, Safety-first, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -51,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Identisch zu TC2 in Qualität: Safety-first, klare Schritte, Eskalation mit 'hoher Priorität', Kontext gut genutzt (photo_available, severity). Keine Halluzinationen, device.connectivity=online korrekt ignoriert (kein Offline-Workflow nötig)."
+    "short_justification": "Perfekte Umsetzung: Safety-first, klare 5-Schritt-Struktur, nutzt Kontext korrekt (photo_available, severity=high → sofortige Eskalation, Koordinaten). Keine Halluzinationen, präzise Rückfragen."
   }
 ]

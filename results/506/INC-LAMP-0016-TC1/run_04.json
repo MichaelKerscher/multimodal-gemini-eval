@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-26T15:01:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n13293470414 (Straßenlampe). Hier ist das empfohlene Vorgehen bei einem sporadischen Fehler:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Prüfen, ob die Lampe an einer Gefahrenstelle steht (z. B. Fußgängerüberweg, Kreuzung).\n   - Falls ja: Bereich absichern (Warnbaken, ggf. Polizei informieren).\n\n2. **Sichtprüfung**\n   - Lampe und Umfeld auf sichtbare Schäden, lose Teile oder Feuchtigkeitsspuren kontrollieren.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob die Lampe weiterhin zuverlässig funktioniert.\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, defektes Vorschaltgerät, Netzschwankungen.\n   - Falls möglich: Zeitpunkt und Umgebungsbedingungen des Ausfalls notieren.\n\n4. **Dokumentation**\n   - Fehlerbeschreibung, Asset-ID, Datum/Uhrzeit und eigene Beobachtungen notieren.\n   - Fotos bei sichtbaren Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder sicherheitsrelevanter Lage: Störung an die Fachabteilung/Technik weiterleiten.\n   - Dringlichkeit je nach Standort und Nutzung der Lampe einstufen.\n\n**Rückfrage:**  \nGab es in letzter Zeit ähnliche Ausfälle in der Umgebung oder ist dies ein Einzelfall?  \nSind besondere Gefahrenstellen betroffen?\n\nGerne unterstütze ich bei der weiteren Bearbeitung!",
+    "tokens_estimate_words": 163
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Keine Sicherheitsmaßnahmen als Schritt 1 trotz unbekannter severity",
+      "Spekuliert über Gefahrenstellen ohne Kontext-Signal",
+      "Keine Kontextnutzung (nur asset_osm vorhanden)"
+    ],
+    "short_justification": "Antwort ist strukturiert und deckt Grundlagen ab, spekuliert aber über Gefahrenstellen/Absicherung ohne Kontext-Signal (severity/traffic unbekannt). Keine Safety-first-Priorisierung. Kontext wird kaum genutzt (nur ID)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.629
+  },
+  "error": {}
+}

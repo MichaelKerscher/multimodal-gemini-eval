@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC1",
+  "timestamp": "2026-02-26T14:56:58",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293404153)",
+    "context": {
+      "asset_osm": "n13293404153"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n13293404153 (vermutlich Straßenbeleuchtung). Hier ist das empfohlene Vorgehen:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Gefahrenbereich absichern (z. B. Warnleuchten, Pylone).\n   - Auf fließenden Verkehr achten.\n\n2. **Sichtprüfung**\n   - Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.\n   - Sichtbare Schäden an Masten, Leuchten oder Verkabelung feststellen.\n   - Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Schaltkästen) kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Funktion einzelner Leuchten testen (Schaltzeiten, Dämmerungsschalter).\n   - Prüfen, ob Stromversorgung vorhanden ist (z. B. benachbarte Anlagen).\n   - Auffälligkeiten dokumentieren (z. B. Flackern, Totalausfall).\n\n4. **Dokumentation**\n   - Genaue Position und Anzahl der betroffenen Leuchten notieren.\n   - Fotos von Schäden oder Auffälligkeiten machen.\n   - Alle Beobachtungen im Wartungssystem erfassen (inkl. Asset-ID).\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehr oder Personen sofortige Meldung an Leitstelle/Notdienst.\n   - Bei größerem Ausfall (z. B. mehrere Masten) Störungsdienst informieren.\n   - Rückmeldung an Auftraggeber mit ersten Erkenntnissen.\n\n**Rückfrage:**  \nSind weitere Details zum Ausfall bekannt (z. B. seit wann, nur nachts, einzelne oder alle Leuchten betroffen)?  \nFalls nicht, wird vor Ort eine erste Sichtprüfung durchgeführt.",
+    "tokens_estimate_words": 176
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal, daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber nicht stark priorisiert bei unbekannter Severity."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.456
+  },
+  "error": {}
+}

@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC2",
+  "timestamp": "2026-02-26T15:05:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4465173757",
+        "longitude": 12.1236173,
+        "latitude": 47.8409877,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Isarstraße/Gewerbegebiet"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T20:06:14+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise für den Außendienst:\n\n### Schritt-für-Schritt-Checkliste\n\n**1. Absicherung**\n- Warnblinkanlage am Einsatzfahrzeug einschalten.\n- Warnschilder aufstellen, um den Gefahrenbereich abzusichern (hohes Verkehrsaufkommen, schlechte Sicht).\n- Persönliche Schutzausrüstung (Warnweste, ggf. Helm) anlegen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Straßenlampe auf offensichtliche Schäden (z. B. Mast, Leuchte, Verkabelung).\n- Prüfen, ob weitere Lampen im Bereich betroffen sind.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob die Lampe auf äußere Einflüsse (z. B. Vandalismus, Unfall) reagiert hat.\n- Batteriestatus beachten: Gerät meldet niedrigen Akkustand – mögliche Ursache für den Ausfall.\n- Online-Konnektivität vorhanden: Fernabfrage oder Neustart der Lampe möglich?\n- Bei Unsicherheit: Foto-Dokumentation nutzen.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos).\n- Zeitpunkt, Wetter, Verkehrsaufkommen und besondere Vorkommnisse notieren.\n\n**5. Eskalation**\n- Bei hohem Sicherheitsrisiko (wie hier): Störung umgehend an die Leitstelle/Technik weiterleiten.\n- Falls keine Sofortreparatur möglich: Polizei oder Ordnungsamt informieren, damit der Bereich zusätzlich gesichert wird.\n\n**Rückfrage:**  \nIst ein Zugang zur Lampe vor Ort aktuell möglich, oder gibt es Hindernisse (z. B. parkende Fahrzeuge, Baustelle)?  \nSoll eine temporäre Zusatzbeleuchtung organisiert werden?",
+    "tokens_estimate_words": 179
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar umgesetzt (Warnblinkanlage, Absicherung wegen hohem Verkehr/schlechter Sicht), nutzt Kontext präzise (low_battery, online, night, high traffic), klare Schrittfolge mit Eskalation bei hohem Risiko, vollständige Dokumentation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.209
+  },
+  "error": {}
+}

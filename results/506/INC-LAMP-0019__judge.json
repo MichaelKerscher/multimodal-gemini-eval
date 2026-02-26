@@ -15,10 +15,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Umwelt-/Wetterkontextnutzung (nicht im CONTEXT vorhanden)",
-      "Eskalation könnte priorisierter sein"
+      "Keine Erwähnung von Wetter/Sicht (nicht im Context)",
+      "Keine Erwähnung von Verkehrsexposition (nicht im Context)"
     ],
-    "short_justification": "Strukturierte Checkliste mit Absicherung zuerst, klarer Eskalation und Dokumentation. Kontext minimal, daher generisch aber korrekt. Rückfragen sinnvoll."
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), sinnvolle Schrittfolge, Eskalation vorhanden. Kontext minimal, daher generisch aber angemessen. Dokumentation gut strukturiert."
   },
   {
     "test_id": "INC-LAMP-0019-TC2",
@@ -36,7 +36,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first klar, nutzt Nebel/Verkehr/Nacht explizit für Absicherung, strukturierte Schritte, vollständige Dokumentation inkl. Koordinaten, klare Eskalation mit Risikobezug."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (Nebel, Nacht, mittlerer Verkehr, photo_available=false), Safety-first klar priorisiert, strukturierte Schritte mit klaren Eskalationstriggern, vollständige Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0019-TC3",
@@ -54,6 +54,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Absicherung Schritt 1 mit Nebel/Verkehr-Bezug, klare Schrittfolge, vollständige Doku (OSM-ID + Koordinaten), Eskalation mit Risikobegründung, nutzt Kontext optimal."
+    "short_justification": "Exzellente Antwort: Nutzt erweiterten Kontext optimal (Nebel, Nacht, mittlere Verkehrsexposition), Safety-first konsequent umgesetzt, klare Priorisierung und Eskalationslogik, vollständige Dokumentation inkl. App-Nutzung."
   }
 ]

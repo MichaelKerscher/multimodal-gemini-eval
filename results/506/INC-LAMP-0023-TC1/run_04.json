@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC1",
+  "timestamp": "2026-02-26T15:04:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293397459)",
+    "context": {
+      "asset_osm": "n13293397459"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden einen dunklen Abschnitt bei Asset-ID n13293397459 (Straßenbeleuchtung).\n\nCheckliste für die Überprüfung vor Ort:\n\n1. Absicherung\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Gefahrenbereich absichern, ggf. Warnbaken aufstellen.\n\n2. Sichtprüfung\n- Ist die gesamte Leuchte oder nur einzelne Lampen betroffen?\n- Sind Beschädigungen, lose Kabel oder Vandalismus sichtbar?\n- Gibt es Anzeichen für Stromausfall (z. B. mehrere dunkle Leuchten in Reihe)?\n\n3. Diagnose/Beobachtung\n- Leuchte ggf. mit Prüflampe testen.\n- Schaltkasten auf offensichtliche Fehler prüfen (sofern zugänglich).\n- Nach ungewöhnlichen Geräuschen oder Gerüchen Ausschau halten.\n\n4. Dokumentation\n- Fotos vom Zustand und der Umgebung machen.\n- Festgestellte Mängel und Maßnahmen notieren.\n\n5. Eskalation\n- Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Meldung an Leitstelle/Notdienst.\n- Sonst: Störungsmeldung an zuständige Fachabteilung weiterleiten.\n\nRückfrage:  \nBetrifft die Dunkelheit nur eine einzelne Leuchte oder einen längeren Abschnitt? Gibt es Hinweise auf Bauarbeiten oder kürzliche Störungen in der Nähe?",
+    "tokens_estimate_words": 146
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Basisantwort mit klarer Struktur und Safety-first. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Generisch, aber passend."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.49
+  },
+  "error": {}
+}

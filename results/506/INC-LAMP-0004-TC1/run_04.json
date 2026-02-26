@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-26T14:56:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für den Außendienst – Dunkle Straßenlampe (Asset-ID: n12551286240)**\n\n1. **Absicherung**\n   - Bereich um die Lampe absichern, ggf. Warnbaken oder Absperrband aufstellen.\n   - Bei starker Dunkelheit: Zusatzbeleuchtung nutzen, um Unfallgefahr zu minimieren.\n\n2. **Sichtprüfung**\n   - Prüfen, ob offensichtliche Schäden an der Lampe, dem Mast oder den Anschlusskästen vorliegen.\n   - Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Ausfall nur diese Lampe betrifft oder mehrere Lampen in der Nähe.\n   - Falls möglich: Sicherungen und elektrische Anschlüsse inspizieren (nur bei entsprechender Qualifikation).\n   - Notieren, ob die Lampe flackert, komplett aus ist oder andere Auffälligkeiten zeigt.\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Uhrzeit und Beobachtungen schriftlich festhalten.\n   - Fotos vom Zustand der Lampe und Umgebung machen.\n\n5. **Eskalation**\n   - Bei akuter Gefährdung (z. B. Unfallgefahr, stark frequentierter Bereich): Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei einfachem Ausfall: Störungsmeldung an die zuständige Wartungsfirma weiterleiten.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen in der Nähe oder besondere Gefahren (z. B. Schulweg, viel Fußgängerverkehr)? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 180
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), guter Eskalationslogik und Dokumentation. Kontext minimal, daher keine Offline-Workflow-Erwartung. Leicht generisch, aber solide umsetzbar."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.278
+  },
+  "error": {}
+}

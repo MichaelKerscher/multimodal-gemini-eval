@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0005-TC2",
+  "timestamp": "2026-02-26T14:56:58",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293404153",
+        "longitude": 12.1307195,
+        "latitude": 47.8573976,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "low",
+        "reported_at": "2026-01-18T05:18:22+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0005",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Dunkler Abschnitt (Straßenbeleuchtung)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial bereitstellen.\n   - Einsatzfahrzeug mit Warnblinker sichern.\n   - Bei mittlerem Verkehrsaufkommen und schlechter Sicht (Nebel, Dämmerung) besonders auf Eigen- und Verkehrssicherheit achten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der betroffenen Leuchten entlang des angegebenen Abschnitts (OSM: n13293404153, Koordinaten: 47.8573976, 12.1307195).\n   - Prüfen, ob einzelne oder mehrere Lampen betroffen sind.\n   - Auf offensichtliche Schäden, lose Kabel, Feuchtigkeitseintritt oder Vandalismus achten.\n\n3. **Diagnose/Beobachtung**\n   - Aufgrund „spotty“ Konnektivität und niedrigem Batteriestand des Geräts: Vor Ort manuell prüfen, ob Stromversorgung anliegt.\n   - Bei Nebel und Dämmerung auf zusätzliche Gefahren achten.\n   - Prüfen, ob Sicherungen ausgelöst oder Schaltzeiten falsch programmiert sind.\n   - Falls möglich, Testbetrieb der Lampen auslösen.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und Maßnahmen schriftlich festhalten.\n   - Fotos machen, falls möglich (aktuell laut Meldung nicht verfügbar).\n   - Zeitpunkt und genaue Position dokumentieren.\n\n5. **Eskalation**\n   - Bei akuter Gefahr (z. B. Totalausfall auf Hauptstraße): Sofortige Meldung an Leitstelle/Notdienst.\n   - Bei geringer Dringlichkeit (wie gemeldet): Reparaturauftrag an zuständige Fachabteilung weiterleiten.\n   - Hinweis: Aufgrund schlechter Sicht und Nebel kann die Gefährdung höher sein als „niedrig“ – ggf. neu bewerten.\n\n**Rückfrage:**  \nSind weitere Abschnitte betroffen oder liegt eine Einzelstörung vor? Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Netz?",
+    "tokens_estimate_words": 202
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0005-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Kontextnutzung: spotty connectivity erkannt, Nebel/Dämmerung/mittlerer Verkehr in Safety integriert, Offline-Hinweis ('manuell prüfen') vorhanden. Klare Struktur und Eskalationslogik passend zu severity=low mit Neubewertungs-Hinweis."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.866
+  },
+  "error": {}
+}

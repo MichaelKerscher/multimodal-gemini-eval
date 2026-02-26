@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC2",
+  "timestamp": "2026-02-26T15:01:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293470414",
+        "longitude": 12.1309433,
+        "latitude": 47.8570666,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "high",
+        "reported_at": "2026-01-17T13:48:16+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Lampenausfall\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, da schlechte Sicht und Regen herrschen.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Kabel prüfen.\n   - Umfeld auf weitere betroffene Lampen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob der Fehler aktuell auftritt (Lampe jetzt an, aber Fehler war gemeldet).\n   - Batterie- und Verbindungsstatus des Geräts beachten (niedriger Batteriestand, instabile Verbindung).\n   - Mögliche Ursachen: Wackelkontakt, Feuchtigkeit, Elektronikproblem, schwache Batterie.\n   - Bei erneutem Ausfall: Zeitpunkt und Umstände notieren.\n\n4. **Dokumentation**\n   - Fotos vom Zustand der Lampe und Umgebung machen (Foto liegt laut Meldung vor).\n   - Beobachtungen und Maßnahmen schriftlich festhalten.\n   - Fehler als „sporadisch, aktuell nicht reproduzierbar“ dokumentieren.\n\n5. **Eskalation**\n   - Meldung an die Fachabteilung weiterleiten mit Hinweis auf intermittierenden Fehler und aktuelle Wetterbedingungen.\n   - Empfehlung: Lampe zeitnah prüfen lassen, ggf. vorbeugender Austausch der Batterie oder Feuchtigkeitsschutz.\n\n**Rückfrage:**  \nGab es in letzter Zeit weitere Störungen an dieser oder benachbarten Lampen? Sind Wartungsintervalle oder letzte Reparaturen bekannt?",
+    "tokens_estimate_words": 168
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
+      "Device-State (low_battery) nicht als Workflow-Constraint genutzt"
+    ],
+    "short_justification": "Sehr gute Antwort: Safety-first klar (Absicherung Schritt 1), strukturiert, nutzt Kontext (Wetter, Dämmerung, severity=high). Fehlt: Offline-Workflow trotz spotty connectivity und low_battery des Geräts."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.714
+  },
+  "error": {}
+}

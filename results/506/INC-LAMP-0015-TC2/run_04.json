@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0015-TC2",
+  "timestamp": "2026-02-26T15:01:13",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293431103",
+        "longitude": 12.1324162,
+        "latitude": 47.8580112,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T10:13:59+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0015",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Störungseinsatz – Straßenlampe (hohe Verkehrsexposition, schlechte Sicht)\n\n1. Absicherung  \n   - Warnweste anlegen, Absperrmaterial bereitstellen.  \n   - Gefahrenbereich um die Lampe absichern (z. B. Warnbaken, Blitzleuchten).  \n   - Bei hohem Verkehrsaufkommen ggf. Polizei oder Verkehrssicherung anfordern.\n\n2. Sichtprüfung  \n   - Lampe und Umfeld auf offensichtliche Schäden prüfen (z. B. Mast beschädigt, Kabel sichtbar, Glasschäden).  \n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. Diagnose/Beobachtung  \n   - Prüfen, ob die Lampe kurzzeitig flackert oder komplett aus ist.  \n   - Geräusche, Gerüche oder andere Auffälligkeiten wahrnehmen.  \n   - Da das Gerät laut System online und „ok“ ist, könnte ein Leuchtmittel- oder Vorschaltgerätdefekt vorliegen.\n\n4. Dokumentation  \n   - Fotos vom Schadensbild und der Absicherung anfertigen (Foto laut Meldung vorhanden).  \n   - Uhrzeit, genaue Position (Koordinaten: 47.8580112, 12.1324162), und Beobachtungen notieren.  \n   - Meldung im System aktualisieren.\n\n5. Eskalation  \n   - Bei hoher Gefährdung (unsichere Umgebung, viel Verkehr): Störung als „dringend“ kennzeichnen.  \n   - Reparaturteam mit Hinweis auf hohe Verkehrssicherung und Nachtarbeit beauftragen.  \n   - Falls Eigenabsicherung nicht ausreicht: Unterstützung durch Polizei/Verkehrssicherung anfordern.\n\n**Rückfrage:**  \nIst bereits eine Verkehrssicherung vor Ort, oder muss diese zusätzlich angefordert werden?  \nSind weitere Lampen in der Umgebung betroffen?",
+    "tokens_estimate_words": 180
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0015-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellent: Nutzt alle Kontextsignale (Nacht, high traffic, poor visibility, severity=high, photo_available). Klare Schrittfolge, Safety-first mit Verkehrssicherung, präzise Dokumentation inkl. Koordinaten, passende Eskalationslogik. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.269
+  },
+  "error": {}
+}

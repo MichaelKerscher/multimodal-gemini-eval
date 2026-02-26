@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC2",
+  "timestamp": "2026-02-26T14:56:33",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T11:25:07+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz: Straßenlampe Happinger Hof (n12551286240)\n\n1. Absicherung  \n- Warnblinkanlage am Einsatzfahrzeug einschalten.  \n- Warnwesten anlegen.  \n- Gefahrenbereich mit Pylonen/Absperrband sichern, besonders wegen schlechter Sicht und Nebel.\n\n2. Sichtprüfung  \n- Lampe und Mast auf äußere Schäden prüfen (z. B. Glasbruch, Vandalismus, lose Kabel).  \n- Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Sicherung ausgelöst oder Leuchtmittel defekt ist (sofern gefahrlos möglich).  \n- Bei spotty Connectivity: Vor Ort testen, ob Steuerung/Schaltkasten erreichbar ist.  \n- Falls möglich, Foto vom Defekt machen (Foto liegt laut Meldung vor).\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen notieren (z. B. Schäden, Sicherungsstatus, Fotos).  \n- Standort und Uhrzeit dokumentieren.\n\n5. Eskalation  \n- Bei akuter Gefährdung (hohe Schwere, unsicherer Bereich): Störungsdienst/Notdienst sofort informieren.  \n- Falls Reparatur nicht direkt möglich: Meldung an Leitstelle mit Priorität „hoch“ weiterleiten.  \n- Bürger über weitere Schritte informieren, falls Kontakt möglich.\n\nRückfrage:  \nIst Zugang zum Schaltschrank vor Ort möglich? Gibt es Hinweise auf Vandalismus oder Unfälle im Bereich?",
+    "tokens_estimate_words": 160
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow bei spotty connectivity nicht explizit erwähnt"
+    ],
+    "short_justification": "Exzellente Antwort: Safety-first klar (Warnwesten, Absperrung wegen Nebel), präzise Eskalation bei high severity, vollständige Dokumentation. Nutzt Kontext sehr gut (Nebel, Nacht, spotty). Offline-Workflow implizit (lokal testen), aber nicht explizit genannt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.86
+  },
+  "error": {}
+}

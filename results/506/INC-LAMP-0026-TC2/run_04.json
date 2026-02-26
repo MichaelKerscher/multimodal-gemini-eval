@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0026-TC2",
+  "timestamp": "2026-02-26T15:05:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Unregelmäßiges Verhalten (an/aus), Ursache unklar.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4449540379",
+        "longitude": 12.1220096,
+        "latitude": 47.8772297,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Langenpfunzen, Römerstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-17T01:08:07+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0026",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei unregelmäßigem Verhalten (an/aus) – Straßenlampe Römerstraße, Langenpfunzen\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Absperrmaterial bereitstellen (Leitkegel, Warnleuchte).\n- Arbeitsbereich absichern, besonders wegen mittlerer Verkehrsexposition und eingeschränkter Sicht durch Nebel.\n\n**2. Sichtprüfung**\n- Lampe auf äußere Schäden prüfen (Gehäuse, Leuchtmittel, Verkabelung).\n- Umgebung auf Manipulation oder Vandalismus kontrollieren.\n- Prüfen, ob Feuchtigkeit oder Verschmutzung sichtbar ist.\n\n**3. Diagnose/Beobachtung**\n- Da das Gerät offline ist, keine Ferndiagnose möglich.\n- Prüfen, ob das Problem bei mehreren Lampen in der Nähe auftritt (Hinweis auf Netzproblem).\n- Bei Einzelstörung: Verdacht auf Wackelkontakt, Feuchtigkeitseintritt oder defektes Vorschaltgerät.\n- Geräusche (z. B. Brummen, Knistern) beachten.\n\n**4. Dokumentation**\n- Alle Beobachtungen (auch keine sichtbaren Schäden) notieren.\n- Fotos machen, sobald möglich (aktuell nicht verfügbar).\n- Zeitpunkt und Wetterbedingungen festhalten.\n\n**5. Eskalation**\n- Bei unklarer Ursache und Offline-Status: Meldung an Fachabteilung für Elektroprüfung.\n- Hinweis auf erhöhte Unfallgefahr durch Nebel und unzuverlässige Beleuchtung weitergeben.\n- Dringlichkeit als „niedrig“ belassen, aber regelmäßige Kontrolle anregen.\n\n**Rückfrage:**  \nSind in der Nähe weitere Lampen mit ähnlichem Verhalten aufgefallen? Gibt es Zugang zu einem Schaltschrank oder Stromverteiler vor Ort?",
+    "tokens_estimate_words": 178
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, offline, mittlerer Verkehr), klare Safety-first-Struktur, expliziter Offline-Workflow ('keine Ferndiagnose möglich'), präzise Dokumentation und Eskalation. Keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.349
+  },
+  "error": {}
+}

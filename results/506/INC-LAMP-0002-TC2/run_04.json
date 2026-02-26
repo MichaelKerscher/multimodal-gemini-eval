@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC2",
+  "timestamp": "2026-02-26T14:55:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n1987093602",
+        "longitude": 12.116307,
+        "latitude": 47.8369218,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Heilig Blut"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-18T14:56:09+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Kontrolle Straßenlampe „Rosenheim, Heilig Blut“ – Checkliste**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial aufstellen (Leitkegel, Warnleuchte).\n   - Auf ausreichende Sichtbarkeit achten, besonders bei Nacht und Nebel.\n   - Verkehrsteilnehmer frühzeitig warnen.\n\n2. **Sichtprüfung**\n   - Lampe auf äußere Schäden prüfen (Gehäuse, Mast, Leuchtmittel).\n   - Auf Feuchtigkeitsspuren oder Korrosion achten.\n   - Umgebung auf ungewöhnliche Geräusche oder Gerüche kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Lampe mehrfach ein- und ausschalten, um Aussetzer zu beobachten.\n   - Prüfen, ob das Problem bei bestimmten Bedingungen (Feuchtigkeit, Nebel) auftritt.\n   - Falls möglich, Logdaten auslesen (Gerät ist online, Status aktuell „ok“).\n   - Foto auswerten, falls vorhanden.\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen notieren (Datum, Uhrzeit, Wetter, Sicht).\n   - Fotos anfertigen und abspeichern.\n   - Auffälligkeiten und eventuelle Fehlercodes dokumentieren.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder unklarer Ursache: Meldung an Fachabteilung/Elektriker.\n   - Bei Gefahr für Verkehrssicherheit: Sofortige Sperrung und Störungsdienst informieren.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter an diesem Standort?  \nSind weitere Lampen in der Nähe betroffen?",
+    "tokens_estimate_words": 159
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Nacht/Nebel/poor_visibility für Safety-Hinweise, erwähnt online-Status für Logdaten, integriert photo_available, klare Schrittfolge mit Eskalation. Alle Kontext-Signale sinnvoll genutzt, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.553
+  },
+  "error": {}
+}

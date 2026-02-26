@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0029-TC1",
+  "timestamp": "2026-02-26T15:06:57",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 15 Minuten. Bereich wirkt unsicher. (Asset-ID: n9223569763)",
+    "context": {
+      "asset_osm": "n9223569763"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0029",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe prüfen: Ist die Stelle besonders unübersichtlich oder gefährlich (z. B. Fußgängerüberweg, Kreuzung)?\n   - Falls ja: Sofortige provisorische Absicherung (z. B. Warnbaken, Hinweisschilder) veranlassen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe: Ist äußerlich ein Schaden erkennbar (z. B. Glasbruch, lose Teile, Vandalismus)?\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten: Flackert die Lampe gelegentlich oder bleibt sie komplett aus?\n   - Gibt es auffällige Geräusche oder Gerüche?\n\n4. **Dokumentation**\n   - Asset-ID (n9223569763), Standort und Uhrzeit der Störung notieren.\n   - Auffälligkeiten (z. B. Schäden, besondere Gefahrenlage) dokumentieren.\n\n5. **Eskalation**\n   - Bei erhöhter Gefährdung (z. B. dunkler Schulweg, Unfallgefahr): Störung als „dringend“ an die Leitstelle melden.\n   - Bei normaler Gefährdung: Störung regulär weitergeben.\n\n**Rückfrage:**  \nBefindet sich die Lampe an einer besonders sicherheitsrelevanten Stelle (z. B. Zebrastreifen, Haltestelle, Kreuzung)? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 156
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0029-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation nach Gefährdung differenziert, Dokumentation vorhanden. Kontext minimal, daher keine Offline-Workflow-Erwartung. Sinnvolle Rückfrage zur Priorisierung."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.121
+  },
+  "error": {}
+}

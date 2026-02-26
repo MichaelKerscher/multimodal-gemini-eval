@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC1",
+  "timestamp": "2026-02-26T15:03:48",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n8486238431)",
+    "context": {
+      "asset_osm": "n8486238431"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden kurze Aussetzer und Flackern bei der Anlage (Asset-ID: n8486238431), vermutlich durch Kontaktprobleme. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für Außendienst-Einsatz**\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung anlegen.\n   - Bei Ampelanlagen: Verkehrsfluss beachten, ggf. Polizei informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf offensichtliche Schäden (Kabel, Gehäuse, Anschlüsse).\n   - Prüfen, ob Feuchtigkeit oder Korrosion sichtbar ist.\n\n3. **Diagnose/Beobachtung**\n   - Anlage einschalten und Verhalten beobachten.\n   - Flackern/Aussetzer gezielt provozieren (z. B. durch leichtes Bewegen von Kabeln/Klemmen, falls gefahrlos möglich).\n   - Prüfen, ob alle Kontakte fest sitzen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und Maßnahmen dokumentieren (Fotos, Notizen).\n   - Asset-ID und Zeitpunkt vermerken.\n\n5. **Eskalation**\n   - Bei unklarer Ursache oder Gefahr: Fachfirma/Elektriker informieren.\n   - Bei akuter Verkehrsgefährdung: Sofortige Meldung an Leitstelle/Verkehrsbehörde.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es aktuelle Hinweise auf Feuchtigkeitseintritt oder Vandalismus?  \n\nBitte um kurze Rückmeldung, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 151
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kontextnutzung minimal (nur Asset-ID)",
+      "Keine Anpassung an Umgebung/Zeit/Wetter",
+      "Generische Schritte ohne Priorisierung"
+    ],
+    "short_justification": "Grundsolide Struktur mit Safety-first und Eskalation, aber sehr generisch. Kontext (nur Asset-ID) wird kaum genutzt, keine Anpassung an spezifische Bedingungen. Rückfrage sinnvoll, aber Antwort bleibt allgemein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.328
+  },
+  "error": {}
+}

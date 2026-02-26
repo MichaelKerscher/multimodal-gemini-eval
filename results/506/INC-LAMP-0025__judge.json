@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0025-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
       "D": 4,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,10 +15,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "severity-driven prioritization unclear",
-      "no explicit time-anchor usage"
+      "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
+      "Keine Priorisierung nach Severity/Traffic",
+      "Generische Schritte ohne Fallbezug"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal, daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber severity/traffic nicht explizit priorisiert."
+    "short_justification": "Grundsätzlich strukturiert mit Absicherung zuerst und Eskalation. Aber bei minimalem Kontext bleibt die Antwort sehr generisch, keine sichtbare Kontextnutzung außer Asset-ID. Dokumentation gut, aber K niedrig wegen fehlender Kontextintegration."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
@@ -36,7 +37,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (severity=high, traffic_exposure=high, low_battery, photo_available), klare Safety-first-Logik, strukturierte Schritte, Eskalation passend zu Risiko, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Safety-first klar umgesetzt (Warnblinkanlage, Absicherung wegen hohem Verkehr/schlechter Sicht), nutzt Kontext präzise (low_battery, online, night, high traffic), klare Schrittfolge mit Eskalation bei hohem Risiko, vollständige Dokumentation. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
@@ -45,15 +46,15 @@
       "H": 5,
       "S": 5,
       "D": 5,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragend: nutzt erweiterten Kontext präzise (night, high traffic, poor_visibility, severity=high), Safety-first klar priorisiert, strukturiert, Eskalation risikoadäquat, Dokumentation vollständig, keine Halluzinationen."
+    "short_justification": "Sehr gute Antwort: Safety-first (Warnblinkanlage, Absicherung wegen Verkehr/Sicht), klare Struktur, Eskalation differenziert nach Schwere, Dokumentation inkl. offline-Hinweis. K=4 statt 5, da low_battery des Geräts nicht explizit als Workflow-Constraint erwähnt, aber insgesamt sehr kontextbewusst."
   }
 ]

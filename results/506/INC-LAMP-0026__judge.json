@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0026-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -14,38 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (kein Signal im CONTEXT, daher nicht erwartbar)",
-      "Spezifische Nutzung von Standort/Name (nur Asset-ID vorhanden)"
-    ],
-    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber spekuliert über Ampelanlage ohne Basis im CONTEXT (nur asset_osm gegeben). K=2 wegen Überbehauptungen (Ampel/Polizei/Netzproblem ohne Kontext-Signal)."
+    "missing_elements": [],
+    "short_justification": "Solide strukturierte Antwort mit klarer Priorisierung (Safety first, Diagnose, Eskalation). Kontext minimal, daher keine Offline-Workflow-Erwartung; sinnvolle Rückfragen. Keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0026-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": true,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Explizite Erwähnung 'später synchronisieren' könnte klarer sein"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Nebel→Sicht, offline→Verbindung prüfen, Fotos 'falls später möglich'). Klare Struktur, Safety first, Eskalation passend zu severity=low. Offline-Workflow implizit erkennbar."
-  },
-  {
-    "test_id": "INC-LAMP-0026-TC3",
-    "scores": {
       "R": 5,
       "H": 5,
-      "S": 4,
+      "S": 5,
       "D": 5,
       "K": 5
     },
@@ -56,6 +33,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext explizit (Nebel, offline→'lokal speichern/später synchronisieren'), klare Schrittfolge, Safety first, Dokumentation vollständig, Eskalation passend. Hinweis auf Offline-Workflow prominent am Ende."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, offline, mittlerer Verkehr), klare Safety-first-Struktur, expliziter Offline-Workflow ('keine Ferndiagnose möglich'), präzise Dokumentation und Eskalation. Keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: vollständige Kontextnutzung (Nebel, offline, mittlerer Verkehr), expliziter Offline-Workflow ('lokal dokumentieren', 'später synchronisieren', 'keine Online-Diagnose'), klare Struktur mit Safety first, präzise Eskalationslogik. Keine Halluzinationen."
   }
 ]

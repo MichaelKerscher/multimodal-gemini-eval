@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-26T14:55:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n5718630492. Hier ist das empfohlene Vorgehen bei einem sporadischen Fehler an einer Straßenlampe:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann.\n   - Bei starkem Verkehr ggf. Warnbaken oder Warnweste nutzen.\n\n2. **Sichtprüfung**\n   - Prüfe, ob sichtbare Schäden an Mast, Leuchte oder Verkabelung vorliegen.\n   - Achte auf Feuchtigkeit, lose Teile oder Vandalismusschäden.\n\n3. **Diagnose/Beobachtung**\n   - Beobachte die Lampe einige Minuten: Flackert sie oder geht sie erneut aus?\n   - Prüfe, ob andere Lampen in der Nähe ähnliche Probleme zeigen (Hinweis auf Netzproblem).\n   - Notiere, ob der Fehler zu bestimmten Tageszeiten auftritt (z. B. Dämmerungsschalter).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetter, Verhalten der Lampe).\n   - Füge Fotos hinzu, falls möglich.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Wartungsfirma oder interne Technik.\n   - Weisen Sie auf die Unregelmäßigkeit hin, damit gezielt nach Wackelkontakten, defekten Vorschaltgeräten oder Feuchtigkeit gesucht werden kann.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten, Unwetter oder andere Störungen im Umfeld der Lampe? Das hilft bei der weiteren Eingrenzung.\n\nMelde dich gern, falls du weitere Details hast oder Unterstützung vor Ort benötigst!",
+    "tokens_estimate_words": 193
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow (Gerät offline, aber nicht erwähnt)",
+      "Batterie-Hinweis (device_state fehlt im Context)",
+      "Foto-Workflow (photo_available fehlt im Context)"
+    ],
+    "short_justification": "Grundsätzlich passende Antwort mit Absicherung, Sichtprüfung, Diagnose, Dokumentation und Eskalation. Kontext minimal (nur asset_osm), daher keine Offline-/Batterie-Hinweise erwartbar. Struktur klar, aber Priorisierung und Stop-Conditions schwach ausgeprägt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.029
+  },
+  "error": {}
+}

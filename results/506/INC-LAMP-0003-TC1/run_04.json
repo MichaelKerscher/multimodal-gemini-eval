@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC1",
+  "timestamp": "2026-02-26T14:56:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis. (Asset-ID: n4427359783)",
+    "context": {
+      "asset_osm": "n4427359783"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4427359783). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. Absicherung  \n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnleuchte aufstellen).  \n   - Persönliche Schutzausrüstung tragen.\n\n2. Sichtprüfung  \n   - Lampe und Mast auf äußere Schäden prüfen (z. B. Glasbruch, Vandalismus, lose Teile).  \n   - Umgebung auf Gefahren (herabhängende Kabel, Verkehr) kontrollieren.\n\n3. Diagnose/Beobachtung  \n   - Prüfen, ob weitere Lampen im Umfeld betroffen sind (Hinweis auf größere Störung).  \n   - Sicherungen und Anschluss prüfen (sofern zugänglich und geschult).  \n   - Bei Einzelstörung: Leuchtmittel und ggf. Starter kontrollieren.\n\n4. Dokumentation  \n   - Festgestellte Schäden und Maßnahmen notieren (inkl. Asset-ID, Datum, Uhrzeit).  \n   - Fotos anfertigen, falls möglich.\n\n5. Eskalation  \n   - Bei Gefahr im Verzug (z. B. Strom, Mast beschädigt): Sofort Fachfirma oder Bereitschaftsdienst informieren.  \n   - Bei Standarddefekt: Reparaturauftrag auslösen.\n\n**Rückfrage:**  \nGibt es Hinweise auf weitere defekte Lampen in der Nähe oder besondere Gefahren (z. B. offenes Kabel, Unfallstelle)? Falls nicht bekannt, bitte vor Ort prüfen.",
+    "tokens_estimate_words": 150
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
+      "Keine Anpassung an Zeit/Umgebung (nicht erwartbar bei minimalem Kontext)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal, daher keine spezifischen Anpassungen erwartbar. Alle Basis-Elemente vorhanden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.068
+  },
+  "error": {}
+}

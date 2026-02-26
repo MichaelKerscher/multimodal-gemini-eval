@@ -1,0 +1,66 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T14:55:40",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es gab einen zeitweisen Ausfall, aktuell funktioniert die Anlage wieder normal. Hier ist die empfohlene Vorgehensweise:\n\n**Checkliste für die Kontrolle (Asset-ID: n1987093602)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Absicherung der Arbeitsstelle nach geltenden Vorschriften (z. B. Warnbaken, ggf. Verkehrszeichen).\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf äußere Schäden (Gehäuse, Kabel, Mast, Leuchten/Ampelköpfe).\n   - Prüfen, ob ungewöhnliche Geräusche, Gerüche oder lose Teile auffallen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob alle Funktionen aktuell gegeben sind (z. B. Leuchten/Ampeln schalten wie vorgesehen).\n   - Nach Hinweisen auf Witterungseinflüsse, Vandalismus oder temporäre Störungen suchen.\n   - Falls möglich: Kurzzeitige Überwachung (z. B. 10–15 Minuten beobachten, ob erneute Ausfälle auftreten).\n\n4. **Dokumentation**\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Datum, Uhrzeit, Wetterbedingungen).\n   - Fotos von Auffälligkeiten machen.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder festgestellten Mängeln: Meldung an die zuständige Fachabteilung/Technik.\n   - Falls keine Auffälligkeiten: Rückmeldung „Keine Störung feststellbar, Anlage aktuell in Betrieb“.\n\n**Rückfrage:**  \nGibt es nähere Angaben zum Zeitpunkt oder zur Art des Ausfalls (z. B. nur einzelne Leuchte/Ampel betroffen, komplette Anlage, bestimmte Tageszeit)? Das hilft bei der gezielten Fehlersuche.",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Umgebungs-/Zeitkontext (nicht vorhanden im CONTEXT)"
+    ],
+    "short_justification": "Klare Struktur mit Safety-first, Sichtprüfung, Beobachtung, Dokumentation und Eskalation. Passt gut zum intermittierenden Fehler. Kontext minimal, daher generisch aber korrekt; keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.29
+  },
+  "error": {}
+}

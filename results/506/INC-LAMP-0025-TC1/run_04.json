@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC1",
+  "timestamp": "2026-02-26T15:05:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n4465173757)",
+    "context": {
+      "asset_osm": "n4465173757"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das empfohlene Vorgehen:\n\nSchritt-für-Schritt-Checkliste\n\n1. Absicherung  \n   - Bereich um die defekte Lampe absichern, falls möglich (z. B. Warnbaken, Hinweisschilder), um die Verkehrssicherheit zu gewährleisten.\n\n2. Sichtprüfung  \n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.  \n   - Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, lose Kabel, Vandalismus).\n\n3. Diagnose/Beobachtung  \n   - Leuchtet die Lampe gar nicht oder flackert sie?  \n   - Gibt es Anzeichen für Stromausfall im gesamten Straßenzug?  \n   - Wurde kürzlich an der Lampe gearbeitet?\n\n4. Dokumentation  \n   - Asset-ID (n4465173757), Standort, Uhrzeit und Beobachtungen notieren.  \n   - Fotos machen, falls möglich.\n\n5. Eskalation  \n   - Meldung an die zuständige Wartungsstelle/Leitstelle weiterleiten, da der Bereich unsicher wirkt und schnelle Reparatur erforderlich ist.\n\nRückfrage:  \nKönnen Sie den genauen Standort (Straßenname, Kreuzung) und eventuelle Besonderheiten (z. B. Nähe zu Schule, Haltestelle) angeben? Das hilft bei der Priorisierung der Reparatur.",
+    "tokens_estimate_words": 141
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
+      "Keine Priorisierung nach Severity/Traffic",
+      "Generische Schritte ohne Fallbezug"
+    ],
+    "short_justification": "Grundsätzlich strukturiert mit Absicherung zuerst und Eskalation. Aber bei minimalem Kontext bleibt die Antwort sehr generisch, keine sichtbare Kontextnutzung außer Asset-ID. Dokumentation gut, aber K niedrig wegen fehlender Kontextintegration."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.557
+  },
+  "error": {}
+}

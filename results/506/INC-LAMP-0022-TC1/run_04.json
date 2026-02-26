@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0022-TC1",
+  "timestamp": "2026-02-26T15:04:12",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 10 Minuten. Bereich wirkt unsicher. (Asset-ID: n1987093607)",
+    "context": {
+      "asset_osm": "n1987093607"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0022",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zur Straßenlampe (Asset-ID: n1987093607). Hier die empfohlene Vorgehensweise:\n\n**Checkliste für den Außendienst**\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe absichern, falls akute Gefahr besteht (z. B. durch schlechte Sicht oder erhöhtes Unfallrisiko).\n   - Warnbaken oder Absperrband nutzen, falls verfügbar.\n\n2. **Sichtprüfung**\n   - Prüfen, ob die Lampe äußerlich beschädigt ist (z. B. Glasbruch, lose Teile).\n   - Umgebung auf weitere Ausfälle oder Gefahrenquellen kontrollieren.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob andere Lampen in der Nähe ebenfalls ausgefallen sind (Hinweis auf größeren Stromausfall).\n   - Falls möglich, Schaltkasten auf offensichtliche Störungen kontrollieren (z. B. ausgelöste Sicherung).\n\n4. **Dokumentation**\n   - Defekt, Asset-ID, Standort und Uhrzeit notieren.\n   - Fotos vom Zustand und der Umgebung machen.\n\n5. **Eskalation**\n   - Meldung an die zuständige Wartungsstelle weiterleiten.\n   - Bei akuter Gefährdung (z. B. Schulweg, Unfallschwerpunkt) Priorität hoch einstufen.\n\n**Rückfrage:**  \nGibt es in der Nähe besonders sensible Bereiche (z. B. Schule, Fußgängerüberweg), die durch den Ausfall besonders gefährdet sind?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0022-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
+      "Keine Berücksichtigung von Umgebungsfaktoren (nicht im Context)"
+    ],
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Eskalation und Dokumentation gut abgedeckt. K=3, da minimaler Context kaum nutzbar war, aber keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.878
+  },
+  "error": {}
+}

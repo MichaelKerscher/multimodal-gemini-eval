@@ -1,13 +1,7 @@
 [
   {
     "test_id": "INC-LAMP-0014-TC1",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 3,
-      "D": 4,
-      "K": 3
-    },
+    "scores": {"R": 4, "H": 4, "S": 3, "D": 4, "K": 3},
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -15,17 +9,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge. Absicherung steht an erster Stelle, Eskalation ist vorhanden. Kontextnutzung minimal (nur Asset-ID), aber angemessen für L0. Keine Halluzinationen."
+    "short_justification": "Klare Struktur mit Absicherung zuerst, guter Dokumentation und Eskalation. Kontext minimal, daher keine Offline-Erwartung. Rückfrage sinnvoll, aber Kontextnutzung begrenzt durch fehlende Daten."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
-    },
+    "scores": {"R": 4, "H": 4, "S": 4, "D": 4, "K": 4},
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -33,17 +21,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Sehr gute Antwort mit klarer Struktur und Safety-first. Nutzt Kontext sichtbar (online/ok → Fokus auf Leuchte, low traffic → angepasste Absicherung, day/clear → keine zusätzlichen Risiken). Eskalation klar definiert."
+    "short_justification": "Sehr gute Nutzung des Kontexts (online/ok → Fokus auf Leuchtmittel/Vorschaltgerät; low traffic → Standardabsicherung; day/clear → keine besonderen Sicherheitsmaßnahmen). Klare Struktur, Safety first, Eskalation bei Gefahr. Dokumentation vollständig."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 4
-    },
+    "scores": {"R": 4, "H": 4, "S": 4, "D": 4, "K": 4},
     "flags": {
       "safety_first": true,
       "escalation_present": true,
@@ -51,6 +33,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Kompakte, gut strukturierte Antwort. Absicherung zuerst, klare Schrittfolge, Eskalation vorhanden. Nutzt Kontext angemessen (Tageslicht/geringe Verkehrsbelastung → Risikobewertung). Keine Halluzinationen, präzise Dokumentationshinweise."
+    "short_justification": "Kompakte, umsetzbare Schrittfolge. Nutzt Kontext gut (low traffic → einfache Absicherung; online → kein Offline-Workflow nötig). Safety first, klare Eskalation bei Gefahr, Dokumentation mit Fotos. Rückfrage passend."
   }
 ]

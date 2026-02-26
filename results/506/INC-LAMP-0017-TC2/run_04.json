@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC2",
+  "timestamp": "2026-02-26T15:02:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4446442023",
+        "longitude": 12.1125581,
+        "latitude": 47.8227101,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Schönau"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_power_mode",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für die Prüfung – Dunkler Abschnitt Schönau\n\n1. Absicherung  \n- Warnblinkanlage am Fahrzeug einschalten, Warnweste anlegen.  \n- Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, um den Bereich abzusichern.  \n- Bei Regen und schlechter Sicht besonders auf eigene Sicherheit achten.\n\n2. Sichtprüfung  \n- Prüfen, ob mehrere oder einzelne Leuchten betroffen sind.  \n- Sichtkontrolle auf offensichtliche Schäden an Masten, Leuchten oder Verkabelung.  \n- Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Schaltkästen) prüfen.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob die Anlage auf Störung reagiert (z. B. Sicherungen, Schaltkastenstatus).  \n- Da das Gerät im „low_power_mode“ ist, mögliche Ursache: Energieversorgung oder Steuerung.  \n- Bei Online-Konnektivität: Fernabfrage des Status möglich?  \n- Foto auswerten, falls vorhanden, um Schadensbild besser einzuschätzen.\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (inkl. Fotos, falls gemacht).  \n- Zeitpunkt, Wetterbedingungen und eigene Maßnahmen notieren.\n\n5. Eskalation  \n- Bei unklarer Ursache oder größerem Ausfall: Störungsdienst/Technik verständigen.  \n- Bei akuter Gefahr für Verkehrsteilnehmer: Polizei oder Ordnungsamt informieren.\n\nRückfragen:  \n- Gibt es Zugang zum Schaltkasten vor Ort?  \n- Liegt eine aktuelle Fernabfrage oder ein Fehlerprotokoll vor?  \n- Ist das Foto verfügbar und kann eingesehen werden?  \n\nBitte Rückmeldung geben, falls weitere Informationen benötigt werden oder Sofortmaßnahmen gewünscht sind.",
+    "tokens_estimate_words": 192
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung (Regen, dusk, low_power_mode, photo_available). Klare Struktur, Safety-first, Eskalation vorhanden. Keine Offline-Erwähnung nötig (connectivity=online). Sehr umsetzbar und fallspezifisch."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.778
+  },
+  "error": {}
+}

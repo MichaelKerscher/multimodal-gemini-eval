@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0002-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
-      "D": 3,
-      "K": 2
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -15,39 +15,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung der Asset-ID im Kontext",
-      "Keine Anpassung an intermittent fault_type",
-      "Keine Erwähnung vorhandener Foto-Dokumentation"
+      "Keine Nutzung von Umgebungs-/Zeitkontext (nicht vorhanden im CONTEXT)"
     ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Nutzt aber minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt daher allgemein. Keine Halluzinationen, aber auch keine kontextspezifische Tiefe."
+    "short_justification": "Klare Struktur mit Safety-first, Sichtprüfung, Beobachtung, Dokumentation und Eskalation. Passt gut zum intermittierenden Fehler. Kontext minimal, daher generisch aber korrekt; keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0002-TC2",
     "scores": {
       "R": 5,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 5
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Keine explizite Priorisierung bei medium severity"
-    ],
-    "short_justification": "Exzellente Kontextnutzung: Nacht/Nebel/poor visibility → verstärkte Absicherung, intermittent → Reproduktionsversuch, photo_available → Verweis auf vorhandenes Foto. Klare Struktur, Safety-first, gute Dokumentation. Sehr fallbezogen."
-  },
-  {
-    "test_id": "INC-LAMP-0002-TC3",
-    "scores": {
-      "R": 5,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -57,6 +35,24 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Kontextnutzung trotz identischem Kontext wie TC2: Nebel/Nacht → Sicherheitshinweise, intermittent → Reproduktion/Beobachtung, photo_available integriert. Klare Struktur, Safety-first, vollständige Dokumentation. Zusätzlicher Hinweis auf verstärkte Beobachtung zeigt gutes Verständnis intermittierender Fehler."
+    "short_justification": "Exzellente Antwort: nutzt Nacht/Nebel/poor_visibility für Safety-Hinweise, erwähnt online-Status für Logdaten, integriert photo_available, klare Schrittfolge mit Eskalation. Alle Kontext-Signale sinnvoll genutzt, keine Halluzinationen."
+  },
+  {
+    "test_id": "INC-LAMP-0002-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Hervorragend: nutzt Nacht/Nebel/traffic_exposure für Safety, erwähnt photo_available explizit, klare Struktur mit intermittent-spezifischen Schritten (Fehler provozieren), Eskalation bei Sicherheitsrisiko. Kontext vollständig und korrekt genutzt."
   }
 ]

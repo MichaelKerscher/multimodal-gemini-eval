@@ -1,0 +1,302 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0017-TC3",
+  "timestamp": "2026-02-26T15:02:05",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Schönau; bitte prüfen.",
+    "context": {
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-15T10:17:54+01:00",
+        "photo_available": true,
+        "reporter": "citizen"
+      },
+      "asset": {
+        "asset_osm": "n4446442023",
+        "latitude": 47.8227101,
+        "longitude": 12.1125581,
+        "name": "Schönau",
+        "lit": "yes"
+      },
+      "device": {
+        "connectivity": "online",
+        "device_state": "low_power_mode"
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets.",
+          "incident.photo_available ist ein Workflow-Hinweis (Foto vorhanden), kein Beweis für eine konkrete Ursache."
+        ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "medium",
+          "fault_type": "outage",
+          "offline": false,
+          "spotty": false,
+          "connectivity": "online",
+          "device_state": "low_power_mode",
+          "low_battery": true,
+          "weather": "rain",
+          "poor_visibility": true,
+          "time_of_day": "dusk",
+          "photo_available": true
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 853
+        },
+        "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.name",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "incident.photo_available",
+            "prio": "P1",
+            "reason": "workflow-cue"
+          },
+          {
+            "path": "asset.lit",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0017",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 853,
+    "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.name",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "incident.photo_available",
+        "prio": "P1",
+        "reason": "workflow-cue"
+      },
+      {
+        "path": "asset.lit",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      }
+    ],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz – Dunkler Abschnitt Schönau\n\n1. Absicherung\n- Warnblinkanlage am Fahrzeug einschalten, ggf. Warnbaken aufstellen.\n- Persönliche Schutzausrüstung (Warnweste, ggf. Regenschutz) anlegen.\n- Bereich bei Bedarf absperren, da schlechte Sicht und Regen herrschen.\n\n2. Sichtprüfung\n- Prüfen, ob mehrere oder alle Leuchten betroffen sind.\n- Sichtkontrolle auf offensichtliche Schäden (z. B. Mast beschädigt, Kabel offen, Wasser im Gehäuse).\n- Auf Hinweise durch das Foto achten (liegt vor).\n\n3. Diagnose/Beobachtung\n- Prüfen, ob Sicherungen ausgelöst sind.\n- Kontrollieren, ob Stromversorgung anliegt.\n- Bei Regen: Feuchtigkeitseintritt an Klemmen/Leuchten prüfen.\n- Notieren, ob einzelne oder alle Leuchten betroffen sind.\n\n4. Dokumentation\n- Fotos vom Zustand und ggf. Schäden machen.\n- Alle Beobachtungen und Maßnahmen in der App dokumentieren (offlinefähig, falls nötig).\n- Besonderheiten (z. B. niedriger Batteriestand des eigenen Geräts) vermerken.\n\n5. Eskalation\n- Bei Gefahr für Verkehrsteilnehmer (z. B. Kreuzung, Schulweg): Sofortige Meldung an Leitstelle/Notdienst.\n- Wenn Fehler nicht vor Ort behebbar: Störung an Fachabteilung weiterleiten.\n\nRückfragen:\n- Betrifft der Ausfall alle Leuchten entlang der Schönau oder nur einen Abschnitt?\n- Gibt es aktuelle Bauarbeiten oder bekannte Vandalismusschäden?\n- Liegt eine aktuelle Gefährdung für Fußgänger oder Radfahrer vor?\n\nBitte kurze Rückmeldung zu diesen Punkten, damit die weitere Vorgehensweise optimal abgestimmt werden kann.",
+    "tokens_estimate_words": 202
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0017-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Hinweis ('offlinefähig dokumentieren'), obwohl online. Nutzt alle relevanten Signale (Regen, dusk, low_power_mode, photo). Klare Struktur, Safety-first, vollständige Dokumentation. Nahezu ideal."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.739
+  },
+  "error": {}
+}

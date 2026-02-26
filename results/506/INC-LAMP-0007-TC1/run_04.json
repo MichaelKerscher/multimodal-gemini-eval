@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC1",
+  "timestamp": "2026-02-26T14:57:49",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n4484173276)",
+    "context": {
+      "asset_osm": "n4484173276"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, Sie melden kurze Aussetzer und Flackern bei der Straßenlampe (Asset-ID: n4484173276), vermutlich durch Kontaktprobleme. Hier die empfohlene Vorgehensweise:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Arbeitsbereich absperren (Warnbaken, ggf. Warnleuchte).\n   - Persönliche Schutzausrüstung tragen.\n   - Stromzufuhr prüfen und ggf. abschalten.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Mastkopfs auf offensichtliche Schäden.\n   - Prüfen, ob Feuchtigkeit, Korrosion oder lose Kabel sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Lampe einschalten und Verhalten beobachten.\n   - Kontakte und Klemmen auf festen Sitz prüfen.\n   - Falls möglich, Spannung messen und Wackelkontakt lokalisieren.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und durchgeführte Maßnahmen notieren.\n   - Fotos von Schäden oder Auffälligkeiten machen.\n   - Asset-ID und Standort dokumentieren.\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden (z. B. Brandgefahr, massive Korrosion): Fachfirma oder Elektriker informieren.\n   - Bei unklarer Ursache oder fehlender Besserung: Störung an zuständige Stelle weiterleiten.\n\n**Rückfrage:**  \nIst bekannt, ob die Aussetzer wetterabhängig auftreten (z. B. nach Regen)? Gibt es weitere Lampen in der Nähe mit ähnlichen Symptomen?",
+    "tokens_estimate_words": 157
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Signal)",
+      "Kontextnutzung minimal (nur Asset-ID verwendet)"
+    ],
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber sehr generisch. Kontext (nur Asset-ID) wird kaum genutzt, keine spezifischen Hinweise zu Umgebung/Wetter/Traffic. Dokumentation gut, aber keine Offline-Workflow-Erwähnung (allerdings auch kein Signal dafür im Kontext)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.154
+  },
+  "error": {}
+}

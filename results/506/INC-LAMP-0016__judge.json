@@ -6,20 +6,20 @@
       "H": 3,
       "S": 2,
       "D": 3,
-      "K": 3
+      "K": 2
     },
     "flags": {
       "safety_first": false,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
+      "hallucination_suspected": true
     },
     "missing_elements": [
-      "Safety-first nicht als Schritt 1 priorisiert",
-      "Keine klaren Eskalations-Trigger",
-      "Keine Nutzung von Kontext-Signalen (minimal context)"
+      "Keine Sicherheitsmaßnahmen als Schritt 1 trotz unbekannter severity",
+      "Spekuliert über Gefahrenstellen ohne Kontext-Signal",
+      "Keine Kontextnutzung (nur asset_osm vorhanden)"
     ],
-    "short_justification": "Grundsätzlich passende Antwort mit sinnvoller Struktur. Absicherung nicht als oberste Priorität erkennbar, Eskalation erwähnt aber ohne klare Trigger. Kontext minimal, daher keine Erwartung an Offline-Workflow oder spezifische Umweltfaktoren."
+    "short_justification": "Antwort ist strukturiert und deckt Grundlagen ab, spekuliert aber über Gefahrenstellen/Absicherung ohne Kontext-Signal (severity/traffic unbekannt). Keine Safety-first-Priorisierung. Kontext wird kaum genutzt (nur ID)."
   },
   {
     "test_id": "INC-LAMP-0016-TC2",
@@ -37,17 +37,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
-      "Keine klare Anweisung zur lokalen Datenspeicherung"
+      "Offline-Workflow nicht erwähnt trotz connectivity=spotty",
+      "Device-State (low_battery) nicht als Workflow-Constraint genutzt"
     ],
-    "short_justification": "Sehr gute Antwort: Safety-first klar erkennbar, nutzt Kontext (Regen, Dämmerung, low_battery, spotty) sichtbar. Eskalation mit Hinweis auf Sicherheitsrisiko vorhanden. Offline-Workflow fehlt trotz spotty connectivity, daher K=3."
+    "short_justification": "Sehr gute Antwort: Safety-first klar (Absicherung Schritt 1), strukturiert, nutzt Kontext (Wetter, Dämmerung, severity=high). Fehlt: Offline-Workflow trotz spotty connectivity und low_battery des Geräts."
   },
   {
     "test_id": "INC-LAMP-0016-TC3",
     "scores": {
       "R": 5,
       "H": 5,
-      "S": 5,
+      "S": 4,
       "D": 5,
       "K": 5
     },
@@ -58,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekte Antwort: Safety-first als Schritt 1, klare Schrittfolge, nutzt alle relevanten Kontext-Signale (spotty→offline workflow, Regen/Dämmerung→Sicherheit, low_battery→Gerätehinweis). Eskalation mit klarem Hinweis auf Priorität. Dokumentation vollständig inkl. Offline-Speicherung und Synchronisation."
+    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, nutzt Kontext vollständig (Wetter, Dämmerung, spotty connectivity → Offline-Workflow explizit genannt). Dokumentation und Eskalation klar. Keine Halluzinationen, robuste Kontextnutzung."
   }
 ]

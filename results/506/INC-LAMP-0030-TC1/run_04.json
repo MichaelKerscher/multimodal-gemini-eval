@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0030-TC1",
+  "timestamp": "2026-02-26T15:07:21",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n11833818322)",
+    "context": {
+      "asset_osm": "n11833818322"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0030",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Fehler (Asset-ID: n11833818322)\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe gefahrlos betreten werden kann.\n   - Bei Arbeiten an der Lampe: Absperrung und Warnhinweise aufstellen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe auf äußere Schäden (Gehäuse, Mast, Verkabelung).\n   - Achte auf Feuchtigkeit, lose Teile oder Vandalismusschäden.\n\n3. **Diagnose/Beobachtung**\n   - Da der Fehler sporadisch auftritt: Prüfe, ob äußere Einflüsse (z. B. Feuchtigkeit, Temperaturschwankungen) als Ursache infrage kommen.\n   - Notiere, ob weitere Lampen in der Nähe betroffen sind.\n   - Prüfe, ob der Fehler zu bestimmten Tageszeiten oder Wetterlagen auftritt.\n\n4. **Dokumentation**\n   - Halte den aktuellen Zustand fest (Lampe aktuell an, Fehler war sporadisch).\n   - Notiere Datum, Uhrzeit und eigene Beobachtungen.\n   - Asset-ID (n11833818322) dokumentieren.\n\n5. **Eskalation**\n   - Melde den sporadischen Fehler an die zuständige Fachabteilung/Technik.\n   - Empfehlung: Lampe zeitnah durch Elektrofachkraft prüfen lassen, da sporadische Fehler auf Defekte in der Elektrik oder Steuerung hinweisen können.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Unwetter in dem Bereich? Sind weitere Lampen betroffen?",
+    "tokens_estimate_words": 165
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0030-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide Antwort mit klarer Struktur und Sicherheitsfokus. Dokumentation gut, aber Kontextnutzung minimal (nur Asset-ID vorhanden). Keine Offline-Workflow-Erwähnung nötig, da kein Signal dafür im Context."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.007
+  },
+  "error": {}
+}

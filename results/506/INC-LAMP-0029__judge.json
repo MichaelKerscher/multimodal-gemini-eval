@@ -2,9 +2,27 @@
   {
     "test_id": "INC-LAMP-0029-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first (Absicherung Schritt 1), Eskalation nach Gefährdung differenziert, Dokumentation vorhanden. Kontext minimal, daher keine Offline-Workflow-Erwartung. Sinnvolle Rückfrage zur Priorisierung."
+  },
+  {
+    "test_id": "INC-LAMP-0029-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
       "D": 4,
       "K": 3
     },
@@ -15,31 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht erwähnt (kein Signal im Context)",
-      "Severity/Zeitkontext nicht genutzt (nicht im Context)"
+      "Offline-Workflow explizit (lokal speichern/später sync)"
     ],
-    "short_justification": "Solide Struktur mit Safety-first und Eskalation. Dokumentation gut. Kontext minimal (nur asset_osm), daher keine Offline-/Severity-Erwartung berechtigt. Generisch, aber korrekt."
-  },
-  {
-    "test_id": "INC-LAMP-0029-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": false
-    },
-    "missing_elements": [
-      "Offline-Workflow fehlt (connectivity=offline im Context)",
-      "Keine explizite Anweisung zu lokaler Speicherung/Sync"
-    ],
-    "short_justification": "Gute Struktur, Safety-first, Eskalation passend zu severity=high/night. Dokumentation stark. ABER: connectivity=offline wird ignoriert – kein Offline-Workflow erwähnt. K=2 wegen fehlender Kontextnutzung (Offline-Signal)."
+    "short_justification": "Gute Struktur, Safety-first klar (Absicherung Schritt 1), Eskalation vorhanden. Kontext connectivity=offline wird nicht explizit als Offline-Workflow adressiert (nur 'keine Fernabfrage möglich' erwähnt). Sonst solide."
   },
   {
     "test_id": "INC-LAMP-0029-TC3",
@@ -57,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellent: Safety-first, klare Schrittfolge, Offline-Workflow explizit (lokal speichern/später sync), Eskalation passend zu severity=high/night/poor_visibility. Kontext vollständig genutzt, keine Halluzinationen."
+    "short_justification": "Exzellent: Safety-first (Absicherung Schritt 1), klare Eskalation bei high severity, Offline-Workflow explizit ('offline speichern, später synchronisieren'), vollständige Dokumentation, nutzt Kontext korrekt (connectivity=offline, severity=high, night/poor_visibility). Keine Halluzinationen."
   }
 ]

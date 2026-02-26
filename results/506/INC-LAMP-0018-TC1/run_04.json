@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-26T15:02:32",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es liegt ein gleichzeitiger Ausfall eines Segments mit der Asset-ID n12520351647 vor. Hier ist das empfohlene Vorgehen:\n\n**Checkliste bei Steuerungsproblem – Segmentausfall**\n\n1. **Absicherung**\n   - Stelle sicher, dass der betroffene Bereich verkehrssicher ist (z. B. Warnbaken, ggf. Polizei informieren).\n   - Prüfe, ob eine akute Gefährdung für Verkehrsteilnehmer besteht.\n\n2. **Sichtprüfung**\n   - Kontrolliere vor Ort, ob mehrere Lampen/Ampeln gleichzeitig betroffen sind.\n   - Achte auf sichtbare Schäden an Schaltschränken, Kabeln oder Masten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfe, ob der Ausfall auf einen offensichtlichen Defekt (z. B. Sicherung, Vandalismus) zurückzuführen ist.\n   - Notiere, ob das Problem nach einem bestimmten Ereignis (z. B. Unwetter, Bauarbeiten) aufgetreten ist.\n   - Falls möglich: Steuerungseinheit auf Fehlermeldungen oder Störungen prüfen.\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, betroffene Assets, Maßnahmen).\n   - Füge Fotos hinzu, falls Schäden sichtbar sind.\n\n5. **Eskalation**\n   - Melde den Vorfall an die zuständige Fachabteilung/Leitstelle.\n   - Bei Gefahr im Verzug: Sofortige Weitergabe an Notdienst oder Polizei.\n\n**Rückfrage:**  \nSind bereits Maßnahmen zur Absicherung erfolgt oder liegen nähere Informationen zum Steuerungssystem (z. B. Hersteller, Typ) vor?",
+    "tokens_estimate_words": 172
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Umgebungskontext (Zeit/Wetter/Sicht)",
+      "Keine Priorisierung nach Severity",
+      "Generische Schritte ohne Fallbezug"
+    ],
+    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Bleibt aber sehr generisch, da minimaler Kontext nicht genutzt wird. Keine klaren Stop-Conditions oder Priorisierung nach Dringlichkeit."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.876
+  },
+  "error": {}
+}

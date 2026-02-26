@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC2",
+  "timestamp": "2026-02-26T15:04:36",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13293397459",
+        "longitude": 12.1320286,
+        "latitude": 47.8589872,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-15T08:16:43+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für die Prüfung – Dunkler Straßenabschnitt\n\n**1. Absicherung**\n- Warnweste anlegen.\n- Absperrmaterial bereitstellen (Leitkegel, Warnleuchten).\n- Arbeitsbereich absichern, besonders wegen hohem Verkehrsaufkommen und Sturm.\n- Auf eigene Sicherheit achten (Windböen, Sichtverhältnisse).\n\n**2. Sichtprüfung**\n- Sichtkontrolle der gesamten Lampenreihe im betroffenen Abschnitt.\n- Prüfen, ob weitere Schäden (z. B. lose Teile, umgestürzte Masten) sichtbar sind.\n- Auf mögliche Gefahren durch Sturm achten (herabfallende Äste, lose Kabel).\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob einzelne oder alle Lampen betroffen sind.\n- Da Gerät „offline“ ist: Keine Fernabfrage möglich, Sichtprüfung vor Ort notwendig.\n- Auf Geräusche, Gerüche (z. B. verschmorte Kabel) achten.\n- Bei offensichtlichem Defekt: Notiz, ob Sicherungen zugänglich/sichtbar sind.\n\n**4. Dokumentation**\n- Fotos vom Schaden und Umfeld machen (Foto liegt laut Meldung bereits vor).\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten.\n- Standort und betroffene Lampen genau dokumentieren.\n\n**5. Eskalation**\n- Bei akuter Gefahr (herabfallende Teile, Stromgefahr): Sofort Polizei/Feuerwehr informieren.\n- Störung an die zuständige Fachabteilung/Technik weiterleiten, Reparatur beauftragen.\n- Bei großflächigem Ausfall ggf. Netzbetreiber informieren.\n\n**Rückfrage:**  \nSind weitere Informationen zu den betroffenen Lampen (z. B. Anzahl, Typ) oder Zugang zu Schaltkästen vor Ort bekannt? Liegt das Foto zur weiteren Analyse vor?",
+    "tokens_estimate_words": 192
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow unvollständig (nur erwähnt, nicht systematisch integriert)",
+      "Keine explizite Synchronisations-Anweisung nach Wiederherstellung"
+    ],
+    "short_justification": "Gute Antwort mit klarer Struktur, Safety-first und Eskalation. Offline wird erwähnt ('Keine Fernabfrage möglich'), aber Workflow (lokal speichern, später sync) nicht systematisch ausgeführt. K=2 wegen unvollständiger Offline-Integration."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.52
+  },
+  "error": {}
+}

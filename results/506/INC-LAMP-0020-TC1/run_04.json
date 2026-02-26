@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0020-TC1",
+  "timestamp": "2026-02-26T15:03:24",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n4483691318)",
+    "context": {
+      "asset_osm": "n4483691318"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0020",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum dunklen Abschnitt bei Asset-ID n4483691318.\n\nHier die empfohlene Vorgehensweise:\n\n1. Absicherung\n- Warnweste anlegen.\n- Gefahrenbereich mit Leitkegeln oder Warnleuchten absichern, besonders bei Dunkelheit oder hohem Verkehrsaufkommen.\n\n2. Sichtprüfung\n- Prüfen, ob die Straßenlampe äußerlich beschädigt ist (z.B. Mast, Leuchte, Verkabelung).\n- Kontrollieren, ob weitere Lampen im Abschnitt betroffen sind.\n\n3. Diagnose/Beobachtung\n- Funktionstest: Schaltet die Lampe bei Dämmerung ein?\n- Prüfen, ob der Stromkasten zugänglich ist und Sicherungen ausgelöst wurden.\n- Notieren, ob ungewöhnliche Geräusche, Gerüche oder sichtbare Defekte vorliegen.\n\n4. Dokumentation\n- Standort, Asset-ID und Beobachtungen (z.B. Anzahl betroffener Lampen, Art des Defekts) notieren.\n- Fotos vom Schaden und Umfeld machen.\n\n5. Eskalation\n- Bei akuter Gefahr (z.B. freiliegende Kabel): Sofort an die Leitstelle/Notdienst melden.\n- Sonst: Störung an die zuständige Fachabteilung weiterleiten, inklusive aller Dokumentationen.\n\nFehlen noch Details zum genauen Standort (Straße, Kreuzung) oder zur Art der Dunkelheit (komplett aus, flackert)? Bitte ergänzen, falls möglich.",
+    "tokens_estimate_words": 153
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0020-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
+      "Keine Priorisierung nach Severity/Traffic",
+      "Generische Schritte ohne fallspezifische Anpassung"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur und Safety-first. Kontext minimal, daher keine spezifischen Anpassungen möglich – Bewertung entsprechend neutral."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.627
+  },
+  "error": {}
+}

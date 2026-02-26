@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0010-TC2",
+  "timestamp": "2026-02-26T14:59:06",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang Rosenheim, Stadtmitte; bitte prüfen.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427955479",
+        "longitude": 12.1253894,
+        "latitude": 47.8562438,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Stadtmitte"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-21T09:52:03+01:00",
+        "reporter": "internal",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0010",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für Störung: Dunkler Abschnitt Rosenheim, Stadtmitte**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial (Leitkegel, Warnleuchten) aufstellen, besonders wegen hoher Verkehrsbelastung und schlechter Sicht.\n   - Bei Bedarf Polizei oder Verkehrslenkung informieren.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle aller Straßenlampen im betroffenen Abschnitt.\n   - Prüfen, ob einzelne oder alle Leuchten betroffen sind.\n   - Umgebung auf weitere Gefahren (z. B. lose Kabel, beschädigte Masten) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Sichtbare Schäden an Lampen, Masten oder Schaltkästen feststellen.\n   - Prüfen, ob Sicherungen ausgelöst oder Feuchtigkeit eingedrungen ist (Regen!).\n   - Bei mehreren ausgefallenen Leuchten: Hinweis auf Stromkreis- oder Steuerungsproblem.\n   - Aufgrund „spotty“ Konnektivität: Fernabfrage ggf. eingeschränkt möglich.\n\n4. **Dokumentation**\n   - Fotos vom Ausfallbereich und ggf. Schäden anfertigen (Foto vorhanden?).\n   - Alle Beobachtungen und Maßnahmen notieren.\n   - Zeitpunkt und Wetterbedingungen dokumentieren.\n\n5. **Eskalation**\n   - Bei großflächigem Ausfall und hoher Gefährdung: Störung umgehend an Bereitschaftsdienst/Netzbetreiber weiterleiten.\n   - Falls Gefahr für Verkehrssicherheit besteht, Sofortmaßnahmen einleiten (z. B. zusätzliche Absicherung, Polizei informieren).\n\n**Rückfrage:**  \nSind Fotos vom Schaden bereits verfügbar und können diese zur weiteren Diagnose eingesehen werden?  \nGibt es Hinweise, ob nur Straßenlampen oder auch Ampelanlagen betroffen sind?",
+    "tokens_estimate_words": 177
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0010-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine explizite Stop-Condition vor Eskalation",
+      "Offline-Workflow nur angedeutet ('Fernabfrage eingeschränkt'), nicht als klare Handlungsanweisung"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (severity=high, traffic=high, weather=rain, spotty connectivity, photo_available). Safety-first klar, Eskalation passend zu high severity. Struktur gut, Dokumentation vollständig. Offline-Workflow nur indirekt erwähnt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.093
+  },
+  "error": {}
+}

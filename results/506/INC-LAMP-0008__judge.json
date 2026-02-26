@@ -15,16 +15,16 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Struktur mit Safety-first, guter Dokumentation und Eskalationslogik. Kontext minimal, daher keine Offline-Workflow-Erwartung; Antwort bleibt angemessen generisch mit sinnvollen Rückfragen."
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur OSM-ID), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Trigger könnten präziser sein."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
     "scores": {
       "R": 5,
-      "H": 4,
+      "H": 5,
       "S": 4,
       "D": 5,
-      "K": 3
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -32,10 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht explizit als Schritt formuliert"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Nebel, Nacht, Koordinaten, spotty connectivity erwähnt). Offline-Workflow angedeutet ('Fernabfrage eingeschränkt'), aber nicht als klarer Handlungsschritt. Dokumentation und Safety exzellent."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Nebel, Nacht, spotty connectivity, low_power_mode) sichtbar, erwähnt Offline-Einschränkungen ('keine Fernwartung möglich'), klare Safety-first-Struktur, präzise Dokumentation inkl. Koordinaten."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
@@ -53,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Nahezu perfekt: Offline-Workflow explizit integriert ('lokal speichern, später synchronisieren'), klare Schrittfolge, Safety-first, exzellente Kontextnutzung (spotty/low_power_mode, Nebel, Nacht). Keine Halluzinationen, alle Guardrails beachtet."
+    "short_justification": "Nahezu perfekt: expliziter Offline-Workflow ('offline dokumentieren, Fotos lokal speichern, später synchronisieren'), nutzt alle relevanten Kontextsignale (Nebel, Nacht, spotty, low_power_mode), klare Struktur, Safety-first, präzise Eskalationslogik."
   }
 ]

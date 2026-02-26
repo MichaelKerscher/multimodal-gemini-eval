@@ -15,11 +15,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung der Asset-ID im Kontext",
-      "Keine spezifische Diagnose bei Steuerungsproblem",
-      "Generische Rückfragen ohne Kontextbezug"
+      "Keine Nutzung von Umgebungskontext (Zeit/Wetter/Sicht)",
+      "Keine Priorisierung nach Severity",
+      "Generische Schritte ohne Fallbezug"
     ],
-    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Bleibt aber sehr generisch (Ampel vs. Straßenbeleuchtung unklar), nutzt minimalen Kontext (nur Asset-ID) nicht aktiv. Keine Halluzinationen, aber wenig fallspezifisch."
+    "short_justification": "Grundsätzlich passende Struktur mit Safety-first und Eskalation. Bleibt aber sehr generisch, da minimaler Kontext nicht genutzt wird. Keine klaren Stop-Conditions oder Priorisierung nach Dringlichkeit."
   },
   {
     "test_id": "INC-LAMP-0018-TC2",
@@ -37,9 +37,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Asset-ID nicht explizit in Dokumentation erwähnt"
+      "Asset-ID nicht explizit in Dokumentation genannt"
     ],
-    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (Nebel/Nacht → erweiterte Absicherung, device online → Ferndiagnose möglich, medium severity → angemessene Eskalation). Klare 5-Schritt-Struktur, Safety-first, spezifische Diagnose bei control_box_issue, sinnvolle Rückfrage."
+    "short_justification": "Exzellente Antwort: nutzt Kontext (Nacht, Nebel, medium traffic) sichtbar für Safety-Maßnahmen, klare Schrittfolge mit Priorisierung, severity-angemessene Eskalation, keine Halluzinationen. Dokumentation fast vollständig."
   },
   {
     "test_id": "INC-LAMP-0018-TC3",
@@ -57,8 +57,8 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Asset-ID/GPS nicht explizit in Dokumentation genannt"
+      "Asset-ID/GPS nicht explizit in Dokumentation"
     ],
-    "short_justification": "Sehr starke Antwort: nutzt Kontext vollständig (Nebel/Nacht → großzügige Absicherung, online → Fernabfrage erwähnt, control_box_issue → spezifische Diagnose). Klare Struktur, Safety-first, präzise Eskalationskriterien, sinnvolle Rückfrage. Minimal knapper als TC2, aber ebenso hochwertig."
+    "short_justification": "Sehr starke Antwort: nutzt Umgebungskontext (Nacht, Nebel, medium traffic) präzise für Safety-Entscheidungen, klare Struktur, severity-angemessene Eskalation. Dokumentation umfassend, nur Asset-ID fehlt explizit. Keine Halluzinationen."
   }
 ]
