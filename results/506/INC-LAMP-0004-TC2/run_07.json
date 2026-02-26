@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC2",
+  "timestamp": "2026-02-26T15:58:35",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n12551286240",
+        "longitude": 12.1275622,
+        "latitude": 47.8298471,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Happinger Hof"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-16T11:25:07+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) rund um den Arbeitsbereich aufstellen, um Passanten und Verkehr zu schützen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Straßenlampe und des direkten Umfelds (z. B. Mast, Leuchte, Verkabelung).\n   - Prüfen, ob offensichtliche Schäden, Vandalismus oder Feuchtigkeitseintritt sichtbar sind.\n\n3. **Diagnose/Beobachtung**\n   - Funktion der Lampe ggf. mit Prüfgerät oder Spannungsprüfer kontrollieren.\n   - Bei Nebel und schlechter Sicht besonders auf Stromschlaggefahr achten.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größeren Ausfall).\n\n4. **Dokumentation**\n   - Fotos vom Defekt und der Umgebung anfertigen (Foto liegt laut Meldung bereits vor).\n   - Alle Beobachtungen und Maßnahmen schriftlich festhalten (Datum, Uhrzeit, Wetter, Sichtverhältnisse).\n\n5. **Eskalation**\n   - Bei hohem Sicherheitsrisiko (wie hier: unsicherer Bereich, schlechte Sicht, Nacht, Nebel) sofortige Weiterleitung an die Bereitschaft oder Störungsstelle.\n   - Falls Eigenreparatur nicht möglich oder Gefahr besteht, Bereich ggf. zusätzlich absperren und auf Reparaturteam warten.\n\n**Rückfrage:**  \nIst der Zugang zur Lampe aktuell gefahrlos möglich (z. B. kein unmittelbarer Straßenverkehr, keine weiteren Gefahrenquellen)?  \nSind weitere Lampen im Umfeld ebenfalls ausgefallen?  \n\nBitte um kurze Rückmeldung, damit die nächsten Schritte optimal geplant werden können.",
+    "tokens_estimate_words": 199
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 5,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Kein expliziter Offline-Workflow trotz spotty connectivity",
+      "Foto-Hinweis nicht als Workflow-Cue genutzt"
+    ],
+    "short_justification": "Sehr gute Antwort: Safety-first klar, Eskalation passend zu severity=high + Nebel/Nacht. Nutzt Kontext gut (Wetter, Sicht, Foto). Spotty connectivity wird nicht explizit adressiert (lokale Speicherung fehlt), sonst nahezu vollständig."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.124
+  },
+  "error": {}
+}

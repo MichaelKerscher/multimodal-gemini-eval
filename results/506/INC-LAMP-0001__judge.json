@@ -4,21 +4,22 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
+      "S": 3,
       "D": 3,
       "K": 3
     },
     "flags": {
-      "safety_first": false,
+      "safety_first": true,
       "escalation_present": true,
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Safety-first nicht als Schritt 1 priorisiert",
-      "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)"
+      "Offline-Workflow nicht erwähnt (Kontext zeigt nur asset_osm, keine device-Infos)",
+      "Keine Nutzung von Standort/Verkehrsexposition (nicht im Kontext)",
+      "Keine Foto-Workflow-Hinweise (nicht im Kontext)"
     ],
-    "short_justification": "Grundsätzlich passende Antwort mit klarer Struktur und Eskalationslogik. Absicherung steht an erster Stelle, aber ohne explizite Priorisierung als 'Safety-first'. Kontext minimal genutzt (nur Asset-ID), was bei L0 akzeptabel ist."
+    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung, Sichtprüfung, Dokumentation, Eskalation). Kontext minimal (nur asset_osm), daher keine spezifischen Elemente erwartbar. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung möglich."
   },
   {
     "test_id": "INC-LAMP-0001-TC2",
@@ -36,18 +37,18 @@
       "hallucination_suspected": true
     },
     "missing_elements": [
-      "Offline-Workflow fehlt trotz connectivity=offline",
-      "Batterie-Diagnose spekulativ (device_state bezieht sich auf Techniker-Gerät, nicht Asset)"
+      "Offline-Workflow fehlt komplett (connectivity=offline erfordert lokale Dokumentation/Sync-Hinweis)",
+      "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät"
     ],
-    "short_justification": "Sehr gute Struktur, Safety-first klar erkennbar, hohe Verkehrsexposition berücksichtigt. ABER: Halluzination bei Batterie-Interpretation (device_state=low_battery bezieht sich auf Techniker-Smartphone, nicht auf Lampe). Offline-Workflow fehlt komplett trotz connectivity=offline."
+    "short_justification": "Gute Struktur und Kontextnutzung (Standort, Verkehr, Foto). ABER: Halluzination bei device_state/connectivity – interpretiert als Asset-Problem ('Steuergerät/Batterie des Assets'), obwohl es das Techniker-Gerät beschreibt. Offline-Workflow fehlt. K<=2 wegen Halluzination."
   },
   {
     "test_id": "INC-LAMP-0001-TC3",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
-      "D": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -57,6 +58,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Safety-first, klare Schrittfolge, Offline-Workflow explizit genannt ('lokal speichern, später synchronisieren'), korrekte Kontext-Interpretation (device.* = Techniker-Gerät). Keine Halluzinationen, alle erwartbaren Elemente erfüllt."
+    "short_justification": "Exzellent: Nutzt Kontext korrekt (Standort, Verkehr, Foto, offline-Workflow explizit erwähnt: 'lokal dokumentieren, später synchronisieren'). Klare Struktur, Safety first, Eskalation passend zu severity=low. Keine Halluzinationen, device.* korrekt als Techniker-Gerät verstanden dank extras.context_notes."
   }
 ]

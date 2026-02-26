@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0014-TC2",
+  "timestamp": "2026-02-26T16:02:42",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Routinekontrolle.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4939032525",
+        "longitude": 12.1230035,
+        "latitude": 47.8553091,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T11:45:31+01:00",
+        "reporter": "patrol",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0014",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Schritt-für-Schritt-Checkliste für die Störungsbearbeitung\n\n1. Absicherung  \n- Warnblinkanlage am Fahrzeug einschalten, ggf. Warnbaken aufstellen.  \n- Persönliche Schutzausrüstung (Warnweste) tragen.  \n- Bei geringer Verkehrsbelastung genügt meist eine einfache Absicherung.\n\n2. Sichtprüfung  \n- Ist die Lampe äußerlich beschädigt (Gehäuse, Mast, Leuchtmittel sichtbar defekt)?  \n- Sind Kabel oder Anschlüsse locker oder beschädigt?  \n- Liegt Vandalismus oder Fremdeinwirkung vor?\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob Sicherung oder Schaltkasten zugänglich und intakt ist.  \n- Kontrollieren, ob andere Lampen im Umkreis funktionieren (Hinweis auf Sammelfehler oder Einzeldefekt).  \n- Da das Gerät laut System \"online\" und \"ok\" ist, liegt vermutlich ein Problem am Leuchtmittel oder der Verkabelung vor.\n\n4. Dokumentation  \n- Alle Beobachtungen und Maßnahmen notieren (z.B. Fotos, falls später möglich).  \n- Zeitpunkt und genaue Position (Koordinaten) festhalten.\n\n5. Eskalation  \n- Bei einfachem Leuchtmitteltausch: Austausch vor Ort, falls Material verfügbar.  \n- Bei unklarer Ursache oder größerem Defekt: Meldung an Fachabteilung/Elektriker zur weiteren Diagnose und Reparatur.  \n- Bei Gefahr (z.B. freiliegende Kabel): Bereich sofort absperren und Notdienst informieren.\n\n**Rückfrage:**  \nGibt es Zugang zum Schaltkasten vor Ort, oder ist ein Elektriker erforderlich?  \nSind Ersatzleuchtmittel verfügbar?",
+    "tokens_estimate_words": 175
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0014-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Sehr gute Kontextnutzung (traffic_exposure=low → einfache Absicherung; device online → kein Offline-Workflow nötig; severity=medium → angemessene Eskalation). Klare Struktur, Safety-first, gute Dokumentation."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 9.64
+  },
+  "error": {}
+}

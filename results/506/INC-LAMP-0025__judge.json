@@ -4,9 +4,9 @@
     "scores": {
       "R": 3,
       "H": 3,
-      "S": 2,
+      "S": 3,
       "D": 3,
-      "K": 2
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -15,18 +15,18 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "severity-driven prioritization unclear",
-      "no explicit time/traffic context usage",
-      "generic safety steps without urgency signal"
+      "Keine Nutzung von Geo-Koordinaten (nicht im Context)",
+      "Keine Berücksichtigung von severity/traffic (nicht im Context)",
+      "Keine Erwähnung von Foto-Workflow (nicht im Context)"
     ],
-    "short_justification": "Antwort ist strukturiert und nennt Absicherung zuerst, aber ohne Kontext (severity, traffic, time_of_day) bleibt sie generisch. Eskalation erwähnt, aber nicht priorisiert nach Dringlichkeit. Dokumentation solide, aber K=2 wegen fehlender Kontextnutzung (nur Asset-ID vorhanden)."
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Kontext ist minimal (nur OSM-ID), daher keine spezifischen Details erwartbar. Struktur klar, aber Stop-Conditions fehlen teilweise."
   },
   {
     "test_id": "INC-LAMP-0025-TC2",
     "scores": {
       "R": 5,
       "H": 4,
-      "S": 4,
+      "S": 5,
       "D": 4,
       "K": 4
     },
@@ -37,18 +37,17 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "low_battery as device state, not asset cause (minor confusion)",
-      "stop-conditions for escalation could be sharper"
+      "Keine explizite Erwähnung von low_battery als Workflow-Constraint (Gerät, nicht Asset)"
     ],
-    "short_justification": "Sehr gute Antwort: nutzt severity=high, traffic_exposure=high, night/poor_visibility sichtbar für Safety-first und Eskalation. Dokumentation klar, Struktur umsetzbar. Leichte Unschärfe bei device.low_battery (Techniker-Gerät, nicht Asset), aber insgesamt kontextbewusst und handlungsfähig."
+    "short_justification": "Sehr gute Nutzung des vollen Kontexts: Standort, severity=high, traffic_exposure=high, night, photo_available. Safety-first klar priorisiert, Eskalation passend zu Gefährdung. Struktur umsetzbar, Dokumentation gut. Batterie-Hinweis könnte klarer als Geräte-Constraint formuliert sein."
   },
   {
     "test_id": "INC-LAMP-0025-TC3",
     "scores": {
       "R": 5,
-      "H": 5,
+      "H": 4,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -58,6 +57,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: klare Schrittfolge (1-5), Safety-first mit Verkehrs-/Sicht-Kontext, Eskalation mit Trigger-Logik (akute Gefahr vs. Einzellampe), Dokumentation vollständig inkl. low_battery-Hinweis für Techniker-Gerät. Nutzt alle relevanten Kontextfelder korrekt, keine Halluzinationen, präzise und umsetzbar."
+    "short_justification": "Exzellente Kontextnutzung inkl. Guardrails (device.* = Techniker-Gerät, nicht Asset). Safety-first, klare Eskalation bei high severity/traffic. Struktur kompakt und umsetzbar, Dokumentation inkl. Foto-Workflow. Keine Halluzinationen, robuste Rückfragen."
   }
 ]

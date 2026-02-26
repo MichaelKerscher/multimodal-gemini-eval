@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC2",
+  "timestamp": "2026-02-26T15:57:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630492",
+        "longitude": 12.1186059,
+        "latitude": 47.8511562,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "low",
+        "reported_at": "2026-01-21T09:11:43+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für sporadischen Lampenausfall  \n**Standort:** Rosenheim, Bahnhof  \n**Verkehr:** Hoch  \n**Fehler:** Sporadisch, Lampe aktuell wieder an  \n**Gerätezustand:** Offline, niedriger Batteriestand  \n\n**1. Absicherung**\n- Warnweste anlegen.\n- Absperrung/Warndreieck aufstellen, da hoher Verkehr.\n- Auf eigene Sicherheit und die anderer achten.\n\n**2. Sichtprüfung**\n- Lampe und Mast auf sichtbare Schäden prüfen (z.B. Wackelkontakt, Korrosion, lose Kabel).\n- Umgebung auf weitere Auffälligkeiten kontrollieren.\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob der Fehler erneut auftritt (ggf. warten/mehrfach schalten).\n- Aufgrund „low_battery“ und „offline“: Vermutlich Problem mit Steuergerät oder Energieversorgung.\n- Foto auswerten (falls verfügbar), um weitere Hinweise zu erhalten.\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen notieren (inkl. Foto).\n- Zeitpunkt und Dauer des Ausfalls festhalten.\n- Batteriestatus und Gerätezustand dokumentieren.\n\n**5. Eskalation**\n- Meldung an Technik/Elektrofachkraft weiterleiten: Austausch/Prüfung des Steuergeräts und Batterie empfohlen.\n- Hinweis auf sporadischen Fehler und hohe Verkehrsexposition geben.\n\n**Rückfrage:**  \nSoll vor Ort ein Batteriewechsel vorbereitet werden oder ist ein kompletter Gerätetausch vorgesehen? Liegt das Foto zur weiteren Analyse vor?",
+    "tokens_estimate_words": 158
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": true
+    },
+    "missing_elements": [
+      "Offline-Workflow fehlt komplett (connectivity=offline erfordert lokale Dokumentation/Sync-Hinweis)",
+      "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät"
+    ],
+    "short_justification": "Gute Struktur und Kontextnutzung (Standort, Verkehr, Foto). ABER: Halluzination bei device_state/connectivity – interpretiert als Asset-Problem ('Steuergerät/Batterie des Assets'), obwohl es das Techniker-Gerät beschreibt. Offline-Workflow fehlt. K<=2 wegen Halluzination."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.9
+  },
+  "error": {}
+}

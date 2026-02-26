@@ -3,9 +3,9 @@
     "test_id": "INC-LAMP-0023-TC1",
     "scores": {
       "R": 3,
-      "H": 3,
+      "H": 4,
       "S": 3,
-      "D": 3,
+      "D": 4,
       "K": 3
     },
     "flags": {
@@ -14,18 +14,15 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)",
-      "Keine Nutzung von Geo-Koordinaten (nicht im CONTEXT vorhanden)"
-    ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung → Diagnose → Eskalation). Relevanz und Handlungsfähigkeit gut, aber ohne spezifische Kontextnutzung (nur Asset-ID). Sicherheit und Dokumentation angemessen erwähnt."
+    "missing_elements": [],
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Trigger könnten schärfer sein."
   },
   {
     "test_id": "INC-LAMP-0023-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
+      "R": 5,
+      "H": 5,
+      "S": 5,
       "D": 4,
       "K": 4
     },
@@ -35,11 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine explizite Erwähnung von GPS-Koordinaten für Dokumentation",
-      "Foto-Workflow könnte detaillierter sein (lokal speichern)"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung: Sturm, hohe Verkehrsbelastung, schlechte Sicht und Offline-Status werden klar adressiert. Offline-Workflow ('Gerät offline, keine Fernabfrage möglich') erkannt. Safety-first sichtbar, Eskalation klar, Dokumentation gut strukturiert."
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Safety-first klar priorisiert, Offline-Workflow erkannt ('Keine Fernabfrage möglich'), Sturm/hohe Verkehrsexposition direkt adressiert. Eskalation mit klaren Triggern. Dokumentation gut, könnte GPS explizit nennen."
   },
   {
     "test_id": "INC-LAMP-0023-TC3",
@@ -57,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt alle relevanten Kontextsignale (Sturm, hohe Verkehrsexposition, schlechte Sicht, Offline-Status). Offline-Workflow explizit ('offline speichern', 'später synchronisieren'). Klare Priorisierung (Absicherung → Diagnose → Eskalation), präzise Dokumentation, keine Halluzinationen."
+    "short_justification": "Nahezu perfekt: Offline-Workflow explizit ('lokal speichern', 'später synchronisieren'), Safety-first, klare Eskalation, vollständige Dokumentation. Nutzt Kontext optimal (Sturm, offline, high severity). Sehr umsetzbar und präzise."
   }
 ]

@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0021-TC2",
+  "timestamp": "2026-02-26T16:05:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n8486238431",
+        "longitude": 12.1268813,
+        "latitude": 47.8670011,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Rechenauerstraße"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "medium",
+        "reported_at": "2026-01-19T01:30:45+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "rain",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0021",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Flackern/Aussetzern (Kontaktproblem möglich)  \n**Standort:** Rosenheim, Rechenauerstraße  \n**Bedingungen:** Nacht, Regen, schlechte Sicht, wenig Verkehr\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten.\n- Warnweste anlegen.\n- Arbeitsbereich mit Leitkegeln/Absperrband sichern.\n- Bei Bedarf zusätzliche Beleuchtung aufstellen.\n\n**2. Sichtprüfung**\n- Leuchte und Mast auf sichtbare Schäden, Feuchtigkeitseintritt oder lose Teile prüfen.\n- Lampenkopf und Anschlusskasten auf Korrosion oder offene Kabel kontrollieren.\n- Umgebung auf Spuren von Vandalismus oder Anfahrschäden prüfen.\n\n**3. Diagnose/Beobachtung**\n- Flackern/Aussetzer beobachten: Tritt es dauerhaft oder sporadisch auf?\n- Bei Regen: Feuchtigkeitseintritt am Lampenkopf oder Anschlusskasten vermuten.\n- Falls möglich, vorsichtig Kontakte im Kasten auf festen Sitz prüfen (nur bei abgeschaltetem Strom!).\n- Prüfen, ob weitere Leuchten in der Nähe betroffen sind (Hinweis auf Netzproblem).\n\n**4. Dokumentation**\n- Fotos vom Schaden und Umfeld anfertigen (Foto liegt laut Meldung vor).\n- Beobachtungen und Maßnahmen notieren (z.B. Zeitpunkt, Wetter, Fehlerbild).\n- Zustand der Absicherung dokumentieren.\n\n**5. Eskalation**\n- Bei Verdacht auf gefährliche Mängel (offene Kabel, starker Feuchtigkeitseintritt): Sofort Fachfirma/Notdienst informieren.\n- Bei unklarer Ursache oder fehlender Besserung: Störungsmeldung mit allen Details an die zuständige Stelle weiterleiten.\n- Falls Eigenreparatur nicht möglich: Termin für Fachpersonal anfordern.\n\n**Rückfragen/Annahmen:**  \n- Ist Zugang zum Anschlusskasten vor Ort möglich?\n- Sind weitere Leuchten in der Straße betroffen?\n- Liegt bereits eine Rückmeldung vom Netzbetreiber vor?\n\nBitte Rückmeldung geben, falls weitere Details benötigt werden oder Zugangsbeschränkungen bestehen.",
+    "tokens_estimate_words": 222
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0021-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow explizit (connectivity=spotty → lokale Doku/Sync erwähnen)",
+      "Foto-Workflow (photo_available=true → 'Foto liegt vor, prüfen' fehlt)"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nacht/Regen/schlechte Sicht/wenig Verkehr → passende Safety-Maßnahmen). Klare Schrittfolge, Eskalation gut. Spotty connectivity wird nicht explizit adressiert (Offline-Workflow fehlt), daher K=3."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.971
+  },
+  "error": {}
+}

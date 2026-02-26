@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0016-TC1",
+  "timestamp": "2026-02-26T16:03:27",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n13293470414)",
+    "context": {
+      "asset_osm": "n13293470414"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0016",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zum Asset n13293470414 (Straßenlampe). Hier ist das empfohlene Vorgehen:\n\n**Checkliste für sporadische Fehler an Straßenlampen**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist. Bei Gefährdung (z. B. Dunkelheit an gefährlicher Stelle) ggf. temporäre Absperrung oder Warnbaken anfordern.\n\n2. **Sichtprüfung**\n   - Prüfe vor Ort, ob sichtbare Schäden, lose Kabel, Feuchtigkeitseintritt oder Vandalismus erkennbar sind.\n   - Beobachte, ob die Lampe flackert oder ungewöhnliche Geräusche macht.\n\n3. **Diagnose/Beobachtung**\n   - Notiere, wann und unter welchen Bedingungen der Fehler auftritt (z. B. nach Regen, bei Kälte, zu bestimmten Uhrzeiten).\n   - Prüfe, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf Netz- oder Steuerungsproblem).\n\n4. **Dokumentation**\n   - Halte alle Beobachtungen schriftlich fest (Datum, Uhrzeit, Wetter, Fehlerbild).\n   - Fotos von der Lampe und Umgebung machen.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Sicherheitsrisiko: Störung an die Fachabteilung/Technik melden.\n   - Falls aktuell kein Fehler sichtbar, Hinweis auf sporadischen Fehler und Beobachtungsprotokoll weitergeben.\n\n**Rückfrage:**  \nGab es in letzter Zeit besondere Wetterereignisse oder Bauarbeiten in der Nähe? Das hilft bei der Ursachenforschung.\n\nGib Bescheid, falls du weitere Details hast oder Unterstützung vor Ort brauchst!",
+    "tokens_estimate_words": 184
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0016-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": false,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Safety-first nicht als Schritt 1 priorisiert",
+      "Keine klaren Eskalations-Trigger bei severity=high",
+      "Keine Offline-Workflow-Erwähnung trotz minimalem Kontext"
+    ],
+    "short_justification": "Grundsätzlich passende Struktur mit 5 Schritten, aber Absicherung nicht deutlich als Priorität 1. Eskalation erwähnt, aber ohne klare Trigger für 'high severity'. Kontext (Asset-ID) wird genutzt, aber generisch gehalten."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.843
+  },
+  "error": {}
+}

@@ -1,0 +1,67 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0019-TC1",
+  "timestamp": "2026-02-26T16:04:49",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 60 Minuten. Bereich wirkt unsicher. (Asset-ID: n4939032796)",
+    "context": {
+      "asset_osm": "n4939032796"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0019",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zur Straßenlampe (Asset-ID: n4939032796). Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe auf erhöhte Unfallgefahr prüfen.\n   - Falls möglich: Warnbaken oder Hinweisschilder aufstellen, besonders bei schlechter Sicht oder in Gefahrenbereichen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe auf offensichtliche Schäden (z. B. zerbrochenes Glas, lose Kabel, Vandalismus).\n   - Prüfen, ob weitere Lampen in der Nähe ebenfalls betroffen sind.\n\n3. **Diagnose/Beobachtung**\n   - Notieren, ob die Lampe komplett ausfällt oder flackert.\n   - Prüfen, ob ein Stromausfall im Bereich vorliegt (z. B. weitere Infrastruktur betroffen?).\n\n4. **Dokumentation**\n   - Zeitpunkt und Dauer des Ausfalls festhalten (hier: seit ca. 60 Minuten).\n   - Asset-ID, Standort und besondere Auffälligkeiten dokumentieren.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsstelle oder den Bereitschaftsdienst melden.\n   - Hinweis auf unsichere Situation und ggf. erhöhte Dringlichkeit geben.\n\n**Rückfrage:**  \nKönnen Sie bestätigen, ob sich die Lampe an einer besonders gefährlichen Stelle (z. B. Fußgängerüberweg, Kreuzung) befindet oder ob weitere Lampen betroffen sind? Das hilft bei der Priorisierung der Reparatur.\n\nIch leite die Meldung weiter und empfehle eine kurzfristige Überprüfung und Reparatur.",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0019-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Geo-Koordinaten (vorhanden im CONTEXT)",
+      "Nebel/poor_visibility nicht berücksichtigt (nicht im CONTEXT L0)"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Safety-first und Eskalation. Kontext minimal (nur OSM-ID), daher generisch aber korrekt. Keine Halluzinationen, aber Geo-Daten ungenutzt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.472
+  },
+  "error": {}
+}

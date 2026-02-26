@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0025-TC1",
+  "timestamp": "2026-02-26T16:07:34",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 20 Minuten. Bereich wirkt unsicher. (Asset-ID: n4465173757)",
+    "context": {
+      "asset_osm": "n4465173757"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0025",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung zur Straßenlampe (Asset-ID: n4465173757). Hier ist das empfohlene Vorgehen:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Bereich um die defekte Lampe möglichst absichern (z. B. Warnbaken, Hinweisschilder), um Unfälle zu vermeiden.\n   - Bei akuter Gefahr: Polizei oder Ordnungsamt informieren.\n\n2. **Sichtprüfung**\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Sichtkontrolle auf offensichtliche Schäden (z. B. zerbrochenes Glas, freiliegende Kabel).\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob die Lampe flackert oder komplett aus ist.\n   - Prüfen, ob ein Stromausfall im Bereich vorliegt (andere Infrastruktur betroffen?).\n\n4. **Dokumentation**\n   - Asset-ID, Standort, Uhrzeit und Beobachtungen notieren.\n   - Fotos machen, falls möglich.\n\n5. **Eskalation**\n   - Störung an die zuständige Wartungsstelle melden (inkl. Asset-ID und Dringlichkeit wegen Unsicherheitsgefühl).\n   - Bei erhöhter Gefährdung (z. B. Schulweg, Unfallschwerpunkt) sofortige Reparatur anfordern.\n\n**Rückfrage:**  \nGibt es in der Nähe besonders sensible Bereiche (z. B. Schule, Zebrastreifen, Haltestelle), die durch die Dunkelheit stärker gefährdet sind?",
+    "tokens_estimate_words": 148
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0025-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Geo-Koordinaten (nicht im Context)",
+      "Keine Berücksichtigung von severity/traffic (nicht im Context)",
+      "Keine Erwähnung von Foto-Workflow (nicht im Context)"
+    ],
+    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Kontext ist minimal (nur OSM-ID), daher keine spezifischen Details erwartbar. Struktur klar, aber Stop-Conditions fehlen teilweise."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.623
+  },
+  "error": {}
+}

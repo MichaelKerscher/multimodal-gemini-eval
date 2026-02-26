@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC1",
+  "timestamp": "2026-02-26T16:01:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n4470029718)",
+    "context": {
+      "asset_osm": "n4470029718"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es gab einen zeitweisen Ausfall, aktuell funktioniert die Anlage wieder. Hier ist die empfohlene Vorgehensweise:\n\n### Schritt-für-Schritt-Checkliste\n\n1. **Absicherung**\n   - Warnweste tragen.\n   - Arbeitsbereich mit Pylonen oder Warnleuchten absichern.\n   - Bei Bedarf Verkehr umleiten oder Polizei informieren.\n\n2. **Sichtprüfung**\n   - Anlage äußerlich auf Beschädigungen, lose Teile oder Feuchtigkeit prüfen.\n   - Kontrollieren, ob alle Lampen/Signale wie vorgesehen leuchten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob ungewöhnliche Geräusche, Flackern oder Aussetzer auftreten.\n   - Steuergerät auf Fehlermeldungen oder Störungen überprüfen (sofern zugänglich).\n   - Bei Straßenlampen: Dämmerungsschalter und Sicherungen kontrollieren.\n   - Bei Ampeln: Signalabläufe beobachten, ggf. Testbetrieb auslösen.\n\n4. **Dokumentation**\n   - Festgestellte Auffälligkeiten und durchgeführte Maßnahmen notieren.\n   - Fotos von eventuellen Schäden oder Auffälligkeiten machen.\n   - Zeitpunkt der Kontrolle dokumentieren.\n\n5. **Eskalation**\n   - Bei wiederkehrenden Ausfällen, sicherheitsrelevanten Mängeln oder unklarer Ursache: Störung an Fachabteilung oder Wartungsdienst weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es nähere Angaben zum Zeitpunkt oder zur Häufigkeit des Ausfalls? Das hilft bei der gezielten Diagnose.",
+    "tokens_estimate_words": 159
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Spezifische Nutzung der Asset-ID",
+      "Intermittent-Fehler-Strategie (Reproduktion)",
+      "Kontextbezug zu Umgebung/Wetter"
+    ],
+    "short_justification": "Generisch strukturierte Antwort mit Safety-first und Eskalation. Nutzt minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt allgemein. Fragt sinnvoll nach Asset-Typ, aber keine spezifische Intermittent-Strategie."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.09
+  },
+  "error": {}
+}

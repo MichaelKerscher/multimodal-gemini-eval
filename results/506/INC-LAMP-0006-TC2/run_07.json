@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0006-TC2",
+  "timestamp": "2026-02-26T15:59:22",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher.",
+    "context": {
+      "asset": {
+        "asset_osm": "n7230270217",
+        "longitude": 12.0941951,
+        "latitude": 47.8493667,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Äußere Münchener Straße/Aicherpark"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "high",
+        "reported_at": "2026-01-19T01:52:56+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0006",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Sofortmaßnahmen – Straßenlampe Ausfall  \nStandort: Rosenheim, Äußere Münchener Straße/Aicherpark  \nSituation: Hohe Verkehrsexposition, schlechte Sicht, Sturm, hohe Dringlichkeit\n\n1. Absicherung  \n- Warnbaken oder Leitkegel aufstellen, um den Gefahrenbereich abzusichern.  \n- Warnweste tragen, auf eigene Sicherheit achten.  \n- Bei hoher Gefährdung: Polizei oder Verkehrssicherung anfordern.\n\n2. Sichtprüfung  \n- Lampe und Mast auf offensichtliche Schäden prüfen (z. B. lose Teile, herabhängende Kabel).  \n- Umgebung auf weitere Gefahrenquellen (z. B. umgestürzte Äste) kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Prüfen, ob weitere Lampen betroffen sind (evtl. Stromausfall im Bereich).  \n- Aufgrund „low_battery“ und „offline“: Vermutlich Energieversorgung oder Steuerung gestört.  \n- Bei Sturm: Möglichkeit von Leitungsschäden oder Sicherungsauslösung.\n\n4. Dokumentation  \n- Fotos vom Defekt und der Absicherung anfertigen (Foto liegt laut Meldung vor).  \n- Alle Beobachtungen und Maßnahmen notieren (Zeit, Wetter, Sicht, Absicherung).\n\n5. Eskalation  \n- Störung umgehend an die Leitstelle/Technik weiterleiten (hohe Priorität wegen Verkehrssicherheit).  \n- Hinweis auf schlechte Sicht und hohes Verkehrsaufkommen geben.  \n- Bei Gefahr im Verzug: Polizei/Feuerwehr informieren.\n\nRückfrage:  \nSind weitere Lampen in der Nähe ebenfalls betroffen oder ist es ein Einzelfall?  \nWurde die Polizei bereits informiert, falls die Verkehrssicherheit akut gefährdet ist?",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0006-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow fehlt (connectivity=offline → lokal dokumentieren/später sync)",
+      "Low_battery des Geräts nicht als Workflow-Constraint erkannt"
+    ],
+    "short_justification": "Sehr gute Relevanz und Safety-first (Absicherung, Polizei bei Gefahr). Eskalation klar. ABER: connectivity=offline und device_state=low_battery werden ignoriert – kein Offline-Workflow erwähnt (lokal speichern/später sync). K<=2 wegen fehlender Kontextnutzung dieser kritischen Signale."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.347
+  },
+  "error": {}
+}

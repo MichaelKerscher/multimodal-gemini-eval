@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0023-TC1",
+  "timestamp": "2026-02-26T16:06:43",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Dunkler Abschnitt entlang dem Standort; bitte prüfen. (Asset-ID: n13293397459)",
+    "context": {
+      "asset_osm": "n13293397459"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0023",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung zum dunklen Abschnitt bei Asset-ID n13293397459.\n\n**Schritt-für-Schritt-Checkliste für die Überprüfung:**\n\n1. **Absicherung**\n   - Warnblinkanlage am Fahrzeug einschalten.\n   - Warnweste anlegen.\n   - Absperrmaterial (z. B. Leitkegel) aufstellen, um den Arbeitsbereich zu sichern.\n   - Auf ausreichende Sichtbarkeit und Eigenschutz achten, besonders bei Dunkelheit und im fließenden Verkehr.\n\n2. **Sichtprüfung**\n   - Prüfen, ob die Straßenbeleuchtung am genannten Standort komplett oder teilweise ausgefallen ist.\n   - Sichtkontrolle auf offensichtliche Schäden an Masten, Leuchten oder Verkabelung.\n   - Umgebung auf weitere Gefahrenquellen (z. B. lose Kabel, beschädigte Abdeckungen) prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob einzelne oder mehrere Leuchten betroffen sind.\n   - Falls möglich, Schaltkasten auf offensichtliche Störungen (z. B. ausgelöste Sicherung) kontrollieren.\n   - Notieren, ob der Ausfall zeitweise oder dauerhaft ist.\n\n4. **Dokumentation**\n   - Fotos vom betroffenen Abschnitt und ggf. von Schäden anfertigen.\n   - Asset-ID, Standort und Beobachtungen notieren.\n   - Zeitpunkt der Feststellung dokumentieren.\n\n5. **Eskalation**\n   - Bei Gefahr für Verkehrsteilnehmer (z. B. Totalausfall auf Hauptstraße): Sofortige Meldung an die Leitstelle/Notdienst.\n   - Bei regulärem Ausfall: Störungsmeldung an zuständige Fachabteilung weiterleiten.\n\n**Rückfrage:**  \nHandelt es sich um einen Totalausfall der Beleuchtung oder sind nur einzelne Lampen betroffen? Gibt es Hinweise auf akute Gefahren (z. B. herunterhängende Kabel, beschädigte Masten)?  \nBitte um kurze Rückmeldung, damit ich die nächsten Schritte optimal koordinieren kann.",
+    "tokens_estimate_words": 207
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0023-TC1",
+    "scores": {
+      "R": 3,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Solide strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur asset_osm), daher keine Offline-Workflow-Erwartung. Eskalation vorhanden, aber Trigger könnten schärfer sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.361
+  },
+  "error": {}
+}

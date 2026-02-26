@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0013-TC2",
+  "timestamp": "2026-02-26T16:02:15",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n13278610215",
+        "longitude": 12.1203879,
+        "latitude": 47.8494009,
+        "crs": "EPSG:4326",
+        "lit": null,
+        "name": null
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-20T17:30:17+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "dusk",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0013",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Vielen Dank für die Meldung. Hier ist das strukturierte Vorgehen zur Absicherung und weiteren Bearbeitung:\n\n**Schritt-für-Schritt-Checkliste**\n\n1. **Absicherung**\n   - Warnbaken oder Absperrband um die Gefahrenstelle aufstellen (Radius mind. 2 Meter).\n   - Bei schlechter Sicht zusätzlich Warnleuchten verwenden.\n   - Passanten und Verkehrsteilnehmer aktiv auf die Gefahr hinweisen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Ist das Gehäuse nur offen oder bereits beschädigt/abgebrochen?\n   - Sind stromführende Teile sichtbar oder erreichbar?\n   - Gibt es Anzeichen für Vandalismus oder weitere Schäden?\n\n3. **Diagnose/Beobachtung**\n   - Prüfen, ob das Gerät weiterhin funktioniert (z.B. Leuchte/Ampel in Betrieb).\n   - Beobachten, ob sich der Schaden verschlimmert (z.B. lockere Teile, Funkenbildung).\n\n4. **Dokumentation**\n   - Fotos aus mehreren Perspektiven anfertigen (Gefahrenstelle, Umfeld, Detailaufnahme).\n   - Uhrzeit, Wetter, Sichtverhältnisse und eigene Maßnahmen notieren.\n   - Meldung im System aktualisieren.\n\n5. **Eskalation**\n   - Sofortige Meldung an die Fachabteilung/Elektrofachkraft, da Berührungsgefahr besteht.\n   - Bei akuter Gefahr (z.B. freiliegende Kabel, Funken) zusätzlich Polizei/Feuerwehr informieren.\n\n**Rückfragen/Annahmen:**\n- Ist das Gehäuse einer Straßenlampe oder einer Ampelanlage betroffen?\n- Gibt es Hinweise auf direkten Kontakt mit Strom (z.B. Funken, Geräusche)?\n- Sind bereits Personen gefährdet worden?\n\nBitte um kurze Rückmeldung zu den offenen Punkten, damit die Gefahrenstelle schnellstmöglich gesichert und repariert werden kann.",
+    "tokens_estimate_words": 192
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0013-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (dusk/poor_visibility → Warnleuchten, high severity → sofortige Eskalation, photo_available → Workflow-Hinweis). Safety-first, klare Struktur, vollständige Dokumentation, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.589
+  },
+  "error": {}
+}

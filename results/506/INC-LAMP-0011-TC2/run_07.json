@@ -1,0 +1,91 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0011-TC2",
+  "timestamp": "2026-02-26T16:01:26",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029718",
+        "longitude": 12.1324965,
+        "latitude": 47.8433836,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-15T22:52:18+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0011",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Kontroll-Checkliste – Straßenlampe Leitzachstraße, Rosenheim\n\n**1. Absicherung**\n- Warnweste anlegen, Absperrmaterial bereitstellen.\n- Bei mittlerer Verkehrsbelastung und schlechter Sicht (Nebel) unbedingt Verkehrsabsicherung aufbauen (z. B. Leitkegel, Warnleuchte).\n- Eigene Sicherheit und die der Verkehrsteilnehmer priorisieren.\n\n**2. Sichtprüfung**\n- Lampe auf äußere Schäden, lose Teile, Feuchtigkeitsspuren prüfen.\n- Mast, Leuchte und Verkabelung auf offensichtliche Mängel kontrollieren.\n- Prüfen, ob die Lampe aktuell leuchtet (trotz Tageslicht ggf. manuell auslösen).\n\n**3. Diagnose/Beobachtung**\n- Da der Fehler nur zeitweise auftritt: Lampe mehrfach ein-/ausschalten, um das Verhalten zu beobachten.\n- Auf Flackern, verzögertes Einschalten oder Aussetzer achten.\n- Prüfen, ob Feuchtigkeit (durch Nebel) als Ursache infrage kommt.\n- Falls möglich, Steuerungseinheit und Anschlüsse auf Korrosion oder Wackelkontakt prüfen.\n\n**4. Dokumentation**\n- Alle Beobachtungen (auch wenn aktuell kein Fehler sichtbar) notieren.\n- Fotos machen, falls später Auffälligkeiten auftreten.\n- Zeitpunkt und Wetterbedingungen dokumentieren.\n\n**5. Eskalation**\n- Bei erneutem Ausfall oder Verdacht auf Wackelkontakt: Meldung an die Fachabteilung zur weiteren Diagnose (z. B. Elektriker für Prüfung der Steuerung/Verkabelung).\n- Bei akuter Gefahr (z. B. freiliegende Kabel): Sofortige Sperrung und Notdienst informieren.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder Bauarbeiten in der Nähe, die Einfluss auf die Stromversorgung gehabt haben könnten?  \nSoll eine Langzeitüberwachung eingerichtet werden, um den Fehler gezielt zu erfassen?",
+    "tokens_estimate_words": 206
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0011-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "GPS-Koordinaten explizit dokumentieren"
+    ],
+    "short_justification": "Exzellente Kontextnutzung: Nebel/schlechte Sicht → Absicherung priorisiert, intermittent → Reproduktionsstrategie, Standort genannt. Klare Schrittfolge, Safety-first, Eskalation mit Triggern. Dokumentation gut, GPS könnte expliziter sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.002
+  },
+  "error": {}
+}

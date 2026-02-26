@@ -1,49 +1,49 @@
 {
   "S0": {
     "n": 30,
-    "mean_runtime": 4.751866666666667,
-    "mean_R": 3.3666666666666667,
-    "mean_H": 3.4,
-    "mean_S": 3.1,
-    "mean_D": 3.6,
-    "mean_K": 2.8666666666666667,
-    "mean_overall": 3.2666666666666666,
+    "mean_runtime": 4.979933333333333,
+    "mean_R": 3.533333333333333,
+    "mean_H": 3.566666666666667,
+    "mean_S": 3.1333333333333333,
+    "mean_D": 3.6666666666666665,
+    "mean_K": 2.7,
+    "mean_overall": 3.32,
     "flag_rates": {
       "safety_first": 0.9666666666666667,
       "escalation_present": 1.0,
       "offline_workflow_mentioned": 0.0,
-      "hallucination_suspected": 0.03333333333333333
+      "hallucination_suspected": 0.0
     }
   },
   "S1": {
     "n": 30,
-    "mean_runtime": 5.138133333333333,
-    "mean_R": 4.5,
-    "mean_H": 4.333333333333333,
+    "mean_runtime": 5.688833333333333,
+    "mean_R": 4.566666666666666,
+    "mean_H": 4.4,
     "mean_S": 4.333333333333333,
     "mean_D": 4.233333333333333,
-    "mean_K": 3.8,
-    "mean_overall": 4.24,
+    "mean_K": 3.933333333333333,
+    "mean_overall": 4.293333333333334,
     "flag_rates": {
       "safety_first": 1.0,
       "escalation_present": 1.0,
-      "offline_workflow_mentioned": 0.2,
+      "offline_workflow_mentioned": 0.26666666666666666,
       "hallucination_suspected": 0.03333333333333333
     }
   },
   "S2": {
     "n": 30,
-    "mean_runtime": 5.3105,
+    "mean_runtime": 5.3857333333333335,
     "mean_R": 4.933333333333334,
-    "mean_H": 4.933333333333334,
-    "mean_S": 4.533333333333333,
-    "mean_D": 4.833333333333333,
-    "mean_K": 5.0,
-    "mean_overall": 4.846666666666667,
+    "mean_H": 4.9,
+    "mean_S": 4.6,
+    "mean_D": 4.733333333333333,
+    "mean_K": 4.966666666666667,
+    "mean_overall": 4.826666666666667,
     "flag_rates": {
       "safety_first": 1.0,
       "escalation_present": 1.0,
-      "offline_workflow_mentioned": 0.6333333333333333,
+      "offline_workflow_mentioned": 0.6666666666666666,
       "hallucination_suspected": 0.0
     }
   }

@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0003-TC2",
+  "timestamp": "2026-02-26T15:58:10",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe leuchtet gar nicht mehr. Meldung kam über Bürgerhinweis.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4427359783",
+        "longitude": 12.1049944,
+        "latitude": 47.877481,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Westerndorf St. Peter, Schlößlstraße"
+      },
+      "incident": {
+        "fault_type": "outage",
+        "severity": "medium",
+        "reported_at": "2026-01-21T22:47:36+01:00",
+        "reporter": "citizen",
+        "photo_available": false
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "clear",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "low_battery",
+        "connectivity": "spotty"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0003",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste für den Außendienst-Einsatz\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten.\n- Warnweste anlegen.\n- Absperrmaterial (z. B. Leitkegel) rund um den Arbeitsbereich aufstellen, da schlechte Sichtverhältnisse herrschen und Nachtbetrieb ist.\n\n**2. Sichtprüfung**\n- Lampe äußerlich auf Schäden prüfen (z. B. Mast, Leuchte, Abdeckung).\n- Umgebung auf weitere Gefahrenquellen kontrollieren (z. B. lose Kabel, Stolperfallen).\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob die Lampe tatsächlich komplett ausgefallen ist.\n- Aufgrund des Hinweises „low_battery“ und „spotty connectivity“: Batterie-Status kontrollieren, falls Zugang möglich.\n- Verbindung zur Steuerungseinheit testen, soweit vor Ort möglich.\n- Prüfen, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größeren Ausfall).\n\n**4. Dokumentation**\n- Alle Beobachtungen und Maßnahmen schriftlich festhalten (z. B. per Tablet oder Notizblock).\n- Fotos machen, falls möglich und sinnvoll (auch wenn laut Meldung kein Foto vorliegt).\n\n**5. Eskalation**\n- Bei defekter Batterie oder Elektronik: Austausch veranlassen oder zuständigen Techniker informieren.\n- Bei Gefahr für Verkehrsteilnehmer (z. B. Mast beschädigt, Kabel frei): Sofortige Meldung an Leitstelle und ggf. Polizei.\n- Rückmeldung an Bürger/Leitstelle, dass Störung aufgenommen und bearbeitet wird.\n\n**Rückfragen/Annahmen:**\n- Ist Zugang zur Lampe und ggf. Steuerungseinheit vor Ort möglich?\n- Gibt es eine Ersatzbatterie oder muss ein Techniker mit Spezialausrüstung kommen?\n- Sind weitere Lampen in der Straße betroffen?\n\nBitte gib Bescheid, falls weitere Details bekannt sind oder Unterstützung benötigt wird.",
+    "tokens_estimate_words": 218
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0003-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
+      "Low_battery wird erwähnt, aber Bezug zu Techniker-Gerät unklar"
+    ],
+    "short_justification": "Gute kontextbezogene Antwort: Nacht, schlechte Sicht, low_battery werden berücksichtigt. Safety-first klar, Struktur gut. Offline-Workflow fehlt trotz spotty connectivity (K=3). Dokumentation und Eskalation vorhanden."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.113
+  },
+  "error": {}
+}

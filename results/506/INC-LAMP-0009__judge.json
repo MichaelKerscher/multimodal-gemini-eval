@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0009-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
+      "R": 4,
+      "H": 4,
       "S": 3,
-      "D": 3,
-      "K": 2
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -14,21 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Signal)",
-      "Keine Nutzung von Standortdaten (lat/lon fehlen im Kontext)",
-      "Keine Erwähnung von Wetter/Umgebungsbedingungen (nicht im Kontext)"
-    ],
-    "short_justification": "Grundsätzlich passende Antwort mit klarer Struktur und Sicherheitsfokus. Kontext ist minimal (nur asset_osm), daher keine erweiterten Kontextinformationen erwartbar. Antwort bleibt generisch, aber angemessen für den gegebenen Kontext."
+    "missing_elements": [],
+    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. Dokumentation und Eskalation klar benannt."
   },
   {
     "test_id": "INC-LAMP-0009-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
       "D": 4,
-      "K": 4
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -37,10 +33,9 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine explizite Erwähnung von 'lokal speichern/später synchronisieren'",
-      "Zeitpunkt (dusk) könnte stärker in Sicherheitsmaßnahmen einfließen"
+      "Explizite Offline-Sync-Anweisung fehlt"
     ],
-    "short_justification": "Sehr gute Antwort: nutzt Kontext sichtbar (offline, Regen, dusk, low traffic), klare Schrittfolge mit Safety-first, erwähnt Offline-Einschränkung ('keine Ferndiagnose möglich'), gute Dokumentation und Eskalationslogik. Kleine Lücke: Offline-Workflow könnte expliziter sein (lokal speichern/synchronisieren)."
+    "short_justification": "Exzellente Struktur, Safety-first, klare Eskalation. Offline-Status wird erwähnt ('Gerät offline: Keine Ferndiagnose'), aber Offline-Workflow (lokal speichern/später sync) nicht explizit ausformuliert."
   },
   {
     "test_id": "INC-LAMP-0009-TC3",
@@ -58,6 +53,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext optimal (offline → 'Offline Fotos machen', 'lokal dokumentieren'; Regen/Dämmerung → Sicherheit/Sichtbarkeit), klare Schrittfolge, Safety-first, präzise Eskalation bei Wassereintritt, vollständige Dokumentation. Versteht context_notes korrekt (device.connectivity betrifft Techniker-Gerät). Nahezu perfekt."
+    "short_justification": "Perfekte Kontextnutzung: Offline-Workflow explizit ('offline, da Gerät kein Netz', 'Fotos lokal speichern, später synchronisieren'), Safety-first, klare Dokumentation mit Ticket-Checkliste, keine Halluzinationen."
   }
 ]

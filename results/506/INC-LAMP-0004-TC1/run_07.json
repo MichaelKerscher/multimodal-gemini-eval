@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0004-TC1",
+  "timestamp": "2026-02-26T15:58:35",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Straßenlampe ist dunkel seit etwa 90 Minuten. Bereich wirkt unsicher. (Asset-ID: n12551286240)",
+    "context": {
+      "asset_osm": "n12551286240"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0004",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Danke für die Meldung. Hier ist das empfohlene Vorgehen:\n\nCheckliste für den Außendienst – Dunkle Straßenlampe (Asset-ID: n12551286240)\n\n1. Absicherung  \n- Bereich um die Lampe absichern (z. B. Warnbaken, Warnweste tragen).  \n- Auf ausreichende Sichtbarkeit für Verkehrsteilnehmer achten.\n\n2. Sichtprüfung  \n- Prüfen, ob offensichtliche Schäden an der Lampe, dem Mast oder der Verkabelung erkennbar sind.  \n- Umgebung auf weitere dunkle Lampen oder Gefahrenstellen kontrollieren.\n\n3. Diagnose/Beobachtung  \n- Testen, ob die Lampe auf manuelle Schaltung oder Bewegung reagiert (falls möglich).  \n- Prüfen, ob Sicherungen oder Schaltkästen zugänglich und intakt sind.  \n- Notieren, ob weitere Lampen in der Nähe betroffen sind (Hinweis auf größeren Ausfall).\n\n4. Dokumentation  \n- Fotos vom Zustand der Lampe und Umgebung machen.  \n- Asset-ID, Uhrzeit, genaue Position und Beobachtungen notieren.\n\n5. Eskalation  \n- Bei akuter Gefährdung (z. B. Unfallgefahr, stark frequentierter Bereich): Sofortige Meldung an die Leitstelle/Notdienst zur schnellen Reparatur.  \n- Bei Einzelfall ohne akute Gefahr: Störungsmeldung an zuständige Wartungsfirma weiterleiten.\n\nRückfrage:  \nIst die Lampe Teil einer Reihe (mehrere Lampen betroffen) oder handelt es sich um einen Einzelfall? Gibt es in der Nähe besondere Gefahrenstellen (z. B. Zebrastreifen, Kreuzung)?",
+    "tokens_estimate_words": 181
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0004-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Berücksichtigung fehlender Umgebungsdaten",
+      "Keine Offline-Workflow-Erwähnung trotz minimalem Kontext"
+    ],
+    "short_justification": "Grundsolide Antwort mit Safety-first und Eskalation. Nutzt Asset-ID nur oberflächlich, fragt sinnvoll nach fehlenden Infos. Struktur gut, aber keine Anpassung an minimalen Kontext (z.B. Offline-Robustheit)."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.968
+  },
+  "error": {}
+}

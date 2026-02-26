@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0028-TC2",
+  "timestamp": "2026-02-26T16:08:44",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Gehäuse beschädigt, mögliche Berührungsgefahr. Bitte absichern.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4470029720",
+        "longitude": 12.1326497,
+        "latitude": 47.8433336,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Leitzachstraße"
+      },
+      "incident": {
+        "fault_type": "open_housing",
+        "severity": "high",
+        "reported_at": "2026-01-18T06:17:02+01:00",
+        "reporter": "dispatch",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "clear",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "low",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "online"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0028",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für beschädigtes Gehäuse mit möglicher Berührungsgefahr  \nStandort: Rosenheim, Leitzachstraße (n4470029720)\n\n1. **Absicherung**\n   - Bereich sofort absperren (z. B. mit Warnbaken, Absperrband).\n   - Warnhinweise „Stromschlaggefahr“ gut sichtbar anbringen.\n   - Passanten und Verkehrsteilnehmer auf Gefahr aufmerksam machen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle des Gehäuses: Ist das Innere zugänglich? Liegen blanke oder beschädigte Leitungen offen?\n   - Prüfen, ob weitere Bauteile lose oder beschädigt sind.\n\n3. **Diagnose/Beobachtung**\n   - Keine Berührung! Nur Sichtprüfung durchführen.\n   - Prüfen, ob die Lampe/Ampel noch funktioniert oder auffällige Geräusche/ Gerüche wahrnehmbar sind.\n   - Foto (falls noch nicht vorhanden) zur Dokumentation machen.\n\n4. **Dokumentation**\n   - Schaden, Absicherungsmaßnahmen und Beobachtungen schriftlich festhalten.\n   - Foto und Standortdaten sichern.\n\n5. **Eskalation**\n   - Störung als „Gefahr im Verzug“ sofort an die Fachabteilung/Elektrofachkraft melden.\n   - Reparatur durch qualifiziertes Personal veranlassen.\n\n**Rückfrage:**  \nIst bereits eine Elektrofachkraft informiert oder soll ich die Meldung weiterleiten? Sind weitere Verkehrssicherungsmaßnahmen vor Ort erforderlich?",
+    "tokens_estimate_words": 142
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0028-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 5,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Safety-first klar, Struktur umsetzbar, Eskalation als 'Gefahr im Verzug', Dokumentation vollständig, Kontext (Standort, severity=high, photo_available, time_of_day=day) sichtbar genutzt, keine Halluzinationen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.818
+  },
+  "error": {}
+}

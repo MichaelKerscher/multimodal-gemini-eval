@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0008-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
-      "S": 3,
-      "D": 3,
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
       "K": 3
     },
     "flags": {
@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)",
-      "Keine Nutzung von Koordinaten (nicht im CONTEXT vorhanden)"
-    ],
-    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung → Prüfung → Eskalation). Kontext minimal, daher keine spezifischen Details erwartbar. Safety-first erkennbar, Eskalation vorhanden, Dokumentation genannt."
+    "missing_elements": [],
+    "short_justification": "Klare Struktur mit Safety-first, guter Handlungsfolge und Eskalationslogik. Kontext minimal (nur Asset-ID), daher keine Offline-Workflow-Erwartung. K=3 wegen generischer Antwort ohne Kontextnutzung (aber kein Fehler bei minimalem Context)."
   },
   {
     "test_id": "INC-LAMP-0008-TC2",
@@ -26,7 +23,7 @@
       "R": 4,
       "H": 4,
       "S": 4,
-      "D": 4,
+      "D": 5,
       "K": 4
     },
     "flags": {
@@ -35,10 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow nur implizit (Energiesparmodus/instabile Verbindung erwähnt, aber keine explizite Offline-Dokumentations-Anweisung)"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Koordinaten, Nebel, Nacht, spotty connectivity, low_power_mode). Safety-first klar, Eskalation differenziert, Dokumentation mit Foto-Hinweis. Offline-Workflow angedeutet ('Ferndiagnose eingeschränkt'), aber nicht explizit als Schritt formuliert."
+    "missing_elements": [],
+    "short_justification": "Sehr gute Kontextnutzung (Nebel, Nacht, spotty connectivity → manuelle Kontrolle, Offline-Hinweis). Klare Dokumentation mit GPS-Koordinaten. Safety-first und Eskalation passend zu low severity. Annahme am Ende ist transparent."
   },
   {
     "test_id": "INC-LAMP-0008-TC3",
@@ -56,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (Koordinaten, Nebel, Nacht, spotty → Offline-Workflow explizit: 'offline speichern', 'lokal sichern', 'später synchronisieren'). Safety-first, klare Schrittfolge, Eskalation differenziert, Dokumentation vollständig. Keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel/Nacht → Sicherheit, spotty/low_power → Offline-Workflow explizit), klare Schrittfolge, präzise Dokumentation mit Koordinaten, passende Eskalationslogik zu low severity/traffic. Keine Halluzinationen."
   }
 ]

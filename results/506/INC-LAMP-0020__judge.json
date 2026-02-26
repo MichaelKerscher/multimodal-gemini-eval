@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0020-TC1",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 3,
+      "H": 3,
       "S": 3,
-      "D": 4,
-      "K": 3
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,19 +15,19 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Keine Nutzung der GPS-Koordinaten (nicht im Kontext vorhanden)",
-      "Keine Anpassung an Umgebungsbedingungen (nicht im Kontext)"
+      "Keine Nutzung der Asset-ID im Kontext",
+      "Keine Anpassung an minimalen Kontext (generisch)"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Absicherung zuerst, guter Handlungsfolge und Eskalationslogik. Kontext ist minimal (nur Asset-ID), daher keine erweiterten Elemente erwartbar. Dokumentation gut abgedeckt."
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber sehr generisch. Bei minimalem Kontext (nur Asset-ID) bleibt die Antwort zu ausführlich und nutzt den Kontext nicht gezielt."
   },
   {
     "test_id": "INC-LAMP-0020-TC2",
     "scores": {
-      "R": 5,
-      "H": 5,
-      "S": 5,
-      "D": 5,
-      "K": 5
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -35,8 +35,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Nutzt Kontext vollständig (GPS, Wetter, Nacht, severity=high, photo_available), klare Safety-first-Struktur, präzise Eskalation bei akuter Gefahr, umfassende Dokumentation. Keine Halluzinationen, alle erwartbaren Elemente integriert."
+    "missing_elements": [
+      "GPS-Koordinaten nicht explizit für Dokumentation genannt"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Regen, Nacht, low_power_mode, photo_available). Klare Struktur mit Safety-first, passender Eskalation bei severity=high und guter Dokumentation. Kleine Lücke bei GPS-Nutzung."
   },
   {
     "test_id": "INC-LAMP-0020-TC3",
@@ -44,16 +46,16 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
       "safety_first": true,
       "escalation_present": true,
-      "offline_workflow_mentioned": false,
+      "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Hervorragende Antwort: Nutzt erweiterten Kontext korrekt (severity, Wetter, Nacht, photo_available, low_power_mode als Geräte-Hinweis), klare Priorisierung mit Safety first, präzise Eskalation, vollständige Dokumentation. Keine Halluzinationen, kompakt und umsetzbar."
+    "short_justification": "Exzellente Antwort: nutzt alle relevanten Kontextfelder (Regen, Nacht, low_power_mode, photo_available, severity=high), erwähnt Offline-Dokumentation bei low_power_mode, klare Safety-first-Struktur, passende Eskalation und Dokumentation."
   }
 ]

@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0001-TC1",
+  "timestamp": "2026-02-26T15:57:18",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler. (Asset-ID: n5718630492)",
+    "context": {
+      "asset_osm": "n5718630492"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0001",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, danke für die Info zum Asset n5718630492. Hier die empfohlene Vorgehensweise bei einem sporadischen Fehler:\n\n**Checkliste für die Störungsbearbeitung**\n\n1. **Absicherung**\n   - Stelle sicher, dass der Bereich um die Lampe verkehrssicher ist.\n   - Bei Gefahr (z. B. Dunkelheit, viel Verkehr): Absperrung oder Warnhinweise anbringen.\n\n2. **Sichtprüfung**\n   - Prüfe die Lampe und das Umfeld auf sichtbare Schäden (z. B. Wackelkontakt, Feuchtigkeit, lose Kabel).\n   - Gibt es Auffälligkeiten am Mast, Sockel oder Leuchtmittel?\n\n3. **Diagnose/Beobachtung**\n   - Beobachte, ob der Fehler erneut auftritt (z. B. Flackern, Ausfall bei Nässe).\n   - Prüfe, ob andere Lampen in der Nähe betroffen sind (Hinweis auf Netzproblem).\n\n4. **Dokumentation**\n   - Notiere: Zeitpunkt, Wetterbedingungen, genaue Beobachtungen, Asset-ID.\n   - Dokumentiere auch, dass der Fehler aktuell nicht reproduzierbar ist.\n\n5. **Eskalation**\n   - Bei wiederholtem Ausfall oder Verdacht auf sicherheitsrelevanten Defekt: Meldung an die Fachabteilung/Technik.\n   - Falls aktuell kein Handlungsbedarf: Störung als „sporadisch, aktuell nicht nachweisbar“ erfassen und weiter beobachten.\n\n**Rückfrage:**  \nGab es in letzter Zeit Wartungsarbeiten oder besondere Wetterereignisse (z. B. Sturm, Regen)? Das kann helfen, die Ursache einzugrenzen.",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0001-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Offline-Workflow nicht erwähnt (Kontext zeigt nur asset_osm, keine device-Infos)",
+      "Keine Nutzung von Standort/Verkehrsexposition (nicht im Kontext)",
+      "Keine Foto-Workflow-Hinweise (nicht im Kontext)"
+    ],
+    "short_justification": "Solide generische Antwort mit klarer Struktur (Absicherung, Sichtprüfung, Dokumentation, Eskalation). Kontext minimal (nur asset_osm), daher keine spezifischen Elemente erwartbar. Keine Halluzinationen, aber auch keine kontextspezifische Anpassung möglich."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.73
+  },
+  "error": {}
+}

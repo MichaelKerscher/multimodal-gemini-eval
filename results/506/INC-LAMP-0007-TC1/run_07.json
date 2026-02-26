@@ -1,0 +1,64 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC1",
+  "timestamp": "2026-02-26T15:59:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme. (Asset-ID: n4484173276)",
+    "context": {
+      "asset_osm": "n4484173276"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es gibt kurze Aussetzer und Flackern bei der Straßenlampe (Asset-ID: n4484173276), vermutlich durch Kontaktprobleme.\n\n**Checkliste für die Störungsbearbeitung:**\n\n1. **Absicherung**\n   - Arbeitsbereich absichern (Warnbaken, ggf. Warnweste tragen).\n   - Stromzufuhr prüfen und ggf. abschalten, falls Arbeiten am offenen Anschluss nötig werden.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Lampe und des Mastes: Gibt es sichtbare Schäden, lose Kabel, Korrosion oder Feuchtigkeitseintritt?\n   - Lampenkopf und Anschlusskasten auf festen Sitz prüfen.\n\n3. **Diagnose/Beobachtung**\n   - Lampe einschalten und Flackern beobachten: Tritt das Problem dauerhaft oder nur sporadisch auf?\n   - Kontakte und Klemmen im Anschlusskasten auf festen Sitz und Korrosion prüfen.\n   - Falls möglich, Spannung messen und auf Wackelkontakte achten.\n\n4. **Dokumentation**\n   - Festgestellte Mängel und durchgeführte Maßnahmen dokumentieren (Fotos, Notizen).\n   - Asset-ID und Standort vermerken.\n\n5. **Eskalation**\n   - Bei schwerwiegenden Schäden oder Gefahr (z. B. freiliegende Kabel, starker Funkenflug): Sofortige Meldung an die Leitstelle/Elektrofachkraft.\n   - Bei kleineren Kontaktproblemen ggf. Reparatur vor Ort, ansonsten Reparaturauftrag auslösen.\n\n**Rückfrage:**  \nIst bekannt, ob das Flackern wetterabhängig auftritt (z. B. bei Regen)? Gibt es ähnliche Probleme bei benachbarten Lampen?",
+    "tokens_estimate_words": 169
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC1",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 3,
+      "D": 4,
+      "K": 3
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontextnutzung minimal (nur Asset-ID vorhanden), daher K=3. Keine Offline-Workflow-Erwähnung, aber auch nicht erwartbar bei minimalem Kontext."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.654
+  },
+  "error": {}
+}

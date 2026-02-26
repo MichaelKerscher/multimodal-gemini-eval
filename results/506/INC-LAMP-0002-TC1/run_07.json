@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0002-TC1",
+  "timestamp": "2026-02-26T15:57:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Zeitweiser Ausfall gemeldet; aktuell normal. Bitte kontrollieren. (Asset-ID: n1987093602)",
+    "context": {
+      "asset_osm": "n1987093602"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0002",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Verstanden, es wurde ein zeitweiser Ausfall gemeldet, aktuell funktioniert die Anlage jedoch normal. Hier ist das empfohlene Vorgehen:\n\n**Checkliste für die Kontrolle (Asset-ID: n1987093602)**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrung/Absicherung der Arbeitsstelle gemäß Vorschrift (z. B. Warnleuchten, Pylone) aufbauen.\n\n2. **Sichtprüfung**\n   - Sichtkontrolle der Anlage auf äußere Schäden, lose Kabel, Feuchtigkeit oder Vandalismus.\n   - Prüfen, ob alle Leuchten/Funktionen aktuell wie vorgesehen arbeiten.\n\n3. **Diagnose/Beobachtung**\n   - Beobachten, ob während der Kontrolle Auffälligkeiten (Flackern, Aussetzer) auftreten.\n   - Falls möglich: Prüfen, ob Fehler im Steuergerät/Controller gespeichert wurden (z. B. Fehlerprotokoll auslesen).\n\n4. **Dokumentation**\n   - Alle Feststellungen (auch „keine Auffälligkeiten“) dokumentieren: Datum, Uhrzeit, Wetter, eigene Beobachtungen.\n   - Fotos bei Auffälligkeiten anfertigen.\n\n5. **Eskalation**\n   - Bei erneutem oder anhaltendem Ausfall: Störungsmeldung an die Fachabteilung weiterleiten.\n   - Bei Gefahr im Verzug (z. B. Ausfall der gesamten Anlage, Gefahr für Verkehrsteilnehmer): Sofortige Meldung an Leitstelle/Notdienst.\n\n**Rückfrage:**  \nHandelt es sich um eine Straßenlampe oder eine Ampelanlage? Gibt es nähere Angaben zum Zeitpunkt oder zur Häufigkeit des Ausfalls? Das hilft, gezielter zu prüfen.",
+    "tokens_estimate_words": 165
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0002-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
+      "Generische Antwort ohne Fallbezug zu intermittent fault",
+      "Keine Priorisierung auf Reproduktion des Fehlers"
+    ],
+    "short_justification": "Grundsätzlich strukturiert und sicherheitsorientiert, aber sehr generisch. Kontext minimal (nur Asset-ID), daher keine spezifischen Hinweise zu Umgebung/Fehlertyp. Rückfrage sinnvoll, aber Antwort bleibt allgemein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 5.118
+  },
+  "error": {}
+}

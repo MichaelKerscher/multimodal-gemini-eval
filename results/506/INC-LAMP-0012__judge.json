@@ -14,15 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Strukturierte, fallbezogene Antwort mit klarer Schrittfolge und Safety-first-Ansatz. Eskalation vorhanden, aber Sicherheitstrigger könnten präziser sein. Kontext minimal, daher keine Offline-Workflow-Erwartung."
+    "missing_elements": [
+      "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei L0_minimal)"
+    ],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit Absicherung zuerst, klarer Dokumentation und Eskalation. Kontext minimal, daher keine Offline-Hinweise erwartbar. Sinnvolle Rückfragen."
   },
   {
     "test_id": "INC-LAMP-0012-TC2",
     "scores": {
       "R": 4,
       "H": 4,
-      "S": 4,
+      "S": 3,
       "D": 4,
       "K": 3
     },
@@ -33,9 +35,10 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow explizit (spotty connectivity)"
+      "Offline-Workflow nicht explizit (connectivity=spotty vorhanden)",
+      "Low_power_mode erwähnt, aber nicht klar als Geräte-Constraint erklärt"
     ],
-    "short_justification": "Sehr gute Struktur, nutzt Kontext (low_power_mode, spotty, night, medium traffic). Offline-Workflow wird implizit angedeutet ('schriftlich festhalten'), aber nicht explizit als Offline-Strategie benannt bei spotty connectivity."
+    "short_justification": "Gute Struktur mit Absicherung, Diagnose und Eskalation. Erwähnt 'schlechte Konnektivität', aber kein expliziter Offline-Workflow (lokal speichern/später sync). K=3 wegen teilweiser Kontextnutzung."
   },
   {
     "test_id": "INC-LAMP-0012-TC3",
@@ -53,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (spotty→offline dokumentieren, low_power_mode, night, medium traffic), klare Schrittfolge mit Safety-first, expliziter Offline-Workflow, präzise Dokumentation inkl. OSM-ID und Koordinaten, differenzierte Eskalationslogik."
+    "short_justification": "Exzellente Antwort: Absicherung mit Warnweste/Pylonen zuerst, klare Offline-Dokumentation ('lokal speichern, später synchronisieren'), nutzt Kontext (spotty connectivity, night, poor_visibility) präzise. Vollständige Checkliste inkl. OSM-ID und Koordinaten."
   }
 ]

@@ -1,14 +1,14 @@
 [
   [
-    "Kontextnutzung minimal (nur Asset-ID)",
-    3
-  ],
-  [
-    "Keine Offline-Workflow-Erwähnung (aber nicht erwartbar bei minimalem Context)",
+    "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
     2
   ],
   [
-    "Offline-Workflow bei spotty connectivity nicht explizit erwähnt",
+    "Keine Nutzung der Asset-ID im Kontext",
+    2
+  ],
+  [
+    "Keine Offline-Workflow-Erwähnung trotz minimalem Kontext",
     2
   ],
   [
@@ -16,147 +16,75 @@
     2
   ],
   [
-    "Keine Nutzung von Kontext-Signalen (nur Asset-ID vorhanden)",
+    "Offline-Workflow bei spotty connectivity",
     2
   ],
   [
-    "Safety-first nicht als Schritt 1 priorisiert",
+    "GPS-Koordinaten explizit dokumentieren",
+    2
+  ],
+  [
+    "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)",
+    2
+  ],
+  [
+    "Offline-Workflow nicht erwähnt (Kontext zeigt nur asset_osm, keine device-Infos)",
     1
   ],
   [
-    "Keine Offline-Workflow-Erwähnung (nicht erwartbar bei L0)",
+    "Keine Nutzung von Standort/Verkehrsexposition (nicht im Kontext)",
     1
   ],
   [
-    "Offline-Workflow fehlt trotz connectivity=offline",
+    "Keine Foto-Workflow-Hinweise (nicht im Kontext)",
     1
   ],
   [
-    "Batterie-Diagnose spekulativ (device_state bezieht sich auf Techniker-Gerät, nicht Asset)",
+    "Offline-Workflow fehlt komplett (connectivity=offline erfordert lokale Dokumentation/Sync-Hinweis)",
     1
   ],
   [
-    "Keine Nutzung der Asset-ID im Kontext",
+    "Missverständnis: low_battery/offline als Asset-Problem interpretiert statt Techniker-Gerät",
     1
   ],
   [
-    "Keine spezifische Lokalisierung",
+    "Keine Nutzung von Kontext (nur Asset-ID vorhanden)",
     1
   ],
   [
-    "Generische Antwort ohne Kontextanpassung",
+    "Generische Antwort ohne Fallbezug zu intermittent fault",
     1
   ],
   [
-    "Kein expliziter Hinweis auf vorhandenes Foto nutzen",
+    "Keine Priorisierung auf Reproduktion des Fehlers",
     1
   ],
   [
-    "Offline-Workflow nicht explizit genannt trotz spotty connectivity",
+    "Keine explizite Erwähnung von 'intermittent' als Diagnose-Fokus",
     1
   ],
   [
-    "Offline-Workflow nicht explizit erwähnt trotz spotty connectivity",
+    "Foto-Workflow könnte klarer sein (photo_available=true)",
     1
   ],
   [
-    "Severity/Traffic/Weather nicht adressiert (nicht im Context)",
+    "Kontextnutzung minimal (nur Asset-ID)",
     1
   ],
   [
-    "Offline-Workflow fehlt (connectivity=offline, device_state=low_battery im Context)",
+    "Keine Anpassung an Umgebungsbedingungen",
     1
   ],
   [
-    "Keine explizite Anweisung zu lokaler Speicherung/Synchronisation",
+    "Keine Berücksichtigung von Geräte-/Konnektivitätsstatus",
     1
   ],
   [
-    "Offline-Workflow (Kontext fehlt, daher nicht erwartbar)",
+    "Low_battery wird erwähnt, aber Bezug zu Techniker-Gerät unklar",
     1
   ],
   [
-    "Wetter-/Verkehrskontext (nicht im CONTEXT)",
-    1
-  ],
-  [
-    "Foto-Workflow (photo_available nicht im CONTEXT)",
-    1
-  ],
-  [
-    "Explizite Offline-Sync-Anweisung (erwähnt 'offline', aber kein klarer Sync-Hinweis)",
-    1
-  ],
-  [
-    "Foto-Workflow-Integration (photo_available=true nicht explizit genutzt)",
-    1
-  ],
-  [
-    "Keine Nutzung von Koordinaten (nicht im CONTEXT vorhanden)",
-    1
-  ],
-  [
-    "Offline-Workflow nur implizit (Energiesparmodus/instabile Verbindung erwähnt, aber keine explizite Offline-Dokumentations-Anweisung)",
-    1
-  ],
-  [
-    "Offline-Workflow nicht erwähnt (Kontext zeigt kein connectivity-Signal)",
-    1
-  ],
-  [
-    "Keine Nutzung von Standortdaten (lat/lon fehlen im Kontext)",
-    1
-  ],
-  [
-    "Keine Erwähnung von Wetter/Umgebungsbedingungen (nicht im Kontext)",
-    1
-  ],
-  [
-    "Keine explizite Erwähnung von 'lokal speichern/später synchronisieren'",
-    1
-  ],
-  [
-    "Zeitpunkt (dusk) könnte stärker in Sicherheitsmaßnahmen einfließen",
-    1
-  ],
-  [
-    "Offline-Workflow nur indirekt erwähnt ('manuelle Diagnose'), nicht explizit als Dokumentations-/Sync-Strategie",
-    1
-  ],
-  [
-    "Spezifische Anpassung an intermittent fault_type",
-    1
-  ],
-  [
-    "Offline-Workflow explizit (spotty connectivity)",
-    1
-  ],
-  [
-    "Koordinaten nicht explizit genannt",
-    1
-  ],
-  [
-    "Keine spezifische Nutzung des Kontexts (nur Asset-ID vorhanden)",
-    1
-  ],
-  [
-    "Keine Priorisierung bei minimaler Info",
-    1
-  ],
-  [
-    "Keine explizite Nutzung von 'day' und 'clear' für Safety-Entscheidungen",
-    1
-  ],
-  [
-    "Severity=medium nicht sichtbar in Priorisierung",
-    1
-  ],
-  [
-    "Keine Priorisierung nach Severity (nicht im Context)",
-    1
-  ],
-  [
-    "Keine Anpassung an Umgebungsbedingungen (nicht im Context)",
+    "Keine Berücksichtigung fehlender Umgebungsdaten",
     1
   ],
   [
@@ -164,39 +92,111 @@
     1
   ],
   [
-    "Batterie-Hinweis könnte klarer als Geräte-Constraint formuliert sein",
+    "Foto-Hinweis nicht als Workflow-Cue genutzt",
     1
   ],
   [
-    "Keine Nutzung der Asset-ID im Kontext (nur OSM-ID vorhanden)",
+    "Offline-Workflow fehlt (connectivity=offline → lokal dokumentieren/später sync)",
     1
   ],
   [
-    "Keine Anpassung an fehlende Umgebungsdaten",
+    "Low_battery des Geräts nicht als Workflow-Constraint erkannt",
     1
   ],
   [
-    "Kein expliziter Hinweis auf Foto-Nutzung trotz photo_available=true",
+    "Explizite Offline-Sync-Anweisung fehlt",
     1
   ],
   [
-    "Low_power_mode wird erwähnt, aber nicht als Geräte-Constraint erklärt",
+    "Spezifische Nutzung der Asset-ID",
     1
   ],
   [
-    "Keine Nutzung von Umgebungskontext (Nacht/Nebel/Sicht)",
+    "Intermittent-Fehler-Strategie (Reproduktion)",
     1
   ],
   [
-    "Keine Priorisierung nach severity",
+    "Kontextbezug zu Umgebung/Wetter",
     1
   ],
   [
-    "Generische Schritte ohne Anpassung an minimalen Kontext",
+    "Offline-Workflow nicht explizit (connectivity=spotty vorhanden)",
     1
   ],
   [
-    "Keine Nutzung der Geo-Koordinaten (nur OSM-ID vorhanden)",
+    "Low_power_mode erwähnt, aber nicht klar als Geräte-Constraint erklärt",
+    1
+  ],
+  [
+    "Safety-first nicht als Schritt 1 priorisiert",
+    1
+  ],
+  [
+    "Keine klaren Eskalations-Trigger bei severity=high",
+    1
+  ],
+  [
+    "Synchronisations-Hinweis fehlt",
+    1
+  ],
+  [
+    "Keine Nutzung der Koordinaten (nicht im Kontext vorhanden)",
+    1
+  ],
+  [
+    "Keine Erwähnung von Foto (nicht im Kontext vorhanden)",
+    1
+  ],
+  [
+    "Keine Anpassung an Umgebungsbedingungen (Zeit/Wetter unbekannt)",
+    1
+  ],
+  [
+    "Keine Nutzung von Geo-Koordinaten für Ortsbezug",
+    1
+  ],
+  [
+    "Severity-Einschätzung fehlt",
+    1
+  ],
+  [
+    "Keine explizite Erwähnung von GPS-Koordinaten für Navigation",
+    1
+  ],
+  [
+    "Keine Nutzung von Geo-Koordinaten (vorhanden im CONTEXT)",
+    1
+  ],
+  [
+    "Nebel/poor_visibility nicht berücksichtigt (nicht im CONTEXT L0)",
+    1
+  ],
+  [
+    "Keine Anpassung an minimalen Kontext (generisch)",
+    1
+  ],
+  [
+    "GPS-Koordinaten nicht explizit für Dokumentation genannt",
+    1
+  ],
+  [
+    "Kontextnutzung (Umwelt/Zeit/Wetter fehlen im CONTEXT, daher nicht erwartbar)",
+    1
+  ],
+  [
+    "Offline-Workflow (nicht erwartbar, da connectivity nicht im CONTEXT)",
+    1
+  ],
+  [
+    "Offline-Workflow explizit (connectivity=spotty → lokale Doku/Sync erwähnen)",
+    1
+  ],
+  [
+    "Foto-Workflow (photo_available=true → 'Foto liegt vor, prüfen' fehlt)",
+    1
+  ],
+  [
+    "Severity-Bewusstsein (high) nicht erkennbar",
     1
   ]
 ]

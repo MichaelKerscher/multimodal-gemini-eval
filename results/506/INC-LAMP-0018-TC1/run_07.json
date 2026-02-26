@@ -1,0 +1,68 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC1",
+  "timestamp": "2026-02-26T16:04:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus. (Asset-ID: n12520351647)",
+    "context": {
+      "asset_osm": "n12520351647"
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S0",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Steuerungsproblem (Segmentausfall)\n\n1. **Absicherung**\n   - Stelle sicher, dass der betroffene Bereich für Verkehrsteilnehmer gut sichtbar und abgesichert ist (z. B. Warnbaken, Hinweisschilder).\n   - Prüfe, ob eine akute Gefährdung besteht (z. B. Dunkelheit, Kreuzungsbereich).\n\n2. **Sichtprüfung**\n   - Kontrolliere vor Ort, ob das gesamte Segment (z. B. mehrere Lampen oder Ampeln) gleichzeitig ausgefallen ist.\n   - Achte auf offensichtliche Schäden an Schaltkästen, Kabeln oder Masten.\n\n3. **Diagnose/Beobachtung**\n   - Prüfe, ob der Ausfall auf einen zentralen Steuerungsfehler hindeutet (z. B. keine Stromversorgung, Steuergerät defekt).\n   - Notiere, ob andere Segmente oder Anlagen in der Nähe ebenfalls betroffen sind.\n   - Falls möglich: Steuerungseinheit auf Fehlermeldungen oder Sicherungen kontrollieren.\n\n4. **Dokumentation**\n   - Halte den Ausfallzeitpunkt, betroffene Assets (Asset-ID: n12520351647), Umfang und erste Beobachtungen schriftlich fest.\n   - Füge Fotos der Situation hinzu, falls relevant.\n\n5. **Eskalation**\n   - Melde den Vorfall umgehend an die zuständige Fachabteilung oder den Bereitschaftsdienst.\n   - Weise ausdrücklich auf das gleichzeitige Segment-Ausfallen und einen möglichen Steuerungsfehler hin.\n\n**Rückfrage:**  \nHandelt es sich um Straßenbeleuchtung oder eine Ampelanlage? Gibt es bereits Hinweise auf die Ursache (z. B. Bauarbeiten, Unwetter, Vandalismus)?  \nBitte um kurze Rückmeldung, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 185
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC1",
+    "scores": {
+      "R": 3,
+      "H": 3,
+      "S": 2,
+      "D": 3,
+      "K": 2
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Keine Anpassung an Umgebungsbedingungen (Zeit/Wetter unbekannt)",
+      "Keine Nutzung von Geo-Koordinaten für Ortsbezug",
+      "Severity-Einschätzung fehlt"
+    ],
+    "short_justification": "Grundsolide Struktur mit Absicherung und Eskalation, aber sehr generisch. Kontext (nur asset_osm) wird nicht aktiv genutzt, keine Anpassung an unbekannte Umgebung/Zeit. Rückfragen sinnvoll, aber Handlungsfähigkeit durch fehlende Priorisierung eingeschränkt."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 4.556
+  },
+  "error": {}
+}

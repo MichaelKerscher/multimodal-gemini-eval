@@ -1,0 +1,268 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0018-TC3",
+  "timestamp": "2026-02-26T16:04:23",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Hinweis auf Steuerungsproblem: Segment fällt zeitgleich aus.",
+    "context": {
+      "incident": {
+        "fault_type": "control_box_issue",
+        "severity": "medium",
+        "reported_at": "2026-01-20T18:31:50+01:00",
+        "reporter": "citizen"
+      },
+      "asset": {
+        "asset_osm": "n12520351647",
+        "latitude": 47.8502243,
+        "longitude": 12.1179478
+      },
+      "device": {
+        "connectivity": "online",
+        "device_state": "ok"
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "fog",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "low"
+      },
+      "extras": {
+        "context_notes": [
+          "device.* beschreibt das Techniker-Gerät (App/Smartphone), NICHT das Asset.",
+          "connectivity/device_state beeinflusst Vorgehen (z.B. offlinefähig dokumentieren), ist keine Fehlerursache des Assets."
+        ]
+      },
+      "_selection_meta": {
+        "selector_version": "s2-det-v1",
+        "guardrails_version": "s2-guard-v1",
+        "trigger_signals": {
+          "severity": "medium",
+          "fault_type": "control_box_issue",
+          "offline": false,
+          "spotty": false,
+          "connectivity": "online",
+          "device_state": "ok",
+          "low_battery": false,
+          "weather": "fog",
+          "poor_visibility": true,
+          "time_of_day": "night",
+          "photo_available": false
+        },
+        "budget_policy": {
+          "metric": "chars",
+          "max": 3500,
+          "used": 677
+        },
+        "selected_fields": [
+          {
+            "path": "incident.fault_type",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.severity",
+            "prio": "P0",
+            "reason": "must-have"
+          },
+          {
+            "path": "incident.reported_at",
+            "prio": "P0",
+            "reason": "time-anchor"
+          },
+          {
+            "path": "asset.asset_osm",
+            "prio": "P0",
+            "reason": "identity"
+          },
+          {
+            "path": "asset.latitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "asset.longitude",
+            "prio": "P0",
+            "reason": "location"
+          },
+          {
+            "path": "device.connectivity",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "device.device_state",
+            "prio": "P1",
+            "reason": "action-constraints"
+          },
+          {
+            "path": "environment.time_of_day",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.weather",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.lighting_condition",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.traffic_exposure",
+            "prio": "P1",
+            "reason": "risk-context"
+          },
+          {
+            "path": "environment.noise_level",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "incident.reporter",
+            "prio": "P2",
+            "reason": "nice-to-have"
+          },
+          {
+            "path": "extras.context_notes",
+            "prio": "P2",
+            "reason": "semantic-guardrail"
+          }
+        ],
+        "dropped_fields": [],
+        "compressed_fields": []
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0018",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S2",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": "s2-det-v1",
+    "s2_guardrails_version": "s2-guard-v1",
+    "s2_budget_chars": 3500,
+    "s2_used_chars": 677,
+    "s2_selected_fields": [
+      {
+        "path": "incident.fault_type",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.severity",
+        "prio": "P0",
+        "reason": "must-have"
+      },
+      {
+        "path": "incident.reported_at",
+        "prio": "P0",
+        "reason": "time-anchor"
+      },
+      {
+        "path": "asset.asset_osm",
+        "prio": "P0",
+        "reason": "identity"
+      },
+      {
+        "path": "asset.latitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "asset.longitude",
+        "prio": "P0",
+        "reason": "location"
+      },
+      {
+        "path": "device.connectivity",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "device.device_state",
+        "prio": "P1",
+        "reason": "action-constraints"
+      },
+      {
+        "path": "environment.time_of_day",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.weather",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.lighting_condition",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.traffic_exposure",
+        "prio": "P1",
+        "reason": "risk-context"
+      },
+      {
+        "path": "environment.noise_level",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "incident.reporter",
+        "prio": "P2",
+        "reason": "nice-to-have"
+      },
+      {
+        "path": "extras.context_notes",
+        "prio": "P2",
+        "reason": "semantic-guardrail"
+      }
+    ],
+    "s2_dropped_fields": [],
+    "s2_compressed_fields": []
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "Checkliste für Außendienst-Einsatz: Steuerungsproblem (Segment fällt zeitgleich aus)\n\n**1. Absicherung**\n- Warnblinkanlage am Fahrzeug einschalten, Warnweste tragen.\n- Gefahrenbereich absichern (Leitkegel, ggf. Warnleuchten).\n- Bei schlechter Sicht (Nacht, Nebel): zusätzliche Warnmaßnahmen (z. B. Blitzleuchte).\n- Bei mittlerer Verkehrsbelastung: auf eigene Sicherheit achten, ggf. zweite Person hinzuziehen.\n\n**2. Sichtprüfung**\n- Sichtkontrolle der Steuerbox (äußere Schäden, Manipulation, Feuchtigkeit).\n- Prüfen, ob weitere Segmente betroffen sind.\n- Umfeld auf weitere Gefahrenquellen prüfen (z. B. beschädigte Kabel, lose Abdeckungen).\n\n**3. Diagnose/Beobachtung**\n- Prüfen, ob Steuerbox zugänglich und sicher zu öffnen ist.\n- Sichtkontrolle der internen Komponenten (Sicherungen, Verkabelung, Feuchtigkeit).\n- Prüfen, ob Fehleranzeige oder Störungssignal an der Steuerbox sichtbar ist.\n- Bei Online-Zugang: Statusdaten auslesen (sofern möglich).\n- Annahme: Stromversorgung vorhanden, da Gerät online gemeldet.\n\n**4. Dokumentation**\n- Fotos vom Schaden und Umfeld anfertigen (sofern Sicht möglich).\n- Alle Beobachtungen und Maßnahmen in der App dokumentieren.\n- Zeitpunkt und Wetterbedingungen festhalten.\n\n**5. Eskalation**\n- Bei unklarer Ursache oder Gefahr: Störung an Leitstelle/Technik weiterleiten.\n- Bei akuter Gefährdung (z. B. Stromschlaggefahr, Verkehrsgefahr): Einsatz abbrechen und Notdienst informieren.\n- Rückmeldung an Bürger, falls Kontakt möglich.\n\n**Rückfragen/Annahmen:**\n- Ist Zugang zur Steuerbox vor Ort möglich (verschlossen/zugänglich)?\n- Gibt es aktuelle Bauarbeiten oder bekannte Störungen im Segment?\n- Sind weitere Segmente in der Nähe betroffen?\n\nBitte fehlende Informationen ergänzen, damit ich gezielter unterstützen kann.",
+    "tokens_estimate_words": 216
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0018-TC3",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 5,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": false,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Nahezu perfekt: Nutzt Kontext (Nebel/Nacht/medium traffic) für Safety-Maßnahmen, klare Priorisierung, Eskalations-Trigger definiert, versteht device.connectivity korrekt (online=Statusdaten möglich). Kompakt, umsetzbar, keine Halluzinationen. Dokumentation gut strukturiert."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 6.288
+  },
+  "error": {}
+}

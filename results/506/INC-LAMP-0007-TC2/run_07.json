@@ -1,0 +1,89 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0007-TC2",
+  "timestamp": "2026-02-26T15:59:46",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Kurze Aussetzer und Flackern, mögliche Kontaktprobleme.",
+    "context": {
+      "asset": {
+        "asset_osm": "n4484173276",
+        "longitude": 12.1167638,
+        "latitude": 47.8583268,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, BRK-Heim"
+      },
+      "incident": {
+        "fault_type": "flicker",
+        "severity": "low",
+        "reported_at": "2026-01-21T18:59:18+01:00",
+        "reporter": "patrol",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "day",
+        "weather": "storm",
+        "lighting_condition": "normal_visibility",
+        "traffic_exposure": "medium",
+        "noise_level": "medium"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0007",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "### Schritt-für-Schritt-Checkliste bei Flackern (Kontaktproblem möglich)\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Arbeitsbereich mit Pylonen/Warndreieck absichern (Verkehrsbelastung: mittel, Wetter: Sturm).\n   - Auf herabfallende Äste oder lose Teile achten.\n\n2. **Sichtprüfung**\n   - Mast, Leuchte und Anschlusskasten auf sichtbare Schäden, lose Kabel oder Feuchtigkeit prüfen.\n   - Prüfen, ob sich bei Sturm etwas gelockert hat.\n\n3. **Diagnose/Beobachtung**\n   - Flackern beobachten: Tritt es dauerhaft oder nur bei Windböen auf?\n   - Falls möglich, vorsichtig an Kabelverbindungen wackeln (ohne Werkzeug), um Wackelkontakt zu bestätigen.\n   - Gerät ist offline – keine Ferndiagnose möglich.\n\n4. **Dokumentation**\n   - Fotos vom Schaden und Umfeld machen (Foto vorhanden? Bitte hochladen, falls noch nicht geschehen).\n   - Beobachtungen und Maßnahmen notieren (z. B. Zeitpunkt, Wetter, genaue Symptome).\n\n5. **Eskalation**\n   - Bei bestätigtem Kontaktproblem oder Unsicherheit: Elektriker/Serviceteam informieren.\n   - Bei Gefahr durch Sturm oder lose Teile: Einsatz sofort abbrechen und Gefahrenstelle melden.\n\n**Rückfrage:**  \nIst ein Foto des Schadens verfügbar? Gibt es Zugang zum Anschlusskasten oder ist dieser verschlossen?",
+    "tokens_estimate_words": 154
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0007-TC2",
+    "scores": {
+      "R": 5,
+      "H": 5,
+      "S": 4,
+      "D": 4,
+      "K": 5
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Sturm, mittlerer Traffic, Offline-Status werden sichtbar integriert ('Gerät ist offline – keine Ferndiagnose möglich'). Klare Struktur, Safety-first, Eskalation bei Sturm-Gefahr. Sehr fallbezogen."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 3.797
+  },
+  "error": {}
+}

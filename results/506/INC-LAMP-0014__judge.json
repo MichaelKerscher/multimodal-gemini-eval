@@ -2,10 +2,10 @@
   {
     "test_id": "INC-LAMP-0014-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
+      "R": 4,
+      "H": 4,
       "S": 3,
-      "D": 3,
+      "D": 4,
       "K": 3
     },
     "flags": {
@@ -14,11 +14,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine spezifische Nutzung des Kontexts (nur Asset-ID vorhanden)",
-      "Keine Priorisierung bei minimaler Info"
-    ],
-    "short_justification": "Solide generische Antwort mit Safety-first und Eskalation. Bei minimalem Kontext (nur Asset-ID) bleibt die Antwort erwartbar allgemein, keine Halluzinationen. Struktur und Dokumentation vorhanden, aber nicht optimal priorisiert."
+    "missing_elements": [],
+    "short_justification": "Strukturierte 5-Schritte-Antwort mit klarer Priorisierung (Absicherung zuerst). Dokumentation und Eskalation gut abgedeckt. Kontextnutzung minimal (nur Asset-ID), aber angemessen bei L0-Kontext."
   },
   {
     "test_id": "INC-LAMP-0014-TC2",
@@ -35,11 +32,8 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Keine explizite Nutzung von 'day' und 'clear' für Safety-Entscheidungen",
-      "Severity=medium nicht sichtbar in Priorisierung"
-    ],
-    "short_justification": "Sehr gute strukturierte Antwort mit klarer Schrittfolge, Safety-first, Eskalation und Dokumentation. Kontext (online, day, low traffic) wird implizit genutzt (keine Offline-Workflows nötig). Keine Halluzinationen, passende Rückfrage."
+    "missing_elements": [],
+    "short_justification": "Sehr gute Kontextnutzung (traffic_exposure=low → einfache Absicherung; device online → kein Offline-Workflow nötig; severity=medium → angemessene Eskalation). Klare Struktur, Safety-first, gute Dokumentation."
   },
   {
     "test_id": "INC-LAMP-0014-TC3",
@@ -48,7 +42,7 @@
       "H": 4,
       "S": 4,
       "D": 4,
-      "K": 5
+      "K": 4
     },
     "flags": {
       "safety_first": true,
@@ -57,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Kontextnutzung: 'low traffic' → einfache Absicherung, 'online' → keine Offline-Workflows, 'day/clear' → normale Sichtbarkeit. Kompakte, umsetzbare Struktur mit Safety-first, Eskalation und Dokumentation. Keine Halluzinationen, context_notes korrekt beachtet."
+    "short_justification": "Identisch gute Qualität wie TC2. Nutzt Kontext korrekt (low traffic → einfache Absicherung, online → kein Offline-Workflow). Klare 5-Schritte-Struktur mit Safety-first und differenzierter Eskalation."
   }
 ]

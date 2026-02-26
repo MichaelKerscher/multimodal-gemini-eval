@@ -3,10 +3,10 @@
     "test_id": "INC-LAMP-0011-TC1",
     "scores": {
       "R": 3,
-      "H": 4,
-      "S": 4,
-      "D": 4,
-      "K": 3
+      "H": 3,
+      "S": 3,
+      "D": 3,
+      "K": 2
     },
     "flags": {
       "safety_first": true,
@@ -15,10 +15,11 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Spezifische Anpassung an intermittent fault_type",
-      "Kontextnutzung minimal (nur Asset-ID)"
+      "Spezifische Nutzung der Asset-ID",
+      "Intermittent-Fehler-Strategie (Reproduktion)",
+      "Kontextbezug zu Umgebung/Wetter"
     ],
-    "short_justification": "Solide strukturierte Antwort mit klarer Safety-first-Logik und Eskalation. Bleibt aber generisch, da Kontext minimal ist. Keine Halluzinationen, aber auch keine sichtbare Nutzung von Umgebungsdaten (weil nicht vorhanden)."
+    "short_justification": "Generisch strukturierte Antwort mit Safety-first und Eskalation. Nutzt minimalen Kontext (nur Asset-ID) nicht aktiv, bleibt allgemein. Fragt sinnvoll nach Asset-Typ, aber keine spezifische Intermittent-Strategie."
   },
   {
     "test_id": "INC-LAMP-0011-TC2",
@@ -26,7 +27,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -35,8 +36,10 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, mittlere Verkehrsbelastung, intermittent fault), klare Schrittfolge, Safety-first, Eskalation mit Triggern, Dokumentation vollständig, keine Halluzinationen. Nahezu perfekt."
+    "missing_elements": [
+      "GPS-Koordinaten explizit dokumentieren"
+    ],
+    "short_justification": "Exzellente Kontextnutzung: Nebel/schlechte Sicht → Absicherung priorisiert, intermittent → Reproduktionsstrategie, Standort genannt. Klare Schrittfolge, Safety-first, Eskalation mit Triggern. Dokumentation gut, GPS könnte expliziter sein."
   },
   {
     "test_id": "INC-LAMP-0011-TC3",
@@ -44,7 +47,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 5,
+      "D": 4,
       "K": 5
     },
     "flags": {
@@ -53,7 +56,9 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [],
-    "short_justification": "Kompakte, präzise Antwort mit vollständiger Kontextnutzung (Nebel, Verkehr, intermittent). Safety-first, klare Struktur, Eskalation, Dokumentation vollständig. Keine Halluzinationen, sehr umsetzbar."
+    "missing_elements": [
+      "GPS-Koordinaten explizit dokumentieren"
+    ],
+    "short_justification": "Sehr präzise, kompakte Antwort. Nutzt Kontext optimal (Nebel/Verkehr → Absicherung, intermittent → Reproduktion, Wetter als Ursache). Safety-first, klare Eskalation, gute Dokumentation. GPS könnte expliziter genannt werden."
   }
 ]

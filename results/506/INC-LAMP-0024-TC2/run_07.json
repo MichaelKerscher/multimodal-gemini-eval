@@ -1,0 +1,92 @@
+{
+  "suite_version": "v0.1",
+  "test_id": "INC-LAMP-0024-TC2",
+  "timestamp": "2026-02-26T16:07:10",
+  "client": "506",
+  "model": "gpt-4.1",
+  "input": {
+    "type": "text",
+    "prompt": "Lampe war vorhin aus, ist jetzt wieder an. Sporadischer Fehler.",
+    "context": {
+      "asset": {
+        "asset_osm": "n5718630490",
+        "longitude": 12.1186732,
+        "latitude": 47.8512747,
+        "crs": "EPSG:4326",
+        "lit": "yes",
+        "name": "Rosenheim, Bahnhof"
+      },
+      "incident": {
+        "fault_type": "intermittent",
+        "severity": "medium",
+        "reported_at": "2026-01-19T09:52:16+01:00",
+        "reporter": "citizen",
+        "photo_available": true
+      },
+      "environment": {
+        "time_of_day": "night",
+        "weather": "storm",
+        "lighting_condition": "poor_visibility",
+        "traffic_exposure": "high",
+        "noise_level": "high"
+      },
+      "device": {
+        "device_state": "ok",
+        "connectivity": "offline"
+      }
+    }
+  },
+  "request_params": {
+    "run_mode": "incident",
+    "incident_id": "INC-LAMP-0024",
+    "assistant_source_of_truth": true,
+    "context_strategy": "S1",
+    "judge_version": "judge_v1_1",
+    "judge_model": "claude-sonnet-4.5",
+    "judge_temperature": 0.0,
+    "judge_mode": "BASIC",
+    "s2_selector_version": null,
+    "s2_guardrails_version": null,
+    "s2_budget_chars": null,
+    "s2_used_chars": null,
+    "s2_selected_fields": null,
+    "s2_dropped_fields": null,
+    "s2_compressed_fields": null
+  },
+  "media": {
+    "image_path": null,
+    "audio_path": null,
+    "video_path": null
+  },
+  "response": {
+    "multi": false,
+    "text": "**Checkliste für die Störungsbearbeitung – Straßenlampe, Rosenheim Bahnhof**\n\n1. **Absicherung**\n   - Warnweste anlegen.\n   - Absperrmaterial aufstellen (z. B. Leitkegel, Warnleuchten), da hohe Verkehrsexposition und schlechte Sicht.\n   - Bei Sturm besondere Vorsicht: Gefahren durch herabfallende Äste oder lose Teile beachten.\n\n2. **Sichtprüfung**\n   - Lampe und Mast auf sichtbare Schäden prüfen (z. B. Wackeln, lose Teile, Wassereintritt).\n   - Umgebung auf Gefahrenquellen kontrollieren (z. B. herabhängende Kabel).\n   - Prüfen, ob die Lampe aktuell wieder ausfällt oder flackert.\n\n3. **Diagnose/Beobachtung**\n   - Da Fehler sporadisch: Lampe über mehrere Minuten beobachten.\n   - Prüfen, ob weitere Lampen in der Nähe betroffen sind.\n   - Gerät ist „offline“ – keine Fernabfrage möglich. Ursache könnte Feuchtigkeit, Wackelkontakt oder Stromversorgung sein.\n   - Foto auswerten, falls verfügbar: Hinweise auf Defekte oder äußere Einflüsse?\n\n4. **Dokumentation**\n   - Alle Beobachtungen (auch keine Auffälligkeiten) und Maßnahmen notieren.\n   - Foto und genaue Uhrzeit der Prüfung dokumentieren.\n   - Standort und Wetterbedingungen festhalten.\n\n5. **Eskalation**\n   - Bei erneutem Ausfall oder Verdacht auf Sicherheitsrisiko (z. B. loser Mast, Stromschlaggefahr): Störung an Fachfirma/Notdienst melden.\n   - Bei unklarer Ursache und weiterhin sporadischem Fehler: Elektromeister zur detaillierten Prüfung anfordern.\n\n**Rückfrage:**  \nGab es in letzter Zeit Bauarbeiten oder andere Störungen im Bereich der Stromversorgung am Bahnhof?  \nSind weitere Lampen im Umfeld betroffen?  \n\nFalls weitere Infos oder Fotos benötigt werden, bitte bereitstellen.",
+    "tokens_estimate_words": 208
+  },
+  "judge": {
+    "test_id": "INC-LAMP-0024-TC2",
+    "scores": {
+      "R": 5,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Stop-Conditions für Abbruch",
+      "Klarere Priorisierung bei Eskalation"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Sturm, Nacht, hoher Verkehr, offline). Safety-first klar erkennbar, Offline-Workflow erwähnt ('keine Fernabfrage möglich'), Foto-Auswertung integriert. Struktur gut, aber Eskalations-Trigger könnten präziser sein."
+  },
+  "meta": {
+    "status": "success",
+    "runtime_seconds": 7.025
+  },
+  "error": {}
+}

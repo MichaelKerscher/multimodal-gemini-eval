@@ -2,11 +2,11 @@
   {
     "test_id": "INC-LAMP-0007-TC1",
     "scores": {
-      "R": 3,
-      "H": 3,
+      "R": 4,
+      "H": 4,
       "S": 3,
-      "D": 3,
-      "K": 2
+      "D": 4,
+      "K": 3
     },
     "flags": {
       "safety_first": true,
@@ -14,21 +14,17 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Offline-Workflow (Kontext fehlt, daher nicht erwartbar)",
-      "Wetter-/Verkehrskontext (nicht im CONTEXT)",
-      "Foto-Workflow (photo_available nicht im CONTEXT)"
-    ],
-    "short_justification": "Antwort ist grundsätzlich passend (Flackern/Kontaktprobleme), strukturiert mit Absicherung zuerst. Kontext wird kaum genutzt (nur Asset-ID), keine Halluzinationen, aber generisch. Dokumentation und Eskalation vorhanden, aber nicht detailliert."
+    "missing_elements": [],
+    "short_justification": "Gut strukturierte Antwort mit klarer Schrittfolge und Safety-first. Kontextnutzung minimal (nur Asset-ID vorhanden), daher K=3. Keine Offline-Workflow-Erwähnung, aber auch nicht erwartbar bei minimalem Kontext."
   },
   {
     "test_id": "INC-LAMP-0007-TC2",
     "scores": {
-      "R": 4,
-      "H": 4,
+      "R": 5,
+      "H": 5,
       "S": 4,
       "D": 4,
-      "K": 3
+      "K": 5
     },
     "flags": {
       "safety_first": true,
@@ -36,11 +32,8 @@
       "offline_workflow_mentioned": true,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Explizite Offline-Sync-Anweisung (erwähnt 'offline', aber kein klarer Sync-Hinweis)",
-      "Foto-Workflow-Integration (photo_available=true nicht explizit genutzt)"
-    ],
-    "short_justification": "Sehr gute Kontextnutzung (Sturm, offline, mittlerer Verkehr, Standort). Klare Struktur mit Safety-first, Eskalation passend zu severity=low. Dokumentation detailliert, offline erwähnt. Kleine Lücken: Foto-Workflow und Sync nicht explizit."
+    "missing_elements": [],
+    "short_justification": "Exzellente Kontextnutzung: Sturm, mittlerer Traffic, Offline-Status werden sichtbar integriert ('Gerät ist offline – keine Ferndiagnose möglich'). Klare Struktur, Safety-first, Eskalation bei Sturm-Gefahr. Sehr fallbezogen."
   },
   {
     "test_id": "INC-LAMP-0007-TC3",
@@ -58,6 +51,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: Kontext vollständig genutzt (offline-Workflow explizit, Sturm/Verkehr, Foto vorhanden, lokal speichern/später sync). Klare Schrittfolge, Safety-first, Eskalation differenziert, Dokumentation detailliert. Keine Halluzinationen, keine irrelevanten Teile."
+    "short_justification": "Perfekte Kontextnutzung inkl. Offline-Workflow ('offline speichern', 'nach Wiederherstellung synchronisieren'). Klare 5-Schritt-Struktur, Safety-first, umfassende Dokumentations-Checkliste. Nutzt Sturm/Traffic/Offline-Kontext optimal."
   }
 ]

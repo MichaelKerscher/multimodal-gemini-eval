@@ -5,27 +5,6 @@
       "R": 3,
       "H": 3,
       "S": 3,
-      "D": 3,
-      "K": 2
-    },
-    "flags": {
-      "safety_first": true,
-      "escalation_present": true,
-      "offline_workflow_mentioned": false,
-      "hallucination_suspected": true
-    },
-    "missing_elements": [
-      "Offline-Workflow nicht erwähnt (Kontext fehlt)",
-      "Spekulation über Ampelanlage ohne Basis"
-    ],
-    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber spekuliert über Ampelanlage ohne Kontext-Basis (Halluzination). Minimaler Kontext wird nicht optimal genutzt; keine Offline-Hinweise, obwohl nicht erwartbar."
-  },
-  {
-    "test_id": "INC-LAMP-0026-TC2",
-    "scores": {
-      "R": 4,
-      "H": 4,
-      "S": 4,
       "D": 4,
       "K": 2
     },
@@ -36,10 +15,30 @@
       "hallucination_suspected": false
     },
     "missing_elements": [
-      "Offline-Workflow nicht explizit genannt",
-      "Keine Erwähnung lokaler Speicherung bei offline"
+      "Offline-Workflow (nicht erwartbar, da connectivity nicht im Context)",
+      "Spezifische Nutzung von Standortdaten"
     ],
-    "short_justification": "Gut strukturiert, sicherheitsorientiert, nutzt Kontext (Nebel, Verkehr, Standort). Offline-Status wird erkannt ('keine Fernabfrage möglich'), aber kein expliziter Offline-Workflow (lokal speichern/später sync) genannt. K=2 wegen fehlender Offline-Handlungsanweisung."
+    "short_justification": "Antwort ist strukturiert und sicherheitsorientiert, aber bleibt generisch (Ampel/Lampe unklar). Kontext (nur asset_osm) wird kaum genutzt; keine Halluzinationen, aber auch keine kontextspezifische Tiefe."
+  },
+  {
+    "test_id": "INC-LAMP-0026-TC2",
+    "scores": {
+      "R": 4,
+      "H": 4,
+      "S": 4,
+      "D": 4,
+      "K": 4
+    },
+    "flags": {
+      "safety_first": true,
+      "escalation_present": true,
+      "offline_workflow_mentioned": true,
+      "hallucination_suspected": false
+    },
+    "missing_elements": [
+      "Explizite Erwähnung 'Daten lokal speichern' könnte klarer sein"
+    ],
+    "short_justification": "Sehr gute Kontextnutzung (Nebel, offline, mittlere Verkehrsexposition, Geräuschkulisse). Klare Schrittfolge, Safety first, Offline-Hinweis implizit ('falls nachträglich möglich'), Eskalation passend zu severity=low."
   },
   {
     "test_id": "INC-LAMP-0026-TC3",
@@ -57,6 +56,6 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: klar strukturiert, sicherheitsorientiert, nutzt Kontext optimal (Nebel, Verkehr, offline). Offline-Workflow explizit genannt ('Gerät ist offline – Messwerte/Fotos lokal speichern'). Dokumentation vollständig, Eskalation klar, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: nutzt Kontext vollständig (Nebel, offline, traffic, noise), expliziter Offline-Workflow ('lokal speichern, später synchronisieren'), klare Struktur, Safety first, passende Eskalation, vollständige Dokumentation. Keine Halluzinationen."
   }
 ]

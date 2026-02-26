@@ -15,7 +15,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal (nur Asset-ID), daher keine Offline-Erwartung. Rückfrage sinnvoll, aber etwas generisch (Ampel/Lampe-Unterscheidung nicht aus Kontext ableitbar)."
+    "short_justification": "Klare Safety-first-Struktur mit Absicherung als Schritt 1, gute Handlungsschritte und Eskalation. Kontext minimal, daher keine spezifischen Umweltfaktoren integriert (aber auch nicht erwartbar). Dokumentation gut strukturiert."
   },
   {
     "test_id": "INC-LAMP-0013-TC2",
@@ -33,7 +33,7 @@
       "hallucination_suspected": false
     },
     "missing_elements": [],
-    "short_justification": "Exzellente Antwort: nutzt Kontext präzise (Koordinaten, dusk/poor_visibility → Warnleuchten, severity=high → sofortige Eskalation, photo_available erwähnt). Safety-first klar, Struktur umsetzbar, Dokumentation vollständig, keine Halluzinationen."
+    "short_justification": "Exzellente Antwort: Nutzt Kontext optimal (dusk/poor_visibility → Warnleuchten, high severity → sofortige Eskalation, photo_available → Workflow-Hinweis). Safety-first, klare Struktur, vollständige Dokumentation, keine Halluzinationen."
   },
   {
     "test_id": "INC-LAMP-0013-TC3",
@@ -41,7 +41,7 @@
       "R": 5,
       "H": 5,
       "S": 5,
-      "D": 4,
+      "D": 5,
       "K": 5
     },
     "flags": {
@@ -50,9 +50,7 @@
       "offline_workflow_mentioned": false,
       "hallucination_suspected": false
     },
-    "missing_elements": [
-      "Koordinaten nicht explizit genannt"
-    ],
-    "short_justification": "Sehr starke Antwort: Safety-first, klare Schritte, Eskalation passend zu severity=high. Kontext gut genutzt (photo_available, dusk/poor_visibility implizit). Koordinaten fehlen in Doku, sonst nahezu perfekt. Keine Halluzinationen, connectivity=online korrekt ignoriert (kein Offline-Workflow nötig)."
+    "missing_elements": [],
+    "short_justification": "Hervorragend: Integriert alle relevanten Kontextfaktoren (dusk/poor_visibility → zusätzliche Beleuchtung, photo_available korrekt als Workflow-Cue, high severity → sofortige Eskalation). Klare Struktur, Safety-first, vollständige Dokumentation, keine Halluzinationen."
   }
 ]
